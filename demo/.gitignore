@@ -1,6 +1,5 @@
-website/_site
-website/_build
-website/.sass-cache
+_site
+_build
 
 # Byte-compiled / optimized / DLL files
 __pycache__/
@@ -125,3 +124,6 @@ dmypy.json
 
 # Pyre type checker
 .pyre
+
+# OS dependent metadata files
+.DS_Store
