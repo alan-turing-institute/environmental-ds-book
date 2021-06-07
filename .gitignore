@@ -1,1 +1,13 @@
-build/*
+# Project management files that should not be in public VC
+.secrets/*
+
+# OS dependent metadata files
+.DS_Store
+
+# Compiled files
+**/__pycache__/
+
+# IDE configs
+.vscode/settings.json
+.Rproj.user
+.idea

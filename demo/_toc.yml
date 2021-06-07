@@ -1,9 +1,26 @@
 # Table of content
 # Learn more at https://jupyterbook.org/customize/toc.html
 #
-- file: intro
-- file: content
+- file: welcome
+- file: wp1/wp1
   sections:
-    - file: markdown
-    - file: notebooks
-    - file: notebooks2
+    - title: Polar
+      file: wp1/polar-overview
+      sections:
+      - title: Demo elevation
+        file: wp1/polar-elevation
+    - title: Urban
+      file: wp1/urban-overview
+      sections:
+        - title: Demo cities
+          file: wp1/urban-sensors
+- file: wp2/wp2
+  sections:
+    - title: Forest
+      file: wp2/forest-overview
+    - title: Wildfire
+      file: wp2/wildfire-overview
+- file: wp3/wp3
+  sections:
+    - title: Overview
+      file: wp3/digitaltwins-overview

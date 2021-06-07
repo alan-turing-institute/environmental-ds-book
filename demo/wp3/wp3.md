@@ -1,0 +1,4 @@
+Creating the building blocks for Digital Twins of the natural environment
+=======================
+
+We will focus on exploring and deploying Bayesian machine learning methods to environmental sensor data. It is crucial that these methods are flexible, scalable, interpretable, and can handle sparse and irregularly sampled (off-grid) measurements yet with well calibrated uncertainty. As a first step, we will work with measurements from Argo ocean floats/sensors (https://argo.ucsd.edu/), shipping data and buoys. This provides an example where sensors are sparsely placed, to compliment this and ensure the tools are generalisable across scales we will also work with the Turing Urban Analytics team to build a case study for a city.

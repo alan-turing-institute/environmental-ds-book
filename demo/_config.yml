@@ -5,8 +5,8 @@
 
 #######################################################################################
 # Book settings
-title                       : demo  # The title of the book. Will be placed in the left navbar.
-author                      : Alejandro Coca-Castro  # The author of the book
+title                       : Environmental Sensors Demos  # The title of the book. Will be placed in the left navbar.
+author                      : Environmental Sensors Team  # The author of the book
 copyright                   : "2021"  # Copyright year to be placed in the footer
 logo                        : logo.png  # A path to the book logo
 
@@ -26,9 +26,14 @@ bibtex_bibfiles:
 
 # Information about where the book exists on the web
 repository:
-  url: https://github.com/acocac/demo  # Online location of your book
+  url: https://github.com/acocac/envsensors  # Online location of your book
   path_to_book: docs  # Optional path to your book, relative to the repository root
   branch: main  # Which branch of the repository should be used when creating links (optional)
+
+# Binder
+binder:
+  binderhub_url: "https://mybinder.org"
+  text: "Launch binder"
 
 # Add GitHub buttons to your book
 # See https://jupyterbook.org/customize/config.html#add-a-link-to-your-repository
