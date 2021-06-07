@@ -2,7 +2,7 @@
 
 _Environmental monitoring: blending satellite and surface data_ is an interdisciplinary project to lay the foundations for ambitious research programmes to tackle our greatest environmental changes.
 
-You can read it here: [Website](https://acocac.github.io/envsensors/intro.html)
+You can read it here: [Website](https://acocac.github.io/envsensors)
 
 ## Contributors
 
