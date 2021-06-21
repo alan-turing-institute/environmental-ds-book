@@ -1,4 +1,4 @@
-Wildfire Modelling 
+Wildfires 
 =======================
 
 There are many ways to write content in Jupyter Book. This short section

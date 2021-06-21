@@ -2,25 +2,31 @@
 # Learn more at https://jupyterbook.org/customize/toc.html
 #
 - file: welcome
-- file: wp1/wp1
+- file: forest/forest-overview
   sections:
-    - title: Polar
-      file: wp1/polar-overview
-      sections:
-      - title: Demo antarctic
-        file: wp1/polar-elevation
-    - title: Urban
-      file: wp1/urban-overview
-      sections:
-        - title: Demo cities
-          file: wp1/urban-sensors
-- file: wp2/wp2
+  - title: Forest Structure
+    file: forest/forest-structure
+- file: polar/polar-overview
   sections:
-    - title: Forest
-      file: wp2/forest-overview
-    - title: Wildfire
-      file: wp2/wildfire-overview
-- file: wp3/wp3
+    - title: Demo antarctic
+      file: polar/polar-elevation
+- file: urban/urban-overview
   sections:
-    - title: Overview
-      file: wp3/digitaltwins-overview
+    - title: Demo cities
+      file: urban/urban-sensors
+- file: wildfires/wildfire-overview
+  sections:
+    - title: Sentinel-3
+      file: wildfires/wildfire-sentinel3
+- file: digitaltwins/digitaltwins-overview
+  sections:
+    - title: Concepts
+      file: digitaltwins/digitaltwins-concepts
+- file: project/project-overview
+  sections:
+    - title: Deep learning for intelligent placement of environmental sensors
+      file: project/project-wp1
+    - title: Detecting and tracking environmental change from remote sensors
+      file: project/project-wp2
+    - title: Creating the building blocks for Digital Twins of the natural environment
+      file: project/project-wp3
