@@ -2,33 +2,52 @@
 # Learn more at https://jupyterbook.org/customize/toc.html
 #
 - file: welcome
-- file: forest/forest-overview
-  sections:
-  - title: Forest Structure
-    file: forest/forest-structure
-- file: polar/polar-overview
-  sections:
-    - title: Demo antarctic
-      file: polar/polar-elevation
-    - title: Demo test
-      file: polar/polar-test
-- file: urban/urban-overview
-  sections:
-    - title: Demo cities
-      file: urban/urban-sensors
-- file: wildfires/wildfire-overview
-  sections:
-    - title: Sentinel-3
-      file: wildfires/wildfire-sentinel3
-- file: digitaltwins/digitaltwins-overview
+- part: Preamble
+  chapters:
+  - file: preamble/about
+  - file: preamble/who-for
+  - file: preamble/how-to
+  - file: preamble/attribution
+
+- part: Environments
+  chapters:
+  - file: forest/forest-overview
+    sections:
+    - title: Forest Structure
+      file: forest/forest-structure
+  - file: polar/polar-overview
+    sections:
+      - title: Demo antarctic
+        file: polar/polar-elevation
+      - title: Demo test
+        file: polar/polar-test
+  - file: urban/urban-overview
+    sections:
+      - title: Demo cities
+        file: urban/urban-sensors
+  - file: wildfires/wildfire-overview
+    sections:
+      - title: Sentinel-3
+        file: wildfires/wildfire-sentinel3
+
+- part: Digital Twins
+  chapters:
+  - file: digitaltwins/digitaltwins-overview
   sections:
     - title: Concepts
       file: digitaltwins/digitaltwins-concepts
-- file: project/project-overview
-  sections:
-    - title: Deep learning for intelligent placement of environmental sensors
-      file: project/project-wp1
-    - title: Detecting and tracking environmental change from remote sensors
-      file: project/project-wp2
-    - title: Creating the building blocks for Digital Twins of the natural environment
-      file: project/project-wp3
+
+- part: Projects
+  chapters:
+  - file: project/project-overview
+    sections:
+      - title: Deep learning for intelligent placement of environmental sensors
+        file: project/project-wp1
+      - title: Detecting and tracking environmental change from remote sensors
+        file: project/project-wp2
+      - title: Creating the building blocks for Digital Twins of the natural environment
+        file: project/project-wp3
+
+- part: References
+  chapters:
+  - file: references

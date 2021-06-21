@@ -2,3 +2,11 @@ jupyter-book
 matplotlib
 numpy
 ghp-import
+hvplot
+pyviz
+intake
+xarray
+dask
+netCDF4
+bottleneck
+pooch
