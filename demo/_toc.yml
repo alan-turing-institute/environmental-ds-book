@@ -10,6 +10,8 @@
   sections:
     - title: Demo antarctic
       file: polar/polar-elevation
+    - title: Demo test
+      file: polar/polar-test
 - file: urban/urban-overview
   sections:
     - title: Demo cities
