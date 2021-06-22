@@ -10,8 +10,8 @@ author                      : Environmental Community  # The author of the book
 copyright                   : "2021"  # Copyright year to be placed in the footer
 logo                        : logo.png  # A path to the book logo
 
-# Force re-execution of notebooks on each build.
-# See https://jupyterbook.org/content/execute.html
+#######################################################################################
+# Execution settings
 execute:
   execute_notebooks: force
 
@@ -24,14 +24,20 @@ latex:
 bibtex_bibfiles:
   - references.bib
 
-# Information about where the book exists on the web
+#######################################################################################
+# Launch button settings
+html:
+  use_issues_button: true
+  use_repository_button: true
+
 repository:
   url: https://github.com/acocac/environmental-ai-book # Online location of your book
   path_to_book: book  # Optional path to your book, relative to the repository root
   branch: master  # Which branch of the repository should be used when creating links (optional)
 
-# Add GitHub buttons to your book
-# See https://jupyterbook.org/customize/config.html#add-a-link-to-your-repository
-html:
-  use_issues_button: true
-  use_repository_button: true
+#######################################################################################
+# Advanced and power-user settings
+sphinx:
+  extra_extensions          :  # A list of extra extensions to load by Sphinx.
+  config                    :  # key-value pairs to directly over-ride the Sphinx configuration
+    language                : en

@@ -49,16 +49,21 @@
 
 - part: Community
   chapters:
-  - file: community/coworking
+  - title: Coworking Calls
+    file: community/coworking
     sections:
     - title: Background, Motivations, and Techniques
       file: community/coworking/coworking-motivation
     - title: Online Collaboration Cafe
       file: community/coworking/coworking-collabcafe
-
+  - title: Template Collection
+    file: community/templates
+    sections:
+     - title: Online Collaboration Cafe Templates
+       file: community/templates/template-coworking-collabcafe
 # ===== Afterword Section ========================================
 
 - part: Afterword
   sections:
-  - file: afterword/glosary
+  - file: afterword/glossary
   - file: afterword/bibliography
