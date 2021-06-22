@@ -1,0 +1,509 @@
+
+<!DOCTYPE html>
+
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Background, Motivations, and Techniques &#8212; Environmental AI book</title>
+    
+  <link rel="stylesheet" href="../../_static/css/index.f658d18f9b420779cfdf24aa0a7e2d77.css">
+
+    
+  <link rel="stylesheet"
+    href="../../_static/vendor/fontawesome/5.13.0/css/all.min.css">
+  <link rel="preload" as="font" type="font/woff2" crossorigin
+    href="../../_static/vendor/fontawesome/5.13.0/webfonts/fa-solid-900.woff2">
+  <link rel="preload" as="font" type="font/woff2" crossorigin
+    href="../../_static/vendor/fontawesome/5.13.0/webfonts/fa-brands-400.woff2">
+
+    
+      
+  <link rel="stylesheet"
+    href="../../_static/vendor/open-sans_all/1.44.1/index.css">
+  <link rel="stylesheet"
+    href="../../_static/vendor/lato_latin-ext/1.44.1/index.css">
+
+    
+    <link rel="stylesheet" href="../../_static/pygments.css" type="text/css" />
+    <link rel="stylesheet" href="../../_static/sphinx-book-theme.c441f2ba0852f4cabcb80105e3a46ae6.css" type="text/css" />
+    <link rel="stylesheet" type="text/css" href="../../_static/togglebutton.css" />
+    <link rel="stylesheet" type="text/css" href="../../_static/copybutton.css" />
+    <link rel="stylesheet" type="text/css" href="../../_static/mystnb.css" />
+    <link rel="stylesheet" type="text/css" href="../../_static/sphinx-thebe.css" />
+    <link rel="stylesheet" type="text/css" href="../../_static/panels-main.c949a650a448cc0ae9fd3441c0e17fb0.css" />
+    <link rel="stylesheet" type="text/css" href="../../_static/panels-variables.06eb56fa6e07937060861dad626602ad.css" />
+    
+  <link rel="preload" as="script" href="../../_static/js/index.d3f166471bb80abb5163.js">
+
+    <script id="documentation_options" data-url_root="../../" src="../../_static/documentation_options.js"></script>
+    <script src="../../_static/jquery.js"></script>
+    <script src="../../_static/underscore.js"></script>
+    <script src="../../_static/doctools.js"></script>
+    <script src="../../_static/togglebutton.js"></script>
+    <script src="../../_static/clipboard.min.js"></script>
+    <script src="../../_static/copybutton.js"></script>
+    <script >var togglebuttonSelector = '.toggle, .admonition.dropdown, .tag_hide_input div.cell_input, .tag_hide-input div.cell_input, .tag_hide_output div.cell_output, .tag_hide-output div.cell_output, .tag_hide_cell.cell, .tag_hide-cell.cell';</script>
+    <script src="../../_static/sphinx-book-theme.7d483ff0a819d6edff12ce0b1ead3928.js"></script>
+    <script async="async" src="https://unpkg.com/thebelab@latest/lib/index.js"></script>
+    <script >
+        const thebe_selector = ".thebe"
+        const thebe_selector_input = "pre"
+        const thebe_selector_output = ".output"
+    </script>
+    <script async="async" src="../../_static/sphinx-thebe.js"></script>
+    <link rel="index" title="Index" href="../../genindex.html" />
+    <link rel="search" title="Search" href="../../search.html" />
+    <link rel="next" title="Online Collaboration Cafe" href="coworking-collabcafe.html" />
+    <link rel="prev" title="Coworking calls" href="../coworking.html" />
+
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="docsearch:language" content="en" />
+
+
+
+  </head>
+  <body data-spy="scroll" data-target="#bd-toc-nav" data-offset="80">
+    
+
+    <div class="container-xl">
+      <div class="row">
+          
+<div class="col-12 col-md-3 bd-sidebar site-navigation show" id="site-navigation">
+    
+        <div class="navbar-brand-box">
+<a class="navbar-brand text-wrap" href="../../index.html">
+  
+  <img src="../../_static/logo.png" class="logo" alt="logo">
+  
+  
+  <h1 class="site-logo" id="site-title">Environmental AI book</h1>
+  
+</a>
+</div><form class="bd-search d-flex align-items-center" action="../../search.html" method="get">
+  <i class="icon fas fa-search"></i>
+  <input type="search" class="form-control" name="q" id="search-input" placeholder="Search this book..." aria-label="Search this book..." autocomplete="off" >
+</form>
+<nav class="bd-links" id="bd-docs-nav" aria-label="Main navigation">
+    <ul class="nav sidenav_l1">
+ <li class="toctree-l1">
+  <a class="reference internal" href="../../welcome.html">
+   Welcome
+  </a>
+ </li>
+</ul>
+<p class="caption collapsible-parent">
+ <span class="caption-text">
+  Preamble
+ </span>
+</p>
+<ul class="nav sidenav_l1">
+ <li class="toctree-l1">
+  <a class="reference internal" href="../../preamble/about.html">
+   About this book
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../../preamble/who-for.html">
+   Who is the book for?
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../../preamble/how-to.html">
+   How to use this book
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../../preamble/attribution.html">
+   How to cite and reuse this material
+  </a>
+ </li>
+</ul>
+<p class="caption collapsible-parent">
+ <span class="caption-text">
+  Environments
+ </span>
+</p>
+<ul class="nav sidenav_l1">
+ <li class="toctree-l1 collapsible-parent">
+  <a class="reference internal" href="../../forest/forest-overview.html">
+   Forest
+  </a>
+  <ul class="collapse-ul">
+   <li class="toctree-l2">
+    <a class="reference internal" href="../../forest/forest-structure.html">
+     Forest Structure
+    </a>
+   </li>
+  </ul>
+  <i class="fas fa-chevron-down">
+  </i>
+ </li>
+ <li class="toctree-l1 collapsible-parent">
+  <a class="reference internal" href="../../polar/polar-overview.html">
+   Polar
+  </a>
+  <ul class="collapse-ul">
+   <li class="toctree-l2">
+    <a class="reference internal" href="../../polar/polar-elevation.html">
+     Demo antarctic
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../../polar/polar-test.html">
+     Demo temperature
+    </a>
+   </li>
+  </ul>
+  <i class="fas fa-chevron-down">
+  </i>
+ </li>
+ <li class="toctree-l1 collapsible-parent">
+  <a class="reference internal" href="../../urban/urban-overview.html">
+   Urban
+  </a>
+  <ul class="collapse-ul">
+   <li class="toctree-l2">
+    <a class="reference internal" href="../../urban/urban-sensors.html">
+     Demo cities
+    </a>
+   </li>
+  </ul>
+  <i class="fas fa-chevron-down">
+  </i>
+ </li>
+ <li class="toctree-l1 collapsible-parent">
+  <a class="reference internal" href="../../wildfires/wildfire-overview.html">
+   Wildfires
+  </a>
+  <ul class="collapse-ul">
+   <li class="toctree-l2">
+    <a class="reference internal" href="../../wildfires/wildfire-sentinel3.html">
+     Sentinel-3
+    </a>
+   </li>
+  </ul>
+  <i class="fas fa-chevron-down">
+  </i>
+ </li>
+</ul>
+<p class="caption collapsible-parent">
+ <span class="caption-text">
+  Digital Twins
+ </span>
+</p>
+<ul class="nav sidenav_l1">
+ <li class="toctree-l1">
+  <a class="reference internal" href="../../digitaltwins/digitaltwins-overview.html">
+   Digital Twins
+  </a>
+ </li>
+</ul>
+<p class="caption collapsible-parent">
+ <span class="caption-text">
+  Community
+ </span>
+</p>
+<ul class="current nav sidenav_l1">
+ <li class="toctree-l1 current active collapsible-parent">
+  <a class="reference internal" href="../coworking.html">
+   Coworking Calls
+  </a>
+  <ul class="current collapse-ul">
+   <li class="toctree-l2 current active">
+    <a class="current reference internal" href="#">
+     Background, Motivations, and Techniques
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="coworking-collabcafe.html">
+     Online Collaboration Cafe
+    </a>
+   </li>
+  </ul>
+  <i class="fas fa-chevron-down">
+  </i>
+ </li>
+ <li class="toctree-l1 collapsible-parent">
+  <a class="reference internal" href="../templates.html">
+   Template Collection
+  </a>
+  <ul class="collapse-ul">
+   <li class="toctree-l2">
+    <a class="reference internal" href="../templates/template-coworking-collabcafe.html">
+     Online Collaboration Cafe Templates
+    </a>
+   </li>
+  </ul>
+  <i class="fas fa-chevron-down">
+  </i>
+ </li>
+</ul>
+<p class="caption collapsible-parent">
+ <span class="caption-text">
+  Afterword
+ </span>
+</p>
+<ul class="nav sidenav_l1">
+ <li class="toctree-l1">
+  <a class="reference internal" href="../../afterword/glossary.html">
+   Glossary
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../../afterword/bibliography.html">
+   Bibliography
+  </a>
+ </li>
+</ul>
+
+</nav> <!-- To handle the deprecated key -->
+
+<div class="navbar_extra_footer">
+  Powered by <a href="https://jupyterbook.org">Jupyter Book</a>
+</div>
+
+</div>
+
+
+          
+
+
+          
+<main class="col py-md-3 pl-md-4 bd-content overflow-auto" role="main">
+    
+    <div class="topbar container-xl fixed-top">
+    <div class="topbar-contents row">
+        <div class="col-12 col-md-3 bd-topbar-whitespace site-navigation show"></div>
+        <div class="col pl-md-4 topbar-main">
+            
+            <button id="navbar-toggler" class="navbar-toggler ml-0" type="button" data-toggle="collapse"
+                data-toggle="tooltip" data-placement="bottom" data-target=".site-navigation" aria-controls="navbar-menu"
+                aria-expanded="true" aria-label="Toggle navigation" aria-controls="site-navigation"
+                title="Toggle navigation" data-toggle="tooltip" data-placement="left">
+                <i class="fas fa-bars"></i>
+                <i class="fas fa-arrow-left"></i>
+                <i class="fas fa-arrow-up"></i>
+            </button>
+            
+            
+<div class="dropdown-buttons-trigger">
+    <button id="dropdown-buttons-trigger" class="btn btn-secondary topbarbtn" aria-label="Download this page"><i
+            class="fas fa-download"></i></button>
+
+    <div class="dropdown-buttons">
+        <!-- ipynb file if we had a myst markdown file -->
+        
+        <!-- Download raw file -->
+        <a class="dropdown-buttons" href="../../_sources/community/coworking/coworking-motivation.md"><button type="button"
+                class="btn btn-secondary topbarbtn" title="Download source file" data-toggle="tooltip"
+                data-placement="left">.md</button></a>
+        <!-- Download PDF via print -->
+        <button type="button" id="download-print" class="btn btn-secondary topbarbtn" title="Print to PDF"
+            onClick="window.print()" data-toggle="tooltip" data-placement="left">.pdf</button>
+    </div>
+</div>
+
+            <!-- Source interaction buttons -->
+
+<div class="dropdown-buttons-trigger">
+    <button id="dropdown-buttons-trigger" class="btn btn-secondary topbarbtn"
+        aria-label="Connect with source repository"><i class="fab fa-github"></i></button>
+    <div class="dropdown-buttons sourcebuttons">
+        <a class="repository-button"
+            href="https://github.com/acocac/environmental-ai-book"><button type="button" class="btn btn-secondary topbarbtn"
+                data-toggle="tooltip" data-placement="left" title="Source repository"><i
+                    class="fab fa-github"></i>repository</button></a>
+        <a class="issues-button"
+            href="https://github.com/acocac/environmental-ai-book/issues/new?title=Issue%20on%20page%20%2Fcommunity/coworking/coworking-motivation.html&body=Your%20issue%20content%20here."><button
+                type="button" class="btn btn-secondary topbarbtn" data-toggle="tooltip" data-placement="left"
+                title="Open an issue"><i class="fas fa-lightbulb"></i>open issue</button></a>
+        
+    </div>
+</div>
+
+
+            <!-- Full screen (wrap in <a> to have style consistency -->
+            <a class="full-screen-button"><button type="button" class="btn btn-secondary topbarbtn" data-toggle="tooltip"
+                    data-placement="bottom" onclick="toggleFullScreen()" aria-label="Fullscreen mode"
+                    title="Fullscreen mode"><i
+                        class="fas fa-expand"></i></button></a>
+
+            <!-- Launch buttons -->
+
+        </div>
+
+        <!-- Table of contents -->
+        <div class="d-none d-md-block col-md-2 bd-toc show">
+            
+        <div class="tocsection onthispage pt-5 pb-3">
+            <i class="fas fa-list"></i>
+            Contents
+        </div>
+        <nav id="bd-toc-nav">
+            <ul class="nav section-nav flex-column">
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#background-and-motivation">
+   Background and Motivation
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#techniques">
+   Techniques
+  </a>
+  <ul class="nav section-nav flex-column">
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#shut-up-write">
+     Shut up &amp; Write
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#pomodoro-technique">
+     Pomodoro Technique
+    </a>
+   </li>
+  </ul>
+ </li>
+</ul>
+
+        </nav>
+        
+        </div>
+    </div>
+</div>
+    <div id="main-content" class="row">
+        <div class="col-12 col-md-9 pl-md-3 pr-md-0">
+        
+              <div>
+                
+  <div class="section" id="background-motivations-and-techniques">
+<h1>Background, Motivations, and Techniques<a class="headerlink" href="#background-motivations-and-techniques" title="Permalink to this headline">¶</a></h1>
+<div class="section" id="background-and-motivation">
+<h2>Background and Motivation<a class="headerlink" href="#background-and-motivation" title="Permalink to this headline">¶</a></h2>
+<p>When <em>The Turing Way</em> started with around 10 members located in the United Kingdom, they could work in real-time and often together in the same location.
+They shared ideas, helped each other out, got huge amounts of writing, editing and reviewing done, and had lots of fun interacting with each other.</p>
+<p>To help the community of contributors grow beyond the core team, the in-person book dash (a shorter version of <a class="reference external" href="https://www.booksprints.net/">book sprints</a>) were hosted to offer interested participants a similar collaborative environment with an advantage to connect with each other informally.
+However, not everyone can join such in-person events.
+These only work for people who can take 1-2 full days from their job-related and personal responsibilities to attend the event.
+Moreover, they take a lot of time and effort in organisation and are expensive to run, especially if we want to host them frequently to allow more and more participants to experience the joy of working together.</p>
+<p>This is where the practice of online coworking is extremely valuable for <em>The Turing Way</em> as a community project.</p>
+<p>The motivation behind hosting these online calls for <em>The Turing Way</em> community are the following:</p>
+<ol class="simple">
+<li><p>Onboard members who are new to the project by providing a real-time orientation</p></li>
+<li><p>Build personal connections between members of the community</p></li>
+<li><p>Support contributors as they edit, review, design and write content for the book</p></li>
+<li><p>Create a sense of accountability and ownership for the goals our members want to accomplish in the project</p></li>
+<li><p>Celebrate the progress of <em>The Turing Way</em> and collaboratively build consensus on the next steps and future directions.</p></li>
+</ol>
+<p>We aim to create a safe space for shared experience, connection, support and collaboration for the distributed community of <em>The Turing Way</em>.</p>
+<p>If you want to attend these calls but don’t know what to work on, don’t worry!
+<em>The Turing Way</em> core team members will be on the call and point you to some starting points in the project and other ongoing efforts where you can make a difference.</p>
+</div>
+<div class="section" id="techniques">
+<h2>Techniques<a class="headerlink" href="#techniques" title="Permalink to this headline">¶</a></h2>
+<p>We offer two types of coworking calls: 1-hour short calls every week to work on ongoing projects in the community, and 2-hour long bimonthly Collaboration Cafes that offers a mix of community discussion and quiet working slots.
+We encourage our members to attend for as long during these designated hours as their schedule allows, even if they can’t be present during the entire call.</p>
+<p>These calls use a combination of two techniques:</p>
+<ol class="simple">
+<li><p>Shut up &amp; Write method</p></li>
+<li><p>Pomodoro Interval Technique</p></li>
+</ol>
+<div class="section" id="shut-up-write">
+<h3>Shut up &amp; Write<a class="headerlink" href="#shut-up-write" title="Permalink to this headline">¶</a></h3>
+<p>The <a class="reference external" href="https://shutupwrite.com/">Shut up &amp; Write!</a> are <em>local writing meetups where you get your writing done</em>.
+Their <a class="reference external" href="https://shutupwrite.com/method">method</a> divides the writing process into eight steps: ideation, structuring, drafting, editing, restructuring and revising, polishing, publishing, and promoting.
+They encourage their participants to identify what they want to write and where they are in this eight-step process.
+Once they identify their starting point and commit to getting through the next steps by practicing consistency <em>steadily to “The End”</em>.</p>
+<p>They explain that the Shut up &amp; Write! events provide two things:</p>
+<p><strong>1. Accountability &amp; Habit Formation:</strong></p>
+<p>A new habit becomes a part of our routine when we commit to doing them consistently on a specific day, time, and location.
+Based on this principle, Shut up &amp; Write events allow participants to yield successful outcomes for their writing assignments by making the commitment to attend the writing event each week at the same time for 1 hour.</p>
+<p><strong>2. Social Motivation &amp; Support:</strong></p>
+<p>The <em>sense of belonging</em> can increase performance and engagement in tasks.
+In a survey conducted on 2000 participants from different sectors, high belonging was linked to a whopping 56% increase in job performance <span id="id1">[<span>HBR2019Belonging</span>]</span>.
+Along the same line, Shut Up &amp; Write events provide a sense of community where attendees feel supported and motivated by everyone else writing around them.</p>
+<p>They create a cycle of 3 experiences: “habit building and progress”, “social support and accountability” and “great writing experience”, which keep people engaged, feel committed and accomplish what they set out to do.</p>
+</div>
+<div class="section" id="pomodoro-technique">
+<h3>Pomodoro Technique<a class="headerlink" href="#pomodoro-technique" title="Permalink to this headline">¶</a></h3>
+<p>The <a class="reference external" href="https://en.wikipedia.org/wiki/Pomodoro_Technique">pomodoro technique</a> uses a timer to break down work into smaller intervals usually of 25 minutes called “Pomodoros”, separated by short breaks of 5 minutes.
+Like the previous technique, the Pomodoro technique allows planning, tracking, recording, processing and visualizing the task at hand.</p>
+<blockquote>
+<div><p>Pomodoro, from the Italian word for ‘tomato’, after the tomato-shaped kitchen timer that Francesco Cirillo used as a university student. <span id="id2">[<span>Lifehack2020pomodoro</span>]</span></p>
+</div></blockquote>
+<p>The goal of this technique is to avoid procrastinating and get things done with the help of the following workflow:</p>
+<ul class="simple">
+<li><p>identify the task</p></li>
+<li><p>set the Pomodoro timer (25 minutes long)</p></li>
+<li><p>work on the task until the timer rings</p></li>
+<li><p>take a 5 minutes break</p></li>
+<li><p>identify what would you work on next</p></li>
+<li><p>restart the timer and repeat the workflow</p></li>
+</ul>
+<p>The original method recommends putting a checkmark on a piece of paper to count the number of Pomodoros and suggests taking a longer break of 15-30 minutes after four Pomodoros.
+The longer breaks can be used for the following tasks:</p>
+<ul class="simple">
+<li><p>Reflect on the work that you could get done in the last Pomodoros</p></li>
+<li><p>Reflect on what you learned and what you would do differently going forward</p></li>
+<li><p>Identify the next set of tasks or the next steps in the project you are working on</p></li>
+</ul>
+<p>In the next subchapters, we explain our coworking call formats where we combine these two techniques to host the biweekly Collaboration Cafes and weekly coworking calls for our community members.</p>
+</div>
+</div>
+</div>
+
+    <script type="text/x-thebe-config">
+    {
+        requestKernel: true,
+        binderOptions: {
+            repo: "binder-examples/jupyter-stacks-datascience",
+            ref: "master",
+        },
+        codeMirrorConfig: {
+            theme: "abcdef",
+            mode: "python"
+        },
+        kernelOptions: {
+            kernelName: "python3",
+            path: "./community/coworking"
+        },
+        predefinedOutput: true
+    }
+    </script>
+    <script>kernelName = 'python3'</script>
+
+              </div>
+              
+        
+        <div class='prev-next-bottom'>
+            
+    <a class='left-prev' id="prev-link" href="../coworking.html" title="previous page">Coworking calls</a>
+    <a class='right-next' id="next-link" href="coworking-collabcafe.html" title="next page">Online Collaboration Cafe</a>
+
+        </div>
+        
+        </div>
+    </div>
+    <footer class="footer mt-5 mt-md-0">
+    <div class="container">
+      <p>
+        
+          By Environmental Community<br/>
+        
+            &copy; Copyright 2021.<br/>
+      </p>
+    </div>
+  </footer>
+</main>
+
+
+      </div>
+    </div>
+
+    
+  <script src="../../_static/js/index.d3f166471bb80abb5163.js"></script>
+
+
+    
+  </body>
+</html>
