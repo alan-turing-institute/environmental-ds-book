@@ -1,12 +1,12 @@
-# Environmental monitoring: blending satellite and surface data
+# Environmental AI book
 
-_Environmental monitoring: blending satellite and surface data_ is an interdisciplinary project to lay the foundations for ambitious research programmes to tackle our greatest environmental changes.
+The Environmental AI Book is an online, interactive textbook on fundamentals and use cases of applied AI for environmental studies.
 
-You can read it here: [Website](https://acocac.github.io/envsensors)
+You can read it here: [Website](https://acocac.github.io/environmental-ai-book)
 
 ## Contributors
 
-We welcome and recognize all contributions. You can see a list of current contributors in the [contributors tab](https://github.com/acocac/demo/graphs/contributors).
+We welcome and recognize all contributions. You can see a list of current contributors in the [contributors tab](https://github.com/acocac/environmental-ai-book/graphs/contributors).
 
 ## Credits
 
