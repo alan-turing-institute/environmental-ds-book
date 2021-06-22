@@ -1,13 +1,19 @@
 # Table of content
 # Learn more at https://jupyterbook.org/customize/toc.html
 #
+
+# ===== Main Landing Page ========================================
 - file: welcome
+
+# ===== Preamble Section ========================================
 - part: Preamble
   chapters:
   - file: preamble/about
   - file: preamble/who-for
   - file: preamble/how-to
   - file: preamble/attribution
+
+# ===== Environments Section ========================================
 
 - part: Environments
   chapters:
@@ -30,6 +36,8 @@
       - title: Sentinel-3
         file: wildfires/wildfire-sentinel3
 
+# ===== Digital Twins Section ========================================
+
 - part: Digital Twins
   chapters:
   - file: digitaltwins/digitaltwins-overview
@@ -37,17 +45,20 @@
     - title: Concepts
       file: digitaltwins/digitaltwins-concepts
 
-- part: Projects
-  chapters:
-  - file: project/project-overview
-    sections:
-      - title: Deep learning for intelligent placement of environmental sensors
-        file: project/project-wp1
-      - title: Detecting and tracking environmental change from remote sensors
-        file: project/project-wp2
-      - title: Creating the building blocks for Digital Twins of the natural environment
-        file: project/project-wp3
+# ===== Community Section ========================================
 
-- part: References
+- part: Community
   chapters:
-  - file: references/references
+  - file: community/coworking
+    sections:
+    - title: Background, Motivations, and Techniques
+      file: community/coworking/coworking-motivation
+    - title: Online Collaboration Cafe
+      file: community/coworking/coworking-collabcafe
+
+# ===== Afterword Section ========================================
+
+- part: Afterword
+  sections:
+  - file: afterword/glosary
+  - file: afterword/bibliography
