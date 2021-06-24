@@ -1,7 +1,9 @@
 Who is the book for?
 =======================
 
-*under construction*
+:::{note}
+Under construction
+:::
 
 This book should be useful for:
 * Audience 1

@@ -1,4 +1,6 @@
 Glossary
 =======================
 
-*under construction*
+:::{note}
+Under construction
+:::

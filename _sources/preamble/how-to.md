@@ -1,4 +1,6 @@
 How to use this book
 =======================
 
-*under construction*
+:::{note}
+Under construction
+:::
