@@ -17,33 +17,39 @@
 
 - part: Environments
   chapters:
-  - file: forest/forest-overview
+  - title: Forest
+    file: forest/forest-overview
     sections:
-    - title: Forest Structure
-      file: forest/forest-structure
-  - file: polar/polar-overview
+    - title: Sensors
+      file: forest/forest-sensors
+    - title: Structure Modelling
+      file: forest/forest-modelling-structure
+  - title: Polar
+    file: polar/polar-overview
     sections:
-      - title: Demo antarctic
-        file: polar/polar-elevation
-      - title: Demo temperature
-        file: polar/polar-test
-  - file: urban/urban-overview
+      - title: Sensors
+        file: polar/polar-sensors
+      - title: Temperature modelling
+        file: polar/polar-modelling-temperature
+  - title: Urban
+    file: urban/urban-overview
     sections:
-      - title: Demo cities
+      - title: Sensors
         file: urban/urban-sensors
-  - file: wildfires/wildfire-overview
+  - title: Wildfires
+    file: wildfires/wildfire-overview
     sections:
-      - title: Sentinel-3
-        file: wildfires/wildfire-sentinel3
+      - title: Sensors
+        file: wildfires/wildfire-sensors
 
 # ===== Digital Twins Section ========================================
 
 - part: Digital Twins
   chapters:
-  - file: digitaltwins/digitaltwins-overview
-  sections:
-    - title: Concepts
-      file: digitaltwins/digitaltwins-concepts
+  - title: Overview
+    file: digitaltwins/digitaltwins-overview
+  - title: Concepts
+    file: digitaltwins/digitaltwins-concepts
 
 # ===== Community Section ========================================
 
@@ -61,6 +67,7 @@
     sections:
      - title: Online Collaboration Cafe Templates
        file: community/templates/template-coworking-collabcafe
+
 # ===== Afterword Section ========================================
 
 - part: Afterword
