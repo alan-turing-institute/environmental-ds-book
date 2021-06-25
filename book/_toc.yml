@@ -31,6 +31,8 @@
         file: polar/polar-sensors
       - title: Temperature modelling
         file: polar/polar-modelling-temperature
+      - title: Test
+        file: polar/polar-test
   - title: Urban
     file: urban/urban-overview
     sections:

@@ -40,7 +40,7 @@ bibtex_bibfiles:
 #######################################################################################
 # Launch button settings
 launch_buttons:
-  notebook_interface        : jupyterlab  # The interface interactive links will activate ["classic", "jupyterlab"]
+  notebook_interface        : classic  # The interface interactive links will activate ["classic", "jupyterlab"]
   binderhub_url             : https://binder.pangeo.io  # The URL of the BinderHub (e.g., https://mybinder.org)
   jupyterhub_url            : ""  # The URL of the JupyterHub (e.g., https://datahub.berkeley.edu)
   thebe                     : false  # Add a thebe button to pages (requires the repository to run on Binder)
