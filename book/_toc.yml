@@ -74,3 +74,4 @@
   sections:
   - file: afterword/glossary
   - file: afterword/bibliography
+  - file: afterword/statistics

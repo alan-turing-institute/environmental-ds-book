@@ -13,7 +13,8 @@ logo                        : logo.png  # A path to the book logo
 #######################################################################################
 # Execution settings
 execute:
-  execute_notebooks: force
+  execute_notebooks: cache
+  timeout: -1 #maximum time (in seconds)
 
 # Define the name of the latex output file for PDF builds
 latex:
