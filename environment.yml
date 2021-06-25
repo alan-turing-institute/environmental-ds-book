@@ -9,7 +9,6 @@ dependencies:
   - numpy
   - ghp-import
   - hvplot
-  - pyviz
   - intake
   - xarray
   - dask
@@ -17,3 +16,7 @@ dependencies:
   - bottleneck
   - pooch
   - pre-commit
+  - pip
+  - pip:
+      # works for regular pip packages
+      - pyviz
