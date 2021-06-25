@@ -1,0 +1,23 @@
+name: envai-book-dev
+channels:
+  - conda-forge
+dependencies:
+  - python=3.8
+  - jupyter-book
+  - jupyterlab
+  - matplotlib
+  - numpy
+  - ghp-import
+  - hvplot
+  - pyviz
+  - intake
+  - xarray
+  - dask
+  - netCDF4
+  - bottleneck
+  - pooch
+  - pre-commit
+  - pip
+  - pip:
+      # works for regular pip packages
+      - jupyter_contrib_nbextensions
