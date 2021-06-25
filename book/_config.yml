@@ -31,6 +31,9 @@ html:
   use_issues_button: true
   use_repository_button: true
 
+launch_buttons:
+  colab_url: "https://colab.research.google.com"
+
 repository:
   url: https://github.com/acocac/environmental-ai-book # Online location of your book
   path_to_book: book  # Optional path to your book, relative to the repository root
