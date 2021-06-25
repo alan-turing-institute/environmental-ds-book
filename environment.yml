@@ -17,7 +17,3 @@ dependencies:
   - bottleneck
   - pooch
   - pre-commit
-  - pip
-  - pip:
-      # works for regular pip packages
-      - jupyter_contrib_nbextensions
