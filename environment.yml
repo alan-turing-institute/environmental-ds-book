@@ -15,4 +15,3 @@ dependencies:
   - netCDF4
   - bottleneck
   - pooch
-  - pre-commit
