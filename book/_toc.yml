@@ -24,6 +24,8 @@
       file: forest/forest-sensors
     - title: Structure Modelling
       file: forest/forest-modelling-structure
+    - title: Tree Crown Modelling
+      file: forest/forest-modelling-treecrown
   - title: Polar
     file: polar/polar-overview
     sections:
