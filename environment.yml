@@ -16,7 +16,3 @@ dependencies:
   - bottleneck
   - pooch
   - pre-commit
-  - pip
-  - pip:
-      # works for regular pip packages
-      - pyviz
