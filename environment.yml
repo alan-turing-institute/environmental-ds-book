@@ -2,7 +2,7 @@ name: envai-book-dev
 channels:
   - conda-forge
 dependencies:
-  - python=3.6
+  - python=3.8
   - jupyter-book
   - jupyterlab
   - matplotlib
@@ -16,6 +16,8 @@ dependencies:
   - bottleneck
   - pooch
   - pytorch
+  - pyviz
+  - geoviews
   - pip
   - pip:
       - scikit-image

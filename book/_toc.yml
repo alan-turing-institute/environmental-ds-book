@@ -26,7 +26,7 @@
       file: forest/forest-modelling-structure
     - title: Tree Crown Modelling
       file: forest/forest-modelling-treecrown
-    - title: Wildfirest Modelling
+    - title: Wildfires Modelling
       file: forest/forest-modelling-wildfires
   - title: Polar
     file: polar/polar-overview
@@ -63,6 +63,11 @@
       file: community/coworking/coworking-motivation
     - title: Online Collaboration Cafe
       file: community/coworking/coworking-collabcafe
+  - title: Meeting Notes
+    file: community/notes
+    sections:
+    - title: Online Collaboration Cafe
+      file: community/notes/notes-collabcafe
   - title: Template Collection
     file: community/templates
     sections:
