@@ -1,4 +1,6 @@
 Coworking calls
 =======================
 
-*under construction*
+:::{note}
+Under construction
+:::

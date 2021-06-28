@@ -54,8 +54,8 @@
     <script async="async" src="../_static/sphinx-thebe.js"></script>
     <link rel="index" title="Index" href="../genindex.html" />
     <link rel="search" title="Search" href="../search.html" />
-    <link rel="next" title="Polar: Temperature modelling" href="polar-modelling-temperature.html" />
-    <link rel="prev" title="Polar: Overview" href="polar-overview.html" />
+    <link rel="next" title="Urban: Overview" href="../urban/urban-overview.html" />
+    <link rel="prev" title="Polar: Temperature modelling" href="polar-modelling-temperature.html" />
 
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <meta name="docsearch:language" content="en" />
@@ -159,8 +159,8 @@
    Polar
   </a>
   <ul class="current collapse-ul">
-   <li class="toctree-l2 current active">
-    <a class="current reference internal" href="#">
+   <li class="toctree-l2">
+    <a class="reference internal" href="polar-sensors.html">
      Sensors
     </a>
    </li>
@@ -169,8 +169,8 @@
      Temperature modelling
     </a>
    </li>
-   <li class="toctree-l2">
-    <a class="reference internal" href="polar-test.html">
+   <li class="toctree-l2 current active">
+    <a class="current reference internal" href="#">
      Test
     </a>
    </li>
@@ -330,7 +330,7 @@
         <!-- ipynb file if we had a myst markdown file -->
         
         <!-- Download raw file -->
-        <a class="dropdown-buttons" href="../_sources/polar/polar-sensors.ipynb"><button type="button"
+        <a class="dropdown-buttons" href="../_sources/polar/polar-test.ipynb"><button type="button"
                 class="btn btn-secondary topbarbtn" title="Download source file" data-toggle="tooltip"
                 data-placement="left">.ipynb</button></a>
         <!-- Download PDF via print -->
@@ -350,7 +350,7 @@
                 data-toggle="tooltip" data-placement="left" title="Source repository"><i
                     class="fab fa-github"></i>repository</button></a>
         <a class="issues-button"
-            href="https://github.com/acocac/environmental-ai-book/issues/new?title=Issue%20on%20page%20%2Fpolar/polar-sensors.html&body=Your%20issue%20content%20here."><button
+            href="https://github.com/acocac/environmental-ai-book/issues/new?title=Issue%20on%20page%20%2Fpolar/polar-test.html&body=Your%20issue%20content%20here."><button
                 type="button" class="btn btn-secondary topbarbtn" data-toggle="tooltip" data-placement="left"
                 title="Open an issue"><i class="fas fa-lightbulb"></i>open issue</button></a>
         
@@ -371,7 +371,7 @@
         aria-label="Launch interactive content"><i class="fas fa-rocket"></i></button>
     <div class="dropdown-buttons">
         
-        <a class="binder-button" href="https://binder.pangeo.io/v2/gh/acocac/environmental-ai-book/master?urlpath=tree/book/polar/polar-sensors.ipynb"><button type="button"
+        <a class="binder-button" href="https://binder.pangeo.io/v2/gh/acocac/environmental-ai-book/master?urlpath=tree/book/polar/polar-test.ipynb"><button type="button"
                 class="btn btn-secondary topbarbtn" title="Launch Binder" data-toggle="tooltip"
                 data-placement="left"><img class="binder-button-logo"
                     src="../_static/images/logo_binder.svg"
@@ -379,7 +379,7 @@
         
         
         
-        <a class="colab-button" href="https://colab.research.google.com/github/acocac/environmental-ai-book/blob/master/book/polar/polar-sensors.ipynb"><button type="button" class="btn btn-secondary topbarbtn"
+        <a class="colab-button" href="https://colab.research.google.com/github/acocac/environmental-ai-book/blob/master/book/polar/polar-test.ipynb"><button type="button" class="btn btn-secondary topbarbtn"
                 title="Launch Colab" data-toggle="tooltip" data-placement="left"><img class="colab-button-logo"
                     src="../_static/images/logo_colab.png"
                     alt="Interact on Colab">Colab</button></a>
@@ -393,21 +393,6 @@
         <!-- Table of contents -->
         <div class="d-none d-md-block col-md-2 bd-toc show">
             
-        <div class="tocsection onthispage pt-5 pb-3">
-            <i class="fas fa-list"></i>
-            Contents
-        </div>
-        <nav id="bd-toc-nav">
-            <ul class="nav section-nav flex-column">
- <li class="toc-h2 nav-item toc-entry">
-  <a class="reference internal nav-link" href="#code-blocks-and-outputs">
-   Code blocks and outputs
-  </a>
- </li>
-</ul>
-
-        </nav>
-        
         </div>
     </div>
 </div>
@@ -418,53 +403,318 @@
                 
   <div class="section" id="polar-sensors">
 <h1>Polar: Sensors<a class="headerlink" href="#polar-sensors" title="Permalink to this headline">¶</a></h1>
-<p>You can also create content with Jupyter Notebooks. This means that you can include
-code blocks and their outputs in your book.</p>
-<div class="section" id="code-blocks-and-outputs">
-<h2>Code blocks and outputs<a class="headerlink" href="#code-blocks-and-outputs" title="Permalink to this headline">¶</a></h2>
-<p>Here’s some sample Matplotlib code:</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="kn">from</span> <span class="nn">matplotlib</span> <span class="kn">import</span> <span class="n">rcParams</span><span class="p">,</span> <span class="n">cycler</span>
-<span class="kn">import</span> <span class="nn">matplotlib.pyplot</span> <span class="k">as</span> <span class="nn">plt</span>
-<span class="kn">import</span> <span class="nn">numpy</span> <span class="k">as</span> <span class="nn">np</span>
-<span class="n">plt</span><span class="o">.</span><span class="n">ion</span><span class="p">()</span>
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="kn">from</span> <span class="nn">dask.distributed</span> <span class="kn">import</span> <span class="n">Client</span>
+<span class="n">client</span> <span class="o">=</span> <span class="n">Client</span><span class="p">()</span>
+<span class="n">client</span>
 </pre></div>
 </div>
 </div>
 <div class="cell_output docutils container">
-<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>&lt;matplotlib.pyplot._IonContext at 0x10aa3cd30&gt;
-</pre></div>
-</div>
-</div>
-</div>
-<div class="cell docutils container">
-<div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># Fixing random state for reproducibility</span>
-<span class="n">np</span><span class="o">.</span><span class="n">random</span><span class="o">.</span><span class="n">seed</span><span class="p">(</span><span class="mi">19680801</span><span class="p">)</span>
+<div class="output text_html">
+    <div>
+        <div style="
+            width: 24px;
+            height: 24px;
+            background-color: #e1e1e1;
+            border: 3px solid #9D9D9D;
+            border-radius: 5px;
+            position: absolute;"> </div>
+        <div style="margin-left: 48px;">
+            <h3 style="margin-bottom: 0px;">Client</h3>
+            <p style="color: #9D9D9D; margin-bottom: 0px;">Client-cd4b4c5e-d5fb-11eb-a1b8-38c98635b51e</p>
+            <table style="width: 100%; text-align: left;">
 
-<span class="n">N</span> <span class="o">=</span> <span class="mi">10</span>
-<span class="n">data</span> <span class="o">=</span> <span class="p">[</span><span class="n">np</span><span class="o">.</span><span class="n">logspace</span><span class="p">(</span><span class="mi">0</span><span class="p">,</span> <span class="mi">1</span><span class="p">,</span> <span class="mi">100</span><span class="p">)</span> <span class="o">+</span> <span class="n">np</span><span class="o">.</span><span class="n">random</span><span class="o">.</span><span class="n">randn</span><span class="p">(</span><span class="mi">100</span><span class="p">)</span> <span class="o">+</span> <span class="n">ii</span> <span class="k">for</span> <span class="n">ii</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="n">N</span><span class="p">)]</span>
-<span class="n">data</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">array</span><span class="p">(</span><span class="n">data</span><span class="p">)</span><span class="o">.</span><span class="n">T</span>
-<span class="n">cmap</span> <span class="o">=</span> <span class="n">plt</span><span class="o">.</span><span class="n">cm</span><span class="o">.</span><span class="n">coolwarm</span>
-<span class="n">rcParams</span><span class="p">[</span><span class="s1">&#39;axes.prop_cycle&#39;</span><span class="p">]</span> <span class="o">=</span> <span class="n">cycler</span><span class="p">(</span><span class="n">color</span><span class="o">=</span><span class="n">cmap</span><span class="p">(</span><span class="n">np</span><span class="o">.</span><span class="n">linspace</span><span class="p">(</span><span class="mi">0</span><span class="p">,</span> <span class="mi">1</span><span class="p">,</span> <span class="n">N</span><span class="p">)))</span>
+        <tr>
+            <td style="text-align: left;"><strong>Connection method:</strong> Cluster object</td>
+            <td style="text-align: left;"><strong>Cluster type:</strong> LocalCluster</td>
+        </tr>
+
+        <tr>
+            <td style="text-align: left;">
+                <strong>Dashboard: </strong>
+                <a href="http://127.0.0.1:8787/status">http://127.0.0.1:8787/status</a>
+            </td>
+            <td style="text-align: left;"></td>
+        </tr>
+
+            </table>
+
+        <details>
+        <summary style="margin-bottom: 20px;"><h3 style="display: inline;">Cluster Info</h3></summary>
+
+    <div class="jp-RenderedHTMLCommon jp-RenderedHTML jp-mod-trusted jp-OutputArea-output">
+        <div style="
+            width: 24px;
+            height: 24px;
+            background-color: #e1e1e1;
+            border: 3px solid #9D9D9D;
+            border-radius: 5px;
+            position: absolute;"> </div>
+        <div style="margin-left: 48px;">
+            <h3 style="margin-bottom: 0px; margin-top: 0px;">LocalCluster</h3>
+            <p style="color: #9D9D9D; margin-bottom: 0px;">c08e4dd1</p>
+            <table style="width: 100%; text-align: left;">
+
+    <tr>
+        <td style="text-align: left;"><strong>Status:</strong> running</td>
+        <td style="text-align: left;"><strong>Using processes:</strong> True</td>
+    </tr>
+
+    <tr>
+        <td style="text-align: left;">
+            <strong>Dashboard:</strong> <a href="http://127.0.0.1:8787/status">http://127.0.0.1:8787/status</a>
+        </td>
+        <td style="text-align: left;"><strong>Workers:</strong> 4</td>
+    </tr>
+    <tr>
+        <td style="text-align: left;">
+            <strong>Total threads:</strong>
+            4
+        </td>
+        <td style="text-align: left;">
+            <strong>Total memory:</strong>
+            16.00 GiB
+        </td>
+    </tr>
+
+            </table>
+            <details>
+            <summary style="margin-bottom: 20px;"><h3 style="display: inline;">Scheduler Info</h3></summary>
+
+<div style="">
+
+    <div>
+        <div style="
+            width: 24px;
+            height: 24px;
+            background-color: #FFF7E5;
+            border: 3px solid #FF6132;
+            border-radius: 5px;
+            position: absolute;"> </div>
+        <div style="margin-left: 48px;">
+            <h3 style="margin-bottom: 0px;">Scheduler</h3>
+            <p style="color: #9D9D9D; margin-bottom: 0px;">Scheduler-79526cab-17b3-45f8-822b-edeaa9779c40</p>
+            <table style="width: 100%; text-align: left;">
+                <tr>
+                    <td style="text-align: left;"><strong>Comm:</strong> tcp://127.0.0.1:63356</td>
+                    <td style="text-align: left;"><strong>Workers:</strong> 4</td>
+                </tr>
+                <tr>
+                    <td style="text-align: left;">
+                        <strong>Dashboard:</strong> <a href="http://127.0.0.1:8787/status">http://127.0.0.1:8787/status</a>
+                    </td>
+                    <td style="text-align: left;">
+                        <strong>Total threads:</strong>
+                        4
+                    </td>
+                </tr>
+                <tr>
+                    <td style="text-align: left;">
+                        <strong>Started:</strong>
+                        Just now
+                    </td>
+                    <td style="text-align: left;">
+                        <strong>Total memory:</strong>
+                        16.00 GiB
+                    </td>
+                </tr>
+            </table>
+        </div>
+    </div>
+
+    <details style="margin-left: 48px;">
+    <summary style="margin-bottom: 20px;"><h3 style="display: inline;">Workers</h3></summary>
+
+    <div style="margin-bottom: 20px;">
+        <div style="width: 24px;
+                    height: 24px;
+                    background-color: #DBF5FF;
+                    border: 3px solid #4CC9FF;
+                    border-radius: 5px;
+                    position: absolute;"> </div>
+        <div style="margin-left: 48px;">
+        <details>
+            <summary>
+                <h4 style="margin-bottom: 0px; display: inline;">Worker: 0</h4>
+            </summary>
+            <table style="width: 100%; text-align: left;">
+                <tr>
+                    <td style="text-align: left;"><strong>Comm: </strong> tcp://127.0.0.1:63365</td>
+                    <td style="text-align: left;"><strong>Total threads: </strong> 1</td>
+                </tr>
+                <tr>
+                    <td style="text-align: left;">
+                        <strong>Dashboard: </strong>
+                        <a href="http://127.0.0.1:63370/status">http://127.0.0.1:63370/status</a>
+                    </td>
+                    <td style="text-align: left;">
+                        <strong>Memory: </strong>
+                        4.00 GiB
+                    </td>
+                </tr>
+                <tr>
+                    <td style="text-align: left;"><strong>Nanny: </strong> tcp://127.0.0.1:63361</td>
+                    <td style="text-align: left;"></td>
+                </tr>
+                <tr>
+                    <td colspan="2" style="text-align: left;">
+                        <strong>Local directory: </strong>
+                        /Volumes/Alejo/Users/ac/Documents/Postdoc/AT/projects/EnvSensors/WP3/scripts/environmental-ai-book/book/polar/dask-worker-space/worker-7n2br85t
+                    </td>
+                </tr>
 
 
-<span class="kn">from</span> <span class="nn">matplotlib.lines</span> <span class="kn">import</span> <span class="n">Line2D</span>
-<span class="n">custom_lines</span> <span class="o">=</span> <span class="p">[</span><span class="n">Line2D</span><span class="p">([</span><span class="mi">0</span><span class="p">],</span> <span class="p">[</span><span class="mi">0</span><span class="p">],</span> <span class="n">color</span><span class="o">=</span><span class="n">cmap</span><span class="p">(</span><span class="mf">0.</span><span class="p">),</span> <span class="n">lw</span><span class="o">=</span><span class="mi">4</span><span class="p">),</span>
-                <span class="n">Line2D</span><span class="p">([</span><span class="mi">0</span><span class="p">],</span> <span class="p">[</span><span class="mi">0</span><span class="p">],</span> <span class="n">color</span><span class="o">=</span><span class="n">cmap</span><span class="p">(</span><span class="mf">.5</span><span class="p">),</span> <span class="n">lw</span><span class="o">=</span><span class="mi">4</span><span class="p">),</span>
-                <span class="n">Line2D</span><span class="p">([</span><span class="mi">0</span><span class="p">],</span> <span class="p">[</span><span class="mi">0</span><span class="p">],</span> <span class="n">color</span><span class="o">=</span><span class="n">cmap</span><span class="p">(</span><span class="mf">1.</span><span class="p">),</span> <span class="n">lw</span><span class="o">=</span><span class="mi">4</span><span class="p">)]</span>
+            </table>
+        </details>
+        </div>
+    </div>
 
-<span class="n">fig</span><span class="p">,</span> <span class="n">ax</span> <span class="o">=</span> <span class="n">plt</span><span class="o">.</span><span class="n">subplots</span><span class="p">(</span><span class="n">figsize</span><span class="o">=</span><span class="p">(</span><span class="mi">10</span><span class="p">,</span> <span class="mi">5</span><span class="p">))</span>
-<span class="n">lines</span> <span class="o">=</span> <span class="n">ax</span><span class="o">.</span><span class="n">plot</span><span class="p">(</span><span class="n">data</span><span class="p">)</span>
-<span class="n">ax</span><span class="o">.</span><span class="n">legend</span><span class="p">(</span><span class="n">custom_lines</span><span class="p">,</span> <span class="p">[</span><span class="s1">&#39;Cold&#39;</span><span class="p">,</span> <span class="s1">&#39;Medium&#39;</span><span class="p">,</span> <span class="s1">&#39;Hot&#39;</span><span class="p">]);</span>
-</pre></div>
+    <div style="margin-bottom: 20px;">
+        <div style="width: 24px;
+                    height: 24px;
+                    background-color: #DBF5FF;
+                    border: 3px solid #4CC9FF;
+                    border-radius: 5px;
+                    position: absolute;"> </div>
+        <div style="margin-left: 48px;">
+        <details>
+            <summary>
+                <h4 style="margin-bottom: 0px; display: inline;">Worker: 1</h4>
+            </summary>
+            <table style="width: 100%; text-align: left;">
+                <tr>
+                    <td style="text-align: left;"><strong>Comm: </strong> tcp://127.0.0.1:63363</td>
+                    <td style="text-align: left;"><strong>Total threads: </strong> 1</td>
+                </tr>
+                <tr>
+                    <td style="text-align: left;">
+                        <strong>Dashboard: </strong>
+                        <a href="http://127.0.0.1:63371/status">http://127.0.0.1:63371/status</a>
+                    </td>
+                    <td style="text-align: left;">
+                        <strong>Memory: </strong>
+                        4.00 GiB
+                    </td>
+                </tr>
+                <tr>
+                    <td style="text-align: left;"><strong>Nanny: </strong> tcp://127.0.0.1:63360</td>
+                    <td style="text-align: left;"></td>
+                </tr>
+                <tr>
+                    <td colspan="2" style="text-align: left;">
+                        <strong>Local directory: </strong>
+                        /Volumes/Alejo/Users/ac/Documents/Postdoc/AT/projects/EnvSensors/WP3/scripts/environmental-ai-book/book/polar/dask-worker-space/worker-u8t53jki
+                    </td>
+                </tr>
+
+
+            </table>
+        </details>
+        </div>
+    </div>
+
+    <div style="margin-bottom: 20px;">
+        <div style="width: 24px;
+                    height: 24px;
+                    background-color: #DBF5FF;
+                    border: 3px solid #4CC9FF;
+                    border-radius: 5px;
+                    position: absolute;"> </div>
+        <div style="margin-left: 48px;">
+        <details>
+            <summary>
+                <h4 style="margin-bottom: 0px; display: inline;">Worker: 2</h4>
+            </summary>
+            <table style="width: 100%; text-align: left;">
+                <tr>
+                    <td style="text-align: left;"><strong>Comm: </strong> tcp://127.0.0.1:63364</td>
+                    <td style="text-align: left;"><strong>Total threads: </strong> 1</td>
+                </tr>
+                <tr>
+                    <td style="text-align: left;">
+                        <strong>Dashboard: </strong>
+                        <a href="http://127.0.0.1:63367/status">http://127.0.0.1:63367/status</a>
+                    </td>
+                    <td style="text-align: left;">
+                        <strong>Memory: </strong>
+                        4.00 GiB
+                    </td>
+                </tr>
+                <tr>
+                    <td style="text-align: left;"><strong>Nanny: </strong> tcp://127.0.0.1:63359</td>
+                    <td style="text-align: left;"></td>
+                </tr>
+                <tr>
+                    <td colspan="2" style="text-align: left;">
+                        <strong>Local directory: </strong>
+                        /Volumes/Alejo/Users/ac/Documents/Postdoc/AT/projects/EnvSensors/WP3/scripts/environmental-ai-book/book/polar/dask-worker-space/worker-xtgxy9iz
+                    </td>
+                </tr>
+
+
+            </table>
+        </details>
+        </div>
+    </div>
+
+    <div style="margin-bottom: 20px;">
+        <div style="width: 24px;
+                    height: 24px;
+                    background-color: #DBF5FF;
+                    border: 3px solid #4CC9FF;
+                    border-radius: 5px;
+                    position: absolute;"> </div>
+        <div style="margin-left: 48px;">
+        <details>
+            <summary>
+                <h4 style="margin-bottom: 0px; display: inline;">Worker: 3</h4>
+            </summary>
+            <table style="width: 100%; text-align: left;">
+                <tr>
+                    <td style="text-align: left;"><strong>Comm: </strong> tcp://127.0.0.1:63362</td>
+                    <td style="text-align: left;"><strong>Total threads: </strong> 1</td>
+                </tr>
+                <tr>
+                    <td style="text-align: left;">
+                        <strong>Dashboard: </strong>
+                        <a href="http://127.0.0.1:63366/status">http://127.0.0.1:63366/status</a>
+                    </td>
+                    <td style="text-align: left;">
+                        <strong>Memory: </strong>
+                        4.00 GiB
+                    </td>
+                </tr>
+                <tr>
+                    <td style="text-align: left;"><strong>Nanny: </strong> tcp://127.0.0.1:63358</td>
+                    <td style="text-align: left;"></td>
+                </tr>
+                <tr>
+                    <td colspan="2" style="text-align: left;">
+                        <strong>Local directory: </strong>
+                        /Volumes/Alejo/Users/ac/Documents/Postdoc/AT/projects/EnvSensors/WP3/scripts/environmental-ai-book/book/polar/dask-worker-space/worker-fgz97dkt
+                    </td>
+                </tr>
+
+
+            </table>
+        </details>
+        </div>
+    </div>
+
+    </details>
 </div>
-</div>
-<div class="cell_output docutils container">
-<img alt="../_images/polar-sensors_2_0.png" src="../_images/polar-sensors_2_0.png" />
-</div>
-</div>
+
+            </details>
+        </div>
+    </div>
+
+        </details>
+
+        </div>
+    </div>
+</div></div>
 </div>
 </div>
 
@@ -493,8 +743,8 @@ code blocks and their outputs in your book.</p>
         
         <div class='prev-next-bottom'>
             
-    <a class='left-prev' id="prev-link" href="polar-overview.html" title="previous page">Polar: Overview</a>
-    <a class='right-next' id="next-link" href="polar-modelling-temperature.html" title="next page">Polar: Temperature modelling</a>
+    <a class='left-prev' id="prev-link" href="polar-modelling-temperature.html" title="previous page">Polar: Temperature modelling</a>
+    <a class='right-next' id="next-link" href="../urban/urban-overview.html" title="next page">Urban: Overview</a>
 
         </div>
         

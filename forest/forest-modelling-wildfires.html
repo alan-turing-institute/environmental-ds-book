@@ -5,7 +5,7 @@
   <head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Wildfires: Sensors &#8212; Environmental AI book</title>
+    <title>Forest: Wildfires Modelling &#8212; Environmental AI book</title>
     
   <link rel="stylesheet" href="../_static/css/index.f658d18f9b420779cfdf24aa0a7e2d77.css">
 
@@ -54,8 +54,8 @@
     <script async="async" src="../_static/sphinx-thebe.js"></script>
     <link rel="index" title="Index" href="../genindex.html" />
     <link rel="search" title="Search" href="../search.html" />
-    <link rel="next" title="Digital Twins: Overview" href="../digitaltwins/digitaltwins-overview.html" />
-    <link rel="prev" title="Wildfires: Overview" href="wildfire-overview.html" />
+    <link rel="next" title="Polar: Overview" href="../polar/polar-overview.html" />
+    <link rel="prev" title="Tree crown detection" href="forest-modelling-treecrown.html" />
 
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <meta name="docsearch:language" content="en" />
@@ -125,19 +125,29 @@
  </span>
 </p>
 <ul class="current nav sidenav_l1">
- <li class="toctree-l1 collapsible-parent">
-  <a class="reference internal" href="../forest/forest-overview.html">
+ <li class="toctree-l1 current active collapsible-parent">
+  <a class="reference internal" href="forest-overview.html">
    Forest
   </a>
-  <ul class="collapse-ul">
+  <ul class="current collapse-ul">
    <li class="toctree-l2">
-    <a class="reference internal" href="../forest/forest-sensors.html">
+    <a class="reference internal" href="forest-sensors.html">
      Sensors
     </a>
    </li>
    <li class="toctree-l2">
-    <a class="reference internal" href="../forest/forest-modelling-structure.html">
+    <a class="reference internal" href="forest-modelling-structure.html">
      Structure Modelling
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="forest-modelling-treecrown.html">
+     Tree Crown Modelling
+    </a>
+   </li>
+   <li class="toctree-l2 current active">
+    <a class="current reference internal" href="#">
+     Wildfires Modelling
     </a>
    </li>
   </ul>
@@ -159,6 +169,11 @@
      Temperature modelling
     </a>
    </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../polar/polar-test.html">
+     Test
+    </a>
+   </li>
   </ul>
   <i class="fas fa-chevron-down">
   </i>
@@ -170,20 +185,6 @@
   <ul class="collapse-ul">
    <li class="toctree-l2">
     <a class="reference internal" href="../urban/urban-sensors.html">
-     Sensors
-    </a>
-   </li>
-  </ul>
-  <i class="fas fa-chevron-down">
-  </i>
- </li>
- <li class="toctree-l1 current active collapsible-parent">
-  <a class="reference internal" href="wildfire-overview.html">
-   Wildfires
-  </a>
-  <ul class="current collapse-ul">
-   <li class="toctree-l2 current active">
-    <a class="current reference internal" href="#">
      Sensors
     </a>
    </li>
@@ -235,6 +236,20 @@
   </i>
  </li>
  <li class="toctree-l1 collapsible-parent">
+  <a class="reference internal" href="../community/notes.html">
+   Meeting Notes
+  </a>
+  <ul class="collapse-ul">
+   <li class="toctree-l2">
+    <a class="reference internal" href="../community/notes/notes-collabcafe.html">
+     Online Collaboration Cafe
+    </a>
+   </li>
+  </ul>
+  <i class="fas fa-chevron-down">
+  </i>
+ </li>
+ <li class="toctree-l1 collapsible-parent">
   <a class="reference internal" href="../community/templates.html">
    Template Collection
   </a>
@@ -247,6 +262,11 @@
   </ul>
   <i class="fas fa-chevron-down">
   </i>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../community/readings.html">
+   Interesting readings
+  </a>
  </li>
 </ul>
 <p class="caption collapsible-parent">
@@ -310,9 +330,9 @@
         <!-- ipynb file if we had a myst markdown file -->
         
         <!-- Download raw file -->
-        <a class="dropdown-buttons" href="../_sources/wildfires/wildfire-sensors.ipynb"><button type="button"
+        <a class="dropdown-buttons" href="../_sources/forest/forest-modelling-wildfires.md"><button type="button"
                 class="btn btn-secondary topbarbtn" title="Download source file" data-toggle="tooltip"
-                data-placement="left">.ipynb</button></a>
+                data-placement="left">.md</button></a>
         <!-- Download PDF via print -->
         <button type="button" id="download-print" class="btn btn-secondary topbarbtn" title="Print to PDF"
             onClick="window.print()" data-toggle="tooltip" data-placement="left">.pdf</button>
@@ -330,7 +350,7 @@
                 data-toggle="tooltip" data-placement="left" title="Source repository"><i
                     class="fab fa-github"></i>repository</button></a>
         <a class="issues-button"
-            href="https://github.com/acocac/environmental-ai-book/issues/new?title=Issue%20on%20page%20%2Fwildfires/wildfire-sensors.html&body=Your%20issue%20content%20here."><button
+            href="https://github.com/acocac/environmental-ai-book/issues/new?title=Issue%20on%20page%20%2Fforest/forest-modelling-wildfires.html&body=Your%20issue%20content%20here."><button
                 type="button" class="btn btn-secondary topbarbtn" data-toggle="tooltip" data-placement="left"
                 title="Open an issue"><i class="fas fa-lightbulb"></i>open issue</button></a>
         
@@ -346,28 +366,6 @@
 
             <!-- Launch buttons -->
 
-<div class="dropdown-buttons-trigger">
-    <button id="dropdown-buttons-trigger" class="btn btn-secondary topbarbtn"
-        aria-label="Launch interactive content"><i class="fas fa-rocket"></i></button>
-    <div class="dropdown-buttons">
-        
-        <a class="binder-button" href="https://mybinder.org/v2/gh/acocac/environmental-ai-book/master?urlpath=tree/book/wildfires/wildfire-sensors.ipynb"><button type="button"
-                class="btn btn-secondary topbarbtn" title="Launch Binder" data-toggle="tooltip"
-                data-placement="left"><img class="binder-button-logo"
-                    src="../_static/images/logo_binder.svg"
-                    alt="Interact on binder">Binder</button></a>
-        
-        
-        
-        <a class="colab-button" href="https://colab.research.google.com/github/acocac/environmental-ai-book/blob/master/book/wildfires/wildfire-sensors.ipynb"><button type="button" class="btn btn-secondary topbarbtn"
-                title="Launch Colab" data-toggle="tooltip" data-placement="left"><img class="colab-button-logo"
-                    src="../_static/images/logo_colab.png"
-                    alt="Interact on Colab">Colab</button></a>
-        
-        
-    </div>
-</div>
-
         </div>
 
         <!-- Table of contents -->
@@ -381,8 +379,8 @@
         
               <div>
                 
-  <div class="section" id="wildfires-sensors">
-<h1>Wildfires: Sensors<a class="headerlink" href="#wildfires-sensors" title="Permalink to this headline">¶</a></h1>
+  <div class="section" id="forest-wildfires-modelling">
+<h1>Forest: Wildfires Modelling<a class="headerlink" href="#forest-wildfires-modelling" title="Permalink to this headline">¶</a></h1>
 <div class="admonition note">
 <p class="admonition-title">Note</p>
 <p>Under construction</p>
@@ -402,7 +400,7 @@
         },
         kernelOptions: {
             kernelName: "python3",
-            path: "./wildfires"
+            path: "./forest"
         },
         predefinedOutput: true
     }
@@ -414,8 +412,8 @@
         
         <div class='prev-next-bottom'>
             
-    <a class='left-prev' id="prev-link" href="wildfire-overview.html" title="previous page">Wildfires: Overview</a>
-    <a class='right-next' id="next-link" href="../digitaltwins/digitaltwins-overview.html" title="next page">Digital Twins: Overview</a>
+    <a class='left-prev' id="prev-link" href="forest-modelling-treecrown.html" title="previous page"><strong>Tree crown detection</strong></a>
+    <a class='right-next' id="next-link" href="../polar/polar-overview.html" title="next page">Polar: Overview</a>
 
         </div>
         
