@@ -26,6 +26,8 @@
       file: forest/forest-modelling-structure
     - title: Tree Crown Modelling
       file: forest/forest-modelling-treecrown
+    - title: Wildfirest Modelling
+      file: forest/forest-modelling-wildfires
   - title: Polar
     file: polar/polar-overview
     sections:
@@ -40,11 +42,6 @@
     sections:
       - title: Sensors
         file: urban/urban-sensors
-  - title: Wildfires
-    file: wildfires/wildfire-overview
-    sections:
-      - title: Sensors
-        file: wildfires/wildfire-sensors
 
 # ===== Digital Twins Section ========================================
 
@@ -71,6 +68,8 @@
     sections:
      - title: Online Collaboration Cafe Templates
        file: community/templates/template-coworking-collabcafe
+  - title: Interesting readings
+    file: community/readings
 
 # ===== Afterword Section ========================================
 

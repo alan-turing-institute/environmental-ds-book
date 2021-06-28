@@ -15,3 +15,9 @@ dependencies:
   - netCDF4
   - bottleneck
   - pooch
+  - pytorch
+  - pip
+  - pip:
+      - scikit-image
+      - opencv-python
+      - pycurl
