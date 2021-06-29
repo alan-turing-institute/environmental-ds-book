@@ -5,7 +5,7 @@ tags: environmental-ai, collaboration-cafe
 
 # _The Environmental AI_ ⛰ 🌳 🏙️ ❄️ 🔥 🌊  online Collaboration Cafe 
 
-## 29 June 2021 | Visualization :bar_chart:	:world_map:	
+## 29 June 2021 | Theme: Visualization
 
 Thank you for joining the _The Environmental AI_'s online Collaboration Cafe! 
 
