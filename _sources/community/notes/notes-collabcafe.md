@@ -1,7 +1,10 @@
 ---
 tags: environmental-ai, collaboration-cafe
 ---
+:::{note}
 *This HackMD is based on [_The Turing Way_ template](https://hackmd.io/@turingway/collaboration-cafe)*
+*A permanent document exists in the HackMD: [https://hackmd.io/@environmental-ai/collaboration-cafe](https://hackmd.io/@environmental-ai/collaboration-cafe) that is regularly updated with the empty template for next event.*
+:::
 
 # _The Environmental AI_ ⛰ 🌳 🏙️ ❄️ 🔥 🌊  online Collaboration Cafe 
 
@@ -39,7 +42,7 @@ Passcode: 1989
 
 ### Sign up below
 
-**Name + Q1 + an emoji to represent it ([emoji cheatsheet](https://github.com/ikatyang/emoji-cheat-sheet/blob/master/README.md))**
+**Name + <A fun Icebreaker> + an emoji to represent it ([emoji cheatsheet](https://github.com/ikatyang/emoji-cheat-sheet/blob/master/README.md))**
 
 *(Remember that this is a public document. You can use a pseudonym if you'd prefer.)*
 ==*If you are new to HackMD, please see this document for a short guide (right click, open in a new window): [https://hackmd.io/@turingway/hackmd-guide](https://hackmd.io/@turingway/hackmd-guide).*==
@@ -58,6 +61,7 @@ Passcode: 1989
 
 
 ### Shared clock/timer
+
 https://cuckoo.team/environmental-ai
 
 ### Schedule
@@ -140,7 +144,7 @@ https://cuckoo.team/environmental-ai
 * Tools for regridding MODIS data. Sam is using [*satpy*](https://satpy.readthedocs.io/en/stable/overview.html). Suggestions of other existing tools are welcome. 
 * Tom is making his code nicer i.e. modules and efficient i.e using dask. 
 * Alejandro shows FluxNet demo
-    * Emily suggest to add woodlands and shrubs to subset FluxNet data. 
+    * Emily suggest adding woodlands and shrubs to subset FluxNet data. 
 
 ### Feedback at the end of the call
 * Add a disclaimer collaboration cafes' hackMDs are public.

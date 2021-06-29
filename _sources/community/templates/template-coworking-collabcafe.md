@@ -1,21 +1,23 @@
 (ch-template-coworking-collabcafe)=
 # Collaboration Cafe Call Template
 
-*A permanent document exists in the HackMD: [https://hackmd.io/@KirstieJane/CollabCafe](https://hackmd.io/@KirstieJane/CollabCafe) that is regularly updated with the empty template for next event.*
+:::{note}
+*This HackMD is based on [_The Turing Way_ template](https://hackmd.io/@turingway/collaboration-cafe)*
+*A permanent document exists in the HackMD: [https://hackmd.io/@environmental-ai/collaboration-cafe](https://hackmd.io/@environmental-ai/collaboration-cafe) that is regularly updated with the empty template for next event.*
+:::
 
 ## _The Turing Way_ online Collaboration Cafe | DATE MONTH YEAR
 
-Thank you for joining the _Turing Way_'s online Collaboration Cafe!
-We're delighted to have you here :coffee: :sparkles: :cake:
+Thank you for joining the _The Environmental AI_'s online Collaboration Cafe! 
 
-(*We do recommend bringing your actual tea, coffee, water or your favorite beverage to this cafe! :smile:*)
+We're delighted to have you here ☕ ✨ 🍰
 
-**What?** *The Turing Way is a **lightly opinionated guide to reproducible data science and research**. 
-This collaboration cafe aims to engage with researchers interested in learning and sharing more about this topic in an **online book**: https://the-turing-way.netlify.com*
+**What?** *The Environmental AI is a **community aiming to learn and discuss about good research practices to use existing AI and data science solutions to a better understanding of the planet earth across multiple environmental settings**. 
+[Collaboration Cafes](https://the-turing-way.netlify.app/community-handbook/coworking/coworking-collabcafe.html) are **online coworking calls** that engage anyone interested in learning and discussing about relevant themes in AI and data science to environmental studies*.
 
 *Read more about it here: https://the-turing-way.netlify.app/community-handbook/coworking.html*
 
-**Who?** ***Everyone** interested in reproducible, ethical, and inclusive data science and research are welcome to join the full or any part of The Turing Way project, community, and/or this call.*
+**Who?** ***Everyone** interested in reproducible, ethical, and inclusive data science and research for environmental studies are welcome to join the full or any part of The Environmental AI project, community, and/or this call.*
 
 **When?** DD Month YYYY, HH:MM BST (link for local time from https://arewemeetingyet.com)
 
@@ -25,21 +27,11 @@ This collaboration cafe aims to engage with researchers interested in learning a
 
 ### Useful links
 
-* Shared notes: https://hackmd.io/@KirstieJane/CollabCafe
-* The Turing Way GitHub repository: https://github.com/alan-turing-institute/the-turing-way
 * All about [online Collaboration Cafes](https://github.com/alan-turing-institute/the-turing-way/blob/master/project_management/online-collaboration-cafe.md)
-* Turing Way calendar: https://calendar.google.com/calendar?cid=dGhldHVyaW5nd2F5QGdtYWlsLmNvbQ
-* Contribution guidelines: https://github.com/alan-turing-institute/the-turing-way/blob/master/CONTRIBUTING.md
-* Chat on Gitter: https://gitter.im/alan-turing-institute/the-turing-way
-* Join the mailing list: https://tinyletter.com/TuringWay
-* Can't join the collaboration cafe but want to work with us? Check out the co-working calls during the week: https://hackmd.io/@malvikasharan/TW-coworking
 
 ### Code of conduct
 
-* [Take a moment to read this](https://github.com/alan-turing-institute/the-turing-way/blob/master/CODE_OF_CONDUCT.md)
-
-### Pomodoro timer for this session
-https://cuckoo.team/collabcafe
+* TBC
 
 ### Sign up below
 
@@ -56,7 +48,7 @@ https://cuckoo.team/collabcafe
 
 ### Schedule
 
-https://cuckoo.team/tw-collabcafe
+https://cuckoo.team/environmental-ai
 
 | Duration | Activity |
 | ---- | -------- |
@@ -71,12 +63,6 @@ https://cuckoo.team/tw-collabcafe
 | 30 mins | Open discussion: celebrations, reflections and future directions |
 | 5 mins | 👋 Close |
 
-### Timers
-
-* 20 minute timer (beach): http://amazingtimer.com/countdown_timer.php?h=0&m=20&s=0&b=26
-* 5 minute timer (cat): http://amazingtimer.com/countdown_timer.php?h=0&m=5&s=0&b=30
-* 5 minute timer (chameleon): http://amazingtimer.com/countdown_timer.php?h=0&m=5&s=0&b=40
-
 ### Breakout rooms: Topic proposals
 
 *If you have an idea for a topic you'd like to discuss in a breakout room, please add it below and put your name next to it. If you like one of the topics that is already suggested, please add your name next to that one. Team work makes the dream work. For more information about breakout rooms see [the description on GitHub](https://github.com/alan-turing-institute/the-turing-way/blob/master/project_management/online-collaboration-cafe.md#breakout-rooms).*
@@ -84,23 +70,19 @@ https://cuckoo.team/tw-collabcafe
 Topic for breakout / Names
 
 *
+*
 
 ### Notes and questions
 
+*
+*
+
+### Request for reviews!
+
+*
 *
 
 ### Feedback at the end of the call
 
 *
-
-----
-
-#### Wondering where to start?
-
-Here are a few suggestions for a good first contributions:
-
-- Fix a typo in [the book](https://the-turing-way.netlify.com) and/or [repository](https://github.com/alan-turing-institute/the-turing-way).
-- Flag the unclear or duplicated information in the book by opening an [issue on the GitHub](https://github.com/alan-turing-institute/the-turing-way/issues).
-- Fix an [old issue](https://github.com/alan-turing-institute/the-turing-way/issues) or comment on the the [pull requests](https://github.com/alan-turing-institute/the-turing-way/pulls).
-- Write your personal experience of reproducible research in this [google form](https://goo.gl/forms/akFqZEIy2kxAjfZW2).
-- See more info on the GitHub: https://github.com/alan-turing-institute/the-turing-way/blob/master/project_management/online-collaboration-cafe.md
+*
