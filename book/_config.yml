@@ -51,6 +51,7 @@ launch_buttons:
 html:
   use_issues_button: true
   use_repository_button: true
+  use_edit_page_button      : true  # Whether to add an "Suggest edit" button to pages. If `true`, repository information in repository: must be filled in
 
 repository:
   url: https://github.com/acocac/environmental-ai-book # Online location of your book
