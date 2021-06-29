@@ -22,26 +22,38 @@
     sections:
     - title: Sensors
       file: forest/forest-sensors
-    - title: Structure Modelling
-      file: forest/forest-modelling-structure
-    - title: Tree Crown Modelling
-      file: forest/forest-modelling-treecrown
-    - title: Wildfires Modelling
-      file: forest/forest-modelling-wildfires
+      sections:
+        - title: FluxNet
+          file: forest/sensors/forest-sensors-fluxnet
+    - title: Modelling
+      file: forest/forest-modelling
+      sections:
+        - title: Structure
+          file: forest/modelling/forest-modelling-structure
+        - title: Tree Crown
+          file: forest/modelling/forest-modelling-treecrown
+        - title: Wildfires
+          file: forest/modelling/forest-modelling-wildfires
   - title: Polar
     file: polar/polar-overview
     sections:
       - title: Sensors
         file: polar/polar-sensors
-      - title: Temperature modelling
-        file: polar/polar-modelling-temperature
-      - title: Test
-        file: polar/polar-test
+        sections:
+          - title: Random
+            file: polar/sensors/polar-sensors-random
+      - title: Modelling
+        file: polar/polar-modelling
+        sections:
+          - title: Temperature
+            file: polar/modelling/polar-modelling-temperature
   - title: Urban
     file: urban/urban-overview
     sections:
       - title: Sensors
         file: urban/urban-sensors
+      - title: Sensors
+        file: urban/urban-modelling
 
 # ===== Digital Twins Section ========================================
 
