@@ -41,7 +41,7 @@ Passcode: 1989
 
 ### Sign up below
 
-**Name + <A fun Icebreaker> + an emoji to represent it ([emoji cheatsheet](https://github.com/ikatyang/emoji-cheat-sheet/blob/master/README.md))**
+**Name + A fun Icebreaker + an emoji to represent it ([emoji cheatsheet](https://github.com/ikatyang/emoji-cheat-sheet/blob/master/README.md))**
 
 *(Remember that this is a public document. You can use a pseudonym if you'd prefer.)*
 ==*If you are new to HackMD, please see this document for a short guide (right click, open in a new window): [https://hackmd.io/@turingway/hackmd-guide](https://hackmd.io/@turingway/hackmd-guide).*==
