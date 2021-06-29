@@ -22,7 +22,7 @@ We are also currently developing a guide for hosting these calls ([issue #925](h
 
 Here are the resources we use for these calls:
 
-1. Shared notes by [HackMD](https://hackmd.io/): You can access these notes online at [https://hackmd.io/@KirstieJane/CollabCafe](https://hackmd.io/@KirstieJane/CollabCafe) and can take notes together with others on the call.
+1. Shared notes by [HackMD](https://hackmd.io/): You can access these notes online at [https://hackmd.io/@environmental-ai/BJXFYAw3_](https://hackmd.io/@environmental-ai/BJXFYAw3_) and can take notes together with others on the call.
 2. Online call by [Zoom](https://www.zoom.us/): The Zoom link is provided in the HackMD before the call, and members can click to join the call by opening zoom window on the web or by using the Zoom app that should be installed locally ([available for free](https://zoom.us/download)).
 3. An online Pomodoro clock on [Cuckoo.team](https://cuckoo.team/collabcafe): During the call, the clock is set for Pomodoro work intervals that can be live-tracked by everyone through their browsers.
 

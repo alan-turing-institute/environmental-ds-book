@@ -1,15 +1,15 @@
 ---
 tags: environmental-ai, collaboration-cafe
 ---
-This HackMD is based on [_The Turing Way_ template](https://hackmd.io/@turingway/collaboration-cafe).
+*This HackMD is based on [_The Turing Way_ template](https://hackmd.io/@turingway/collaboration-cafe)*
 
-# _The Environmental AI_ :mountain::deciduous_tree: :cityscape::snowflake: online Collaboration Cafe 
+# _The Environmental AI_ ⛰ 🌳 🏙️ ❄️ 🔥 🌊  online Collaboration Cafe 
 
 ## 29 June 2021 | Visualization :bar_chart:	:world_map:	
 
 Thank you for joining the _The Environmental AI_'s online Collaboration Cafe! 
 
-We're delighted to have you here :coffee: :sparkles: :cake:
+We're delighted to have you here ☕ ✨ 🍰
 
 
 **When?** 29 June 2021, 14:00 - 16:00 UTC ([see in your time zone](https://arewemeetingyet.com/London/2021-06-29/14:00))
