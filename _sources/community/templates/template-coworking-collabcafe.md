@@ -2,11 +2,14 @@
 # Collaboration Cafe Call Template
 
 :::{note}
-*This HackMD is based on [_The Turing Way_ template](https://hackmd.io/@turingway/collaboration-cafe)*
-*A permanent document exists in the HackMD: [https://hackmd.io/@environmental-ai/collaboration-cafe](https://hackmd.io/@environmental-ai/collaboration-cafe) that is regularly updated with the empty template for next event.*
+*This HackMD is based on [_The Turing Way_ collaboration cafe template](https://github.com/alan-turing-institute/the-turing-way/blob/master/book/website/community-handbook/templates/template-coworking-collabcafe.md)*
+
+*A **permanent document** exists in the HackMD: [https://hackmd.io/@environmental-ai/collaboration-cafe](https://hackmd.io/@environmental-ai/collaboration-cafe) that is regularly updated with the empty template for next event.*
 :::
 
-## _The Turing Way_ online Collaboration Cafe | DATE MONTH YEAR
+## _The Environmental AI_ ⛰ 🌳 🏙️ ❄️ 🔥 🌊  online Collaboration Cafe 
+
+## DATE MONTH YEAR | <Theme>
 
 Thank you for joining the _The Environmental AI_'s online Collaboration Cafe! 
 
