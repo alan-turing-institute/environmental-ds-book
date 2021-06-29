@@ -1,10 +1,9 @@
 ---
 tags: environmental-ai, collaboration-cafe
 ---
-:::{note}
 *This HackMD is based on [_The Turing Way_ template](https://hackmd.io/@turingway/collaboration-cafe)*
+
 *A permanent document exists in the HackMD: [https://hackmd.io/@environmental-ai/collaboration-cafe](https://hackmd.io/@environmental-ai/collaboration-cafe) that is regularly updated with the empty template for next event.*
-:::
 
 # _The Environmental AI_ ⛰ 🌳 🏙️ ❄️ 🔥 🌊  online Collaboration Cafe 
 
