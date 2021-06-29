@@ -9,7 +9,7 @@
 
 ## _The Environmental AI_ ⛰ 🌳 🏙️ ❄️ 🔥 🌊  online Collaboration Cafe 
 
-### DATE MONTH YEAR | <Theme>
+### DATE MONTH YEAR | Theme
 
 Thank you for joining the _The Environmental AI_'s online Collaboration Cafe! 
 
