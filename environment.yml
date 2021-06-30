@@ -16,6 +16,7 @@ dependencies:
   - bottleneck
   - pooch
   - pytorch
+  - pyviz
   - geoviews
   - pip
   - pip:
