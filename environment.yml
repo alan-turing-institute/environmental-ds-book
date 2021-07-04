@@ -1,4 +1,4 @@
-name: envai-book-dev
+name: envai-book
 channels:
   - conda-forge
 dependencies:
