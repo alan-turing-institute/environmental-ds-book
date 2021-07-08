@@ -10,12 +10,11 @@ dependencies:
   - ghp-import
   - hvplot
   - intake
-  - xarray
-  - dask
-  - netCDF4
+  - intake-xarray
   - bottleneck
   - pooch
-  - pytorch
+  - pytorch==1.8.0
+  - torchvision==0.9.0
   - geoviews
   - pip
   - pip:
