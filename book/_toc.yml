@@ -1,97 +1,80 @@
-# Table of content
-# Learn more at https://jupyterbook.org/customize/toc.html
-#
-
-# ===== Main Landing Page ========================================
-- file: welcome
-
-# ===== Preamble Section ========================================
-- part: Preamble
+format: jb-book
+root: welcome
+parts:
+- caption: Preamble
   chapters:
   - file: preamble/about
   - file: preamble/who-for
   - file: preamble/how-to
   - file: preamble/attribution
-
-# ===== Environments Section ========================================
-
-- part: Environments
+- caption: Environments
   chapters:
-  - title: Forest
-    file: forest/forest-overview
+  - file: forest/forest-overview
+    title: Forest
     sections:
-    - title: Sensors
-      file: forest/forest-sensors
+    - file: forest/forest-sensors
+      title: Sensors
       sections:
-        - title: FluxNet
-          file: forest/sensors/forest-sensors-fluxnet
-    - title: Modelling
-      file: forest/forest-modelling
+      - file: forest/sensors/forest-sensors-fluxnet
+        title: FluxNet
+    - file: forest/forest-modelling
+      title: Modelling
       sections:
-        - title: Structure
-          file: forest/modelling/forest-modelling-structure
-        - title: Tree Crown
-          file: forest/modelling/forest-modelling-treecrown
-        - title: Wildfires
-          file: forest/modelling/forest-modelling-wildfires
-  - title: Polar
-    file: polar/polar-overview
+      - file: forest/modelling/forest-modelling-structure
+        title: Structure
+      - file: forest/modelling/forest-modelling-treecrown
+        title: Tree Crown
+      - file: forest/modelling/forest-modelling-wildfires
+        title: Wildfires
+  - file: polar/polar-overview
+    title: Polar
     sections:
-      - title: Sensors
-        file: polar/polar-sensors
-        sections:
-          - title: Random
-            file: polar/sensors/polar-sensors-random
-      - title: Modelling
-        file: polar/polar-modelling
-        sections:
-          - title: Temperature
-            file: polar/modelling/polar-modelling-temperature
-  - title: Urban
-    file: urban/urban-overview
+    - file: polar/polar-sensors
+      title: Sensors
+      sections:
+      - file: polar/sensors/polar-sensors-random
+        title: Random
+    - file: polar/polar-modelling
+      title: Modelling
+      sections:
+      - file: polar/modelling/polar-modelling-temperature
+        title: Temperature
+  - file: urban/urban-overview
+    title: Urban
     sections:
-      - title: Sensors
-        file: urban/urban-sensors
-      - title: Sensors
-        file: urban/urban-modelling
-
-# ===== Digital Twins Section ========================================
-
-- part: Digital Twins
+    - file: urban/urban-sensors
+      title: Sensors
+    - file: urban/urban-modelling
+      title: Sensors
+- caption: Digital Twins
   chapters:
-  - title: Overview
-    file: digitaltwins/digitaltwins-overview
-  - title: Concepts
-    file: digitaltwins/digitaltwins-concepts
-
-# ===== Community Section ========================================
-
-- part: Community
+  - file: digitaltwins/digitaltwins-overview
+    title: Overview
+  - file: digitaltwins/digitaltwins-concepts
+    title: Concepts
+- caption: Community
   chapters:
-  - title: Coworking Calls
-    file: community/coworking
+  - file: community/coworking
+    title: Coworking Calls
     sections:
-    - title: Background, Motivations, and Techniques
-      file: community/coworking/coworking-motivation
-    - title: Online Collaboration Cafe
-      file: community/coworking/coworking-collabcafe
-  - title: Meeting Notes
-    file: community/notes
+    - file: community/coworking/coworking-motivation
+      title: Background, Motivations, and Techniques
+    - file: community/coworking/coworking-collabcafe
+      title: Online Collaboration Cafe
+  - file: community/notes
+    title: Meeting Notes
     sections:
-    - title: Online Collaboration Cafe
-      file: community/notes/notes-collabcafe
-  - title: Template Collection
-    file: community/templates
+    - file: community/notes/notes-collabcafe
+      title: Online Collaboration Cafe
+  - file: community/templates
+    title: Template Collection
     sections:
-     - title: Online Collaboration Cafe Templates
-       file: community/templates/template-coworking-collabcafe
-  - title: Interesting readings
-    file: community/readings
-
-# ===== Afterword Section ========================================
-
-- part: Afterword
-  sections:
+    - file: community/templates/template-coworking-collabcafe
+      title: Online Collaboration Cafe Templates
+  - file: community/readings
+    title: Interesting readings
+- caption: Afterword
+  chapters:
   - file: afterword/glossary
   - file: afterword/bibliography
   - file: afterword/statistics
