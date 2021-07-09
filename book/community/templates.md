@@ -1,5 +1,5 @@
-Coworking calls
-=======================
+(af-templates)=
+# Templates
 
 :::{note}
 Under construction

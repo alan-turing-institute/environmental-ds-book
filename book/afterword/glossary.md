@@ -1,5 +1,5 @@
-Glossary
-=======================
+(af-glossary)=
+# Glossary
 
 :::{note}
 Under construction

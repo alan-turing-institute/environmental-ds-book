@@ -1,4 +1,4 @@
-(ch-template-coworking-collabcafe)=
+(cm-template-coworking-collabcafe)=
 # Collaboration Cafe Call Template
 
 :::{note}

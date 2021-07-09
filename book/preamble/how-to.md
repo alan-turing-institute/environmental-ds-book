@@ -1,5 +1,5 @@
-How to use this book
-=======================
+(pr-how-to)=
+# How to use this book
 
 :::{note}
 Under construction
@@ -7,10 +7,10 @@ Under construction
 
 While we provide a rendered version of the interactive material, in some cases the outputs of the code may be hidden by default. To experiment and interact with the Python code, we suggest the following pathways to do this:
 
-# Public users: interact through a cloud-based Binder service 
+## Public users: interact through a cloud-based Binder service 
 This will work well for many of the simple examples. We use the [Pangeo binder](https://binder.pangeo.io/) which comes with most of the scientific packages in Python use in the examples. In addition, it allows using distributed processing which in certain examples accelerates computing the results. 
 
-#Anyone: run the code in your own Python environment
+## Anyone: run the code in your own Python environment
 Following the guidelines of Brian Rose for The Climate Laboratory book, you will need to:
 
 You will need the following:
