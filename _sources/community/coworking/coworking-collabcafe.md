@@ -1,4 +1,4 @@
-(ch-coworking-collabcafe)=
+(cm-coworking-collabcafe)=
 # Online Collaboration Cafe
 
 _The Turing Way_ Collaboration Cafes (or 'Cafés' with an accent) are virtual co-working spaces that are held fortnightly on the first and third Wednesdays of each month for 2 hours.
@@ -30,7 +30,7 @@ We coordinate our tasks on the shared HackMD and/or _The Turing Way_ GitHub repo
 
 ## Format of the call
 
-We have a template for the {ref}`Collaboration Cafes<ch-template-coworking-collabcafe>`, which is updated on the [shared HackMD](https://hackmd.io/@KirstieJane/CollabCafe) for each call.
+We have a template for the {ref}`Collaboration Cafes<cm-template-coworking-collabcafe>`, which is updated on the [shared HackMD](https://hackmd.io/@KirstieJane/CollabCafe) for each call.
 
 ### Schedule
 

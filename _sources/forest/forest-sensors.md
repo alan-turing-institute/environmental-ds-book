@@ -1,5 +1,5 @@
-Forest: Sensors
-=======================
+(forest-sensors)=
+# Forest: Sensors
 
 :::{note}
 Under construction

@@ -7,7 +7,8 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Forest: Tree crown detection &#8212; Environmental AI book</title>
     
-  <link rel="stylesheet" href="../../_static/css/index.f658d18f9b420779cfdf24aa0a7e2d77.css">
+  <link href="../../_static/css/theme.css" rel="stylesheet" />
+  <link href="../../_static/css/index.c5995385ac14fb8791e8eb36b4908be2.css" rel="stylesheet" />
 
     
   <link rel="stylesheet"
@@ -19,14 +20,10 @@
 
     
       
-  <link rel="stylesheet"
-    href="../../_static/vendor/open-sans_all/1.44.1/index.css">
-  <link rel="stylesheet"
-    href="../../_static/vendor/lato_latin-ext/1.44.1/index.css">
 
     
     <link rel="stylesheet" href="../../_static/pygments.css" type="text/css" />
-    <link rel="stylesheet" href="../../_static/sphinx-book-theme.c441f2ba0852f4cabcb80105e3a46ae6.css" type="text/css" />
+    <link rel="stylesheet" href="../../_static/sphinx-book-theme.acff12b8f9c144ce68a297486a2fa670.css" type="text/css" />
     <link rel="stylesheet" type="text/css" href="../../_static/togglebutton.css" />
     <link rel="stylesheet" type="text/css" href="../../_static/copybutton.css" />
     <link rel="stylesheet" type="text/css" href="../../_static/mystnb.css" />
@@ -34,7 +31,7 @@
     <link rel="stylesheet" type="text/css" href="../../_static/panels-main.c949a650a448cc0ae9fd3441c0e17fb0.css" />
     <link rel="stylesheet" type="text/css" href="../../_static/panels-variables.06eb56fa6e07937060861dad626602ad.css" />
     
-  <link rel="preload" as="script" href="../../_static/js/index.d3f166471bb80abb5163.js">
+  <link rel="preload" as="script" href="../../_static/js/index.1c5a1a01449ed65a7b51.js">
 
     <script id="documentation_options" data-url_root="../../" src="../../_static/documentation_options.js"></script>
     <script src="../../_static/jquery.js"></script>
@@ -44,7 +41,7 @@
     <script src="../../_static/clipboard.min.js"></script>
     <script src="../../_static/copybutton.js"></script>
     <script >var togglebuttonSelector = '.toggle, .admonition.dropdown, .tag_hide_input div.cell_input, .tag_hide-input div.cell_input, .tag_hide_output div.cell_output, .tag_hide-output div.cell_output, .tag_hide_cell.cell, .tag_hide-cell.cell';</script>
-    <script src="../../_static/sphinx-book-theme.7d483ff0a819d6edff12ce0b1ead3928.js"></script>
+    <script src="../../_static/sphinx-book-theme.12a9622fbb08dcb3a2a40b2c02b83a57.js"></script>
     <script async="async" src="https://unpkg.com/thebelab@latest/lib/index.js"></script>
     <script >
         const thebe_selector = ".thebe"
@@ -56,14 +53,14 @@
     <link rel="search" title="Search" href="../../search.html" />
     <link rel="next" title="Forest: Wildfires Modelling" href="forest-modelling-wildfires.html" />
     <link rel="prev" title="Forest: Structure Modelling" href="forest-modelling-structure.html" />
-
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <meta name="docsearch:language" content="en" />
-
-
-
+    
   </head>
   <body data-spy="scroll" data-target="#bd-toc-nav" data-offset="80">
+    
+    <div class="container-fluid" id="banner"></div>
+
     
 
     <div class="container-xl">
@@ -72,32 +69,32 @@
 <div class="col-12 col-md-3 bd-sidebar site-navigation show" id="site-navigation">
     
         <div class="navbar-brand-box">
-<a class="navbar-brand text-wrap" href="../../index.html">
-  
-  <img src="../../_static/logo.png" class="logo" alt="logo">
-  
-  
-  <h1 class="site-logo" id="site-title">Environmental AI book</h1>
-  
-</a>
+    <a class="navbar-brand text-wrap" href="../../index.html">
+      
+      <img src="../../_static/logo.png" class="logo" alt="logo">
+      
+      
+      <h1 class="site-logo" id="site-title">Environmental AI book</h1>
+      
+    </a>
 </div><form class="bd-search d-flex align-items-center" action="../../search.html" method="get">
   <i class="icon fas fa-search"></i>
   <input type="search" class="form-control" name="q" id="search-input" placeholder="Search this book..." aria-label="Search this book..." autocomplete="off" >
-</form>
-<nav class="bd-links" id="bd-docs-nav" aria-label="Main navigation">
-    <ul class="nav sidenav_l1">
+</form><nav class="bd-links" id="bd-docs-nav" aria-label="Main navigation">
+    <div class="bd-toc-item active">
+        <ul class="nav bd-sidenav">
  <li class="toctree-l1">
   <a class="reference internal" href="../../welcome.html">
    Welcome
   </a>
  </li>
 </ul>
-<p class="caption collapsible-parent">
+<p class="caption">
  <span class="caption-text">
   Preamble
  </span>
 </p>
-<ul class="nav sidenav_l1">
+<ul class="nav bd-sidenav">
  <li class="toctree-l1">
   <a class="reference internal" href="../../preamble/about.html">
    About this book
@@ -119,36 +116,49 @@
   </a>
  </li>
 </ul>
-<p class="caption collapsible-parent">
+<p class="caption">
  <span class="caption-text">
   Environments
  </span>
 </p>
-<ul class="current nav sidenav_l1">
- <li class="toctree-l1 current active collapsible-parent">
+<ul class="current nav bd-sidenav">
+ <li class="toctree-l1 current active has-children">
   <a class="reference internal" href="../forest-overview.html">
    Forest
   </a>
-  <ul class="current collapse-ul">
-   <li class="toctree-l2 collapsible-parent">
+  <input checked="" class="toctree-checkbox" id="toctree-checkbox-1" name="toctree-checkbox-1" type="checkbox"/>
+  <label for="toctree-checkbox-1">
+   <i class="fas fa-chevron-down">
+   </i>
+  </label>
+  <ul class="current">
+   <li class="toctree-l2 has-children">
     <a class="reference internal" href="../forest-sensors.html">
      Sensors
     </a>
-    <ul class="collapse-ul">
+    <input class="toctree-checkbox" id="toctree-checkbox-2" name="toctree-checkbox-2" type="checkbox"/>
+    <label for="toctree-checkbox-2">
+     <i class="fas fa-chevron-down">
+     </i>
+    </label>
+    <ul>
      <li class="toctree-l3">
       <a class="reference internal" href="../sensors/forest-sensors-fluxnet.html">
        FluxNet
       </a>
      </li>
     </ul>
-    <i class="fas fa-chevron-down">
-    </i>
    </li>
-   <li class="toctree-l2 current active collapsible-parent">
+   <li class="toctree-l2 current active has-children">
     <a class="reference internal" href="../forest-modelling.html">
      Modelling
     </a>
-    <ul class="current collapse-ul">
+    <input checked="" class="toctree-checkbox" id="toctree-checkbox-3" name="toctree-checkbox-3" type="checkbox"/>
+    <label for="toctree-checkbox-3">
+     <i class="fas fa-chevron-down">
+     </i>
+    </label>
+    <ul class="current">
      <li class="toctree-l3">
       <a class="reference internal" href="forest-modelling-structure.html">
        Structure
@@ -165,55 +175,65 @@
       </a>
      </li>
     </ul>
-    <i class="fas fa-chevron-down">
-    </i>
    </li>
   </ul>
-  <i class="fas fa-chevron-down">
-  </i>
  </li>
- <li class="toctree-l1 collapsible-parent">
+ <li class="toctree-l1 has-children">
   <a class="reference internal" href="../../polar/polar-overview.html">
    Polar
   </a>
-  <ul class="collapse-ul">
-   <li class="toctree-l2 collapsible-parent">
+  <input class="toctree-checkbox" id="toctree-checkbox-4" name="toctree-checkbox-4" type="checkbox"/>
+  <label for="toctree-checkbox-4">
+   <i class="fas fa-chevron-down">
+   </i>
+  </label>
+  <ul>
+   <li class="toctree-l2 has-children">
     <a class="reference internal" href="../../polar/polar-sensors.html">
      Sensors
     </a>
-    <ul class="collapse-ul">
+    <input class="toctree-checkbox" id="toctree-checkbox-5" name="toctree-checkbox-5" type="checkbox"/>
+    <label for="toctree-checkbox-5">
+     <i class="fas fa-chevron-down">
+     </i>
+    </label>
+    <ul>
      <li class="toctree-l3">
       <a class="reference internal" href="../../polar/sensors/polar-sensors-random.html">
        Random
       </a>
      </li>
     </ul>
-    <i class="fas fa-chevron-down">
-    </i>
    </li>
-   <li class="toctree-l2 collapsible-parent">
+   <li class="toctree-l2 has-children">
     <a class="reference internal" href="../../polar/polar-modelling.html">
      Modelling
     </a>
-    <ul class="collapse-ul">
+    <input class="toctree-checkbox" id="toctree-checkbox-6" name="toctree-checkbox-6" type="checkbox"/>
+    <label for="toctree-checkbox-6">
+     <i class="fas fa-chevron-down">
+     </i>
+    </label>
+    <ul>
      <li class="toctree-l3">
       <a class="reference internal" href="../../polar/modelling/polar-modelling-temperature.html">
        Temperature
       </a>
      </li>
     </ul>
-    <i class="fas fa-chevron-down">
-    </i>
    </li>
   </ul>
-  <i class="fas fa-chevron-down">
-  </i>
  </li>
- <li class="toctree-l1 collapsible-parent">
+ <li class="toctree-l1 has-children">
   <a class="reference internal" href="../../urban/urban-overview.html">
    Urban
   </a>
-  <ul class="collapse-ul">
+  <input class="toctree-checkbox" id="toctree-checkbox-7" name="toctree-checkbox-7" type="checkbox"/>
+  <label for="toctree-checkbox-7">
+   <i class="fas fa-chevron-down">
+   </i>
+  </label>
+  <ul>
    <li class="toctree-l2">
     <a class="reference internal" href="../../urban/urban-sensors.html">
      Sensors
@@ -225,16 +245,14 @@
     </a>
    </li>
   </ul>
-  <i class="fas fa-chevron-down">
-  </i>
  </li>
 </ul>
-<p class="caption collapsible-parent">
+<p class="caption">
  <span class="caption-text">
   Digital Twins
  </span>
 </p>
-<ul class="nav sidenav_l1">
+<ul class="nav bd-sidenav">
  <li class="toctree-l1">
   <a class="reference internal" href="../../digitaltwins/digitaltwins-overview.html">
    Overview
@@ -246,17 +264,22 @@
   </a>
  </li>
 </ul>
-<p class="caption collapsible-parent">
+<p class="caption">
  <span class="caption-text">
   Community
  </span>
 </p>
-<ul class="nav sidenav_l1">
- <li class="toctree-l1 collapsible-parent">
+<ul class="nav bd-sidenav">
+ <li class="toctree-l1 has-children">
   <a class="reference internal" href="../../community/coworking.html">
    Coworking Calls
   </a>
-  <ul class="collapse-ul">
+  <input class="toctree-checkbox" id="toctree-checkbox-8" name="toctree-checkbox-8" type="checkbox"/>
+  <label for="toctree-checkbox-8">
+   <i class="fas fa-chevron-down">
+   </i>
+  </label>
+  <ul>
    <li class="toctree-l2">
     <a class="reference internal" href="../../community/coworking/coworking-motivation.html">
      Background, Motivations, and Techniques
@@ -268,36 +291,43 @@
     </a>
    </li>
   </ul>
-  <i class="fas fa-chevron-down">
-  </i>
  </li>
- <li class="toctree-l1 collapsible-parent">
+ <li class="toctree-l1 has-children">
   <a class="reference internal" href="../../community/notes.html">
    Meeting Notes
   </a>
-  <ul class="collapse-ul">
+  <input class="toctree-checkbox" id="toctree-checkbox-9" name="toctree-checkbox-9" type="checkbox"/>
+  <label for="toctree-checkbox-9">
+   <i class="fas fa-chevron-down">
+   </i>
+  </label>
+  <ul>
    <li class="toctree-l2">
     <a class="reference internal" href="../../community/notes/notes-collabcafe.html">
-     Online Collaboration Cafe
+     <em>
+      The Environmental AI
+     </em>
+     ⛰ 🌳 🏙️ ❄️ 🔥 🌊  online Collaboration Cafe
     </a>
    </li>
   </ul>
-  <i class="fas fa-chevron-down">
-  </i>
  </li>
- <li class="toctree-l1 collapsible-parent">
+ <li class="toctree-l1 has-children">
   <a class="reference internal" href="../../community/templates.html">
    Template Collection
   </a>
-  <ul class="collapse-ul">
+  <input class="toctree-checkbox" id="toctree-checkbox-10" name="toctree-checkbox-10" type="checkbox"/>
+  <label for="toctree-checkbox-10">
+   <i class="fas fa-chevron-down">
+   </i>
+  </label>
+  <ul>
    <li class="toctree-l2">
     <a class="reference internal" href="../../community/templates/template-coworking-collabcafe.html">
      Online Collaboration Cafe Templates
     </a>
    </li>
   </ul>
-  <i class="fas fa-chevron-down">
-  </i>
  </li>
  <li class="toctree-l1">
   <a class="reference internal" href="../../community/readings.html">
@@ -305,12 +335,12 @@
   </a>
  </li>
 </ul>
-<p class="caption collapsible-parent">
+<p class="caption">
  <span class="caption-text">
   Afterword
  </span>
 </p>
-<ul class="nav sidenav_l1">
+<ul class="nav bd-sidenav">
  <li class="toctree-l1">
   <a class="reference internal" href="../../afterword/glossary.html">
    Glossary
@@ -328,6 +358,7 @@
  </li>
 </ul>
 
+    </div>
 </nav> <!-- To handle the deprecated key -->
 
 <div class="navbar_extra_footer">
@@ -395,12 +426,12 @@
     </div>
 </div>
 
-
             <!-- Full screen (wrap in <a> to have style consistency -->
-            <a class="full-screen-button"><button type="button" class="btn btn-secondary topbarbtn" data-toggle="tooltip"
-                    data-placement="bottom" onclick="toggleFullScreen()" aria-label="Fullscreen mode"
-                    title="Fullscreen mode"><i
-                        class="fas fa-expand"></i></button></a>
+
+<a class="full-screen-button"><button type="button" class="btn btn-secondary topbarbtn" data-toggle="tooltip"
+        data-placement="bottom" onclick="toggleFullScreen()" aria-label="Fullscreen mode"
+        title="Fullscreen mode"><i
+            class="fas fa-expand"></i></button></a>
 
             <!-- Launch buttons -->
 
@@ -431,12 +462,11 @@
         <!-- Table of contents -->
         <div class="d-none d-md-block col-md-2 bd-toc show">
             
-        <div class="tocsection onthispage pt-5 pb-3">
-            <i class="fas fa-list"></i>
-            Contents
-        </div>
-        <nav id="bd-toc-nav">
-            <ul class="nav section-nav flex-column">
+            <div class="tocsection onthispage pt-5 pb-3">
+                <i class="fas fa-list"></i> Contents
+            </div>
+            <nav id="bd-toc-nav">
+                <ul class="visible nav section-nav flex-column">
  <li class="toc-h2 nav-item toc-entry">
   <a class="reference internal nav-link" href="#install-and-load-libraries">
    Install and load libraries
@@ -468,8 +498,7 @@
  </li>
 </ul>
 
-        </nav>
-        
+            </nav>
         </div>
     </div>
 </div>
@@ -928,7 +957,7 @@ dask.array&lt;xarray-&lt;this-array&gt;, shape=(1864, 1429, 3), dtype=uint8, chu
 Coordinates:
   * y        (y) int64 0 1 2 3 4 5 6 7 ... 1857 1858 1859 1860 1861 1862 1863
   * x        (x) int64 0 1 2 3 4 5 6 7 ... 1422 1423 1424 1425 1426 1427 1428
-  * channel  (channel) int64 0 1 2</pre><div class='xr-wrap' hidden><div class='xr-header'><div class='xr-obj-type'>xarray.DataArray</div><div class='xr-array-name'></div><ul class='xr-dim-list'><li><span class='xr-has-index'>y</span>: 1864</li><li><span class='xr-has-index'>x</span>: 1429</li><li><span class='xr-has-index'>channel</span>: 3</li></ul></div><ul class='xr-sections'><li class='xr-section-item'><div class='xr-array-wrap'><input id='section-7fd2b3cf-87c5-49bb-96f2-fb314da04eec' class='xr-array-in' type='checkbox' checked><label for='section-7fd2b3cf-87c5-49bb-96f2-fb314da04eec' title='Show/hide data repr'><svg class='icon xr-icon-database'><use xlink:href='#icon-database'></use></svg></label><div class='xr-array-preview xr-preview'><span>dask.array&lt;chunksize=(1864, 1429, 3), meta=np.ndarray&gt;</span></div><div class='xr-array-data'><table>
+  * channel  (channel) int64 0 1 2</pre><div class='xr-wrap' hidden><div class='xr-header'><div class='xr-obj-type'>xarray.DataArray</div><div class='xr-array-name'></div><ul class='xr-dim-list'><li><span class='xr-has-index'>y</span>: 1864</li><li><span class='xr-has-index'>x</span>: 1429</li><li><span class='xr-has-index'>channel</span>: 3</li></ul></div><ul class='xr-sections'><li class='xr-section-item'><div class='xr-array-wrap'><input id='section-4933d5de-8405-42a3-b7dd-5ef5ca1c092b' class='xr-array-in' type='checkbox' checked><label for='section-4933d5de-8405-42a3-b7dd-5ef5ca1c092b' title='Show/hide data repr'><svg class='icon xr-icon-database'><use xlink:href='#icon-database'></use></svg></label><div class='xr-array-preview xr-preview'><span>dask.array&lt;chunksize=(1864, 1429, 3), meta=np.ndarray&gt;</span></div><div class='xr-array-data'><table>
 <tr>
 <td>
 <table>
@@ -986,7 +1015,7 @@ Coordinates:
 </svg>
 </td>
 </tr>
-</table></div></div></li><li class='xr-section-item'><input id='section-ab0ddffd-3f91-4460-b06d-bbad08603e5f' class='xr-section-summary-in' type='checkbox'  checked><label for='section-ab0ddffd-3f91-4460-b06d-bbad08603e5f' class='xr-section-summary' >Coordinates: <span>(3)</span></label><div class='xr-section-inline-details'></div><div class='xr-section-details'><ul class='xr-var-list'><li class='xr-var-item'><div class='xr-var-name'><span class='xr-has-index'>y</span></div><div class='xr-var-dims'>(y)</div><div class='xr-var-dtype'>int64</div><div class='xr-var-preview xr-preview'>0 1 2 3 4 ... 1860 1861 1862 1863</div><input id='attrs-7152cb3e-e1c9-45fc-adf1-d8b930157269' class='xr-var-attrs-in' type='checkbox' disabled><label for='attrs-7152cb3e-e1c9-45fc-adf1-d8b930157269' title='Show/Hide attributes'><svg class='icon xr-icon-file-text2'><use xlink:href='#icon-file-text2'></use></svg></label><input id='data-a82e7430-b797-4e4e-a364-93296ebde09a' class='xr-var-data-in' type='checkbox'><label for='data-a82e7430-b797-4e4e-a364-93296ebde09a' title='Show/Hide data repr'><svg class='icon xr-icon-database'><use xlink:href='#icon-database'></use></svg></label><div class='xr-var-attrs'><dl class='xr-attrs'></dl></div><div class='xr-var-data'><pre>array([   0,    1,    2, ..., 1861, 1862, 1863])</pre></div></li><li class='xr-var-item'><div class='xr-var-name'><span class='xr-has-index'>x</span></div><div class='xr-var-dims'>(x)</div><div class='xr-var-dtype'>int64</div><div class='xr-var-preview xr-preview'>0 1 2 3 4 ... 1425 1426 1427 1428</div><input id='attrs-206a46e4-8eb0-4f95-a235-78e3d423ca41' class='xr-var-attrs-in' type='checkbox' disabled><label for='attrs-206a46e4-8eb0-4f95-a235-78e3d423ca41' title='Show/Hide attributes'><svg class='icon xr-icon-file-text2'><use xlink:href='#icon-file-text2'></use></svg></label><input id='data-98d9eba8-00e3-4aec-9861-74f3724892ff' class='xr-var-data-in' type='checkbox'><label for='data-98d9eba8-00e3-4aec-9861-74f3724892ff' title='Show/Hide data repr'><svg class='icon xr-icon-database'><use xlink:href='#icon-database'></use></svg></label><div class='xr-var-attrs'><dl class='xr-attrs'></dl></div><div class='xr-var-data'><pre>array([   0,    1,    2, ..., 1426, 1427, 1428])</pre></div></li><li class='xr-var-item'><div class='xr-var-name'><span class='xr-has-index'>channel</span></div><div class='xr-var-dims'>(channel)</div><div class='xr-var-dtype'>int64</div><div class='xr-var-preview xr-preview'>0 1 2</div><input id='attrs-b39573c3-fd14-4d65-9b5a-26900c20a579' class='xr-var-attrs-in' type='checkbox' disabled><label for='attrs-b39573c3-fd14-4d65-9b5a-26900c20a579' title='Show/Hide attributes'><svg class='icon xr-icon-file-text2'><use xlink:href='#icon-file-text2'></use></svg></label><input id='data-d0372fe4-e82d-46c3-8287-2d8a52fdb2bf' class='xr-var-data-in' type='checkbox'><label for='data-d0372fe4-e82d-46c3-8287-2d8a52fdb2bf' title='Show/Hide data repr'><svg class='icon xr-icon-database'><use xlink:href='#icon-database'></use></svg></label><div class='xr-var-attrs'><dl class='xr-attrs'></dl></div><div class='xr-var-data'><pre>array([0, 1, 2])</pre></div></li></ul></div></li><li class='xr-section-item'><input id='section-79bba434-a19a-4088-9811-b14041fdc114' class='xr-section-summary-in' type='checkbox' disabled ><label for='section-79bba434-a19a-4088-9811-b14041fdc114' class='xr-section-summary'  title='Expand/collapse section'>Attributes: <span>(0)</span></label><div class='xr-section-inline-details'></div><div class='xr-section-details'><dl class='xr-attrs'></dl></div></li></ul></div></div></div></div>
+</table></div></div></li><li class='xr-section-item'><input id='section-2ba3a6e4-8e7c-4525-baa7-aa50e87e06f4' class='xr-section-summary-in' type='checkbox'  checked><label for='section-2ba3a6e4-8e7c-4525-baa7-aa50e87e06f4' class='xr-section-summary' >Coordinates: <span>(3)</span></label><div class='xr-section-inline-details'></div><div class='xr-section-details'><ul class='xr-var-list'><li class='xr-var-item'><div class='xr-var-name'><span class='xr-has-index'>y</span></div><div class='xr-var-dims'>(y)</div><div class='xr-var-dtype'>int64</div><div class='xr-var-preview xr-preview'>0 1 2 3 4 ... 1860 1861 1862 1863</div><input id='attrs-3bc611f1-3a7b-4a9c-a15d-49002fc49ea1' class='xr-var-attrs-in' type='checkbox' disabled><label for='attrs-3bc611f1-3a7b-4a9c-a15d-49002fc49ea1' title='Show/Hide attributes'><svg class='icon xr-icon-file-text2'><use xlink:href='#icon-file-text2'></use></svg></label><input id='data-3709b537-2f26-43bd-b5f9-7c11928becc1' class='xr-var-data-in' type='checkbox'><label for='data-3709b537-2f26-43bd-b5f9-7c11928becc1' title='Show/Hide data repr'><svg class='icon xr-icon-database'><use xlink:href='#icon-database'></use></svg></label><div class='xr-var-attrs'><dl class='xr-attrs'></dl></div><div class='xr-var-data'><pre>array([   0,    1,    2, ..., 1861, 1862, 1863])</pre></div></li><li class='xr-var-item'><div class='xr-var-name'><span class='xr-has-index'>x</span></div><div class='xr-var-dims'>(x)</div><div class='xr-var-dtype'>int64</div><div class='xr-var-preview xr-preview'>0 1 2 3 4 ... 1425 1426 1427 1428</div><input id='attrs-1bade669-9e5d-4229-9b88-abb3a47be586' class='xr-var-attrs-in' type='checkbox' disabled><label for='attrs-1bade669-9e5d-4229-9b88-abb3a47be586' title='Show/Hide attributes'><svg class='icon xr-icon-file-text2'><use xlink:href='#icon-file-text2'></use></svg></label><input id='data-4a459416-0471-4249-8793-ce0cfd230845' class='xr-var-data-in' type='checkbox'><label for='data-4a459416-0471-4249-8793-ce0cfd230845' title='Show/Hide data repr'><svg class='icon xr-icon-database'><use xlink:href='#icon-database'></use></svg></label><div class='xr-var-attrs'><dl class='xr-attrs'></dl></div><div class='xr-var-data'><pre>array([   0,    1,    2, ..., 1426, 1427, 1428])</pre></div></li><li class='xr-var-item'><div class='xr-var-name'><span class='xr-has-index'>channel</span></div><div class='xr-var-dims'>(channel)</div><div class='xr-var-dtype'>int64</div><div class='xr-var-preview xr-preview'>0 1 2</div><input id='attrs-fe364f66-2d02-49c0-ba95-4abfc0053c80' class='xr-var-attrs-in' type='checkbox' disabled><label for='attrs-fe364f66-2d02-49c0-ba95-4abfc0053c80' title='Show/Hide attributes'><svg class='icon xr-icon-file-text2'><use xlink:href='#icon-file-text2'></use></svg></label><input id='data-d9a5076e-517b-4828-b9f9-3dd90c65bfee' class='xr-var-data-in' type='checkbox'><label for='data-d9a5076e-517b-4828-b9f9-3dd90c65bfee' title='Show/Hide data repr'><svg class='icon xr-icon-database'><use xlink:href='#icon-database'></use></svg></label><div class='xr-var-attrs'><dl class='xr-attrs'></dl></div><div class='xr-var-data'><pre>array([0, 1, 2])</pre></div></li></ul></div></li><li class='xr-section-item'><input id='section-17b3ba44-60a3-43bd-b37f-693079e35c52' class='xr-section-summary-in' type='checkbox' disabled ><label for='section-17b3ba44-60a3-43bd-b37f-693079e35c52' class='xr-section-summary'  title='Expand/collapse section'>Attributes: <span>(0)</span></label><div class='xr-section-inline-details'></div><div class='xr-section-details'><dl class='xr-attrs'></dl></div></li></ul></div></div></div></div>
 </div>
 </div>
 <div class="section" id="load-and-prepare-labels">
@@ -1118,9 +1147,7 @@ Coordinates:
 </pre></div>
 </div>
 <div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Model from DeepForest release https://github.com/weecology/DeepForest/releases/tag/1.0.0 was already downloaded. Loading model from file.
-</pre></div>
-</div>
-<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Loading pre-built model: https://github.com/weecology/DeepForest/releases/tag/1.0.0
+Loading pre-built model: https://github.com/weecology/DeepForest/releases/tag/1.0.0
 </pre></div>
 </div>
 </div>
@@ -1183,11 +1210,9 @@ Coordinates:
 
       </div>
     </div>
+  
+  <script src="../../_static/js/index.1c5a1a01449ed65a7b51.js"></script>
 
-    
-  <script src="../../_static/js/index.d3f166471bb80abb5163.js"></script>
-
-
-    
+  
   </body>
 </html>

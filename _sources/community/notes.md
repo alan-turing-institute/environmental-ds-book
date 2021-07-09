@@ -1,5 +1,5 @@
-Notes
-=======================
+(af-notes)=
+# Notes
 
 :::{note}
 Under construction

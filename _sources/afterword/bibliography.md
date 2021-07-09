@@ -1,9 +1,8 @@
-(bibliography)=
+(af-bibliography)=
 # Bibliography
 
-*This file consist of a complete bibliography for this book sorted alphabetically*
+*This file consist of a complete bibliography for this book sorted alphabetically.*
 
-```{bibliography} ../references.bib
-  :style: alpha
-  :all:
+```{bibliography}
+:style: unsrt
 ```
