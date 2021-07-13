@@ -1,10 +1,6 @@
 (pr-how-to)=
 # How to use this book
 
-:::{note}
-Under construction
-:::
-
 While we provide a rendered version of the interactive material, in some cases the outputs of the code may be hidden by default. To experiment and interact with the Python code, we suggest the following pathways to do this:
 
 ## Public users: interact through a cloud-based Binder service 
