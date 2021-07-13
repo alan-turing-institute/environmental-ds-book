@@ -1,11 +1,7 @@
 (pr-attribution)=
 # How to cite and reuse this material
 
-:::{note}
-Under construction
-:::
-
-The contents of this book are licensed for free and open consumption under the following license: [Creative Commons Attribution 4.0 International (CC BY 4.0)](https://creativecommons.org/licenses/by/4.0/). Please use and re-use whatever you need, for any purpose but giving appropriate credit to the original author.
+The contents of _The Environmental AI_ book are licensed for free and open consumption under the following license: [Creative Commons Attribution 4.0 International (CC BY 4.0)](https://creativecommons.org/licenses/by/4.0/). Please use and re-use whatever you need, for any purpose but giving appropriate credit to the original author.
 
 Every release of the source code repository is archived with a DOI: **TBA** 
 

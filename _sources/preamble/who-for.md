@@ -1,10 +1,6 @@
 (pr-who-for)=
 # Who is the book for?
 
-:::{note}
-Under construction
-:::
-
 While the scientific community is broad, we think the target audience of this book is:
 * Researchers with some background in environmental science interested in data-driven methods.
 * Researchers with some background in computer science interested in environmental studies.  

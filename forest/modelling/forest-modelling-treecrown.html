@@ -5,7 +5,7 @@
   <head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Forest: Tree crown detection &#8212; Environmental AI book</title>
+    <title>Forest: Tree crown detection &#8212; The Environmental AI book</title>
     
   <link href="../../_static/css/theme.css" rel="stylesheet" />
   <link href="../../_static/css/index.c5995385ac14fb8791e8eb36b4908be2.css" rel="stylesheet" />
@@ -74,7 +74,7 @@
       <img src="../../_static/logo.png" class="logo" alt="logo">
       
       
-      <h1 class="site-logo" id="site-title">Environmental AI book</h1>
+      <h1 class="site-logo" id="site-title">The Environmental AI book</h1>
       
     </a>
 </div><form class="bd-search d-flex align-items-center" action="../../search.html" method="get">
@@ -324,7 +324,17 @@
   <ul>
    <li class="toctree-l2">
     <a class="reference internal" href="../../community/templates/template-coworking-collabcafe.html">
-     Online Collaboration Cafe Templates
+     Online Collaboration Cafe
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../../community/templates/template-environments-sensors.html">
+     Environments Use Case Sensors
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../../community/templates/template-environments-modelling.html">
+     Environments Use Case Modelling
     </a>
    </li>
   </ul>
@@ -468,13 +478,40 @@
             <nav id="bd-toc-nav">
                 <ul class="visible nav section-nav flex-column">
  <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#context">
+   Context
+  </a>
+  <ul class="nav section-nav flex-column">
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#purpose">
+     Purpose
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#modelling-approach">
+     Modelling approach
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#highlights">
+     Highlights
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#authors">
+     Authors
+    </a>
+   </li>
+  </ul>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
   <a class="reference internal nav-link" href="#install-and-load-libraries">
    Install and load libraries
   </a>
  </li>
  <li class="toc-h2 nav-item toc-entry">
-  <a class="reference internal nav-link" href="#create-and-load-intake-catalogue-for-images">
-   Create and load intake catalogue for images
+  <a class="reference internal nav-link" href="#fetch-a-rgb-image-from-zenodo">
+   Fetch a RGB image from Zenodo
   </a>
  </li>
  <li class="toc-h2 nav-item toc-entry">
@@ -483,13 +520,13 @@
   </a>
  </li>
  <li class="toc-h2 nav-item toc-entry">
-  <a class="reference internal nav-link" href="#visualizing-pairs-images-and-labels">
-   Visualizing Pairs Images and Labels
+  <a class="reference internal nav-link" href="#visualise-image-and-labels">
+   Visualise image and labels
   </a>
  </li>
  <li class="toc-h2 nav-item toc-entry">
-  <a class="reference internal nav-link" href="#run-deepforest-pretrained-model">
-   Run
+  <a class="reference internal nav-link" href="#load-deepforest-pretrained-model">
+   Load
    <em>
     DeepForest
    </em>
@@ -509,6 +546,31 @@
                 
   <div class="section" id="forest-tree-crown-detection">
 <h1>Forest: Tree crown detection<a class="headerlink" href="#forest-tree-crown-detection" title="Permalink to this headline">¶</a></h1>
+<div class="section" id="context">
+<h2>Context<a class="headerlink" href="#context" title="Permalink to this headline">¶</a></h2>
+<div class="section" id="purpose">
+<h3>Purpose<a class="headerlink" href="#purpose" title="Permalink to this headline">¶</a></h3>
+<p>Detect tree crown using state-of-art models</p>
+</div>
+<div class="section" id="modelling-approach">
+<h3>Modelling approach<a class="headerlink" href="#modelling-approach" title="Permalink to this headline">¶</a></h3>
+<p>A prebuilt Deep Learning model, named <em>DeepForest</em>, is used to predict individual tree crowns from an airborne RGB image.</p>
+</div>
+<div class="section" id="highlights">
+<h3>Highlights<a class="headerlink" href="#highlights" title="Permalink to this headline">¶</a></h3>
+<ul class="simple">
+<li><p><em>DeepForest</em> was trained on data from the National Ecological Observatory Network.</p></li>
+</ul>
+</div>
+<div class="section" id="authors">
+<h3>Authors<a class="headerlink" href="#authors" title="Permalink to this headline">¶</a></h3>
+<p>Alejandro Coca-Castro, The Alan Turing Institute, <a class="reference external" href="https://github.com/acocac">&#64;acocac</a></p>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>The author acknowledges <a class="reference external" href="https://deepforest.readthedocs.io/en/latest/">DeepForest</a> contributors. Some code snippets were extracted from DeepForest <a class="reference external" href="https://github.com/weecology/DeepForest">GitHub public repository</a>.</p>
+</div>
+</div>
+</div>
 <div class="section" id="install-and-load-libraries">
 <h2>Install and load libraries<a class="headerlink" href="#install-and-load-libraries" title="Permalink to this headline">¶</a></h2>
 <div class="cell docutils container">
@@ -531,30 +593,34 @@
 <span class="kn">import</span> <span class="nn">xmltodict</span>
 <span class="kn">import</span> <span class="nn">cv2</span>
 
+<span class="kn">import</span> <span class="nn">tempfile</span>
+
 <span class="o">%</span><span class="k">matplotlib</span> inline
 </pre></div>
 </div>
 </div>
 </div>
 </div>
-<div class="section" id="create-and-load-intake-catalogue-for-images">
-<h2>Create and load intake catalogue for images<a class="headerlink" href="#create-and-load-intake-catalogue-for-images" title="Permalink to this headline">¶</a></h2>
+<div class="section" id="fetch-a-rgb-image-from-zenodo">
+<h2>Fetch a RGB image from Zenodo<a class="headerlink" href="#fetch-a-rgb-image-from-zenodo" title="Permalink to this headline">¶</a></h2>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="o">%%writefile</span> tc.yaml
-<span class="n">sources</span><span class="p">:</span>
-  <span class="n">NEONTREE_rgb</span><span class="p">:</span>
-    <span class="n">driver</span><span class="p">:</span> <span class="n">xarray_image</span>
-    <span class="n">description</span><span class="p">:</span> <span class="s1">&#39;NeonTreeEvaluation RGB images (collection)&#39;</span>
-    <span class="n">metadata</span><span class="p">:</span>
-      <span class="n">zenodo_doi</span><span class="p">:</span> <span class="s2">&quot;10.5281/zenodo.3459803&quot;</span>
-    <span class="n">args</span><span class="p">:</span>
-      <span class="n">urlpath</span><span class="p">:</span> <span class="s2">&quot;{{ CATALOG_DIR }}/NEONsample_RGB/2018_MLBS_3_541000_4140000_image_crop.tif&quot;</span>
-</pre></div>
-</div>
-</div>
-<div class="cell_output docutils container">
-<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Overwriting tc.yaml
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># create a temp dir</span>
+<span class="n">path</span> <span class="o">=</span> <span class="n">tempfile</span><span class="o">.</span><span class="n">mkdtemp</span><span class="p">()</span>
+
+<span class="n">catalog_file</span> <span class="o">=</span> <span class="n">os</span><span class="o">.</span><span class="n">path</span><span class="o">.</span><span class="n">join</span><span class="p">(</span><span class="n">path</span><span class="p">,</span> <span class="s1">&#39;catalog.yaml&#39;</span><span class="p">)</span>
+
+<span class="k">with</span> <span class="nb">open</span><span class="p">(</span><span class="n">catalog_file</span><span class="p">,</span> <span class="s1">&#39;w&#39;</span><span class="p">)</span> <span class="k">as</span> <span class="n">f</span><span class="p">:</span>
+    <span class="n">f</span><span class="o">.</span><span class="n">write</span><span class="p">(</span><span class="s1">&#39;&#39;&#39;</span>
+<span class="s1">sources:</span>
+<span class="s1">  NEONTREE_rgb:</span>
+<span class="s1">    driver: xarray_image</span>
+<span class="s1">    description: &#39;NeonTreeEvaluation RGB images (collection)&#39;</span>
+<span class="s1">    metadata:</span>
+<span class="s1">      zenodo_doi: &quot;10.5281/zenodo.3459803&quot;</span>
+<span class="s1">    args:</span>
+<span class="s1">      urlpath: &quot;{{ CATALOG_DIR }}/NEONsample_RGB/2018_MLBS_3_541000_4140000_image_crop.tif&quot;</span>
+<span class="s1">      &#39;&#39;&#39;</span><span class="p">)</span>
 </pre></div>
 </div>
 </div>
@@ -957,7 +1023,7 @@ dask.array&lt;xarray-&lt;this-array&gt;, shape=(1864, 1429, 3), dtype=uint8, chu
 Coordinates:
   * y        (y) int64 0 1 2 3 4 5 6 7 ... 1857 1858 1859 1860 1861 1862 1863
   * x        (x) int64 0 1 2 3 4 5 6 7 ... 1422 1423 1424 1425 1426 1427 1428
-  * channel  (channel) int64 0 1 2</pre><div class='xr-wrap' hidden><div class='xr-header'><div class='xr-obj-type'>xarray.DataArray</div><div class='xr-array-name'></div><ul class='xr-dim-list'><li><span class='xr-has-index'>y</span>: 1864</li><li><span class='xr-has-index'>x</span>: 1429</li><li><span class='xr-has-index'>channel</span>: 3</li></ul></div><ul class='xr-sections'><li class='xr-section-item'><div class='xr-array-wrap'><input id='section-4933d5de-8405-42a3-b7dd-5ef5ca1c092b' class='xr-array-in' type='checkbox' checked><label for='section-4933d5de-8405-42a3-b7dd-5ef5ca1c092b' title='Show/hide data repr'><svg class='icon xr-icon-database'><use xlink:href='#icon-database'></use></svg></label><div class='xr-array-preview xr-preview'><span>dask.array&lt;chunksize=(1864, 1429, 3), meta=np.ndarray&gt;</span></div><div class='xr-array-data'><table>
+  * channel  (channel) int64 0 1 2</pre><div class='xr-wrap' hidden><div class='xr-header'><div class='xr-obj-type'>xarray.DataArray</div><div class='xr-array-name'></div><ul class='xr-dim-list'><li><span class='xr-has-index'>y</span>: 1864</li><li><span class='xr-has-index'>x</span>: 1429</li><li><span class='xr-has-index'>channel</span>: 3</li></ul></div><ul class='xr-sections'><li class='xr-section-item'><div class='xr-array-wrap'><input id='section-5b49d571-ee35-4dcd-9fa4-048564228f97' class='xr-array-in' type='checkbox' checked><label for='section-5b49d571-ee35-4dcd-9fa4-048564228f97' title='Show/hide data repr'><svg class='icon xr-icon-database'><use xlink:href='#icon-database'></use></svg></label><div class='xr-array-preview xr-preview'><span>dask.array&lt;chunksize=(1864, 1429, 3), meta=np.ndarray&gt;</span></div><div class='xr-array-data'><table>
 <tr>
 <td>
 <table>
@@ -1015,7 +1081,7 @@ Coordinates:
 </svg>
 </td>
 </tr>
-</table></div></div></li><li class='xr-section-item'><input id='section-2ba3a6e4-8e7c-4525-baa7-aa50e87e06f4' class='xr-section-summary-in' type='checkbox'  checked><label for='section-2ba3a6e4-8e7c-4525-baa7-aa50e87e06f4' class='xr-section-summary' >Coordinates: <span>(3)</span></label><div class='xr-section-inline-details'></div><div class='xr-section-details'><ul class='xr-var-list'><li class='xr-var-item'><div class='xr-var-name'><span class='xr-has-index'>y</span></div><div class='xr-var-dims'>(y)</div><div class='xr-var-dtype'>int64</div><div class='xr-var-preview xr-preview'>0 1 2 3 4 ... 1860 1861 1862 1863</div><input id='attrs-3bc611f1-3a7b-4a9c-a15d-49002fc49ea1' class='xr-var-attrs-in' type='checkbox' disabled><label for='attrs-3bc611f1-3a7b-4a9c-a15d-49002fc49ea1' title='Show/Hide attributes'><svg class='icon xr-icon-file-text2'><use xlink:href='#icon-file-text2'></use></svg></label><input id='data-3709b537-2f26-43bd-b5f9-7c11928becc1' class='xr-var-data-in' type='checkbox'><label for='data-3709b537-2f26-43bd-b5f9-7c11928becc1' title='Show/Hide data repr'><svg class='icon xr-icon-database'><use xlink:href='#icon-database'></use></svg></label><div class='xr-var-attrs'><dl class='xr-attrs'></dl></div><div class='xr-var-data'><pre>array([   0,    1,    2, ..., 1861, 1862, 1863])</pre></div></li><li class='xr-var-item'><div class='xr-var-name'><span class='xr-has-index'>x</span></div><div class='xr-var-dims'>(x)</div><div class='xr-var-dtype'>int64</div><div class='xr-var-preview xr-preview'>0 1 2 3 4 ... 1425 1426 1427 1428</div><input id='attrs-1bade669-9e5d-4229-9b88-abb3a47be586' class='xr-var-attrs-in' type='checkbox' disabled><label for='attrs-1bade669-9e5d-4229-9b88-abb3a47be586' title='Show/Hide attributes'><svg class='icon xr-icon-file-text2'><use xlink:href='#icon-file-text2'></use></svg></label><input id='data-4a459416-0471-4249-8793-ce0cfd230845' class='xr-var-data-in' type='checkbox'><label for='data-4a459416-0471-4249-8793-ce0cfd230845' title='Show/Hide data repr'><svg class='icon xr-icon-database'><use xlink:href='#icon-database'></use></svg></label><div class='xr-var-attrs'><dl class='xr-attrs'></dl></div><div class='xr-var-data'><pre>array([   0,    1,    2, ..., 1426, 1427, 1428])</pre></div></li><li class='xr-var-item'><div class='xr-var-name'><span class='xr-has-index'>channel</span></div><div class='xr-var-dims'>(channel)</div><div class='xr-var-dtype'>int64</div><div class='xr-var-preview xr-preview'>0 1 2</div><input id='attrs-fe364f66-2d02-49c0-ba95-4abfc0053c80' class='xr-var-attrs-in' type='checkbox' disabled><label for='attrs-fe364f66-2d02-49c0-ba95-4abfc0053c80' title='Show/Hide attributes'><svg class='icon xr-icon-file-text2'><use xlink:href='#icon-file-text2'></use></svg></label><input id='data-d9a5076e-517b-4828-b9f9-3dd90c65bfee' class='xr-var-data-in' type='checkbox'><label for='data-d9a5076e-517b-4828-b9f9-3dd90c65bfee' title='Show/Hide data repr'><svg class='icon xr-icon-database'><use xlink:href='#icon-database'></use></svg></label><div class='xr-var-attrs'><dl class='xr-attrs'></dl></div><div class='xr-var-data'><pre>array([0, 1, 2])</pre></div></li></ul></div></li><li class='xr-section-item'><input id='section-17b3ba44-60a3-43bd-b37f-693079e35c52' class='xr-section-summary-in' type='checkbox' disabled ><label for='section-17b3ba44-60a3-43bd-b37f-693079e35c52' class='xr-section-summary'  title='Expand/collapse section'>Attributes: <span>(0)</span></label><div class='xr-section-inline-details'></div><div class='xr-section-details'><dl class='xr-attrs'></dl></div></li></ul></div></div></div></div>
+</table></div></div></li><li class='xr-section-item'><input id='section-aca776bc-158e-41c8-8924-78d1a50d83cc' class='xr-section-summary-in' type='checkbox'  checked><label for='section-aca776bc-158e-41c8-8924-78d1a50d83cc' class='xr-section-summary' >Coordinates: <span>(3)</span></label><div class='xr-section-inline-details'></div><div class='xr-section-details'><ul class='xr-var-list'><li class='xr-var-item'><div class='xr-var-name'><span class='xr-has-index'>y</span></div><div class='xr-var-dims'>(y)</div><div class='xr-var-dtype'>int64</div><div class='xr-var-preview xr-preview'>0 1 2 3 4 ... 1860 1861 1862 1863</div><input id='attrs-c50f4c9b-d279-4008-afb5-64f037fccd0c' class='xr-var-attrs-in' type='checkbox' disabled><label for='attrs-c50f4c9b-d279-4008-afb5-64f037fccd0c' title='Show/Hide attributes'><svg class='icon xr-icon-file-text2'><use xlink:href='#icon-file-text2'></use></svg></label><input id='data-01c1cbee-fefb-42ce-bf51-b2be277c9217' class='xr-var-data-in' type='checkbox'><label for='data-01c1cbee-fefb-42ce-bf51-b2be277c9217' title='Show/Hide data repr'><svg class='icon xr-icon-database'><use xlink:href='#icon-database'></use></svg></label><div class='xr-var-attrs'><dl class='xr-attrs'></dl></div><div class='xr-var-data'><pre>array([   0,    1,    2, ..., 1861, 1862, 1863])</pre></div></li><li class='xr-var-item'><div class='xr-var-name'><span class='xr-has-index'>x</span></div><div class='xr-var-dims'>(x)</div><div class='xr-var-dtype'>int64</div><div class='xr-var-preview xr-preview'>0 1 2 3 4 ... 1425 1426 1427 1428</div><input id='attrs-c5e4bda0-13d7-4edf-ad7a-d48785ca9005' class='xr-var-attrs-in' type='checkbox' disabled><label for='attrs-c5e4bda0-13d7-4edf-ad7a-d48785ca9005' title='Show/Hide attributes'><svg class='icon xr-icon-file-text2'><use xlink:href='#icon-file-text2'></use></svg></label><input id='data-681c7c5a-b0e0-4218-a961-b771aec3800a' class='xr-var-data-in' type='checkbox'><label for='data-681c7c5a-b0e0-4218-a961-b771aec3800a' title='Show/Hide data repr'><svg class='icon xr-icon-database'><use xlink:href='#icon-database'></use></svg></label><div class='xr-var-attrs'><dl class='xr-attrs'></dl></div><div class='xr-var-data'><pre>array([   0,    1,    2, ..., 1426, 1427, 1428])</pre></div></li><li class='xr-var-item'><div class='xr-var-name'><span class='xr-has-index'>channel</span></div><div class='xr-var-dims'>(channel)</div><div class='xr-var-dtype'>int64</div><div class='xr-var-preview xr-preview'>0 1 2</div><input id='attrs-babf7370-e914-4254-9f6f-1ddc35c5c9b0' class='xr-var-attrs-in' type='checkbox' disabled><label for='attrs-babf7370-e914-4254-9f6f-1ddc35c5c9b0' title='Show/Hide attributes'><svg class='icon xr-icon-file-text2'><use xlink:href='#icon-file-text2'></use></svg></label><input id='data-c5e92224-5917-4269-afb3-b12bb04d877c' class='xr-var-data-in' type='checkbox'><label for='data-c5e92224-5917-4269-afb3-b12bb04d877c' title='Show/Hide data repr'><svg class='icon xr-icon-database'><use xlink:href='#icon-database'></use></svg></label><div class='xr-var-attrs'><dl class='xr-attrs'></dl></div><div class='xr-var-data'><pre>array([0, 1, 2])</pre></div></li></ul></div></li><li class='xr-section-item'><input id='section-abf30217-d2e4-4b48-b6e4-4c4527dc59db' class='xr-section-summary-in' type='checkbox' disabled ><label for='section-abf30217-d2e4-4b48-b6e4-4c4527dc59db' class='xr-section-summary'  title='Expand/collapse section'>Attributes: <span>(0)</span></label><div class='xr-section-inline-details'></div><div class='xr-section-details'><dl class='xr-attrs'></dl></div></li></ul></div></div></div></div>
 </div>
 </div>
 <div class="section" id="load-and-prepare-labels">
@@ -1064,15 +1130,8 @@ Coordinates:
 </div>
 </div>
 </div>
-<div class="section" id="visualizing-pairs-images-and-labels">
-<h2>Visualizing Pairs Images and Labels<a class="headerlink" href="#visualizing-pairs-images-and-labels" title="Permalink to this headline">¶</a></h2>
-<div class="cell docutils container">
-<div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="kn">from</span> <span class="nn">deepforest</span> <span class="kn">import</span> <span class="n">visualize</span>
-</pre></div>
-</div>
-</div>
-</div>
+<div class="section" id="visualise-image-and-labels">
+<h2>Visualise image and labels<a class="headerlink" href="#visualise-image-and-labels" title="Permalink to this headline">¶</a></h2>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># function to plot images</span>
@@ -1113,17 +1172,15 @@ Coordinates:
 </div>
 </div>
 <div class="cell_output docutils container">
-<img alt="../../_images/forest-modelling-treecrown_18_0.png" src="../../_images/forest-modelling-treecrown_18_0.png" />
+<img alt="../../_images/forest-modelling-treecrown_17_0.png" src="../../_images/forest-modelling-treecrown_17_0.png" />
 </div>
 </div>
 </div>
-<div class="section" id="run-deepforest-pretrained-model">
-<h2>Run <em>DeepForest</em> pretrained model<a class="headerlink" href="#run-deepforest-pretrained-model" title="Permalink to this headline">¶</a></h2>
-<p>TODO</p>
+<div class="section" id="load-deepforest-pretrained-model">
+<h2>Load <em>DeepForest</em> pretrained model<a class="headerlink" href="#load-deepforest-pretrained-model" title="Permalink to this headline">¶</a></h2>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="kn">from</span> <span class="nn">deepforest</span> <span class="kn">import</span> <span class="n">main</span>
-<span class="kn">from</span> <span class="nn">deepforest</span> <span class="kn">import</span> <span class="n">IoU</span>
 </pre></div>
 </div>
 </div>
@@ -1147,7 +1204,9 @@ Coordinates:
 </pre></div>
 </div>
 <div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Model from DeepForest release https://github.com/weecology/DeepForest/releases/tag/1.0.0 was already downloaded. Loading model from file.
-Loading pre-built model: https://github.com/weecology/DeepForest/releases/tag/1.0.0
+</pre></div>
+</div>
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Loading pre-built model: https://github.com/weecology/DeepForest/releases/tag/1.0.0
 </pre></div>
 </div>
 </div>

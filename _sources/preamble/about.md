@@ -1,11 +1,7 @@
 (pr-about)=
 # About this book
 
-:::{note}
-Under construction
-:::
-
-This book compiles research in the application of **AI** and **Data Science** for monitoring and modelling a wide diversity of settings of the natural and urban environments. 
+_The Environmental AI_ book compiles research in the application of **AI** and **Data Science** for monitoring and modelling a wide diversity of settings of the natural and urban environments. 
 
 Through a set of interactive use cases, the book aims to be a **living**, **free** and **open** document guiding the scientific community about information extraction and analysis from environmental sensors (including ground sensors, drones, and satellite Earth observations) and other type of data using data-driven methods. 
 

@@ -5,7 +5,7 @@
   <head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Collaboration Cafe Call Template &#8212; The Environmental AI book</title>
+    <title>[Environment]: [Sensor name] &#8212; The Environmental AI book</title>
     
   <link href="../../_static/css/theme.css" rel="stylesheet" />
   <link href="../../_static/css/index.c5995385ac14fb8791e8eb36b4908be2.css" rel="stylesheet" />
@@ -51,8 +51,8 @@
     <script async="async" src="../../_static/sphinx-thebe.js"></script>
     <link rel="index" title="Index" href="../../genindex.html" />
     <link rel="search" title="Search" href="../../search.html" />
-    <link rel="next" title="[Environment]: [Sensor name]" href="template-environments-sensors.html" />
-    <link rel="prev" title="Templates" href="../templates.html" />
+    <link rel="next" title="[Environment]: [Modelling target]" href="template-environments-modelling.html" />
+    <link rel="prev" title="Collaboration Cafe Call Template" href="template-coworking-collabcafe.html" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <meta name="docsearch:language" content="en" />
     
@@ -322,13 +322,13 @@
    </i>
   </label>
   <ul class="current">
-   <li class="toctree-l2 current active">
-    <a class="current reference internal" href="#">
+   <li class="toctree-l2">
+    <a class="reference internal" href="template-coworking-collabcafe.html">
      Online Collaboration Cafe
     </a>
    </li>
-   <li class="toctree-l2">
-    <a class="reference internal" href="template-environments-sensors.html">
+   <li class="toctree-l2 current active">
+    <a class="current reference internal" href="#">
      Environments Use Case Sensors
     </a>
    </li>
@@ -407,9 +407,9 @@
         <!-- ipynb file if we had a myst markdown file -->
         
         <!-- Download raw file -->
-        <a class="dropdown-buttons" href="../../_sources/community/templates/template-coworking-collabcafe.md"><button type="button"
+        <a class="dropdown-buttons" href="../../_sources/community/templates/template-environments-sensors.ipynb"><button type="button"
                 class="btn btn-secondary topbarbtn" title="Download source file" data-toggle="tooltip"
-                data-placement="left">.md</button></a>
+                data-placement="left">.ipynb</button></a>
         <!-- Download PDF via print -->
         <button type="button" id="download-print" class="btn btn-secondary topbarbtn" title="Print to PDF"
             onClick="window.print()" data-toggle="tooltip" data-placement="left">.pdf</button>
@@ -427,10 +427,10 @@
                 data-toggle="tooltip" data-placement="left" title="Source repository"><i
                     class="fab fa-github"></i>repository</button></a>
         <a class="issues-button"
-            href="https://github.com/acocac/environmental-ai-book/issues/new?title=Issue%20on%20page%20%2Fcommunity/templates/template-coworking-collabcafe.html&body=Your%20issue%20content%20here."><button
+            href="https://github.com/acocac/environmental-ai-book/issues/new?title=Issue%20on%20page%20%2Fcommunity/templates/template-environments-sensors.html&body=Your%20issue%20content%20here."><button
                 type="button" class="btn btn-secondary topbarbtn" data-toggle="tooltip" data-placement="left"
                 title="Open an issue"><i class="fas fa-lightbulb"></i>open issue</button></a>
-        <a class="edit-button" href="https://github.com/acocac/environmental-ai-book/edit/master/book/community/templates/template-coworking-collabcafe.md"><button
+        <a class="edit-button" href="https://github.com/acocac/environmental-ai-book/edit/master/book/community/templates/template-environments-sensors.ipynb"><button
                 type="button" class="btn btn-secondary topbarbtn" data-toggle="tooltip" data-placement="left"
                 title="Edit this page"><i class="fas fa-pencil-alt"></i>suggest edit</button></a>
     </div>
@@ -445,6 +445,28 @@
 
             <!-- Launch buttons -->
 
+<div class="dropdown-buttons-trigger">
+    <button id="dropdown-buttons-trigger" class="btn btn-secondary topbarbtn"
+        aria-label="Launch interactive content"><i class="fas fa-rocket"></i></button>
+    <div class="dropdown-buttons">
+        
+        <a class="binder-button" href="https://binder.pangeo.io/v2/gh/acocac/environmental-ai-book/master?urlpath=tree/book/community/templates/template-environments-sensors.ipynb"><button type="button"
+                class="btn btn-secondary topbarbtn" title="Launch Binder" data-toggle="tooltip"
+                data-placement="left"><img class="binder-button-logo"
+                    src="../../_static/images/logo_binder.svg"
+                    alt="Interact on binder">Binder</button></a>
+        
+        
+        
+        <a class="colab-button" href="https://colab.research.google.com/github/acocac/environmental-ai-book/blob/master/book/community/templates/template-environments-sensors.ipynb"><button type="button" class="btn btn-secondary topbarbtn"
+                title="Launch Colab" data-toggle="tooltip" data-placement="left"><img class="colab-button-logo"
+                    src="../../_static/images/logo_colab.png"
+                    alt="Interact on Colab">Colab</button></a>
+        
+        
+    </div>
+</div>
+
         </div>
 
         <!-- Table of contents -->
@@ -456,64 +478,51 @@
             <nav id="bd-toc-nav">
                 <ul class="visible nav section-nav flex-column">
  <li class="toc-h2 nav-item toc-entry">
-  <a class="reference internal nav-link" href="#the-environmental-ai-online-collaboration-cafe">
-   <em>
-    The Environmental AI
-   </em>
-   ⛰ 🌳 🏙️ ❄️ 🔥 🌊  online Collaboration Cafe
+  <a class="reference internal nav-link" href="#context">
+   Context
   </a>
   <ul class="nav section-nav flex-column">
    <li class="toc-h3 nav-item toc-entry">
-    <a class="reference internal nav-link" href="#date-month-year-theme">
-     DATE MONTH YEAR | Theme
+    <a class="reference internal nav-link" href="#purpose">
+     Purpose
     </a>
    </li>
    <li class="toc-h3 nav-item toc-entry">
-    <a class="reference internal nav-link" href="#useful-links">
-     Useful links
+    <a class="reference internal nav-link" href="#sensor-description">
+     Sensor description
     </a>
    </li>
    <li class="toc-h3 nav-item toc-entry">
-    <a class="reference internal nav-link" href="#code-of-conduct">
-     Code of conduct
+    <a class="reference internal nav-link" href="#highlights">
+     Highlights
     </a>
    </li>
    <li class="toc-h3 nav-item toc-entry">
-    <a class="reference internal nav-link" href="#sign-up-below">
-     Sign up below
-    </a>
-   </li>
-   <li class="toc-h3 nav-item toc-entry">
-    <a class="reference internal nav-link" href="#conversation-starters">
-     Conversation Starters
-    </a>
-   </li>
-   <li class="toc-h3 nav-item toc-entry">
-    <a class="reference internal nav-link" href="#schedule">
-     Schedule
-    </a>
-   </li>
-   <li class="toc-h3 nav-item toc-entry">
-    <a class="reference internal nav-link" href="#breakout-rooms-topic-proposals">
-     Breakout rooms: Topic proposals
-    </a>
-   </li>
-   <li class="toc-h3 nav-item toc-entry">
-    <a class="reference internal nav-link" href="#notes-and-questions">
-     Notes and questions
-    </a>
-   </li>
-   <li class="toc-h3 nav-item toc-entry">
-    <a class="reference internal nav-link" href="#request-for-reviews">
-     Request for reviews!
-    </a>
-   </li>
-   <li class="toc-h3 nav-item toc-entry">
-    <a class="reference internal nav-link" href="#feedback-at-the-end-of-the-call">
-     Feedback at the end of the call
+    <a class="reference internal nav-link" href="#authors">
+     Authors
     </a>
    </li>
   </ul>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#install-and-load-libraries">
+   Install and load libraries
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#load-data">
+   Load data
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#visualisation">
+   Visualisation
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#summary">
+   Summary
+  </a>
  </li>
 </ul>
 
@@ -526,125 +535,46 @@
         
               <div>
                 
-  <div class="section" id="collaboration-cafe-call-template">
-<span id="cm-template-coworking-collabcafe"></span><h1>Collaboration Cafe Call Template<a class="headerlink" href="#collaboration-cafe-call-template" title="Permalink to this headline">¶</a></h1>
+  <div class="section" id="environment-sensor-name">
+<h1>[Environment]: [Sensor name]<a class="headerlink" href="#environment-sensor-name" title="Permalink to this headline">¶</a></h1>
+<div class="section" id="context">
+<h2>Context<a class="headerlink" href="#context" title="Permalink to this headline">¶</a></h2>
+<div class="section" id="purpose">
+<h3>Purpose<a class="headerlink" href="#purpose" title="Permalink to this headline">¶</a></h3>
+<p><em>Describe the purpose of the use case.</em></p>
+</div>
+<div class="section" id="sensor-description">
+<h3>Sensor description<a class="headerlink" href="#sensor-description" title="Permalink to this headline">¶</a></h3>
+<p><em>Describe the main features of the sensor e.g. variables.</em></p>
+</div>
+<div class="section" id="highlights">
+<h3>Highlights<a class="headerlink" href="#highlights" title="Permalink to this headline">¶</a></h3>
+<p><em>Provide 3-5 bullet points that convey the use case’s core procedures. Each bullet point must have a maximum of 85 characters, including spaces.</em></p>
+<ul class="simple">
+<li><p>Highlight 1</p></li>
+<li><p>Highlight 2</p></li>
+</ul>
+</div>
+<div class="section" id="authors">
+<h3>Authors<a class="headerlink" href="#authors" title="Permalink to this headline">¶</a></h3>
+<p>Author, Affiliation, GitHub alias</p>
 <div class="admonition note">
 <p class="admonition-title">Note</p>
-<p><em>This HackMD is based on <a class="reference external" href="https://github.com/alan-turing-institute/the-turing-way/blob/master/book/website/community-handbook/templates/template-coworking-collabcafe.md"><em>The Turing Way</em> collaboration cafe template</a></em></p>
-<p><em>A <strong>permanent document</strong> exists in the HackMD: <a class="reference external" href="https://hackmd.io/&#64;environmental-ai/collaboration-cafe">https://hackmd.io/&#64;environmental-ai/collaboration-cafe</a> that is regularly updated with the empty template for next event.</em></p>
+<p><em>Optional: add credits or acknowledgements to data providers or authors of code snippets</em></p>
 </div>
-<div class="section" id="the-environmental-ai-online-collaboration-cafe">
-<h2><em>The Environmental AI</em> ⛰ 🌳 🏙️ ❄️ 🔥 🌊  online Collaboration Cafe<a class="headerlink" href="#the-environmental-ai-online-collaboration-cafe" title="Permalink to this headline">¶</a></h2>
-<div class="section" id="date-month-year-theme">
-<h3>DATE MONTH YEAR | Theme<a class="headerlink" href="#date-month-year-theme" title="Permalink to this headline">¶</a></h3>
-<p>Thank you for joining the <em>The Environmental AI</em>’s online Collaboration Cafe!</p>
-<p>We’re delighted to have you here ☕ ✨ 🍰</p>
-<p><strong>What?</strong> <em>The Environmental AI is a <strong>community aiming to learn and discuss about good research practices to use existing AI and data science solutions to a better understanding of the planet earth across multiple environmental settings</strong>.
-<a class="reference external" href="https://the-turing-way.netlify.app/community-handbook/coworking/coworking-collabcafe.html">Collaboration Cafes</a> are <strong>online coworking calls</strong> that engage anyone interested in learning and discussing about relevant themes in AI and data science to environmental studies</em>.</p>
-<p><em>Read more about it here: <a class="reference external" href="https://the-turing-way.netlify.app/community-handbook/coworking.html">https://the-turing-way.netlify.app/community-handbook/coworking.html</a></em></p>
-<p><strong>Who?</strong> <em><strong>Everyone</strong> interested in reproducible, ethical, and inclusive data science and research for environmental studies are welcome to join the full or any part of The Environmental AI project, community, and/or this call.</em></p>
-<p><strong>When?</strong> DD Month YYYY, HH:MM BST (link for local time from <a class="reference external" href="https://arewemeetingyet.com">https://arewemeetingyet.com</a>)</p>
-<p><strong>How?</strong> <em>Zoom link will be provided 10 minutes before the call</em></p>
-<p><em><strong>All questions, comments and recommendations are welcome!</strong></em></p>
 </div>
-<div class="section" id="useful-links">
-<h3>Useful links<a class="headerlink" href="#useful-links" title="Permalink to this headline">¶</a></h3>
-<ul class="simple">
-<li><p>All about <a class="reference external" href="https://github.com/alan-turing-institute/the-turing-way/blob/master/project_management/online-collaboration-cafe.md">online Collaboration Cafes</a></p></li>
-</ul>
 </div>
-<div class="section" id="code-of-conduct">
-<h3>Code of conduct<a class="headerlink" href="#code-of-conduct" title="Permalink to this headline">¶</a></h3>
-<ul class="simple">
-<li><p>TBC</p></li>
-</ul>
+<div class="section" id="install-and-load-libraries">
+<h2>Install and load libraries<a class="headerlink" href="#install-and-load-libraries" title="Permalink to this headline">¶</a></h2>
 </div>
-<div class="section" id="sign-up-below">
-<h3>Sign up below<a class="headerlink" href="#sign-up-below" title="Permalink to this headline">¶</a></h3>
-<p><em>Name + <A fun Icebreaker> + an emoji to represent it (<a class="reference external" href="https://github.com/ikatyang/emoji-cheat-sheet/blob/master/README.md">emoji cheatsheet</a>)</em></p>
-<p><em>(Remember that this is a public document. You can use a pseudonym if you’d prefer.)</em></p>
+<div class="section" id="load-data">
+<h2>Load data<a class="headerlink" href="#load-data" title="Permalink to this headline">¶</a></h2>
 </div>
-<div class="section" id="conversation-starters">
-<h3>Conversation Starters<a class="headerlink" href="#conversation-starters" title="Permalink to this headline">¶</a></h3>
-<p><em>Advertise and promote your event, or anything exciting you’re working on.</em> ✨</p>
-<ul class="simple">
-<li></li>
-<li></li>
-</ul>
+<div class="section" id="visualisation">
+<h2>Visualisation<a class="headerlink" href="#visualisation" title="Permalink to this headline">¶</a></h2>
 </div>
-<div class="section" id="schedule">
-<h3>Schedule<a class="headerlink" href="#schedule" title="Permalink to this headline">¶</a></h3>
-<p><a class="reference external" href="https://cuckoo.team/environmental-ai">https://cuckoo.team/environmental-ai</a></p>
-<table class="colwidths-auto table">
-<thead>
-<tr class="row-odd"><th class="head"><p>Duration</p></th>
-<th class="head"><p>Activity</p></th>
-</tr>
-</thead>
-<tbody>
-<tr class="row-even"><td><p>Start</p></td>
-<td><p>👋 Welcome, code of conduct review</p></td>
-</tr>
-<tr class="row-odd"><td><p>10 mins</p></td>
-<td><p>Introductions and personal goal setting</p></td>
-</tr>
-<tr class="row-even"><td><p>20 mins</p></td>
-<td><p>🍅 1st Pomodoro session</p></td>
-</tr>
-<tr class="row-odd"><td><p>5 mins</p></td>
-<td><p>☕️ Break</p></td>
-</tr>
-<tr class="row-even"><td><p>20 mins</p></td>
-<td><p>🍅 2nd Pomodoro session</p></td>
-</tr>
-<tr class="row-odd"><td><p>5 mins</p></td>
-<td><p>☕️ Break</p></td>
-</tr>
-<tr class="row-even"><td><p>20 mins</p></td>
-<td><p>🍅 3rd Pomodoro session</p></td>
-</tr>
-<tr class="row-odd"><td><p>5 mins</p></td>
-<td><p>☕️ Break</p></td>
-</tr>
-<tr class="row-even"><td><p>30 mins</p></td>
-<td><p>Open discussion: celebrations, reflections and future directions</p></td>
-</tr>
-<tr class="row-odd"><td><p>5 mins</p></td>
-<td><p>👋 Close</p></td>
-</tr>
-</tbody>
-</table>
-</div>
-<div class="section" id="breakout-rooms-topic-proposals">
-<h3>Breakout rooms: Topic proposals<a class="headerlink" href="#breakout-rooms-topic-proposals" title="Permalink to this headline">¶</a></h3>
-<p><em>If you have an idea for a topic you’d like to discuss in a breakout room, please add it below and put your name next to it. If you like one of the topics that is already suggested, please add your name next to that one. Team work makes the dream work. For more information about breakout rooms see <a class="reference external" href="https://github.com/alan-turing-institute/the-turing-way/blob/master/project_management/online-collaboration-cafe.md#breakout-rooms">the description on GitHub</a>.</em></p>
-<p>Topic for breakout / Names</p>
-<ul class="simple">
-<li></li>
-<li></li>
-</ul>
-</div>
-<div class="section" id="notes-and-questions">
-<h3>Notes and questions<a class="headerlink" href="#notes-and-questions" title="Permalink to this headline">¶</a></h3>
-<ul class="simple">
-<li></li>
-<li></li>
-</ul>
-</div>
-<div class="section" id="request-for-reviews">
-<h3>Request for reviews!<a class="headerlink" href="#request-for-reviews" title="Permalink to this headline">¶</a></h3>
-<ul class="simple">
-<li></li>
-<li></li>
-</ul>
-</div>
-<div class="section" id="feedback-at-the-end-of-the-call">
-<h3>Feedback at the end of the call<a class="headerlink" href="#feedback-at-the-end-of-the-call" title="Permalink to this headline">¶</a></h3>
-<ul class="simple">
-<li></li>
-<li></li>
-</ul>
-</div>
+<div class="section" id="summary">
+<h2>Summary<a class="headerlink" href="#summary" title="Permalink to this headline">¶</a></h2>
 </div>
 </div>
 
@@ -673,8 +603,8 @@
         
         <div class='prev-next-bottom'>
             
-    <a class='left-prev' id="prev-link" href="../templates.html" title="previous page">Templates</a>
-    <a class='right-next' id="next-link" href="template-environments-sensors.html" title="next page">[Environment]: [Sensor name]</a>
+    <a class='left-prev' id="prev-link" href="template-coworking-collabcafe.html" title="previous page">Collaboration Cafe Call Template</a>
+    <a class='right-next' id="next-link" href="template-environments-modelling.html" title="next page">[Environment]: [Modelling target]</a>
 
         </div>
         
