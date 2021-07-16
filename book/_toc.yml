@@ -24,8 +24,6 @@ parts:
         title: Structure
       - file: forest/modelling/forest-modelling-treecrown
         title: Tree Crown
-      - file: forest/modelling/forest-modelling-wildfires
-        title: Wildfires
   - file: polar/polar-overview
     title: Polar
     sections:
@@ -45,7 +43,14 @@ parts:
     - file: urban/urban-sensors
       title: Sensors
     - file: urban/urban-modelling
+      title: Modelling
+  - file: wildfires/wildfires-overview
+    title: Wildfires
+    sections:
+    - file: wildfires/wildfires-sensors
       title: Sensors
+    - file: wildfires/wildfires-modelling
+      title: Modelling
 - caption: Digital Twins
   chapters:
   - file: digitaltwins/digitaltwins-overview
@@ -66,11 +71,15 @@ parts:
     sections:
     - file: community/notes/notes-collabcafe
       title: Online Collaboration Cafe
+    - file: community/notes/notes-journalclub
+      title: Online Journal Club
   - file: community/templates
     title: Template Collection
     sections:
     - file: community/templates/template-coworking-collabcafe
       title: Online Collaboration Cafe
+    - file: community/templates/template-coworking-journalclub
+      title: Online Journal Club
     - file: community/templates/template-environments-sensors
       title: Environments Use Case Sensors
     - file: community/templates/template-environments-modelling
