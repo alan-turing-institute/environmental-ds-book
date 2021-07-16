@@ -13,7 +13,7 @@ Thank you for joining the _The Environmental AI_'s online Collaboration Cafe!
 
 We're delighted to have you here ☕ ✨ 🍰
 
-**When?** 27 July 2021, 14:00 - 16:00 UTC ([see in your time zone](https://arewemeetingyet.com/London/2021-06-29/14:00))
+**When?** 24 August 2021, 14:00 - 16:00 UTC ([see in your time zone](https://arewemeetingyet.com/London/2021-08-24/14:00))
 
 **Next call:** TBC
 
