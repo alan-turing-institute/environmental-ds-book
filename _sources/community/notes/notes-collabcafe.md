@@ -7,7 +7,7 @@ tags: environmental-ai, collaboration-cafe
 
 # _The Environmental AI_ ⛰ 🌳 🏙️ ❄️ 🔥 🌊  online Collaboration Cafe 
 
-## 27 July 2021 | Digital Twins 
+## 24 August 2021 | TBC
 
 Thank you for joining the _The Environmental AI_'s online Collaboration Cafe! 
 
