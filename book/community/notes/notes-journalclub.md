@@ -31,27 +31,27 @@ Passcode: 1989
 
 ==*The waiting room is enabled. The host of this call will let you in.*==
 
-## Tips and Code of conduct
-* TBC
-
 ## Agenda
 | Time  | Activity | Location |
 | ----- | -------- | -------- |
-| 16:00 | Welcome, roll call and intros | Main room|
-| 16:10 | Presentation | Main room|
-| 16:20 | Paper discussion | Main room|
-| 16:40 | Concurrent silent notetaking| HackMD|
-| 16:55 | Wrap-up and feedback | HackMD|
+| 16:00 | 👋 Welcome, roll call and intros | Main room|
+| 16:10 | 💻 Presentation | Main room|
+| 16:20 | ✋ Paper discussion | Main room|
+| 16:40 | ✏️  Concurrent silent notetaking| HackMD|
+| 16:55 | 📕 Wrap-up and feedback | HackMD|
 
-### ✏️ Questions (prior the meeting date)
+### Tips and Code of conduct
+* TBC
+
+### ❓ Questions (prior the meeting date)
 *Please write your posed in preparation for the Journal Club session questions as you read the paper - these could be related to the methodology, the data, the conclusions, etc.*
 
-* [name=ResearcherName]
+* [name=Alejandro Coca]
 
 ### 👋 Roll call and Intros (10 mins)
 *Please add your name on a new line below, and answer the icebreaker question:*
 
-❓ **a fun icebreaker question**
+💬 **a fun icebreaker question**
 
 * Name + Answer + an emoji to represent it ([emoji cheatsheet](https://github.com/ikatyang/emoji-cheat-sheet/blob/master/README.md))
 
@@ -61,23 +61,23 @@ Passcode: 1989
 *
 *
 
-### ☑️ Notes and Discussions (30 min)
+### ✋ Discussions and ✏️ Notes (30 min)
 *While the Main Discussion is happening... please write down your notes, questions, critique, provocation, extension of the method, etc (30 min)*
 
 *
 *
 
-## 📕  Wrap-up and feedback (5 mins)
+### 📕 Wrap-up and feedback (5 mins)
 *Before you leave, please add a key takeaway, something you liked (a plus), and something you'd change (a delta) below.*
 
-### Key take away
+#### Key take away
 *
 *
 
-### Pluses
+#### Pluses
 *
 *
 
-### Deltas
+#### Deltas
 * 
 *
