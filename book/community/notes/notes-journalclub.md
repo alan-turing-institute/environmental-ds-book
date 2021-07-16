@@ -9,7 +9,7 @@ tags: environmental-ai, journal-club
 
 ## 27 July 2021 | Digital Twins 
 
-- **Time:** 16:00 - 17:00 (GMT)
+- **Time:** 16:00 - 17:00 UTC ([see in your time zone](https://arewemeetingyet.com/London/2021-07-27/16:00)) 
 - **Paper:** [Scaling digital twins from the artisanal to the industrial](https://www.nature.com/articles/s43588-021-00072-5)
 - **Theme Lead(s):** Alejandro Coca-Castro (PDRA Turing)
 - **Contact:** acoca@turing.ac.uk
