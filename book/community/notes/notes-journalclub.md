@@ -34,38 +34,40 @@ Passcode: 1989
 ## Tips and Code of conduct
 * TBC
 
-## Schedule
+## Agenda
 | Time  | Activity | Location |
 | ----- | -------- | -------- |
 | 16:00 | Welcome, roll call and intros | Main room|
 | 16:10 | Presentation | Main room|
 | 16:20 | Paper discussion | Main room|
 | 16:40 | Concurrent silent notetaking| HackMD|
-| 16:55 | Close out, pluses and deltas | HackMD|
+| 16:55 | Wrap-up and feedback | HackMD|
 
-## ✏️ Questions posed in preparation for the Journal Club session (before the meeting date)
-*Please write your questions as you read the paper - these could be related to the methodology, the data, the conclusions, etc.*
+### ✏️ Questions (prior the meeting date)
+*Please write your posed in preparation for the Journal Club session questions as you read the paper - these could be related to the methodology, the data, the conclusions, etc.*
 
 * [name=ResearcherName]
 
-## 👋 Roll call and Intros (10 mins)
+### 👋 Roll call and Intros (10 mins)
 *Please add your name on a new line below, and answer the icebreaker question:*
 
 ❓ **a fun icebreaker question**
 
 * Name + Answer + an emoji to represent it ([emoji cheatsheet](https://github.com/ikatyang/emoji-cheat-sheet/blob/master/README.md))
 
-## 💻 Paper presented (10 min)
+### 💻 Paper presented (10 min)
 *Please write your questions below - these could be related to the methodology, the data, the conclusions, etc.*
 
 *
 *
 
-## ☑️ While the Main Discussion is happening... please write down your questions, critique, provocation, extension of the method, etc (30 min)
+### ☑️ Notes and Discussions (30 min)
+*While the Main Discussion is happening... please write down your notes, questions, critique, provocation, extension of the method, etc (30 min)*
+
 *
 *
 
-## 📕  Wrap-up - Close out, pluses and deltas (5 mins)
+## 📕  Wrap-up and feedback (5 mins)
 *Before you leave, please add a key takeaway, something you liked (a plus), and something you'd change (a delta) below.*
 
 ### Key take away
