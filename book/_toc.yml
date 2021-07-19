@@ -49,6 +49,9 @@ parts:
     sections:
     - file: wildfires/wildfires-sensors
       title: Sensors
+      sections:
+      - file: wildfires/sensors/wildfires-sensors-modis
+        title: MODIS
     - file: wildfires/wildfires-modelling
       title: Modelling
 - caption: Digital Twins
