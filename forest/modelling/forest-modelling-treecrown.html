@@ -168,7 +168,7 @@
      </li>
      <li class="toctree-l3 current active">
       <a class="current reference internal" href="#">
-       Forest: Tree crown detection
+       Tree Crown
       </a>
      </li>
     </ul>
@@ -506,89 +506,76 @@
             </div>
             <nav id="bd-toc-nav">
                 <ul class="visible nav section-nav flex-column">
- <li class="toc-h1 nav-item toc-entry">
-  <a class="reference internal nav-link" href="#">
-   Forest: Tree crown detection
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#context">
+   Context
   </a>
-  <ul class="visible nav section-nav flex-column">
-   <li class="toc-h2 nav-item toc-entry">
-    <a class="reference internal nav-link" href="#context">
-     Context
-    </a>
-    <ul class="nav section-nav flex-column">
-     <li class="toc-h3 nav-item toc-entry">
-      <a class="reference internal nav-link" href="#purpose">
-       Purpose
-      </a>
-     </li>
-     <li class="toc-h3 nav-item toc-entry">
-      <a class="reference internal nav-link" href="#modelling-approach">
-       Modelling approach
-      </a>
-     </li>
-     <li class="toc-h3 nav-item toc-entry">
-      <a class="reference internal nav-link" href="#highlights">
-       Highlights
-      </a>
-     </li>
-     <li class="toc-h3 nav-item toc-entry">
-      <a class="reference internal nav-link" href="#authors">
-       Authors
-      </a>
-     </li>
-    </ul>
-   </li>
-   <li class="toc-h2 nav-item toc-entry">
-    <a class="reference internal nav-link" href="#install-and-load-libraries">
-     Install and load libraries
+  <ul class="nav section-nav flex-column">
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#purpose">
+     Purpose
     </a>
    </li>
-   <li class="toc-h2 nav-item toc-entry">
-    <a class="reference internal nav-link" href="#fetch-a-rgb-image-from-zenodo">
-     Fetch a RGB image from Zenodo
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#modelling-approach">
+     Modelling approach
     </a>
    </li>
-   <li class="toc-h2 nav-item toc-entry">
-    <a class="reference internal nav-link" href="#load-and-prepare-labels">
-     Load and prepare labels
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#highlights">
+     Highlights
     </a>
    </li>
-   <li class="toc-h2 nav-item toc-entry">
-    <a class="reference internal nav-link" href="#visualise-image-and-labels">
-     Visualise image and labels
-    </a>
-   </li>
-   <li class="toc-h2 nav-item toc-entry">
-    <a class="reference internal nav-link" href="#load-deepforest-pretrained-model">
-     Load
-     <em>
-      DeepForest
-     </em>
-     pretrained model
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#authors">
+     Authors
     </a>
    </li>
   </ul>
  </li>
- <li class="toc-h1 nav-item toc-entry">
-  <a class="reference internal nav-link" href="#comparison">
-   Comparison
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#install-and-load-libraries">
+   Install and load libraries
   </a>
-  <ul class="visible nav section-nav flex-column">
-   <li class="toc-h2 nav-item toc-entry">
-    <a class="reference internal nav-link" href="#improve-deepforest-via-patch-size">
-     Improve
-     <em>
-      DeepForest
-     </em>
-     via patch size
-    </a>
-   </li>
-   <li class="toc-h2 nav-item toc-entry">
-    <a class="reference internal nav-link" href="#batch-prediction-with-pytorch">
-     Batch Prediction with PyTorch
-    </a>
-   </li>
-  </ul>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#fetch-a-rgb-image-from-zenodo">
+   Fetch a RGB image from Zenodo
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#load-and-prepare-labels">
+   Load and prepare labels
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#visualise-image-and-labels">
+   Visualise image and labels
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#load-deepforest-pretrained-model">
+   Load
+   <em>
+    DeepForest
+   </em>
+   pretrained model
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#comparison-full-image-prediction-and-reference-labels">
+   Comparison full image prediction and reference labels
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#tile-based-prediction">
+   Tile-based prediction
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#wip-batch-prediction-with-pytorch">
+   [WIP] Batch Prediction with PyTorch
+  </a>
  </li>
 </ul>
 
@@ -700,11 +687,11 @@
 </div>
 </div>
 <div class="cell_output docutils container">
-<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>will download https://zenodo.org/api/files/5b372ed9-e4ec-41b0-a652-f0ce7d760e60/2018_MLBS_3_541000_4140000_image_crop.tif to /var/folders/l8/99_59fvn4bl2szm125grkgqw0000gr/T/tmp6vgo3f2f/NEONsample_RGB/2018_MLBS_3_541000_4140000_image_crop.tif
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>will download https://zenodo.org/api/files/5b372ed9-e4ec-41b0-a652-f0ce7d760e60/2018_MLBS_3_541000_4140000_image_crop.tif to /var/folders/l8/99_59fvn4bl2szm125grkgqw0000gr/T/tmpatw7ymsl/NEONsample_RGB/2018_MLBS_3_541000_4140000_image_crop.tif
 </pre></div>
 </div>
 <script type="application/vnd.jupyter.widget-view+json">
-{"model_id": "f7fe2fba263941abb0bafcf9f69f2898", "version_major": 2, "version_minor": 0}
+{"model_id": "bac0481b90f04fdfa72bca0e0076ad4b", "version_major": 2, "version_minor": 0}
 </script></div>
 </div>
 <div class="cell docutils container">
@@ -1087,7 +1074,7 @@ dask.array&lt;xarray-&lt;this-array&gt;, shape=(1864, 1429, 3), dtype=uint8, chu
 Coordinates:
   * y        (y) int64 0 1 2 3 4 5 6 7 ... 1857 1858 1859 1860 1861 1862 1863
   * x        (x) int64 0 1 2 3 4 5 6 7 ... 1422 1423 1424 1425 1426 1427 1428
-  * channel  (channel) int64 0 1 2</pre><div class='xr-wrap' hidden><div class='xr-header'><div class='xr-obj-type'>xarray.DataArray</div><div class='xr-array-name'></div><ul class='xr-dim-list'><li><span class='xr-has-index'>y</span>: 1864</li><li><span class='xr-has-index'>x</span>: 1429</li><li><span class='xr-has-index'>channel</span>: 3</li></ul></div><ul class='xr-sections'><li class='xr-section-item'><div class='xr-array-wrap'><input id='section-120e31a7-fb9f-4886-9515-fd16fd929dda' class='xr-array-in' type='checkbox' checked><label for='section-120e31a7-fb9f-4886-9515-fd16fd929dda' title='Show/hide data repr'><svg class='icon xr-icon-database'><use xlink:href='#icon-database'></use></svg></label><div class='xr-array-preview xr-preview'><span>dask.array&lt;chunksize=(1864, 1429, 3), meta=np.ndarray&gt;</span></div><div class='xr-array-data'><table>
+  * channel  (channel) int64 0 1 2</pre><div class='xr-wrap' hidden><div class='xr-header'><div class='xr-obj-type'>xarray.DataArray</div><div class='xr-array-name'></div><ul class='xr-dim-list'><li><span class='xr-has-index'>y</span>: 1864</li><li><span class='xr-has-index'>x</span>: 1429</li><li><span class='xr-has-index'>channel</span>: 3</li></ul></div><ul class='xr-sections'><li class='xr-section-item'><div class='xr-array-wrap'><input id='section-c16a6fde-c80b-4138-8aa1-ca28e5f528fe' class='xr-array-in' type='checkbox' checked><label for='section-c16a6fde-c80b-4138-8aa1-ca28e5f528fe' title='Show/hide data repr'><svg class='icon xr-icon-database'><use xlink:href='#icon-database'></use></svg></label><div class='xr-array-preview xr-preview'><span>dask.array&lt;chunksize=(1864, 1429, 3), meta=np.ndarray&gt;</span></div><div class='xr-array-data'><table>
 <tr>
 <td>
 <table>
@@ -1145,7 +1132,7 @@ Coordinates:
 </svg>
 </td>
 </tr>
-</table></div></div></li><li class='xr-section-item'><input id='section-f0c7e455-b150-45fc-8bdd-163158803e10' class='xr-section-summary-in' type='checkbox'  checked><label for='section-f0c7e455-b150-45fc-8bdd-163158803e10' class='xr-section-summary' >Coordinates: <span>(3)</span></label><div class='xr-section-inline-details'></div><div class='xr-section-details'><ul class='xr-var-list'><li class='xr-var-item'><div class='xr-var-name'><span class='xr-has-index'>y</span></div><div class='xr-var-dims'>(y)</div><div class='xr-var-dtype'>int64</div><div class='xr-var-preview xr-preview'>0 1 2 3 4 ... 1860 1861 1862 1863</div><input id='attrs-2e4fb404-9985-4195-80a1-e9c739625b9f' class='xr-var-attrs-in' type='checkbox' disabled><label for='attrs-2e4fb404-9985-4195-80a1-e9c739625b9f' title='Show/Hide attributes'><svg class='icon xr-icon-file-text2'><use xlink:href='#icon-file-text2'></use></svg></label><input id='data-1a31afee-b5c1-4056-94d0-ed3e6b508989' class='xr-var-data-in' type='checkbox'><label for='data-1a31afee-b5c1-4056-94d0-ed3e6b508989' title='Show/Hide data repr'><svg class='icon xr-icon-database'><use xlink:href='#icon-database'></use></svg></label><div class='xr-var-attrs'><dl class='xr-attrs'></dl></div><div class='xr-var-data'><pre>array([   0,    1,    2, ..., 1861, 1862, 1863])</pre></div></li><li class='xr-var-item'><div class='xr-var-name'><span class='xr-has-index'>x</span></div><div class='xr-var-dims'>(x)</div><div class='xr-var-dtype'>int64</div><div class='xr-var-preview xr-preview'>0 1 2 3 4 ... 1425 1426 1427 1428</div><input id='attrs-cda886c2-b07a-46e0-961c-782c2e823066' class='xr-var-attrs-in' type='checkbox' disabled><label for='attrs-cda886c2-b07a-46e0-961c-782c2e823066' title='Show/Hide attributes'><svg class='icon xr-icon-file-text2'><use xlink:href='#icon-file-text2'></use></svg></label><input id='data-c0da1e0c-56ac-4d43-ada9-c768b9b638bd' class='xr-var-data-in' type='checkbox'><label for='data-c0da1e0c-56ac-4d43-ada9-c768b9b638bd' title='Show/Hide data repr'><svg class='icon xr-icon-database'><use xlink:href='#icon-database'></use></svg></label><div class='xr-var-attrs'><dl class='xr-attrs'></dl></div><div class='xr-var-data'><pre>array([   0,    1,    2, ..., 1426, 1427, 1428])</pre></div></li><li class='xr-var-item'><div class='xr-var-name'><span class='xr-has-index'>channel</span></div><div class='xr-var-dims'>(channel)</div><div class='xr-var-dtype'>int64</div><div class='xr-var-preview xr-preview'>0 1 2</div><input id='attrs-33a41991-7de2-4262-814f-911600928fdf' class='xr-var-attrs-in' type='checkbox' disabled><label for='attrs-33a41991-7de2-4262-814f-911600928fdf' title='Show/Hide attributes'><svg class='icon xr-icon-file-text2'><use xlink:href='#icon-file-text2'></use></svg></label><input id='data-e99c6703-dafe-453c-aaa6-b06f9695f46c' class='xr-var-data-in' type='checkbox'><label for='data-e99c6703-dafe-453c-aaa6-b06f9695f46c' title='Show/Hide data repr'><svg class='icon xr-icon-database'><use xlink:href='#icon-database'></use></svg></label><div class='xr-var-attrs'><dl class='xr-attrs'></dl></div><div class='xr-var-data'><pre>array([0, 1, 2])</pre></div></li></ul></div></li><li class='xr-section-item'><input id='section-2343a2f9-a9d3-4af9-94fd-2e80da984d43' class='xr-section-summary-in' type='checkbox' disabled ><label for='section-2343a2f9-a9d3-4af9-94fd-2e80da984d43' class='xr-section-summary'  title='Expand/collapse section'>Attributes: <span>(0)</span></label><div class='xr-section-inline-details'></div><div class='xr-section-details'><dl class='xr-attrs'></dl></div></li></ul></div></div></div></div>
+</table></div></div></li><li class='xr-section-item'><input id='section-eba64719-d77e-4750-b7bf-72ad7150c545' class='xr-section-summary-in' type='checkbox'  checked><label for='section-eba64719-d77e-4750-b7bf-72ad7150c545' class='xr-section-summary' >Coordinates: <span>(3)</span></label><div class='xr-section-inline-details'></div><div class='xr-section-details'><ul class='xr-var-list'><li class='xr-var-item'><div class='xr-var-name'><span class='xr-has-index'>y</span></div><div class='xr-var-dims'>(y)</div><div class='xr-var-dtype'>int64</div><div class='xr-var-preview xr-preview'>0 1 2 3 4 ... 1860 1861 1862 1863</div><input id='attrs-4b13e478-542a-4ba7-b8ff-28c63f05bd3e' class='xr-var-attrs-in' type='checkbox' disabled><label for='attrs-4b13e478-542a-4ba7-b8ff-28c63f05bd3e' title='Show/Hide attributes'><svg class='icon xr-icon-file-text2'><use xlink:href='#icon-file-text2'></use></svg></label><input id='data-c5f7d41d-daad-4e0d-8b7d-bc25886f1b75' class='xr-var-data-in' type='checkbox'><label for='data-c5f7d41d-daad-4e0d-8b7d-bc25886f1b75' title='Show/Hide data repr'><svg class='icon xr-icon-database'><use xlink:href='#icon-database'></use></svg></label><div class='xr-var-attrs'><dl class='xr-attrs'></dl></div><div class='xr-var-data'><pre>array([   0,    1,    2, ..., 1861, 1862, 1863])</pre></div></li><li class='xr-var-item'><div class='xr-var-name'><span class='xr-has-index'>x</span></div><div class='xr-var-dims'>(x)</div><div class='xr-var-dtype'>int64</div><div class='xr-var-preview xr-preview'>0 1 2 3 4 ... 1425 1426 1427 1428</div><input id='attrs-f5d64ed2-f347-4232-9bcb-5506c2a88e10' class='xr-var-attrs-in' type='checkbox' disabled><label for='attrs-f5d64ed2-f347-4232-9bcb-5506c2a88e10' title='Show/Hide attributes'><svg class='icon xr-icon-file-text2'><use xlink:href='#icon-file-text2'></use></svg></label><input id='data-486c1f5e-f79d-4265-b792-ced87a81ef75' class='xr-var-data-in' type='checkbox'><label for='data-486c1f5e-f79d-4265-b792-ced87a81ef75' title='Show/Hide data repr'><svg class='icon xr-icon-database'><use xlink:href='#icon-database'></use></svg></label><div class='xr-var-attrs'><dl class='xr-attrs'></dl></div><div class='xr-var-data'><pre>array([   0,    1,    2, ..., 1426, 1427, 1428])</pre></div></li><li class='xr-var-item'><div class='xr-var-name'><span class='xr-has-index'>channel</span></div><div class='xr-var-dims'>(channel)</div><div class='xr-var-dtype'>int64</div><div class='xr-var-preview xr-preview'>0 1 2</div><input id='attrs-f9e1c715-b805-48b9-9491-3b3e7d96d6c0' class='xr-var-attrs-in' type='checkbox' disabled><label for='attrs-f9e1c715-b805-48b9-9491-3b3e7d96d6c0' title='Show/Hide attributes'><svg class='icon xr-icon-file-text2'><use xlink:href='#icon-file-text2'></use></svg></label><input id='data-61b8e417-e07d-47ff-aa78-c1254621e15b' class='xr-var-data-in' type='checkbox'><label for='data-61b8e417-e07d-47ff-aa78-c1254621e15b' title='Show/Hide data repr'><svg class='icon xr-icon-database'><use xlink:href='#icon-database'></use></svg></label><div class='xr-var-attrs'><dl class='xr-attrs'></dl></div><div class='xr-var-data'><pre>array([0, 1, 2])</pre></div></li></ul></div></li><li class='xr-section-item'><input id='section-c7cb96c4-dde5-4f53-8060-96079bff2688' class='xr-section-summary-in' type='checkbox' disabled ><label for='section-c7cb96c4-dde5-4f53-8060-96079bff2688' class='xr-section-summary'  title='Expand/collapse section'>Attributes: <span>(0)</span></label><div class='xr-section-inline-details'></div><div class='xr-section-details'><dl class='xr-attrs'></dl></div></li></ul></div></div></div></div>
 </div>
 </div>
 <div class="section" id="load-and-prepare-labels">
@@ -1320,10 +1307,9 @@ Coordinates:
 </div>
 </div>
 </div>
-</div>
-<div class="section" id="comparison">
-<h1>Comparison<a class="headerlink" href="#comparison" title="Permalink to this headline">¶</a></h1>
-<p>Let’s compare the labels and predictions over the tested image.</p>
+<div class="section" id="comparison-full-image-prediction-and-reference-labels">
+<h2>Comparison full image prediction and reference labels<a class="headerlink" href="#comparison-full-image-prediction-and-reference-labels" title="Permalink to this headline">¶</a></h2>
+<p>Let’s compare the labels and predictions over the tested image</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">plt</span><span class="o">.</span><span class="n">figure</span><span class="p">(</span><span class="n">figsize</span><span class="o">=</span><span class="p">(</span><span class="mi">15</span><span class="p">,</span><span class="mi">15</span><span class="p">))</span>
@@ -1342,8 +1328,11 @@ Coordinates:
 <li><p>It seems the pretrained model doesn’t perform well with the tested image</p></li>
 <li><p>The low performance might be explained due to the pretrained model used 10cm images</p></li>
 </ul>
-<div class="section" id="improve-deepforest-via-patch-size">
-<h2>Improve <em>DeepForest</em> via <a class="reference external" href="https://deepforest.readthedocs.io/en/latest/better.html">patch size</a><a class="headerlink" href="#improve-deepforest-via-patch-size" title="Permalink to this headline">¶</a></h2>
+</div>
+<div class="section" id="tile-based-prediction">
+<h2>Tile-based prediction<a class="headerlink" href="#tile-based-prediction" title="Permalink to this headline">¶</a></h2>
+<p>To optimise the predictions, the DeepForest can be run <a class="reference external" href="https://deepforest.readthedocs.io/en/latest/better.html">tile-wise</a></p>
+<p>The following cells show how to define the optimal window i.e. tile size</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="kn">from</span> <span class="nn">deepforest</span> <span class="kn">import</span> <span class="n">preprocess</span>
@@ -1383,7 +1372,7 @@ Coordinates:
 <img alt="../../_images/forest-modelling-treecrown_28_1.png" src="../../_images/forest-modelling-treecrown_28_1.png" />
 </div>
 </div>
-<p>Once a suitable block size is defined, we can run in a batch using the <code class="docutils literal notranslate"><span class="pre">predict_tile</span></code> function</p>
+<p>Once a suitable tile size is defined, we can run in a batch using the <code class="docutils literal notranslate"><span class="pre">predict_tile</span></code> function:</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">tile</span> <span class="o">=</span> <span class="n">model</span><span class="o">.</span><span class="n">predict_tile</span><span class="p">(</span><span class="n">image</span><span class="o">=</span><span class="n">image</span><span class="o">.</span><span class="n">values</span><span class="p">,</span><span class="n">return_plot</span><span class="o">=</span><span class="kc">False</span><span class="p">,</span><span class="n">patch_overlap</span><span class="o">=</span><span class="mi">0</span><span class="p">,</span><span class="n">iou_threshold</span><span class="o">=</span><span class="mf">0.05</span><span class="p">,</span><span class="n">patch_size</span><span class="o">=</span><span class="mi">400</span><span class="p">)</span>
@@ -1404,67 +1393,67 @@ Coordinates:
 <div class="output stderr highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>  0%|                                                                                       | 0/20 [00:00&lt;?, ?it/s]
 </pre></div>
 </div>
-<div class="output stderr highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>  5%|███▉                                                                           | 1/20 [00:01&lt;00:34,  1.82s/it]
+<div class="output stderr highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>  5%|███▉                                                                           | 1/20 [00:02&lt;00:39,  2.07s/it]
 </pre></div>
 </div>
-<div class="output stderr highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span> 10%|███████▉                                                                       | 2/20 [00:03&lt;00:32,  1.81s/it]
+<div class="output stderr highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span> 10%|███████▉                                                                       | 2/20 [00:04&lt;00:36,  2.03s/it]
 </pre></div>
 </div>
-<div class="output stderr highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span> 15%|███████████▊                                                                   | 3/20 [00:05&lt;00:33,  1.95s/it]
+<div class="output stderr highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span> 15%|███████████▊                                                                   | 3/20 [00:06&lt;00:35,  2.11s/it]
 </pre></div>
 </div>
-<div class="output stderr highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span> 20%|███████████████▊                                                               | 4/20 [00:07&lt;00:32,  2.00s/it]
+<div class="output stderr highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span> 20%|███████████████▊                                                               | 4/20 [00:08&lt;00:34,  2.15s/it]
 </pre></div>
 </div>
-<div class="output stderr highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span> 25%|███████████████████▊                                                           | 5/20 [00:09&lt;00:30,  2.06s/it]
+<div class="output stderr highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span> 25%|███████████████████▊                                                           | 5/20 [00:10&lt;00:31,  2.10s/it]
 </pre></div>
 </div>
-<div class="output stderr highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span> 30%|███████████████████████▋                                                       | 6/20 [00:12&lt;00:29,  2.09s/it]
+<div class="output stderr highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span> 30%|███████████████████████▋                                                       | 6/20 [00:12&lt;00:28,  2.05s/it]
 </pre></div>
 </div>
-<div class="output stderr highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span> 35%|███████████████████████████▋                                                   | 7/20 [00:14&lt;00:28,  2.16s/it]
+<div class="output stderr highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span> 35%|███████████████████████████▋                                                   | 7/20 [00:14&lt;00:26,  2.08s/it]
 </pre></div>
 </div>
-<div class="output stderr highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span> 40%|███████████████████████████████▌                                               | 8/20 [00:17&lt;00:27,  2.29s/it]
+<div class="output stderr highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span> 40%|███████████████████████████████▌                                               | 8/20 [00:16&lt;00:24,  2.04s/it]
 </pre></div>
 </div>
-<div class="output stderr highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span> 45%|███████████████████████████████████▌                                           | 9/20 [00:19&lt;00:26,  2.38s/it]
+<div class="output stderr highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span> 45%|███████████████████████████████████▌                                           | 9/20 [00:18&lt;00:22,  2.04s/it]
 </pre></div>
 </div>
-<div class="output stderr highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span> 50%|███████████████████████████████████████                                       | 10/20 [00:22&lt;00:24,  2.49s/it]
+<div class="output stderr highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span> 50%|███████████████████████████████████████                                       | 10/20 [00:20&lt;00:20,  2.07s/it]
 </pre></div>
 </div>
-<div class="output stderr highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span> 55%|██████████████████████████████████████████▉                                   | 11/20 [00:25&lt;00:23,  2.57s/it]
+<div class="output stderr highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span> 55%|██████████████████████████████████████████▉                                   | 11/20 [00:22&lt;00:18,  2.07s/it]
 </pre></div>
 </div>
-<div class="output stderr highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span> 60%|██████████████████████████████████████████████▊                               | 12/20 [00:27&lt;00:20,  2.56s/it]
+<div class="output stderr highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span> 60%|██████████████████████████████████████████████▊                               | 12/20 [00:24&lt;00:16,  2.10s/it]
 </pre></div>
 </div>
-<div class="output stderr highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span> 65%|██████████████████████████████████████████████████▋                           | 13/20 [00:29&lt;00:17,  2.43s/it]
+<div class="output stderr highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span> 65%|██████████████████████████████████████████████████▋                           | 13/20 [00:26&lt;00:14,  2.08s/it]
 </pre></div>
 </div>
-<div class="output stderr highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span> 70%|██████████████████████████████████████████████████████▌                       | 14/20 [00:31&lt;00:13,  2.32s/it]
+<div class="output stderr highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span> 70%|██████████████████████████████████████████████████████▌                       | 14/20 [00:28&lt;00:12,  2.05s/it]
 </pre></div>
 </div>
-<div class="output stderr highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span> 75%|██████████████████████████████████████████████████████████▌                   | 15/20 [00:33&lt;00:11,  2.25s/it]
+<div class="output stderr highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span> 75%|██████████████████████████████████████████████████████████▌                   | 15/20 [00:31&lt;00:10,  2.06s/it]
 </pre></div>
 </div>
-<div class="output stderr highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span> 80%|██████████████████████████████████████████████████████████████▍               | 16/20 [00:36&lt;00:08,  2.24s/it]
+<div class="output stderr highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span> 80%|██████████████████████████████████████████████████████████████▍               | 16/20 [00:33&lt;00:08,  2.11s/it]
 </pre></div>
 </div>
-<div class="output stderr highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span> 85%|██████████████████████████████████████████████████████████████████▎           | 17/20 [00:39&lt;00:08,  2.67s/it]
+<div class="output stderr highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span> 85%|██████████████████████████████████████████████████████████████████▎           | 17/20 [00:35&lt;00:06,  2.08s/it]
 </pre></div>
 </div>
-<div class="output stderr highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span> 90%|██████████████████████████████████████████████████████████████████████▏       | 18/20 [00:42&lt;00:05,  2.54s/it]
+<div class="output stderr highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span> 90%|██████████████████████████████████████████████████████████████████████▏       | 18/20 [00:37&lt;00:04,  2.07s/it]
 </pre></div>
 </div>
-<div class="output stderr highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span> 95%|██████████████████████████████████████████████████████████████████████████    | 19/20 [00:44&lt;00:02,  2.40s/it]
+<div class="output stderr highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span> 95%|██████████████████████████████████████████████████████████████████████████    | 19/20 [00:39&lt;00:02,  2.15s/it]
 </pre></div>
 </div>
-<div class="output stderr highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>100%|██████████████████████████████████████████████████████████████████████████████| 20/20 [00:46&lt;00:00,  2.29s/it]
+<div class="output stderr highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>100%|██████████████████████████████████████████████████████████████████████████████| 20/20 [00:42&lt;00:00,  2.22s/it]
 </pre></div>
 </div>
-<div class="output stderr highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>100%|██████████████████████████████████████████████████████████████████████████████| 20/20 [00:46&lt;00:00,  2.31s/it]
+<div class="output stderr highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>100%|██████████████████████████████████████████████████████████████████████████████| 20/20 [00:42&lt;00:00,  2.10s/it]
 </pre></div>
 </div>
 <div class="output stderr highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>
@@ -1478,12 +1467,13 @@ Coordinates:
 <li><p>The tile-based prediction provides more reasonable results than predicting over the whole image</p></li>
 </ul>
 </div>
-<div class="section" id="batch-prediction-with-pytorch">
-<h2>Batch Prediction with PyTorch<a class="headerlink" href="#batch-prediction-with-pytorch" title="Permalink to this headline">¶</a></h2>
+<div class="section" id="wip-batch-prediction-with-pytorch">
+<h2>[WIP] Batch Prediction with PyTorch<a class="headerlink" href="#wip-batch-prediction-with-pytorch" title="Permalink to this headline">¶</a></h2>
 <p>Source: <a class="reference external" href="https://github.com/dask/dask-examples/blob/main/machine-learning/torch-prediction.ipynb">https://github.com/dask/dask-examples/blob/main/machine-learning/torch-prediction.ipynb</a></p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="kn">from</span> <span class="nn">deepforest</span> <span class="kn">import</span> <span class="n">main</span>
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># Investigate the tensor shape in the default predict image function in deepforest</span>
+<span class="kn">from</span> <span class="nn">deepforest</span> <span class="kn">import</span> <span class="n">main</span>
 <span class="n">m</span> <span class="o">=</span> <span class="n">main</span><span class="o">.</span><span class="n">deepforest</span><span class="p">()</span>
 
 <span class="k">def</span> <span class="nf">predict_image2</span><span class="p">(</span><span class="n">model</span><span class="p">,</span> <span class="n">image</span><span class="p">,</span> <span class="n">return_plot</span><span class="p">,</span> <span class="n">device</span><span class="p">,</span> <span class="n">iou_threshold</span><span class="o">=</span><span class="mf">0.1</span><span class="p">):</span>
@@ -1513,9 +1503,6 @@ Coordinates:
 <span class="kn">import</span> <span class="nn">dask</span>
 <span class="kn">import</span> <span class="nn">toolz</span>
 <span class="kn">import</span> <span class="nn">torch</span>
-<span class="kn">from</span> <span class="nn">torchvision</span> <span class="kn">import</span> <span class="n">transforms</span>
-<span class="kn">import</span> <span class="nn">dask.array</span> <span class="k">as</span> <span class="nn">da</span>
-<span class="kn">import</span> <span class="nn">time</span>
 
 <span class="kn">from</span> <span class="nn">dask.distributed</span> <span class="kn">import</span> <span class="n">Client</span>
 <span class="n">client</span> <span class="o">=</span> <span class="n">Client</span><span class="p">()</span>
@@ -1526,14 +1513,8 @@ Coordinates:
 <div class="cell_output docutils container">
 <div class="output stderr highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>/Users/acoca/anaconda3/envs/envai-book/lib/python3.8/site-packages/distributed/node.py:160: UserWarning: Port 8787 is already in use.
 Perhaps you already have a cluster running?
-Hosting the HTTP server on port 53705 instead
+Hosting the HTTP server on port 55753 instead
   warnings.warn(
-</pre></div>
-</div>
-<div class="output stderr highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>distributed.diskutils - INFO - Found stale lock file and directory &#39;/Users/acoca/OneDrive - The Alan Turing Institute/Documents/projects/envsensors/wp3/repos/environmental-ai-book/book/forest/modelling/dask-worker-space/worker-5wbvadyc&#39;, purging
-distributed.diskutils - INFO - Found stale lock file and directory &#39;/Users/acoca/OneDrive - The Alan Turing Institute/Documents/projects/envsensors/wp3/repos/environmental-ai-book/book/forest/modelling/dask-worker-space/worker-ab5kpzxh&#39;, purging
-distributed.diskutils - INFO - Found stale lock file and directory &#39;/Users/acoca/OneDrive - The Alan Turing Institute/Documents/projects/envsensors/wp3/repos/environmental-ai-book/book/forest/modelling/dask-worker-space/worker-2gl9wl3u&#39;, purging
-distributed.diskutils - INFO - Found stale lock file and directory &#39;/Users/acoca/OneDrive - The Alan Turing Institute/Documents/projects/envsensors/wp3/repos/environmental-ai-book/book/forest/modelling/dask-worker-space/worker-wew5qvax&#39;, purging
 </pre></div>
 </div>
 <div class="output text_html">
@@ -1547,7 +1528,7 @@ distributed.diskutils - INFO - Found stale lock file and directory &#39;/Users/a
             position: absolute;"> </div>
         <div style="margin-left: 48px;">
             <h3 style="margin-bottom: 0px;">Client</h3>
-            <p style="color: #9D9D9D; margin-bottom: 0px;">Client-88a6552e-f5f1-11eb-95f4-acde48001122</p>
+            <p style="color: #9D9D9D; margin-bottom: 0px;">Client-941ef138-f5f4-11eb-97c7-acde48001122</p>
             <table style="width: 100%; text-align: left;">
 
         <tr>
@@ -1558,7 +1539,7 @@ distributed.diskutils - INFO - Found stale lock file and directory &#39;/Users/a
         <tr>
             <td style="text-align: left;">
                 <strong>Dashboard: </strong>
-                <a href="http://127.0.0.1:53705/status">http://127.0.0.1:53705/status</a>
+                <a href="http://127.0.0.1:55753/status">http://127.0.0.1:55753/status</a>
             </td>
             <td style="text-align: left;"></td>
         </tr>
@@ -1578,7 +1559,7 @@ distributed.diskutils - INFO - Found stale lock file and directory &#39;/Users/a
             position: absolute;"> </div>
         <div style="margin-left: 48px;">
             <h3 style="margin-bottom: 0px; margin-top: 0px;">LocalCluster</h3>
-            <p style="color: #9D9D9D; margin-bottom: 0px;">927fdf01</p>
+            <p style="color: #9D9D9D; margin-bottom: 0px;">77866636</p>
             <table style="width: 100%; text-align: left;">
 
     <tr>
@@ -1588,7 +1569,7 @@ distributed.diskutils - INFO - Found stale lock file and directory &#39;/Users/a
 
     <tr>
         <td style="text-align: left;">
-            <strong>Dashboard:</strong> <a href="http://127.0.0.1:53705/status">http://127.0.0.1:53705/status</a>
+            <strong>Dashboard:</strong> <a href="http://127.0.0.1:55753/status">http://127.0.0.1:55753/status</a>
         </td>
         <td style="text-align: left;"><strong>Workers:</strong> 4</td>
     </tr>
@@ -1619,15 +1600,15 @@ distributed.diskutils - INFO - Found stale lock file and directory &#39;/Users/a
             position: absolute;"> </div>
         <div style="margin-left: 48px;">
             <h3 style="margin-bottom: 0px;">Scheduler</h3>
-            <p style="color: #9D9D9D; margin-bottom: 0px;">Scheduler-0e095852-eccb-4e9e-800f-b7f178f5b2d2</p>
+            <p style="color: #9D9D9D; margin-bottom: 0px;">Scheduler-963640e8-8ac7-489f-83a1-edd440a49ce6</p>
             <table style="width: 100%; text-align: left;">
                 <tr>
-                    <td style="text-align: left;"><strong>Comm:</strong> tcp://127.0.0.1:53706</td>
+                    <td style="text-align: left;"><strong>Comm:</strong> tcp://127.0.0.1:55754</td>
                     <td style="text-align: left;"><strong>Workers:</strong> 4</td>
                 </tr>
                 <tr>
                     <td style="text-align: left;">
-                        <strong>Dashboard:</strong> <a href="http://127.0.0.1:53705/status">http://127.0.0.1:53705/status</a>
+                        <strong>Dashboard:</strong> <a href="http://127.0.0.1:55753/status">http://127.0.0.1:55753/status</a>
                     </td>
                     <td style="text-align: left;">
                         <strong>Total threads:</strong>
@@ -1665,13 +1646,13 @@ distributed.diskutils - INFO - Found stale lock file and directory &#39;/Users/a
             </summary>
             <table style="width: 100%; text-align: left;">
                 <tr>
-                    <td style="text-align: left;"><strong>Comm: </strong> tcp://127.0.0.1:54802</td>
+                    <td style="text-align: left;"><strong>Comm: </strong> tcp://127.0.0.1:55768</td>
                     <td style="text-align: left;"><strong>Total threads: </strong> 2</td>
                 </tr>
                 <tr>
                     <td style="text-align: left;">
                         <strong>Dashboard: </strong>
-                        <a href="http://127.0.0.1:54805/status">http://127.0.0.1:54805/status</a>
+                        <a href="http://127.0.0.1:55773/status">http://127.0.0.1:55773/status</a>
                     </td>
                     <td style="text-align: left;">
                         <strong>Memory: </strong>
@@ -1679,13 +1660,13 @@ distributed.diskutils - INFO - Found stale lock file and directory &#39;/Users/a
                     </td>
                 </tr>
                 <tr>
-                    <td style="text-align: left;"><strong>Nanny: </strong> tcp://127.0.0.1:53708</td>
+                    <td style="text-align: left;"><strong>Nanny: </strong> tcp://127.0.0.1:55756</td>
                     <td style="text-align: left;"></td>
                 </tr>
                 <tr>
                     <td colspan="2" style="text-align: left;">
                         <strong>Local directory: </strong>
-                        /Users/acoca/OneDrive - The Alan Turing Institute/Documents/projects/envsensors/wp3/repos/environmental-ai-book/book/forest/modelling/dask-worker-space/worker-i4k6e7oa
+                        /Users/acoca/OneDrive - The Alan Turing Institute/Documents/projects/envsensors/wp3/repos/environmental-ai-book/book/forest/modelling/dask-worker-space/worker-agbwyekz
                     </td>
                 </tr>
 
@@ -1709,13 +1690,13 @@ distributed.diskutils - INFO - Found stale lock file and directory &#39;/Users/a
             </summary>
             <table style="width: 100%; text-align: left;">
                 <tr>
-                    <td style="text-align: left;"><strong>Comm: </strong> tcp://127.0.0.1:54804</td>
+                    <td style="text-align: left;"><strong>Comm: </strong> tcp://127.0.0.1:55766</td>
                     <td style="text-align: left;"><strong>Total threads: </strong> 2</td>
                 </tr>
                 <tr>
                     <td style="text-align: left;">
                         <strong>Dashboard: </strong>
-                        <a href="http://127.0.0.1:54808/status">http://127.0.0.1:54808/status</a>
+                        <a href="http://127.0.0.1:55771/status">http://127.0.0.1:55771/status</a>
                     </td>
                     <td style="text-align: left;">
                         <strong>Memory: </strong>
@@ -1723,13 +1704,13 @@ distributed.diskutils - INFO - Found stale lock file and directory &#39;/Users/a
                     </td>
                 </tr>
                 <tr>
-                    <td style="text-align: left;"><strong>Nanny: </strong> tcp://127.0.0.1:53709</td>
+                    <td style="text-align: left;"><strong>Nanny: </strong> tcp://127.0.0.1:55759</td>
                     <td style="text-align: left;"></td>
                 </tr>
                 <tr>
                     <td colspan="2" style="text-align: left;">
                         <strong>Local directory: </strong>
-                        /Users/acoca/OneDrive - The Alan Turing Institute/Documents/projects/envsensors/wp3/repos/environmental-ai-book/book/forest/modelling/dask-worker-space/worker-8qxgmgo0
+                        /Users/acoca/OneDrive - The Alan Turing Institute/Documents/projects/envsensors/wp3/repos/environmental-ai-book/book/forest/modelling/dask-worker-space/worker-kw601jlo
                     </td>
                 </tr>
 
@@ -1753,13 +1734,13 @@ distributed.diskutils - INFO - Found stale lock file and directory &#39;/Users/a
             </summary>
             <table style="width: 100%; text-align: left;">
                 <tr>
-                    <td style="text-align: left;"><strong>Comm: </strong> tcp://127.0.0.1:54803</td>
+                    <td style="text-align: left;"><strong>Comm: </strong> tcp://127.0.0.1:55767</td>
                     <td style="text-align: left;"><strong>Total threads: </strong> 2</td>
                 </tr>
                 <tr>
                     <td style="text-align: left;">
                         <strong>Dashboard: </strong>
-                        <a href="http://127.0.0.1:54807/status">http://127.0.0.1:54807/status</a>
+                        <a href="http://127.0.0.1:55775/status">http://127.0.0.1:55775/status</a>
                     </td>
                     <td style="text-align: left;">
                         <strong>Memory: </strong>
@@ -1767,13 +1748,13 @@ distributed.diskutils - INFO - Found stale lock file and directory &#39;/Users/a
                     </td>
                 </tr>
                 <tr>
-                    <td style="text-align: left;"><strong>Nanny: </strong> tcp://127.0.0.1:53711</td>
+                    <td style="text-align: left;"><strong>Nanny: </strong> tcp://127.0.0.1:55758</td>
                     <td style="text-align: left;"></td>
                 </tr>
                 <tr>
                     <td colspan="2" style="text-align: left;">
                         <strong>Local directory: </strong>
-                        /Users/acoca/OneDrive - The Alan Turing Institute/Documents/projects/envsensors/wp3/repos/environmental-ai-book/book/forest/modelling/dask-worker-space/worker-yfjjtytq
+                        /Users/acoca/OneDrive - The Alan Turing Institute/Documents/projects/envsensors/wp3/repos/environmental-ai-book/book/forest/modelling/dask-worker-space/worker-fs72i0tf
                     </td>
                 </tr>
 
@@ -1797,13 +1778,13 @@ distributed.diskutils - INFO - Found stale lock file and directory &#39;/Users/a
             </summary>
             <table style="width: 100%; text-align: left;">
                 <tr>
-                    <td style="text-align: left;"><strong>Comm: </strong> tcp://127.0.0.1:54816</td>
+                    <td style="text-align: left;"><strong>Comm: </strong> tcp://127.0.0.1:55765</td>
                     <td style="text-align: left;"><strong>Total threads: </strong> 2</td>
                 </tr>
                 <tr>
                     <td style="text-align: left;">
                         <strong>Dashboard: </strong>
-                        <a href="http://127.0.0.1:54817/status">http://127.0.0.1:54817/status</a>
+                        <a href="http://127.0.0.1:55769/status">http://127.0.0.1:55769/status</a>
                     </td>
                     <td style="text-align: left;">
                         <strong>Memory: </strong>
@@ -1811,13 +1792,13 @@ distributed.diskutils - INFO - Found stale lock file and directory &#39;/Users/a
                     </td>
                 </tr>
                 <tr>
-                    <td style="text-align: left;"><strong>Nanny: </strong> tcp://127.0.0.1:53710</td>
+                    <td style="text-align: left;"><strong>Nanny: </strong> tcp://127.0.0.1:55757</td>
                     <td style="text-align: left;"></td>
                 </tr>
                 <tr>
                     <td colspan="2" style="text-align: left;">
                         <strong>Local directory: </strong>
-                        /Users/acoca/OneDrive - The Alan Turing Institute/Documents/projects/envsensors/wp3/repos/environmental-ai-book/book/forest/modelling/dask-worker-space/worker-z23fchlf
+                        /Users/acoca/OneDrive - The Alan Turing Institute/Documents/projects/envsensors/wp3/repos/environmental-ai-book/book/forest/modelling/dask-worker-space/worker-svre9qry
                     </td>
                 </tr>
 
@@ -1887,7 +1868,7 @@ distributed.diskutils - INFO - Found stale lock file and directory &#39;/Users/a
 <div class="cell_input docutils container">
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="nd">@dask</span><span class="o">.</span><span class="n">delayed</span>
 <span class="k">def</span> <span class="nf">predict</span><span class="p">(</span><span class="n">batch</span><span class="p">,</span> <span class="n">model</span><span class="p">):</span>
-    <span class="k">with</span> <span class="n">torch</span><span class="o">.</span><span class="n">no_grad</span><span class="p">():</span>
+    <span class="k">with</span> <span class="n">tosrch</span><span class="o">.</span><span class="n">no_grad</span><span class="p">():</span>
         <span class="n">out</span> <span class="o">=</span> <span class="n">model</span><span class="p">(</span><span class="n">batch</span><span class="p">)</span>
     <span class="k">return</span> <span class="n">out</span>
 
@@ -1950,7 +1931,7 @@ distributed.diskutils - INFO - Found stale lock file and directory &#39;/Users/a
 
 
 <script type="application/vnd.jupyter.widget-state+json">
-{"state": {"11ef6895c764463aacb2842dc5225ce9": {"model_module": "@jupyter-widgets/base", "model_module_version": "1.2.0", "model_name": "LayoutModel", "state": {"_model_module": "@jupyter-widgets/base", "_model_module_version": "1.2.0", "_model_name": "LayoutModel", "_view_count": null, "_view_module": "@jupyter-widgets/base", "_view_module_version": "1.2.0", "_view_name": "LayoutView", "align_content": null, "align_items": null, "align_self": null, "border": null, "bottom": null, "display": null, "flex": null, "flex_flow": null, "grid_area": null, "grid_auto_columns": null, "grid_auto_flow": null, "grid_auto_rows": null, "grid_column": null, "grid_gap": null, "grid_row": null, "grid_template_areas": null, "grid_template_columns": null, "grid_template_rows": null, "height": null, "justify_content": null, "justify_items": null, "left": null, "margin": null, "max_height": null, "max_width": null, "min_height": null, "min_width": null, "object_fit": null, "object_position": null, "order": null, "overflow": null, "overflow_x": null, "overflow_y": null, "padding": null, "right": null, "top": null, "visibility": null, "width": null}}, "17addb55f8c64c669ea1b3d45d0f650c": {"model_module": "@jupyter-widgets/controls", "model_module_version": "1.5.0", "model_name": "HTMLModel", "state": {"_dom_classes": [], "_model_module": "@jupyter-widgets/controls", "_model_module_version": "1.5.0", "_model_name": "HTMLModel", "_view_count": null, "_view_module": "@jupyter-widgets/controls", "_view_module_version": "1.5.0", "_view_name": "HTMLView", "description": "", "description_tooltip": null, "layout": "IPY_MODEL_d285c8808d214ec2a56c5c67766ede54", "placeholder": "\u200b", "style": "IPY_MODEL_d1b5822eff364244987aadc2607d585f", "value": "100%"}}, "1ee46522fccf417bbd79c49546ab2d10": {"model_module": "@jupyter-widgets/controls", "model_module_version": "1.5.0", "model_name": "ProgressStyleModel", "state": {"_model_module": "@jupyter-widgets/controls", "_model_module_version": "1.5.0", "_model_name": "ProgressStyleModel", "_view_count": null, "_view_module": "@jupyter-widgets/base", "_view_module_version": "1.2.0", "_view_name": "StyleView", "bar_color": null, "description_width": ""}}, "3d97fe13e6114df39e7da771671a648f": {"model_module": "@jupyter-widgets/controls", "model_module_version": "1.5.0", "model_name": "DescriptionStyleModel", "state": {"_model_module": "@jupyter-widgets/controls", "_model_module_version": "1.5.0", "_model_name": "DescriptionStyleModel", "_view_count": null, "_view_module": "@jupyter-widgets/base", "_view_module_version": "1.2.0", "_view_name": "StyleView", "description_width": ""}}, "4bcee0ab2299413d8e342dc80ff7c9bc": {"model_module": "@jupyter-widgets/controls", "model_module_version": "1.5.0", "model_name": "HTMLModel", "state": {"_dom_classes": [], "_model_module": "@jupyter-widgets/controls", "_model_module_version": "1.5.0", "_model_name": "HTMLModel", "_view_count": null, "_view_module": "@jupyter-widgets/controls", "_view_module_version": "1.5.0", "_view_name": "HTMLView", "description": "", "description_tooltip": null, "layout": "IPY_MODEL_11ef6895c764463aacb2842dc5225ce9", "placeholder": "\u200b", "style": "IPY_MODEL_3d97fe13e6114df39e7da771671a648f", "value": " 10.0M/10.0M [00:10&lt;00:00, 961kB/s]"}}, "4f86c23b7ff24252b5d0a2e95c651be0": {"model_module": "@jupyter-widgets/base", "model_module_version": "1.2.0", "model_name": "LayoutModel", "state": {"_model_module": "@jupyter-widgets/base", "_model_module_version": "1.2.0", "_model_name": "LayoutModel", "_view_count": null, "_view_module": "@jupyter-widgets/base", "_view_module_version": "1.2.0", "_view_name": "LayoutView", "align_content": null, "align_items": null, "align_self": null, "border": null, "bottom": null, "display": null, "flex": null, "flex_flow": null, "grid_area": null, "grid_auto_columns": null, "grid_auto_flow": null, "grid_auto_rows": null, "grid_column": null, "grid_gap": null, "grid_row": null, "grid_template_areas": null, "grid_template_columns": null, "grid_template_rows": null, "height": null, "justify_content": null, "justify_items": null, "left": null, "margin": null, "max_height": null, "max_width": null, "min_height": null, "min_width": null, "object_fit": null, "object_position": null, "order": null, "overflow": null, "overflow_x": null, "overflow_y": null, "padding": null, "right": null, "top": null, "visibility": null, "width": null}}, "53354760a1e644de944e67b09e8dfadf": {"model_module": "@jupyter-widgets/controls", "model_module_version": "1.5.0", "model_name": "FloatProgressModel", "state": {"_dom_classes": [], "_model_module": "@jupyter-widgets/controls", "_model_module_version": "1.5.0", "_model_name": "FloatProgressModel", "_view_count": null, "_view_module": "@jupyter-widgets/controls", "_view_module_version": "1.5.0", "_view_name": "ProgressView", "bar_style": "success", "description": "", "description_tooltip": null, "layout": "IPY_MODEL_4f86c23b7ff24252b5d0a2e95c651be0", "max": 10043413.0, "min": 0.0, "orientation": "horizontal", "style": "IPY_MODEL_1ee46522fccf417bbd79c49546ab2d10", "value": 10043413.0}}, "5d414b8356ad4ad28fc95a72fcd29855": {"model_module": "@jupyter-widgets/base", "model_module_version": "1.2.0", "model_name": "LayoutModel", "state": {"_model_module": "@jupyter-widgets/base", "_model_module_version": "1.2.0", "_model_name": "LayoutModel", "_view_count": null, "_view_module": "@jupyter-widgets/base", "_view_module_version": "1.2.0", "_view_name": "LayoutView", "align_content": null, "align_items": null, "align_self": null, "border": null, "bottom": null, "display": null, "flex": null, "flex_flow": null, "grid_area": null, "grid_auto_columns": null, "grid_auto_flow": null, "grid_auto_rows": null, "grid_column": null, "grid_gap": null, "grid_row": null, "grid_template_areas": null, "grid_template_columns": null, "grid_template_rows": null, "height": null, "justify_content": null, "justify_items": null, "left": null, "margin": null, "max_height": null, "max_width": null, "min_height": null, "min_width": null, "object_fit": null, "object_position": null, "order": null, "overflow": null, "overflow_x": null, "overflow_y": null, "padding": null, "right": null, "top": null, "visibility": null, "width": null}}, "d1b5822eff364244987aadc2607d585f": {"model_module": "@jupyter-widgets/controls", "model_module_version": "1.5.0", "model_name": "DescriptionStyleModel", "state": {"_model_module": "@jupyter-widgets/controls", "_model_module_version": "1.5.0", "_model_name": "DescriptionStyleModel", "_view_count": null, "_view_module": "@jupyter-widgets/base", "_view_module_version": "1.2.0", "_view_name": "StyleView", "description_width": ""}}, "d285c8808d214ec2a56c5c67766ede54": {"model_module": "@jupyter-widgets/base", "model_module_version": "1.2.0", "model_name": "LayoutModel", "state": {"_model_module": "@jupyter-widgets/base", "_model_module_version": "1.2.0", "_model_name": "LayoutModel", "_view_count": null, "_view_module": "@jupyter-widgets/base", "_view_module_version": "1.2.0", "_view_name": "LayoutView", "align_content": null, "align_items": null, "align_self": null, "border": null, "bottom": null, "display": null, "flex": null, "flex_flow": null, "grid_area": null, "grid_auto_columns": null, "grid_auto_flow": null, "grid_auto_rows": null, "grid_column": null, "grid_gap": null, "grid_row": null, "grid_template_areas": null, "grid_template_columns": null, "grid_template_rows": null, "height": null, "justify_content": null, "justify_items": null, "left": null, "margin": null, "max_height": null, "max_width": null, "min_height": null, "min_width": null, "object_fit": null, "object_position": null, "order": null, "overflow": null, "overflow_x": null, "overflow_y": null, "padding": null, "right": null, "top": null, "visibility": null, "width": null}}, "f7fe2fba263941abb0bafcf9f69f2898": {"model_module": "@jupyter-widgets/controls", "model_module_version": "1.5.0", "model_name": "HBoxModel", "state": {"_dom_classes": [], "_model_module": "@jupyter-widgets/controls", "_model_module_version": "1.5.0", "_model_name": "HBoxModel", "_view_count": null, "_view_module": "@jupyter-widgets/controls", "_view_module_version": "1.5.0", "_view_name": "HBoxView", "box_style": "", "children": ["IPY_MODEL_17addb55f8c64c669ea1b3d45d0f650c", "IPY_MODEL_53354760a1e644de944e67b09e8dfadf", "IPY_MODEL_4bcee0ab2299413d8e342dc80ff7c9bc"], "layout": "IPY_MODEL_5d414b8356ad4ad28fc95a72fcd29855"}}}, "version_major": 2, "version_minor": 0}
+{"state": {"1cc09c4e31194d8ab6b23e322d8a6537": {"model_module": "@jupyter-widgets/base", "model_module_version": "1.2.0", "model_name": "LayoutModel", "state": {"_model_module": "@jupyter-widgets/base", "_model_module_version": "1.2.0", "_model_name": "LayoutModel", "_view_count": null, "_view_module": "@jupyter-widgets/base", "_view_module_version": "1.2.0", "_view_name": "LayoutView", "align_content": null, "align_items": null, "align_self": null, "border": null, "bottom": null, "display": null, "flex": null, "flex_flow": null, "grid_area": null, "grid_auto_columns": null, "grid_auto_flow": null, "grid_auto_rows": null, "grid_column": null, "grid_gap": null, "grid_row": null, "grid_template_areas": null, "grid_template_columns": null, "grid_template_rows": null, "height": null, "justify_content": null, "justify_items": null, "left": null, "margin": null, "max_height": null, "max_width": null, "min_height": null, "min_width": null, "object_fit": null, "object_position": null, "order": null, "overflow": null, "overflow_x": null, "overflow_y": null, "padding": null, "right": null, "top": null, "visibility": null, "width": null}}, "3647881be12f4fa9a7dcb44a7bbc1926": {"model_module": "@jupyter-widgets/base", "model_module_version": "1.2.0", "model_name": "LayoutModel", "state": {"_model_module": "@jupyter-widgets/base", "_model_module_version": "1.2.0", "_model_name": "LayoutModel", "_view_count": null, "_view_module": "@jupyter-widgets/base", "_view_module_version": "1.2.0", "_view_name": "LayoutView", "align_content": null, "align_items": null, "align_self": null, "border": null, "bottom": null, "display": null, "flex": null, "flex_flow": null, "grid_area": null, "grid_auto_columns": null, "grid_auto_flow": null, "grid_auto_rows": null, "grid_column": null, "grid_gap": null, "grid_row": null, "grid_template_areas": null, "grid_template_columns": null, "grid_template_rows": null, "height": null, "justify_content": null, "justify_items": null, "left": null, "margin": null, "max_height": null, "max_width": null, "min_height": null, "min_width": null, "object_fit": null, "object_position": null, "order": null, "overflow": null, "overflow_x": null, "overflow_y": null, "padding": null, "right": null, "top": null, "visibility": null, "width": null}}, "491f58ea5e2e44cd88a92e376356ff13": {"model_module": "@jupyter-widgets/base", "model_module_version": "1.2.0", "model_name": "LayoutModel", "state": {"_model_module": "@jupyter-widgets/base", "_model_module_version": "1.2.0", "_model_name": "LayoutModel", "_view_count": null, "_view_module": "@jupyter-widgets/base", "_view_module_version": "1.2.0", "_view_name": "LayoutView", "align_content": null, "align_items": null, "align_self": null, "border": null, "bottom": null, "display": null, "flex": null, "flex_flow": null, "grid_area": null, "grid_auto_columns": null, "grid_auto_flow": null, "grid_auto_rows": null, "grid_column": null, "grid_gap": null, "grid_row": null, "grid_template_areas": null, "grid_template_columns": null, "grid_template_rows": null, "height": null, "justify_content": null, "justify_items": null, "left": null, "margin": null, "max_height": null, "max_width": null, "min_height": null, "min_width": null, "object_fit": null, "object_position": null, "order": null, "overflow": null, "overflow_x": null, "overflow_y": null, "padding": null, "right": null, "top": null, "visibility": null, "width": null}}, "4de1e53f8e5043ec8ea6ef08944ed373": {"model_module": "@jupyter-widgets/controls", "model_module_version": "1.5.0", "model_name": "HTMLModel", "state": {"_dom_classes": [], "_model_module": "@jupyter-widgets/controls", "_model_module_version": "1.5.0", "_model_name": "HTMLModel", "_view_count": null, "_view_module": "@jupyter-widgets/controls", "_view_module_version": "1.5.0", "_view_name": "HTMLView", "description": "", "description_tooltip": null, "layout": "IPY_MODEL_3647881be12f4fa9a7dcb44a7bbc1926", "placeholder": "\u200b", "style": "IPY_MODEL_d86ec10796d34a18b5c37dc779ba2d27", "value": "100%"}}, "845992dfdbed439b82245ba991298042": {"model_module": "@jupyter-widgets/controls", "model_module_version": "1.5.0", "model_name": "FloatProgressModel", "state": {"_dom_classes": [], "_model_module": "@jupyter-widgets/controls", "_model_module_version": "1.5.0", "_model_name": "FloatProgressModel", "_view_count": null, "_view_module": "@jupyter-widgets/controls", "_view_module_version": "1.5.0", "_view_name": "ProgressView", "bar_style": "success", "description": "", "description_tooltip": null, "layout": "IPY_MODEL_1cc09c4e31194d8ab6b23e322d8a6537", "max": 10043413.0, "min": 0.0, "orientation": "horizontal", "style": "IPY_MODEL_b38eb48efb524de5917ce9ac62b3e426", "value": 10043413.0}}, "a51a51ac861e4e28b25d4ba0601eb3e0": {"model_module": "@jupyter-widgets/controls", "model_module_version": "1.5.0", "model_name": "DescriptionStyleModel", "state": {"_model_module": "@jupyter-widgets/controls", "_model_module_version": "1.5.0", "_model_name": "DescriptionStyleModel", "_view_count": null, "_view_module": "@jupyter-widgets/base", "_view_module_version": "1.2.0", "_view_name": "StyleView", "description_width": ""}}, "b38eb48efb524de5917ce9ac62b3e426": {"model_module": "@jupyter-widgets/controls", "model_module_version": "1.5.0", "model_name": "ProgressStyleModel", "state": {"_model_module": "@jupyter-widgets/controls", "_model_module_version": "1.5.0", "_model_name": "ProgressStyleModel", "_view_count": null, "_view_module": "@jupyter-widgets/base", "_view_module_version": "1.2.0", "_view_name": "StyleView", "bar_color": null, "description_width": ""}}, "bac0481b90f04fdfa72bca0e0076ad4b": {"model_module": "@jupyter-widgets/controls", "model_module_version": "1.5.0", "model_name": "HBoxModel", "state": {"_dom_classes": [], "_model_module": "@jupyter-widgets/controls", "_model_module_version": "1.5.0", "_model_name": "HBoxModel", "_view_count": null, "_view_module": "@jupyter-widgets/controls", "_view_module_version": "1.5.0", "_view_name": "HBoxView", "box_style": "", "children": ["IPY_MODEL_4de1e53f8e5043ec8ea6ef08944ed373", "IPY_MODEL_845992dfdbed439b82245ba991298042", "IPY_MODEL_d5f966a11bca4bdca3c73f4e8ddd9466"], "layout": "IPY_MODEL_bff0344f34d84e579c758850e4f4d98e"}}, "bff0344f34d84e579c758850e4f4d98e": {"model_module": "@jupyter-widgets/base", "model_module_version": "1.2.0", "model_name": "LayoutModel", "state": {"_model_module": "@jupyter-widgets/base", "_model_module_version": "1.2.0", "_model_name": "LayoutModel", "_view_count": null, "_view_module": "@jupyter-widgets/base", "_view_module_version": "1.2.0", "_view_name": "LayoutView", "align_content": null, "align_items": null, "align_self": null, "border": null, "bottom": null, "display": null, "flex": null, "flex_flow": null, "grid_area": null, "grid_auto_columns": null, "grid_auto_flow": null, "grid_auto_rows": null, "grid_column": null, "grid_gap": null, "grid_row": null, "grid_template_areas": null, "grid_template_columns": null, "grid_template_rows": null, "height": null, "justify_content": null, "justify_items": null, "left": null, "margin": null, "max_height": null, "max_width": null, "min_height": null, "min_width": null, "object_fit": null, "object_position": null, "order": null, "overflow": null, "overflow_x": null, "overflow_y": null, "padding": null, "right": null, "top": null, "visibility": null, "width": null}}, "d5f966a11bca4bdca3c73f4e8ddd9466": {"model_module": "@jupyter-widgets/controls", "model_module_version": "1.5.0", "model_name": "HTMLModel", "state": {"_dom_classes": [], "_model_module": "@jupyter-widgets/controls", "_model_module_version": "1.5.0", "_model_name": "HTMLModel", "_view_count": null, "_view_module": "@jupyter-widgets/controls", "_view_module_version": "1.5.0", "_view_name": "HTMLView", "description": "", "description_tooltip": null, "layout": "IPY_MODEL_491f58ea5e2e44cd88a92e376356ff13", "placeholder": "\u200b", "style": "IPY_MODEL_a51a51ac861e4e28b25d4ba0601eb3e0", "value": " 10.0M/10.0M [00:04&lt;00:00, 2.15MB/s]"}}, "d86ec10796d34a18b5c37dc779ba2d27": {"model_module": "@jupyter-widgets/controls", "model_module_version": "1.5.0", "model_name": "DescriptionStyleModel", "state": {"_model_module": "@jupyter-widgets/controls", "_model_module_version": "1.5.0", "_model_name": "DescriptionStyleModel", "_view_count": null, "_view_module": "@jupyter-widgets/base", "_view_module_version": "1.2.0", "_view_name": "StyleView", "description_width": ""}}}, "version_major": 2, "version_minor": 0}
 </script>
 
 
