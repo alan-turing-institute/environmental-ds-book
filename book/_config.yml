@@ -45,7 +45,7 @@ launch_buttons:
   binderhub_url             : https://binder.pangeo.io  # The URL of the BinderHub (e.g., https://mybinder.org)
   jupyterhub_url            : ""  # The URL of the JupyterHub (e.g., https://datahub.berkeley.edu)
   thebe                     : false  # Add a thebe button to pages (requires the repository to run on Binder)
-  colab_url                 : false # The URL of Google Colab (https://colab.research.google.com)
+  colab_url                 : "" # The URL of Google Colab (https://colab.research.google.com)
 
 html:
   use_issues_button: true
