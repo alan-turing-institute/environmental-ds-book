@@ -42,6 +42,9 @@ parts:
     sections:
     - file: urban/urban-sensors
       title: Sensors
+      sections:
+      - file: urban/sensors/urban-sensors-ukv
+        title: Met Office UKV high-resolution
     - file: urban/urban-modelling
       title: Modelling
   - file: wildfires/wildfires-overview
