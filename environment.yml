@@ -16,6 +16,8 @@ dependencies:
   - pytorch==1.8.0
   - torchvision==0.9.0
   - geoviews
+  - iris==3.0.1
+  - urllib3
   - pip
   - pip:
       - scikit-image
