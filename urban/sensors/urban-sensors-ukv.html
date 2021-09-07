@@ -42,6 +42,8 @@
     <script src="../../_static/copybutton.js"></script>
     <script >var togglebuttonSelector = '.toggle, .admonition.dropdown, .tag_hide_input div.cell_input, .tag_hide-input div.cell_input, .tag_hide_output div.cell_output, .tag_hide-output div.cell_output, .tag_hide_cell.cell, .tag_hide-cell.cell';</script>
     <script src="../../_static/sphinx-book-theme.12a9622fbb08dcb3a2a40b2c02b83a57.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/require.js/2.3.4/require.min.js"></script>
+    <script src="https://unpkg.com/@jupyter-widgets/html-manager@^0.20.0/dist/embed-amd.js"></script>
     <script async="async" src="https://unpkg.com/thebelab@latest/lib/index.js"></script>
     <script >
         const thebe_selector = ".thebe"
@@ -263,10 +265,22 @@
    </i>
   </label>
   <ul>
-   <li class="toctree-l2">
+   <li class="toctree-l2 has-children">
     <a class="reference internal" href="../../wildfires/wildfires-sensors.html">
      Sensors
     </a>
+    <input class="toctree-checkbox" id="toctree-checkbox-10" name="toctree-checkbox-10" type="checkbox"/>
+    <label for="toctree-checkbox-10">
+     <i class="fas fa-chevron-down">
+     </i>
+    </label>
+    <ul>
+     <li class="toctree-l3">
+      <a class="reference internal" href="../../wildfires/sensors/wildfires-sensors-modis.html">
+       MODIS
+      </a>
+     </li>
+    </ul>
    </li>
    <li class="toctree-l2">
     <a class="reference internal" href="../../wildfires/wildfires-modelling.html">
@@ -303,8 +317,8 @@
   <a class="reference internal" href="../../community/coworking.html">
    Coworking Calls
   </a>
-  <input class="toctree-checkbox" id="toctree-checkbox-10" name="toctree-checkbox-10" type="checkbox"/>
-  <label for="toctree-checkbox-10">
+  <input class="toctree-checkbox" id="toctree-checkbox-11" name="toctree-checkbox-11" type="checkbox"/>
+  <label for="toctree-checkbox-11">
    <i class="fas fa-chevron-down">
    </i>
   </label>
@@ -325,8 +339,8 @@
   <a class="reference internal" href="../../community/notes.html">
    Meeting Notes
   </a>
-  <input class="toctree-checkbox" id="toctree-checkbox-11" name="toctree-checkbox-11" type="checkbox"/>
-  <label for="toctree-checkbox-11">
+  <input class="toctree-checkbox" id="toctree-checkbox-12" name="toctree-checkbox-12" type="checkbox"/>
+  <label for="toctree-checkbox-12">
    <i class="fas fa-chevron-down">
    </i>
   </label>
@@ -350,8 +364,8 @@
   <a class="reference internal" href="../../community/templates.html">
    Template Collection
   </a>
-  <input class="toctree-checkbox" id="toctree-checkbox-12" name="toctree-checkbox-12" type="checkbox"/>
-  <label for="toctree-checkbox-12">
+  <input class="toctree-checkbox" id="toctree-checkbox-13" name="toctree-checkbox-13" type="checkbox"/>
+  <label for="toctree-checkbox-13">
    <i class="fas fa-chevron-down">
    </i>
   </label>
@@ -695,7 +709,7 @@ made openly available as part of the Met Office contribution to the COVID 19 mod
 </div>
 <div class="cell_output docutils container">
 <div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>(&#39;../sensors/ukv_daily_t1o5m_mean_20150801.nc&#39;,
- &lt;http.client.HTTPMessage at 0x7f9a8c2d7970&gt;)
+ &lt;http.client.HTTPMessage at 0x7f8b6c889c40&gt;)
 </pre></div>
 </div>
 </div>
@@ -727,7 +741,7 @@ made openly available as part of the Met Office contribution to the COVID 19 mod
 </div>
 </div>
 <div class="cell_output docutils container">
-<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>&lt;cartopy.mpl.gridliner.Gridliner at 0x7f9a8c9c3a00&gt;
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>&lt;cartopy.mpl.gridliner.Gridliner at 0x7f8b70c06cd0&gt;
 </pre></div>
 </div>
 <img alt="../../_images/urban-sensors-ukv_8_1.png" src="../../_images/urban-sensors-ukv_8_1.png" />
@@ -771,7 +785,7 @@ made openly available as part of the Met Office contribution to the COVID 19 mod
 </div>
 </div>
 <div class="cell_output docutils container">
-<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>&lt;cartopy.mpl.gridliner.Gridliner at 0x7f9a8cd50fa0&gt;
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>&lt;cartopy.mpl.gridliner.Gridliner at 0x7f8b70faf2b0&gt;
 </pre></div>
 </div>
 <img alt="../../_images/urban-sensors-ukv_12_1.png" src="../../_images/urban-sensors-ukv_12_1.png" />
@@ -807,7 +821,7 @@ made openly available as part of the Met Office contribution to the COVID 19 mod
 </div>
 </div>
 <div class="cell_output docutils container">
-<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>&lt;cartopy.mpl.gridliner.Gridliner at 0x7f9a8c4ed460&gt;
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>&lt;cartopy.mpl.gridliner.Gridliner at 0x7f8b7106c730&gt;
 </pre></div>
 </div>
 <img alt="../../_images/urban-sensors-ukv_16_1.png" src="../../_images/urban-sensors-ukv_16_1.png" />
