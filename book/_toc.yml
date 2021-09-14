@@ -22,8 +22,6 @@ parts:
       sections:
       - file: forest/modelling/forest-modelling-structure
         title: Structure
-      - file: forest/modelling/forest-modelling-treecrown
-        title: Tree Crown
   - file: polar/polar-overview
     title: Polar
     sections:
