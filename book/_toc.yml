@@ -20,8 +20,6 @@ parts:
     - file: forest/forest-modelling
       title: Modelling
       sections:
-      - file: forest/modelling/forest-modelling-structure
-        title: Structure
       - file: forest/modelling/forest-modelling-treecrown_deepforest
         title: Tree crown (DeepForest)
   - file: polar/polar-overview
