@@ -7,15 +7,15 @@ tags: environmental-ai, collaboration-cafe
 
 # _The Environmental AI_ ⛰ 🌳 🏙️ ❄️ 🔥 🌊  online Collaboration Cafe 
 
-## 24 August 2021 | TBC
+## 28 September 2021 | Data Preprocessing
 
 Thank you for joining the _The Environmental AI_'s online Collaboration Cafe! 
 
 We're delighted to have you here ☕ ✨ 🍰
 
-**When?** 24 August 2021, 14:00 - 16:00 UTC ([see in your time zone](https://arewemeetingyet.com/London/2021-08-24/14:00))
+**When?** 28 September 2021, 14:00 - 16:00 UTC ([see in your time zone](https://arewemeetingyet.com/London/2021-08-24/14:00))
 
-**Next call:** TBC
+**Next call:** 26 October 2021
 
 **What?** *The Environmental AI is a **community aiming to learn and discuss about good research practices to use existing AI and data science solutions to a better understanding of the planet earth across multiple environmental settings**. 
 [Collaboration Cafes](https://the-turing-way.netlify.app/community-handbook/coworking/coworking-collabcafe.html) are **online coworking calls** that engage anyone interested in learning and discussing about relevant themes in AI and data science to environmental studies*.
@@ -25,35 +25,32 @@ We're delighted to have you here ☕ ✨ 🍰
 **How?** **Join Zoom Meeting**
 https://turing-uk.zoom.us/j/6779579342?pwd=L25scnhXUUNmVjFsc0hRWTAzTVJ1dz09
 
-Meeting ID: 677 957 9342
-Passcode: 1989
-
 ==*The waiting room is enabled. The host of this call will let you in.*==
 
 ***All questions, comments, and recommendations are welcome!***
 
+### Code of conduct
+* [Take a moment to read this](https://github.com/acocac/environmental-ai-book/blob/acoca-codeofconduct/CODE_OF_CONDUCT.md)
+
 ### Useful links
 * All about [online Collaboration Cafes](https://github.com/alan-turing-institute/the-turing-way/blob/master/project_management/online-collaboration-cafe.md)
 
-### Code of conduct
-
-* TBC
-
 ### Sign up below
 
-**Name + A fun Icebreaker + an emoji to represent it ([emoji cheatsheet](https://github.com/ikatyang/emoji-cheat-sheet/blob/master/README.md))**
+**Name + What’s the hardest part about working virtually for you? and the easiest? + an emoji to represent it ([emoji cheatsheet](https://github.com/ikatyang/emoji-cheat-sheet/blob/master/README.md))**
 
 *(Remember that this is a public document. You can use a pseudonym if you'd prefer.)*
 ==*If you are new to HackMD, please see this document for a short guide (right click, open in a new window): [https://hackmd.io/@turingway/hackmd-guide](https://hackmd.io/@turingway/hackmd-guide).*==
 
-* 
-* 
+* Alejandro + social interaction, more sleep time + :busts_in_silhouette:	 :sleeping: 
+* Sam A. + I still have just as many meetings if not more and it is soooo tiring! :sleeping: :pleading_face:
+* Evangeline + Feeling self-conscious on camera, flexibility + :movie_camera: :clock1: 
 
 ### Conversation Starters
 
 *Advertise and promote your event or anything exciting you're working on.* ✨
 
-* 
+* Met Office / Joint centre for excellence in environmental intelligence conference 16/17 Dec 2021!
 * 
 
 ## Agenda
