@@ -7,15 +7,15 @@ tags: environmental-ai, collaboration-cafe
 
 # _The Environmental AI_ ⛰ 🌳 🏙️ ❄️ 🔥 🌊  online Collaboration Cafe 
 
-## 28 September 2021 | Data Preprocessing
+## 26 October 2021 | TBC
 
 Thank you for joining the _The Environmental AI_'s online Collaboration Cafe! 
 
 We're delighted to have you here ☕ ✨ 🍰
 
-**When?** 28 September 2021, 14:00 - 16:00 UTC ([see in your time zone](https://arewemeetingyet.com/London/2021-08-24/14:00))
+**When?** 26 October 2021, 14:00 - 16:00 UTC ([see in your time zone](https://arewemeetingyet.com/London/2021-08-24/14:00))
 
-**Next call:** 26 October 2021
+**Next call:** 30 November 2021
 
 **What?** *The Environmental AI is a **community aiming to learn and discuss about good research practices to use existing AI and data science solutions to a better understanding of the planet earth across multiple environmental settings**. 
 [Collaboration Cafes](https://the-turing-way.netlify.app/community-handbook/coworking/coworking-collabcafe.html) are **online coworking calls** that engage anyone interested in learning and discussing about relevant themes in AI and data science to environmental studies*.
@@ -37,20 +37,19 @@ https://turing-uk.zoom.us/j/6779579342?pwd=L25scnhXUUNmVjFsc0hRWTAzTVJ1dz09
 
 ### Sign up below
 
-**Name + What’s the hardest part about working virtually for you? and the easiest? + an emoji to represent it ([emoji cheatsheet](https://github.com/ikatyang/emoji-cheat-sheet/blob/master/README.md))**
+**Name + Break Ice Question + an emoji to represent it ([emoji cheatsheet](https://github.com/ikatyang/emoji-cheat-sheet/blob/master/README.md))**
 
 *(Remember that this is a public document. You can use a pseudonym if you'd prefer.)*
 ==*If you are new to HackMD, please see this document for a short guide (right click, open in a new window): [https://hackmd.io/@turingway/hackmd-guide](https://hackmd.io/@turingway/hackmd-guide).*==
 
-* Alejandro + social interaction, more sleep time + :busts_in_silhouette:	 :sleeping: 
-* Sam A. + I still have just as many meetings if not more and it is soooo tiring! :sleeping: :pleading_face:
-* Evangeline + Feeling self-conscious on camera, flexibility + :movie_camera: :clock1: 
+* 
+* 
 
 ### Conversation Starters
 
 *Advertise and promote your event or anything exciting you're working on.* ✨
 
-* Met Office / Joint centre for excellence in environmental intelligence conference 16/17 Dec 2021!
+* 
 * 
 
 ## Agenda
@@ -86,8 +85,8 @@ https://cuckoo.team/environmental-ai
 
 ### Notes and questions
 
-* 
-* 
+*  
+*  
 
 ### Request for reviews!
 
@@ -103,7 +102,51 @@ https://cuckoo.team/environmental-ai
 
 # Notes from the last call: 
 
-## Archive: 29 June
+## Archive: 28 Septmber - Data preprocessing
+
+**Name + What’s the hardest part about working virtually for you? and the easiest? + an emoji to represent it ([emoji cheatsheet](https://github.com/ikatyang/emoji-cheat-sheet/blob/master/README.md))**
+
+*(Remember that this is a public document. You can use a pseudonym if you'd prefer.)*
+==*If you are new to HackMD, please see this document for a short guide (right click, open in a new window): [https://hackmd.io/@turingway/hackmd-guide](https://hackmd.io/@turingway/hackmd-guide).*==
+
+* Alejandro + social interaction, more sleep time + :busts_in_silhouette:	 :sleeping: 
+* Sam A. + I still have just as many meetings if not more and it is soooo tiring! :sleeping: :pleading_face:
+* Evangeline + Feeling self-conscious on camera, flexibility + :movie_camera: :clock1: 
+
+### Conversation Starters
+
+*Advertise and promote your event or anything exciting you're working on.* ✨
+
+* Met Office / Joint centre for excellence in environmental intelligence conference 16/17 Dec 2021!
+* We have a fresh interactive notebook in the Environmental AI Book :earth_asia::books: The notebook focuses on detecting tree crowns using the *DeepForest* model :deciduous_tree:. Have a look at the rendered version [here](https://acocac.github.io/environmental-ai-book/forest/modelling/forest-modelling-treecrown_deepforest.html). Other recent community contributions are the exploration of sensor data, [Met Office UKV high-resolution atmosphere model data for urban settings](https://acocac.github.io/environmental-ai-book/urban/sensors/urban-sensors-ukv.html) and [MODIS satellite imagery and wildfire data](https://acocac.github.io/environmental-ai-book/wildfires/sensors/wildfires-sensors-modis.html).
+
+### Breakout rooms: Topic proposals
+*Topics for breakout / Names*
+
+* Sam A. Manufacture Urban Data in GIS format
+* Evie. Preprocessing satellite data for crop yield prediction
+* Alejandro. Preprocess FluxNet data and related gridded products
+
+### Notes and questions
+
+* We showcased the [SEPAL platform](https://docs.sepal.io/en/latest/cookbook/area_estimation.html) for Vegetation Satellite Image analysis. 
+* Discussed challenges around scoping and extracting satellite data for machine learning models of vegetation (agricultural crops):
+    * Appropriate satellite platform (Sentinel/LANDSAT?)
+    * Preprocessing of radar and optical data (i.e. dealing with cloud cover)
+    * Appropriate time series/critical dates for plant growth
+* Sam A. used ArcGIS pro to extract site-specific temperature information from a gridded netCDF dataset using the Spatial Analyst 'Sample' tool. It is very useful in that it works across the time dimension so I could do this for 1 year of data in one go. It is also possible to set a desired output coordinate system. I could save the data out as a csv file and then use standard python tools like pandas and numpy for further processing  
+* Sam A suggests using [Iris package](https://scitools-iris.readthedocs.io/en/latest/) for reprojecting gridded netCDF files. The project is
+* Data preprocessing is still too time-consuming, and there is lack of communication of the tools available. 
+
+### Request for reviews!
+
+* None
+
+### Feedback at the end of the call
+
+* None
+
+## Archive: 29 June - Data Visualization
 
 **Name + Something you watch (video, movie, documentary. etc) recently that was inspiring for you? + an emoji to represent it ([emoji cheatsheet](https://github.com/ikatyang/emoji-cheat-sheet/blob/master/README.md))**
 
