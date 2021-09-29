@@ -102,7 +102,7 @@ https://cuckoo.team/environmental-ai
 
 # Notes from the last call: 
 
-## Archive: 28 Septmber - Data preprocessing
+## Archive: 28 September - Data preprocessing
 
 **Name + What’s the hardest part about working virtually for you? and the easiest? + an emoji to represent it ([emoji cheatsheet](https://github.com/ikatyang/emoji-cheat-sheet/blob/master/README.md))**
 
