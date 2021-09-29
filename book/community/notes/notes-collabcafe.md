@@ -135,7 +135,7 @@ https://cuckoo.team/environmental-ai
     * Preprocessing of radar and optical data (i.e. dealing with cloud cover)
     * Appropriate time series/critical dates for plant growth
 * Sam A. used ArcGIS pro to extract site-specific temperature information from a gridded netCDF dataset using the Spatial Analyst 'Sample' tool. It is very useful in that it works across the time dimension so I could do this for 1 year of data in one go. It is also possible to set a desired output coordinate system. I could save the data out as a csv file and then use standard python tools like pandas and numpy for further processing  
-* Sam A suggests using [Iris package](https://scitools-iris.readthedocs.io/en/latest/) for reprojecting gridded netCDF files. The project is
+* Sam A. suggests using [Iris package](https://scitools-iris.readthedocs.io/en/latest/) for reprojecting gridded netCDF files. The project is
 * Data preprocessing is still too time-consuming, and there is lack of communication of the tools available. 
 
 ### Request for reviews!
