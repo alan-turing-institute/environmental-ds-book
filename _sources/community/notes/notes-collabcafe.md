@@ -106,9 +106,6 @@ https://cuckoo.team/environmental-ai
 
 **Name + What’s the hardest part about working virtually for you? and the easiest? + an emoji to represent it ([emoji cheatsheet](https://github.com/ikatyang/emoji-cheat-sheet/blob/master/README.md))**
 
-*(Remember that this is a public document. You can use a pseudonym if you'd prefer.)*
-==*If you are new to HackMD, please see this document for a short guide (right click, open in a new window): [https://hackmd.io/@turingway/hackmd-guide](https://hackmd.io/@turingway/hackmd-guide).*==
-
 * Alejandro + social interaction, more sleep time + :busts_in_silhouette:	 :sleeping: 
 * Sam A. + I still have just as many meetings if not more and it is soooo tiring! :sleeping: :pleading_face:
 * Evangeline + Feeling self-conscious on camera, flexibility + :movie_camera: :clock1: 
@@ -149,9 +146,6 @@ https://cuckoo.team/environmental-ai
 ## Archive: 29 June - Data Visualization
 
 **Name + Something you watch (video, movie, documentary. etc) recently that was inspiring for you? + an emoji to represent it ([emoji cheatsheet](https://github.com/ikatyang/emoji-cheat-sheet/blob/master/README.md))**
-
-*(Remember that this is a public document. You can use a pseudonym if you'd prefer.)*
-==*If you are new to HackMD, please see this document for a short guide (right click, open in a new window): [https://hackmd.io/@turingway/hackmd-guide](https://hackmd.io/@turingway/hackmd-guide).*==
 
 * Alejandro + [Black Holes: The Edge of All We Know](https://www.rottentomatoes.com/m/black_holes_the_edge_of_all_we_know) + :milky_way:	 
 * Scott + [Coded Bias](https://www.imdb.com/title/tt11394170/) + 🧠
