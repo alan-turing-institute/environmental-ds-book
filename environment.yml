@@ -18,8 +18,8 @@ dependencies:
   - geoviews
   - iris==3.0.1
   - urllib3
+  - opencv
   - pip
   - pip:
       - scikit-image
-      - opencv-python
       - aiohttp
