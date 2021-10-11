@@ -22,6 +22,8 @@ parts:
       sections:
       - file: forest/modelling/forest-modelling-treecrown_deepforest
         title: Tree crown (DeepForest)
+      - file: forest/modelling/forest-modelling-treecrown_detectree
+        title: Tree crown (Detectree)
   - file: ocean/ocean-overview
     title: Ocean
     sections:
