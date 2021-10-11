@@ -1,0 +1,65 @@
+Traceback (most recent call last):
+  File "/Users/acoca/anaconda3/envs/envai-book/lib/python3.8/site-packages/jupyter_cache/executors/utils.py", line 51, in single_nb_execution
+    executenb(
+  File "/Users/acoca/anaconda3/envs/envai-book/lib/python3.8/site-packages/nbclient/client.py", line 1117, in execute
+    return NotebookClient(nb=nb, resources=resources, km=km, **kwargs).execute()
+  File "/Users/acoca/anaconda3/envs/envai-book/lib/python3.8/site-packages/nbclient/util.py", line 78, in wrapped
+    return just_run(coro(*args, **kwargs))
+  File "/Users/acoca/anaconda3/envs/envai-book/lib/python3.8/site-packages/nbclient/util.py", line 57, in just_run
+    return loop.run_until_complete(coro)
+  File "/Users/acoca/anaconda3/envs/envai-book/lib/python3.8/asyncio/base_events.py", line 616, in run_until_complete
+    return future.result()
+  File "/Users/acoca/anaconda3/envs/envai-book/lib/python3.8/site-packages/nbclient/client.py", line 558, in async_execute
+    await self.async_execute_cell(
+  File "/Users/acoca/anaconda3/envs/envai-book/lib/python3.8/site-packages/nbclient/client.py", line 862, in async_execute_cell
+    self._check_raise_for_error(cell, exec_reply)
+  File "/Users/acoca/anaconda3/envs/envai-book/lib/python3.8/site-packages/nbclient/client.py", line 765, in _check_raise_for_error
+    raise CellExecutionError.from_cell_and_msg(cell, exec_reply_content)
+nbclient.exceptions.CellExecutionError: An error occurred while executing the following cell:
+------------------
+# fetch daily data from a public S3 bucket
+s3 = S3FileSystem(anon=True)
+s3_paths = s3.glob('earth-data/carbon_flux/nee_data_fusion/FLX*')
+
+datasets = []
+skipped = []
+used = []
+
+for i, s3_path in enumerate(s3_paths):
+    dd = cat.fluxnet_daily(s3_path=s3_path).to_dask()
+    site = dd['site'].cat.categories.item()
+
+    if not set(dd.columns) >= set(data_columns):
+        skipped.append(site)
+        continue
+
+    datasets.append(clean_data(dd))
+    used.append(site)
+------------------
+
+[0;31m---------------------------------------------------------------------------[0m
+[0;31mFSTimeoutError[0m                            Traceback (most recent call last)
+[0;32m/var/folders/l8/99_59fvn4bl2szm125grkgqw0000gr/T/ipykernel_11165/4133400015.py[0m in [0;36m<module>[0;34m[0m
+[1;32m      1[0m [0;31m# fetch daily data from a public S3 bucket[0m[0;34m[0m[0;34m[0m[0;34m[0m[0m
+[1;32m      2[0m [0ms3[0m [0;34m=[0m [0mS3FileSystem[0m[0;34m([0m[0manon[0m[0;34m=[0m[0;32mTrue[0m[0;34m)[0m[0;34m[0m[0;34m[0m[0m
+[0;32m----> 3[0;31m [0ms3_paths[0m [0;34m=[0m [0ms3[0m[0;34m.[0m[0mglob[0m[0;34m([0m[0;34m'earth-data/carbon_flux/nee_data_fusion/FLX*'[0m[0;34m)[0m[0;34m[0m[0;34m[0m[0m
+[0m[1;32m      4[0m [0;34m[0m[0m
+[1;32m      5[0m [0mdatasets[0m [0;34m=[0m [0;34m[[0m[0;34m][0m[0;34m[0m[0;34m[0m[0m
+
+[0;32m~/anaconda3/envs/envai-book/lib/python3.8/site-packages/fsspec/asyn.py[0m in [0;36mwrapper[0;34m(*args, **kwargs)[0m
+[1;32m     86[0m     [0;32mdef[0m [0mwrapper[0m[0;34m([0m[0;34m*[0m[0margs[0m[0;34m,[0m [0;34m**[0m[0mkwargs[0m[0;34m)[0m[0;34m:[0m[0;34m[0m[0;34m[0m[0m
+[1;32m     87[0m         [0mself[0m [0;34m=[0m [0mobj[0m [0;32mor[0m [0margs[0m[0;34m[[0m[0;36m0[0m[0;34m][0m[0;34m[0m[0;34m[0m[0m
+[0;32m---> 88[0;31m         [0;32mreturn[0m [0msync[0m[0;34m([0m[0mself[0m[0;34m.[0m[0mloop[0m[0;34m,[0m [0mfunc[0m[0;34m,[0m [0;34m*[0m[0margs[0m[0;34m,[0m [0;34m**[0m[0mkwargs[0m[0;34m)[0m[0;34m[0m[0;34m[0m[0m
+[0m[1;32m     89[0m [0;34m[0m[0m
+[1;32m     90[0m     [0;32mreturn[0m [0mwrapper[0m[0;34m[0m[0;34m[0m[0m
+
+[0;32m~/anaconda3/envs/envai-book/lib/python3.8/site-packages/fsspec/asyn.py[0m in [0;36msync[0;34m(loop, func, timeout, *args, **kwargs)[0m
+[1;32m     65[0m     [0;32mif[0m [0misinstance[0m[0;34m([0m[0mresult[0m[0;34m[[0m[0;36m0[0m[0;34m][0m[0;34m,[0m [0masyncio[0m[0;34m.[0m[0mTimeoutError[0m[0;34m)[0m[0;34m:[0m[0;34m[0m[0;34m[0m[0m
+[1;32m     66[0m         [0;31m# suppress asyncio.TimeoutError, raise FSTimeoutError[0m[0;34m[0m[0;34m[0m[0;34m[0m[0m
+[0;32m---> 67[0;31m         [0;32mraise[0m [0mFSTimeoutError[0m[0;34m[0m[0;34m[0m[0m
+[0m[1;32m     68[0m     [0;32mif[0m [0misinstance[0m[0;34m([0m[0mresult[0m[0;34m[[0m[0;36m0[0m[0;34m][0m[0;34m,[0m [0mBaseException[0m[0;34m)[0m[0;34m:[0m[0;34m[0m[0;34m[0m[0m
+[1;32m     69[0m         [0;32mraise[0m [0mresult[0m[0;34m[[0m[0;36m0[0m[0;34m][0m[0;34m[0m[0;34m[0m[0m
+
+[0;31mFSTimeoutError[0m: 
+FSTimeoutError: 
+
