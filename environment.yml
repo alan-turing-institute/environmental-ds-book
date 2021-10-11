@@ -23,3 +23,4 @@ dependencies:
   - pip:
       - scikit-image
       - aiohttp
+      - albumentations
