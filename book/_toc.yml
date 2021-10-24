@@ -20,8 +20,17 @@ parts:
     - file: forest/forest-modelling
       title: Modelling
       sections:
-      - file: forest/modelling/forest-modelling-structure
-        title: Structure
+      - file: forest/modelling/forest-modelling-treecrown_deepforest
+        title: Tree crown (DeepForest)
+      - file: forest/modelling/forest-modelling-treecrown_detectree
+        title: Tree crown (Detectree)
+  - file: ocean/ocean-overview
+    title: Ocean
+    sections:
+    - file: ocean/ocean-sensors
+      title: Sensors
+    - file: ocean/ocean-modelling
+      title: Modelling
   - file: polar/polar-overview
     title: Polar
     sections:
