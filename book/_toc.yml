@@ -42,8 +42,8 @@ parts:
     - file: polar/polar-modelling
       title: Modelling
       sections:
-      - file: polar/modelling/polar-modelling-temperature
-        title: Temperature
+      - file: polar/modelling/polar-modelling-icenet
+        title: Arctic sea ice forecasting
   - file: urban/urban-overview
     title: Urban
     sections:
