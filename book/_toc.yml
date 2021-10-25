@@ -40,7 +40,7 @@ parts:
       title: Modelling
       sections:
       - file: polar/modelling/polar-modelling-icenet
-        title: Arctic sea ice forecasting (IceNet)
+        title: Sea ice forecasting (IceNet)
   - file: urban/urban-overview
     title: Urban
     sections:
