@@ -36,14 +36,11 @@ parts:
     sections:
     - file: polar/polar-sensors
       title: Sensors
-      sections:
-      - file: polar/sensors/polar-sensors-random
-        title: Random
     - file: polar/polar-modelling
       title: Modelling
       sections:
       - file: polar/modelling/polar-modelling-icenet
-        title: Arctic sea ice forecasting
+        title: Arctic sea ice forecasting (IceNet)
   - file: urban/urban-overview
     title: Urban
     sections:
