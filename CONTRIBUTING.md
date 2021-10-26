@@ -53,4 +53,4 @@ Ready to contribute? Here's how to set up `demo` for local development.
 
 ## Code of Conduct
 
-Please note that the demo project is released with a [Contributor Code of Conduct](CONDUCT.md). By contributing to this project you agree to abide by its terms.
+Please note that the demo project is released with a [Contributor Code of Conduct](CODE_OF_CONDUCT.md). By contributing to this project you agree to abide by its terms.

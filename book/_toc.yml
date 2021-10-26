@@ -20,23 +20,27 @@ parts:
     - file: forest/forest-modelling
       title: Modelling
       sections:
-      - file: forest/modelling/forest-modelling-structure
-        title: Structure
-      - file: forest/modelling/forest-modelling-treecrown
-        title: Tree Crown
+      - file: forest/modelling/forest-modelling-treecrown_deepforest
+        title: Tree crown (DeepForest)
+      - file: forest/modelling/forest-modelling-treecrown_detectree
+        title: Tree crown (Detectree)
+  - file: ocean/ocean-overview
+    title: Ocean
+    sections:
+    - file: ocean/ocean-sensors
+      title: Sensors
+    - file: ocean/ocean-modelling
+      title: Modelling
   - file: polar/polar-overview
     title: Polar
     sections:
     - file: polar/polar-sensors
       title: Sensors
-      sections:
-      - file: polar/sensors/polar-sensors-random
-        title: Random
     - file: polar/polar-modelling
       title: Modelling
       sections:
-      - file: polar/modelling/polar-modelling-temperature
-        title: Temperature
+      - file: polar/modelling/polar-modelling-icenet
+        title: Sea ice forecasting (IceNet)
   - file: urban/urban-overview
     title: Urban
     sections:
