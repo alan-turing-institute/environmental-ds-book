@@ -14,9 +14,6 @@ parts:
     sections:
     - file: forest/forest-sensors
       title: Sensors
-      sections:
-      - file: forest/sensors/forest-sensors-fluxnet
-        title: FluxNet
     - file: forest/forest-modelling
       title: Modelling
       sections:
