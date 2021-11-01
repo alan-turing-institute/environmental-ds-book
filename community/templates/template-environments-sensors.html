@@ -5,7 +5,7 @@
   <head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>[Environment]: [Sensor name] &#8212; The Environmental AI book</title>
+    <title>[Sensor name] &#8212; The Environmental AI book</title>
     
   <link href="../../_static/css/theme.css" rel="stylesheet" />
   <link href="../../_static/css/index.c5995385ac14fb8791e8eb36b4908be2.css" rel="stylesheet" />
@@ -53,7 +53,7 @@
     <script async="async" src="../../_static/sphinx-thebe.js"></script>
     <link rel="index" title="Index" href="../../genindex.html" />
     <link rel="search" title="Search" href="../../search.html" />
-    <link rel="next" title="[Environment]: [Modelling target]" href="template-environments-modelling.html" />
+    <link rel="next" title="[Modelling target]" href="template-environments-modelling.html" />
     <link rel="prev" title="Journal Club Call Template" href="template-coworking-journalclub.html" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <meta name="docsearch:language" content="en" />
@@ -240,8 +240,8 @@
     </label>
     <ul>
      <li class="toctree-l3">
-      <a class="reference internal" href="../../urban/sensors/urban-sensors-ukv.html">
-       Met Office UKV high-resolution
+      <a class="reference internal" href="../../urban/sensors/urban-sensors-climate_ukv.html">
+       UKV high-resolution (Met Office)
       </a>
      </li>
     </ul>
@@ -274,8 +274,8 @@
     </label>
     <ul>
      <li class="toctree-l3">
-      <a class="reference internal" href="../../wildfires/sensors/wildfires-sensors-modis.html">
-       MODIS
+      <a class="reference internal" href="../../wildfires/sensors/wildfires-sensors-fires_modis.html">
+       MOD021KM and FIRMS (NASA)
       </a>
      </li>
     </ul>
@@ -286,23 +286,6 @@
     </a>
    </li>
   </ul>
- </li>
-</ul>
-<p class="caption">
- <span class="caption-text">
-  Digital Twins
- </span>
-</p>
-<ul class="nav bd-sidenav">
- <li class="toctree-l1">
-  <a class="reference internal" href="../../digitaltwins/digitaltwins-overview.html">
-   Overview
-  </a>
- </li>
- <li class="toctree-l1">
-  <a class="reference internal" href="../../digitaltwins/digitaltwins-concepts.html">
-   Concepts
-  </a>
  </li>
 </ul>
 <p class="caption">
@@ -544,9 +527,31 @@
     </a>
    </li>
    <li class="toc-h3 nav-item toc-entry">
-    <a class="reference internal nav-link" href="#authors">
-     Authors
+    <a class="reference internal nav-link" href="#contributions">
+     Contributions
     </a>
+    <ul class="nav section-nav flex-column">
+     <li class="toc-h4 nav-item toc-entry">
+      <a class="reference internal nav-link" href="#notebook">
+       Notebook
+      </a>
+     </li>
+     <li class="toc-h4 nav-item toc-entry">
+      <a class="reference internal nav-link" href="#dataset-originator-creator">
+       Dataset originator/creator
+      </a>
+     </li>
+     <li class="toc-h4 nav-item toc-entry">
+      <a class="reference internal nav-link" href="#dataset-authors">
+       Dataset authors
+      </a>
+     </li>
+     <li class="toc-h4 nav-item toc-entry">
+      <a class="reference internal nav-link" href="#dataset-documentation">
+       Dataset documentation
+      </a>
+     </li>
+    </ul>
    </li>
   </ul>
  </li>
@@ -570,6 +575,11 @@
    Summary
   </a>
  </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#version">
+   Version
+  </a>
+ </li>
 </ul>
 
             </nav>
@@ -581,8 +591,11 @@
         
               <div>
                 
-  <div class="section" id="environment-sensor-name">
-<h1>[Environment]: [Sensor name]<a class="headerlink" href="#environment-sensor-name" title="Permalink to this headline">¶</a></h1>
+  <div class="section" id="sensor-name">
+<h1>[Sensor name]<a class="headerlink" href="#sensor-name" title="Permalink to this headline">¶</a></h1>
+<p><svg version="1.1" width="16" height="16" class="octicon octicon-tag" viewBox="0 0 16 16" aria-hidden="true"><path fill-rule="evenodd" d="M2.5 7.775V2.75a.25.25 0 01.25-.25h5.025a.25.25 0 01.177.073l6.25 6.25a.25.25 0 010 .354l-5.025 5.025a.25.25 0 01-.354 0l-6.25-6.25a.25.25 0 01-.073-.177zm-1.5 0V2.75C1 1.784 1.784 1 2.75 1h5.025c.464 0 .91.184 1.238.513l6.25 6.25a1.75 1.75 0 010 2.474l-5.026 5.026a1.75 1.75 0 01-2.474 0l-6.25-6.25A1.75 1.75 0 011 7.775zM6 5a1 1 0 100 2 1 1 0 000-2z"></path></svg>
+<span class="sphinx-bs badge badge-primary">[Environment]</span>
+<span class="sphinx-bs badge badge-secondary">Sensors</span></p>
 <div class="section" id="context">
 <h2>Context<a class="headerlink" href="#context" title="Permalink to this headline">¶</a></h2>
 <div class="section" id="purpose">
@@ -601,12 +614,26 @@
 <li><p>Highlight 2</p></li>
 </ul>
 </div>
-<div class="section" id="authors">
-<h3>Authors<a class="headerlink" href="#authors" title="Permalink to this headline">¶</a></h3>
-<p>Author, Affiliation, GitHub alias</p>
-<div class="admonition note">
+<div class="section" id="contributions">
+<h3>Contributions<a class="headerlink" href="#contributions" title="Permalink to this headline">¶</a></h3>
+<div class="section" id="notebook">
+<h4>Notebook<a class="headerlink" href="#notebook" title="Permalink to this headline">¶</a></h4>
+<p>Author (role), Affiliation, GitHub alias</p>
+</div>
+<div class="section" id="dataset-originator-creator">
+<h4>Dataset originator/creator<a class="headerlink" href="#dataset-originator-creator" title="Permalink to this headline">¶</a></h4>
+<p>Institution/Community/Individual (affiliation)</p>
+</div>
+<div class="section" id="dataset-authors">
+<h4>Dataset authors<a class="headerlink" href="#dataset-authors" title="Permalink to this headline">¶</a></h4>
+<p>Institution/Community/Individual (affiliation)</p>
+</div>
+<div class="section" id="dataset-documentation">
+<h4>Dataset documentation<a class="headerlink" href="#dataset-documentation" title="Permalink to this headline">¶</a></h4>
+<span class="target" id="id1"></span><div class="admonition note">
 <p class="admonition-title">Note</p>
 <p><em>Optional: add credits or acknowledgements to data providers or authors of code snippets</em></p>
+</div>
 </div>
 </div>
 </div>
@@ -621,6 +648,13 @@
 </div>
 <div class="section" id="summary">
 <h2>Summary<a class="headerlink" href="#summary" title="Permalink to this headline">¶</a></h2>
+</div>
+<div class="section" id="version">
+<h2>Version<a class="headerlink" href="#version" title="Permalink to this headline">¶</a></h2>
+<ul class="simple">
+<li><p>Notebook:</p></li>
+<li><p>Dataset:</p></li>
+</ul>
 </div>
 </div>
 
@@ -650,7 +684,7 @@
         <div class='prev-next-bottom'>
             
     <a class='left-prev' id="prev-link" href="template-coworking-journalclub.html" title="previous page">Journal Club Call Template</a>
-    <a class='right-next' id="next-link" href="template-environments-modelling.html" title="next page">[Environment]: [Modelling target]</a>
+    <a class='right-next' id="next-link" href="template-environments-modelling.html" title="next page">[Modelling target]</a>
 
         </div>
         
