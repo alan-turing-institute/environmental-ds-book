@@ -7,6 +7,6 @@ Every release of the source code repository is archived with a DOI: **TBA**
 
 You can use this DOI to cite anything in the source code (including code and calculations in the notebooks that comprise each chapter).
 
-Alternatively, you can cite the text of individual chapters by linking directly to the URL, for example:
+Alternatively, you can cite the individual chapters or notebooks by linking directly to the URL, for example:
 
-> Coca-Castro, Alejandro. (2021, July 1). *Tree crown detection*, **The Enviromental AI Book**, https://acocac.github.io/environmental-ai-book/forest/modelling/forest-modelling-treecrown.html
+> Alejandro Coca-Castro, Matt Allen, 2021 *Tree crown detection (The Enviromental AI Book). https://acocac.github.io/environmental-ai-book/forest/modelling/forest-modelling-treecrown_deepforest.html Online; accessed Mon Nov 01 2021
