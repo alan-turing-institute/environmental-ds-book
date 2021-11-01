@@ -9,4 +9,4 @@ You can use this DOI to cite anything in the source code (including code and cal
 
 Alternatively, you can cite the individual chapters or notebooks by linking directly to the URL, for example:
 
-> Alejandro Coca-Castro, Matt Allen, 2021 *Tree crown detection (The Enviromental AI Book). https://acocac.github.io/environmental-ai-book/forest/modelling/forest-modelling-treecrown_deepforest.html Online; accessed Mon Nov 01 2021
+> Alejandro Coca-Castro, Matt Allen, 2021 **Tree crown detection (The Enviromental AI Book)**. https://acocac.github.io/environmental-ai-book/forest/modelling/forest-modelling-treecrown_deepforest.html Online; accessed Mon Nov 01 2021
