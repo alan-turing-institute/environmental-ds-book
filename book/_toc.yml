@@ -45,7 +45,7 @@ parts:
       title: Sensors
       sections:
       - file: urban/sensors/urban-sensors-ukv
-        title: Met Office UKV high-resolution
+        title: UKV high-resolution (Met Office)
     - file: urban/urban-modelling
       title: Modelling
   - file: wildfires/wildfires-overview
@@ -55,7 +55,7 @@ parts:
       title: Sensors
       sections:
       - file: wildfires/sensors/wildfires-sensors-modis
-        title: MODIS
+        title: MOD021KM and FIRMS (NASA)
     - file: wildfires/wildfires-modelling
       title: Modelling
 - caption: Community
