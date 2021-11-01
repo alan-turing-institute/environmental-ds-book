@@ -58,12 +58,6 @@ parts:
         title: MODIS
     - file: wildfires/wildfires-modelling
       title: Modelling
-- caption: Digital Twins
-  chapters:
-  - file: digitaltwins/digitaltwins-overview
-    title: Overview
-  - file: digitaltwins/digitaltwins-concepts
-    title: Concepts
 - caption: Community
   chapters:
   - file: community/coworking
