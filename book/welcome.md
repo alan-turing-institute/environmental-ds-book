@@ -5,3 +5,7 @@ _The Environmental AI_ book is a **living**, **free** and **open** online docume
 :::{note}
 Check out the content pages bundled with this book to see more!
 :::
+
+**TODO**
+- Include attractive graph
+- Point to the material and examples
