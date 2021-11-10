@@ -128,3 +128,4 @@ dmypy.json
 
 # OS dependent metadata files
 .DS_Store
+/forest/sensors/forest-sensors-fluxnet.ipynb
