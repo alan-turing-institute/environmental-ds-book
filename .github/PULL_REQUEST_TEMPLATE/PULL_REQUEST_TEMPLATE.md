@@ -1,5 +1,10 @@
 <!--- Provide a general summary of your changes in the Title above -->
 
+## Before review
+- [ ] Work in progress
+- [ ] Ready for review
+- [ ] Need help!
+
 ## Description
 <!--- Describe your changes in detail -->
 
@@ -11,8 +16,6 @@
 <!--- Please describe in detail how you tested your changes. -->
 <!--- Include details of your testing environment, tests ran to see how -->
 <!--- your change affects other areas of the code, etc. -->
-
-## Screenshots (if appropriate):
 
 ## Types of changes
 <!--- What types of changes does your code introduce? Put an `x` in all the boxes that apply: -->
