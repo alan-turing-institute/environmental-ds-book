@@ -6,7 +6,7 @@
 
 # The Environmental AI book
 
-A living, comunity-driven and open online resource to showcase and increase the awareness of open-source tools for collaborative, reproducible and transparent Environmental Data Science.
+A **living**, **open** and **community-driven** online resource to showcase and increase the awareness of open-source tools for collaborative, reproducible and transparent Environmental Data Science.
 
 | Information | Links |
 | :--- | :--- |
