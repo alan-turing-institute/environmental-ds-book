@@ -6,7 +6,7 @@
 
 # The Environmental AI book
 
-The Environmental AI Book is an online, interactive textbook on fundamentals and use cases of applied AI for environmental studies.
+A living, comunity-driven and open online resource to showcase and increase the awareness of open-source tools for collaborative, reproducible and transparent Environmental Data Science.
 
 | Information | Links |
 | :--- | :--- |
