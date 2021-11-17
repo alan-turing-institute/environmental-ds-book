@@ -20,7 +20,7 @@ jobs:
         python-version: 3.8
     - name: Install dependencies
       run: |
-        conda install -f environment.yaml
+        $CONDA/bin/conda env update -f environment.yml -n base
     # Build the book
     - name: Build the book
       run: |
