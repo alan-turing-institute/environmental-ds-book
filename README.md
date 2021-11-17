@@ -6,7 +6,12 @@
 
 The Environmental AI Book is an online, interactive textbook on fundamentals and use cases of applied AI for environmental studies.
 
-To view the book online, go [here](https://acocac.github.io/environmental-ai-book).
+| Information | Links |
+| :--- | :--- |
+| **Project** | [![Read the book](https://img.shields.io/badge/read-the%20book-blue.svg)](https://acocac.github.io/environmental-ai-book)  |
+| **News** | [![Twitter Follow](https://img.shields.io/twitter/follow/EnvAIBook?style=social)](https://twitter.com/EnvAIBook)  |
+| **Chat** | [![GitHub issues](https://img.shields.io/github/issues/acocac/environmental-ai-book)](https://github.com/acocac/environmental-ai-book/issues) [![GitHub pull requests](https://img.shields.io/github/issues-pr/acocac/environmental-ai-book)](https://github.com/acocac/environmental-ai-book/pulls) |
+| **Build** | [![GitHub Pages build](https://github.com/acocac/environmental-ai-book/actions/workflows/deploy.yml/badge.svg?branch=master)](https://github.com/acocac/environmental-ai-book/actions/workflows/deploy.yml)
 
 ## Contributors
 
@@ -20,4 +25,4 @@ The project thanks the [OLS-4 training programme](https://openlifesci.org/ols-4/
 
 This project is created using the excellent open source [Jupyter Book project](https://jupyterbook.org/) and the [executablebooks/cookiecutter-jupyter-book template](https://github.com/executablebooks/cookiecutter-jupyter-book).
 
-We also acknowledge the template of `community-handbook` guide, in particular the `coworking` section provided by [the Turing Way project](https://github.com/alan-turing-institute/the-turing-way). 
+We also acknowledge the template of `README` and `community-handbook` guide, in particular the `coworking` section provided by [the Turing Way project](https://github.com/alan-turing-institute/the-turing-way). 
