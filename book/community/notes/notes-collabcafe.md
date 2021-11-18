@@ -7,15 +7,15 @@ tags: environmental-ai, collaboration-cafe
 
 # _The Environmental AI_ ⛰ 🌳 🏙️ ❄️ 🔥 🌊  online Collaboration Cafe 
 
-## 26 October 2021 | TBC
+## 21 November 2021 | FAIR data in Environmental Science
 
 Thank you for joining the _The Environmental AI_'s online Collaboration Cafe! 
 
 We're delighted to have you here ☕ ✨ 🍰
 
-**When?** 26 October 2021, 14:00 - 16:00 UTC ([see in your time zone](https://arewemeetingyet.com/London/2021-08-24/14:00))
+**When?** 21 November 2021, 14:00 - 16:00 UTC ([see in your time zone](https://arewemeetingyet.com/London/2021-08-24/14:00))
 
-**Next call:** 30 November 2021
+**Next call:** 25 January 2022
 
 **What?** *The Environmental AI is a **community aiming to learn and discuss about good research practices to use existing AI and data science solutions to a better understanding of the planet earth across multiple environmental settings**. 
 [Collaboration Cafes](https://the-turing-way.netlify.app/community-handbook/coworking/coworking-collabcafe.html) are **online coworking calls** that engage anyone interested in learning and discussing about relevant themes in AI and data science to environmental studies*.
@@ -37,12 +37,11 @@ https://turing-uk.zoom.us/j/6779579342?pwd=L25scnhXUUNmVjFsc0hRWTAzTVJ1dz09
 
 ### Sign up below
 
-**Name + Break Ice Question + an emoji to represent it ([emoji cheatsheet](https://github.com/ikatyang/emoji-cheat-sheet/blob/master/README.md))**
+**Name + Break ice question + an emoji to represent it ([emoji cheatsheet](https://github.com/ikatyang/emoji-cheat-sheet/blob/master/README.md))**
 
 *(Remember that this is a public document. You can use a pseudonym if you'd prefer.)*
 ==*If you are new to HackMD, please see this document for a short guide (right click, open in a new window): [https://hackmd.io/@turingway/hackmd-guide](https://hackmd.io/@turingway/hackmd-guide).*==
 
-* 
 * 
 
 ### Conversation Starters
@@ -50,12 +49,11 @@ https://turing-uk.zoom.us/j/6779579342?pwd=L25scnhXUUNmVjFsc0hRWTAzTVJ1dz09
 *Advertise and promote your event or anything exciting you're working on.* ✨
 
 * 
-* 
 
 ## Agenda
 
 
-### Shared clock/timer
+### Shared clock/timer[]]
 
 https://cuckoo.team/environmental-ai
 
@@ -81,26 +79,80 @@ https://cuckoo.team/environmental-ai
 *Topics for breakout / Names*
 
 * 
-* 
 
 ### Notes and questions
 
-*  
-*  
+* 
 
 ### Request for reviews!
 
-*  
 * 
 
 ### Feedback at the end of the call
 
 * 
-* 
 
 ----
 
 # Notes from the last call: 
+
+## Archive: 26 October 2021 - Reproducibility in Environmental Science
+
+**Name + Share a song that expresses your personality + an emoji to represent it ([emoji cheatsheet](https://github.com/ikatyang/emoji-cheat-sheet/blob/master/README.md))**
+
+* Alejandro + Should stay or Should I go (The Clash) + 🧳
+* Sam + Wish you were here (Pink Floyd) 
+* Matt - BBC Grandstand Theme - :horse_racing:
+
+### Conversation Starters
+
+*Advertise and promote your event or anything exciting you're working on.* ✨
+
+* EGU22 session was accepted, [Bridging the spatial scales, from surface sensors to satellite sensors: Innovative approaches towards the construction of Earth’s digital twin](https://meetingorganizer.copernicus.org/EGU22/session/43565). Deadlines:
+    * Abstract submission deadline: 12 January 2022, 13:00 CET
+    * Travel Support application deadline: 1 December 2021
+
+### Breakout rooms: Topic proposals
+
+*If you have an idea for a topic you'd like to discuss in a breakout room, please add it below and put your name next to it. If you like one of the topics that are already suggested, please add your name next to that one. Teamwork makes the dream work. For more information about breakout rooms see [the description on GitHub](https://github.com/alan-turing-institute/the-turing-way/blob/master/project_management/online-collaboration-cafe.md#breakout-rooms).*
+
+*Topics for breakout / Names*
+
+* Matt, making a reproducible GitHub code for his MRes dissertation
+* Alejandro, preparing contributions guidelines for the Environmentel AI book 
+* Sam J, exploration of resources for reproducibility and feedback on Matt and Alejandro's topics
+
+### Notes and questions
+
+* Sam J:
+    *  [The Turing Way](https://the-turing-way.netlify.app/welcome), a great resource to guide Environmental scientist in reproducible research.
+    *  [Cornell Dataset Description](https://cornell.app.box.com/v/ReadmeTemplate) a good starting template for dataset documentation!
+    *  Standards in data catalogues, e.g. [STAC](https://stacspec.org) (but it isn't mature)
+* Alejandro:
+    * Zenodo:
+        * It is great to keep your sample data (up to 50 GB).
+    * notebooksharing.space
+        * A nice resource to share notebooks with interactive plotting (up to 10Mb). However, it doesn't allow track changes as [ReviewNB](https://www.reviewnb.com) does. 
+    * Contributors guidelines for the EnvAI book
+        * Sam suggests example environmental python packages with links to notebooks (e.g. hvplot, geopandas etc.)
+        * Minimal publishable version guidelines e.g. Binder
+        * Use external links for general versioning principles e.g. how to pull request in Github
+        * Provide examples how to create lock environments 
+        * Section of tools for sharing notebooks e.g. ReviewNB, notebooksharing.space
+* Matt
+    * Publishing reproducible code for environmental science
+        * It can be more important that the process can be reproduced rather than accuracies to the nearest 0.01%
+        * Use a subset of data to demonstrate the tool where the owners aren't happy to share the whole thing - training & inference
+        * In env science a visual demonstration of the results can be more useful than a commandline readout of accuracy
+        * Suggest sensible ranges for hyperparameters in the documentation
+
+### Request for reviews!
+
+* **Sam J**: reviewers need for SEVIRI wildfire data notebook of the EnvAI book, see [PR#12](https://github.com/acocac/environmental-ai-book/pull/12)
+
+### Feedback at the end of the call
+
+* None
 
 ## Archive: 28 September - Data preprocessing
 

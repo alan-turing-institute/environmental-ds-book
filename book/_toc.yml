@@ -14,16 +14,13 @@ parts:
     sections:
     - file: forest/forest-sensors
       title: Sensors
-      sections:
-      - file: forest/sensors/forest-sensors-fluxnet
-        title: FluxNet
     - file: forest/forest-modelling
       title: Modelling
       sections:
       - file: forest/modelling/forest-modelling-treecrown_deepforest
         title: Tree crown (DeepForest)
-      - file: forest/modelling/forest-modelling-treecrown_detectree
-        title: Tree crown (Detectree)
+      - file: forest/modelling/forest-modelling-treecrown_detectreeRGB
+        title: Tree crown (DetectreeRGB)
   - file: ocean/ocean-overview
     title: Ocean
     sections:
@@ -47,8 +44,8 @@ parts:
     - file: urban/urban-sensors
       title: Sensors
       sections:
-      - file: urban/sensors/urban-sensors-ukv
-        title: Met Office UKV high-resolution
+      - file: urban/sensors/urban-sensors-climate_ukv
+        title: UKV high-resolution (Met Office)
     - file: urban/urban-modelling
       title: Modelling
   - file: wildfires/wildfires-overview
@@ -57,16 +54,10 @@ parts:
     - file: wildfires/wildfires-sensors
       title: Sensors
       sections:
-      - file: wildfires/sensors/wildfires-sensors-modis
-        title: MODIS
+      - file: wildfires/sensors/wildfires-sensors-fires_modis
+        title: MOD021KM and FIRMS (NASA)
     - file: wildfires/wildfires-modelling
       title: Modelling
-- caption: Digital Twins
-  chapters:
-  - file: digitaltwins/digitaltwins-overview
-    title: Overview
-  - file: digitaltwins/digitaltwins-concepts
-    title: Concepts
 - caption: Community
   chapters:
   - file: community/coworking

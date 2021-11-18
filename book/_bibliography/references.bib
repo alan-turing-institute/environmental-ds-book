@@ -39,7 +39,6 @@ topic = {dt-experimental}
 }
 
 # Others
-
 @misc{HBR2019Belonging,
 	author = {Carr, Evan W. and Reece, Andrew and Kellerman, Gabriella Rosen and Robichaux, Alexi},
 	title = {{The Value of Belonging at Work}},
@@ -58,4 +57,103 @@ topic = {dt-experimental}
 	month = {Apr},
 	publisher = {Lifehack},
 	url = {https://www.lifehack.org/articles/productivity/the-pomodoro-technique-is-it-right-for-you.html}
+}
+
+# Demonstrators
+
+## forest
+
+### forest-modelling-treecrown_deepforest
+
+@article{Weinstein2020_MEE,
+   abstract = {Abstract Remote sensing of forested landscapes can transform the speed, scale and cost of forest research. The delineation of individual trees in remote sensing images is an essential task in forest analysis. Here we introduce a new Python package, DeepForest that detects individual trees in high resolution RGB imagery using deep learning. While deep learning has proven highly effective in a range of computer vision tasks, it requires large amounts of training data that are typically difficult to obtain in ecological studies. DeepForest overcomes this limitation by including a model pretrained on over 30 million algorithmically generated crowns from 22 forests and fine-tuned using 10,000 hand-labelled crowns from six forests. The package supports the application of this general model to new data, fine tuning the model to new datasets with user labelled crowns, training new models and evaluating model predictions. This simplifies the process of using and retraining deep learning models for a range of forests, sensors and spatial resolutions. We illustrate the workflow of DeepForest using data from the National Ecological Observatory Network, a tropical forest in French Guiana, and street trees from Portland, Oregon.},
+   author = {Ben G Weinstein and Sergio Marconi and Mélaine Aubry-Kientz and Gregoire Vincent and Henry Senyondo and Ethan P White},
+   doi = {https://doi.org/10.1111/2041-210X.13472},
+   issue = {12},
+   journal = {Methods in Ecology and Evolution},
+   keywords = {NEON,RGB,crown delineation,deep learning,forests,remote sensing,tree crowns},
+   pages = {1743-1751},
+   title = {DeepForest: A Python package for RGB deep learning tree crown delineation},
+   volume = {11},
+   url = {https://besjournals.onlinelibrary.wiley.com/doi/abs/10.1111/2041-210X.13472},
+   year = {2020},
+   topic = {forest-modelling-treecrown_deepforest}
+}
+
+@article{Weinstein2020_EI,
+   abstract = {Tree crown detection is a fundamental task in remote sensing for forestry and ecosystem ecology. While many individual tree segmentation algorithms have been proposed, the development and testing of these algorithms is typically site specific, with few methods evaluated against data from multiple forest types simultaneously. This makes it difficult to determine the generalization of proposed approaches, and limits tree detection at broad scales. Using data from the National Ecological Observatory Network, we extend a recently developed deep learning approach to include data from a range of forest types to determine whether information from one forest can be used for tree detection in other forests, and explore the potential for building a universal tree detection algorithm. We find that the deep learning approach works well for overstory tree detection across forest conditions. Performance was best in open oak woodlands and worst in alpine forests. When models were fit to one forest type and used to predict another, performance generally decreased, with better performance when forests were more similar in structure. However, when models were pretrained on data from other sites and then fine-tuned using a relatively small amount of hand-labeled data from the evaluation site, they performed similarly to local site models. Most importantly, a model fit to data from all sites performed as well or better than individual models trained for each local site.},
+   author = {Ben G Weinstein and Sergio Marconi and Stephanie A Bohlman and Alina Zare and Ethan P White},
+   doi = {https://doi.org/10.1016/j.ecoinf.2020.101061},
+   issn = {1574-9541},
+   journal = {Ecological Informatics},
+   keywords = {Airborne LiDAR,Object detection,RGB deep learning,Tree crown detection},
+   pages = {101061},
+   title = {Cross-site learning in deep learning RGB tree crown detection},
+   volume = {56},
+   url = {https://www.sciencedirect.com/science/article/pii/S157495412030011X},
+   year = {2020},
+   topic = {forest-modelling-treecrown_deepforest}
+}
+
+@article{Weinstein2019,
+   abstract = {Remote sensing can transform the speed, scale, and cost of biodiversity and forestry surveys. Data acquisition currently outpaces the ability to identify individual organisms in high resolution imagery. We outline an approach for identifying tree-crowns in RGB imagery while using a semi-supervised deep learning detection network. Individual crown delineation has been a long-standing challenge in remote sensing and available algorithms produce mixed results. We show that deep learning models can leverage existing Light Detection and Ranging (LIDAR)-based unsupervised delineation to generate trees that are used for training an initial RGB crown detection model. Despite limitations in the original unsupervised detection approach, this noisy training data may contain information from which the neural network can learn initial tree features. We then refine the initial model using a small number of higher-quality hand-annotated RGB images. We validate our proposed approach while using an open-canopy site in the National Ecological Observation Network. Our results show that a model using 434,551 self-generated trees with the addition of 2848 hand-annotated trees yields accurate predictions in natural landscapes. Using an intersection-over-union threshold of 0.5, the full model had an average tree crown recall of 0.69, with a precision of 0.61 for the visually-annotated data. The model had an average tree detection rate of 0.82 for the field collected stems. The addition of a small number of hand-annotated trees improved the performance over the initial self-supervised model. This semi-supervised deep learning approach demonstrates that remote sensing can overcome a lack of labeled training data by generating noisy data for initial training using unsupervised methods and retraining the resulting models with high quality labeled data.},
+   author = {Ben G Weinstein and Sergio Marconi and Stephanie Bohlman and Alina Zare and Ethan White},
+   doi = {10.3390/rs11111309},
+   issn = {2072-4292},
+   issue = {11},
+   journal = {Remote Sensing},
+   title = {Individual Tree-Crown Detection in RGB Imagery Using Semi-Supervised Deep Learning Neural Networks},
+   volume = {11},
+   url = {https://www.mdpi.com/2072-4292/11/11/1309},
+   year = {2019},
+   topic = {forest-modelling-treecrown_deepforest}
+}
+
+## polar
+
+### polar-modelling-icenet
+
+@article{Andersson2021,
+   abstract = {Anthropogenic warming has led to an unprecedented year-round reduction in Arctic sea ice extent. This has far-reaching consequences for indigenous and local communities, polar ecosystems, and global climate, motivating the need for accurate seasonal sea ice forecasts. While physics-based dynamical models can successfully forecast sea ice concentration several weeks ahead, they struggle to outperform simple statistical benchmarks at longer lead times. We present a probabilistic, deep learning sea ice forecasting system, IceNet. The system has been trained on climate simulations and observational data to forecast the next 6 months of monthly-averaged sea ice concentration maps. We show that IceNet advances the range of accurate sea ice forecasts, outperforming a state-of-the-art dynamical model in seasonal forecasts of summer sea ice, particularly for extreme sea ice events. This step-change in sea ice forecasting ability brings us closer to conservation tools that mitigate risks associated with rapid sea ice loss.},
+   author = {Tom R Andersson and J Scott Hosking and María Pérez-Ortiz and Brooks Paige and Andrew Elliott and Chris Russell and Stephen Law and Daniel C Jones and Jeremy Wilkinson and Tony Phillips and James Byrne and Steffen Tietsche and Beena Balan Sarojini and Eduardo Blanchard-Wrigglesworth and Yevgeny Aksenov and Rod Downie and Emily Shuckburgh},
+   doi = {10.1038/s41467-021-25257-4},
+   issn = {2041-1723},
+   issue = {1},
+   journal = {Nature Communications},
+   pages = {5124},
+   title = {Seasonal Arctic sea ice forecasting with probabilistic deep learning},
+   volume = {12},
+   url = {https://doi.org/10.1038/s41467-021-25257-4},
+   year = {2021},
+   topic = {polar-modelling-icenet}
+}
+
+## urban
+
+### urban-sensors-climate_ukv
+
+@misc{MetOffice,
+ author = {McCaie, Theo},
+ editor = {{Met Office Informatics Lab}},
+ title = {Met Office and partners offer data and compute platform for COVID-19 researchers},
+ url = {https://medium.com/informatics-lab/met-office-and-partners-offer-data-and-compute-platform-for-covid-19-researchers-83848ac55f5f},
+ lastchecked = {27.10.2021},
+ originalyear = {09.04.2020},
+ topic = {urban-sensors-climate_ukv}
+}
+
+## wildfires
+
+### wildfires-sensors-fires_modis
+
+@techreport{firms,
+     title = {{MODIS Collection 6 Active Fire Product User’s Guide Revision B}},
+     author = {Louis Giglio and Wilfrid Schroeder and Joanne V. Hall and Christopher O. Justice},
+     group = {csg},
+     year = {2018},
+     institution = {NASA},
+     Date-Added = {2015-03-01},
+     Date-Modified = {2018-12-01},
+     url = {https://modis-fire.umd.edu/files/MODIS_C6_Fire_User_Guide_B.pdf},
+     topic = {wildfires-sensors-fires_modis}
 }
