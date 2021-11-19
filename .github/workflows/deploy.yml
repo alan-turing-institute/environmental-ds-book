@@ -20,11 +20,11 @@ jobs:
         python-version: 3.8
     - name: Install dependencies
       run: |
-        $CONDA/bin/conda env update -f environment.yml
+        $CONDA/bin/conda env update --file environment.yml --name $ENV_NAME
+        $CONDA/bin/conda list -r --name $ENV_NAME
     - name: Activate environment
       run: |
-        $CONDA/bin/conda init
-        $CONDA/bin/conda activate envai-book
+        source $CONDA/bin/activate $ENV_NAME
     # Build the book
     - name: Build the book
       run: |
