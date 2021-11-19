@@ -23,7 +23,7 @@ jobs:
         $CONDA/bin/conda env update -f environment.yml
     - name: Activate environment
       run: |
-        $CONDA/bin/conda activate envai-book
+        activate envai-book
     # Build the book
     - name: Build the book
       run: |
