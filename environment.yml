@@ -13,11 +13,11 @@ dependencies:
   - intake-xarray
   - bottleneck
   - pooch
-  - pytorch
-  - torchvision
-  - tensorflow
+  - pytorch==1.9.0
+  - torchvision==0.10.0
+  - tensorflow==2.2.0
   - geoviews
-  - iris
+  - iris==3.0.1
   - urllib3
   - opencv
   - pip
