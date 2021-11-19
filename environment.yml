@@ -5,5 +5,23 @@ dependencies:
   - python=3.8
   - jupyter-book
   - jupyterlab
+  - matplotlib
+  - numpy
   - ghp-import
+  - hvplot
+  - intake
+  - intake-xarray
+  - bottleneck
+  - pooch
+  - pytorch
+  - torchvision
+  - tensorflow
+  - geoviews
+  - iris
+  - urllib3
+  - opencv
   - pip
+  - pip:
+      - scikit-image
+      - aiohttp
+      - albumentations
