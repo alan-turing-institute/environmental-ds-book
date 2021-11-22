@@ -7,7 +7,7 @@ tags: environmental-ai, collaboration-cafe
 
 # _The Environmental AI_ ⛰ 🌳 🏙️ ❄️ 🔥 🌊  online Collaboration Cafe 
 
-## 23 November 2021 | FAIR data in Environmental Science
+## 23 November 2021 | FAIR data in Environmental Sciences
 
 Thank you for joining the _The Environmental AI_'s online Collaboration Cafe! 
 
@@ -48,7 +48,8 @@ https://turing-uk.zoom.us/j/6779579342?pwd=L25scnhXUUNmVjFsc0hRWTAzTVJ1dz09
 
 *Advertise and promote your event or anything exciting you're working on.* ✨
 
-* 
+*
+*
 
 ## Agenda
 
