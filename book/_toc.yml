@@ -56,6 +56,8 @@ parts:
       sections:
       - file: wildfires/sensors/wildfires-sensors-fires_modis
         title: MOD021KM and FIRMS (NASA)
+      - file: wildfires/sensors/wildfires-sensors-fires_seviri
+        title: SEVIRI Level 1.5 (EUMESAT)
     - file: wildfires/wildfires-modelling
       title: Modelling
 - caption: Community
