@@ -7,13 +7,13 @@ tags: environmental-ai, collaboration-cafe
 
 # _The Environmental AI_ ⛰ 🌳 🏙️ ❄️ 🔥 🌊  online Collaboration Cafe 
 
-## 30 November 2021 | FAIR data in Environmental Science
+## 23 November 2021 | FAIR data in Environmental Science
 
 Thank you for joining the _The Environmental AI_'s online Collaboration Cafe! 
 
 We're delighted to have you here ☕ ✨ 🍰
 
-**When?** 30 November 2021, 14:00 - 16:00 UTC ([see in your time zone](https://arewemeetingyet.com/London/2021-08-24/14:00))
+**When?** 23 November 2021, 14:00 - 16:00 UTC ([see in your time zone](https://arewemeetingyet.com/London/2021-08-24/14:00))
 
 **Next call:** 25 January 2022
 
@@ -37,12 +37,12 @@ https://turing-uk.zoom.us/j/6779579342?pwd=L25scnhXUUNmVjFsc0hRWTAzTVJ1dz09
 
 ### Sign up below
 
-**Name + Break ice question + an emoji to represent it ([emoji cheatsheet](https://github.com/ikatyang/emoji-cheat-sheet/blob/master/README.md))**
+**Name + What is your recent favorite resource or tool or app or software? + an emoji to represent it ([emoji cheatsheet](https://github.com/ikatyang/emoji-cheat-sheet/blob/master/README.md))**
 
 *(Remember that this is a public document. You can use a pseudonym if you'd prefer.)*
 ==*If you are new to HackMD, please see this document for a short guide (right click, open in a new window): [https://hackmd.io/@turingway/hackmd-guide](https://hackmd.io/@turingway/hackmd-guide).*==
 
-* 
+* Alejandro + _The Turing Way_ + :milky_way: 
 
 ### Conversation Starters
 
