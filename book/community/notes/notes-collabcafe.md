@@ -7,15 +7,15 @@ tags: environmental-ai, collaboration-cafe
 
 # _The Environmental AI_ ⛰ 🌳 🏙️ ❄️ 🔥 🌊  online Collaboration Cafe 
 
-## 23 November 2021 | FAIR data in Environmental Sciences
+## 25 January 2021 | TBC
 
-Thank you for joining the _The Environmental AI_'s online Collaboration Cafe! 
+### Thank you for joining the _The Environmental AI_'s online Collaboration Cafe! 
 
 We're delighted to have you here ☕ ✨ 🍰
 
-**When?** 23 November 2021, 14:00 - 16:00 UTC ([see in your time zone](https://arewemeetingyet.com/London/2021-08-24/14:00))
+**When?** 25 January 2022, 14:00 - 16:00 UTC ([see in your time zone](https://arewemeetingyet.com/London/2021-08-24/14:00))
 
-**Next call:** 25 January 2022
+**Next call:** 22 Febraury 2022
 
 **What?** *The Environmental AI is a **community aiming to learn and discuss about good research practices to use existing AI and data science solutions to a better understanding of the planet earth across multiple environmental settings**. 
 [Collaboration Cafes](https://the-turing-way.netlify.app/community-handbook/coworking/coworking-collabcafe.html) are **online coworking calls** that engage anyone interested in learning and discussing about relevant themes in AI and data science to environmental studies*.
@@ -37,24 +37,22 @@ https://turing-uk.zoom.us/j/6779579342?pwd=L25scnhXUUNmVjFsc0hRWTAzTVJ1dz09
 
 ### Sign up below
 
-**Name + What is your recent favorite resource or tool or app or software? + an emoji to represent it ([emoji cheatsheet](https://github.com/ikatyang/emoji-cheat-sheet/blob/master/README.md))**
+**Name + Icebreaker question + an emoji to represent it ([emoji cheatsheet](https://github.com/ikatyang/emoji-cheat-sheet/blob/master/README.md))**
 
 *(Remember that this is a public document. You can use a pseudonym if you'd prefer.)*
 ==*If you are new to HackMD, please see this document for a short guide (right click, open in a new window): [https://hackmd.io/@turingway/hackmd-guide](https://hackmd.io/@turingway/hackmd-guide).*==
 
-* Alejandro + _The Turing Way_ + :milky_way: 
+* 
 
 ### Conversation Starters
 
 *Advertise and promote your event or anything exciting you're working on.* ✨
 
-*
-*
+* 
 
 ## Agenda
 
-
-### Shared clock/timer[]]
+### Shared clock/timer :timer_clock: 
 
 https://cuckoo.team/environmental-ai
 
@@ -84,18 +82,78 @@ https://cuckoo.team/environmental-ai
 ### Notes and questions
 
 * 
-
+    
 ### Request for reviews!
 
 * 
 
 ### Feedback at the end of the call
 
-* 
+*
 
 ----
 
 # Notes from the last call: 
+
+## Archive: 23 November 2021 | FAIR data in Environmental Sciences
+
+![Illustration of the FAIR principles to show the definition of being Findable, Accessible, Interoperable and Reusable. Source: [The Turing Way: The FAIR Principles](https://the-turing-way.netlify.app/reproducible-research/rdm/rdm-fair.html?highlight=fair)](https://i.imgur.com/f27a9aX.jpg)
+*_The Turing Way_ project illustration by Scriberia. Used under a CC-BY 4.0 licence. DOI: [10.5281/zenodo.3332807](https://doi.org/10.5281/zenodo.3332807).*
+
+**Name + What is your recent favorite resource or tool or app or software? + an emoji to represent it ([emoji cheatsheet](https://github.com/ikatyang/emoji-cheat-sheet/blob/master/README.md))**
+
+* Alejandro + _The Turing Way_ + :milky_way: 
+* Bea + _scivision_ + :koala: 
+
+### Conversation Starters
+
+*Advertise and promote your event or anything exciting you're working on.* ✨
+
+* None
+
+
+### Breakout rooms: Topic proposals
+
+*Topics for breakout / Names*
+
+* Main stage (silent mode)
+    * Bea: working on the submission of her PhD thesis.
+    * Alejandro: 
+        * adding helpful resources about FAIR and example of research repositories for Environmental Sciences.
+        * checking which sample data within the Environmental AI book can be curated in [the Environmental Data Science Zenodo community](https://zenodo.org/communities/the-environmental-ds-community/?page=1&size=20).
+
+### Notes and questions
+
+* Alejandro
+    * Useful resources about FAIR :
+        * [FAIR Cookbook](https://fairplus.github.io/the-fair-cookbook/content/home.html): an online resource for the Life Sciences with recipes to make and keep data FAIR.
+        * [The Turing Way: The FAIR Principles](https://the-turing-way.netlify.app/reproducible-research/rdm/rdm-fair.html?highlight=fair): light introduction to FAIR principles, pointing to key resources in the topic.
+        * [Library Carpentry: FAIR Data and Software](https://librarycarpentry.org/lc-fair-research/aio/index.html): lesson exploring the meaning of FAIR elements. 
+    * Research data platforms:
+        * General
+            * [re3data.org](https://www.re3data.org/): initiative indexing research data platforms by content topic and knowledge domain.
+            * [Stats datacite](https://stats.datacite.org/): dashboard mapping the registration of persistent identifiers (DOIs) for research data and other research outputs.
+        * Environmental science (list of platforms with the highest number of total DOIs registrations according to Stats datacite):
+            * [Global Biodiversity Information Facility](https://www.gbif.org/)
+            * [FAO Global Information System of the International Treaty on Plant Genetic Resources for Food and Agriculture (PGRFA)](https://ssl.fao.org/glis/)
+            * [PANGAEA](https://www.pangaea.de/): earth system research.
+            * [Environmental Data Initiative (EDI)](https://portal.edirepository.org/nis/home.jsp): platform suited to curate environmental data, includes code snippets to import the data across multiple programming languages (python, R).
+            
+    * Other interesting FAIR-driven platforms:
+        * [ROHub](https://reliance.rohub.org/): research object management platform supporting the preservation and lifecycle management of scientific investigations, research campaigns and operational processes. It implements FAIR digital objects and specific metadata for data-cube in Earth Science. 
+
+    * Challenges of FAIR data repositories for Environmental sciences (ES):
+        * ES is structured as tabular data collected in the field or laboratory (see further discussion in [BEXIS2](https://bdj.pensoft.net/article/72901/)).
+        * FAIR-enabled data available could be daunting for many ES researchers and organisations due to the lack of awareness, efficient data management tools, infrastructure and skills [see further discussion in BEXIS2](https://bdj.pensoft.net/article/72901/)).
+        * Spatio-temporal (data cubes) > this seems to be adressed by novel research object management platforms such as [ROHub](https://reliance.rohub.org/).
+    
+### Request for reviews!
+
+* None
+
+### Feedback at the end of the call
+
+* Alejandro: Few participants in this particular collaboration cafe. We should restructure the promotion strategy, proposing new topics and/or changing the format for coming collaborations cafes in 2022 :face_with_monocle:. 
 
 ## Archive: 26 October 2021 - Reproducibility in Environmental Science
 
@@ -114,8 +172,6 @@ https://cuckoo.team/environmental-ai
     * Travel Support application deadline: 1 December 2021
 
 ### Breakout rooms: Topic proposals
-
-*If you have an idea for a topic you'd like to discuss in a breakout room, please add it below and put your name next to it. If you like one of the topics that are already suggested, please add your name next to that one. Teamwork makes the dream work. For more information about breakout rooms see [the description on GitHub](https://github.com/alan-turing-institute/the-turing-way/blob/master/project_management/online-collaboration-cafe.md#breakout-rooms).*
 
 *Topics for breakout / Names*
 
@@ -171,6 +227,7 @@ https://cuckoo.team/environmental-ai
 * We have a fresh interactive notebook in the Environmental AI Book :earth_asia::books: The notebook focuses on detecting tree crowns using the *DeepForest* model :deciduous_tree:. Have a look at the rendered version [here](https://acocac.github.io/environmental-ai-book/forest/modelling/forest-modelling-treecrown_deepforest.html). Other recent community contributions are the exploration of sensor data, [Met Office UKV high-resolution atmosphere model data for urban settings](https://acocac.github.io/environmental-ai-book/urban/sensors/urban-sensors-ukv.html) and [MODIS satellite imagery and wildfire data](https://acocac.github.io/environmental-ai-book/wildfires/sensors/wildfires-sensors-modis.html).
 
 ### Breakout rooms: Topic proposals
+
 *Topics for breakout / Names*
 
 * Sam A. Manufacture Urban Data in GIS format
