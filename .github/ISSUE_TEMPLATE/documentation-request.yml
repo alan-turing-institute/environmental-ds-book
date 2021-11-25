@@ -1,0 +1,27 @@
+name: "\U0001F589 Documentation Improvement"
+description: Create a report to help us improve the documentation. Alternatively you can just open a pull request with the suggested change.
+title: "[DOC]: "
+labels: ["documentation"]
+body:
+  - type: markdown
+    attributes:
+      value: |
+        Thanks for taking the time to log a documentation Improvement!
+  - type: textarea
+    id: context
+    attributes:
+      label: Describe the issue linked to the documentation
+      description: Please provide further context of the issue.
+      placeholder: Tell us enough context
+      value: "Describe the issues with the documentation"
+    validations:
+      required: true
+  - type: textarea
+    id: fixes
+    attributes:
+      label: Suggest a potential alternative/fix
+      description: Please provide further context of a potential alternative/fix.
+      placeholder: Tell us enough context
+      value: "Where possible point to examples to a potential alternative/fix"
+    validations:
+      required: false
