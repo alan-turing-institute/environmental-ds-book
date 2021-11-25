@@ -20,8 +20,8 @@ body:
     attributes:
       label: What is the demostrator about?
       description: Please provide further context of the pourpose of the notebook.
-      placeholder: Tell us enough context (data sources (and links), packages, codebase, etc)
-      value: |
+      placeholder: Tell us enough context
+      value: "Where possible describe data sources (and links), packages, codebase, etc"
     validations:
       required: true
   - type: dropdown
