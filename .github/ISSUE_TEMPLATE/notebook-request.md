@@ -1,7 +1,7 @@
 ---
 name: "\U0001F4D7 Notebook Idea"
 about: Log a notebook idea!
-title: '[NB]'
+title: '[NBI]'
 labels: ["notebook","idea"]
 ---
 
