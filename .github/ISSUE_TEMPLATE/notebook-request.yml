@@ -49,5 +49,5 @@ body:
           required: false
         - label: The proposed notebook uses open-source packages
           required: false
-        - label: The proposed notebook is associated to existing publication(s).
+        - label: The proposed notebook is associated to existing publication(s)
           required: false
