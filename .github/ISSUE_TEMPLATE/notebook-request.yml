@@ -1,0 +1,51 @@
+name: "\U0001F4D7 Notebook Request"
+description: Log a notebook idea/
+title: "[NB]: "
+labels: ["demonstrator", "notebook"]
+body:
+  - type: markdown
+    attributes:
+      value: |
+        Thanks for taking the time to log a demonstrator/notebook idea!
+  - type: input
+    id: contact
+    attributes:
+      label: Contact Details
+      description: How can we get in touch with you if we need more info?
+      placeholder: ex. email@example.com
+    validations:
+      required: false
+  - type: textarea
+    id: context
+    attributes:
+      label: What is the demostrator about?
+      description: Please provide further context of the pourpose of the notebook.
+      placeholder: Tell us enough context
+      value: "!"
+    validations:
+      required: true
+  - type: dropdown
+    id: Component
+    attributes:
+      label: ds-component
+      description: Which data science component is targeted?
+      options:
+        - Sensor visualisation
+        - Preprocessing
+        - Modelling
+        - Post-processing
+        - Other
+    validations:
+      required: true
+  - type: checkboxes
+    id: nb-checklist
+    attributes:
+      label: Minimal setup for publication
+      description: Please check the potential of the notebook to be released
+      options:
+        - label: Input data, pipeline and/or model are available online with license/citation
+          required: true
+        - label: Does the proposed notebook reusing existing codebase?
+          required: true
+        - label: Does the notebook use open-source packages?
+          required: true
