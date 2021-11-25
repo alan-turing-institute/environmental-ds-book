@@ -1,4 +1,4 @@
-name: "\U+270F Documentation Improvement"
+name: "\U0001F58A Documentation Improvement"
 description: Create a report to help us improve the documentation. Alternatively you can just open a pull request with the suggested change.
 title: "[DOC]: "
 labels: ["documentation","improvement"]
