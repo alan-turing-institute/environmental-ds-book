@@ -12,4 +12,4 @@ labels: ["documentation","improvement"]
 <!--- A description of what the improvement is -->
 
 ## Additional information 
-<!--- Add any other context about the improvement here. For instance, how can we get in touch with you if we need more info? -->
+<!--- Add any other context about the improvement here -->

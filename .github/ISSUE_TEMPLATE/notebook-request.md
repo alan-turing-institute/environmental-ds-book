@@ -12,8 +12,8 @@ labels: ["notebook","idea"]
 <!--- Provide further context of the purpose of the notebook -->
 <!--- Where possible describe data sources (and links), packages, codebase, etc -->
 
-## Data Science Component**
-<!--- Mark a single option applicable for the notebook. -->
+## Data Science Component
+<!--- Mark a single option applicable for the notebook -->
 <!--- If other, please specify -->
 
 - [ ] Sensor visualisation
@@ -23,8 +23,8 @@ labels: ["notebook","idea"]
 - [ ] Other: 
 
 ## Checklist:
-<!--- The checklist will allow us having an early diagnosis of the feasibility of the notebook. -->
-<!--- Go over all the following points, and put an `x` in all the boxes that apply. -->
+<!--- The checklist will allow us having an early diagnosis of the feasibility of the notebook -->
+<!--- Go over all the following points, and put an `x` in all the boxes that apply -->
 <!--- If you're unsure about any of these, don't hesitate to ask. We're here to help! -->
 
 - [ ] Input data, pipeline and/or model are public with license/citation
@@ -33,4 +33,4 @@ labels: ["notebook","idea"]
 - [ ] The proposed notebook is associated to existing publication(s)
 
 ## Additional information 
-<!--- Add any other context about the notebook here. For instance, how can we get in touch with you if we need more info? -->
+<!--- Add any other context about the notebook here -->

@@ -10,12 +10,12 @@
 
 ## Motivation and Context
 <!--- Why is this change required? What problem does it solve? -->
-<!--- If it fixes an open issue, please link to the issue here. -->
+<!--- If it fixes an open issue, please link to the issue here -->
 
 ## How has this been tested?
-<!--- Please describe in detail how you tested your changes. -->
+<!--- Please describe in detail how you tested your changes -->
 <!--- Include details of your testing environment, tests ran to see how -->
-<!--- your change affects other areas of the code, etc. -->
+<!--- your change affects other areas of the code, etc -->
 
 ## Types of changes
 <!--- What types of changes does your code introduce? Put an `x` in all the boxes that apply: -->
@@ -27,7 +27,7 @@
 - [ ] Feature change (upgrade version)
 
 ## Checklist:
-<!--- Go over all the following points, and put an `x` in all the boxes that apply. -->
+<!--- Go over all the following points, and put an `x` in all the boxes that apply -->
 <!--- If you're unsure about any of these, don't hesitate to ask. We're here to help! -->
 - [ ] My code follows the code style of this project: [Python](https://docs.qmk.fm/#/coding_conventions_python)
 - [ ] I have read the [CONTRIBUTING](CONTRIBUTING.md) doc
@@ -38,4 +38,4 @@
 - [ ] I have tested the changes and verified that they work and don't break anything (as well as I can manage)
 
 ## Additional information 
-<!--- Add any other context about the notebook here. For instance, how can we get in touch with you if we need more info? -->
+<!--- Add any other context about the PR here -->
