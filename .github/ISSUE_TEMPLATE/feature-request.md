@@ -15,7 +15,7 @@ labels: ["feature","request"]
 ## Describe the solution you'd like
 <!--- A clear and concise description of what you want to happen (where possible provide a link to a working version of the feature). Add any considered drawbacks -->
 
-## Describe alternatives you've considered**
+## Describe alternatives you've considered
 <!--- A clear and concise description of any alternative solutions or features you've considered -->
 
 ## Additional information
