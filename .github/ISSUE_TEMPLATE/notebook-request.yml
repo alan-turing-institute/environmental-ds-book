@@ -1,12 +1,12 @@
 name: "\U0001F4D7 Notebook Request"
-description: Log a notebook idea/
+description: Log a notebook idea!
 title: "[NB]: "
 labels: ["demonstrator", "notebook"]
 body:
   - type: markdown
     attributes:
       value: |
-        Thanks for taking the time to log a demonstrator/notebook idea!
+        Thanks for taking the time to log a notebook idea!
   - type: input
     id: contact
     attributes:
@@ -18,7 +18,7 @@ body:
   - type: textarea
     id: context
     attributes:
-      label: What is the demostrator about?
+      label: What is the notebook about?
       description: Please provide further context of the pourpose of the notebook.
       placeholder: Tell us enough context
       value: "Where possible describe data sources (and links), packages, codebase, etc"
@@ -45,9 +45,9 @@ body:
       options:
         - label: Input data, pipeline and/or model are public with license/citation
           required: false
-        - label: Will the proposed notebook reuse existing codebase?
+        - label: The proposed notebook reuses existing codebase
           required: false
-        - label: Will the notebook use open-source packages?
+        - label: The proposed notebook uses open-source packages
           required: false
-        - label: Are any existing publications associated to the notebook?
+        - label: The proposed notebook is associated to existing publication(s).
           required: false
