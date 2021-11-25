@@ -5,28 +5,24 @@ title: 'Bug: '
 
 ---
 
-**Describe the bug**
+<!--- Thanks for taking the time to report a bug! -->
+<!--- Please go through the sections below -->
 
-A description of what the bug is.
+## Describe the bug
+<!--- A description of what the bug is -->
 
-**How To Reproduce**
-
-Steps to reproduce the behavior:
+## How To Reproduce
+<!--- Steps to reproduce the behavior: -->
 1.
 2.
- 
-**Expected behavior**
 
-A description of what you expected to happen.
+## Expected behaviour
+<!--- A description of what you expected to happen -->
 
-**Environment (generate for Linux, macOS and 64-bit Windows)**
+## Environment (generate for Linux, macOS and 64-bit Windows)
+<!--- The lines below show how to export a reproducible conda environment. Further info [here](https://pythonspeed.com/articles/conda-dependency-management/) -->
+<!--- `$ conda install -c conda-forge conda-lock` -->
+<!--- `$ conda-lock` -->
 
-The lines below show how to export a reproducible conda environment. Further info [here](https://pythonspeed.com/articles/conda-dependency-management/).
-
-`$ conda install -c conda-forge conda-lock`
-
-`$ conda-lock`
-
-**Additional information & screenshots**
-
-Add any other context or screenshots about the problem here.
+## Additional information
+<!--- Add any other context or screenshots about the problem here -->
