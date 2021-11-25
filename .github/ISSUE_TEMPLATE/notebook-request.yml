@@ -20,14 +20,14 @@ body:
     attributes:
       label: What is the demostrator about?
       description: Please provide further context of the pourpose of the notebook.
-      placeholder: Tell us enough context
-      value: "!"
+      placeholder: Tell us enough context (data sources (and links), packages, codebase, etc)
+      value: ""
     validations:
       required: true
   - type: dropdown
     id: Component
     attributes:
-      label: ds-component
+      label: Data Science Component
       description: Which data science component is targeted?
       options:
         - Sensor visualisation
@@ -41,11 +41,13 @@ body:
     id: nb-checklist
     attributes:
       label: Minimal setup for publication
-      description: Please check the potential of the notebook to be released
+      description: Please check the following items which will help us to assess the feasibility of the notebook.
       options:
-        - label: Input data, pipeline and/or model are available online with license/citation
-          required: true
-        - label: Does the proposed notebook reusing existing codebase?
-          required: true
-        - label: Does the notebook use open-source packages?
-          required: true
+        - label: Input data, pipeline and/or model are public with license/citation
+          required: false
+        - label: Will the proposed notebook reuse existing codebase?
+          required: false
+        - label: Will the notebook use open-source packages?
+          required: false
+        - label: Are any existing publications associated to the notebook?
+          required: false
