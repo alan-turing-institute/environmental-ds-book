@@ -2,7 +2,7 @@
 name: "\U0001F58A Documentation Improvement"
 about: Create a report to help us improve the documentation. Alternatively you can just open a pull request with the suggested improvement.
 title: '[DOC]'
-labels: ["documentation","improvement"]
+labels: ["documentation"]
 ---
 
 <!--- Thanks for taking the time to request a documentation improvement! -->

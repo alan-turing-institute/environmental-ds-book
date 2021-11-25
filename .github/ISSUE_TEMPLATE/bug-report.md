@@ -2,7 +2,7 @@
 name: "\U0001F41B Bug Report"
 about: Report a suspected bug or problem
 title: '[BUG]'
-labels: ["bug","report"]
+labels: ["bug"]
 ---
 
 <!--- Thanks for taking the time to report a bug! -->

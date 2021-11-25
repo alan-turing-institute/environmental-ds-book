@@ -2,7 +2,7 @@
 name: "\U0001F4D7 Notebook Idea"
 about: Log a notebook idea!
 title: '[NBI]'
-labels: ["notebook","idea"]
+labels: ["notebook"]
 ---
 
 <!--- Thanks for taking the time to log a notebook idea! -->
