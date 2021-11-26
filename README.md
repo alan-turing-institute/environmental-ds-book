@@ -4,7 +4,7 @@
 [![All Contributors](https://img.shields.io/badge/all_contributors-6-green.svg?style=flat-square)](#contributors-)
 <!-- ALL-CONTRIBUTORS-BADGE:END -->
 
-# The Environmental AI book
+# The Environmental Data Science book
 
 A **living**, **open** and **community-driven** online resource to showcase and increase the awareness of open-source tools for collaborative, reproducible and transparent Environmental Data Science.
 
