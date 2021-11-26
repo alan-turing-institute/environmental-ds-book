@@ -5,8 +5,8 @@
 
 #######################################################################################
 # Book settings
-title                       : The Environmental AI book # The title of the book. Will be placed in the left navbar.
-author                      : The Environmental AI Community  # The author of the book
+title                       : The Environmental Data Science book # The title of the book. Will be placed in the left navbar.
+author                      : The Environmental DS Community  # The author of the book
 copyright                   : "2021"  # Copyright year to be placed in the footer
 logo                        : "./figures/logo/logo.png"  # A path to the book logo
 
@@ -53,7 +53,7 @@ html:
   use_edit_page_button      : true  # Whether to add an "Suggest edit" button to pages. If `true`, repository information in repository: must be filled in
 
 repository:
-  url: https://github.com/acocac/environmental-ai-book # Online location of your book
+  url: https://github.com/alan-turing-institute/environmental-ds-book # Online location of your book
   path_to_book: book  # Optional path to your book, relative to the repository root
   branch: master  # Which branch of the repository should be used when creating links (optional)
 
