@@ -18,7 +18,7 @@ _The Environmental Data Sense_ is:
 
 We target to make sense of:
 
-* environmental sensors 
+* environmental sensors and challenges
 * free-of-charge data for monitoring our Planet earth
 * open-source tools for Environmental Data Science
 * innovative research extracting information from environmental sensors to tackle environmental challenges
