@@ -12,12 +12,12 @@ A **living**, **open** and **community-driven** online resource to showcase and 
 | :--- | :--- |
 | **Project** | [![Read the book](https://img.shields.io/badge/read-the%20book-blue.svg)](https://alan-turing-institute.github.io/environmental-ds-book)  |
 | **News** | [![Twitter Follow](https://img.shields.io/twitter/follow/EnvDSBook?style=social)](https://twitter.com/EnvDSBook)  |
-| **Chat** | [![GitHub issues](https://img.shields.io/github/issues/alan-turing-institute/environmental-ds-book)](https://github.com/alan-turing-institute/environmental-ds-book/issues) [![GitHub pull requests](https://img.shields.io/github/issues-pr/acocac/environmental-ds-book)](https://github.com/alan-turing-institute/environmental-ds-book/pulls) |
+| **Chat** | [![GitHub issues](https://img.shields.io/github/issues/alan-turing-institute/environmental-ds-book)](https://github.com/alan-turing-institute/environmental-ds-book/issues) [![GitHub pull requests](https://img.shields.io/github/issues-pr/alan-turing-institute/environmental-ds-book)](https://github.com/alan-turing-institute/environmental-ds-book/pulls) |
 | **Build** | [![GitHub Pages build](https://github.com/alan-turing-institute/environmental-ds-book/actions/workflows/deploy.yml/badge.svg?branch=master)](https://github.com/alan-turing-institute/environmental-ds-book/actions/workflows/deploy.yml)
 
 ## Contributors
 
-We welcome and recognize all contributions. You can see a list of current contributors in the [contributors tab](https://github.com/acocac/environmental-ds-book/graphs/contributors).
+We welcome and recognize all contributions. You can see a list of current contributors in the [contributors tab](https://github.com/alan-turing-institute/environmental-ds-book/graphs/contributors).
 
 ## Acknowledgment 
 
