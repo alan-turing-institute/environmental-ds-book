@@ -1,6 +1,6 @@
 # Welcome 
 
-_The Environmental Data Sense_ book is a **community-driven** **living** and **open** resource to showcase and increase the awareness of open-source tools for collaborative, reproducible and transparent Environmental Data Science.
+_The Environmental Data Sense_ book is a **community-driven** **living** and **open** resource to showcase and increase the awareness of open data and tools for collaborative, reproducible and transparent Environmental Data Science.
 
 ```{figure} figures/welcome.jpg
 ---
