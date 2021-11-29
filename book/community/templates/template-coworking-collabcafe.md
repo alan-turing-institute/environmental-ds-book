@@ -7,15 +7,15 @@
 *A **permanent document** exists in the HackMD: [https://hackmd.io/@environmental-ai/collaboration-cafe](https://hackmd.io/@environmental-ai/collaboration-cafe) that is regularly updated with the empty template for next event.*
 :::
 
-## _The Environmental Data Science_ ⛰ 🌳 🏙️ ❄️ 🔥 🌊  online Collaboration Cafe 
+## _The Environmental Data Sense_ ⛰ 🌳 🏙️ ❄️ 🔥 🌊  online Collaboration Cafe 
 
 ### DATE MONTH YEAR | Theme
 
-Thank you for joining the _The Environmental Data Science_'s online Collaboration Cafe! 
+Thank you for joining the _The Environmental Data Sense_'s online Collaboration Cafe! 
 
 We're delighted to have you here ☕ ✨ 🍰
 
-**What?** *The Environmental Data Science is a **community aiming to learn and discuss about good research practices to use existing AI and data science solutions to a better understanding of the planet earth across multiple environmental settings**. 
+**What?** *The Environmental Data Sense is a **community aiming to learn and discuss about good research practices to use existing AI and data science solutions to a better understanding of the planet earth across multiple environmental settings**. 
 [Collaboration Cafes](https://the-turing-way.netlify.app/community-handbook/coworking/coworking-collabcafe.html) are **online coworking calls** that engage anyone interested in learning and discussing about relevant themes in AI and data science to environmental studies*.
 
 *Read more about it here: https://the-turing-way.netlify.app/community-handbook/coworking.html*

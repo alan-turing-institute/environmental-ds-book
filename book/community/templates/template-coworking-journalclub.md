@@ -7,7 +7,7 @@
 *A **permanent document** exists in the HackMD: [https://hackmd.io/@environmental-ai/collaboration-cafe](https://hackmd.io/@environmental-ai/collaboration-cafe) that is regularly updated with the empty template for next event.*
 :::
 
-## _The Environmental Data Science_ ⛰ 🌳 🏙️ ❄️ 🔥 🌊  online Journal Club
+## _The Environmental Data Sense_ ⛰ 🌳 🏙️ ❄️ 🔥 🌊  online Journal Club
 :::info
 - **Date:** DAY MONTH, YEAR 16:00 - 17:00 (GMT)
 - **Paper title (and link):** 
@@ -15,11 +15,11 @@
 - **Contact:** e-mail address(es)
 :::
 
-Thank you for joining the _The Environmental Data Science_'s journal club! 
+Thank you for joining the _The Environmental Data Sense_'s journal club! 
 
 We're delighted to have you here 📚
 
-**What?** *The Environmental Data Science is a **community aiming to learn and discuss good research practices to use existing AI and data science solutions to a better understanding of the planet earth across multiple environmental settings**. 
+**What?** *The Environmental Data Sense is a **community aiming to learn and discuss good research practices to use existing AI and data science solutions to a better understanding of the planet earth across multiple environmental settings**. 
 
 Journal club is **a discussion space** that engage anyone interested in **critically evaluating** recent articles in the **academic literature** around a defined subject in basic or applied research, in this case conceptual or experimental AI and data science for environmental studies*.
 
