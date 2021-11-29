@@ -1,6 +1,6 @@
 # Welcome 
 
-_The Environmental Data Sense_ book is a **community-driven** **living** and **open** resource to showcase and increase the awareness of open data and tools for collaborative, reproducible and transparent Environmental Data Science.
+_The Environmental Data Sense_ book is a **community-driven** **living**, **free** and **open** resource to showcase and increase the awareness of free-of-charge data, innovative research and open-source tools for collaborative, reproducible and transparent Environmental Data Science.
 
 ```{figure} figures/welcome.jpg
 ---
@@ -16,9 +16,13 @@ _The Environmental Data Sense_ is:
 * a community
 * a global collaboration
 
-We hope you find the content in the book helpful.
-The book is free under a [CC-BY licence](https://github.com/alan-turing-institute/environmental-ds-book/blob/master/LICENSE.md).
+We target to make sense of:
 
-:::{note}
-Check out the content pages bundled with this book to see more!
-:::
+* environmental sensors 
+* free-of-charge data for monitoring our Planet earth
+* open-source tools for Environmental Data Science
+* innovative research extracting information from environmental sensors to tackle environmental challenges
+
+We hope you find the content in the resource helpful.
+
+The resource is free under a [CC-BY licence](https://github.com/alan-turing-institute/environmental-ds-book/blob/master/LICENSE.md).
