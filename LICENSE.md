@@ -1,11 +1,11 @@
 # LICENSE
 
-The Environmental Data Science Community makes all of their materials publicly available under open source licenses.
+The Environmental Data Sense Community makes all of their materials publicly available under open source licenses.
 
 The process documents and data are made available under a CC-BY license.
 Software are made available under an MIT license.
 
-The  license text listed below (describing both CC-BY and MIT licenses as well as their usage in The Environmental Data Science Book) is re-used under a CC-BY license from The Turing Way (see [LICENSE.md](https://github.com/alan-turing-institute/the-turing-way/edit/main/LICENSE.md)) and The Carpentries community materials.
+The  license text listed below (describing both CC-BY and MIT licenses as well as their usage in The Environmental Data Sense Book) is re-used under a CC-BY license from The Turing Way (see [LICENSE.md](https://github.com/alan-turing-institute/the-turing-way/edit/main/LICENSE.md)) and The Carpentries community materials.
 (see the [Reproducible Science Curriculum](https://github.com/Reproducible-Science-Curriculum/sharing-RR-Jupyter/blob/gh-pages/LICENSE.md)).
 
 ## Process documents and data
@@ -24,7 +24,7 @@ The licensor cannot revoke these freedoms as long as you follow the license term
 
 Under the following terms:
 
-* **Attribution**---You must give appropriate credit (mentioning that your work is derived from work that is Copyright © The Environmental Data Science Community and, where practical, linking to https://github.com/alan-turing-institute/environmental-ds-book), provide a [link to the license][cc-by-human], and indicate if changes were made.
+* **Attribution**---You must give appropriate credit (mentioning that your work is derived from work that is Copyright © The Environmental Data Sense Community and, where practical, linking to https://github.com/alan-turing-institute/environmental-ds-book), provide a [link to the license][cc-by-human], and indicate if changes were made.
   You may do so in any reasonable manner, but not in any way that suggests the licensor endorses you or your use.
 * **No additional restrictions**---You may not apply legal terms or technological measures that legally restrict others from doing
 anything the license permits.
@@ -38,7 +38,7 @@ With the understanding that:
 
 ## Software
 
-Except where otherwise noted, the software and infrastructure provided by The Environmental Data Science Community are made available under the [OSI][osi]-approved [MIT license][mit-license].
+Except where otherwise noted, the software and infrastructure provided by The Environmental Data Sense Community are made available under the [OSI][osi]-approved [MIT license][mit-license].
 
 > Permission is hereby granted, free of charge, to any person obtaining
 > a copy of this software and associated documentation files (the
