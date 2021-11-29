@@ -1,6 +1,6 @@
 # Welcome 
 
-_The Environmental Data Science_ book is a  **living**, **open** and **community-driven** online resource to showcase and increase the awareness of open-source tools for collaborative, reproducible and transparent Environmental Data Science.
+_The Environmental Data Science_ book is a  **living**, **open** and **community-driven** online resource to showcase and increase the awareness of data, research and open-source tools for collaborative, reproducible and transparent Environmental Data Science.
 
 ```{figure} figures/welcome.jpg
 ---
