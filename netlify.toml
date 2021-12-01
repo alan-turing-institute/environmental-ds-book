@@ -1,4 +1,4 @@
 [build]
   base = "book"
-  command = "wget https://repo.anaconda.com/miniconda/Miniconda3-py38_4.10.3-Linux-x86_64.sh && bash Miniconda3-py38_4.10.3-Linux-x86_64.sh -b && source ~/.bashrc && conda install -y pandas"
+  command = "wget https://repo.anaconda.com/miniconda/Miniconda3-py38_4.10.3-Linux-x86_64.sh && bash Miniconda3-py38_4.10.3-Linux-x86_64.sh -b && export PATH='/home/<user>/miniconda3/bin:$PATH' && conda activate conda install -y pandas"
   publish = "book/_build/html"
