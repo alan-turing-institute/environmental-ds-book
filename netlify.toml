@@ -1,0 +1,4 @@
+[build]
+  base = "book"
+  command = "conda env update --file environment.yml --name base && jupyter-book build ."
+  publish = "book/_build/html"
