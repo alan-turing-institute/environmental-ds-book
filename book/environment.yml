@@ -3,6 +3,22 @@ channels:
   - conda-forge
 dependencies:
   - python=3.8
+  - matplotlib
+  - numpy
+  - bottleneck
+  - pooch
+  - urllib3
+  - opencv
+  - hvplot
+  - intake
+  - intake-xarray
+  - iris==3.0.1
+  - pytorch==1.9.0
+  - torchvision==0.10.0
+  - tensorflow==2.2.0
   - pip
   - pip:
         - jupyter-book==0.11.2
+        - aiohttp
+        - albumentations
+        - scikit-image
