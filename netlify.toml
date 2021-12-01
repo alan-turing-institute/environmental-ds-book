@@ -1,4 +1,4 @@
 [build]
   base = "book"
-  command = "pip install -r requirements.txt && sudo apt install libopencv-dev python3-opencv && jupyter-book build ."
+  command = "conda env update --file environment.yml --name base && jupyter-book build ."
   publish = "book/_build/html"
