@@ -1,4 +1,4 @@
 [build]
   base = "book"
-  command = "wget https://repo.anaconda.com/miniconda/Miniconda3-py38_4.10.3-Linux-x86_64.sh && bash Miniconda3-py38_4.10.3-Linux-x86_64.sh -b"
+  command = "wget https://repo.anaconda.com/miniconda/Miniconda3-py38_4.10.3-Linux-x86_64.sh && bash Miniconda3-py38_4.10.3-Linux-x86_64.sh -b && conda env update --file environment.yml --name base"
   publish = "book/_build/html"
