@@ -30,7 +30,7 @@
 <!--- Go over all the following points, and put an `x` in all the boxes that apply -->
 <!--- If you're unsure about any of these, don't hesitate to ask. We're here to help! -->
 - [ ] My code follows the code style of this project: [Python](https://docs.qmk.fm/#/coding_conventions_python)
-- [ ] I have read the [CONTRIBUTING](../blob/master/CONTRIBUTING.md) doc
+- [ ] I have read the [CONTRIBUTING](../CONTRIBUTING.md) doc
 - [ ] I have performed a self-review of my own code
 - [ ] I have commented my code, particularly in hard-to-understand areas
 - [ ] I have made corresponding changes to the documentation
