@@ -736,6 +736,10 @@ made openly available as part of the Met Office contribution to the COVID 19 mod
 
 <span class="kn">import</span> <span class="nn">numpy</span> <span class="k">as</span> <span class="nn">np</span>
 <span class="kn">import</span> <span class="nn">matplotlib.pyplot</span> <span class="k">as</span> <span class="nn">plt</span>
+
+<span class="kn">import</span> <span class="nn">warnings</span>
+<span class="n">warnings</span><span class="o">.</span><span class="n">filterwarnings</span><span class="p">(</span><span class="n">action</span><span class="o">=</span><span class="s1">&#39;ignore&#39;</span><span class="p">)</span>
+
 <span class="o">%</span><span class="k">matplotlib</span>     inline
 </pre></div>
 </div>
@@ -766,7 +770,7 @@ made openly available as part of the Met Office contribution to the COVID 19 mod
 </div>
 <div class="cell_output docutils container">
 <div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>(&#39;../sensors/urban-sensors-climate_ukv/ukv_daily_t1o5m_mean_20150801.nc&#39;,
- &lt;http.client.HTTPMessage at 0x7f6ddca0a9d0&gt;)
+ &lt;http.client.HTTPMessage at 0x7f8f40e54fa0&gt;)
 </pre></div>
 </div>
 </div>
@@ -798,14 +802,10 @@ made openly available as part of the Met Office contribution to the COVID 19 mod
 </div>
 </div>
 <div class="cell_output docutils container">
-<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>&lt;cartopy.mpl.gridliner.Gridliner at 0x7f6da1e7d400&gt;
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>&lt;cartopy.mpl.gridliner.Gridliner at 0x7f8f040185e0&gt;
 </pre></div>
 </div>
-<div class="output stderr highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>/usr/share/miniconda/lib/python3.8/site-packages/cartopy/io/__init__.py:241: DownloadWarning: Downloading: https://naciscdn.org/naturalearth/50m/physical/ne_50m_coastline.zip
-  warnings.warn(&#39;Downloading: {}&#39;.format(url), DownloadWarning)
-</pre></div>
-</div>
-<img alt="../../_images/urban-sensors-climate_ukv_10_2.png" src="../../_images/urban-sensors-climate_ukv_10_2.png" />
+<img alt="../../_images/urban-sensors-climate_ukv_10_1.png" src="../../_images/urban-sensors-climate_ukv_10_1.png" />
 </div>
 </div>
 </div>
@@ -846,7 +846,7 @@ made openly available as part of the Met Office contribution to the COVID 19 mod
 </div>
 </div>
 <div class="cell_output docutils container">
-<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>&lt;cartopy.mpl.gridliner.Gridliner at 0x7f6da1cc46d0&gt;
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>&lt;cartopy.mpl.gridliner.Gridliner at 0x7f8effe59700&gt;
 </pre></div>
 </div>
 <img alt="../../_images/urban-sensors-climate_ukv_14_1.png" src="../../_images/urban-sensors-climate_ukv_14_1.png" />
@@ -882,7 +882,7 @@ made openly available as part of the Met Office contribution to the COVID 19 mod
 </div>
 </div>
 <div class="cell_output docutils container">
-<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>&lt;cartopy.mpl.gridliner.Gridliner at 0x7f6da1d76eb0&gt;
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>&lt;cartopy.mpl.gridliner.Gridliner at 0x7f8efff08e50&gt;
 </pre></div>
 </div>
 <img alt="../../_images/urban-sensors-climate_ukv_18_1.png" src="../../_images/urban-sensors-climate_ukv_18_1.png" />

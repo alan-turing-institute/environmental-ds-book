@@ -724,6 +724,9 @@
 
 <span class="kn">import</span> <span class="nn">torch</span>
 
+<span class="kn">import</span> <span class="nn">warnings</span>
+<span class="n">warnings</span><span class="o">.</span><span class="n">filterwarnings</span><span class="p">(</span><span class="n">action</span><span class="o">=</span><span class="s1">&#39;ignore&#39;</span><span class="p">)</span>
+
 <span class="o">%</span><span class="k">matplotlib</span> inline
 </pre></div>
 </div>
@@ -783,13 +786,6 @@
 </pre></div>
 </div>
 </div>
-<div class="cell_output docutils container">
-<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>will download https://zenodo.org/api/files/5b372ed9-e4ec-41b0-a652-f0ce7d760e60/2018_MLBS_3_541000_4140000_image_crop.tif to /var/folders/l8/99_59fvn4bl2szm125grkgqw0000gr/T/tmp_kl1s4l_/NEONsample_RGB/2018_MLBS_3_541000_4140000_image_crop.tif
-</pre></div>
-</div>
-<script type="application/vnd.jupyter.widget-view+json">
-{"version_major": 2, "version_minor": 0, "model_id": "b36c069eed09440c9f8b5f31e79cfec3"}
-</script></div>
 </div>
 </div>
 <div class="section" id="load-sample-image">
@@ -798,14 +794,6 @@
 <div class="cell docutils container">
 <div class="cell_input docutils container">
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">tc_rgb</span> <span class="o">=</span> <span class="n">cat_tc</span><span class="p">[</span><span class="s2">&quot;NEONTREE_rgb&quot;</span><span class="p">]</span><span class="o">.</span><span class="n">to_dask</span><span class="p">()</span>
-</pre></div>
-</div>
-</div>
-<div class="cell_output docutils container">
-<div class="output stderr highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>/Users/acoca/anaconda3/envs/envai-book/lib/python3.8/site-packages/intake_xarray/image.py:337: FutureWarning: open_files is deprecated and will be removed in a future release. Please use fsspec.core.open_files instead.
-  files = open_files(self.urlpath, **self.storage_options)
-/Users/acoca/anaconda3/envs/envai-book/lib/python3.8/site-packages/xarray/core/dataset.py:2145: FutureWarning: None value for &#39;chunks&#39; is deprecated. It will raise an error in the future. Use instead &#39;{}&#39;
-  warnings.warn(
 </pre></div>
 </div>
 </div>
@@ -1173,7 +1161,7 @@ dask.array&lt;xarray-&lt;this-array&gt;, shape=(1864, 1429, 3), dtype=uint8, chu
 Coordinates:
   * y        (y) int64 0 1 2 3 4 5 6 7 ... 1857 1858 1859 1860 1861 1862 1863
   * x        (x) int64 0 1 2 3 4 5 6 7 ... 1422 1423 1424 1425 1426 1427 1428
-  * channel  (channel) int64 0 1 2</pre><div class='xr-wrap' hidden><div class='xr-header'><div class='xr-obj-type'>xarray.DataArray</div><div class='xr-array-name'></div><ul class='xr-dim-list'><li><span class='xr-has-index'>y</span>: 1864</li><li><span class='xr-has-index'>x</span>: 1429</li><li><span class='xr-has-index'>channel</span>: 3</li></ul></div><ul class='xr-sections'><li class='xr-section-item'><div class='xr-array-wrap'><input id='section-290cf3d5-0aa6-4c86-9565-d1e675326df3' class='xr-array-in' type='checkbox' checked><label for='section-290cf3d5-0aa6-4c86-9565-d1e675326df3' title='Show/hide data repr'><svg class='icon xr-icon-database'><use xlink:href='#icon-database'></use></svg></label><div class='xr-array-preview xr-preview'><span>dask.array&lt;chunksize=(1864, 1429, 3), meta=np.ndarray&gt;</span></div><div class='xr-array-data'><table>
+  * channel  (channel) int64 0 1 2</pre><div class='xr-wrap' hidden><div class='xr-header'><div class='xr-obj-type'>xarray.DataArray</div><div class='xr-array-name'></div><ul class='xr-dim-list'><li><span class='xr-has-index'>y</span>: 1864</li><li><span class='xr-has-index'>x</span>: 1429</li><li><span class='xr-has-index'>channel</span>: 3</li></ul></div><ul class='xr-sections'><li class='xr-section-item'><div class='xr-array-wrap'><input id='section-21deb963-efe8-4e39-859f-8f2a27b6c403' class='xr-array-in' type='checkbox' checked><label for='section-21deb963-efe8-4e39-859f-8f2a27b6c403' title='Show/hide data repr'><svg class='icon xr-icon-database'><use xlink:href='#icon-database'></use></svg></label><div class='xr-array-preview xr-preview'><span>dask.array&lt;chunksize=(1864, 1429, 3), meta=np.ndarray&gt;</span></div><div class='xr-array-data'><table>
     <tr>
         <td>
             <table>
@@ -1253,7 +1241,7 @@ Coordinates:
 </svg>
         </td>
     </tr>
-</table></div></div></li><li class='xr-section-item'><input id='section-44cba67d-6ee0-4884-ada5-dc6c25437ad5' class='xr-section-summary-in' type='checkbox'  checked><label for='section-44cba67d-6ee0-4884-ada5-dc6c25437ad5' class='xr-section-summary' >Coordinates: <span>(3)</span></label><div class='xr-section-inline-details'></div><div class='xr-section-details'><ul class='xr-var-list'><li class='xr-var-item'><div class='xr-var-name'><span class='xr-has-index'>y</span></div><div class='xr-var-dims'>(y)</div><div class='xr-var-dtype'>int64</div><div class='xr-var-preview xr-preview'>0 1 2 3 4 ... 1860 1861 1862 1863</div><input id='attrs-a9be15b8-017f-414b-bf93-ee32761b0930' class='xr-var-attrs-in' type='checkbox' disabled><label for='attrs-a9be15b8-017f-414b-bf93-ee32761b0930' title='Show/Hide attributes'><svg class='icon xr-icon-file-text2'><use xlink:href='#icon-file-text2'></use></svg></label><input id='data-d0fc70b2-d087-42f1-ae9d-c07099e42596' class='xr-var-data-in' type='checkbox'><label for='data-d0fc70b2-d087-42f1-ae9d-c07099e42596' title='Show/Hide data repr'><svg class='icon xr-icon-database'><use xlink:href='#icon-database'></use></svg></label><div class='xr-var-attrs'><dl class='xr-attrs'></dl></div><div class='xr-var-data'><pre>array([   0,    1,    2, ..., 1861, 1862, 1863])</pre></div></li><li class='xr-var-item'><div class='xr-var-name'><span class='xr-has-index'>x</span></div><div class='xr-var-dims'>(x)</div><div class='xr-var-dtype'>int64</div><div class='xr-var-preview xr-preview'>0 1 2 3 4 ... 1425 1426 1427 1428</div><input id='attrs-baf23989-0bde-4b6e-a892-9053c094dc17' class='xr-var-attrs-in' type='checkbox' disabled><label for='attrs-baf23989-0bde-4b6e-a892-9053c094dc17' title='Show/Hide attributes'><svg class='icon xr-icon-file-text2'><use xlink:href='#icon-file-text2'></use></svg></label><input id='data-b8f45eec-81ea-40a5-866b-b9d1c6c4d0bf' class='xr-var-data-in' type='checkbox'><label for='data-b8f45eec-81ea-40a5-866b-b9d1c6c4d0bf' title='Show/Hide data repr'><svg class='icon xr-icon-database'><use xlink:href='#icon-database'></use></svg></label><div class='xr-var-attrs'><dl class='xr-attrs'></dl></div><div class='xr-var-data'><pre>array([   0,    1,    2, ..., 1426, 1427, 1428])</pre></div></li><li class='xr-var-item'><div class='xr-var-name'><span class='xr-has-index'>channel</span></div><div class='xr-var-dims'>(channel)</div><div class='xr-var-dtype'>int64</div><div class='xr-var-preview xr-preview'>0 1 2</div><input id='attrs-3f857c8d-a744-462b-b786-7cd19fbfa875' class='xr-var-attrs-in' type='checkbox' disabled><label for='attrs-3f857c8d-a744-462b-b786-7cd19fbfa875' title='Show/Hide attributes'><svg class='icon xr-icon-file-text2'><use xlink:href='#icon-file-text2'></use></svg></label><input id='data-296c9654-17a1-4223-844c-926f95b0bd8c' class='xr-var-data-in' type='checkbox'><label for='data-296c9654-17a1-4223-844c-926f95b0bd8c' title='Show/Hide data repr'><svg class='icon xr-icon-database'><use xlink:href='#icon-database'></use></svg></label><div class='xr-var-attrs'><dl class='xr-attrs'></dl></div><div class='xr-var-data'><pre>array([0, 1, 2])</pre></div></li></ul></div></li><li class='xr-section-item'><input id='section-a30b4436-363c-4d63-a82f-a7bcb5740424' class='xr-section-summary-in' type='checkbox' disabled ><label for='section-a30b4436-363c-4d63-a82f-a7bcb5740424' class='xr-section-summary'  title='Expand/collapse section'>Attributes: <span>(0)</span></label><div class='xr-section-inline-details'></div><div class='xr-section-details'><dl class='xr-attrs'></dl></div></li></ul></div></div></div></div>
+</table></div></div></li><li class='xr-section-item'><input id='section-be164d93-4b11-4746-b213-0275369f5702' class='xr-section-summary-in' type='checkbox'  checked><label for='section-be164d93-4b11-4746-b213-0275369f5702' class='xr-section-summary' >Coordinates: <span>(3)</span></label><div class='xr-section-inline-details'></div><div class='xr-section-details'><ul class='xr-var-list'><li class='xr-var-item'><div class='xr-var-name'><span class='xr-has-index'>y</span></div><div class='xr-var-dims'>(y)</div><div class='xr-var-dtype'>int64</div><div class='xr-var-preview xr-preview'>0 1 2 3 4 ... 1860 1861 1862 1863</div><input id='attrs-042c8c01-a146-45d2-9711-4347e6d4891a' class='xr-var-attrs-in' type='checkbox' disabled><label for='attrs-042c8c01-a146-45d2-9711-4347e6d4891a' title='Show/Hide attributes'><svg class='icon xr-icon-file-text2'><use xlink:href='#icon-file-text2'></use></svg></label><input id='data-585c7a3d-f4b1-47a3-83d3-ab9d3486d6fc' class='xr-var-data-in' type='checkbox'><label for='data-585c7a3d-f4b1-47a3-83d3-ab9d3486d6fc' title='Show/Hide data repr'><svg class='icon xr-icon-database'><use xlink:href='#icon-database'></use></svg></label><div class='xr-var-attrs'><dl class='xr-attrs'></dl></div><div class='xr-var-data'><pre>array([   0,    1,    2, ..., 1861, 1862, 1863])</pre></div></li><li class='xr-var-item'><div class='xr-var-name'><span class='xr-has-index'>x</span></div><div class='xr-var-dims'>(x)</div><div class='xr-var-dtype'>int64</div><div class='xr-var-preview xr-preview'>0 1 2 3 4 ... 1425 1426 1427 1428</div><input id='attrs-3579e45a-558c-4d10-9e2a-9cc7a9d15b47' class='xr-var-attrs-in' type='checkbox' disabled><label for='attrs-3579e45a-558c-4d10-9e2a-9cc7a9d15b47' title='Show/Hide attributes'><svg class='icon xr-icon-file-text2'><use xlink:href='#icon-file-text2'></use></svg></label><input id='data-4d8969e9-a3b1-433b-a69e-0b2b31cd1b78' class='xr-var-data-in' type='checkbox'><label for='data-4d8969e9-a3b1-433b-a69e-0b2b31cd1b78' title='Show/Hide data repr'><svg class='icon xr-icon-database'><use xlink:href='#icon-database'></use></svg></label><div class='xr-var-attrs'><dl class='xr-attrs'></dl></div><div class='xr-var-data'><pre>array([   0,    1,    2, ..., 1426, 1427, 1428])</pre></div></li><li class='xr-var-item'><div class='xr-var-name'><span class='xr-has-index'>channel</span></div><div class='xr-var-dims'>(channel)</div><div class='xr-var-dtype'>int64</div><div class='xr-var-preview xr-preview'>0 1 2</div><input id='attrs-d13a80c1-dc84-4c27-abc0-27c2595b982e' class='xr-var-attrs-in' type='checkbox' disabled><label for='attrs-d13a80c1-dc84-4c27-abc0-27c2595b982e' title='Show/Hide attributes'><svg class='icon xr-icon-file-text2'><use xlink:href='#icon-file-text2'></use></svg></label><input id='data-f86212c8-3787-479d-9017-9c832f2af437' class='xr-var-data-in' type='checkbox'><label for='data-f86212c8-3787-479d-9017-9c832f2af437' title='Show/Hide data repr'><svg class='icon xr-icon-database'><use xlink:href='#icon-database'></use></svg></label><div class='xr-var-attrs'><dl class='xr-attrs'></dl></div><div class='xr-var-data'><pre>array([0, 1, 2])</pre></div></li></ul></div></li><li class='xr-section-item'><input id='section-d55f3e0e-460e-4812-ab29-466f0b59a1ce' class='xr-section-summary-in' type='checkbox' disabled ><label for='section-d55f3e0e-460e-4812-ab29-466f0b59a1ce' class='xr-section-summary'  title='Expand/collapse section'>Attributes: <span>(0)</span></label><div class='xr-section-inline-details'></div><div class='xr-section-details'><dl class='xr-attrs'></dl></div></li></ul></div></div></div></div>
 </div>
 </div>
 <div class="section" id="load-and-prepare-labels">
@@ -1381,7 +1369,7 @@ Coordinates:
 </div>
 </div>
 <div class="cell_output docutils container">
-<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Reading config file: /Users/acoca/anaconda3/envs/envai-book/lib/python3.8/site-packages/deepforest/data/deepforest_config.yml
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Reading config file: /Users/acoca/anaconda3/envs/envds-book/lib/python3.8/site-packages/deepforest/data/deepforest_config.yml
 Model from DeepForest release https://github.com/weecology/DeepForest/releases/tag/1.0.0 was already downloaded. Loading model from file.
 Loading pre-built model: https://github.com/weecology/DeepForest/releases/tag/1.0.0
 </pre></div>
@@ -1482,11 +1470,7 @@ Loading pre-built model: https://github.com/weecology/DeepForest/releases/tag/1.
 </div>
 </div>
 <div class="cell_output docutils container">
-<div class="output stderr highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>/Users/acoca/anaconda3/envs/envai-book/lib/python3.8/site-packages/deepforest/predict.py:32: UserWarning: Image type is {}, transforming to float32. This assumes that the range of pixel values is 0-255, as opposed to 0-1.To suppress this warning, transform image (image.astype(&#39;float32&#39;)
-  warnings.warn(&quot;Image type is {}, transforming to float32. This assumes that the range of pixel values is 0-255, as opposed to 0-1.To suppress this warning, transform image (image.astype(&#39;float32&#39;)&quot;)
-</pre></div>
-</div>
-<img alt="../../_images/forest-modelling-treecrown_deepforest_32_1.png" src="../../_images/forest-modelling-treecrown_deepforest_32_1.png" />
+<img alt="../../_images/forest-modelling-treecrown_deepforest_32_0.png" src="../../_images/forest-modelling-treecrown_deepforest_32_0.png" />
 </div>
 </div>
 <p>Once a suitable tile size is defined, we can run in a batch using the <code class="docutils literal notranslate"><span class="pre">predict_tile</span></code> function:</p>
@@ -1508,7 +1492,7 @@ Loading pre-built model: https://github.com/weecology/DeepForest/releases/tag/1.
 </div>
 </div>
 <div class="cell_output docutils container">
-<div class="output stderr highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>100%|██████████| 20/20 [01:08&lt;00:00,  3.44s/it]
+<div class="output stderr highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>100%|██████████| 20/20 [03:21&lt;00:00, 10.09s/it]
 </pre></div>
 </div>
 <img alt="../../_images/forest-modelling-treecrown_deepforest_34_1.png" src="../../_images/forest-modelling-treecrown_deepforest_34_1.png" />
