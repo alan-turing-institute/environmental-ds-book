@@ -10,7 +10,7 @@ A **living**, **open** and **community-driven** online resource to showcase and 
 
 | Information | Links |
 | :--- | :--- |
-| **Project** | [![Read the book](https://img.shields.io/badge/read-the%20book-blue.svg)](https://alan-turing-institute.github.io/environmental-ds-book)  |
+| **Project** | [![Read the book](https://img.shields.io/badge/read-the%20book-blue.svg)](https://the-environmental-ds-book.netlify.app)  |
 | **News** | [![Twitter Follow](https://img.shields.io/twitter/follow/EnvDSBook?style=social)](https://twitter.com/EnvDSBook)  |
 | **Chat** | [![GitHub issues](https://img.shields.io/github/issues/alan-turing-institute/environmental-ds-book)](https://github.com/alan-turing-institute/environmental-ds-book/issues) [![GitHub pull requests](https://img.shields.io/github/issues-pr/alan-turing-institute/environmental-ds-book)](https://github.com/alan-turing-institute/environmental-ds-book/pulls) |
 | **Build** | [![GitHub Pages build](https://github.com/alan-turing-institute/environmental-ds-book/actions/workflows/deploy.yml/badge.svg?branch=master)](https://github.com/alan-turing-institute/environmental-ds-book/actions/workflows/deploy.yml)
