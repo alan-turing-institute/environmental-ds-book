@@ -3,6 +3,6 @@ channels:
   - conda-forge
 dependencies:
   - python=3.8
-  - pipß
+  - pip
   - pip:
-        - jupyter-book==0.11.2
+        - jupyter-book==0ßß.11.2
