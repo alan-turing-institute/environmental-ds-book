@@ -38,7 +38,7 @@ With the understanding that:
 
 ## Software
 
-Except where otherwise noted, the software and infrastructure provided by The Environmental Data Science Community are made available under the [OSI][osi]-approved [MIT license][mit-license].
+Except where otherwise noted, the infrastructure, the example programs, code snippets and other software provided by The Environmental Data Science Community are made available under the [OSI][osi]-approved [MIT license][mit-license].
 
 > Permission is hereby granted, free of charge, to any person obtaining
 > a copy of this software and associated documentation files (the
