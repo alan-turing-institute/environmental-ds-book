@@ -1,6 +1,0 @@
-pytorch
-torchvision
-tensorflow
-aiohttp
-albumentations
-scikit-image
