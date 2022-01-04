@@ -65,9 +65,9 @@ parts:
   - file: community/guidelines
     title: Publishing guidelines
     sections:
-    - file: community/coworking/guidelines-submission
+    - file: community/guidelines/guidelines-submission
       title: Submission
-    - file: community/coworking/guidelines-reviewing
+    - file: community/guidelines/guidelines-reviewing
       title: Reviewing
   - file: community/coworking
     title: Coworking Calls
