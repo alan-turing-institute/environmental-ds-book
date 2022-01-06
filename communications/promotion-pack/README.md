@@ -3,7 +3,7 @@
 ## What is The Environmental Data Science book?
 - A book: [https://the-environmental-ds-book.netlify.app/welcome.html](https://the-environmental-ds-book.netlify.app/welcome.html)
 - An open source project: [https://github.com/alan-turing-institute/environmental-ds-book](https://github.com/alan-turing-institute/environmental-ds-book)
-- A community: *The Environmental DS is an open-source collaborative project that involves and supports its members of diverse skills and backgrounds to ensure that data science is accessible and useful for everyone interested in Environmental sciences. 
+- A community: *The Environmental DS* is an open-source collaborative project that involves and supports its members of diverse skills and backgrounds to ensure that data science is accessible and useful for everyone interested in Environmental sciences. 
 
 ## Who are the community members? 
 - Project lead and co-lead: Dr Alejandro Coca-Castro (lead), Postdoctoral Research Associate, and Dr Scott Hosking (co-lead), Senior Fellow, both members of the Data Science for Science and Humanities research programme at The Alan Turing Institute.
