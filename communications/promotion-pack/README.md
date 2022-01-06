@@ -6,7 +6,7 @@
 - A community: *The Environmental AI is an Open Source collaborative project that involves and supports its members of diverse skills and backgrounds to ensure that data science is accessible and useful for everyone interested in Environmental science. 
 
 ## Who are the community members? 
-- Project lead: Dr Alejandro Coca-Castro, Postdoctoral Research Associate, and Scott Hosking, Senior Fellow, both members of the Data Science for Science and Humanities research programme at The Alan Turing Institute.
+- Project lead and co-lead: Dr Alejandro Coca-Castro (lead), Postdoctoral Research Associate, and Scott Hosking (co-lead), Senior Fellow, both members of the Data Science for Science and Humanities research programme at The Alan Turing Institute.
 - Contributors: 7 contributors (as of January 2022) who collaborate to develop online material for The Environmental DS book via GitHub.
 - Users: Some readers/users around the globe.
 
