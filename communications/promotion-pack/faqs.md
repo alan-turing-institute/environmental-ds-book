@@ -1,13 +1,13 @@
 # Frequently Asked Questions
 
-## How can I get involved in _The Environmental AI_?
+## How can I get involved in _The Environmental DS community_?
 - There are multiple pathways to get involved.
-The project is maintained and developed via a public [GitHub repository](https://github.com/acocac/environmental-ai-book).
-You can help review the contributions added to the project through currently [open pull requests](https://github.com/acocac/environmental-ai-book/pulls).
-You can start a discussion on a new topic by opening a [new issue](https://github.com/acocac/environmental-ai-book/issues/new/choose).
+The project is maintained and developed via a public [GitHub repository](https://github.com/alan-turing-institute/environmental-ds-book).
+You can help review the contributions added to the project through currently [open pull requests](https://github.com/alan-turing-institute/environmental-ds-book/pulls).
+You can start a discussion on a new topic by opening a [new issue](https://github.com/alan-turing-institute/environmental-ds-book/issues/new/choose).
 
 ## Is there an onboarding process?
-- There is a community [contribution guideline](https://github.com/acocac/environmental-ai-book/blob/master/CONTRIBUTING.md) and [Code of Conduct](https://github.com/acocac/environmental-ai-book/blob/master/CODE_OF_CONDUCT.md) that is required for new contributors to get familiar with.
+- There is a community [contribution guideline](https://github.com/alan-turing-institute/environmental-ds-book/blob/master/CONTRIBUTING.md) and [Code of Conduct](https://github.com/alan-turing-institute/environmental-ds-book/blob/master/CODE_OF_CONDUCT.md) that is required for new contributors to get familiar with.
 With the details provided there, you would be able to identify the best available options for you to get involved in the project.
 
 ## How much time commitment is needed by its community members?
