@@ -4,20 +4,20 @@
 [![All Contributors](https://img.shields.io/badge/all_contributors-6-green.svg?style=flat-square)](#contributors-)
 <!-- ALL-CONTRIBUTORS-BADGE:END -->
 
-# The Environmental AI book
+# The Environmental Data Science book
 
-A **living**, **open** and **community-driven** online resource to showcase and increase the awareness of open-source tools for collaborative, reproducible and transparent Environmental Data Science.
+A **living**, **open** and **community-driven** online resource to showcase and support the publication of data, research and open-source tools for collaborative, reproducible and transparent Environmental Data Science.
 
 | Information | Links |
 | :--- | :--- |
-| **Project** | [![Read the book](https://img.shields.io/badge/read-the%20book-blue.svg)](https://acocac.github.io/environmental-ai-book)  |
-| **News** | [![Twitter Follow](https://img.shields.io/twitter/follow/EnvAIBook?style=social)](https://twitter.com/EnvAIBook)  |
-| **Chat** | [![GitHub issues](https://img.shields.io/github/issues/acocac/environmental-ai-book)](https://github.com/acocac/environmental-ai-book/issues) [![GitHub pull requests](https://img.shields.io/github/issues-pr/acocac/environmental-ai-book)](https://github.com/acocac/environmental-ai-book/pulls) |
-| **Build** | [![GitHub Pages build](https://github.com/acocac/environmental-ai-book/actions/workflows/deploy.yml/badge.svg?branch=master)](https://github.com/acocac/environmental-ai-book/actions/workflows/deploy.yml)
+| **Project** | [![Read the book](https://img.shields.io/badge/read-the%20book-blue.svg)](https://the-environmental-ds-book.netlify.app)  |
+| **News** | [![Twitter Follow](https://img.shields.io/twitter/follow/EnvDSBook?style=social)](https://twitter.com/EnvDSBook)  |
+| **Chat** | [![GitHub issues](https://img.shields.io/github/issues/alan-turing-institute/environmental-ds-book)](https://github.com/alan-turing-institute/environmental-ds-book/issues) [![GitHub pull requests](https://img.shields.io/github/issues-pr/alan-turing-institute/environmental-ds-book)](https://github.com/alan-turing-institute/environmental-ds-book/pulls) |
+| **Build** | [![GitHub Pages build](https://github.com/alan-turing-institute/environmental-ds-book/actions/workflows/deploy.yml/badge.svg?branch=master)](https://github.com/alan-turing-institute/environmental-ds-book/actions/workflows/deploy.yml)
 
 ## Contributors
 
-We welcome and recognize all contributions. You can see a list of current contributors in the [contributors tab](https://github.com/acocac/environmental-ai-book/graphs/contributors).
+We welcome and recognize all contributions. You can see a list of current contributors in the [contributors tab](https://github.com/alan-turing-institute/environmental-ds-book/graphs/contributors).
 
 ## Acknowledgment 
 

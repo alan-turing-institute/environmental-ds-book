@@ -5,8 +5,8 @@
 
 #######################################################################################
 # Book settings
-title                       : The Environmental AI book # The title of the book. Will be placed in the left navbar.
-author                      : The Environmental AI Community  # The author of the book
+title                       : The Environmental Data Science book # The title of the book. Will be placed in the left navbar.
+author                      : The Environmental DS Community. This site is powered by <a href="https://www.netlify.com/">Netlify</a>. # The author of the book
 copyright                   : "2021"  # Copyright year to be placed in the footer
 logo                        : "./figures/logo/logo.png"  # A path to the book logo
 
@@ -20,7 +20,7 @@ only_build_toc_files        : true
 execute:
   execute_notebooks: cache # Whether to execute notebooks at build time. Must be one of ("auto", "force", "cache", "off")
   cache: ""    # A path to the jupyter cache that will be used to store execution artifacts. Defaults to `_build/.jupyter_cache/`
-  exclude_patterns: []  # A list of patterns to *skip* in execution (e.g. a notebook that takes a really long time)
+  exclude_patterns: ['*.ipynb']  # A list of patterns to *skip* in execution (e.g. a notebook that takes a really long time)
   timeout: -1 # The maximum time (in seconds) each notebook cell is allowed to run.
   run_in_temp               : false # If `True`, then a temporary directory will be created and used as the command working directory (cwd),otherwise the notebook's parent directory will be the cwd.
   allow_errors              : false # If `False`, when a code cell raises an error the execution is stopped, otherwise all cells are always run.
@@ -42,7 +42,7 @@ bibtex_bibfiles:
 # Launch button settings
 launch_buttons:
   notebook_interface        : classic  # The interface interactive links will activate ["classic", "jupyterlab"]
-  binderhub_url             : https://binder.pangeo.io  # The URL of the BinderHub (e.g., https://mybinder.org or https://binder.pangeo.io)
+  binderhub_url             : https://aws-uswest2-binder.pangeo.io # The URL of the BinderHub (e.g., https://mybinder.org or https://binder.pangeo.io)
   jupyterhub_url            : ""  # The URL of the JupyterHub (e.g., https://datahub.berkeley.edu)
   thebe                     : false  # Add a thebe button to pages (requires the repository to run on Binder)
   colab_url                 : "" # The URL of Google Colab (https://colab.research.google.com)
@@ -50,10 +50,11 @@ launch_buttons:
 html:
   use_issues_button: true
   use_repository_button: true
-  use_edit_page_button      : true  # Whether to add an "Suggest edit" button to pages. If `true`, repository information in repository: must be filled in
+  use_edit_page_button: true  # Whether to add an "Suggest edit" button to pages. If `true`, repository information in repository: must be filled in
+  google_analytics_id: "UA-214298162-1"
 
 repository:
-  url: https://github.com/acocac/environmental-ai-book # Online location of your book
+  url: https://github.com/alan-turing-institute/environmental-ds-book # Online location of your book
   path_to_book: book  # Optional path to your book, relative to the repository root
   branch: master  # Which branch of the repository should be used when creating links (optional)
 

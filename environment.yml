@@ -1,27 +1,25 @@
-name: envai-book
+name: envds-book
 channels:
   - conda-forge
 dependencies:
   - python=3.8
   - jupyter-book
-  - jupyterlab
   - matplotlib
   - numpy
-  - ghp-import
-  - hvplot
-  - intake
-  - intake-xarray
   - bottleneck
   - pooch
+  - urllib3
+  - opencv
+  - hvplot
+  - datashader
+  - intake
+  - intake-xarray
+  - iris==3.0.1
   - pytorch==1.9.0
   - torchvision==0.10.0
   - tensorflow==2.2.0
-  - geoviews
-  - iris==3.0.1
-  - urllib3
-  - opencv
   - pip
   - pip:
-      - scikit-image
-      - aiohttp
-      - albumentations
+        - aiohttp
+        - albumentations
+        - scikit-image

@@ -15,20 +15,20 @@ You will need the following:
 * Basic knowledge of [version control with git](https://git-scm.com)
 * Basic knowledge of [Jupyter notebooks](https://jupyter-notebook.readthedocs.io/en/stable/)
 
-The first step is to clone the [source repository for this book on github](https://github.com/acocac/environmental-ai-book).
+The first step is to clone the [source repository for this book on github](https://github.com/alan-turing-institute/environmental-ds-book).
 
 Once you have the source repo, the following commands will create a self-contained
 [conda environment](https://docs.conda.io/projects/conda/en/latest/user-guide/concepts/environments.html)
 with everything you need to run the notebooks (Mac, Linux and Windows).
 
-From within the `enviromental-ai-book` directory in your favorite terminal, do this:
+From within the `enviromental-ds-book` directory in your favorite terminal, do this:
 
 ```
 conda env create --file environment.yml
-conda activate envai-book
+conda activate envds-book
 ```
 
-Then find all the Jupyter notebook `*.ipynb` files in `enviromental-ai-book/book`
+Then find all the Jupyter notebook `*.ipynb` files in `enviromental-ds-book/book`
 
 You may find it useful to do all your work in a separate git branch,
 and leave your `main` branch untouched, so you can keep it up to date with

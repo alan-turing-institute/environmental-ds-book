@@ -62,6 +62,13 @@ parts:
       title: Modelling
 - caption: Community
   chapters:
+  - file: community/guidelines
+    title: Publishing guidelines
+    sections:
+    - file: community/guidelines/guidelines-submission
+      title: Submission
+    - file: community/guidelines/guidelines-reviewing
+      title: Reviewing
   - file: community/coworking
     title: Coworking Calls
     sections:

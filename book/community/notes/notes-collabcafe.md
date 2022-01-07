@@ -1,15 +1,15 @@
 ---
-tags: environmental-ai, collaboration-cafe
+tags: environmental-ds, collaboration-cafe
 ---
 *This HackMD is based on [_The Turing Way_ collaboration cafe template](https://github.com/alan-turing-institute/the-turing-way/blob/master/book/website/community-handbook/templates/template-coworking-collabcafe.md)*
 
-*A **permanent document** exists in the HackMD: [https://hackmd.io/@environmental-ai/collaboration-cafe](https://hackmd.io/@environmental-ai/collaboration-cafe) that is regularly updated with the empty template for next event.*
+*A **permanent document** exists in the HackMD: [https://hackmd.io/@environmental-ds/collaboration-cafe](https://hackmd.io/@environmental-ds/collaboration-cafe) that is regularly updated with the empty template for next event.*
 
-# _The Environmental AI_ ⛰ 🌳 🏙️ ❄️ 🔥 🌊  online Collaboration Cafe 
+# _The Environmental Data Science_ ⛰ 🌳 🏙️ ❄️ 🔥 🌊  online Collaboration Cafe 
 
 ## 25 January 2021 | TBC
 
-### Thank you for joining the _The Environmental AI_'s online Collaboration Cafe! 
+### Thank you for joining the _The Environmental Data Science_'s online Collaboration Cafe! 
 
 We're delighted to have you here ☕ ✨ 🍰
 
@@ -17,10 +17,10 @@ We're delighted to have you here ☕ ✨ 🍰
 
 **Next call:** 22 Febraury 2022
 
-**What?** *The Environmental AI is a **community aiming to learn and discuss about good research practices to use existing AI and data science solutions to a better understanding of the planet earth across multiple environmental settings**. 
-[Collaboration Cafes](https://the-turing-way.netlify.app/community-handbook/coworking/coworking-collabcafe.html) are **online coworking calls** that engage anyone interested in learning and discussing about relevant themes in AI and data science to environmental studies*.
+**What?** *The Environmental Data Science is a **community aiming to learn and discuss about good research practices to use existing Data Science and AI solutions to a better understanding of the planet earth across multiple environmental settings**. 
+[Collaboration Cafes](https://the-turing-way.netlify.app/community-handbook/coworking/coworking-collabcafe.html) are **online coworking calls** that engage anyone interested in learning and discussing about relevant themes in Data Science and AI to environmental studies*.
 
-**Who?** ***Everyone** interested in reproducible, ethical, and inclusive data science and research for environmental studies are welcome to join the full or any part of The Environmental AI project, community, and/or this call.*
+**Who?** ***Everyone** interested in reproducible, ethical, and inclusive Data Science and research for environmental studies are welcome to join the full or any part of The Environmental Data Science project, community, and/or this call.*
 
 **How?** **Join Zoom Meeting**
 https://turing-uk.zoom.us/j/6779579342?pwd=L25scnhXUUNmVjFsc0hRWTAzTVJ1dz09
@@ -30,7 +30,7 @@ https://turing-uk.zoom.us/j/6779579342?pwd=L25scnhXUUNmVjFsc0hRWTAzTVJ1dz09
 ***All questions, comments, and recommendations are welcome!***
 
 ### Code of conduct
-* [Take a moment to read this](https://github.com/acocac/environmental-ai-book/blob/acoca-codeofconduct/CODE_OF_CONDUCT.md)
+* [Take a moment to read this](https://github.com/alan-turing-institute/environmental-ds-book/blob/acoca-codeofconduct/CODE_OF_CONDUCT.md)
 
 ### Useful links
 * All about [online Collaboration Cafes](https://github.com/alan-turing-institute/the-turing-way/blob/master/project_management/online-collaboration-cafe.md)
@@ -120,7 +120,7 @@ https://cuckoo.team/environmental-ai
     * Bea: working on the submission of her PhD thesis.
     * Alejandro: 
         * adding helpful resources about FAIR and example of research repositories for Environmental Sciences.
-        * checking which sample data within the Environmental AI book can be curated in [the Environmental Data Science Zenodo community](https://zenodo.org/communities/the-environmental-ds-community/?page=1&size=20).
+        * checking which sample data within the Environmental Data Science book can be curated in [the Environmental Data Science Zenodo community](https://zenodo.org/communities/the-environmental-ds-community/?page=1&size=20).
 
 ### Notes and questions
 
@@ -224,7 +224,7 @@ https://cuckoo.team/environmental-ai
 *Advertise and promote your event or anything exciting you're working on.* ✨
 
 * Met Office / Joint centre for excellence in environmental intelligence conference 16/17 Dec 2021!
-* We have a fresh interactive notebook in the Environmental AI Book :earth_asia::books: The notebook focuses on detecting tree crowns using the *DeepForest* model :deciduous_tree:. Have a look at the rendered version [here](https://acocac.github.io/environmental-ai-book/forest/modelling/forest-modelling-treecrown_deepforest.html). Other recent community contributions are the exploration of sensor data, [Met Office UKV high-resolution atmosphere model data for urban settings](https://acocac.github.io/environmental-ai-book/urban/sensors/urban-sensors-ukv.html) and [MODIS satellite imagery and wildfire data](https://acocac.github.io/environmental-ai-book/wildfires/sensors/wildfires-sensors-modis.html).
+* We have a fresh interactive notebook in the Environmental Data S Book :earth_asia::books: The notebook focuses on detecting tree crowns using the *DeepForest* model :deciduous_tree:. Have a look at the rendered version [here](https://acocac.github.io/environmental-ai-book/forest/modelling/forest-modelling-treecrown_deepforest.html). Other recent community contributions are the exploration of sensor data, [Met Office UKV high-resolution atmosphere model data for urban settings](https://acocac.github.io/environmental-ai-book/urban/sensors/urban-sensors-ukv.html) and [MODIS satellite imagery and wildfire data](https://acocac.github.io/environmental-ai-book/wildfires/sensors/wildfires-sensors-modis.html).
 
 ### Breakout rooms: Topic proposals
 
@@ -278,7 +278,7 @@ https://cuckoo.team/environmental-ai
 * Tom: Produce script to reproduce IceNet paper figures for *Nature Communications*
 * Emily: Visualization of LiDAR data
 * Scott: Organizing and Admin EnvSensors WPs project timetable
-* Alejandro: Deploying a FluxNet use case visualization outputs for the Environmental AI book
+* Alejandro: Deploying a FluxNet use case visualization outputs for the Environmental Data Science book
 
 ### Notes and questions
 
