@@ -1,0 +1,13 @@
+name: polar-modelling-icenet
+channels:
+  - conda-forge
+  - defaults
+dependencies:
+  - python=3.9
+  - jupyter
+  - pandas
+  - tqdm
+  - hvplot
+  - cartopy
+#  - datashader
+  - tensorflow==2.4.0

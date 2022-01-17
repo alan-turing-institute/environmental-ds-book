@@ -1,0 +1,16 @@
+name: wildfires-sensors-fires_modis
+channels:
+  - conda-forge
+  - defaults
+dependencies:
+  - python=3.9
+  - jupyter
+  - pandas
+  - intake
+  - intake-xarray
+  - aiohttp
+  - hvplot
+  - xarray
+  - pyhdf
+  - cartopy
+  - datashader
