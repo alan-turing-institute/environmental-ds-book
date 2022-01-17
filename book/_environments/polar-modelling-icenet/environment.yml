@@ -4,10 +4,12 @@ channels:
   - defaults
 dependencies:
   - python=3.9
+  - datashader
+  - tensorflow
+  - xarray
   - jupyter
-  - pandas
-  - tqdm
   - hvplot
   - cartopy
-#  - datashader
-  - tensorflow==2.4.0
+  - pandas
+  - iris
+  - imageio
