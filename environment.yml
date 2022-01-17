@@ -23,3 +23,4 @@ dependencies:
         - aiohttp
         - albumentations
         - scikit-image
+        - git+https://github.com/ESM-VFC/intake_zenodo_fetcher.git
