@@ -19,7 +19,7 @@ Thank you for joining the _The Environmental Data Science_'s journal club!
 
 We're delighted to have you here 📚
 
-**What?** *The Environmental Data Science is a **community aiming to learn and discuss good research practices to use existing AI and data science solutions to a better understanding of the planet earth across multiple environmental settings**. 
+**What?** *The Environmental Data Science is a **community aiming to learn and discuss scientific software practises/developments fostered by AI and data science for a better understanding of our Planet Earth and environmental systems**. 
 
 Journal club is **a discussion space** that engage anyone interested in **critically evaluating** recent articles in the **academic literature** around a defined subject in basic or applied research, in this case conceptual or experimental AI and data science for environmental studies*.
 
