@@ -13,8 +13,9 @@ Thank you for joining the _The Environmental Data Science_'s online Show & Tell 
 
 We're delighted to have you here 🎉
 
-**What?** *The Environmental Data Science is a **community aiming to learn and discuss scientific software practises/developments fostered by AI and data science for a better understanding of our Planet Earth and environmental systems**. 
-[Show and Tell](https://the-environmental-ds-book.netlify.app/community/coworking/coworking-showtell.html) are **online coworking calls** to gather feedback informally, but more importantly, it's a bi-monthly celebration of what you, your team and/or someone else of the community has accomplished.
+**What?** The Environmental Data Science is a community aiming to learn and discuss scientific software practises/developments fostered by AI and data science for a better understanding of our Planet Earth and environmental systems. 
+
+[Show and Tell](https://the-environmental-ds-book.netlify.app/community/coworking/coworking-showtell.html) are **online coworking calls** to gather feedback informally, but more importantly, it's a bi-monthly celebration of what you, your team and/or someone else in the community has accomplished.
 
 *Read more about it here: https://the-environmental-ds-book.netlify.app/community/coworking.html*
 
@@ -24,7 +25,8 @@ We're delighted to have you here 🎉
 
 **Next call:** 22 March 2022
 
-**How?** *Zoom link will be provided 10 minutes before the call*
+**How?** **Join Zoom Meeting**
+https://turing-uk.zoom.us/j/6779579342?pwd=L25scnhXUUNmVjFsc0hRWTAzTVJ1dz09
 
 ***All questions, comments and recommendations are welcome!***
 
@@ -38,7 +40,7 @@ We're delighted to have you here 🎉
 
 ### Sign up below
 
-*Name + <A fun Icebreaker> + an emoji to represent it ([emoji cheatsheet](https://github.com/ikatyang/emoji-cheat-sheet/blob/master/README.md))*
+**Name + Icebreaker question + an emoji to represent it ([emoji cheatsheet](https://github.com/ikatyang/emoji-cheat-sheet/blob/master/README.md))**
 
 *(Remember that this is a public document. You can use a pseudonym if you'd prefer.)*
 
@@ -46,7 +48,7 @@ We're delighted to have you here 🎉
 
 *Advertise and promote your event, or anything exciting you're working on.* ✨
 
-*
+* 
 *
 
 ### Schedule
@@ -71,7 +73,7 @@ https://cuckoo.team/environmental-ds
 
 Name(s) / Topic 
 
-* 
+* Alejandro Coca-Castro / The Environmental Data Science Book, overview and demonstration of the main achievements to date
 * 
 
 ### Notes and questions
