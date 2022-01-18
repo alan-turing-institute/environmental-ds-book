@@ -7,18 +7,18 @@
 *A **permanent document** exists in the HackMD: [https://hackmd.io/@environmental-ds/show-tell](https://hackmd.io/@environmental-ds/show-tell) that is regularly updated with the empty template for next event.*
 :::
 
-## _The Environmental Data Science_ ⛰ 🌳 🏙️ ❄️ 🔥 🌊  online Show & Tell
+## _The Environmental Data Science_ ⛰ 🌳 🏙️ ❄️ 🔥 🌊  online Show & Tell 🎬 💬 
 
-### DATE MONTH YEAR | Theme
+### DATE MONTH YEAR
 
 Thank you for joining the _The Environmental Data Science_'s online Show & Tell! 
 
 We're delighted to have you here 
 
-**What?** *The Environmental Data Science is a **community aiming to learn and discuss good research practices to use existing AI and data science solutions to a better understanding of the planet earth across multiple environmental settings**. 
-[Show and Tell](https://the-environmental-ds-book.netlify.app/community-handbook/coworking/coworking-showtell.html) are **online coworking calls** that engage anyone interested in showcasing and discussing relevant themes in AI and data science to environmental studies*.
+**What?** *The Environmental Data Science is a **community aiming to learn and discuss scientific software practises/developments fostered by AI and data science for a better understanding of our Planet Earth and environmental systems**. 
+[Show and Tell](https://the-environmental-ds-book.netlify.app/community/coworking/coworking-showtell.html) are **online coworking calls** that engage anyone interested in showcasing and discussing relevant themes in AI and data science to environmental studies*.
 
-*Read more about it here: https://the-turing-way.netlify.app/community-handbook/coworking.html*
+*Read more about it here: https://the-environmental-ds-book.netlify.app/community/coworking.html*
 
 **Who?** ***Everyone** interested in reproducible, ethical, and inclusive data science and research for environmental studies are welcome to join the full or any part of The Environmental Data Science project, community, and/or this call.*
 
@@ -30,7 +30,7 @@ We're delighted to have you here
 
 ### Useful links
 
-* All about [online Show and Tell](https://github.com/alan-turing-institute/the-turing-way/blob/master/project_management/online-collaboration-cafe.md)
+* All about [online Show and Tell](https://github.com/alan-turing-institute/environmental-ds-book/blob/master/book/community/coworking/coworking-showtell.md)
 
 ### Code of conduct
 
@@ -71,8 +71,8 @@ https://cuckoo.team/environmental-ds
 
 Name(s) / Topic 
 
-*
-*
+* 
+* 
 
 ### Notes and questions
 

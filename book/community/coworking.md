@@ -2,12 +2,12 @@
 # Coworking calls
 
 :::{note}
-Under construction
+We're still defining and assessing formats to engage the Environmental Data Science community!
+*Do you have another interesting format to suggest?*
+*Get in touch and let us know!*
 :::
 
-We're still defining and assessing formats to engage the Environmental Data Science community.
-
-Inspired by [_The Turing Way_ collaboration cafe template](https://github.com/alan-turing-institute/the-turing-way/blob/master/book/website/community-handbook/templates/template-coworking-collabcafe.md), we have successfully conducted 4 monthly collaborations cafes (see [here](https://hackmd.io/@environmental-ds/collaboration-cafe]) the shared notes). 
+Inspired by [_The Turing Way_ collaboration cafes](https://the-turing-way.netlify.app/community-handbook/coworking/coworking-collabcafe.html), we have successfully conducted 4 monthly collaborations cafes (see [here](https://hackmd.io/@environmental-ds/collaboration-cafe) the shared notes). 
 
 Other potential spaces to keep activity within the Environmental Data Science community are:
 * Show and tell: common within the software development community, it's **a showcasing space** to **celebrate** and **get feedback** of what you or your team has accomplished related to environmental data science.

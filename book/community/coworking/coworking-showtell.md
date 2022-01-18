@@ -9,7 +9,7 @@ We host these calls online using [Zoom](https://www.zoom.us/).
 
 One or two members from the core team are always available to lead the call.
 
-## Attending an online Show and Tell 🎬 📣
+## Attending an online Show and Tell
 
 The schedule for the show and tell can be viewed from the [community calendar](https://calendar.google.com/calendar/embed?src=environmental.ds.book%40gmail.com&ctz=Europe%2FLondon).
 
@@ -111,13 +111,13 @@ Show and Tell sessions give you the opportunity to show the most important work 
 
 We won't record presentation parts of the Show and Tell. We'll only take notes of Q&As in the HackMD to posterior access for you and the community.  
 
-As a rule of thumb, we suggest to start with 3-min overview of the topic backed by some slides. The remaining time should focus on demonstrate the work! You can gather feedback during and after the demo. Note each show and tell session is followed by 5-min Q&A.
+As a rule of thumb, we suggest to start with 3-min overview of the topic backed by some slides. The remaining time should focus on demonstrating the work! You can gather feedback during and after the demo. Note each show and tell session is followed by 5-min Q&A.
 
 During the online Show and Tell sessions, we'll use the main room to allow people to attend and discuss Show and Tell sessions.
 
 You'll see in the [HackMD](https://hackmd.io/@environmental-ds#Show-and-Tell-proposals) a section that says:
 
-> **Show-and-Tell-proposals**
+> **Show and Tell-proposals**
 >
 > *If you have an idea for a topic you'd like to discuss in the main room, please add your name and put the topic next to it.*
 > *If you like one of the topics that are already suggested, please add your name next to that one.*
@@ -129,7 +129,7 @@ You don't have to add your name in advance (although you're welcome to).
 Show and Tell topics might include:
 
 * A work in progress or ready to use model for monitoring an environmental variable or system.
-* An ongoing or mature implementation of Pangeo stack or other open-source package for analysing environmental data.
+* An early, ongoing or mature implementation of [Pangeo stack](https://pangeo.io/) and/or other open-source packages for processing and/or analysing environmental data.
 * Tips and/or help for visualising environmental data.
 * Showcase an existing demonstrator hosted by the Environmental Data Science Book. 
 
