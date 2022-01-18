@@ -1,6 +1,10 @@
 (cm-coworking-collabcafe)=
 # Online Collaboration Cafe
 
+:::{note}
+*The section below is re-used under a CC-BY license from [_The Turing Way_ online collaboration cafe](https://github.com/alan-turing-institute/the-turing-way/blob/main/book/website/community-handbook/coworking/coworking-collabcafe.md)*
+:::
+
 _The Turing Way_ Collaboration Cafes (or 'Cafés' with an accent) are virtual co-working spaces that are held fortnightly on the first and third Wednesdays of each month for 2 hours.
 The schedule will be updated periodically on the [GitHub page](https://github.com/alan-turing-institute/the-turing-way/blob/master/project_management/online-collaboration-cafe.md) as per the community requirement.
 
