@@ -9,9 +9,9 @@ tags: environmental-ds, collaboration-cafe
 
 ## 22 February 2022 | TBC
 
-### Thank you for joining the _The Environmental Data Science_'s online Collaboration Cafe! 
+### Thank you for joining the _The Environmental Data Science_'s online Collaboration Cafe ☕ ✨ 🍰! 
 
-We're delighted to have you here ☕ ✨ 🍰
+We're delighted to have you here 🎉
 
 **When?** 22 February 2022, 14:00 - 16:00 UTC ([see in your time zone](https://arewemeetingyet.com/London/2021-08-24/14:00))
 
@@ -25,17 +25,15 @@ We're delighted to have you here ☕ ✨ 🍰
 **How?** **Join Zoom Meeting**
 https://turing-uk.zoom.us/j/6779579342?pwd=L25scnhXUUNmVjFsc0hRWTAzTVJ1dz09
 
-==*The waiting room is enabled. The host of this call will let you in.*==
-
 ***All questions, comments, and recommendations are welcome!***
-
-### Code of conduct
-
-* [Take a moment to read this](https://github.com/alan-turing-institute/environmental-ds-book/blob/master/CODE_OF_CONDUCT.md)
 
 ### Useful links
 
 * All about [online Collaboration Cafes](https://github.com/alan-turing-institute/environmental-ds-book/blob/master/book/community/coworking/coworking-collabcafe.md)
+
+### Code of conduct
+
+* [Take a moment to read this](https://github.com/alan-turing-institute/environmental-ds-book/blob/master/CODE_OF_CONDUCT.md)
 
 ### Sign up below
 
