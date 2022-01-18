@@ -85,6 +85,8 @@ parts:
       title: Online Collaboration Cafe
     - file: community/notes/notes-journalclub
       title: Online Journal Club
+    - file: community/notes/notes-showtell
+      title: Online Show and Tell
   - file: community/templates
     title: Template Collection
     sections:
