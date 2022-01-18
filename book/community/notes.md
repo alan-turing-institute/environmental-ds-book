@@ -1,4 +1,4 @@
-(af-notes)=
+(cm-notes)=
 # Notes
 
 :::{note}
