@@ -76,6 +76,8 @@ parts:
       title: Background, Motivations, and Techniques
     - file: community/coworking/coworking-collabcafe
       title: Online Collaboration Cafe
+    - file: community/coworking/coworking-showtell
+      title: Online Show and Tell
   - file: community/notes
     title: Meeting Notes
     sections:
@@ -90,6 +92,8 @@ parts:
       title: Online Collaboration Cafe
     - file: community/templates/template-coworking-journalclub
       title: Online Journal Club
+    - file: community/templates/template-coworking-showtell
+      title: Online Show and Tell
     - file: community/templates/template-environments-sensors
       title: Environments Use Case Sensors
     - file: community/templates/template-environments-modelling
