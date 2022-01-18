@@ -1,19 +1,17 @@
-(cm-template-coworking-showtell)=
-# Show and Tell Call Template
-
-:::{note}
-*This HackMD is based on [_The Turing Way_ collaboration cafe template](https://github.com/alan-turing-institute/the-turing-way/blob/master/book/website/community-handbook/templates/template-coworking-collabcafe.md)*
+---
+tags: environmental-ds, show-and-tell
+---
+*This HackMD is adapted under a CC-BY license from [_The Turing Way_ collaboration cafe template](https://github.com/alan-turing-institute/the-turing-way/blob/master/book/website/community-handbook/templates/template-coworking-collabcafe.md)*
 
 *A **permanent document** exists in the HackMD: [https://hackmd.io/@environmental-ds/show-tell](https://hackmd.io/@environmental-ds/show-tell) that is regularly updated with the empty template for next event.*
-:::
 
 ## _The Environmental Data Science_ ⛰ 🌳 🏙️ ❄️ 🔥 🌊  online Show & Tell 🎬 💬 
 
-### DATE MONTH YEAR
+### 25 January 2022
 
 Thank you for joining the _The Environmental Data Science_'s online Show & Tell! 
 
-We're delighted to have you here 
+We're delighted to have you here 🎉
 
 **What?** *The Environmental Data Science is a **community aiming to learn and discuss scientific software practises/developments fostered by AI and data science for a better understanding of our Planet Earth and environmental systems**. 
 [Show and Tell](https://the-environmental-ds-book.netlify.app/community/coworking/coworking-showtell.html) are **online coworking calls** that engage anyone interested in showcasing and discussing relevant themes in AI and data science to environmental studies*.
@@ -34,7 +32,7 @@ We're delighted to have you here
 
 ### Code of conduct
 
-* A [quick review](https://alan-turing-institute/environmental-ds-book/blob/main/CODE_OF_CONDUCT.md)
+* [Take a moment to read this](https://alan-turing-institute/environmental-ds-book/blob/main/CODE_OF_CONDUCT.md)
 
 ### Sign up below
 
