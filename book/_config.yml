@@ -61,6 +61,6 @@ repository:
 #######################################################################################
 # Advanced and power-user settings
 sphinx:
-  extra_extensions          : ['sphinxcontrib.bibtex'] # A list of extra extensions to load by Sphinx.
+  extra_extensions          : ['sphinxcontrib.bibtex','sphinx_togglebutton'] # A list of extra extensions to load by Sphinx.
   config                    :  # key-value pairs to directly over-ride the Sphinx configuration
     language                : en
