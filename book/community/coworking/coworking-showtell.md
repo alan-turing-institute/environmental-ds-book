@@ -5,9 +5,9 @@
 *The section below is adapted under a CC-BY license from [_The Turing Way_ online collaboration cafe](https://github.com/alan-turing-institute/the-turing-way/blob/main/book/website/community-handbook/coworking/coworking-collabcafe.md)*
 :::
 
-Show and Tell (also known as S&T) meetings are virtual co-working spaces that are held fortnightly on the fourth Tuesday every two months for 1 hour.
+_The Environmental Data Science_ Show and Tell are virtual co-working spaces that are held fortnightly on the fourth Tuesday every two months for 1 hour.
 
-S&T meetings are a great way to gather feedback informally, but more importantly, it's a bi-monthly celebration of what you or your team has accomplished.
+The meetings are a great way to gather feedback informally, but more importantly, it's a bi-monthly celebration of what you or your team has accomplished.
 
 We host these calls online using [Zoom](https://www.zoom.us/).
 
