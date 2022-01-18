@@ -5,22 +5,24 @@ tags: environmental-ds, show-and-tell
 
 *A **permanent document** exists in the HackMD: [https://hackmd.io/@environmental-ds/show-tell](https://hackmd.io/@environmental-ds/show-tell) that is regularly updated with the empty template for next event.*
 
-## _The Environmental Data Science_ ⛰ 🌳 🏙️ ❄️ 🔥 🌊  online Show & Tell 🎬 💬 
+## _The Environmental Data Science_ ⛰ 🌳 🏙️ ❄️ 🔥 🌊  online Show & Tell
 
 ### 25 January 2022
 
-Thank you for joining the _The Environmental Data Science_'s online Show & Tell! 
+Thank you for joining the _The Environmental Data Science_'s online Show & Tell 🎬 💬 ! 
 
 We're delighted to have you here 🎉
 
 **What?** *The Environmental Data Science is a **community aiming to learn and discuss scientific software practises/developments fostered by AI and data science for a better understanding of our Planet Earth and environmental systems**. 
-[Show and Tell](https://the-environmental-ds-book.netlify.app/community/coworking/coworking-showtell.html) are **online coworking calls** that engage anyone interested in showcasing and discussing relevant themes in AI and data science to environmental studies*.
+[Show and Tell](https://the-environmental-ds-book.netlify.app/community/coworking/coworking-showtell.html) are **online coworking calls** to gather feedback informally, but more importantly, it's a bi-monthly celebration of what you, your team and/or someone else of the community has accomplished.
 
 *Read more about it here: https://the-environmental-ds-book.netlify.app/community/coworking.html*
 
 **Who?** ***Everyone** interested in reproducible, ethical, and inclusive data science and research for environmental studies are welcome to join the full or any part of The Environmental Data Science project, community, and/or this call.*
 
-**When?** DD Month YYYY, HH:MM BST (link for local time from https://arewemeetingyet.com)
+**When?** 25 January 2022, 13:00 - 14:00 UTC ([see in your time zone](https://arewemeetingyet.com/London/2022-01-25/13:00))
+
+**Next call:** 22 March 2022
 
 **How?** *Zoom link will be provided 10 minutes before the call*
 
@@ -32,7 +34,7 @@ We're delighted to have you here 🎉
 
 ### Code of conduct
 
-* [Take a moment to read this](https://alan-turing-institute/environmental-ds-book/blob/main/CODE_OF_CONDUCT.md)
+* [Take a moment to read this](https://github.com/alan-turing-institute/environmental-ds-book/blob/master/CODE_OF_CONDUCT.md)
 
 ### Sign up below
 
@@ -65,7 +67,7 @@ https://cuckoo.team/environmental-ds
 
 ### Show and Tell proposals
 
-*If you have an idea for a topic you'd like to discuss in a show and tell slot, please add it below and put your name next to it. If you like one of the topics that is already suggested, please add your name next to that one. For more information about breakout rooms see [the description on GitHub](https://github.com/alan-turing-institute/the-turing-way/blob/master/project_management/online-collaboration-cafe.md#breakout-rooms).*
+*If you have an idea for a topic you'd like to discuss in a show and tell slot, please add it below and put your name next to it. If you like one of the topics that is already suggested, please add your name next to that one. For more information about show and tell slots see [the description on GitHub](https://github.com/alan-turing-institute/environmental-ds-book/blob/master/book/community/coworking/coworking-showtell.md#show-and-tell-sessions).*
 
 Name(s) / Topic 
 
