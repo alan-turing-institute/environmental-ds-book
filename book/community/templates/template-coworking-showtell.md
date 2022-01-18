@@ -67,7 +67,7 @@ https://cuckoo.team/environmental-ds
 
 ### Show and Tell proposals
 
-*If you have an idea for a topic you'd like to discuss in a show and tell slot, please add it below and put your name next to it. If you like one of the topics that is already suggested, please add your name next to that one. For more information about breakout rooms see [the description on GitHub](https://github.com/alan-turing-institute/the-turing-way/blob/master/project_management/online-collaboration-cafe.md#breakout-rooms).*
+*If you have an idea for a topic you'd like to discuss in a show and tell slot, please add it below and put your name next to it. If you like one of the topics that is already suggested, please add your name next to that one. For more information about show and tell slots see [the description on GitHub](https://github.com/alan-turing-institute/environmental-ds-book/blob/master/book/community/coworking/coworking-showtell.md#show-and-tell-sessions).*
 
 Name(s) / Topic 
 
