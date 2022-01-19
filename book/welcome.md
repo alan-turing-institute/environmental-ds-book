@@ -1,6 +1,6 @@
 # Welcome 
 
-_The Environmental Data Science_ book is a  **living**, **open** and **community-driven** online resource to showcase and increase the awareness of data, research and open-source tools for collaborative, reproducible and transparent Environmental Data Science.
+_The Environmental Data Science_ book is a  **living**, **open** and **community-driven** online resource to showcase and support the publication of data, research and open-source tools for collaborative, reproducible and transparent Environmental Data Science.
 
 ```{figure} figures/welcome.jpg
 ---
@@ -25,4 +25,4 @@ We target to make sense of:
 
 We hope you find the content in the resource helpful.
 
-The resource is free under a [CC-BY licence](https://github.com/alan-turing-institute/environmental-ds-book/blob/master/LICENSE.md).
+The resource and executable notebooks are free under a [CC-BY licence and OSI-approved MIT license, respectively](https://github.com/alan-turing-institute/environmental-ds-book/blob/master/LICENSE.md).
