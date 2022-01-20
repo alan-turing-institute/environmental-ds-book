@@ -1,0 +1,38 @@
+# This CITATION.cff file was generated with cffinit.
+# Visit https://bit.ly/cffinit to generate yours today!
+
+cff-version: 1.2.0
+title: The Environmental Data Science book
+message: Please cite this software using these metadata.
+type: software
+authors:
+  - given-names: Alejandro
+    family-names: Coca-Castro
+    name-suffix: Dr
+    email: acoca@turing.ac.uk
+    affiliation: The Alan Turing Institute
+    orcid: 'https://orcid.org/0000-0002-9264-1539'
+  - given-names: The Environmental Data Science Community
+    email: environmental.ds.book@gmail.com
+repository-code: >-
+  https://github.com/alan-turing-institute/environmental-ds-book
+url: >-
+  https://the-environmental-ds-book.netlify.app/welcome.html
+abstract: >-
+  The Environmental Data Science book is a living,
+  open and community-driven online resource to
+  showcase and support the publication of data,
+  research and open-source tools for collaborative,
+  reproducible and transparent Environmental Data
+  Science.
+keywords:
+  - environmental science
+  - data science
+  - community project
+  - publication
+  - ecosystem modelling
+  - environmental modelling
+license: CC-BY-4.0
+commit: ' 5721816'
+version: 0.0.1
+date-released: '2021-11-01'
