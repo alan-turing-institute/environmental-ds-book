@@ -42,7 +42,7 @@ You may find it useful to do all your work in a separate git branch,  and leave 
 ### Individual file by executable notebook
 While the same environment for various notebooks sounds great, the main drawback is longer waiting times to get all dependencies working without conflicts. 
 
-If the single environment file does not work in your machine, or you're only interested to explore a particular notebook, we also provide individual environments files in [_environments](./../_environments)
+If the single environment file does not work in your machine, or you're only interested to explore a particular notebook, we also provide individual environments files in [_environments](https://github.com/alan-turing-institute/environmental-ds-book/tree/master/book/_environments)
 
 For each executable notebook, we provide lock files for installing exactly the same package across different operating system. For instance, for recreating the environment of the notebook [`forest-modelling-treecrown_deepforest`](https://github.com/alan-turing-institute/environmental-ds-book/blob/master/book/forest/modelling/forest-modelling-treecrown_deepforest.ipynb) on Linux:
 
