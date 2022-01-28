@@ -1,7 +1,7 @@
 <img src="book/figures/logo/logo.png" width="180" align="Right" /></a>
 
 <!-- ALL-CONTRIBUTORS-BADGE:START - Do not remove or modify this section -->
-[![All Contributors](https://img.shields.io/badge/all_contributors-5-orange.svg?style=flat-square)](#contributors-)
+[![All Contributors](https://img.shields.io/badge/all_contributors-6-orange.svg?style=flat-square)](#contributors-)
 <!-- ALL-CONTRIBUTORS-BADGE:END -->
 
 # The Environmental Data Science book
@@ -25,9 +25,10 @@ We welcome and recognize all contributions. You can see a list of current contri
   <tr>
     <td align="center"><a href="https://sgibson91.github.io/"><img src="https://avatars.githubusercontent.com/u/44771837?v=4?s=100" width="100px;" alt=""/><br /><sub><b>Sarah Gibson</b></sub></a><br /><a href="#ideas-sgibson91" title="Ideas, Planning, & Feedback">🤔</a></td>
     <td align="center"><a href="https://scotthosking.com"><img src="https://avatars.githubusercontent.com/u/10783052?v=4?s=100" width="100px;" alt=""/><br /><sub><b>Scott Hosking</b></sub></a><br /><a href="#ideas-scotthosking" title="Ideas, Planning, & Feedback">🤔</a> <a href="#content-scotthosking" title="Content">🖋</a> <a href="#mentoring-scotthosking" title="Mentoring">🧑‍🏫</a></td>
-    <td align="center"><a href="https://github.com/shmh40"><img src="https://avatars.githubusercontent.com/u/56727418?v=4?s=100" width="100px;" alt=""/><br /><sub><b>shmh40</b></sub></a><br /><a href="#blog-shmh40" title="Blogposts">📝</a></td>
+    <td align="center"><a href="https://github.com/shmh40"><img src="https://avatars.githubusercontent.com/u/56727418?v=4?s=100" width="100px;" alt=""/><br /><sub><b>shmh40</b></sub></a><br /><a href="#blog-shmh40" title="Blogposts">📝</a> <a href="https://github.com/alan-turing-institute/environmental-ds-book/commits?author=shmh40" title="Code">💻</a></td>
     <td align="center"><a href="https://github.com/samueljackson92"><img src="https://avatars.githubusercontent.com/u/2487781?v=4?s=100" width="100px;" alt=""/><br /><sub><b>Samuel Jackson</b></sub></a><br /><a href="#blog-samueljackson92" title="Blogposts">📝</a> <a href="https://github.com/alan-turing-institute/environmental-ds-book/commits?author=samueljackson92" title="Code">💻</a></td>
     <td align="center"><a href="https://github.com/mja2106"><img src="https://avatars.githubusercontent.com/u/33626681?v=4?s=100" width="100px;" alt=""/><br /><sub><b>Matt Allen</b></sub></a><br /><a href="https://github.com/alan-turing-institute/environmental-ds-book/pulls?q=is%3Apr+reviewed-by%3Amja2106" title="Reviewed Pull Requests">👀</a></td>
+    <td align="center"><a href="https://www.bas.ac.uk/profile/tomand"><img src="https://avatars.githubusercontent.com/u/26459412?v=4?s=100" width="100px;" alt=""/><br /><sub><b>Tom Andersson</b></sub></a><br /><a href="https://github.com/alan-turing-institute/environmental-ds-book/pulls?q=is%3Apr+reviewed-by%3Atom-andersson" title="Reviewed Pull Requests">👀</a></td>
   </tr>
 </table>
 
