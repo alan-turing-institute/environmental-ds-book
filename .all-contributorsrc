@@ -72,6 +72,16 @@
         "blog",
         "code"
       ]
+    },
+    {
+      "login": "Delphine-L",
+      "name": "Delphine Lariviere",
+      "avatar_url": "https://avatars.githubusercontent.com/u/11195061?v=4",
+      "profile": "https://github.com/Delphine-L",
+      "contributions": [
+        "ideas",
+        "mentoring"
+      ]
     }
   ],
   "contributorsPerLine": 7,
