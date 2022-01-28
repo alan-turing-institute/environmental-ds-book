@@ -1,7 +1,7 @@
 <img src="book/figures/logo/logo.png" width="180" align="Right" /></a>
 
 <!-- ALL-CONTRIBUTORS-BADGE:START - Do not remove or modify this section -->
-[![All Contributors](https://img.shields.io/badge/all_contributors-8-orange.svg?style=flat-square)](#contributors-)
+[![All Contributors](https://img.shields.io/badge/all_contributors-9-orange.svg?style=flat-square)](#contributors-)
 <!-- ALL-CONTRIBUTORS-BADGE:END -->
 
 # The Environmental Data Science book
@@ -33,6 +33,7 @@ We welcome and recognize all contributions. You can see a list of current contri
   </tr>
   <tr>
     <td align="center"><a href="https://github.com/Delphine-L"><img src="https://avatars.githubusercontent.com/u/11195061?v=4?s=100" width="100px;" alt=""/><br /><sub><b>Delphine Lariviere</b></sub></a><br /><a href="#ideas-Delphine-L" title="Ideas, Planning, & Feedback">🤔</a> <a href="#mentoring-Delphine-L" title="Mentoring">🧑‍🏫</a></td>
+    <td align="center"><a href="https://whitakerlab.github.io"><img src="https://avatars.githubusercontent.com/u/3626306?v=4?s=100" width="100px;" alt=""/><br /><sub><b>Kirstie Whitaker</b></sub></a><br /><a href="#ideas-KirstieJane" title="Ideas, Planning, & Feedback">🤔</a> <a href="#content-KirstieJane" title="Content">🖋</a> <a href="#mentoring-KirstieJane" title="Mentoring">🧑‍🏫</a></td>
   </tr>
 </table>
 
