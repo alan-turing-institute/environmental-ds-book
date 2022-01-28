@@ -1,7 +1,7 @@
 <img src="book/figures/logo/logo.png" width="180" align="Right" /></a>
 
 <!-- ALL-CONTRIBUTORS-BADGE:START - Do not remove or modify this section -->
-[![All Contributors](https://img.shields.io/badge/all_contributors-7-orange.svg?style=flat-square)](#contributors-)
+[![All Contributors](https://img.shields.io/badge/all_contributors-8-orange.svg?style=flat-square)](#contributors-)
 <!-- ALL-CONTRIBUTORS-BADGE:END -->
 
 # The Environmental Data Science book
@@ -30,6 +30,9 @@ We welcome and recognize all contributions. You can see a list of current contri
     <td align="center"><a href="https://github.com/mja2106"><img src="https://avatars.githubusercontent.com/u/33626681?v=4?s=100" width="100px;" alt=""/><br /><sub><b>Matt Allen</b></sub></a><br /><a href="https://github.com/alan-turing-institute/environmental-ds-book/pulls?q=is%3Apr+reviewed-by%3Amja2106" title="Reviewed Pull Requests">👀</a></td>
     <td align="center"><a href="https://www.bas.ac.uk/profile/tomand"><img src="https://avatars.githubusercontent.com/u/26459412?v=4?s=100" width="100px;" alt=""/><br /><sub><b>Tom Andersson</b></sub></a><br /><a href="https://github.com/alan-turing-institute/environmental-ds-book/pulls?q=is%3Apr+reviewed-by%3Atom-andersson" title="Reviewed Pull Requests">👀</a></td>
     <td align="center"><a href="https://github.com/svadams"><img src="https://avatars.githubusercontent.com/u/8512966?v=4?s=100" width="100px;" alt=""/><br /><sub><b>svadams</b></sub></a><br /><a href="#blog-svadams" title="Blogposts">📝</a> <a href="https://github.com/alan-turing-institute/environmental-ds-book/commits?author=svadams" title="Code">💻</a></td>
+  </tr>
+  <tr>
+    <td align="center"><a href="https://github.com/Delphine-L"><img src="https://avatars.githubusercontent.com/u/11195061?v=4?s=100" width="100px;" alt=""/><br /><sub><b>Delphine Lariviere</b></sub></a><br /><a href="#ideas-Delphine-L" title="Ideas, Planning, & Feedback">🤔</a> <a href="#mentoring-Delphine-L" title="Mentoring">🧑‍🏫</a></td>
   </tr>
 </table>
 
