@@ -1,7 +1,7 @@
 <img src="book/figures/logo/logo.png" width="180" align="Right" /></a>
 
 <!-- ALL-CONTRIBUTORS-BADGE:START - Do not remove or modify this section -->
-[![All Contributors](https://img.shields.io/badge/all_contributors-6-orange.svg?style=flat-square)](#contributors-)
+[![All Contributors](https://img.shields.io/badge/all_contributors-7-orange.svg?style=flat-square)](#contributors-)
 <!-- ALL-CONTRIBUTORS-BADGE:END -->
 
 # The Environmental Data Science book
@@ -29,6 +29,7 @@ We welcome and recognize all contributions. You can see a list of current contri
     <td align="center"><a href="https://github.com/samueljackson92"><img src="https://avatars.githubusercontent.com/u/2487781?v=4?s=100" width="100px;" alt=""/><br /><sub><b>Samuel Jackson</b></sub></a><br /><a href="#blog-samueljackson92" title="Blogposts">📝</a> <a href="https://github.com/alan-turing-institute/environmental-ds-book/commits?author=samueljackson92" title="Code">💻</a></td>
     <td align="center"><a href="https://github.com/mja2106"><img src="https://avatars.githubusercontent.com/u/33626681?v=4?s=100" width="100px;" alt=""/><br /><sub><b>Matt Allen</b></sub></a><br /><a href="https://github.com/alan-turing-institute/environmental-ds-book/pulls?q=is%3Apr+reviewed-by%3Amja2106" title="Reviewed Pull Requests">👀</a></td>
     <td align="center"><a href="https://www.bas.ac.uk/profile/tomand"><img src="https://avatars.githubusercontent.com/u/26459412?v=4?s=100" width="100px;" alt=""/><br /><sub><b>Tom Andersson</b></sub></a><br /><a href="https://github.com/alan-turing-institute/environmental-ds-book/pulls?q=is%3Apr+reviewed-by%3Atom-andersson" title="Reviewed Pull Requests">👀</a></td>
+    <td align="center"><a href="https://github.com/svadams"><img src="https://avatars.githubusercontent.com/u/8512966?v=4?s=100" width="100px;" alt=""/><br /><sub><b>svadams</b></sub></a><br /><a href="#blog-svadams" title="Blogposts">📝</a> <a href="https://github.com/alan-turing-institute/environmental-ds-book/commits?author=svadams" title="Code">💻</a></td>
   </tr>
 </table>
 
