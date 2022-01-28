@@ -12,7 +12,7 @@
       "profile": "https://sgibson91.github.io/",
       "contributions": [
         "ideas"
-       ]
+      ]
     },
     {
       "login": "scotthosking",
@@ -23,6 +23,15 @@
         "ideas",
         "content",
         "mentoring"
+      ]
+    },
+    {
+      "login": "shmh40",
+      "name": "shmh40",
+      "avatar_url": "https://avatars.githubusercontent.com/u/56727418?v=4",
+      "profile": "https://github.com/shmh40",
+      "contributions": [
+        "blog"
       ]
     }
   ],
