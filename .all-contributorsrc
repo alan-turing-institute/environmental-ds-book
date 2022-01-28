@@ -33,6 +33,15 @@
       "contributions": [
         "blog"
       ]
+    },
+    {
+      "login": "mja2106",
+      "name": "Matt Allen",
+      "avatar_url": "https://avatars.githubusercontent.com/u/33626681?v=4",
+      "profile": "https://github.com/mja2106",
+      "contributions": [
+        "review"
+      ]
     }
   ],
   "contributorsPerLine": 7,
