@@ -6,6 +6,15 @@
   "commit": false,
   "contributors": [
     {
+      "login": "sgibson91",
+      "name": "Sarah Gibson",
+      "avatar_url": "https://avatars.githubusercontent.com/u/44771837?v=4",
+      "profile": "https://sgibson91.github.io/",
+      "contributions": [
+        "ideas"
+       ]
+    },
+    {
       "login": "scotthosking",
       "name": "Scott Hosking",
       "avatar_url": "https://avatars.githubusercontent.com/u/10783052?v=4",
