@@ -1,10 +1,7 @@
 <img src="book/figures/logo/logo.png" width="180" align="Right" /></a>
-<!-- ALL-CONTRIBUTORS-BADGE:START - Do not remove or modify this section -->
-[![All Contributors](https://img.shields.io/badge/all_contributors-1-orange.svg?style=flat-square)](#contributors-)
-<!-- ALL-CONTRIBUTORS-BADGE:END -->
 
 <!-- ALL-CONTRIBUTORS-BADGE:START - Do not remove or modify this section -->
-[![All Contributors](https://img.shields.io/badge/all_contributors-6-green.svg?style=flat-square)](#contributors-)
+[![All Contributors](https://img.shields.io/badge/all_contributors-1-orange.svg?style=flat-square)](#contributors-)
 <!-- ALL-CONTRIBUTORS-BADGE:END -->
 
 # The Environmental Data Science book
@@ -27,6 +24,7 @@ We welcome and recognize all contributions. You can see a list of current contri
 <table>
   <tr>
     <td align="center"><a href="https://sgibson91.github.io/"><img src="https://avatars.githubusercontent.com/u/44771837?v=4?s=100" width="100px;" alt=""/><br /><sub><b>Sarah Gibson</b></sub></a><br /><a href="#ideas-sgibson91" title="Ideas, Planning, & Feedback">🤔</a></td>
+    <td align="center"><a href="https://scotthosking.com"><img src="https://avatars.githubusercontent.com/u/10783052?v=4?s=100" width="100px;" alt=""/><br /><sub><b>Scott Hosking</b></sub></a><br /><a href="#ideas-scotthosking" title="Ideas, Planning, & Feedback">🤔</a> <a href="#content-scotthosking" title="Content">🖋</a> <a href="#mentoring-scotthosking" title="Mentoring">🧑‍🏫</a></td>
   </tr>
 </table>
 
