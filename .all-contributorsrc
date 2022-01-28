@@ -1,0 +1,26 @@
+{
+  "files": [
+    "README.md"
+  ],
+  "imageSize": 100,
+  "commit": false,
+  "contributors": [
+    {
+      "login": "scotthosking",
+      "name": "Scott Hosking",
+      "avatar_url": "https://avatars.githubusercontent.com/u/10783052?v=4",
+      "profile": "https://scotthosking.com",
+      "contributions": [
+        "ideas",
+        "content",
+        "mentoring"
+      ]
+    }
+  ],
+  "contributorsPerLine": 7,
+  "projectName": "environmental-ds-book",
+  "projectOwner": "alan-turing-institute",
+  "repoType": "github",
+  "repoHost": "https://github.com",
+  "skipCi": true
+}
