@@ -356,6 +356,11 @@
      Online Collaboration Cafe
     </a>
    </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../coworking/coworking-showtell.html">
+     Online Show and Tell
+    </a>
+   </li>
   </ul>
  </li>
  <li class="toctree-l1 has-children">
@@ -381,6 +386,11 @@
      Online Journal Club
     </a>
    </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../notes/notes-showtell.html">
+     Online Show and Tell
+    </a>
+   </li>
   </ul>
  </li>
  <li class="toctree-l1 has-children">
@@ -401,6 +411,11 @@
    <li class="toctree-l2">
     <a class="reference internal" href="../templates/template-coworking-journalclub.html">
      Online Journal Club
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../templates/template-coworking-showtell.html">
+     Online Show and Tell
     </a>
    </li>
    <li class="toctree-l2">
@@ -644,30 +659,36 @@
 </pre></div>
 </div>
 <p>The <code class="docutils literal notranslate"><span class="pre">.github</span> <span class="pre">folder</span></code> refers to GitHub related deployment files and templates of issues/pull requests usually curated by the repository maintainers or developers. The <code class="docutils literal notranslate"><span class="pre">book</span> <span class="pre">folder</span></code> holds the website content and other relevant files (table of content and configuration files).</p>
-<p>For the book content, the following contributions are accepted:
-Narrative content: include plain text, citations, equations, figures, special content blocks and more.
-Executable content: consists of computational material in a given programming language e.g. python along a narrative.</p>
+<p>For the book content, the following contributions are accepted:</p>
+<ul class="simple">
+<li><p><strong>Narrative content</strong>: include plain text, citations, equations, figures, special content blocks and more.</p></li>
+<li><p><strong>Executable content</strong>: consists of computational material in a given programming language e.g. python along a narrative.</p></li>
+</ul>
 <div class="admonition seealso">
 <p class="admonition-title">See also</p>
 <p>Please visit the corresponding Jupyter Book guidelines for <a class="reference external" href="https://jupyterbook.org/content/index.html#write-narrative-content"><code class="docutils literal notranslate"><span class="pre">narrative</span></code></a> and <a class="reference external" href="%27https://jupyterbook.org/execute/index.html#write-executable-content"><code class="docutils literal notranslate"><span class="pre">executable</span></code></a> content.</p>
 </div>
 <p>The <code class="docutils literal notranslate"><span class="pre">_toc.yml</span></code> file sets the main sections of the Environmental DS book. It is a simple configuration file specifying a table of content from all the executable and narrative content found in the <code class="docutils literal notranslate"><span class="pre">book</span></code> folder (and in subfolders). The current version of the book consists of four key sections:</p>
-<p>Preamble: contains narrative content i.e. plain markdown files describing the aims of the book, the target audience, how to use and attribution.
-Environments: provides narrative and executable content by environmental system e.g. Forest. We set different themes: sensors, modelling, etc to differentiate the type of analysis or procedure.
-Community: compiles community-related resources such as notes of co-working meetings, templates for new executable content i.e. demonstrators and interesting readings.<br />
-Afterword: describe miscellaneous material such as glossary, bibliography and execution statistics.</p>
+<ul class="simple">
+<li><p><strong>Preamble</strong>: contains narrative content i.e. plain markdown files describing the aims of the book, the target audience, how to use and attribution.</p></li>
+<li><p><strong>Environments</strong>: provides narrative and executable content by environmental system e.g. Forest. We set different themes: sensors, modelling, etc to differentiate the type of analysis or procedure.</p></li>
+<li><p><strong>Community</strong>: compiles community-related resources such as notes of co-working meetings, templates for new executable content i.e. demonstrators and interesting readings.</p></li>
+<li><p><strong>Afterword</strong>: describe miscellaneous material such as glossary, bibliography and execution statistics.</p></li>
+</ul>
 </div>
 <div class="section" id="contribution-of-executable-notebooks">
 <h2>Contribution of executable notebooks<a class="headerlink" href="#contribution-of-executable-notebooks" title="Permalink to this headline">¶</a></h2>
 <p>The contribution process has three main steps: exploration, preparation and submission.</p>
 <div class="section" id="exploration">
 <h3>Exploration<a class="headerlink" href="#exploration" title="Permalink to this headline">¶</a></h3>
-<p>We encourage you to explore existing templates of proposed topics or themes which are available in the community section. The proposed themes are described below.
-Sensor: highlights a particular environmental sensor with visualisation and interpretation of the corresponding layers of information.
-Preprocessing: refers to all procedures to clean and prepare environmental data for analysis. The notebook should highlight differences between the raw and preprocessed data.
-Modelling: comprises models to analyse a given environmental system.
-Post-processing: refers to post-process routines to fine tune and/or adjust modelling outputs.</p>
-<p>In addition to defining the target environmental system and theme, we suggest inspecting existing published notebooks to have some notions about the expected content. For instance, a common component of the notebooks is their interactive plotting. For python, we provide a recent webinar about open-source packages for handling and visualising geospatial data. Some of these packages have been successfully used in the existing notebooks of the Environmental DS book, including <code class="docutils literal notranslate"><span class="pre">intake</span></code> for data cataloguing and <code class="docutils literal notranslate"><span class="pre">hvplot</span></code>for interactive plotting.</p>
+<p>We encourage you to explore existing templates of proposed topics or themes which are available in the community section. The proposed themes are described below.</p>
+<ul class="simple">
+<li><p><strong>Sensor</strong>: highlights a particular environmental sensor with visualisation and interpretation of the corresponding layers of information.</p></li>
+<li><p><strong>Preprocessing</strong>: refers to all procedures to clean and prepare environmental data for analysis. The notebook should highlight differences between the raw and preprocessed data.</p></li>
+<li><p><strong>Modelling</strong>: comprises models to analyse a given environmental system.</p></li>
+<li><p><strong>Post-processing</strong>: refers to post-process routines to fine tune and/or adjust modelling outputs.</p></li>
+</ul>
+<p>In addition to defining the target environmental system and theme, we suggest inspecting existing published notebooks to have some notions about the expected content. For instance, a common component of the notebooks is their interactive plotting. For python notebooks, we suggest to watch <a class="reference external" href="https://event.on24.com/wcc/r/3296081/71BDD53E21EC72B3ACA24FEC98EE2A7C?mode=login&amp;email=acocac&#64;gmail.com">this recent webinar</a> about open-source packages for handling and visualising geospatial data. Some of these packages have been successfully used in the existing notebooks of the Environmental DS book, including <code class="docutils literal notranslate"><span class="pre">intake</span></code> for data cataloguing and <code class="docutils literal notranslate"><span class="pre">hvplot</span></code>for interactive plotting.</p>
 </div>
 <div class="section" id="preparation">
 <h3>Preparation<a class="headerlink" href="#preparation" title="Permalink to this headline">¶</a></h3>

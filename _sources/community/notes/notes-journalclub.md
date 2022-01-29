@@ -18,7 +18,7 @@ Thank you for joining the _The Environmental Data Science_'s journal club!
 
 We're delighted to have you here 📚
 
-**What?** The Environmental Data Science is a **community aiming to learn and discuss good research practices to use existing data science and AI solutions to a better understanding of the planet earth across multiple environmental settings**. 
+**What?** *The Environmental Data Science is a **community aiming to learn and discuss scientific software practises/developments fostered by AI and data science for a better understanding of our Planet Earth and environmental systems**. 
 
 The journal club is **a discussion space** that engage anyone interested in **critically evaluating** recent articles in the **academic literature** around a defined subject in basic or applied research, in this case conceptual or experimental AI and data science for environmental studies.
 
@@ -30,6 +30,12 @@ Passcode: 1989
 
 ==*The waiting room is enabled. The host of this call will let you in.*==
 
+***All questions, comments, and recommendations are welcome!***
+
+### Code of conduct
+
+* [Take a moment to read this](https://github.com/alan-turing-institute/environmental-ds-book/blob/master/CODE_OF_CONDUCT.md)
+
 ## Agenda
 | Time  | Activity | Location |
 | ----- | -------- | -------- |
@@ -38,9 +44,6 @@ Passcode: 1989
 | 16:20 | ✋ Paper discussion | Main room|
 | 16:40 | ✏️  Concurrent silent notetaking| HackMD|
 | 16:55 | 📕 Wrap-up and feedback | HackMD|
-
-### Tips and Code of conduct
-* TBC
 
 ### ❓ Questions (prior the meeting date)
 *Please write your posed in preparation for the Journal Club session questions as you read the paper - these could be related to the methodology, the data, the conclusions, etc.*

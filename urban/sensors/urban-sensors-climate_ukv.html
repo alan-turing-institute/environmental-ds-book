@@ -356,6 +356,11 @@
      Online Collaboration Cafe
     </a>
    </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../../community/coworking/coworking-showtell.html">
+     Online Show and Tell
+    </a>
+   </li>
   </ul>
  </li>
  <li class="toctree-l1 has-children">
@@ -381,6 +386,11 @@
      Online Journal Club
     </a>
    </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../../community/notes/notes-showtell.html">
+     Online Show and Tell
+    </a>
+   </li>
   </ul>
  </li>
  <li class="toctree-l1 has-children">
@@ -401,6 +411,11 @@
    <li class="toctree-l2">
     <a class="reference internal" href="../../community/templates/template-coworking-journalclub.html">
      Online Journal Club
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../../community/templates/template-coworking-showtell.html">
+     Online Show and Tell
     </a>
    </li>
    <li class="toctree-l2">
@@ -526,7 +541,7 @@
         aria-label="Launch interactive content"><i class="fas fa-rocket"></i></button>
     <div class="dropdown-buttons">
         
-        <a class="binder-button" href="https://aws-uswest2-binder.pangeo.io/v2/gh/alan-turing-institute/environmental-ds-book/master?urlpath=tree/book/urban/sensors/urban-sensors-climate_ukv.ipynb"><button type="button"
+        <a class="binder-button" href="https://gesis.mybinder.org/v2/gh/alan-turing-institute/environmental-ds-book/master?urlpath=tree/book/urban/sensors/urban-sensors-climate_ukv.ipynb"><button type="button"
                 class="btn btn-secondary topbarbtn" title="Launch Binder" data-toggle="tooltip"
                 data-placement="left"><img class="binder-button-logo"
                     src="../../_static/images/logo_binder.svg"
@@ -854,7 +869,7 @@ made openly available as part of the Met Office contribution to the COVID 19 mod
 <h4>Notebook<a class="headerlink" href="#notebook" title="Permalink to this headline">¶</a></h4>
 <ul class="simple">
 <li><p>Samantha V. Adams (author), Met Office Informatics Lab, <a class="reference external" href="https://github.com/svadams">&#64;svadams</a></p></li>
-<li><p>Alejandro Coca-Castro (reviewer), The Alan Turing Institute, <a class="reference external" href="https://github.com/acocac">&#64;acocac</a>, 01/10/21 (latest revision)</p></li>
+<li><p>Alejandro Coca-Castro (reviewer), The Alan Turing Institute, <a class="reference external" href="https://github.com/acocac">&#64;acocac</a>, 18/01/22 (latest revision)</p></li>
 </ul>
 </div>
 <div class="section" id="dataset-originator-creator">
@@ -886,14 +901,7 @@ made openly available as part of the Met Office contribution to the COVID 19 mod
 </div>
 <div class="section" id="install-and-load-libraries">
 <h2>Install and load libraries<a class="headerlink" href="#install-and-load-libraries" title="Permalink to this headline">¶</a></h2>
-<div class="cell docutils container">
-<div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="ch">#!conda install -c conda-forge iris</span>
-</pre></div>
-</div>
-</div>
-</div>
-<div class="cell docutils container">
+<div class="cell tag_hide-input docutils container">
 <div class="cell_input docutils container">
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">os</span>
 <span class="kn">import</span> <span class="nn">iris</span>
@@ -913,7 +921,7 @@ made openly available as part of the Met Office contribution to the COVID 19 mod
 <span class="kn">import</span> <span class="nn">warnings</span>
 <span class="n">warnings</span><span class="o">.</span><span class="n">filterwarnings</span><span class="p">(</span><span class="n">action</span><span class="o">=</span><span class="s1">&#39;ignore&#39;</span><span class="p">)</span>
 
-<span class="o">%</span><span class="k">matplotlib</span>     inline
+<span class="o">%</span><span class="k">matplotlib</span> inline
 </pre></div>
 </div>
 </div>
@@ -943,7 +951,7 @@ made openly available as part of the Met Office contribution to the COVID 19 mod
 </div>
 <div class="cell_output docutils container">
 <div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>(&#39;../sensors/urban-sensors-climate_ukv/ukv_daily_t1o5m_mean_20150801.nc&#39;,
- &lt;http.client.HTTPMessage at 0x7fc00644c670&gt;)
+ &lt;http.client.HTTPMessage at 0x16700a850&gt;)
 </pre></div>
 </div>
 </div>
@@ -961,7 +969,7 @@ made openly available as part of the Met Office contribution to the COVID 19 mod
 <div class="section" id="visualisation">
 <h2>Visualisation<a class="headerlink" href="#visualisation" title="Permalink to this headline">¶</a></h2>
 <p>Here we use the Iris wrapper to matplotlib pyplot to plot the gridded data with added gridlines and coastline.</p>
-<div class="cell docutils container">
+<div class="cell tag_hide-input docutils container">
 <div class="cell_input docutils container">
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">plt</span><span class="o">.</span><span class="n">figure</span><span class="p">(</span><span class="n">figsize</span><span class="o">=</span><span class="p">(</span><span class="mi">30</span><span class="p">,</span> <span class="mi">10</span><span class="p">))</span>
 <span class="n">iplt</span><span class="o">.</span><span class="n">pcolormesh</span><span class="p">(</span><span class="n">air_temp</span><span class="p">)</span>
@@ -975,10 +983,10 @@ made openly available as part of the Met Office contribution to the COVID 19 mod
 </div>
 </div>
 <div class="cell_output docutils container">
-<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>&lt;cartopy.mpl.gridliner.Gridliner at 0x7fc009df86a0&gt;
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>&lt;cartopy.mpl.gridliner.Gridliner at 0x1670c9310&gt;
 </pre></div>
 </div>
-<img alt="../../_images/urban-sensors-climate_ukv_10_1.png" src="../../_images/urban-sensors-climate_ukv_10_1.png" />
+<img alt="../../_images/urban-sensors-climate_ukv_9_1.png" src="../../_images/urban-sensors-climate_ukv_9_1.png" />
 </div>
 </div>
 </div>
@@ -1007,7 +1015,7 @@ made openly available as part of the Met Office contribution to the COVID 19 mod
 </div>
 </div>
 </div>
-<div class="cell docutils container">
+<div class="cell tag_hide-input docutils container">
 <div class="cell_input docutils container">
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">plt</span><span class="o">.</span><span class="n">figure</span><span class="p">(</span><span class="n">figsize</span><span class="o">=</span><span class="p">(</span><span class="mi">30</span><span class="p">,</span> <span class="mi">10</span><span class="p">))</span>
 <span class="n">iplt</span><span class="o">.</span><span class="n">pcolormesh</span><span class="p">(</span><span class="n">global_cube</span><span class="p">)</span>
@@ -1019,10 +1027,10 @@ made openly available as part of the Met Office contribution to the COVID 19 mod
 </div>
 </div>
 <div class="cell_output docutils container">
-<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>&lt;cartopy.mpl.gridliner.Gridliner at 0x7fc006ee1310&gt;
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>&lt;cartopy.mpl.gridliner.Gridliner at 0x1672b1c70&gt;
 </pre></div>
 </div>
-<img alt="../../_images/urban-sensors-climate_ukv_14_1.png" src="../../_images/urban-sensors-climate_ukv_14_1.png" />
+<img alt="../../_images/urban-sensors-climate_ukv_13_1.png" src="../../_images/urban-sensors-climate_ukv_13_1.png" />
 </div>
 </div>
 </div>
@@ -1040,7 +1048,7 @@ made openly available as part of the Met Office contribution to the COVID 19 mod
 </div>
 <div class="section" id="plot-the-regridded-data-to-check-it-is-correct">
 <h3>Plot the regridded data to check it is correct<a class="headerlink" href="#plot-the-regridded-data-to-check-it-is-correct" title="Permalink to this headline">¶</a></h3>
-<div class="cell docutils container">
+<div class="cell tag_hide-input docutils container">
 <div class="cell_input docutils container">
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">plt</span><span class="o">.</span><span class="n">figure</span><span class="p">(</span><span class="n">figsize</span><span class="o">=</span><span class="p">(</span><span class="mi">30</span><span class="p">,</span> <span class="mi">10</span><span class="p">))</span>
 
@@ -1055,10 +1063,10 @@ made openly available as part of the Met Office contribution to the COVID 19 mod
 </div>
 </div>
 <div class="cell_output docutils container">
-<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>&lt;cartopy.mpl.gridliner.Gridliner at 0x7fc006e8d400&gt;
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>&lt;cartopy.mpl.gridliner.Gridliner at 0x167314d60&gt;
 </pre></div>
 </div>
-<img alt="../../_images/urban-sensors-climate_ukv_18_1.png" src="../../_images/urban-sensors-climate_ukv_18_1.png" />
+<img alt="../../_images/urban-sensors-climate_ukv_17_1.png" src="../../_images/urban-sensors-climate_ukv_17_1.png" />
 </div>
 </div>
 </div>
@@ -1082,7 +1090,7 @@ made openly available as part of the Met Office contribution to the COVID 19 mod
 </div>
 <div class="section" id="plot-the-results">
 <h3>Plot the results<a class="headerlink" href="#plot-the-results" title="Permalink to this headline">¶</a></h3>
-<div class="cell docutils container">
+<div class="cell tag_hide-input docutils container">
 <div class="cell_input docutils container">
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">plt</span><span class="o">.</span><span class="n">figure</span><span class="p">(</span><span class="n">figsize</span><span class="o">=</span><span class="p">(</span><span class="mi">20</span><span class="p">,</span> <span class="mi">5</span><span class="p">))</span>
 
@@ -1099,7 +1107,7 @@ made openly available as part of the Met Office contribution to the COVID 19 mod
 </div>
 </div>
 <div class="cell_output docutils container">
-<img alt="../../_images/urban-sensors-climate_ukv_22_0.png" src="../../_images/urban-sensors-climate_ukv_22_0.png" />
+<img alt="../../_images/urban-sensors-climate_ukv_21_0.png" src="../../_images/urban-sensors-climate_ukv_21_0.png" />
 </div>
 </div>
 </div>

@@ -356,6 +356,11 @@
      Online Collaboration Cafe
     </a>
    </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../../community/coworking/coworking-showtell.html">
+     Online Show and Tell
+    </a>
+   </li>
   </ul>
  </li>
  <li class="toctree-l1 has-children">
@@ -381,6 +386,11 @@
      Online Journal Club
     </a>
    </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../../community/notes/notes-showtell.html">
+     Online Show and Tell
+    </a>
+   </li>
   </ul>
  </li>
  <li class="toctree-l1 has-children">
@@ -401,6 +411,11 @@
    <li class="toctree-l2">
     <a class="reference internal" href="../../community/templates/template-coworking-journalclub.html">
      Online Journal Club
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../../community/templates/template-coworking-showtell.html">
+     Online Show and Tell
     </a>
    </li>
    <li class="toctree-l2">
@@ -526,7 +541,7 @@
         aria-label="Launch interactive content"><i class="fas fa-rocket"></i></button>
     <div class="dropdown-buttons">
         
-        <a class="binder-button" href="https://aws-uswest2-binder.pangeo.io/v2/gh/alan-turing-institute/environmental-ds-book/master?urlpath=tree/book/forest/modelling/forest-modelling-treecrown_deepforest.ipynb"><button type="button"
+        <a class="binder-button" href="https://gesis.mybinder.org/v2/gh/alan-turing-institute/environmental-ds-book/master?urlpath=tree/book/forest/modelling/forest-modelling-treecrown_deepforest.ipynb"><button type="button"
                 class="btn btn-secondary topbarbtn" title="Launch Binder" data-toggle="tooltip"
                 data-placement="left"><img class="binder-button-logo"
                     src="../../_static/images/logo_binder.svg"
@@ -822,7 +837,7 @@
 <div class="section" id="notebook">
 <h4>Notebook<a class="headerlink" href="#notebook" title="Permalink to this headline">¶</a></h4>
 <ul class="simple">
-<li><p>Alejandro Coca-Castro (author), The Alan Turing Institute, <a class="reference external" href="https://github.com/acocac">&#64;acocac</a></p></li>
+<li><p>Alejandro Coca-Castro (author), The Alan Turing Institute, <a class="reference external" href="https://github.com/acocac">&#64;acocac</a>, 18/01/22 (latest revision)</p></li>
 <li><p>Matt Allen (reviewer), Department of Geography - University of Cambridge, <a class="reference external" href="https://github.com/mja2106">&#64;mja2106</a>, 21/09/21 (latest revision)</p></li>
 </ul>
 </div>
@@ -856,18 +871,16 @@
 </div>
 <div class="section" id="install-and-load-libraries">
 <h2>Install and load libraries<a class="headerlink" href="#install-and-load-libraries" title="Permalink to this headline">¶</a></h2>
-<div class="cell docutils container">
+<div class="cell tag_hide-input docutils container">
 <div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="o">!</span>pip -q install git+https://github.com/ESM-VFC/intake_zenodo_fetcher.git ##Intake Zenodo Fetcher
-<span class="o">!</span>pip -q install pycurl
-<span class="o">!</span>pip -q install <span class="nv">torchvision</span><span class="o">==</span><span class="m">0</span>.10.0
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="o">!</span>pip -q install <span class="nv">torchvision</span><span class="o">==</span><span class="m">0</span>.10.0
 <span class="o">!</span>pip -q install <span class="nv">torch</span><span class="o">==</span><span class="m">1</span>.9.0
 <span class="o">!</span>pip -q install DeepForest
 </pre></div>
 </div>
 </div>
 </div>
-<div class="cell docutils container">
+<div class="cell tag_hide-input docutils container">
 <div class="cell_input docutils container">
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">glob</span>
 <span class="kn">import</span> <span class="nn">os</span>
@@ -879,8 +892,6 @@
 <span class="kn">import</span> <span class="nn">matplotlib.pyplot</span> <span class="k">as</span> <span class="nn">plt</span>
 <span class="kn">import</span> <span class="nn">xmltodict</span>
 <span class="kn">import</span> <span class="nn">cv2</span>
-
-<span class="kn">import</span> <span class="nn">tempfile</span>
 
 <span class="kn">import</span> <span class="nn">torch</span>
 
@@ -946,6 +957,13 @@
 </pre></div>
 </div>
 </div>
+<div class="cell_output docutils container">
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>will download https://zenodo.org/api/files/5b372ed9-e4ec-41b0-a652-f0ce7d760e60/2018_MLBS_3_541000_4140000_image_crop.tif to /Users/acoca/OneDrive - The Alan Turing Institute/Documents/projects/envsensors/wp3/repos/environmental-ds-book/book/forest/modelling/../modelling/forest-modelling-treecrown_deepforest/NEONsample_RGB/2018_MLBS_3_541000_4140000_image_crop.tif
+</pre></div>
+</div>
+<script type="application/vnd.jupyter.widget-view+json">
+{"model_id": "619b974c84864e679108354b5c27f341", "version_major": 2, "version_minor": 0}
+</script></div>
 </div>
 </div>
 <div class="section" id="load-sample-image">
@@ -1008,7 +1026,7 @@ body.vscode-dark {
 }
 
 .xr-wrap {
-  display: block;
+  display: block !important;
   min-width: 300px;
   max-width: 700px;
 }
@@ -1321,7 +1339,7 @@ dask.array&lt;xarray-&lt;this-array&gt;, shape=(1864, 1429, 3), dtype=uint8, chu
 Coordinates:
   * y        (y) int64 0 1 2 3 4 5 6 7 ... 1857 1858 1859 1860 1861 1862 1863
   * x        (x) int64 0 1 2 3 4 5 6 7 ... 1422 1423 1424 1425 1426 1427 1428
-  * channel  (channel) int64 0 1 2</pre><div class='xr-wrap' hidden><div class='xr-header'><div class='xr-obj-type'>xarray.DataArray</div><div class='xr-array-name'></div><ul class='xr-dim-list'><li><span class='xr-has-index'>y</span>: 1864</li><li><span class='xr-has-index'>x</span>: 1429</li><li><span class='xr-has-index'>channel</span>: 3</li></ul></div><ul class='xr-sections'><li class='xr-section-item'><div class='xr-array-wrap'><input id='section-21deb963-efe8-4e39-859f-8f2a27b6c403' class='xr-array-in' type='checkbox' checked><label for='section-21deb963-efe8-4e39-859f-8f2a27b6c403' title='Show/hide data repr'><svg class='icon xr-icon-database'><use xlink:href='#icon-database'></use></svg></label><div class='xr-array-preview xr-preview'><span>dask.array&lt;chunksize=(1864, 1429, 3), meta=np.ndarray&gt;</span></div><div class='xr-array-data'><table>
+  * channel  (channel) int64 0 1 2</pre><div class='xr-wrap' style='display:none'><div class='xr-header'><div class='xr-obj-type'>xarray.DataArray</div><div class='xr-array-name'></div><ul class='xr-dim-list'><li><span class='xr-has-index'>y</span>: 1864</li><li><span class='xr-has-index'>x</span>: 1429</li><li><span class='xr-has-index'>channel</span>: 3</li></ul></div><ul class='xr-sections'><li class='xr-section-item'><div class='xr-array-wrap'><input id='section-3a76d25b-4a16-44cf-9293-b22aa125aba6' class='xr-array-in' type='checkbox' checked><label for='section-3a76d25b-4a16-44cf-9293-b22aa125aba6' title='Show/hide data repr'><svg class='icon xr-icon-database'><use xlink:href='#icon-database'></use></svg></label><div class='xr-array-preview xr-preview'><span>dask.array&lt;chunksize=(1864, 1429, 3), meta=np.ndarray&gt;</span></div><div class='xr-array-data'><table>
     <tr>
         <td>
             <table>
@@ -1401,7 +1419,7 @@ Coordinates:
 </svg>
         </td>
     </tr>
-</table></div></div></li><li class='xr-section-item'><input id='section-be164d93-4b11-4746-b213-0275369f5702' class='xr-section-summary-in' type='checkbox'  checked><label for='section-be164d93-4b11-4746-b213-0275369f5702' class='xr-section-summary' >Coordinates: <span>(3)</span></label><div class='xr-section-inline-details'></div><div class='xr-section-details'><ul class='xr-var-list'><li class='xr-var-item'><div class='xr-var-name'><span class='xr-has-index'>y</span></div><div class='xr-var-dims'>(y)</div><div class='xr-var-dtype'>int64</div><div class='xr-var-preview xr-preview'>0 1 2 3 4 ... 1860 1861 1862 1863</div><input id='attrs-042c8c01-a146-45d2-9711-4347e6d4891a' class='xr-var-attrs-in' type='checkbox' disabled><label for='attrs-042c8c01-a146-45d2-9711-4347e6d4891a' title='Show/Hide attributes'><svg class='icon xr-icon-file-text2'><use xlink:href='#icon-file-text2'></use></svg></label><input id='data-585c7a3d-f4b1-47a3-83d3-ab9d3486d6fc' class='xr-var-data-in' type='checkbox'><label for='data-585c7a3d-f4b1-47a3-83d3-ab9d3486d6fc' title='Show/Hide data repr'><svg class='icon xr-icon-database'><use xlink:href='#icon-database'></use></svg></label><div class='xr-var-attrs'><dl class='xr-attrs'></dl></div><div class='xr-var-data'><pre>array([   0,    1,    2, ..., 1861, 1862, 1863])</pre></div></li><li class='xr-var-item'><div class='xr-var-name'><span class='xr-has-index'>x</span></div><div class='xr-var-dims'>(x)</div><div class='xr-var-dtype'>int64</div><div class='xr-var-preview xr-preview'>0 1 2 3 4 ... 1425 1426 1427 1428</div><input id='attrs-3579e45a-558c-4d10-9e2a-9cc7a9d15b47' class='xr-var-attrs-in' type='checkbox' disabled><label for='attrs-3579e45a-558c-4d10-9e2a-9cc7a9d15b47' title='Show/Hide attributes'><svg class='icon xr-icon-file-text2'><use xlink:href='#icon-file-text2'></use></svg></label><input id='data-4d8969e9-a3b1-433b-a69e-0b2b31cd1b78' class='xr-var-data-in' type='checkbox'><label for='data-4d8969e9-a3b1-433b-a69e-0b2b31cd1b78' title='Show/Hide data repr'><svg class='icon xr-icon-database'><use xlink:href='#icon-database'></use></svg></label><div class='xr-var-attrs'><dl class='xr-attrs'></dl></div><div class='xr-var-data'><pre>array([   0,    1,    2, ..., 1426, 1427, 1428])</pre></div></li><li class='xr-var-item'><div class='xr-var-name'><span class='xr-has-index'>channel</span></div><div class='xr-var-dims'>(channel)</div><div class='xr-var-dtype'>int64</div><div class='xr-var-preview xr-preview'>0 1 2</div><input id='attrs-d13a80c1-dc84-4c27-abc0-27c2595b982e' class='xr-var-attrs-in' type='checkbox' disabled><label for='attrs-d13a80c1-dc84-4c27-abc0-27c2595b982e' title='Show/Hide attributes'><svg class='icon xr-icon-file-text2'><use xlink:href='#icon-file-text2'></use></svg></label><input id='data-f86212c8-3787-479d-9017-9c832f2af437' class='xr-var-data-in' type='checkbox'><label for='data-f86212c8-3787-479d-9017-9c832f2af437' title='Show/Hide data repr'><svg class='icon xr-icon-database'><use xlink:href='#icon-database'></use></svg></label><div class='xr-var-attrs'><dl class='xr-attrs'></dl></div><div class='xr-var-data'><pre>array([0, 1, 2])</pre></div></li></ul></div></li><li class='xr-section-item'><input id='section-d55f3e0e-460e-4812-ab29-466f0b59a1ce' class='xr-section-summary-in' type='checkbox' disabled ><label for='section-d55f3e0e-460e-4812-ab29-466f0b59a1ce' class='xr-section-summary'  title='Expand/collapse section'>Attributes: <span>(0)</span></label><div class='xr-section-inline-details'></div><div class='xr-section-details'><dl class='xr-attrs'></dl></div></li></ul></div></div></div></div>
+</table></div></div></li><li class='xr-section-item'><input id='section-064fab12-ab43-47fd-a50e-143337c5a180' class='xr-section-summary-in' type='checkbox'  checked><label for='section-064fab12-ab43-47fd-a50e-143337c5a180' class='xr-section-summary' >Coordinates: <span>(3)</span></label><div class='xr-section-inline-details'></div><div class='xr-section-details'><ul class='xr-var-list'><li class='xr-var-item'><div class='xr-var-name'><span class='xr-has-index'>y</span></div><div class='xr-var-dims'>(y)</div><div class='xr-var-dtype'>int64</div><div class='xr-var-preview xr-preview'>0 1 2 3 4 ... 1860 1861 1862 1863</div><input id='attrs-5c06129a-6c22-4e6e-95c7-fd0a0b4610d9' class='xr-var-attrs-in' type='checkbox' disabled><label for='attrs-5c06129a-6c22-4e6e-95c7-fd0a0b4610d9' title='Show/Hide attributes'><svg class='icon xr-icon-file-text2'><use xlink:href='#icon-file-text2'></use></svg></label><input id='data-b423cd49-f53c-46d2-9fa8-964071b59c7e' class='xr-var-data-in' type='checkbox'><label for='data-b423cd49-f53c-46d2-9fa8-964071b59c7e' title='Show/Hide data repr'><svg class='icon xr-icon-database'><use xlink:href='#icon-database'></use></svg></label><div class='xr-var-attrs'><dl class='xr-attrs'></dl></div><div class='xr-var-data'><pre>array([   0,    1,    2, ..., 1861, 1862, 1863])</pre></div></li><li class='xr-var-item'><div class='xr-var-name'><span class='xr-has-index'>x</span></div><div class='xr-var-dims'>(x)</div><div class='xr-var-dtype'>int64</div><div class='xr-var-preview xr-preview'>0 1 2 3 4 ... 1425 1426 1427 1428</div><input id='attrs-3ff0cd8e-3209-4d94-bb27-9310343d035f' class='xr-var-attrs-in' type='checkbox' disabled><label for='attrs-3ff0cd8e-3209-4d94-bb27-9310343d035f' title='Show/Hide attributes'><svg class='icon xr-icon-file-text2'><use xlink:href='#icon-file-text2'></use></svg></label><input id='data-0c50e305-39d4-43da-bdef-e7783c972116' class='xr-var-data-in' type='checkbox'><label for='data-0c50e305-39d4-43da-bdef-e7783c972116' title='Show/Hide data repr'><svg class='icon xr-icon-database'><use xlink:href='#icon-database'></use></svg></label><div class='xr-var-attrs'><dl class='xr-attrs'></dl></div><div class='xr-var-data'><pre>array([   0,    1,    2, ..., 1426, 1427, 1428])</pre></div></li><li class='xr-var-item'><div class='xr-var-name'><span class='xr-has-index'>channel</span></div><div class='xr-var-dims'>(channel)</div><div class='xr-var-dtype'>int64</div><div class='xr-var-preview xr-preview'>0 1 2</div><input id='attrs-507d12ad-59de-4d33-b079-7b186c008fd3' class='xr-var-attrs-in' type='checkbox' disabled><label for='attrs-507d12ad-59de-4d33-b079-7b186c008fd3' title='Show/Hide attributes'><svg class='icon xr-icon-file-text2'><use xlink:href='#icon-file-text2'></use></svg></label><input id='data-742ff6db-0b9a-46b2-9273-b2948bb1102a' class='xr-var-data-in' type='checkbox'><label for='data-742ff6db-0b9a-46b2-9273-b2948bb1102a' title='Show/Hide data repr'><svg class='icon xr-icon-database'><use xlink:href='#icon-database'></use></svg></label><div class='xr-var-attrs'><dl class='xr-attrs'></dl></div><div class='xr-var-data'><pre>array([0, 1, 2])</pre></div></li></ul></div></li><li class='xr-section-item'><input id='section-33d71ebb-21a5-430d-bddb-25cb807e77c7' class='xr-section-summary-in' type='checkbox' disabled ><label for='section-33d71ebb-21a5-430d-bddb-25cb807e77c7' class='xr-section-summary'  title='Expand/collapse section'>Attributes: <span>(0)</span></label><div class='xr-section-inline-details'></div><div class='xr-section-details'><dl class='xr-attrs'></dl></div></li></ul></div></div></div></div>
 </div>
 </div>
 <div class="section" id="load-and-prepare-labels">
@@ -1418,13 +1436,13 @@ Coordinates:
 <div class="cell_input docutils container">
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1">##Create ordered dictionary of .xml annotation files</span>
 <span class="k">def</span> <span class="nf">loadxml</span><span class="p">(</span><span class="n">imagename</span><span class="p">):</span>
-  <span class="n">imagename</span> <span class="o">=</span> <span class="n">imagename</span><span class="o">.</span><span class="n">replace</span><span class="p">(</span><span class="s1">&#39;.tif&#39;</span><span class="p">,</span><span class="s1">&#39;&#39;</span><span class="p">)</span>
-  <span class="n">fullurl</span> <span class="o">=</span> <span class="s2">&quot;https://raw.githubusercontent.com/weecology/NeonTreeEvaluation/master/annotations/&quot;</span> <span class="o">+</span> <span class="n">imagename</span> <span class="o">+</span> <span class="s2">&quot;.xml&quot;</span>
-  <span class="n">file</span> <span class="o">=</span> <span class="n">urllib</span><span class="o">.</span><span class="n">request</span><span class="o">.</span><span class="n">urlopen</span><span class="p">(</span><span class="n">fullurl</span><span class="p">)</span>
-  <span class="n">data</span> <span class="o">=</span> <span class="n">file</span><span class="o">.</span><span class="n">read</span><span class="p">()</span>
-  <span class="n">file</span><span class="o">.</span><span class="n">close</span><span class="p">()</span>
-  <span class="n">data</span> <span class="o">=</span> <span class="n">xmltodict</span><span class="o">.</span><span class="n">parse</span><span class="p">(</span><span class="n">data</span><span class="p">)</span>
-  <span class="k">return</span> <span class="n">data</span>
+    <span class="n">imagename</span> <span class="o">=</span> <span class="n">imagename</span><span class="o">.</span><span class="n">replace</span><span class="p">(</span><span class="s1">&#39;.tif&#39;</span><span class="p">,</span><span class="s1">&#39;&#39;</span><span class="p">)</span>
+    <span class="n">fullurl</span> <span class="o">=</span> <span class="s2">&quot;https://raw.githubusercontent.com/weecology/NeonTreeEvaluation/master/annotations/&quot;</span> <span class="o">+</span> <span class="n">imagename</span> <span class="o">+</span> <span class="s2">&quot;.xml&quot;</span>
+    <span class="n">file</span> <span class="o">=</span> <span class="n">urllib</span><span class="o">.</span><span class="n">request</span><span class="o">.</span><span class="n">urlopen</span><span class="p">(</span><span class="n">fullurl</span><span class="p">)</span>
+    <span class="n">data</span> <span class="o">=</span> <span class="n">file</span><span class="o">.</span><span class="n">read</span><span class="p">()</span>
+    <span class="n">file</span><span class="o">.</span><span class="n">close</span><span class="p">()</span>
+    <span class="n">data</span> <span class="o">=</span> <span class="n">xmltodict</span><span class="o">.</span><span class="n">parse</span><span class="p">(</span><span class="n">data</span><span class="p">)</span>
+    <span class="k">return</span> <span class="n">data</span>
 
 <span class="n">allxml</span> <span class="o">=</span> <span class="p">[</span><span class="n">loadxml</span><span class="p">(</span><span class="n">i</span><span class="p">)</span> <span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="n">filesn</span><span class="p">]</span>
 </pre></div>
@@ -1435,8 +1453,8 @@ Coordinates:
 <div class="cell_input docutils container">
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># function to extract bounding boxes</span>
 <span class="k">def</span> <span class="nf">extractbb</span><span class="p">(</span><span class="n">i</span><span class="p">):</span>
-  <span class="n">bb</span> <span class="o">=</span> <span class="p">[</span><span class="n">f</span><span class="p">[</span><span class="s1">&#39;bndbox&#39;</span><span class="p">]</span> <span class="k">for</span> <span class="n">f</span> <span class="ow">in</span> <span class="n">allxml</span><span class="p">[</span><span class="n">i</span><span class="p">][</span><span class="s1">&#39;annotation&#39;</span><span class="p">][</span><span class="s1">&#39;object&#39;</span><span class="p">]]</span>
-  <span class="k">return</span> <span class="n">bb</span>
+    <span class="n">bb</span> <span class="o">=</span> <span class="p">[</span><span class="n">f</span><span class="p">[</span><span class="s1">&#39;bndbox&#39;</span><span class="p">]</span> <span class="k">for</span> <span class="n">f</span> <span class="ow">in</span> <span class="n">allxml</span><span class="p">[</span><span class="n">i</span><span class="p">][</span><span class="s1">&#39;annotation&#39;</span><span class="p">][</span><span class="s1">&#39;object&#39;</span><span class="p">]]</span>
+    <span class="k">return</span> <span class="n">bb</span>
 
 <span class="n">bball</span> <span class="o">=</span> <span class="p">[</span><span class="n">extractbb</span><span class="p">(</span><span class="n">i</span><span class="p">)</span> <span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="mi">0</span><span class="p">,</span><span class="nb">len</span><span class="p">(</span><span class="n">allxml</span><span class="p">))]</span>
 <span class="nb">print</span><span class="p">(</span><span class="nb">len</span><span class="p">(</span><span class="n">bball</span><span class="p">))</span>
@@ -1493,7 +1511,7 @@ Coordinates:
 </div>
 </div>
 </div>
-<div class="cell docutils container">
+<div class="cell tag_hide-input docutils container">
 <div class="cell_input docutils container">
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="k">for</span> <span class="n">row</span> <span class="ow">in</span> <span class="n">target_bbox</span><span class="p">:</span>
     <span class="n">cv2</span><span class="o">.</span><span class="n">rectangle</span><span class="p">(</span><span class="n">image2</span><span class="p">,</span> <span class="p">(</span><span class="nb">int</span><span class="p">(</span><span class="n">row</span><span class="p">[</span><span class="s2">&quot;xmin&quot;</span><span class="p">]),</span> <span class="nb">int</span><span class="p">(</span><span class="n">row</span><span class="p">[</span><span class="s2">&quot;ymin&quot;</span><span class="p">])),</span> <span class="p">(</span><span class="nb">int</span><span class="p">(</span><span class="n">row</span><span class="p">[</span><span class="s2">&quot;xmax&quot;</span><span class="p">]),</span> <span class="nb">int</span><span class="p">(</span><span class="n">row</span><span class="p">[</span><span class="s2">&quot;ymax&quot;</span><span class="p">])),</span> <span class="p">(</span><span class="mi">0</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="mi">0</span><span class="p">),</span> <span class="n">thickness</span><span class="o">=</span><span class="mi">10</span><span class="p">,</span> <span class="n">lineType</span><span class="o">=</span><span class="n">cv2</span><span class="o">.</span><span class="n">LINE_AA</span><span class="p">)</span>
@@ -1529,8 +1547,14 @@ Coordinates:
 </div>
 </div>
 <div class="cell_output docutils container">
-<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Reading config file: /Users/acoca/anaconda3/envs/envds-book/lib/python3.8/site-packages/deepforest/data/deepforest_config.yml
-Model from DeepForest release https://github.com/weecology/DeepForest/releases/tag/1.0.0 was already downloaded. Loading model from file.
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Reading config file: /Users/acoca/anaconda3/envs/forest-modelling-treecrown_deepforest/lib/python3.9/site-packages/deepforest/data/deepforest_config.yml
+Downloading model from DeepForest release 1.0.0, see https://github.com/weecology/DeepForest/releases/tag/1.0.0 for details
+</pre></div>
+</div>
+<div class="output stderr highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>NEON.pt: 129MB [01:27, 1.48MB/s]                                                                                                                                            
+</pre></div>
+</div>
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Model was downloaded and saved to /Users/acoca/anaconda3/envs/forest-modelling-treecrown_deepforest/lib/python3.9/site-packages/deepforest/data/NEON.pt
 Loading pre-built model: https://github.com/weecology/DeepForest/releases/tag/1.0.0
 </pre></div>
 </div>
@@ -1554,7 +1578,7 @@ Loading pre-built model: https://github.com/weecology/DeepForest/releases/tag/1.
 </div>
 </div>
 </div>
-<div class="cell docutils container">
+<div class="cell tag_hide-input docutils container">
 <div class="cell_input docutils container">
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">image3</span> <span class="o">=</span> <span class="n">image</span><span class="o">.</span><span class="n">values</span><span class="o">.</span><span class="n">copy</span><span class="p">()</span>
 
@@ -1575,7 +1599,7 @@ Loading pre-built model: https://github.com/weecology/DeepForest/releases/tag/1.
 <div class="section" id="comparison-full-image-prediction-and-reference-labels">
 <h2>Comparison full image prediction and reference labels<a class="headerlink" href="#comparison-full-image-prediction-and-reference-labels" title="Permalink to this headline">¶</a></h2>
 <p>Let’s compare the labels and predictions over the tested image.</p>
-<div class="cell docutils container">
+<div class="cell tag_hide-input docutils container">
 <div class="cell_input docutils container">
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">fig</span> <span class="o">=</span> <span class="n">plt</span><span class="o">.</span><span class="n">figure</span><span class="p">(</span><span class="n">figsize</span><span class="o">=</span><span class="p">(</span><span class="mi">15</span><span class="p">,</span><span class="mi">15</span><span class="p">))</span>
 <span class="n">ax1</span> <span class="o">=</span> <span class="n">plt</span><span class="o">.</span><span class="n">subplot</span><span class="p">(</span><span class="mi">1</span><span class="p">,</span> <span class="mi">2</span><span class="p">,</span> <span class="mi">1</span><span class="p">),</span> <span class="n">cv2_imshow</span><span class="p">(</span><span class="n">np</span><span class="o">.</span><span class="n">flip</span><span class="p">(</span><span class="n">image2</span><span class="p">,</span><span class="mi">2</span><span class="p">))</span>
@@ -1614,7 +1638,7 @@ Loading pre-built model: https://github.com/weecology/DeepForest/releases/tag/1.
 </div>
 </div>
 </div>
-<div class="cell docutils container">
+<div class="cell tag_hide-input docutils container">
 <div class="cell_input docutils container">
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1">#Loop through a few sample windows, crop and predict</span>
 <span class="n">fig</span><span class="p">,</span> <span class="n">axes</span><span class="p">,</span> <span class="o">=</span> <span class="n">plt</span><span class="o">.</span><span class="n">subplots</span><span class="p">(</span><span class="n">nrows</span><span class="o">=</span><span class="mi">2</span><span class="p">,</span><span class="n">ncols</span><span class="o">=</span><span class="mi">2</span><span class="p">,</span> <span class="n">figsize</span><span class="o">=</span><span class="p">(</span><span class="mi">15</span><span class="p">,</span><span class="mi">15</span><span class="p">))</span>
@@ -1634,7 +1658,7 @@ Loading pre-built model: https://github.com/weecology/DeepForest/releases/tag/1.
 </div>
 </div>
 <p>Once a suitable tile size is defined, we can run in a batch using the <code class="docutils literal notranslate"><span class="pre">predict_tile</span></code> function:</p>
-<div class="cell docutils container">
+<div class="cell tag_hide-input docutils container">
 <div class="cell_input docutils container">
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">tile</span> <span class="o">=</span> <span class="n">model</span><span class="o">.</span><span class="n">predict_tile</span><span class="p">(</span><span class="n">image</span><span class="o">=</span><span class="n">image</span><span class="o">.</span><span class="n">values</span><span class="p">,</span><span class="n">return_plot</span><span class="o">=</span><span class="kc">False</span><span class="p">,</span><span class="n">patch_overlap</span><span class="o">=</span><span class="mi">0</span><span class="p">,</span><span class="n">iou_threshold</span><span class="o">=</span><span class="mf">0.05</span><span class="p">,</span><span class="n">patch_size</span><span class="o">=</span><span class="mi">400</span><span class="p">)</span>
 
@@ -1652,7 +1676,7 @@ Loading pre-built model: https://github.com/weecology/DeepForest/releases/tag/1.
 </div>
 </div>
 <div class="cell_output docutils container">
-<div class="output stderr highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>100%|██████████| 20/20 [03:21&lt;00:00, 10.09s/it]
+<div class="output stderr highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>100%|███████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████| 20/20 [01:12&lt;00:00,  3.61s/it]
 </pre></div>
 </div>
 <img alt="../../_images/forest-modelling-treecrown_deepforest_34_1.png" src="../../_images/forest-modelling-treecrown_deepforest_34_1.png" />

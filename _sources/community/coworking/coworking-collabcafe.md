@@ -1,36 +1,39 @@
 (cm-coworking-collabcafe)=
 # Online Collaboration Cafe
 
-_The Turing Way_ Collaboration Cafes (or 'Cafés' with an accent) are virtual co-working spaces that are held fortnightly on the first and third Wednesdays of each month for 2 hours.
-The schedule will be updated periodically on the [GitHub page](https://github.com/alan-turing-institute/the-turing-way/blob/master/project_management/online-collaboration-cafe.md) as per the community requirement.
+:::{note}
+*The section below is re-used and adapted under a CC-BY license from [_The Turing Way_ online collaboration cafe](https://github.com/alan-turing-institute/the-turing-way/blob/main/book/website/community-handbook/coworking/coworking-collabcafe.md)*
+:::
+
+_The Environmental Data Science_ Collaboration Cafes (or 'Cafés' with an accent) are virtual co-working spaces that are held fortnightly on the fourth Tuesday every two months for 2 hours.
+The schedule will be updated periodically on the [Google Calendar](The schedule for the show and tell can be viewed from the [community calendar](https://calendar.google.com/calendar/embed?src=environmental.ds.book%40gmail.com&ctz=Europe%2FLondon) as per the community requirement.
 
 We host these calls online using [Zoom](https://www.zoom.us/) where we make use of the [breakout rooms](#breakout-rooms) feature to allow small groups to use the 2 hours as best fits them.
 One or two members from the core team are always available on the call to support anyone wanting to learn more about collaborating on GitHub, getting a virtual tour of our GitHub repository or the book, and help you to make your first pull request (PR).
 
 ## Attending an online Collaboration Cafe
 
-The schedule for the collaboration cafe can be viewed from the [community calendar](https://calendar.google.com/calendar/embed?src=theturingway%40gmail.com&ctz=Europe%2FLondon).
-We also announce calls in our [monthly newsletters](https://tinyletter.com/TuringWay/archive), send a reminder on the [Slack channel](https://tinyurl.com/jointuringwayslack) and [Twitter](https://twitter.com/turingway).
+The schedule for the collaboration cafe can be viewed from the [community calendar](https://calendar.google.com/calendar/embed?src=environmental.ds.book%40gmail.com&ctz=Europe%2FLondon).
+We also announce calls through [Twitter](https://twitter.com/EnvDSbook).
 
 Though scheduled for 2 hours, we understand that for many interested participants it might be impossible to commit to the entire 2 hours on one or multiple occasions, therefore, you are welcome to join for as long as your schedule allows.
 
 If the current schedule of the online Collaboration Cafe is not suitable for your time zone, you are welcome to host a separate collaboration cafe for your community/time zone.
-Please open a new issue (see [this example](https://github.com/alan-turing-institute/the-turing-way/issues/684)) or reach out to _The Turing Way_ team members for details.
-We are also currently developing a guide for hosting these calls ([issue #925](https://github.com/alan-turing-institute/the-turing-way/issues/925)).
+Please open a new issue or reach out to _The Environmental Data Science_ team members for details.
 
 ### Resources used for the call
 
 Here are the resources we use for these calls:
 
-1. Shared notes by [HackMD](https://hackmd.io/): You can access these notes online at [https://hackmd.io/@environmental-ai/BJXFYAw3_](https://hackmd.io/@environmental-ai/BJXFYAw3_) and can take notes together with others on the call.
+1. Shared notes by [HackMD](https://hackmd.io/): You can access these notes online at [https://hackmd.io/@environmental-ds/collaboration-cafe](https://hackmd.io/@environmental-ds/collaboration-cafe) and can take notes together with others on the call.
 2. Online call by [Zoom](https://www.zoom.us/): The Zoom link is provided in the HackMD before the call, and members can click to join the call by opening zoom window on the web or by using the Zoom app that should be installed locally ([available for free](https://zoom.us/download)).
-3. An online Pomodoro clock on [Cuckoo.team](https://cuckoo.team/collabcafe): During the call, the clock is set for Pomodoro work intervals that can be live-tracked by everyone through their browsers.
+3. An online Pomodoro clock on [Cuckoo.team](https://cuckoo.team/environmental-ds): During the call, the clock is set for Pomodoro work intervals that can be live-tracked by everyone through their browsers.
 
-We coordinate our tasks on the shared HackMD and/or _The Turing Way_ GitHub repository, where we can work collaboratively or independently while working on an older GitHub issues/PRs, creating new issues/PRs, taking notes as comments on the GitHub repository or working on a branch locally.
+We coordinate our tasks on the shared HackMD and/or _The Environmental Data Science Book_ GitHub repository, where we can work collaboratively or independently while working on an older GitHub issues/PRs, creating new issues/PRs, taking notes as comments on the GitHub repository or working on a branch locally.
 
 ## Format of the call
 
-We have a template for the {ref}`Collaboration Cafes<cm-template-coworking-collabcafe>`, which is updated on the [shared HackMD](https://hackmd.io/@KirstieJane/CollabCafe) for each call.
+We have a template for the {ref}`Collaboration Cafes<cm-template-coworking-collabcafe>`, which is updated on the [shared HackMD](https://hackmd.io/@environmental-ds/collaboration-cafe) for each call.
 
 ### Schedule
 
@@ -76,16 +79,10 @@ You can use that Pomodoro session to sign up, read notes from other attendees in
 
 If you know in advance what time you will join the coworking call, you can let the host know before the call or leave a note in the shared document.
 
-#### Recording this call
-
-We may record the call for the part that involves open discussion so that others who can't attend the call can learn from the conversations we have during the Collaboration Cafes.
-For this part, you do not have to speak or have your video on if you prefer not to be in the video.
-The videos will be uploaded to _The Turing Way_ YouTube channel: [https://www.youtube.com/channel/UCPDxZv5BMzAw0mPobCbMNuA](https://www.youtube.com/channel/UCPDxZv5BMzAw0mPobCbMNuA).
-
 ### Sign-up and icebreaker
 
-If you're interested in joining the next Collaboration Cafe, please let the organisers know by adding your name to the **Sign Up** section of the [HackMD notes page](https://hackmd.io/@KirstieJane/CollabCafe#Sign-up-below).
-Adding your name is helpful for the organisers so they can prepare for the call.
+If you're interested in joining the next Collaboration Cafe, please let the organisers know by adding your name to the **Sign Up** section of the [HackMD notes page](https://hackmd.io/@environmental-ds/collaboration-cafe#Sign-up-below).
+Adding your name is helpful for the organisers, so they can prepare for the call.
 But don't worry if you don't sign up in advance.
 It's ok to join at any time for as long as you'd like.
 
@@ -94,28 +91,27 @@ In addition to your names, we will encourage everyone to add a short response to
 Here are a few example questions (so you know what to expect):
 
 * what was your biggest achievement this week?
-* when was the last time you saw a rainbow?
 * what are you most excited about this year?
-* What is your favorite flavor in cake/ice-cream?
+* what is your favorite flavor in cake/ice-cream?
 
 *Do you have another interesting question to ask others?*
-*[Get in touch](/README.md#get-in-touch) and let us know!*
+*Get in touch and let us know!*
 *We love creative suggestions!*
 
-Here's an example from the second Collaboration Cafe in September 2019:
+Here's an example from the first Collaboration Cafe in June 2021:
 
-> *Name + biggest achievement from this week + emoji that best explain your day*
+> *Name + Something you watch (video, movie, documentary. etc) recently that was inspiring for you? + emoji that best explain your day*
 > *(Remember that this is a public document. You can use a pseudonym if you'd prefer.)*
 >
-> * Kirstie Whitaker + got a structure written out for an article that had been super hard to get started on! + 🤦‍♀️ (because I got these times mixed up - whoops!)
-> * Malvika Sharan + Coming back from holiday, ready for exciting work :D + :grimacing:
+> * Alejandro + [Black Holes: The Edge of All We Know](https://www.rottentomatoes.com/m/black_holes_the_edge_of_all_we_know) + :milky_way:
+> * Scott + [Coded Bias](https://www.imdb.com/title/tt11394170/) + 🧠
 
 As you can see, there's a reminder in the notes that they are in a public document.
 It's totally fine for you to add as much or as little information as you feel comfortable sharing.
 
 ### Conversation starters
 
-In the **Conversation Starters** section of the [HackMD notes page](https://hackmd.io/@KirstieJane/CollabCafe#Conversation-Starters), we encourage everyone to advertise their events or give an update from their community.
+In the **Conversation Starters** section of the [HackMD notes page](https://hackmd.io/@environmental-ds/collaboration-cafe#Conversation-Starters), we encourage everyone to advertise their events or give an update from their community.
 
 These don't have to be Turing Way "branded"!
 **We want to know about all the cool things you're working on.** ✨
@@ -143,14 +139,14 @@ Zoom allows groups of collaborators to chat in one "main room" altogether, or to
 
 During the online Collaboration Cafe sessions, we'll use the breakout rooms to allow people to talk about multiple different topics in parallel during the Pomodoro sessions.
 
-You'll see in the [HackMD](https://hackmd.io/@KirstieJane/CollabCafe#Breakout-rooms-Topic-proposals) a section that says:
+You'll see in the [HackMD](https://hackmd.io/@environmental-ds/collaboration-cafe#Breakout-rooms-Topic-proposals) a section that says:
 
 > **Breakout-rooms-Topic-proposals**
 >
 > *If you have an idea for a topic you'd like to discuss in a breakout room, please add it below and put your name next to it.*
 > *If you like one of the topics that are already suggested, please add your name next to that one.*
 > *Teamwork makes the dream work.*
-> *For more information about breakout rooms see [the description on GitHub](https://github.com/alan-turing-institute/the-turing-way/blob/master/project_management/online-collaboration-cafe.md#breakout-rooms).*
+> *For more information about breakout rooms see [the description on GitHub](https://github.com/alan-turing-institute/environmental-ds-book/blob/master/book/community/coworking/coworking-collabcafe.md#breakout-rooms).*
 
 For each session, you can propose a conversation to have in a breakout room or add your name to join a suggestion that is already on the list.
 

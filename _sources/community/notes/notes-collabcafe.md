@@ -1,39 +1,39 @@
 ---
 tags: environmental-ds, collaboration-cafe
 ---
-*This HackMD is based on [_The Turing Way_ collaboration cafe template](https://github.com/alan-turing-institute/the-turing-way/blob/master/book/website/community-handbook/templates/template-coworking-collabcafe.md)*
+*This HackMD is re-used under a CC-BY license from [_The Turing Way_ collaboration cafe template](https://github.com/alan-turing-institute/the-turing-way/blob/master/book/website/community-handbook/templates/template-coworking-collabcafe.md)*
 
 *A **permanent document** exists in the HackMD: [https://hackmd.io/@environmental-ds/collaboration-cafe](https://hackmd.io/@environmental-ds/collaboration-cafe) that is regularly updated with the empty template for next event.*
 
 # _The Environmental Data Science_ ⛰ 🌳 🏙️ ❄️ 🔥 🌊  online Collaboration Cafe 
 
-## 25 January 2021 | TBC
+## 22 February 2022 | TBC
 
-### Thank you for joining the _The Environmental Data Science_'s online Collaboration Cafe! 
+### Thank you for joining the _The Environmental Data Science_'s online Collaboration Cafe ☕ ✨ 🍰! 
 
-We're delighted to have you here ☕ ✨ 🍰
+We're delighted to have you here 🎉
 
-**When?** 25 January 2022, 14:00 - 16:00 UTC ([see in your time zone](https://arewemeetingyet.com/London/2021-08-24/14:00))
+**When?** 22 February 2022, 14:00 - 16:00 UTC ([see in your time zone](https://arewemeetingyet.com/London/2021-08-24/14:00))
 
-**Next call:** 22 Febraury 2022
+**Next call:** 26 April 2022
 
-**What?** *The Environmental Data Science is a **community aiming to learn and discuss about good research practices to use existing Data Science and AI solutions to a better understanding of the planet earth across multiple environmental settings**. 
-[Collaboration Cafes](https://the-turing-way.netlify.app/community-handbook/coworking/coworking-collabcafe.html) are **online coworking calls** that engage anyone interested in learning and discussing about relevant themes in Data Science and AI to environmental studies*.
+**What?** *The Environmental Data Science is a **community aiming to learn and discuss scientific software practises/developments fostered by AI and data science for a better understanding of our Planet Earth and environmental systems**. 
+[Collaboration Cafes](https://github.com/alan-turing-institute/environmental-ds-book/blob/master/book/community/coworking/coworking-collabcafe.md) are **online coworking calls** that engage anyone interested in learning and discussing about relevant themes in AI and data science to environmental studies*.
 
 **Who?** ***Everyone** interested in reproducible, ethical, and inclusive Data Science and research for environmental studies are welcome to join the full or any part of The Environmental Data Science project, community, and/or this call.*
 
 **How?** **Join Zoom Meeting**
 https://turing-uk.zoom.us/j/6779579342?pwd=L25scnhXUUNmVjFsc0hRWTAzTVJ1dz09
 
-==*The waiting room is enabled. The host of this call will let you in.*==
-
 ***All questions, comments, and recommendations are welcome!***
 
-### Code of conduct
-* [Take a moment to read this](https://github.com/alan-turing-institute/environmental-ds-book/blob/acoca-codeofconduct/CODE_OF_CONDUCT.md)
-
 ### Useful links
-* All about [online Collaboration Cafes](https://github.com/alan-turing-institute/the-turing-way/blob/master/project_management/online-collaboration-cafe.md)
+
+* All about [online Collaboration Cafes](https://github.com/alan-turing-institute/environmental-ds-book/blob/master/book/community/coworking/coworking-collabcafe.md)
+
+### Code of conduct
+
+* [Take a moment to read this](https://github.com/alan-turing-institute/environmental-ds-book/blob/master/CODE_OF_CONDUCT.md)
 
 ### Sign up below
 
@@ -54,7 +54,7 @@ https://turing-uk.zoom.us/j/6779579342?pwd=L25scnhXUUNmVjFsc0hRWTAzTVJ1dz09
 
 ### Shared clock/timer :timer_clock: 
 
-https://cuckoo.team/environmental-ai
+https://cuckoo.team/environmental-ds
 
 ### Schedule
 

@@ -1,4 +1,4 @@
-(af-templates)=
+(cm-templates)=
 # Templates
 
 :::{note}

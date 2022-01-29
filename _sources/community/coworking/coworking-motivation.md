@@ -1,6 +1,10 @@
 (cm-coworking-motivation)=
 # Background, Motivations, and Techniques
 
+:::{note}
+*The section below is re-used under a CC-BY license from [_The Turing Way_ coworking motivation](https://github.com/alan-turing-institute/the-turing-way/blob/main/book/website/community-handbook/coworking/coworking-motivation.md)*
+:::
+
 ## Background and Motivation
 
 When _The Turing Way_ started with around 10 members located in the United Kingdom, they could work in real-time and often together in the same location.

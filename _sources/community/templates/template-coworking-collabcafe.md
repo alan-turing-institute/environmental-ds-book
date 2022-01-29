@@ -2,9 +2,9 @@
 # Collaboration Cafe Call Template
 
 :::{note}
-*This HackMD is based on [_The Turing Way_ collaboration cafe template](https://github.com/alan-turing-institute/the-turing-way/blob/master/book/website/community-handbook/templates/template-coworking-collabcafe.md)*
+*This HackMD is re-used under a CC-BY license from [_The Turing Way_ collaboration cafe template](https://github.com/alan-turing-institute/the-turing-way/blob/master/book/website/community-handbook/templates/template-coworking-collabcafe.md)*
 
-*A **permanent document** exists in the HackMD: [https://hackmd.io/@environmental-ai/collaboration-cafe](https://hackmd.io/@environmental-ai/collaboration-cafe) that is regularly updated with the empty template for next event.*
+*A **permanent document** exists in the HackMD: [https://hackmd.io/@environmental-ds/collaboration-cafe](https://hackmd.io/@environmental-ds/collaboration-cafe) that is regularly updated with the empty template for next event.*
 :::
 
 ## _The Environmental Data Science_ ⛰ 🌳 🏙️ ❄️ 🔥 🌊  online Collaboration Cafe 
@@ -15,8 +15,8 @@ Thank you for joining the _The Environmental Data Science_'s online Collaboratio
 
 We're delighted to have you here ☕ ✨ 🍰
 
-**What?** *The Environmental Data Science is a **community aiming to learn and discuss about good research practices to use existing AI and data science solutions to a better understanding of the planet earth across multiple environmental settings**. 
-[Collaboration Cafes](https://the-turing-way.netlify.app/community-handbook/coworking/coworking-collabcafe.html) are **online coworking calls** that engage anyone interested in learning and discussing about relevant themes in AI and data science to environmental studies*.
+**What?** *The Environmental Data Science is a **community aiming to learn and discuss scientific software practises/developments fostered by AI and data science for a better understanding of our Planet Earth and environmental systems**. 
+[Collaboration Cafes](https://github.com/alan-turing-institute/environmental-ds-book/blob/master/book/community/coworking/coworking-collabcafe.md) are **online coworking calls** that engage anyone interested in learning and discussing about relevant themes in AI and data science to environmental studies*.
 
 *Read more about it here: https://the-turing-way.netlify.app/community-handbook/coworking.html*
 
@@ -30,11 +30,11 @@ We're delighted to have you here ☕ ✨ 🍰
 
 ### Useful links
 
-* All about [online Collaboration Cafes](https://github.com/alan-turing-institute/the-turing-way/blob/master/project_management/online-collaboration-cafe.md)
+* All about [online Collaboration Cafes](https://github.com/alan-turing-institute/environmental-ds-book/blob/master/book/community/coworking/coworking-collabcafe.md)
 
 ### Code of conduct
 
-* TBC
+* [Take a moment to read this](https://github.com/alan-turing-institute/environmental-ds-book/blob/master/CODE_OF_CONDUCT.md)
 
 ### Sign up below
 
