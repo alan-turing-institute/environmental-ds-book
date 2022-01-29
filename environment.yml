@@ -10,7 +10,7 @@ dependencies:
 #  - pooch
 #  - urllib3
   - opencv
-#  - hvplot
+  - hvplot
 #  - datashader
 #  - intake
 #  - intake-xarray
