@@ -11,7 +11,7 @@ dependencies:
   - urllib3
   - opencv
   - hvplot
-  - datashader
+#  - datashader
   - intake
   - intake-xarray
   - iris==3.0.1
