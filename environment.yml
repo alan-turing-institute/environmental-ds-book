@@ -9,7 +9,7 @@ dependencies:
 #  - bottleneck
 #  - pooch
 #  - urllib3
-#  - opencv
+  - opencv
 #  - hvplot
 #  - datashader
 #  - intake
