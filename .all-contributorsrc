@@ -43,8 +43,8 @@
       "contributions": [
         "blog",
         "code"
-        ]
-        },
+      ]
+    },
     {
       "login": "mja2106",
       "name": "Matt Allen",
@@ -52,6 +52,46 @@
       "profile": "https://github.com/mja2106",
       "contributions": [
         "review"
+      ]
+    },
+    {
+      "login": "tom-andersson",
+      "name": "Tom Andersson",
+      "avatar_url": "https://avatars.githubusercontent.com/u/26459412?v=4",
+      "profile": "https://www.bas.ac.uk/profile/tomand",
+      "contributions": [
+        "review"
+      ]
+    },
+    {
+      "login": "svadams",
+      "name": "svadams",
+      "avatar_url": "https://avatars.githubusercontent.com/u/8512966?v=4",
+      "profile": "https://github.com/svadams",
+      "contributions": [
+        "blog",
+        "code"
+      ]
+    },
+    {
+      "login": "Delphine-L",
+      "name": "Delphine Lariviere",
+      "avatar_url": "https://avatars.githubusercontent.com/u/11195061?v=4",
+      "profile": "https://github.com/Delphine-L",
+      "contributions": [
+        "ideas",
+        "mentoring"
+      ]
+    },
+    {
+      "login": "KirstieJane",
+      "name": "Kirstie Whitaker",
+      "avatar_url": "https://avatars.githubusercontent.com/u/3626306?v=4",
+      "profile": "https://whitakerlab.github.io",
+      "contributions": [
+        "ideas",
+        "content",
+        "mentoring"
       ]
     }
   ],
