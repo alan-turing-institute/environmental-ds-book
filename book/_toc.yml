@@ -28,6 +28,9 @@ parts:
       title: Sensors
     - file: ocean/ocean-modelling
       title: Modelling
+      sections:
+      - file: ocean/modelling/ocean-modelling-litter-philab
+        title: Detecting floating objects (ESA Phi-Lab)
   - file: polar/polar-overview
     title: Polar
     sections:
