@@ -14,6 +14,7 @@ A **living**, **open** and **community-driven** online resource to showcase and 
 | **News** | [![Twitter Follow](https://img.shields.io/twitter/follow/EnvDSBook?style=social)](https://twitter.com/EnvDSBook)  |
 | **Chat** | [![GitHub issues](https://img.shields.io/github/issues/alan-turing-institute/environmental-ds-book)](https://github.com/alan-turing-institute/environmental-ds-book/issues) [![GitHub pull requests](https://img.shields.io/github/issues-pr/alan-turing-institute/environmental-ds-book)](https://github.com/alan-turing-institute/environmental-ds-book/pulls) |
 | **Build** | [![GitHub Pages build](https://github.com/alan-turing-institute/environmental-ds-book/actions/workflows/deploy.yml/badge.svg?branch=master)](https://github.com/alan-turing-institute/environmental-ds-book/actions/workflows/deploy.yml)
+| **Cite** |  [![Cite this using DOI](https://zenodo.org/badge/DOI/10.5281/zenodo.5918932.svg)](https://doi.org/10.5281/zenodo.5918932) |
 
 ## Contributors
 
