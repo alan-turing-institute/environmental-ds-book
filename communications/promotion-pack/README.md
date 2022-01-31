@@ -6,8 +6,8 @@
 - A community: *The Environmental DS* is an open-source collaborative project that involves and supports its members of diverse skills and backgrounds to ensure that data science is accessible and useful for everyone interested in Environmental sciences. 
 
 ## Who are the community members? 
-- Project lead and co-lead: Dr Alejandro Coca-Castro (lead), Postdoctoral Research Associate, and Dr Scott Hosking (co-lead), Senior Fellow, both members of the Data Science for Science and Humanities research programme at The Alan Turing Institute.
-- Contributors: 7 contributors (as of January 2022) who collaborate to develop online material for The Environmental DS book via GitHub.
+- Project lead and co-lead: Dr Alejandro Coca-Castro (lead), Postdoctoral Research Associate, Data Science for Science and Humanities research programme at The Alan Turing Institute.
+- Contributors: 10 contributors (as of January 2022) who collaborate with ideas and/or developing online material for The Environmental DS book.
 - Users: Some readers/users around the globe.
 
 ## Important links:
