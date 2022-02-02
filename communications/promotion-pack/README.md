@@ -8,9 +8,8 @@
 ## Who are the community members? 
 - Project lead and co-lead: Dr Alejandro Coca-Castro (lead), Postdoctoral Research Associate, Data Science for Science and Humanities research programme at The Alan Turing Institute.
 - Contributors: <!-- ALL-CONTRIBUTORS-BADGE:START - Do not remove or modify this section -->
-[![All Contributors](https://img.shields.io/badge/all_contributors-10-orange.svg?style=flat-square)](#contributors-) who collaborate with ideas and/or developing online material for The Environmental DS book.
+![All Contributors](https://camo.githubusercontent.com/416d2a311114ae5841a38006a8072b80b4b1345a0f000544744f1bf3520f84f2/68747470733a2f2f696d672e736869656c64732e696f2f62616467652f616c6c5f636f6e7472696275746f72732d31322d6f72616e67652e7376673f7374796c653d666c61742d737175617265) who collaborate with ideas and/or developing online material for The Environmental DS book.
 - Users: Some readers/users around the globe.
-<!-- ALL-CONTRIBUTORS-BADGE:END --> 
 
 ## Important links:
 - GitHub: [https://github.com/alan-turing-institute/environmental-ds-book](https://github.com/alan-turing-institute/environmental-ds-book)
