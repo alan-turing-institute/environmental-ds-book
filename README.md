@@ -1,7 +1,7 @@
 <img src="book/figures/logo/logo.png" width="180" align="Right" /></a>
 
 <!-- ALL-CONTRIBUTORS-BADGE:START - Do not remove or modify this section -->
-[![All Contributors](https://img.shields.io/badge/all_contributors-11-orange.svg?style=flat-square)](#contributors-)
+[![All Contributors](https://img.shields.io/badge/all_contributors-12-orange.svg?style=flat-square)](#contributors-)
 <!-- ALL-CONTRIBUTORS-BADGE:END -->
 
 # The Environmental Data Science book
@@ -37,6 +37,7 @@ We welcome and recognize all contributions. You can see a list of current contri
     <td align="center"><a href="https://whitakerlab.github.io"><img src="https://avatars.githubusercontent.com/u/3626306?v=4?s=100" width="100px;" alt=""/><br /><sub><b>Kirstie Whitaker</b></sub></a><br /><a href="#ideas-KirstieJane" title="Ideas, Planning, & Feedback">🤔</a></td>
     <td align="center"><a href="https://github.com/acocac"><img src="https://avatars.githubusercontent.com/u/13321552?v=4?s=100" width="100px;" alt=""/><br /><sub><b>Alejandro ©</b></sub></a><br /><a href="https://github.com/alan-turing-institute/environmental-ds-book/commits?author=acocac" title="Documentation">📖</a> <a href="https://github.com/alan-turing-institute/environmental-ds-book/pulls?q=is%3Apr+reviewed-by%3Aacocac" title="Reviewed Pull Requests">👀</a> <a href="#maintenance-acocac" title="Maintenance">🚧</a> <a href="#projectManagement-acocac" title="Project Management">📆</a> <a href="#eventOrganizing-acocac" title="Event Organizing">📋</a> <a href="#question-acocac" title="Answering Questions">💬</a> <a href="#talk-acocac" title="Talks">📢</a></td>
     <td align="center"><a href="https://github.com/raquelcarmo"><img src="https://avatars.githubusercontent.com/u/30031382?v=4?s=100" width="100px;" alt=""/><br /><sub><b>Raquel Carmo</b></sub></a><br /><a href="#blog-raquelcarmo" title="Blogposts">📝</a> <a href="https://github.com/alan-turing-institute/environmental-ds-book/commits?author=raquelcarmo" title="Code">💻</a></td>
+    <td align="center"><a href="https://github.com/jmifdal"><img src="https://avatars.githubusercontent.com/u/15648611?v=4?s=100" width="100px;" alt=""/><br /><sub><b>jmifdal</b></sub></a><br /><a href="#blog-jmifdal" title="Blogposts">📝</a> <a href="https://github.com/alan-turing-institute/environmental-ds-book/commits?author=jmifdal" title="Code">💻</a></td>
   </tr>
 </table>
 
