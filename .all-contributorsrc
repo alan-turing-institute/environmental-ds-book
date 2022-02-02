@@ -103,6 +103,16 @@
         "question",
         "talk"
       ]
+    },
+    {
+      "login": "raquelcarmo",
+      "name": "Raquel Carmo",
+      "avatar_url": "https://avatars.githubusercontent.com/u/30031382?v=4",
+      "profile": "https://github.com/raquelcarmo",
+      "contributions": [
+        "blog",
+        "code"
+      ]
     }
   ],
   "contributorsPerLine": 7,
