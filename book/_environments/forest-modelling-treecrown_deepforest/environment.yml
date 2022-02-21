@@ -9,7 +9,10 @@ dependencies:
   - intake-xarray
   - rasterio
   - opencv
+  - geopandas
   - tqdm
+  - hvplot
+  - datashader
   - pip
   - pip:
       - pycurl
