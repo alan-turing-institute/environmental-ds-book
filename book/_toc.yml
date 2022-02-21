@@ -99,10 +99,10 @@ parts:
       title: Online Journal Club
     - file: community/templates/template-coworking-showtell
       title: Online Show and Tell
-    - file: community/templates/template-environments-sensors
-      title: Environments Use Case Sensors
     - file: community/templates/template-environments-modelling
       title: Environments Use Case Modelling
+    - file: community/templates/template-environments-sensors
+      title: Environments Use Case Sensors
   - file: community/readings
     title: Interesting readings
 - caption: Afterword
