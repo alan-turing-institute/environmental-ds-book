@@ -1,0 +1,134 @@
+{
+  "files": [
+    "README.md"
+  ],
+  "imageSize": 100,
+  "commit": false,
+  "contributors": [
+    {
+      "login": "sgibson91",
+      "name": "Sarah Gibson",
+      "avatar_url": "https://avatars.githubusercontent.com/u/44771837?v=4",
+      "profile": "https://sgibson91.github.io/",
+      "contributions": [
+        "ideas"
+      ]
+    },
+    {
+      "login": "scotthosking",
+      "name": "Scott Hosking",
+      "avatar_url": "https://avatars.githubusercontent.com/u/10783052?v=4",
+      "profile": "https://scotthosking.com",
+      "contributions": [
+        "ideas"
+      ]
+    },
+    {
+      "login": "shmh40",
+      "name": "shmh40",
+      "avatar_url": "https://avatars.githubusercontent.com/u/56727418?v=4",
+      "profile": "https://github.com/shmh40",
+      "contributions": [
+        "blog",
+        "code"
+      ]
+    },
+    {
+      "login": "samueljackson92",
+      "name": "Samuel Jackson",
+      "avatar_url": "https://avatars.githubusercontent.com/u/2487781?v=4",
+      "profile": "https://github.com/samueljackson92",
+      "contributions": [
+        "blog",
+        "code"
+      ]
+    },
+    {
+      "login": "mja2106",
+      "name": "Matt Allen",
+      "avatar_url": "https://avatars.githubusercontent.com/u/33626681?v=4",
+      "profile": "https://github.com/mja2106",
+      "contributions": [
+        "review"
+      ]
+    },
+    {
+      "login": "tom-andersson",
+      "name": "Tom Andersson",
+      "avatar_url": "https://avatars.githubusercontent.com/u/26459412?v=4",
+      "profile": "https://www.bas.ac.uk/profile/tomand",
+      "contributions": [
+        "review"
+      ]
+    },
+    {
+      "login": "svadams",
+      "name": "svadams",
+      "avatar_url": "https://avatars.githubusercontent.com/u/8512966?v=4",
+      "profile": "https://github.com/svadams",
+      "contributions": [
+        "blog",
+        "code"
+      ]
+    },
+    {
+      "login": "Delphine-L",
+      "name": "Delphine Lariviere",
+      "avatar_url": "https://avatars.githubusercontent.com/u/11195061?v=4",
+      "profile": "https://github.com/Delphine-L",
+      "contributions": [
+        "ideas"
+      ]
+    },
+    {
+      "login": "KirstieJane",
+      "name": "Kirstie Whitaker",
+      "avatar_url": "https://avatars.githubusercontent.com/u/3626306?v=4",
+      "profile": "https://whitakerlab.github.io",
+      "contributions": [
+        "ideas"
+      ]
+    },
+    {
+      "login": "acocac",
+      "name": "Alejandro ©",
+      "avatar_url": "https://avatars.githubusercontent.com/u/13321552?v=4",
+      "profile": "https://github.com/acocac",
+      "contributions": [
+        "doc",
+        "review",
+        "maintenance",
+        "projectManagement",
+        "eventOrganizing",
+        "question",
+        "talk"
+      ]
+    },
+    {
+      "login": "raquelcarmo",
+      "name": "Raquel Carmo",
+      "avatar_url": "https://avatars.githubusercontent.com/u/30031382?v=4",
+      "profile": "https://github.com/raquelcarmo",
+      "contributions": [
+        "blog",
+        "code"
+      ]
+    },
+    {
+      "login": "jmifdal",
+      "name": "jmifdal",
+      "avatar_url": "https://avatars.githubusercontent.com/u/15648611?v=4",
+      "profile": "https://github.com/jmifdal",
+      "contributions": [
+        "blog",
+        "code"
+      ]
+    }
+  ],
+  "contributorsPerLine": 7,
+  "projectName": "environmental-ds-book",
+  "projectOwner": "alan-turing-institute",
+  "repoType": "github",
+  "repoHost": "https://github.com",
+  "skipCi": true
+}
