@@ -102,11 +102,11 @@ parts:
     - file: community/templates/template-environments-sensors
       title: Notebook Sensors
     - file: community/templates/template-environments-preprocessing
-      title: Notebook Preprocessing
+      title: Notebook Pre-processing
     - file: community/templates/template-environments-modelling
       title: Notebook Modelling
     - file: community/templates/template-environments-postprocessing
-      title: Notebook Preprocessing
+      title: Notebook Post-processing
   - file: community/readings
     title: Interesting readings
 - caption: Afterword
