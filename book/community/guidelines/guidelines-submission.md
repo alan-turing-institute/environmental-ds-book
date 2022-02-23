@@ -43,7 +43,7 @@ The contribution process has three main steps: exploration, preparation and subm
 
 ### Exploration
 
-We encourage you to explore existing templates of proposed topics or themes which are available in the community section. The proposed themes are described below.
+We encourage you to explore existing templates of proposed topics or themes which are available in the community section (see {ref}`Templates <cm-templates>`. The proposed themes are described below.
 * **Sensor**: highlights a particular environmental sensor with visualisation and interpretation of the corresponding layers of information.
 * **Preprocessing**: refers to all procedures to clean and prepare environmental data for analysis. The notebook should highlight differences between the raw and preprocessed data.
 * **Modelling**: comprises models to analyse a given environmental system. 
@@ -55,12 +55,16 @@ In addition to defining the target environmental system and theme, we suggest in
 
 The following procedures will allow you preparing the submission: 
 
-* Make a branch or fork the repo
+* Log the notebook idea in [issues](https://github.com/alan-turing-institute/environmental-ds-book/issues/new/choose).
+* Make a branch or fork the Environmental Data Science book repo.
 * Copy the chosen notebook template to a new folder with the name of the target theme inside the directory of the target environmental system. 
-* Rename the filename of the template to the pattern (XXX-YYY-ZZZ, where XXX refers to the environmental system, YYY to the theme and ZZZ to a preferred identifier of the model, sensor or pre/post-processing pipeline)
-* Fill the information header according to your use case. Be free to guide from previous modelling notebooks, see for instance the IceNet notebook.
+* Rename the filename of the template to the pattern (XXX-YYY-ZZZ, where XXX refers to the environmental system, YYY to the theme and ZZZ to a preferred identifier of the model, sensor or pre/post-processing pipeline).
+* Fill the information header according to your use case. Be free to guide from previous modelling notebooks, see for instance the [IceNet notebook](https://github.com/alan-turing-institute/environmental-ds-book/blob/master/book/polar/modelling/polar-modelling-icenet.ipynb).
 * Change the structure of the remaining sections of the notebook according to your preference.
+  * We advise to follow the 10 rules of compelling notebooks provided by the EarthCube initiative available in their [Notebook Template](https://github.com/earthcube/NotebookTemplates/blob/main/EC_05_Template_Notebook_for_EarthCube_Long_Version.ipynb) (section `Data processing and analysis`)
 * Test the notebook is working according to your virtual or conda environment.
+  * Not familiar with open-source `python` packages? We suggest exploring [Pangeo stack](https://pangeo.io/). The Pangeo community curates a wide diversity of environments in the `pangeo-docker-images` [repository](https://github.com/pangeo-data/pangeo-docker-images/tree/master/pangeo-notebook). 
+  * For notebooks, we suggest using the `pangeo-notebook` conda environment available [here](https://github.com/pangeo-data/pangeo-docker-images/blob/master/pangeo-notebook/environment.yml). The environment can be installed in your system using `conda env create -f environment.yml`.
 * Note, the Binder does not provide GPU support, so we would suggest testing the notebook works with cpu when predicting from the pretrained models. 
 
 ### Submission
