@@ -49,7 +49,7 @@ We welcome and recognize all contributions. You can see a list of current contri
 
 ## Acknowledgment 
 
-This work was supported by Wave 1 of The UKRI Strategic Priorities Fund under the EPSRC Grant EP/W006022/1, particularly the Environment & Sustainability theme within that grant & The Alan Turing Institute
+This work was supported by Wave 1 of The UKRI Strategic Priorities Fund under the EPSRC Grant EP/W006022/1, particularly the Environment & Sustainability theme within that grant & The Alan Turing Institute.
 
 The project also thanks the [OLS-4 training programme](https://openlifesci.org/ols-4/projects-participants/) team, cohort and in special, Delphine Lariviere [Delphine-L](https://github.com/Delphine-L) (mentor) for all their valuable knowledge, discussions and feedback toward a common goal **Open Science for All**. 
 
