@@ -15,7 +15,7 @@ parts:
     - file: agriculture/agriculture-sensors
       title: Sensors
       sections:
-      - file: agriculture/sensors/agriculture-sensors-cosmosuk
+      - file: agriculture/sensors/agriculture-sensors-cosmosuk2
         title: Cosmos-UK (CEH)
   - file: forest/forest-overview
     title: Forest
