@@ -9,6 +9,14 @@ parts:
   - file: preamble/attribution
 - caption: Environments
   chapters:
+  - file: agriculture/agriculture-overview
+    title: Agriculture
+    sections:
+    - file: agriculture/agriculture-sensors
+      title: Sensors
+      sections:
+      - file: agriculture/modelling/agriculture-sensors-cosmosuk
+        title: Cosmos-UK (CEH)
   - file: forest/forest-overview
     title: Forest
     sections:
