@@ -13,3 +13,4 @@ dependencies:
   - pandas
   - iris
   - imageio
+  - jinja2==3.0.2
