@@ -11,10 +11,10 @@ rohub.login(username=config.username, password=config.password)
 post_publication = False
 
 metadata_contribution = {
-    'environment': 'forest',
+    'environment': 'polar',
     'topic': 'modelling',
-    'filename': 'forest-modelling-treecrown_detectreeRGB',
-    'title': 'Tree crown delineation using detectreeRGB',
+    'filename': 'polar-modelling-icenet',
+    'title': 'Sea ice forecasting using IceNet',
     'author_GHuser': 'alan-turing-institute',
     'author_GHrepo': 'environmental-ds-book',
     'conda_os_files' : ['linux', 'osx'],

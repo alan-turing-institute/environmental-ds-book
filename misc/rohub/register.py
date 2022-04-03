@@ -10,27 +10,30 @@ rohub.login(username=config.username, password=config.password)
 
 # metadata
 metadata_contribution = {
-    'environment': 'forest',
+    'environment': 'polar',
     'topic': 'modelling',
-    'filename': 'forest-modelling-treecrown_detectreeRGB',
-    'title': 'Tree crown delineation using detectreeRGB',
-    'inputs': {'input1':{'name':'Datasets of detectreeRGB AI4ER MRes Project',
-                         'url':"https://doi.org/10.5281/zenodo.5494629"}},
-    'outputs': {'content': 'vector, raster and figures',
-               'url': "https://doi.org/10.5281/zenodo.6387953"},
+    'filename': 'polar-modelling-icenet',
+    'title': 'Sea ice forecasting using IceNet',
+    'inputs': {'input1':{'name':"Forecasts, neural networks, and results from the paper: 'Seasonal Arctic sea ice forecasting with probabilistic deep learning'",
+                         'url':"https://doi.org/10.5285/71820e7d-c628-4e32-969f-464b7efb187c"},
+               'input2': {
+                   'name': "Dataset for IceNet's demo notebook",
+                   'url': "https://doi.org/10.5281/zenodo.5516869"}
+               },
+    'outputs': {'content': 'table and figures',
+               'url': "https://doi.org/10.5281/zenodo.6410246"},
     'author_GHuser': 'alan-turing-institute',
     'author_GHrepo': 'environmental-ds-book',
-    'references':{'ref1':{'name':'detectreeRGB source code','url':"https://github.com/shmh40/detectreeRGB"},
-                  },
-    'sketch': {'title':'Image showing interactive plot of detectreeRGB model predictions of tree crown over a sample drone image in Sepilok, Sabah, Malaysia',
-               'path':'book/_temp/forest-modelling-treecrown_detectreeRGB/interactive_plotting.png'}
+    'references':{'ref1':{'name':'Seasonal Arctic sea ice forecasting with probabilistic deep learning','url':"https://doi.org/10.1038/s41467-021-25257-4"},},
+    'sketch': {'title':'Image showing interactive plot of IceNet seasonal forecasts of Artic sea ice according to four lead times and months in 2020',
+               'path':'book/_temp/polar-modelling-icenet/interactive_plotting.png'}
 }
 
 title_nb = metadata_contribution['title']
 
 metadata_rohub = {
     'title': f'{title_nb} (Jupyter Notebook) published in the Environmental Data Science book',
-    'research_areas': ['Environmental research','Ecology'],
+    'research_areas': ['Environmental research', 'Climatology'],
     'description': f'The research object refers to the {title_nb} notebook published in the Environmental Data Science book.',
     'ros_type': 'Executable Research Object',
     'ros_template': 'Executable Research Object folders structure',
@@ -47,10 +50,10 @@ ro = rohub.ros_create(title=ro_title, research_areas=ro_research_areas, descript
 
 # edition
 authors=[
-        {"user_id": "https://github.com/shmh40",
-         "display_name": "Sebastian Hickman",
-         "name": "Sebastian Hickman",
-         "affiliation": "University of Cambridge"},
+        {"user_id": "https://github.com/acocac",
+         "display_name": "Alejandro Coca-Castro",
+         "name": "Alejandro Coca-Castro",
+         "affiliation": "The Alan Turing Institute"},
         # {"user_id": "https://orcid.org/0000-0003-0808-3480",
         #  "display_name": "Raquel Carmo",
         #  "name": "Raquel Carmo",
@@ -60,10 +63,10 @@ authors=[
 ro.set_authors(agents=authors)
 
 reviewers=[
-    {"user_id": "https://github.com/acocac",
-     "display_name": "Alejandro Coca-Castro",
-     "name": "Alejandro Coca-Castro",
-     "affiliation": "The Alan Turing Institute"},
+    {"user_id": "https://github.com/tom-andersson",
+     "display_name": "Tom Andersson",
+     "name": "Tom Andersson",
+     "affiliation": "he British Antarctic Survey"},
     ]
 
 
