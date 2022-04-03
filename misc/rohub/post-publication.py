@@ -18,7 +18,7 @@ metadata_contribution = {
     'author_GHuser': 'alan-turing-institute',
     'author_GHrepo': 'environmental-ds-book',
     'conda_os_files' : ['linux', 'osx'],
-    'requirements_txt': True
+    'requirements_txt': False
 }
 
 myros = rohub.list_my_ros()
