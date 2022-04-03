@@ -67,7 +67,11 @@ reviewers=[
      "display_name": "Tom Andersson",
      "name": "Tom Andersson",
      "affiliation": "he British Antarctic Survey"},
-    ]
+    {"user_id": "https://github.com/nbarlowATI",
+     "display_name": "Nick Barlow",
+     "name": "Nick Barlow",
+     "affiliation": "The Alan Turing Institute"},
+        ]
 
 
 ro.set_contributors(agents=reviewers)
