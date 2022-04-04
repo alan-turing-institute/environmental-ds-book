@@ -25,5 +25,5 @@ dependencies:
         - aiohttp
         - albumentations
         - scikit-image
-        - pycurl
+        #- pycurl
         - git+https://github.com/ESM-VFC/intake_zenodo_fetcher.git
