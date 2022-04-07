@@ -132,6 +132,15 @@
       "contributions": [
         "ideas"
       ]
+    },
+    {
+      "login": "mattfry-ceh",
+      "name": "Matt Fry",
+      "avatar_url": "https://avatars.githubusercontent.com/u/12858205?v=4",
+      "profile": "https://github.com/mattfry-ceh",
+      "contributions": [
+        "review"
+      ]
     }
   ],
   "contributorsPerLine": 7,
