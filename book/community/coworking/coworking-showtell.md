@@ -5,7 +5,7 @@
 *The section below is adapted under a CC-BY license from [_The Turing Way_ online collaboration cafe](https://github.com/alan-turing-institute/the-turing-way/blob/main/book/website/community-handbook/coworking/coworking-collabcafe.md)*
 :::
 
-_The Environmental Data Science_ Show and Tell are virtual co-working spaces that are held fortnightly on the fourth Tuesday every two months for 1 hour.
+_The Environmental Data Science_ Show and Tell are virtual co-working spaces that are held fortnightly on the fourth Tuesday every two months for 1 hour. [comment]: <> (Needs clarification. "fortnightly on the fourth Tuesday every two months" is unclear)
 
 The meetings are a great way to gather feedback informally, but more importantly, it's a bi-monthly celebration of what you or your team has accomplished.
 
@@ -84,7 +84,7 @@ Here's an example from the first Collaboration Cafe in June 2021:
 > *Name + Something you watch (video, movie, documentary. etc) recently that was inspiring for you? + emoji that best explain your day*
 > *(Remember that this is a public document. You can use a pseudonym if you'd prefer.)*
 >
-> * Alejandro + [Black Holes: The Edge of All We Know](https://www.rottentomatoes.com/m/black_holes_the_edge_of_all_we_know) + :milky_way:
+> * Alejandro + [Black Holes: The Edge of All We Know](https://www.rottentomatoes.com/m/black_holes_the_edge_of_all_we_know) + 🌌
 > * Scott + [Coded Bias](https://www.imdb.com/title/tt11394170/) + 🧠
 
 As you can see, there's a reminder in the notes that they are in a public document.
@@ -115,7 +115,7 @@ Show and Tell sessions give you the opportunity to show the most important work 
 
 We won't record presentation parts of the Show and Tell. We'll only take notes of Q&As in the HackMD to posterior access for you and the community.  
 
-As a rule of thumb, we suggest to start with 3-min overview of the topic backed by some slides. The remaining time should focus on demonstrating the work! You can gather feedback during and after the demo. Note each show and tell session is followed by 5-min Q&A.
+As a rule of thumb, we suggest to start with 3-min overview of the topic backed by some slides. The remaining time should focus on demonstrating the work! You can gather feedback during and after the demo. Note each Show and Tell session is followed by 5-min Q&A.
 
 During the online Show and Tell sessions, we'll use the main room to allow people to attend and discuss Show and Tell sessions.
 
