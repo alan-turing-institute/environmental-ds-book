@@ -1,22 +1,40 @@
 {
-  "creators": [
-    {
-      "name": "The Environmental Data Science Community, ."
-    }
-  ],
-  "keywords": [
-    "scientific software practices",
-    "environmental informatics",
-    "reproducibility",
-    "transparent",
-    "collaboration",
-    "community",
-    "publication"
-  ],
-  "license": {
-    "id": "CC-BY-4.0"
-  },
-  "publication_date": "2022-01-29",
-  "title": "Environmental Data Science Book: A living, open and community-driven online resource to showcase and support the publication of data, research and open-source tools for collaborative, reproducible and transparent Environmental Data Science.",
-  "version": "0.0.1"
+    "description": "<p>What&#39;s Changed</p>\n\n<ul>\n\t<li>Adding ocean-modelling-litter-philab notebook by @raquelcarmo in <a href=\"https://github.com/alan-turing-institute/environmental-ds-book/pull/22\">https://github.com/alan-turing-institute/environmental-ds-book/pull/22</a></li>\n\t<li>docs: add raquelcarmo as a contributor for blog, code by @allcontributors in <a href=\"https://github.com/alan-turing-institute/environmental-ds-book/pull/41\">https://github.com/alan-turing-institute/environmental-ds-book/pull/41</a></li>\n\t<li>docs: add jmifdal as a contributor for blog, code by @allcontributors in <a href=\"https://github.com/alan-turing-institute/environmental-ds-book/pull/42\">https://github.com/alan-turing-institute/environmental-ds-book/pull/42</a></li>\n\t<li>add additional information section to executable notebooks by @acocac in <a href=\"https://github.com/alan-turing-institute/environmental-ds-book/pull/43\">https://github.com/alan-turing-institute/environmental-ds-book/pull/43</a></li>\n\t<li>add rohub and citation to urban-sensors-climate_ukv by @acocac in <a href=\"https://github.com/alan-turing-institute/environmental-ds-book/pull/44\">https://github.com/alan-turing-institute/environmental-ds-book/pull/44</a></li>\n\t<li>hide cells metadata by @acocac in <a href=\"https://github.com/alan-turing-institute/environmental-ds-book/pull/45\">https://github.com/alan-turing-institute/environmental-ds-book/pull/45</a></li>\n\t<li>add rohub and citation to wildfires-sensors-fires_modis by @acocac in <a href=\"https://github.com/alan-turing-institute/environmental-ds-book/pull/46\">https://github.com/alan-turing-institute/environmental-ds-book/pull/46</a></li>\n\t<li>add rohub and citation to forest-modelling-treecrown_deepforest by @acocac in <a href=\"https://github.com/alan-turing-institute/environmental-ds-book/pull/47\">https://github.com/alan-turing-institute/environmental-ds-book/pull/47</a></li>\n\t<li>Update templates by @acocac in <a href=\"https://github.com/alan-turing-institute/environmental-ds-book/pull/48\">https://github.com/alan-turing-institute/environmental-ds-book/pull/48</a></li>\n\t<li>Improve guidelines submission by @acocac in <a href=\"https://github.com/alan-turing-institute/environmental-ds-book/pull/51\">https://github.com/alan-turing-institute/environmental-ds-book/pull/51</a></li>\n\t<li>add rohub and citation wildfires sensors fires seviri by @acocac in <a href=\"https://github.com/alan-turing-institute/environmental-ds-book/pull/55\">https://github.com/alan-turing-institute/environmental-ds-book/pull/55</a></li>\n\t<li>docs: add annefou as a contributor for ideas by @allcontributors in <a href=\"https://github.com/alan-turing-institute/environmental-ds-book/pull/58\">https://github.com/alan-turing-institute/environmental-ds-book/pull/58</a></li>\n\t<li>Update README.md by @acocac in <a href=\"https://github.com/alan-turing-institute/environmental-ds-book/pull/59\">https://github.com/alan-turing-institute/environmental-ds-book/pull/59</a></li>\n\t<li>Add rohub forest modelling treecrown detectree rgb by @acocac in <a href=\"https://github.com/alan-turing-institute/environmental-ds-book/pull/60\">https://github.com/alan-turing-institute/environmental-ds-book/pull/60</a></li>\n\t<li>add rohub scripts by @acocac in <a href=\"https://github.com/alan-turing-institute/environmental-ds-book/pull/61\">https://github.com/alan-turing-institute/environmental-ds-book/pull/61</a></li>\n\t<li>Add rohub polar modelling icenet by @acocac in <a href=\"https://github.com/alan-turing-institute/environmental-ds-book/pull/62\">https://github.com/alan-turing-institute/environmental-ds-book/pull/62</a></li>\n\t<li>docs: add mattfry-ceh as a contributor for review by @allcontributors in <a href=\"https://github.com/alan-turing-institute/environmental-ds-book/pull/63\">https://github.com/alan-turing-institute/environmental-ds-book/pull/63</a></li>\n\t<li>docs: add dorankhamis as a contributor for review by @allcontributors in <a href=\"https://github.com/alan-turing-institute/environmental-ds-book/pull/64\">https://github.com/alan-turing-institute/environmental-ds-book/pull/64</a></li>\n\t<li>Update .all-contributorsrc by @acocac in <a href=\"https://github.com/alan-turing-institute/environmental-ds-book/pull/65\">https://github.com/alan-turing-institute/environmental-ds-book/pull/65</a></li>\n\t<li>docs: add timo0thy as a contributor for content by @allcontributors in <a href=\"https://github.com/alan-turing-institute/environmental-ds-book/pull/66\">https://github.com/alan-turing-institute/environmental-ds-book/pull/66</a></li>\n\t<li>docs: add NHomer-Edi as a contributor for content by @allcontributors in <a href=\"https://github.com/alan-turing-institute/environmental-ds-book/pull/67\">https://github.com/alan-turing-institute/environmental-ds-book/pull/67</a></li>\n\t<li>Add soil moisture notebook by @acocac in <a href=\"https://github.com/alan-turing-institute/environmental-ds-book/pull/50\">https://github.com/alan-turing-institute/environmental-ds-book/pull/50</a></li>\n</ul>\n\n<p>New Contributors</p>\n\n<ul>\n\t<li>@raquelcarmo made their first contribution in <a href=\"https://github.com/alan-turing-institute/environmental-ds-book/pull/22\">https://github.com/alan-turing-institute/environmental-ds-book/pull/22</a></li>\n</ul>\n\n<p><strong>Full Changelog</strong>: <a href=\"https://github.com/alan-turing-institute/environmental-ds-book/compare/0.0.1...0.0.2\">https://github.com/alan-turing-institute/environmental-ds-book/compare/0.0.1...0.0.2</a></p>", 
+    "license": "CC-BY-4.0", 
+    "title": "Environmental Data Science Book: A living, open and community-driven online resource to showcase and support the publication of data, research and open-source tools for collaborative, reproducible and transparent Environmental Data Science.", 
+    "keywords": [
+        "scientific software practices", 
+        "environmental informatics", 
+        "reproducibility", 
+        "transparent", 
+        "collaboration", 
+        "community", 
+        "publication"
+    ], 
+    "version": "0.0.2", 
+    "upload_type": "software", 
+    "communities": [
+        {
+            "identifier": "the-environmental-ds-community"
+        }
+    ], 
+    "publication_date": "2022-05-17", 
+    "creators": [
+        {
+            "name": "The Environmental Data Science Community, ."
+        }
+    ], 
+    "access_right": "open", 
+    "related_identifiers": [
+        {
+            "scheme": "url", 
+            "identifier": "https://github.com/alan-turing-institute/environmental-ds-book/tree/0.0.2", 
+            "relation": "isSupplementTo"
+        }, 
+        {
+            "scheme": "doi", 
+            "identifier": "10.5281/zenodo.5918931", 
+            "relation": "isVersionOf"
+        }
+    ]
 }
