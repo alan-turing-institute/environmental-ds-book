@@ -16,7 +16,7 @@ parts:
         title: Cosmos-UK (CEH)
       - file: gallery/exploration/urban-exploration-climate_ukv/urban-exploration-climate_ukv
         title: UKV high-resolution (Met Office)
-      - file: gallery/exploration/wildfires-exploration-fires_seviri/wildfires-exploration-fires_modis
+      - file: gallery/exploration/wildfires-exploration-fires_modis/wildfires-exploration-fires_modis
         title: MOD021KM and FIRMS (NASA)
       - file: gallery/exploration/wildfires-exploration-fires_seviri/wildfires-exploration-fires_seviri
         title: SEVIRI Level 1.5 (EUMESAT)
