@@ -26,3 +26,7 @@
 	path = book/gallery/exploration/wildfires-exploration-fires_modis
 	url = https://github.com/Environmental-DS-Book/wildfires-exploration-fires_modis.git
 	branch = render
+[submodule "book/gallery/exploration/agriculture-exploration-cosmosuk"]
+	path = book/gallery/exploration/agriculture-exploration-cosmosuk
+	url = https://github.com/Environmental-DS-Book/agriculture-exploration-cosmosuk.git
+	branch = render
