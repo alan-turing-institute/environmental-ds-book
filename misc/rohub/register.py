@@ -90,7 +90,7 @@ my_res_int0=ro.add_internal_resource(res_type=resi_res_type,file_path=resi_file_
 rese_folder=myfolders[myfolders.path=='tool']['identifier'].values
 
 rese_res_type="Jupyter Notebook"
-rese_file_url=f"https://github.com/{metadata_contribution['author_GHuser']}/{metadata_contribution['filename']}/tree/main/{metadata_contribution['filename']}.ipynb"
+rese_file_url=f"https://github.com/{metadata_contribution['author_GHuser']}/{metadata_contribution['filename']}/blob/main/{metadata_contribution['filename']}.ipynb"
 rese_title=f"Jupyter notebook"
 rese_description="Jupyter Notebook hosted by the Environmental Data Science Book"
 
