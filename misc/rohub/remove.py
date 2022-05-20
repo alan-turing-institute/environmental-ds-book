@@ -1,6 +1,7 @@
 import rohub
 import os
-sys.path.insert(0, os.path.join(os.getcwd(), 'book', '_temp', 'rohub'))
+import sys
+sys.path.insert(0, os.path.join(os.getcwd(), 'misc', 'rohub'))
 import config
 
 # RoHub functionalities
