@@ -14,10 +14,6 @@
 	path = book/gallery/modelling/ocean-modelling-litter-philab
 	url = https://github.com/Environmental-DS-Book/ocean-modelling-litter-philab.git
 	branch = render
-[submodule "book/gallery/exploration/agriculture-exploration-cosmosuk"]
-	path = book/gallery/exploration/agriculture-exploration-cosmosuk
-	url = https://github.com/Environmental-DS-Book/agriculture-exploration-cosmosuk.git
-	branch = render
 [submodule "book/gallery/exploration/wildfires-exploration-fires_seviri"]
 	path = book/gallery/exploration/wildfires-exploration-fires_seviri
 	url = https://github.com/Environmental-DS-Book/wildfires-exploration-fires_seviri.git
