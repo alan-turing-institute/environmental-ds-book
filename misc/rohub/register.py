@@ -2,7 +2,7 @@
 import sys
 import rohub
 import os
-sys.path.insert(0, os.path.join(os.getcwd(), 'book', '_temp', 'rohub'))
+sys.path.insert(0, os.path.join(os.getcwd(), 'misc', 'rohub'))
 import config
 
 # Authenticate
@@ -10,30 +10,28 @@ rohub.login(username=config.username, password=config.password)
 
 # metadata
 metadata_contribution = {
-    'environment': 'polar',
-    'topic': 'modelling',
-    'filename': 'polar-modelling-icenet',
-    'title': 'Sea ice forecasting using IceNet',
-    'inputs': {'input1':{'name':"Forecasts, neural networks, and results from the paper: 'Seasonal Arctic sea ice forecasting with probabilistic deep learning'",
-                         'url':"https://doi.org/10.5285/71820e7d-c628-4e32-969f-464b7efb187c"},
-               'input2': {
-                   'name': "Dataset for IceNet's demo notebook",
-                   'url': "https://doi.org/10.5281/zenodo.5516869"}
+    'environment': 'agriculture',
+    'topic': 'exploration',
+    'filename': 'agriculture-exploration-cosmosuk',
+    'title': 'Cosmos-UK soil moisture',
+    'inputs': {'input1':{'name':"Inputs of the Jupyter Notebook - Cosmos-UK soil moisture",
+                         'url':"https://doi.org/10.5281/zenodo.6567018"},
                },
     'outputs': {'content': 'table and figures',
-               'url': "https://doi.org/10.5281/zenodo.6410246"},
-    'author_GHuser': 'alan-turing-institute',
-    'author_GHrepo': 'environmental-ds-book',
-    'references':{'ref1':{'name':'Seasonal Arctic sea ice forecasting with probabilistic deep learning','url':"https://doi.org/10.1038/s41467-021-25257-4"},},
+               'url': "https://doi.org/10.5281/zenodo.6566942"},
+    'author_GHuser': 'Environmental-DS-Book',
+    'references':{'ref1':{'name':'Daily and sub-daily hydrometeorological and soil data (2013-2019) [cosmos-uk]','url':"https://doi.org/10.5285/b5c190e4-e35d-40ea-8fbe-598da03a1185"},
+                  'ref2':{'name':'Soil water content in southern england derived from a cosmic-ray soil moisture observing system – cosmos-uk','url':"https://doi.org/10.1002/hyp.10929"},
+                  'ref3':{'name':'Cosmos: the cosmic-ray soil moisture observing system','url':"https://doi.org/10.5194/hess-16-4079-2012"}},
     'sketch': {'title':'Image showing interactive plot of IceNet seasonal forecasts of Artic sea ice according to four lead times and months in 2020',
-               'path':'book/_temp/polar-modelling-icenet/interactive_plotting.png'}
+               'path':'_temp/rohub/agriculture-exploration-cosmosuk/interactive_plotting.png'}
 }
 
 title_nb = metadata_contribution['title']
 
 metadata_rohub = {
     'title': f'{title_nb} (Jupyter Notebook) published in the Environmental Data Science book',
-    'research_areas': ['Environmental research', 'Climatology'],
+    'research_areas': ['Environmental research', 'Soil science', 'Hydrology'],
     'description': f'The research object refers to the {title_nb} notebook published in the Environmental Data Science book.',
     'ros_type': 'Executable Research Object',
     'ros_template': 'Executable Research Object folders structure',
@@ -63,14 +61,14 @@ authors=[
 ro.set_authors(agents=authors)
 
 reviewers=[
-    {"user_id": "https://github.com/tom-andersson",
-     "display_name": "Tom Andersson",
-     "name": "Tom Andersson",
-     "affiliation": "he British Antarctic Survey"},
-    {"user_id": "https://github.com/nbarlowATI",
-     "display_name": "Nick Barlow",
-     "name": "Nick Barlow",
-     "affiliation": "The Alan Turing Institute"},
+    {"user_id": "https://github.com/dorankhamis",
+     "display_name": "Doran Khamis",
+     "name": "Doran Khamis",
+     "affiliation": "UK Centre for Ecology & Hydrology"},
+    {"user_id": "https://github.com/mattfry-ceh",
+     "display_name": "Matt Fry",
+     "name": "Matt Fry",
+     "affiliation": "UK Centre for Ecology & Hydrology"},
         ]
 
 
@@ -92,7 +90,7 @@ my_res_int0=ro.add_internal_resource(res_type=resi_res_type,file_path=resi_file_
 rese_folder=myfolders[myfolders.path=='tool']['identifier'].values
 
 rese_res_type="Jupyter Notebook"
-rese_file_url=f"https://github.com/{metadata_contribution['author_GHuser']}/{metadata_contribution['author_GHrepo']}/tree/master/book/{metadata_contribution['environment']}/{metadata_contribution['topic']}/{metadata_contribution['filename']}.ipynb"
+rese_file_url=f"https://github.com/{metadata_contribution['author_GHuser']}/{metadata_contribution['filename']}/tree/master/{metadata_contribution['filename']}.ipynb"
 rese_title=f"Jupyter notebook"
 rese_description="Jupyter Notebook hosted by the Environmental Data Science Book"
 
