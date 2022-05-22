@@ -59,7 +59,7 @@ The following procedures will prepare you to make submission:
 * Go to the [Environmental Data Science book organisation](https://github.com/Environmental-DS-Book) which is dedicated to host notebooks.
 * Use the [available template](https://github.com/Environmental-DS-Book/template-jp) and place in your personal repository.  
 * Clone the used template repository to your local system.  
-* Download a jupyter notebook template of your choosen target theme from the [community template folder](https://github.com/alan-turing-institute/environmental-ds-book/tree/master/book/community/templates).
+* Download a jupyter notebook template of your chosen target theme from the [community template folder](https://github.com/alan-turing-institute/environmental-ds-book/tree/master/book/community/templates).
 * Rename the filename of the template to the pattern (XXX-YYY-ZZZ, where XXX refers to the environmental system, YYY to the theme and ZZZ to a preferred identifier of the model, sensor or pre/post-processing pipeline). For example, "forest-modelling-treecrown.ipynb".
 * Fill the information header according to your use case. Be free to guide from previous modelling notebooks, see for instance the [IceNet notebook](https://github.com/alan-turing-institute/environmental-ds-book/blob/master/book/polar/modelling/polar-modelling-icenet.ipynb).
 * Change the structure of the remaining sections of the notebook according to your preference.
