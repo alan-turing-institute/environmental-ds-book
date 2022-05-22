@@ -33,18 +33,18 @@ Please visit the corresponding Jupyter Book guidelines for [`narrative`](https:/
 The `_toc.yml` file sets the main sections of the Environmental DS book. It is a simple configuration file specifying a table of content from all the executable and narrative content found in the ``book`` folder (and in subfolders). The current version of the book consists of four key sections:
 
 * **Preamble**: contains narrative content i.e. plain markdown files describing the aims of the book, the target audience, how to use and attribution.
-* **Environments**: provides narrative and executable content by environmental system e.g. Forest. We set different themes: sensors, modelling, etc to differentiate the type of analysis or procedure.
+* **Gallery**: provides narrative and executable content by theme. We set different themes: exploration, modelling, etc to differentiate the type of analysis or procedure.
 * **Community**: compiles community-related resources such as notes of co-working meetings, templates for new executable content i.e. demonstrators and interesting readings.  
 * **Afterword**: describe miscellaneous material such as glossary, bibliography and execution statistics. 
 
 ## Contribution of executable notebooks
 
-The contribution process has three main steps: exploration, preparation and submission.
+The contribution process has three main steps: navigation, preparation and submission.
 
-### Exploration
+### Navigation
 
-We encourage you to explore existing templates of proposed topics or themes which are available in the community section (see {ref}`Templates <cm-templates>`). The proposed themes are described below.
-* **Sensor**: highlights a particular environmental sensor with visualisation and interpretation of the corresponding layers of information.
+We encourage you to navigate existing templates of proposed topics or themes which are available in the community section (see {ref}`Templates <cm-templates>`). The proposed themes are described below.
+* **Exploration**: highlights a particular environmental sensor with visualisation and interpretation of the corresponding layers of information.
 * **Preprocessing**: refers to all procedures to clean and prepare environmental data for analysis. The notebook should highlight differences between the raw and preprocessed data.
 * **Modelling**: comprises models to analyse a given environmental system. 
 * **Post-processing**: refers to post-process routines to fine tune and/or adjust modelling outputs.
