@@ -13,7 +13,7 @@ A **living**, **open** and **community-driven** online resource to showcase and 
 | **Project** | [![Read the book](https://img.shields.io/badge/read-the%20book-blue.svg)](https://the-environmental-ds-book.netlify.app)  |
 | **News** | [![Twitter Follow](https://img.shields.io/twitter/follow/EnvDSBook?style=social)](https://twitter.com/EnvDSBook)  |
 | **Chat** | [![GitHub issues](https://img.shields.io/github/issues/alan-turing-institute/environmental-ds-book)](https://github.com/alan-turing-institute/environmental-ds-book/issues) [![GitHub pull requests](https://img.shields.io/github/issues-pr/alan-turing-institute/environmental-ds-book)](https://github.com/alan-turing-institute/environmental-ds-book/pulls) |
-| **Build** | [![GitHub Pages build](https://github.com/alan-turing-institute/environmental-ds-book/actions/workflows/deploy.yml/badge.svg?branch=master)](https://github.com/alan-turing-institute/environmental-ds-book/actions/workflows/deploy.yml) [![Netlify Status](https://api.netlify.com/api/v1/badges/42296a4e-b896-4253-8910-f17cd137e842/deploy-status)](https://app.netlify.com/sites/the-environmental-ds-book/deploys)
+| **Build** | [![CI](https://github.com/alan-turing-institute/environmental-ds-book/actions/workflows/build.yml/badge.svg)](https://github.com/alan-turing-institute/environmental-ds-book/actions/workflows/build.yml) [![Netlify Status](https://api.netlify.com/api/v1/badges/42296a4e-b896-4253-8910-f17cd137e842/deploy-status)](https://app.netlify.com/sites/the-environmental-ds-book/deploys)
 | **Cite** |  [![Cite this using DOI](https://zenodo.org/badge/DOI/10.5281/zenodo.5918932.svg)](https://doi.org/10.5281/zenodo.5918932) |
 
 ## Contributors
