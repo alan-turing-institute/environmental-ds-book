@@ -6,4 +6,5 @@ dependencies:
   - pip
   - pip:
         - jupyter-book
+        - ghp-import
         - sphinx_togglebutton

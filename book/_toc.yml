@@ -7,70 +7,30 @@ parts:
   - file: preamble/who-for
   - file: preamble/how-to
   - file: preamble/attribution
-- caption: Environments
+- caption: Gallery
   chapters:
-  - file: agriculture/agriculture-overview
-    title: Agriculture
+  - file: gallery/exploration
+    title: Exploration
     sections:
-    - file: agriculture/agriculture-sensors
-      title: Sensors
-      sections:
-      - file: agriculture/sensors/agriculture-sensors-cosmosuk
-        title: Cosmos-UK (CEH)
-  - file: forest/forest-overview
-    title: Forest
-    sections:
-    - file: forest/forest-sensors
-      title: Sensors
-    - file: forest/forest-modelling
-      title: Modelling
-      sections:
-      - file: forest/modelling/forest-modelling-treecrown_deepforest
-        title: Tree crown (DeepForest)
-      - file: forest/modelling/forest-modelling-treecrown_detectreeRGB
-        title: Tree crown (DetectreeRGB)
-  - file: ocean/ocean-overview
-    title: Ocean
-    sections:
-    - file: ocean/ocean-sensors
-      title: Sensors
-    - file: ocean/ocean-modelling
-      title: Modelling
-      sections:
-      - file: ocean/modelling/ocean-modelling-litter-philab
-        title: Detecting floating objects (ESA Phi-Lab)
-  - file: polar/polar-overview
-    title: Polar
-    sections:
-    - file: polar/polar-sensors
-      title: Sensors
-    - file: polar/polar-modelling
-      title: Modelling
-      sections:
-      - file: polar/modelling/polar-modelling-icenet
-        title: Sea ice forecasting (IceNet)
-  - file: urban/urban-overview
-    title: Urban
-    sections:
-    - file: urban/urban-sensors
-      title: Sensors
-      sections:
-      - file: urban/sensors/urban-sensors-climate_ukv
+      - file: gallery/exploration/agriculture-exploration-cosmosuk/agriculture-exploration-cosmosuk
+        title: Cosmos-UK soil moisture (CEH)
+      - file: gallery/exploration/urban-exploration-climate_ukv/urban-exploration-climate_ukv
         title: UKV high-resolution (Met Office)
-    - file: urban/urban-modelling
-      title: Modelling
-  - file: wildfires/wildfires-overview
-    title: Wildfires
-    sections:
-    - file: wildfires/wildfires-sensors
-      title: Sensors
-      sections:
-      - file: wildfires/sensors/wildfires-sensors-fires_modis
+      - file: gallery/exploration/wildfires-exploration-fires_modis/wildfires-exploration-fires_modis
         title: MOD021KM and FIRMS (NASA)
-      - file: wildfires/sensors/wildfires-sensors-fires_seviri
+      - file: gallery/exploration/wildfires-exploration-fires_seviri/wildfires-exploration-fires_seviri
         title: SEVIRI Level 1.5 (EUMESAT)
-    - file: wildfires/wildfires-modelling
-      title: Modelling
+  - file: gallery/modelling
+    title: Modelling
+    sections:
+      - file: gallery/modelling/forest-modelling-treecrown_deepforest/forest-modelling-treecrown_deepforest
+        title: Tree crown (DeepForest)
+      - file: gallery/modelling/forest-modelling-treecrown_detectreeRGB/forest-modelling-treecrown_detectreeRGB
+        title: Tree crown (DetectreeRGB)
+      - file: gallery/modelling/ocean-modelling-litter-philab/ocean-modelling-litter-philab
+        title: Detecting floating objects (ESA Phi-Lab)
+      - file: gallery/modelling/polar-modelling-icenet/polar-modelling-icenet
+        title: Sea ice forecasting (IceNet)
 - caption: Community
   chapters:
   - file: community/guidelines
