@@ -19,6 +19,8 @@ jobs:
     steps:
       - name: Checkout repository
         uses: actions/checkout@v2
+        with:
+          persist-credentials: false
       - name: Checkout, Merge and commit files
         run: |
           git config --global user.email "acocac@users.noreply.github.com"
