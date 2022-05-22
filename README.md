@@ -1,7 +1,7 @@
 <img src="book/figures/logo/logo.png" width="180" align="Right" /></a>
 
 <!-- ALL-CONTRIBUTORS-BADGE:START - Do not remove or modify this section -->
-[![All Contributors](https://img.shields.io/badge/all_contributors-18-orange.svg?style=flat-square)](#contributors-)
+[![All Contributors](https://img.shields.io/badge/all_contributors-19-orange.svg?style=flat-square)](#contributors-)
 <!-- ALL-CONTRIBUTORS-BADGE:END -->
 
 # The Environmental Data Science book
@@ -43,6 +43,7 @@ We welcome and recognize all contributions. You can see a list of current contri
   </tr>
   <tr>
     <td align="center"><a href="https://github.com/jmifdal"><img src="https://avatars.githubusercontent.com/u/15648611?v=4?s=100" width="100px;" alt=""/><br /><sub><b>jmifdal</b></sub></a><br /><a href="#blog-jmifdal" title="Blogposts">📝</a> <a href="https://github.com/alan-turing-institute/environmental-ds-book/commits?author=jmifdal" title="Code">💻</a></td>
+    <td align="center"><a href="https://github.com/nbarlowATI"><img src="https://avatars.githubusercontent.com/u/33832774?v=4?s=100" width="100px;" alt=""/><br /><sub><b>nbarlowATI</b></sub></a><br /><a href="https://github.com/alan-turing-institute/environmental-ds-book/pulls?q=is%3Apr+reviewed-by%3AnbarlowATI" title="Reviewed Pull Requests">👀</a></td>
     <td align="center"><a href="https://github.com/shmh40"><img src="https://avatars.githubusercontent.com/u/56727418?v=4?s=100" width="100px;" alt=""/><br /><sub><b>shmh40</b></sub></a><br /><a href="#blog-shmh40" title="Blogposts">📝</a> <a href="https://github.com/alan-turing-institute/environmental-ds-book/commits?author=shmh40" title="Code">💻</a></td>
     <td align="center"><a href="https://github.com/svadams"><img src="https://avatars.githubusercontent.com/u/8512966?v=4?s=100" width="100px;" alt=""/><br /><sub><b>svadams</b></sub></a><br /><a href="#blog-svadams" title="Blogposts">📝</a> <a href="https://github.com/alan-turing-institute/environmental-ds-book/commits?author=svadams" title="Code">💻</a></td>
     <td align="center"><a href="https://github.com/timo0thy"><img src="https://avatars.githubusercontent.com/u/51698422?v=4?s=100" width="100px;" alt=""/><br /><sub><b>timo0thy</b></sub></a><br /><a href="#content-timo0thy" title="Content">🖋</a></td>
