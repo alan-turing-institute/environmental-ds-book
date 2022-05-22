@@ -61,7 +61,7 @@ The following procedures will prepare you to make submission:
 * Clone the used template repository to your local system.  
 * Download a jupyter notebook template of your chosen target theme from the [community template folder](https://github.com/alan-turing-institute/environmental-ds-book/tree/master/book/community/templates).
 * Rename the filename of the template to the pattern (XXX-YYY-ZZZ, where XXX refers to the environmental system, YYY to the theme and ZZZ to a preferred identifier of the model, sensor or pre/post-processing pipeline). For example, "forest-modelling-treecrown.ipynb".
-* Fill the information header according to your use case. Be free to guide from previous modelling notebooks, see for instance the [IceNet notebook](https://github.com/alan-turing-institute/environmental-ds-book/blob/master/book/polar/modelling/polar-modelling-icenet.ipynb).
+* Fill the information header according to your use case. Be free to guide from previous modelling notebooks, see for instance the [IceNet notebook](https://github.com/alan-turing-institute/environmental-ds-book/blob/master/book/gallery/modelling/polar-modelling-icenet.ipynb).
 * Change the structure of the remaining sections of the notebook according to your preference.
   * We advise following the 10 rules of compelling notebooks provided by the EarthCube initiative available in their [Notebook Template](https://github.com/earthcube/NotebookTemplates/blob/main/EC_05_Template_Notebook_for_EarthCube_Long_Version.ipynb) (section `Data processing and analysis`).
 * Test the notebook is working according to your virtual or conda environment.
