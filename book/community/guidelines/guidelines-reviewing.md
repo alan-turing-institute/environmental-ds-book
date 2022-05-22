@@ -14,7 +14,7 @@ The quality of the proposed contribution can be assessed through scientific, tec
 
 ### Scientific criteria
 
-You are not expected to conduct a rigorous scientific review of the work. Note, for both plain content and executable notebooks, the authors can provide links to the related research such as peer-review papers, conference proceedings and/or technical reports. If the contribution shows insufficient quality, we encourage you to contact the editorial committee providing the reasons to withdraw it. 
+You are not expected to conduct a rigorous scientific review of the work. Note, for both plain content and executable notebooks, the authors can provide links to the related research such as peer-reviewed papers, conference proceedings and/or technical reports. If the contribution shows insufficient quality, we encourage you to contact the editorial committee providing the reasons to withdraw it. 
 
 ### Technical criteria
 
@@ -37,7 +37,7 @@ When a code is provided, we suggest focusing on a minimal feedback in the follow
 
 ### Reviewer and authors
 
-The interaction of the authors is facilitated through ReviewNB, a third-party plugin in GitHub for displaying Jupyter Notebook content. Sharing and viewing the content is much easier and faster than any other platform e.g. Binder. The inline review comments interface is useful and user-friendly. While it supports major visualisation libraries and interactive widgets, it does not render bokeh-related plots.
+The interaction of the authors is facilitated through ReviewNB, a third-party plugin in GitHub for displaying Jupyter Notebook content. Sharing and viewing the content is much easier and faster than with any other platform e.g. Binder. The inline review comments interface is useful and user-friendly. While it supports major visualisation libraries and interactive widgets, it does not render bokeh-related plots.
 
 In addition to ReviewNB, other platforms which facilitates the reviewing are:
 * [notebooksharing.space](https://notebooksharing.space/): supports bokeh-related widgets. Only ask the author to upload the notebook in this platform when you want to inspect the interactive content not rendered in ReviewNB. Note the notebook file is limited up to 10 MB.
@@ -47,7 +47,7 @@ In addition to ReviewNB, other platforms which facilitates the reviewing are:
 You can tag the editors in any of the pull requests. For private communications, please send a direct message to [environmental.ds.book@gmail.com](mailto:environmental.ds.book@gmail.com]).
 
 ## Conflict of interest
-The definition of a conflict of Interest in peer review is a circumstance that makes you “unable to make an impartial scientific judgement or evaluation.” (PNAS Conflict of Interest Policy). The Environmental Data Science community is concerned with avoiding any actual conflicts of interest, and being sufficiently transparent that we avoid the appearance of conflicts of interest as well.
+The definition of a conflict of Interest in peer review is a circumstance that makes you “unable to make an impartial scientific judgement or evaluation” (PNAS Conflict of Interest Policy). The Environmental Data Science community is concerned with avoiding any actual conflicts of interest, and being sufficiently transparent that we avoid the appearance of conflicts of interest as well.
 
 As a reviewer, conflict of interests are your present or previous association with any authors of a submission: recent (past four years) collaborators in funded research or work that is published; and lifetime for the family members, business partners, and thesis student/advisor or mentor. In addition, your recent (past year) association with the same organisation of a submitter is a COI, for example, being employed at the same institution.
 
