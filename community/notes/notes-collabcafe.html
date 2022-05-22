@@ -37,18 +37,22 @@
     <script src="../../_static/jquery.js"></script>
     <script src="../../_static/underscore.js"></script>
     <script src="../../_static/doctools.js"></script>
-    <script src="../../_static/togglebutton.js"></script>
     <script src="../../_static/clipboard.min.js"></script>
     <script src="../../_static/copybutton.js"></script>
+    <script>let toggleHintShow = 'Click to show';</script>
+    <script>let toggleHintHide = 'Click to hide';</script>
+    <script>let toggleOpenOnPrint = 'true';</script>
+    <script src="../../_static/togglebutton.js"></script>
     <script>var togglebuttonSelector = '.toggle, .admonition.dropdown, .tag_hide_input div.cell_input, .tag_hide-input div.cell_input, .tag_hide_output div.cell_output, .tag_hide-output div.cell_output, .tag_hide_cell.cell, .tag_hide-cell.cell';</script>
     <script src="../../_static/sphinx-book-theme.d59cb220de22ca1c485ebbdc042f0030.js"></script>
-    <script async="async" src="https://unpkg.com/thebe@0.5.1/lib/index.js"></script>
-    <script>
-        const thebe_selector = ".thebe"
-        const thebe_selector_input = "pre"
-        const thebe_selector_output = ".output"
-    </script>
+    <script>const THEBE_JS_URL = "https://unpkg.com/thebe@0.8.2/lib/index.js"
+const thebe_selector = ".thebe,.cell"
+const thebe_selector_input = "pre"
+const thebe_selector_output = ".output, .cell_output"
+</script>
     <script async="async" src="../../_static/sphinx-thebe.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/require.js/2.3.4/require.min.js"></script>
+    <script src="https://unpkg.com/@jupyter-widgets/html-manager@^0.20.1/dist/embed-amd.js"></script>
     <link rel="index" title="Index" href="../../genindex.html" />
     <link rel="search" title="Search" href="../../search.html" />
     <link rel="next" title="The Environmental Data Science ⛰ 🌳 🏙️ ❄️ 🔥 🌊 online Journal Club" href="notes-journalclub.html" />
@@ -135,13 +139,13 @@
 </ul>
 <p aria-level="2" class="caption" role="heading">
  <span class="caption-text">
-  Environments
+  Gallery
  </span>
 </p>
 <ul class="nav bd-sidenav">
  <li class="toctree-l1 has-children">
-  <a class="reference internal" href="../../forest/forest-overview.html">
-   Forest
+  <a class="reference internal" href="../../gallery/exploration.html">
+   Exploration
   </a>
   <input class="toctree-checkbox" id="toctree-checkbox-1" name="toctree-checkbox-1" type="checkbox"/>
   <label for="toctree-checkbox-1">
@@ -150,159 +154,55 @@
   </label>
   <ul>
    <li class="toctree-l2">
-    <a class="reference internal" href="../../forest/forest-sensors.html">
-     Sensors
-    </a>
-   </li>
-   <li class="toctree-l2 has-children">
-    <a class="reference internal" href="../../forest/forest-modelling.html">
-     Modelling
-    </a>
-    <input class="toctree-checkbox" id="toctree-checkbox-2" name="toctree-checkbox-2" type="checkbox"/>
-    <label for="toctree-checkbox-2">
-     <i class="fas fa-chevron-down">
-     </i>
-    </label>
-    <ul>
-     <li class="toctree-l3">
-      <a class="reference internal" href="../../forest/modelling/forest-modelling-treecrown_deepforest.html">
-       Tree crown (DeepForest)
-      </a>
-     </li>
-     <li class="toctree-l3">
-      <a class="reference internal" href="../../forest/modelling/forest-modelling-treecrown_detectreeRGB.html">
-       Tree crown (DetectreeRGB)
-      </a>
-     </li>
-    </ul>
-   </li>
-  </ul>
- </li>
- <li class="toctree-l1 has-children">
-  <a class="reference internal" href="../../ocean/ocean-overview.html">
-   Ocean
-  </a>
-  <input class="toctree-checkbox" id="toctree-checkbox-3" name="toctree-checkbox-3" type="checkbox"/>
-  <label for="toctree-checkbox-3">
-   <i class="fas fa-chevron-down">
-   </i>
-  </label>
-  <ul>
-   <li class="toctree-l2">
-    <a class="reference internal" href="../../ocean/ocean-sensors.html">
-     Sensors
+    <a class="reference internal" href="../../gallery/exploration/agriculture-exploration-cosmosuk/agriculture-exploration-cosmosuk.html">
+     Cosmos-UK soil moisture (CEH)
     </a>
    </li>
    <li class="toctree-l2">
-    <a class="reference internal" href="../../ocean/ocean-modelling.html">
-     Modelling
+    <a class="reference internal" href="../../gallery/exploration/urban-exploration-climate_ukv/urban-exploration-climate_ukv.html">
+     UKV high-resolution (Met Office)
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../../gallery/exploration/wildfires-exploration-fires_modis/wildfires-exploration-fires_modis.html">
+     MOD021KM and FIRMS (NASA)
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../../gallery/exploration/wildfires-exploration-fires_seviri/wildfires-exploration-fires_seviri.html">
+     SEVIRI Level 1.5 (EUMESAT)
     </a>
    </li>
   </ul>
  </li>
  <li class="toctree-l1 has-children">
-  <a class="reference internal" href="../../polar/polar-overview.html">
-   Polar
+  <a class="reference internal" href="../../gallery/modelling.html">
+   Modelling
   </a>
-  <input class="toctree-checkbox" id="toctree-checkbox-4" name="toctree-checkbox-4" type="checkbox"/>
-  <label for="toctree-checkbox-4">
+  <input class="toctree-checkbox" id="toctree-checkbox-2" name="toctree-checkbox-2" type="checkbox"/>
+  <label for="toctree-checkbox-2">
    <i class="fas fa-chevron-down">
    </i>
   </label>
   <ul>
    <li class="toctree-l2">
-    <a class="reference internal" href="../../polar/polar-sensors.html">
-     Sensors
+    <a class="reference internal" href="../../gallery/modelling/forest-modelling-treecrown_deepforest/forest-modelling-treecrown_deepforest.html">
+     Tree crown (DeepForest)
     </a>
-   </li>
-   <li class="toctree-l2 has-children">
-    <a class="reference internal" href="../../polar/polar-modelling.html">
-     Modelling
-    </a>
-    <input class="toctree-checkbox" id="toctree-checkbox-5" name="toctree-checkbox-5" type="checkbox"/>
-    <label for="toctree-checkbox-5">
-     <i class="fas fa-chevron-down">
-     </i>
-    </label>
-    <ul>
-     <li class="toctree-l3">
-      <a class="reference internal" href="../../polar/modelling/polar-modelling-icenet.html">
-       Sea ice forecasting (IceNet)
-      </a>
-     </li>
-    </ul>
-   </li>
-  </ul>
- </li>
- <li class="toctree-l1 has-children">
-  <a class="reference internal" href="../../urban/urban-overview.html">
-   Urban
-  </a>
-  <input class="toctree-checkbox" id="toctree-checkbox-6" name="toctree-checkbox-6" type="checkbox"/>
-  <label for="toctree-checkbox-6">
-   <i class="fas fa-chevron-down">
-   </i>
-  </label>
-  <ul>
-   <li class="toctree-l2 has-children">
-    <a class="reference internal" href="../../urban/urban-sensors.html">
-     Sensors
-    </a>
-    <input class="toctree-checkbox" id="toctree-checkbox-7" name="toctree-checkbox-7" type="checkbox"/>
-    <label for="toctree-checkbox-7">
-     <i class="fas fa-chevron-down">
-     </i>
-    </label>
-    <ul>
-     <li class="toctree-l3">
-      <a class="reference internal" href="../../urban/sensors/urban-sensors-climate_ukv.html">
-       UKV high-resolution (Met Office)
-      </a>
-     </li>
-    </ul>
    </li>
    <li class="toctree-l2">
-    <a class="reference internal" href="../../urban/urban-modelling.html">
-     Modelling
+    <a class="reference internal" href="../../gallery/modelling/forest-modelling-treecrown_detectreeRGB/forest-modelling-treecrown_detectreeRGB.html">
+     Tree crown (DetectreeRGB)
     </a>
-   </li>
-  </ul>
- </li>
- <li class="toctree-l1 has-children">
-  <a class="reference internal" href="../../wildfires/wildfires-overview.html">
-   Wildfires
-  </a>
-  <input class="toctree-checkbox" id="toctree-checkbox-8" name="toctree-checkbox-8" type="checkbox"/>
-  <label for="toctree-checkbox-8">
-   <i class="fas fa-chevron-down">
-   </i>
-  </label>
-  <ul>
-   <li class="toctree-l2 has-children">
-    <a class="reference internal" href="../../wildfires/wildfires-sensors.html">
-     Sensors
-    </a>
-    <input class="toctree-checkbox" id="toctree-checkbox-9" name="toctree-checkbox-9" type="checkbox"/>
-    <label for="toctree-checkbox-9">
-     <i class="fas fa-chevron-down">
-     </i>
-    </label>
-    <ul>
-     <li class="toctree-l3">
-      <a class="reference internal" href="../../wildfires/sensors/wildfires-sensors-fires_modis.html">
-       MOD021KM and FIRMS (NASA)
-      </a>
-     </li>
-     <li class="toctree-l3">
-      <a class="reference internal" href="../../wildfires/sensors/wildfires-sensors-fires_seviri.html">
-       SEVIRI Level 1.5 (EUMESAT)
-      </a>
-     </li>
-    </ul>
    </li>
    <li class="toctree-l2">
-    <a class="reference internal" href="../../wildfires/wildfires-modelling.html">
-     Modelling
+    <a class="reference internal" href="../../gallery/modelling/ocean-modelling-litter-philab/ocean-modelling-litter-philab.html">
+     Detecting floating objects (ESA Phi-Lab)
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../../gallery/modelling/polar-modelling-icenet/polar-modelling-icenet.html">
+     Sea ice forecasting (IceNet)
     </a>
    </li>
   </ul>
@@ -318,8 +218,8 @@
   <a class="reference internal" href="../guidelines.html">
    Publishing guidelines
   </a>
-  <input class="toctree-checkbox" id="toctree-checkbox-10" name="toctree-checkbox-10" type="checkbox"/>
-  <label for="toctree-checkbox-10">
+  <input class="toctree-checkbox" id="toctree-checkbox-3" name="toctree-checkbox-3" type="checkbox"/>
+  <label for="toctree-checkbox-3">
    <i class="fas fa-chevron-down">
    </i>
   </label>
@@ -340,8 +240,8 @@
   <a class="reference internal" href="../coworking.html">
    Coworking Calls
   </a>
-  <input class="toctree-checkbox" id="toctree-checkbox-11" name="toctree-checkbox-11" type="checkbox"/>
-  <label for="toctree-checkbox-11">
+  <input class="toctree-checkbox" id="toctree-checkbox-4" name="toctree-checkbox-4" type="checkbox"/>
+  <label for="toctree-checkbox-4">
    <i class="fas fa-chevron-down">
    </i>
   </label>
@@ -367,8 +267,8 @@
   <a class="reference internal" href="../notes.html">
    Meeting Notes
   </a>
-  <input checked="" class="toctree-checkbox" id="toctree-checkbox-12" name="toctree-checkbox-12" type="checkbox"/>
-  <label for="toctree-checkbox-12">
+  <input checked="" class="toctree-checkbox" id="toctree-checkbox-5" name="toctree-checkbox-5" type="checkbox"/>
+  <label for="toctree-checkbox-5">
    <i class="fas fa-chevron-down">
    </i>
   </label>
@@ -397,8 +297,8 @@
   <a class="reference internal" href="../templates.html">
    Template Collection
   </a>
-  <input class="toctree-checkbox" id="toctree-checkbox-13" name="toctree-checkbox-13" type="checkbox"/>
-  <label for="toctree-checkbox-13">
+  <input class="toctree-checkbox" id="toctree-checkbox-6" name="toctree-checkbox-6" type="checkbox"/>
+  <label for="toctree-checkbox-6">
    <i class="fas fa-chevron-down">
    </i>
   </label>
@@ -420,12 +320,22 @@
    </li>
    <li class="toctree-l2">
     <a class="reference internal" href="../templates/template-environments-sensors.html">
-     Environments Use Case Sensors
+     Notebook Sensors
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../templates/template-environments-preprocessing.html">
+     Notebook Pre-processing
     </a>
    </li>
    <li class="toctree-l2">
     <a class="reference internal" href="../templates/template-environments-modelling.html">
-     Environments Use Case Modelling
+     Notebook Modelling
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../templates/template-environments-postprocessing.html">
+     Notebook Post-processing
     </a>
    </li>
   </ul>
@@ -555,8 +465,8 @@
   </a>
   <ul class="visible nav section-nav flex-column">
    <li class="toc-h2 nav-item toc-entry">
-    <a class="reference internal nav-link" href="#february-2022-tbc">
-     22 February 2022 | TBC
+    <a class="reference internal nav-link" href="#april-2022-tbc">
+     26 April 2022 | TBC
     </a>
     <ul class="nav section-nav flex-column">
      <li class="toc-h3 nav-item toc-entry">
@@ -635,32 +545,74 @@
   </a>
   <ul class="visible nav section-nav flex-column">
    <li class="toc-h2 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#archive-22-febraury-2021-prepare-compelling-and-reproducible-notebooks-for-the-envds-book">
+     Archive: 22 Febraury 2021 | Prepare compelling and reproducible notebooks for the EnvDS book
+    </a>
+    <ul class="nav section-nav flex-column">
+     <li class="toc-h3 nav-item toc-entry">
+      <a class="reference internal nav-link" href="#id1">
+       Sign up below
+      </a>
+     </li>
+     <li class="toc-h3 nav-item toc-entry">
+      <a class="reference internal nav-link" href="#id2">
+       Conversation Starters
+      </a>
+     </li>
+     <li class="toc-h3 nav-item toc-entry">
+      <a class="reference internal nav-link" href="#id3">
+       Breakout rooms: Topic proposals
+      </a>
+     </li>
+     <li class="toc-h3 nav-item toc-entry">
+      <a class="reference internal nav-link" href="#id4">
+       Notes and questions
+      </a>
+     </li>
+     <li class="toc-h3 nav-item toc-entry">
+      <a class="reference internal nav-link" href="#id5">
+       Request for reviews!
+      </a>
+     </li>
+     <li class="toc-h3 nav-item toc-entry">
+      <a class="reference internal nav-link" href="#id6">
+       Feedback at the end of the call
+      </a>
+     </li>
+    </ul>
+   </li>
+   <li class="toc-h2 nav-item toc-entry">
     <a class="reference internal nav-link" href="#archive-23-november-2021-fair-data-in-environmental-sciences">
      Archive: 23 November 2021 | FAIR data in Environmental Sciences
     </a>
     <ul class="nav section-nav flex-column">
      <li class="toc-h3 nav-item toc-entry">
-      <a class="reference internal nav-link" href="#id1">
+      <a class="reference internal nav-link" href="#id7">
+       Sign up below
+      </a>
+     </li>
+     <li class="toc-h3 nav-item toc-entry">
+      <a class="reference internal nav-link" href="#id8">
        Conversation Starters
       </a>
      </li>
      <li class="toc-h3 nav-item toc-entry">
-      <a class="reference internal nav-link" href="#id2">
+      <a class="reference internal nav-link" href="#id9">
        Breakout rooms: Topic proposals
       </a>
      </li>
      <li class="toc-h3 nav-item toc-entry">
-      <a class="reference internal nav-link" href="#id3">
+      <a class="reference internal nav-link" href="#id10">
        Notes and questions
       </a>
      </li>
      <li class="toc-h3 nav-item toc-entry">
-      <a class="reference internal nav-link" href="#id4">
+      <a class="reference internal nav-link" href="#id11">
        Request for reviews!
       </a>
      </li>
      <li class="toc-h3 nav-item toc-entry">
-      <a class="reference internal nav-link" href="#id5">
+      <a class="reference internal nav-link" href="#id12">
        Feedback at the end of the call
       </a>
      </li>
@@ -672,27 +624,32 @@
     </a>
     <ul class="nav section-nav flex-column">
      <li class="toc-h3 nav-item toc-entry">
-      <a class="reference internal nav-link" href="#id6">
+      <a class="reference internal nav-link" href="#id13">
+       Sign up below
+      </a>
+     </li>
+     <li class="toc-h3 nav-item toc-entry">
+      <a class="reference internal nav-link" href="#id14">
        Conversation Starters
       </a>
      </li>
      <li class="toc-h3 nav-item toc-entry">
-      <a class="reference internal nav-link" href="#id7">
+      <a class="reference internal nav-link" href="#id15">
        Breakout rooms: Topic proposals
       </a>
      </li>
      <li class="toc-h3 nav-item toc-entry">
-      <a class="reference internal nav-link" href="#id8">
+      <a class="reference internal nav-link" href="#id16">
        Notes and questions
       </a>
      </li>
      <li class="toc-h3 nav-item toc-entry">
-      <a class="reference internal nav-link" href="#id9">
+      <a class="reference internal nav-link" href="#id17">
        Request for reviews!
       </a>
      </li>
      <li class="toc-h3 nav-item toc-entry">
-      <a class="reference internal nav-link" href="#id10">
+      <a class="reference internal nav-link" href="#id18">
        Feedback at the end of the call
       </a>
      </li>
@@ -704,27 +661,27 @@
     </a>
     <ul class="nav section-nav flex-column">
      <li class="toc-h3 nav-item toc-entry">
-      <a class="reference internal nav-link" href="#id11">
+      <a class="reference internal nav-link" href="#id19">
        Conversation Starters
       </a>
      </li>
      <li class="toc-h3 nav-item toc-entry">
-      <a class="reference internal nav-link" href="#id12">
+      <a class="reference internal nav-link" href="#id20">
        Breakout rooms: Topic proposals
       </a>
      </li>
      <li class="toc-h3 nav-item toc-entry">
-      <a class="reference internal nav-link" href="#id13">
+      <a class="reference internal nav-link" href="#id21">
        Notes and questions
       </a>
      </li>
      <li class="toc-h3 nav-item toc-entry">
-      <a class="reference internal nav-link" href="#id14">
+      <a class="reference internal nav-link" href="#id22">
        Request for reviews!
       </a>
      </li>
      <li class="toc-h3 nav-item toc-entry">
-      <a class="reference internal nav-link" href="#id15">
+      <a class="reference internal nav-link" href="#id23">
        Feedback at the end of the call
       </a>
      </li>
@@ -736,22 +693,22 @@
     </a>
     <ul class="nav section-nav flex-column">
      <li class="toc-h3 nav-item toc-entry">
-      <a class="reference internal nav-link" href="#id16">
+      <a class="reference internal nav-link" href="#id24">
        Conversation Starters
       </a>
      </li>
      <li class="toc-h3 nav-item toc-entry">
-      <a class="reference internal nav-link" href="#id17">
+      <a class="reference internal nav-link" href="#id25">
        Breakout rooms: Topic proposals
       </a>
      </li>
      <li class="toc-h3 nav-item toc-entry">
-      <a class="reference internal nav-link" href="#id18">
+      <a class="reference internal nav-link" href="#id26">
        Notes and questions
       </a>
      </li>
      <li class="toc-h3 nav-item toc-entry">
-      <a class="reference internal nav-link" href="#id19">
+      <a class="reference internal nav-link" href="#id27">
        Feedback at the end of the call
       </a>
      </li>
@@ -788,8 +745,8 @@
   </a>
   <ul class="visible nav section-nav flex-column">
    <li class="toc-h2 nav-item toc-entry">
-    <a class="reference internal nav-link" href="#february-2022-tbc">
-     22 February 2022 | TBC
+    <a class="reference internal nav-link" href="#april-2022-tbc">
+     26 April 2022 | TBC
     </a>
     <ul class="nav section-nav flex-column">
      <li class="toc-h3 nav-item toc-entry">
@@ -868,32 +825,74 @@
   </a>
   <ul class="visible nav section-nav flex-column">
    <li class="toc-h2 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#archive-22-febraury-2021-prepare-compelling-and-reproducible-notebooks-for-the-envds-book">
+     Archive: 22 Febraury 2021 | Prepare compelling and reproducible notebooks for the EnvDS book
+    </a>
+    <ul class="nav section-nav flex-column">
+     <li class="toc-h3 nav-item toc-entry">
+      <a class="reference internal nav-link" href="#id1">
+       Sign up below
+      </a>
+     </li>
+     <li class="toc-h3 nav-item toc-entry">
+      <a class="reference internal nav-link" href="#id2">
+       Conversation Starters
+      </a>
+     </li>
+     <li class="toc-h3 nav-item toc-entry">
+      <a class="reference internal nav-link" href="#id3">
+       Breakout rooms: Topic proposals
+      </a>
+     </li>
+     <li class="toc-h3 nav-item toc-entry">
+      <a class="reference internal nav-link" href="#id4">
+       Notes and questions
+      </a>
+     </li>
+     <li class="toc-h3 nav-item toc-entry">
+      <a class="reference internal nav-link" href="#id5">
+       Request for reviews!
+      </a>
+     </li>
+     <li class="toc-h3 nav-item toc-entry">
+      <a class="reference internal nav-link" href="#id6">
+       Feedback at the end of the call
+      </a>
+     </li>
+    </ul>
+   </li>
+   <li class="toc-h2 nav-item toc-entry">
     <a class="reference internal nav-link" href="#archive-23-november-2021-fair-data-in-environmental-sciences">
      Archive: 23 November 2021 | FAIR data in Environmental Sciences
     </a>
     <ul class="nav section-nav flex-column">
      <li class="toc-h3 nav-item toc-entry">
-      <a class="reference internal nav-link" href="#id1">
+      <a class="reference internal nav-link" href="#id7">
+       Sign up below
+      </a>
+     </li>
+     <li class="toc-h3 nav-item toc-entry">
+      <a class="reference internal nav-link" href="#id8">
        Conversation Starters
       </a>
      </li>
      <li class="toc-h3 nav-item toc-entry">
-      <a class="reference internal nav-link" href="#id2">
+      <a class="reference internal nav-link" href="#id9">
        Breakout rooms: Topic proposals
       </a>
      </li>
      <li class="toc-h3 nav-item toc-entry">
-      <a class="reference internal nav-link" href="#id3">
+      <a class="reference internal nav-link" href="#id10">
        Notes and questions
       </a>
      </li>
      <li class="toc-h3 nav-item toc-entry">
-      <a class="reference internal nav-link" href="#id4">
+      <a class="reference internal nav-link" href="#id11">
        Request for reviews!
       </a>
      </li>
      <li class="toc-h3 nav-item toc-entry">
-      <a class="reference internal nav-link" href="#id5">
+      <a class="reference internal nav-link" href="#id12">
        Feedback at the end of the call
       </a>
      </li>
@@ -905,27 +904,32 @@
     </a>
     <ul class="nav section-nav flex-column">
      <li class="toc-h3 nav-item toc-entry">
-      <a class="reference internal nav-link" href="#id6">
+      <a class="reference internal nav-link" href="#id13">
+       Sign up below
+      </a>
+     </li>
+     <li class="toc-h3 nav-item toc-entry">
+      <a class="reference internal nav-link" href="#id14">
        Conversation Starters
       </a>
      </li>
      <li class="toc-h3 nav-item toc-entry">
-      <a class="reference internal nav-link" href="#id7">
+      <a class="reference internal nav-link" href="#id15">
        Breakout rooms: Topic proposals
       </a>
      </li>
      <li class="toc-h3 nav-item toc-entry">
-      <a class="reference internal nav-link" href="#id8">
+      <a class="reference internal nav-link" href="#id16">
        Notes and questions
       </a>
      </li>
      <li class="toc-h3 nav-item toc-entry">
-      <a class="reference internal nav-link" href="#id9">
+      <a class="reference internal nav-link" href="#id17">
        Request for reviews!
       </a>
      </li>
      <li class="toc-h3 nav-item toc-entry">
-      <a class="reference internal nav-link" href="#id10">
+      <a class="reference internal nav-link" href="#id18">
        Feedback at the end of the call
       </a>
      </li>
@@ -937,27 +941,27 @@
     </a>
     <ul class="nav section-nav flex-column">
      <li class="toc-h3 nav-item toc-entry">
-      <a class="reference internal nav-link" href="#id11">
+      <a class="reference internal nav-link" href="#id19">
        Conversation Starters
       </a>
      </li>
      <li class="toc-h3 nav-item toc-entry">
-      <a class="reference internal nav-link" href="#id12">
+      <a class="reference internal nav-link" href="#id20">
        Breakout rooms: Topic proposals
       </a>
      </li>
      <li class="toc-h3 nav-item toc-entry">
-      <a class="reference internal nav-link" href="#id13">
+      <a class="reference internal nav-link" href="#id21">
        Notes and questions
       </a>
      </li>
      <li class="toc-h3 nav-item toc-entry">
-      <a class="reference internal nav-link" href="#id14">
+      <a class="reference internal nav-link" href="#id22">
        Request for reviews!
       </a>
      </li>
      <li class="toc-h3 nav-item toc-entry">
-      <a class="reference internal nav-link" href="#id15">
+      <a class="reference internal nav-link" href="#id23">
        Feedback at the end of the call
       </a>
      </li>
@@ -969,22 +973,22 @@
     </a>
     <ul class="nav section-nav flex-column">
      <li class="toc-h3 nav-item toc-entry">
-      <a class="reference internal nav-link" href="#id16">
+      <a class="reference internal nav-link" href="#id24">
        Conversation Starters
       </a>
      </li>
      <li class="toc-h3 nav-item toc-entry">
-      <a class="reference internal nav-link" href="#id17">
+      <a class="reference internal nav-link" href="#id25">
        Breakout rooms: Topic proposals
       </a>
      </li>
      <li class="toc-h3 nav-item toc-entry">
-      <a class="reference internal nav-link" href="#id18">
+      <a class="reference internal nav-link" href="#id26">
        Notes and questions
       </a>
      </li>
      <li class="toc-h3 nav-item toc-entry">
-      <a class="reference internal nav-link" href="#id19">
+      <a class="reference internal nav-link" href="#id27">
        Feedback at the end of the call
       </a>
      </li>
@@ -1005,13 +1009,13 @@
 <p><em>A <strong>permanent document</strong> exists in the HackMD: <a class="reference external" href="https://hackmd.io/&#64;environmental-ds/collaboration-cafe">https://hackmd.io/&#64;environmental-ds/collaboration-cafe</a> that is regularly updated with the empty template for next event.</em></p>
 <div class="tex2jax_ignore mathjax_ignore section" id="the-environmental-data-science-online-collaboration-cafe">
 <h1><em>The Environmental Data Science</em> ⛰ 🌳 🏙️ ❄️ 🔥 🌊  online Collaboration Cafe<a class="headerlink" href="#the-environmental-data-science-online-collaboration-cafe" title="Permalink to this headline">¶</a></h1>
-<div class="section" id="february-2022-tbc">
-<h2>22 February 2022 | TBC<a class="headerlink" href="#february-2022-tbc" title="Permalink to this headline">¶</a></h2>
+<div class="section" id="april-2022-tbc">
+<h2>26 April 2022 | TBC<a class="headerlink" href="#april-2022-tbc" title="Permalink to this headline">¶</a></h2>
 <div class="section" id="thank-you-for-joining-the-the-environmental-data-science-s-online-collaboration-cafe">
 <h3>Thank you for joining the <em>The Environmental Data Science</em>’s online Collaboration Cafe ☕ ✨ 🍰!<a class="headerlink" href="#thank-you-for-joining-the-the-environmental-data-science-s-online-collaboration-cafe" title="Permalink to this headline">¶</a></h3>
 <p>We’re delighted to have you here 🎉</p>
-<p><strong>When?</strong> 22 February 2022, 14:00 - 16:00 UTC (<a class="reference external" href="https://arewemeetingyet.com/London/2021-08-24/14:00">see in your time zone</a>)</p>
-<p><strong>Next call:</strong> 26 April 2022</p>
+<p><strong>When?</strong> 26 April 2022, 14:00 - 16:00 UTC (<a class="reference external" href="https://arewemeetingyet.com/London/2021-08-24/14:00">see in your time zone</a>)</p>
+<p><strong>Next call:</strong> 28 June 2022</p>
 <p><strong>What?</strong> <em>The Environmental Data Science is a <strong>community aiming to learn and discuss scientific software practises/developments fostered by AI and data science for a better understanding of our Planet Earth and environmental systems</strong>.
 <a class="reference external" href="https://github.com/alan-turing-institute/environmental-ds-book/blob/master/book/community/coworking/coworking-collabcafe.md">Collaboration Cafes</a> are <strong>online coworking calls</strong> that engage anyone interested in learning and discussing about relevant themes in AI and data science to environmental studies</em>.</p>
 <p><strong>Who?</strong> <em><strong>Everyone</strong> interested in reproducible, ethical, and inclusive Data Science and research for environmental studies are welcome to join the full or any part of The Environmental Data Science project, community, and/or this call.</em></p>
@@ -1033,8 +1037,8 @@
 </div>
 <div class="section" id="sign-up-below">
 <h3>Sign up below<a class="headerlink" href="#sign-up-below" title="Permalink to this headline">¶</a></h3>
-<p><strong>Name + Icebreaker question + an emoji to represent it (<a class="reference external" href="https://github.com/ikatyang/emoji-cheat-sheet/blob/master/README.md">emoji cheatsheet</a>)</strong></p>
-<p><em>(Remember that this is a public document. You can use a pseudonym if you’d prefer.)</em>
+<p><strong>Name + <code class="docutils literal notranslate"><span class="pre">Ice</span> <span class="pre">breaker</span> <span class="pre">question</span></code> + (<a class="reference external" href="https://github.com/ikatyang/emoji-cheat-sheet/blob/master/README.md">emoji cheatsheet</a>)</strong>
+<em>(Remember that this is a public document. You can use a pseudonym if you’d prefer.)</em>
 ==<em>If you are new to HackMD, please see this document for a short guide (right click, open in a new window): <a class="reference external" href="https://hackmd.io/&#64;turingway/hackmd-guide">https://hackmd.io/&#64;turingway/hackmd-guide</a>.</em>==</p>
 <ul class="simple">
 <li></li>
@@ -1127,27 +1131,172 @@
 <hr class="docutils" />
 <div class="tex2jax_ignore mathjax_ignore section" id="notes-from-the-last-call">
 <h1>Notes from the last call:<a class="headerlink" href="#notes-from-the-last-call" title="Permalink to this headline">¶</a></h1>
+<div class="section" id="archive-22-febraury-2021-prepare-compelling-and-reproducible-notebooks-for-the-envds-book">
+<h2>Archive: 22 Febraury 2021 | Prepare compelling and reproducible notebooks for the EnvDS book<a class="headerlink" href="#archive-22-febraury-2021-prepare-compelling-and-reproducible-notebooks-for-the-envds-book" title="Permalink to this headline">¶</a></h2>
+<div class="section" id="id1">
+<h3>Sign up below<a class="headerlink" href="#id1" title="Permalink to this headline">¶</a></h3>
+<p><strong>Name + Which is your essential clothing accessory for frozen days? + an emoji to represent it (<a class="reference external" href="https://github.com/ikatyang/emoji-cheat-sheet/blob/master/README.md">emoji cheatsheet</a>)</strong></p>
+<ul class="simple">
+<li><p>Alejandro + Gloves + :gloves:</p></li>
+<li><p>Pirta + Beanie + :billed_cap:</p></li>
+<li><p>Tim + Argyle + :socks:</p></li>
+<li><p>Ricardo + Scarf + :scarf:</p></li>
+</ul>
+</div>
+<div class="section" id="id2">
+<h3>Conversation Starters<a class="headerlink" href="#id2" title="Permalink to this headline">¶</a></h3>
+<ul class="simple">
+<li><p>None</p></li>
+</ul>
+</div>
+<div class="section" id="id3">
+<h3>Breakout rooms: Topic proposals<a class="headerlink" href="#id3" title="Permalink to this headline">¶</a></h3>
+<ul class="simple">
+<li><p>No breakout rooms, all in the main room</p></li>
+</ul>
+</div>
+<div class="section" id="id4">
+<h3>Notes and questions<a class="headerlink" href="#id4" title="Permalink to this headline">¶</a></h3>
+<ul class="simple">
+<li><p>Alejandro went through the key steps to submit a notebook to the EnvDS book:</p>
+<ul>
+<li><p>Step 1: Notebook idea</p>
+<ul>
+<li><p>Log your notebook idea as a <a class="reference external" href="https://github.com/alan-turing-institute/environmental-ds-book/issues/new/choose">new issue</a> in the project repo</p></li>
+<li><p>Once the idea is clear e.g purpose, data sources, packages,  and/or you receive a feedback from a collaborator or EnvDS community, you can move to the next step :arrow_down:</p></li>
+</ul>
+</li>
+<li><p>Step 2: Preparation</p>
+<ul>
+<li><p>Open a terminal in your local/remote machine.</p></li>
+<li><p>Fork the EnvDS repository to your personal github account.</p></li>
+<li><p>Clone the forked repository into your local/remote machine.</p></li>
+<li><p>Go to the folder of the forked repository in your local/remote machine.</p></li>
+<li><p>If the environmental system and/or topic doesn’t exist create a folder in the forked repository.</p></li>
+<li><p>Copy the template of your topic from the community chapter, (see <a class="reference external" href="https://github.com/alan-turing-institute/environmental-ds-book/tree/master/book/community/templates">here</a>).</p></li>
+</ul>
+</li>
+<li><p>Step 3: Setup</p>
+<ul>
+<li><p>Open a terminal in your local/remote machine and change the current directory (path) to the directory of the forked repo.</p></li>
+<li><p>Verify if you have <code class="docutils literal notranslate"><span class="pre">conda</span></code> i.e. type <code class="docutils literal notranslate"><span class="pre">conda</span></code>. If you don’t get results after the verification, follow this <a class="reference external" href="https://docs.conda.io/projects/conda/en/latest/user-guide/install/index.html">guide for installing conda</a>.</p></li>
+<li><p>Prepare a conda environment for your notebook. Note the environment should use python version of the EnvDS book (python 3.8) and also install <code class="docutils literal notranslate"><span class="pre">jupyter</span></code> which is the library to edit the notebook. The lines below guide you to launch a <code class="docutils literal notranslate"><span class="pre">jupyter</span> <span class="pre">notebook</span></code> session, one of the <code class="docutils literal notranslate"><span class="pre">jupyter</span></code> interfaces to edit notebooks.</p>
+<ul>
+<li><p>conda create -n &lt;environment_name&gt; python=3.8 jupyter</p></li>
+<li><p>follow the instructions to activate your environment</p></li>
+<li><p>check the list of packages in the <a class="reference external" href="https://github.com/alan-turing-institute/environmental-ds-book/blob/master/environment.yml">environment.yml</a> of the EnvDS book.</p></li>
+<li><p>install relevant packages from the list using <code class="docutils literal notranslate"><span class="pre">conda</span> <span class="pre">install</span> <span class="pre">&lt;package-name&gt;</span></code></p></li>
+<li><p>type <code class="docutils literal notranslate"><span class="pre">jupyter</span> <span class="pre">notebook</span></code></p></li>
+<li><p>If a package relevant for your notebook isn’t in the list, you can add a cell to install it before the import libraries section in the notebook. Packages can be installed using <code class="docutils literal notranslate"><span class="pre">pip</span> <span class="pre">-q</span> <span class="pre">install</span> <span class="pre">&lt;package-name&gt;</span></code> where <code class="docutils literal notranslate"><span class="pre">-q</span></code> means to install in silent mode.</p></li>
+</ul>
+</li>
+</ul>
+</li>
+<li><p>Step 4: Edit the the noebook</p>
+<ul>
+<li><p>Once you have the environment ready for your notebook, you can modify the sections of the template.</p></li>
+<li><p>(optional) follow the 10 rules of compelling notebooks provided by the EarthCube initiative available in their Notebook Template (section <a class="reference external" href="https://github.com/earthcube/NotebookTemplates/blob/main/EC_05_Template_Notebook_for_EarthCube_Long_Version.ipynb">Data processing and analysis</a>).</p></li>
+<li><p>Once happy with the first editions of the notebook. Save it and push the changes. Not sure how to push changes, follow <a class="reference external" href="https://the-turing-way.netlify.app/collaboration/github-novice.html">Turing Way community chapter in Github</a>.</p></li>
+</ul>
+</li>
+<li><p>Step 5: Open a pull request</p>
+<ul>
+<li><p>Go to the forked github repository in your Github account.</p></li>
+<li><p>Click in contribute and open a pull request</p>
+<ul>
+<li><p><img alt="" src="https://i.imgur.com/Fq8c0vR.png" /></p></li>
+</ul>
+</li>
+<li><p>You’ll see a form which you should fill and submit according to the information requested.</p></li>
+<li><p>Go to the EnvDS main repo and you’ll see the PR as below:</p>
+<ul>
+<li><p><img alt="" src="https://i.imgur.com/r9BekKL.png" /></p></li>
+</ul>
+</li>
+</ul>
+</li>
+<li><p>Step 6: Editions</p>
+<ul>
+<li><p>Click in your pull request</p>
+<ul>
+<li><p>To facilitate the interaction with the reviewer, we are using ReviewNB and Netlify previews. You can access to ReviewNB clicking in the purple buttom below:</p></li>
+<li><p><img alt="" src="https://i.imgur.com/G5vEhDT.png" /></p></li>
+</ul>
+</li>
+<li><p>Note you can continue implementing changes in the forked repo. They’ll automatically will change the notebook in the PR.</p></li>
+</ul>
+</li>
+<li><p>Step 6: Review</p>
+<ul>
+<li><p>Once you’re happy with the first version in the pull request, you can change to Ready to review in the checkbox.</p></li>
+<li><p>A reviewer will be assigned to your pull request.</p></li>
+<li><p>The reviewer will start a discussion of your notebook through the ReviewNB platform.</p></li>
+</ul>
+</li>
+<li><p>Step 7: Publication</p>
+<ul>
+<li><p>Once both parties, author(s) and reviewer(s) are ha</p></li>
+</ul>
+</li>
+</ul>
+</li>
+<li><p>Some useful resources mentioned in the meeting:</p>
+<ul>
+<li><p><a class="reference external" href="https://the-turing-way.netlify.app/collaboration/github-novice.html">Turing Way community chapter in Github</a></p></li>
+<li><p>Setting a <a class="reference external" href="https://docs.conda.io/projects/conda/en/latest/user-guide/tasks/manage-environments.html">conda environment</a></p></li>
+<li><p><a class="reference external" href="https://the-turing-way.netlify.app/project-design/pd-overview/pd-overview-repro.html?highlight=collaboration">Guide for organising community calls</a></p></li>
+<li><p>Library for <a class="reference external" href="https://awesome-ee-spectral-indices.readthedocs.io/en/latest/list.html">spectral indices</a></p></li>
+</ul>
+</li>
+<li><p>Celebrations :rocket:</p>
+<ul>
+<li><p>Four great notebooks ideas!</p>
+<ul>
+<li><p>[name=Alejandro]: COSMOS-UK Sensor Visualisation, see <a class="reference external" href="https://github.com/alan-turing-institute/environmental-ds-book/issues/49">issue#49</a></p></li>
+<li><p>[name=Ricardo]: Long timeseries phenology using Landsat data, see <a class="reference external" href="https://github.com/alan-turing-institute/environmental-ds-book/issues/52">issue#52</a></p></li>
+<li><p>[name=Tim]: Concatenating a gridded rainfall dataset into a time series, see <a class="reference external" href="https://github.com/alan-turing-institute/environmental-ds-book/issues/53">issue#53</a></p></li>
+<li><p>[name=Pirta] Nutrientscape mapping in optically shallow tropical coastal waters, see <a class="reference external" href="https://github.com/alan-turing-institute/environmental-ds-book/issues/54">issue#54</a></p></li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+</div>
+<div class="section" id="id5">
+<h3>Request for reviews!<a class="headerlink" href="#id5" title="Permalink to this headline">¶</a></h3>
+<ul class="simple">
+<li><p>None</p></li>
+</ul>
+</div>
+<div class="section" id="id6">
+<h3>Feedback at the end of the call<a class="headerlink" href="#id6" title="Permalink to this headline">¶</a></h3>
+<ul class="simple">
+<li><p>None</p></li>
+</ul>
+</div>
+</div>
 <div class="section" id="archive-23-november-2021-fair-data-in-environmental-sciences">
 <h2>Archive: 23 November 2021 | FAIR data in Environmental Sciences<a class="headerlink" href="#archive-23-november-2021-fair-data-in-environmental-sciences" title="Permalink to this headline">¶</a></h2>
 <p><img alt="Illustration of the FAIR principles to show the definition of being Findable, Accessible, Interoperable and Reusable. Source: The Turing Way: The FAIR Principles" src="https://i.imgur.com/f27a9aX.jpg" />
 <em><em>The Turing Way</em> project illustration by Scriberia. Used under a CC-BY 4.0 licence. DOI: <a class="reference external" href="https://doi.org/10.5281/zenodo.3332807">10.5281/zenodo.3332807</a>.</em></p>
+<div class="section" id="id7">
+<h3>Sign up below<a class="headerlink" href="#id7" title="Permalink to this headline">¶</a></h3>
 <p><strong>Name + What is your recent favorite resource or tool or app or software? + an emoji to represent it (<a class="reference external" href="https://github.com/ikatyang/emoji-cheat-sheet/blob/master/README.md">emoji cheatsheet</a>)</strong></p>
 <ul class="simple">
 <li><p>Alejandro + <em>The Turing Way</em> + :milky_way:</p></li>
 <li><p>Bea + <em>scivision</em> + :koala:</p></li>
 </ul>
-<div class="section" id="id1">
-<h3>Conversation Starters<a class="headerlink" href="#id1" title="Permalink to this headline">¶</a></h3>
-<p><em>Advertise and promote your event or anything exciting you’re working on.</em> ✨</p>
+</div>
+<div class="section" id="id8">
+<h3>Conversation Starters<a class="headerlink" href="#id8" title="Permalink to this headline">¶</a></h3>
 <ul class="simple">
 <li><p>None</p></li>
 </ul>
 </div>
-<div class="section" id="id2">
-<h3>Breakout rooms: Topic proposals<a class="headerlink" href="#id2" title="Permalink to this headline">¶</a></h3>
-<p><em>Topics for breakout / Names</em></p>
+<div class="section" id="id9">
+<h3>Breakout rooms: Topic proposals<a class="headerlink" href="#id9" title="Permalink to this headline">¶</a></h3>
 <ul class="simple">
-<li><p>Main stage (silent mode)</p>
+<li><p>Main room (silent mode)</p>
 <ul>
 <li><p>Bea: working on the submission of her PhD thesis.</p></li>
 <li><p>Alejandro:</p>
@@ -1160,8 +1309,8 @@
 </li>
 </ul>
 </div>
-<div class="section" id="id3">
-<h3>Notes and questions<a class="headerlink" href="#id3" title="Permalink to this headline">¶</a></h3>
+<div class="section" id="id10">
+<h3>Notes and questions<a class="headerlink" href="#id10" title="Permalink to this headline">¶</a></h3>
 <ul class="simple">
 <li><p>Alejandro</p>
 <ul>
@@ -1206,14 +1355,14 @@
 </li>
 </ul>
 </div>
-<div class="section" id="id4">
-<h3>Request for reviews!<a class="headerlink" href="#id4" title="Permalink to this headline">¶</a></h3>
+<div class="section" id="id11">
+<h3>Request for reviews!<a class="headerlink" href="#id11" title="Permalink to this headline">¶</a></h3>
 <ul class="simple">
 <li><p>None</p></li>
 </ul>
 </div>
-<div class="section" id="id5">
-<h3>Feedback at the end of the call<a class="headerlink" href="#id5" title="Permalink to this headline">¶</a></h3>
+<div class="section" id="id12">
+<h3>Feedback at the end of the call<a class="headerlink" href="#id12" title="Permalink to this headline">¶</a></h3>
 <ul class="simple">
 <li><p>Alejandro: Few participants in this particular collaboration cafe. We should restructure the promotion strategy, proposing new topics and/or changing the format for coming collaborations cafes in 2022 :face_with_monocle:.</p></li>
 </ul>
@@ -1221,15 +1370,17 @@
 </div>
 <div class="section" id="archive-26-october-2021-reproducibility-in-environmental-science">
 <h2>Archive: 26 October 2021 - Reproducibility in Environmental Science<a class="headerlink" href="#archive-26-october-2021-reproducibility-in-environmental-science" title="Permalink to this headline">¶</a></h2>
+<div class="section" id="id13">
+<h3>Sign up below<a class="headerlink" href="#id13" title="Permalink to this headline">¶</a></h3>
 <p><strong>Name + Share a song that expresses your personality + an emoji to represent it (<a class="reference external" href="https://github.com/ikatyang/emoji-cheat-sheet/blob/master/README.md">emoji cheatsheet</a>)</strong></p>
 <ul class="simple">
 <li><p>Alejandro + Should stay or Should I go (The Clash) + 🧳</p></li>
 <li><p>Sam + Wish you were here (Pink Floyd)</p></li>
 <li><p>Matt - BBC Grandstand Theme - :horse_racing:</p></li>
 </ul>
-<div class="section" id="id6">
-<h3>Conversation Starters<a class="headerlink" href="#id6" title="Permalink to this headline">¶</a></h3>
-<p><em>Advertise and promote your event or anything exciting you’re working on.</em> ✨</p>
+</div>
+<div class="section" id="id14">
+<h3>Conversation Starters<a class="headerlink" href="#id14" title="Permalink to this headline">¶</a></h3>
 <ul class="simple">
 <li><p>EGU22 session was accepted, <a class="reference external" href="https://meetingorganizer.copernicus.org/EGU22/session/43565">Bridging the spatial scales, from surface sensors to satellite sensors: Innovative approaches towards the construction of Earth’s digital twin</a>. Deadlines:</p>
 <ul>
@@ -1239,17 +1390,16 @@
 </li>
 </ul>
 </div>
-<div class="section" id="id7">
-<h3>Breakout rooms: Topic proposals<a class="headerlink" href="#id7" title="Permalink to this headline">¶</a></h3>
-<p><em>Topics for breakout / Names</em></p>
+<div class="section" id="id15">
+<h3>Breakout rooms: Topic proposals<a class="headerlink" href="#id15" title="Permalink to this headline">¶</a></h3>
 <ul class="simple">
 <li><p>Matt, making a reproducible GitHub code for his MRes dissertation</p></li>
 <li><p>Alejandro, preparing contributions guidelines for the Environmentel AI book</p></li>
 <li><p>Sam J, exploration of resources for reproducibility and feedback on Matt and Alejandro’s topics</p></li>
 </ul>
 </div>
-<div class="section" id="id8">
-<h3>Notes and questions<a class="headerlink" href="#id8" title="Permalink to this headline">¶</a></h3>
+<div class="section" id="id16">
+<h3>Notes and questions<a class="headerlink" href="#id16" title="Permalink to this headline">¶</a></h3>
 <ul class="simple">
 <li><p>Sam J:</p>
 <ul>
@@ -1295,14 +1445,14 @@
 </li>
 </ul>
 </div>
-<div class="section" id="id9">
-<h3>Request for reviews!<a class="headerlink" href="#id9" title="Permalink to this headline">¶</a></h3>
+<div class="section" id="id17">
+<h3>Request for reviews!<a class="headerlink" href="#id17" title="Permalink to this headline">¶</a></h3>
 <ul class="simple">
 <li><p><strong>Sam J</strong>: reviewers need for SEVIRI wildfire data notebook of the EnvAI book, see <a class="reference external" href="https://github.com/acocac/environmental-ai-book/pull/12">PR#12</a></p></li>
 </ul>
 </div>
-<div class="section" id="id10">
-<h3>Feedback at the end of the call<a class="headerlink" href="#id10" title="Permalink to this headline">¶</a></h3>
+<div class="section" id="id18">
+<h3>Feedback at the end of the call<a class="headerlink" href="#id18" title="Permalink to this headline">¶</a></h3>
 <ul class="simple">
 <li><p>None</p></li>
 </ul>
@@ -1316,25 +1466,23 @@
 <li><p>Sam A. + I still have just as many meetings if not more and it is soooo tiring! :sleeping: :pleading_face:</p></li>
 <li><p>Evangeline + Feeling self-conscious on camera, flexibility + :movie_camera: :clock1:</p></li>
 </ul>
-<div class="section" id="id11">
-<h3>Conversation Starters<a class="headerlink" href="#id11" title="Permalink to this headline">¶</a></h3>
-<p><em>Advertise and promote your event or anything exciting you’re working on.</em> ✨</p>
+<div class="section" id="id19">
+<h3>Conversation Starters<a class="headerlink" href="#id19" title="Permalink to this headline">¶</a></h3>
 <ul class="simple">
 <li><p>Met Office / Joint centre for excellence in environmental intelligence conference 16/17 Dec 2021!</p></li>
 <li><p>We have a fresh interactive notebook in the Environmental Data S Book :earth_asia::books: The notebook focuses on detecting tree crowns using the <em>DeepForest</em> model :deciduous_tree:. Have a look at the rendered version <a class="reference external" href="https://acocac.github.io/environmental-ai-book/forest/modelling/forest-modelling-treecrown_deepforest.html">here</a>. Other recent community contributions are the exploration of sensor data, <a class="reference external" href="https://acocac.github.io/environmental-ai-book/urban/sensors/urban-sensors-ukv.html">Met Office UKV high-resolution atmosphere model data for urban settings</a> and <a class="reference external" href="https://acocac.github.io/environmental-ai-book/wildfires/sensors/wildfires-sensors-modis.html">MODIS satellite imagery and wildfire data</a>.</p></li>
 </ul>
 </div>
-<div class="section" id="id12">
-<h3>Breakout rooms: Topic proposals<a class="headerlink" href="#id12" title="Permalink to this headline">¶</a></h3>
-<p><em>Topics for breakout / Names</em></p>
+<div class="section" id="id20">
+<h3>Breakout rooms: Topic proposals<a class="headerlink" href="#id20" title="Permalink to this headline">¶</a></h3>
 <ul class="simple">
 <li><p>Sam A. Manufacture Urban Data in GIS format</p></li>
 <li><p>Evie. Preprocessing satellite data for crop yield prediction</p></li>
 <li><p>Alejandro. Preprocess FluxNet data and related gridded products</p></li>
 </ul>
 </div>
-<div class="section" id="id13">
-<h3>Notes and questions<a class="headerlink" href="#id13" title="Permalink to this headline">¶</a></h3>
+<div class="section" id="id21">
+<h3>Notes and questions<a class="headerlink" href="#id21" title="Permalink to this headline">¶</a></h3>
 <ul class="simple">
 <li><p>We showcased the <a class="reference external" href="https://docs.sepal.io/en/latest/cookbook/area_estimation.html">SEPAL platform</a> for Vegetation Satellite Image analysis.</p></li>
 <li><p>Discussed challenges around scoping and extracting satellite data for machine learning models of vegetation (agricultural crops):</p>
@@ -1349,14 +1497,14 @@
 <li><p>Data preprocessing is still too time-consuming, and there is lack of communication of the tools available.</p></li>
 </ul>
 </div>
-<div class="section" id="id14">
-<h3>Request for reviews!<a class="headerlink" href="#id14" title="Permalink to this headline">¶</a></h3>
+<div class="section" id="id22">
+<h3>Request for reviews!<a class="headerlink" href="#id22" title="Permalink to this headline">¶</a></h3>
 <ul class="simple">
 <li><p>None</p></li>
 </ul>
 </div>
-<div class="section" id="id15">
-<h3>Feedback at the end of the call<a class="headerlink" href="#id15" title="Permalink to this headline">¶</a></h3>
+<div class="section" id="id23">
+<h3>Feedback at the end of the call<a class="headerlink" href="#id23" title="Permalink to this headline">¶</a></h3>
 <ul class="simple">
 <li><p>None</p></li>
 </ul>
@@ -1372,17 +1520,15 @@
 <li><p>Emily + actual paint drying on my bedroom wall + :lower_left_paintbrush:</p></li>
 <li><p>Sam Jackson + <a class="reference external" href="https://en.wikipedia.org/wiki/Calibre_(film)">Calibre</a>  + :smile:</p></li>
 </ul>
-<div class="section" id="id16">
-<h3>Conversation Starters<a class="headerlink" href="#id16" title="Permalink to this headline">¶</a></h3>
-<p><em>Advertise and promote your event or anything exciting you’re working on.</em> ✨</p>
+<div class="section" id="id24">
+<h3>Conversation Starters<a class="headerlink" href="#id24" title="Permalink to this headline">¶</a></h3>
 <ul class="simple">
 <li><p>Alejandro: EGU Public call-for-session-proposals all other sessions: Deadline: <a class="reference external" href="https://www.egu22.eu/">6 September 2021</a></p></li>
 <li><p>Scott: Pangeo European Community is growing and there are plans of coffee chats and regular showcase meetings (see <a class="reference external" href="https://cnrs.zoom.us/j/95432814658">here</a>)</p></li>
 </ul>
 </div>
-<div class="section" id="id17">
-<h3>Breakout rooms: Topic proposals<a class="headerlink" href="#id17" title="Permalink to this headline">¶</a></h3>
-<p><em>Topics for breakout / Names</em></p>
+<div class="section" id="id25">
+<h3>Breakout rooms: Topic proposals<a class="headerlink" href="#id25" title="Permalink to this headline">¶</a></h3>
 <ul class="simple">
 <li><p>Sam J: Regridding MODIS data for wildfires detection</p></li>
 <li><p>Tom: Produce script to reproduce IceNet paper figures for <em>Nature Communications</em></p></li>
@@ -1391,8 +1537,8 @@
 <li><p>Alejandro: Deploying a FluxNet use case visualization outputs for the Environmental Data Science book</p></li>
 </ul>
 </div>
-<div class="section" id="id18">
-<h3>Notes and questions<a class="headerlink" href="#id18" title="Permalink to this headline">¶</a></h3>
+<div class="section" id="id26">
+<h3>Notes and questions<a class="headerlink" href="#id26" title="Permalink to this headline">¶</a></h3>
 <ul class="simple">
 <li><p>Emily showed a cool visualization of a laser scan image (100 GB) using the propietary software of the scanner device. After data preprocessing, she will use  libraries for visualizing individual trees.</p>
 <ul>
@@ -1408,8 +1554,8 @@
 </li>
 </ul>
 </div>
-<div class="section" id="id19">
-<h3>Feedback at the end of the call<a class="headerlink" href="#id19" title="Permalink to this headline">¶</a></h3>
+<div class="section" id="id27">
+<h3>Feedback at the end of the call<a class="headerlink" href="#id27" title="Permalink to this headline">¶</a></h3>
 <ul class="simple">
 <li><p>Add a disclaimer collaboration cafes’ hackMDs are public.</p></li>
 <li><p>Names for breakout rooms.</p></li>
