@@ -1,4 +1,4 @@
-name: Build and Publish JupyterBook Docs
+name: CI
 
 # Only trigger, when the submodules workflow succeeded
 on:
