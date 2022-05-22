@@ -12,7 +12,7 @@ They shared ideas, helped each other out, got huge amounts of writing, editing a
 
 To help the community of contributors grow beyond the core team, the in-person book dash (a shorter version of [book sprints](https://www.booksprints.net/)) were hosted to offer interested participants a similar collaborative environment with an advantage to connect with each other informally.
 However, not everyone can join such in-person events.
-These only work for people who can take 1-2 full days from their job-related and personal responsibilities to attend the event.
+These only work for people who can take 1-2 full days off from their job-related and personal responsibilities to attend the event.
 Moreover, they take a lot of time and effort in organisation and are expensive to run, especially if we want to host them frequently to allow more and more participants to experience the joy of working together.
 
 This is where the practice of online coworking is extremely valuable for _The Turing Way_ as a community project.
@@ -27,8 +27,7 @@ The motivation behind hosting these online calls for _The Turing Way_ community 
 
 We aim to create a safe space for shared experience, connection, support and collaboration for the distributed community of _The Turing Way_.
 
-If you want to attend these calls but don't know what to work on, don't worry!
-_The Turing Way_ core team members will be on the call and point you to some starting points in the project and other ongoing efforts where you can make a difference.
+Inspired by _The Turing Way_, the Environmental Data Science book aims to work in a similar way to build a community of contributors who share a passion for open-source environmental data science.
 
 ## Techniques
 
