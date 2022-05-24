@@ -56,9 +56,10 @@ In addition to defining the target environmental system and theme, we suggest in
 The following procedures will prepare you to make submission: 
 
 * Log the notebook idea in [issues](https://github.com/alan-turing-institute/environmental-ds-book/issues/new/choose).
-* Go to the [Environmental Data Science book organisation](https://github.com/Environmental-DS-Book) which is dedicated to host notebooks.
-* Use the [available template](https://github.com/Environmental-DS-Book/template-jp) and place in your personal repository.  
-* Clone the used template repository to your local system.  
+  * A form should be filled with some description of the notebook and information about the input data and theme. Once you pass the minimal review from someone in the community, we encourage to go to start the publication process.
+* Once you've validated the notebook idea, go to the [Environmental Data Science book organisation](https://github.com/Environmental-DS-Book) which contains a template to start your notebook.
+  * Use the [available template](https://github.com/Environmental-DS-Book/template-jp) and place in your personal repository.  
+  * Clone the suggested template repository to your local/remote machine.  
 * Download a jupyter notebook template of your chosen target theme from the [community template folder](https://github.com/alan-turing-institute/environmental-ds-book/tree/master/book/community/templates).
 * Rename the filename of the template to the pattern (XXX-YYY-ZZZ, where XXX refers to the environmental system, YYY to the theme and ZZZ to a preferred identifier of the model, sensor or pre/post-processing pipeline). For example, "forest-modelling-treecrown.ipynb".
 * Fill the information header according to your use case. Be free to guide from previous modelling notebooks, see for instance the [IceNet notebook](https://github.com/alan-turing-institute/environmental-ds-book/blob/master/book/gallery/modelling/polar-modelling-icenet.ipynb).
@@ -70,7 +71,8 @@ The following procedures will prepare you to make submission:
 * Note, the Binder does not provide GPU support, so we would suggest testing the notebook works with cpu when predicting from the pretrained models. 
 
 ### Submission
-Once you have tested a draft version of the notebook containing the information in the heading and remaining sections, you make a pull request. You will have to fill a form with a series of questions related to the contribution. Please complete them. If you have any questions, please send a direct message to [environmental.ds.book@gmail.com](mailto:environmental.ds.book@gmail.com]).
+Once you have tested a draft version of the notebook containing the information in the heading and remaining sections, please transfer the repository to the [Environmental Data Science book organisation](https://github.com/Environmental-DS-Book). A maintainer of the EnvDS book will assist you to add the notebook to a new branch in the main repo. After, a pull request will be created.
+In the PR, you will have to fill a form with a series of questions related to the contribution. Please complete them. If you have any questions, please send a direct message to [environmental.ds.book@gmail.com](mailto:environmental.ds.book@gmail.com]).
 
 ## Attribution 
 Some material in this section has been adapted from [Neurolibre submission guidelines](https://docs.neurolibre.org/en/latest/SUBMIT.html), released under CC BY 3.0. 
