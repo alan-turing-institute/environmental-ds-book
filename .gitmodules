@@ -30,3 +30,7 @@
 	path = book/gallery/exploration/agriculture-exploration-cosmosuk
 	url = https://github.com/Environmental-DS-Book/agriculture-exploration-cosmosuk.git
 	branch = render
+[submodule "book/gallery/preprocessing/wildfires-preprocessing-timeseries"]
+	path = book/gallery/preprocessing/wildfires-preprocessing-timeseries
+	url = https://github.com/timo0thy/wildfires-preprocessing-timeseries.git
+	branch = render
