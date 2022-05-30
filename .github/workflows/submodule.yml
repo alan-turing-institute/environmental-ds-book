@@ -7,11 +7,6 @@ on:
       - main
     paths:
       - "book/**"
-  pull_request:
-    branches:
-      - master
-    paths:
-      - "book/**"
 
 jobs:
   update-submodules:
