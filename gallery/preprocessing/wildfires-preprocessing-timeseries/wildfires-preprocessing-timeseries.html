@@ -1,0 +1,1169 @@
+
+<!DOCTYPE html>
+
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Concatenating a gridded rainfall dataset into a time series &#8212; The Environmental Data Science book</title>
+    
+  <link href="../../../_static/css/theme.css" rel="stylesheet">
+  <link href="../../../_static/css/index.ff1ffe594081f20da1ef19478df9384b.css" rel="stylesheet">
+
+    
+  <link rel="stylesheet"
+    href="../../../_static/vendor/fontawesome/5.13.0/css/all.min.css">
+  <link rel="preload" as="font" type="font/woff2" crossorigin
+    href="../../../_static/vendor/fontawesome/5.13.0/webfonts/fa-solid-900.woff2">
+  <link rel="preload" as="font" type="font/woff2" crossorigin
+    href="../../../_static/vendor/fontawesome/5.13.0/webfonts/fa-brands-400.woff2">
+
+    
+      
+
+    
+    <link rel="stylesheet" type="text/css" href="../../../_static/pygments.css" />
+    <link rel="stylesheet" type="text/css" href="../../../_static/sphinx-book-theme.css?digest=c3fdc42140077d1ad13ad2f1588a4309" />
+    <link rel="stylesheet" type="text/css" href="../../../_static/togglebutton.css" />
+    <link rel="stylesheet" type="text/css" href="../../../_static/copybutton.css" />
+    <link rel="stylesheet" type="text/css" href="../../../_static/mystnb.css" />
+    <link rel="stylesheet" type="text/css" href="../../../_static/sphinx-thebe.css" />
+    <link rel="stylesheet" type="text/css" href="../../../_static/panels-main.c949a650a448cc0ae9fd3441c0e17fb0.css" />
+    <link rel="stylesheet" type="text/css" href="../../../_static/panels-variables.06eb56fa6e07937060861dad626602ad.css" />
+    
+  <link rel="preload" as="script" href="../../../_static/js/index.be7d3bbb2ef33a8344ce.js">
+
+    <script data-url_root="../../../" id="documentation_options" src="../../../_static/documentation_options.js"></script>
+    <script src="../../../_static/jquery.js"></script>
+    <script src="../../../_static/underscore.js"></script>
+    <script src="../../../_static/doctools.js"></script>
+    <script src="../../../_static/clipboard.min.js"></script>
+    <script src="../../../_static/copybutton.js"></script>
+    <script>let toggleHintShow = 'Click to show';</script>
+    <script>let toggleHintHide = 'Click to hide';</script>
+    <script>let toggleOpenOnPrint = 'true';</script>
+    <script src="../../../_static/togglebutton.js"></script>
+    <script>var togglebuttonSelector = '.toggle, .admonition.dropdown, .tag_hide_input div.cell_input, .tag_hide-input div.cell_input, .tag_hide_output div.cell_output, .tag_hide-output div.cell_output, .tag_hide_cell.cell, .tag_hide-cell.cell';</script>
+    <script src="../../../_static/sphinx-book-theme.d59cb220de22ca1c485ebbdc042f0030.js"></script>
+    <script>const THEBE_JS_URL = "https://unpkg.com/thebe@0.8.2/lib/index.js"
+const thebe_selector = ".thebe,.cell"
+const thebe_selector_input = "pre"
+const thebe_selector_output = ".output, .cell_output"
+</script>
+    <script async="async" src="../../../_static/sphinx-thebe.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/require.js/2.3.4/require.min.js"></script>
+    <script src="https://unpkg.com/@jupyter-widgets/html-manager@^0.20.1/dist/embed-amd.js"></script>
+    <link rel="index" title="Index" href="../../../genindex.html" />
+    <link rel="search" title="Search" href="../../../search.html" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="docsearch:language" content="en">
+    
+
+    <!-- Google Analytics -->
+    
+<script async="" src="https://www.google-analytics.com/analytics.js"></script>
+<script>
+                        window.ga = window.ga || function () {
+                            (ga.q = ga.q || []).push(arguments) };
+                        ga.l = +new Date;
+                        ga('create', 'UA-214298162-1', 'auto');
+                        ga('set', 'anonymizeIp', true);
+                        ga('send', 'pageview');
+                    </script>
+
+  </head>
+  <body data-spy="scroll" data-target="#bd-toc-nav" data-offset="80">
+    
+    <div class="container-fluid" id="banner"></div>
+
+    
+
+    <div class="container-xl">
+      <div class="row">
+          
+<div class="col-12 col-md-3 bd-sidebar site-navigation show" id="site-navigation">
+    
+        <div class="navbar-brand-box">
+    <a class="navbar-brand text-wrap" href="../../../index.html">
+      
+        <!-- `logo` is deprecated in Sphinx 4.0, so remove this when we stop supporting 3 -->
+        
+      
+      
+      <img src="../../../_static/logo.png" class="logo" alt="logo">
+      
+      
+      <h1 class="site-logo" id="site-title">The Environmental Data Science book</h1>
+      
+    </a>
+</div><form class="bd-search d-flex align-items-center" action="../../../search.html" method="get">
+  <i class="icon fas fa-search"></i>
+  <input type="search" class="form-control" name="q" id="search-input" placeholder="Search this book..." aria-label="Search this book..." autocomplete="off" >
+</form><nav class="bd-links" id="bd-docs-nav" aria-label="Main">
+    <div class="bd-toc-item active">
+        <ul class="nav bd-sidenav">
+ <li class="toctree-l1">
+  <a class="reference internal" href="../../../welcome.html">
+   Welcome
+  </a>
+ </li>
+</ul>
+<p aria-level="2" class="caption" role="heading">
+ <span class="caption-text">
+  Preamble
+ </span>
+</p>
+<ul class="nav bd-sidenav">
+ <li class="toctree-l1">
+  <a class="reference internal" href="../../../preamble/about.html">
+   About this book
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../../../preamble/who-for.html">
+   Who is the book for?
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../../../preamble/how-to.html">
+   How to use this book
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../../../preamble/attribution.html">
+   How to cite and reuse this material
+  </a>
+ </li>
+</ul>
+<p aria-level="2" class="caption" role="heading">
+ <span class="caption-text">
+  Gallery
+ </span>
+</p>
+<ul class="nav bd-sidenav">
+ <li class="toctree-l1 has-children">
+  <a class="reference internal" href="../../exploration.html">
+   Exploration
+  </a>
+  <input class="toctree-checkbox" id="toctree-checkbox-1" name="toctree-checkbox-1" type="checkbox"/>
+  <label for="toctree-checkbox-1">
+   <i class="fas fa-chevron-down">
+   </i>
+  </label>
+  <ul>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../../exploration/agriculture-exploration-cosmosuk/agriculture-exploration-cosmosuk.html">
+     Cosmos-UK soil moisture (CEH)
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../../exploration/urban-exploration-climate_ukv/urban-exploration-climate_ukv.html">
+     UKV high-resolution (Met Office)
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../../exploration/wildfires-exploration-fires_modis/wildfires-exploration-fires_modis.html">
+     MOD021KM and FIRMS (NASA)
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../../exploration/wildfires-exploration-fires_seviri/wildfires-exploration-fires_seviri.html">
+     SEVIRI Level 1.5 (EUMESAT)
+    </a>
+   </li>
+  </ul>
+ </li>
+ <li class="toctree-l1 has-children">
+  <a class="reference internal" href="../../modelling.html">
+   Modelling
+  </a>
+  <input class="toctree-checkbox" id="toctree-checkbox-2" name="toctree-checkbox-2" type="checkbox"/>
+  <label for="toctree-checkbox-2">
+   <i class="fas fa-chevron-down">
+   </i>
+  </label>
+  <ul>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../../modelling/forest-modelling-treecrown_deepforest/forest-modelling-treecrown_deepforest.html">
+     Tree crown (DeepForest)
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../../modelling/forest-modelling-treecrown_detectreeRGB/forest-modelling-treecrown_detectreeRGB.html">
+     Tree crown (DetectreeRGB)
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../../modelling/ocean-modelling-litter-philab/ocean-modelling-litter-philab.html">
+     Detecting floating objects (ESA Phi-Lab)
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../../modelling/polar-modelling-icenet/polar-modelling-icenet.html">
+     Sea ice forecasting (IceNet)
+    </a>
+   </li>
+  </ul>
+ </li>
+</ul>
+<p aria-level="2" class="caption" role="heading">
+ <span class="caption-text">
+  Community
+ </span>
+</p>
+<ul class="nav bd-sidenav">
+ <li class="toctree-l1 has-children">
+  <a class="reference internal" href="../../../community/guidelines.html">
+   Publishing guidelines
+  </a>
+  <input class="toctree-checkbox" id="toctree-checkbox-3" name="toctree-checkbox-3" type="checkbox"/>
+  <label for="toctree-checkbox-3">
+   <i class="fas fa-chevron-down">
+   </i>
+  </label>
+  <ul>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../../../community/guidelines/guidelines-submission.html">
+     Submission
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../../../community/guidelines/guidelines-reviewing.html">
+     Reviewing
+    </a>
+   </li>
+  </ul>
+ </li>
+ <li class="toctree-l1 has-children">
+  <a class="reference internal" href="../../../community/coworking.html">
+   Coworking Calls
+  </a>
+  <input class="toctree-checkbox" id="toctree-checkbox-4" name="toctree-checkbox-4" type="checkbox"/>
+  <label for="toctree-checkbox-4">
+   <i class="fas fa-chevron-down">
+   </i>
+  </label>
+  <ul>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../../../community/coworking/coworking-motivation.html">
+     Background, Motivations, and Techniques
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../../../community/coworking/coworking-collabcafe.html">
+     Online Collaboration Cafe
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../../../community/coworking/coworking-showtell.html">
+     Online Show and Tell
+    </a>
+   </li>
+  </ul>
+ </li>
+ <li class="toctree-l1 has-children">
+  <a class="reference internal" href="../../../community/notes.html">
+   Meeting Notes
+  </a>
+  <input class="toctree-checkbox" id="toctree-checkbox-5" name="toctree-checkbox-5" type="checkbox"/>
+  <label for="toctree-checkbox-5">
+   <i class="fas fa-chevron-down">
+   </i>
+  </label>
+  <ul>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../../../community/notes/notes-collabcafe.html">
+     <em>
+      The Environmental Data Science
+     </em>
+     ⛰ 🌳 🏙️ ❄️ 🔥 🌊  online Collaboration Cafe
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../../../community/notes/notes-journalclub.html">
+     Online Journal Club
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../../../community/notes/notes-showtell.html">
+     Online Show and Tell
+    </a>
+   </li>
+  </ul>
+ </li>
+ <li class="toctree-l1 has-children">
+  <a class="reference internal" href="../../../community/templates.html">
+   Template Collection
+  </a>
+  <input class="toctree-checkbox" id="toctree-checkbox-6" name="toctree-checkbox-6" type="checkbox"/>
+  <label for="toctree-checkbox-6">
+   <i class="fas fa-chevron-down">
+   </i>
+  </label>
+  <ul>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../../../community/templates/template-coworking-collabcafe.html">
+     Online Collaboration Cafe
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../../../community/templates/template-coworking-journalclub.html">
+     Online Journal Club
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../../../community/templates/template-coworking-showtell.html">
+     Online Show and Tell
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../../../community/templates/template-environments-sensors.html">
+     Notebook Sensors
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../../../community/templates/template-environments-preprocessing.html">
+     Notebook Pre-processing
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../../../community/templates/template-environments-modelling.html">
+     Notebook Modelling
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../../../community/templates/template-environments-postprocessing.html">
+     Notebook Post-processing
+    </a>
+   </li>
+  </ul>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../../../community/readings.html">
+   Interesting readings
+  </a>
+ </li>
+</ul>
+<p aria-level="2" class="caption" role="heading">
+ <span class="caption-text">
+  Afterword
+ </span>
+</p>
+<ul class="nav bd-sidenav">
+ <li class="toctree-l1">
+  <a class="reference internal" href="../../../afterword/glossary.html">
+   Glossary
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../../../afterword/bibliography.html">
+   Bibliography
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../../../afterword/statistics.html">
+   Execution statistics
+  </a>
+ </li>
+</ul>
+
+    </div>
+</nav> <!-- To handle the deprecated key -->
+
+<div class="navbar_extra_footer">
+  Powered by <a href="https://jupyterbook.org">Jupyter Book</a>
+</div>
+
+</div>
+
+
+          
+
+
+          
+<main class="col py-md-3 pl-md-4 bd-content overflow-auto" role="main">
+    
+    <div class="topbar container-xl fixed-top">
+    <div class="topbar-contents row">
+        <div class="col-12 col-md-3 bd-topbar-whitespace site-navigation show"></div>
+        <div class="col pl-md-4 topbar-main">
+            
+            <button id="navbar-toggler" class="navbar-toggler ml-0" type="button" data-toggle="collapse"
+                data-toggle="tooltip" data-placement="bottom" data-target=".site-navigation" aria-controls="navbar-menu"
+                aria-expanded="true" aria-label="Toggle navigation" aria-controls="site-navigation"
+                title="Toggle navigation" data-toggle="tooltip" data-placement="left">
+                <i class="fas fa-bars"></i>
+                <i class="fas fa-arrow-left"></i>
+                <i class="fas fa-arrow-up"></i>
+            </button>
+            
+            
+<div class="dropdown-buttons-trigger">
+    <button id="dropdown-buttons-trigger" class="btn btn-secondary topbarbtn" aria-label="Download this page"><i
+            class="fas fa-download"></i></button>
+
+    <div class="dropdown-buttons">
+        <!-- ipynb file if we had a myst markdown file -->
+        
+        <!-- Download raw file -->
+        <a class="dropdown-buttons" href="../../../_sources/gallery/preprocessing/wildfires-preprocessing-timeseries/wildfires-preprocessing-timeseries.ipynb"><button type="button"
+                class="btn btn-secondary topbarbtn" title="Download source file" data-toggle="tooltip"
+                data-placement="left">.ipynb</button></a>
+        <!-- Download PDF via print -->
+        <button type="button" id="download-print" class="btn btn-secondary topbarbtn" title="Print to PDF"
+                onclick="printPdf(this)" data-toggle="tooltip" data-placement="left">.pdf</button>
+    </div>
+</div>
+
+            <!-- Source interaction buttons -->
+
+<div class="dropdown-buttons-trigger">
+    <button id="dropdown-buttons-trigger" class="btn btn-secondary topbarbtn"
+        aria-label="Connect with source repository"><i class="fab fa-github"></i></button>
+    <div class="dropdown-buttons sourcebuttons">
+        <a class="repository-button"
+            href="https://github.com/alan-turing-institute/environmental-ds-book"><button type="button" class="btn btn-secondary topbarbtn"
+                data-toggle="tooltip" data-placement="left" title="Source repository"><i
+                    class="fab fa-github"></i>repository</button></a>
+        <a class="issues-button"
+            href="https://github.com/alan-turing-institute/environmental-ds-book/issues/new?title=Issue%20on%20page%20%2Fgallery/preprocessing/wildfires-preprocessing-timeseries/wildfires-preprocessing-timeseries.html&body=Your%20issue%20content%20here."><button
+                type="button" class="btn btn-secondary topbarbtn" data-toggle="tooltip" data-placement="left"
+                title="Open an issue"><i class="fas fa-lightbulb"></i>open issue</button></a>
+        <a class="edit-button" href="https://github.com/alan-turing-institute/environmental-ds-book/edit/master/book/gallery/preprocessing/wildfires-preprocessing-timeseries/wildfires-preprocessing-timeseries.ipynb"><button
+                type="button" class="btn btn-secondary topbarbtn" data-toggle="tooltip" data-placement="left"
+                title="Edit this page"><i class="fas fa-pencil-alt"></i>suggest edit</button></a>
+    </div>
+</div>
+
+            <!-- Full screen (wrap in <a> to have style consistency -->
+
+<a class="full-screen-button"><button type="button" class="btn btn-secondary topbarbtn" data-toggle="tooltip"
+        data-placement="bottom" onclick="toggleFullScreen()" aria-label="Fullscreen mode"
+        title="Fullscreen mode"><i
+            class="fas fa-expand"></i></button></a>
+
+            <!-- Launch buttons -->
+
+        </div>
+
+        <!-- Table of contents -->
+        <div class="d-none d-md-block col-md-2 bd-toc show noprint">
+            
+            <div class="tocsection onthispage pt-5 pb-3">
+                <i class="fas fa-list"></i> Contents
+            </div>
+            <nav id="bd-toc-nav" aria-label="Page">
+                <ul class="visible nav section-nav flex-column">
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#context">
+   Context
+  </a>
+  <ul class="nav section-nav flex-column">
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#purpose">
+     Purpose
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#preprocessing-description">
+     Preprocessing description
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#highlights">
+     Highlights
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#contributions">
+     Contributions
+    </a>
+    <ul class="nav section-nav flex-column">
+     <li class="toc-h4 nav-item toc-entry">
+      <a class="reference internal nav-link" href="#notebook">
+       Notebook
+      </a>
+     </li>
+     <li class="toc-h4 nav-item toc-entry">
+      <a class="reference internal nav-link" href="#dataset-originator-creator">
+       Dataset originator/creator
+      </a>
+     </li>
+     <li class="toc-h4 nav-item toc-entry">
+      <a class="reference internal nav-link" href="#dataset-authors">
+       Dataset authors
+      </a>
+     </li>
+     <li class="toc-h4 nav-item toc-entry">
+      <a class="reference internal nav-link" href="#dataset-documentation">
+       Dataset documentation
+      </a>
+     </li>
+    </ul>
+   </li>
+  </ul>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#install-and-load-libraries">
+   Install and load libraries
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#set-project-structure">
+   Set project structure
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#retrieve-and-or-load-a-sample-data-file">
+   Retrieve and/or load a sample data file
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#visualisation">
+   Visualisation
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#create-seasonal-means">
+   Create seasonal means
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#extract-borneo-region">
+   Extract Borneo region
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#create-area-averaged-time-series">
+   Create area-averaged time series
+  </a>
+  <ul class="nav section-nav flex-column">
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#save-as-a-new-netcdf-file">
+     Save as a new NetCDF file
+    </a>
+   </li>
+  </ul>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#summary">
+   Summary
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#citing-this-notebook">
+   Citing this Notebook
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#additional-information">
+   Additional information
+  </a>
+ </li>
+</ul>
+
+            </nav>
+        </div>
+    </div>
+</div>
+    <div id="main-content" class="row">
+        <div class="col-12 col-md-9 pl-md-3 pr-md-0">
+            <!-- Table of contents that is only displayed when printing the page -->
+            <div id="jb-print-docs-body" class="onlyprint">
+                <h1>Concatenating a gridded rainfall dataset into a time series</h1>
+                <!-- Table of contents -->
+                <div id="print-main-content">
+                    <div id="jb-print-toc">
+                        
+                        <div>
+                            <h2> Contents </h2>
+                        </div>
+                        <nav aria-label="Page">
+                            <ul class="visible nav section-nav flex-column">
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#context">
+   Context
+  </a>
+  <ul class="nav section-nav flex-column">
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#purpose">
+     Purpose
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#preprocessing-description">
+     Preprocessing description
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#highlights">
+     Highlights
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#contributions">
+     Contributions
+    </a>
+    <ul class="nav section-nav flex-column">
+     <li class="toc-h4 nav-item toc-entry">
+      <a class="reference internal nav-link" href="#notebook">
+       Notebook
+      </a>
+     </li>
+     <li class="toc-h4 nav-item toc-entry">
+      <a class="reference internal nav-link" href="#dataset-originator-creator">
+       Dataset originator/creator
+      </a>
+     </li>
+     <li class="toc-h4 nav-item toc-entry">
+      <a class="reference internal nav-link" href="#dataset-authors">
+       Dataset authors
+      </a>
+     </li>
+     <li class="toc-h4 nav-item toc-entry">
+      <a class="reference internal nav-link" href="#dataset-documentation">
+       Dataset documentation
+      </a>
+     </li>
+    </ul>
+   </li>
+  </ul>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#install-and-load-libraries">
+   Install and load libraries
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#set-project-structure">
+   Set project structure
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#retrieve-and-or-load-a-sample-data-file">
+   Retrieve and/or load a sample data file
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#visualisation">
+   Visualisation
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#create-seasonal-means">
+   Create seasonal means
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#extract-borneo-region">
+   Extract Borneo region
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#create-area-averaged-time-series">
+   Create area-averaged time series
+  </a>
+  <ul class="nav section-nav flex-column">
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#save-as-a-new-netcdf-file">
+     Save as a new NetCDF file
+    </a>
+   </li>
+  </ul>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#summary">
+   Summary
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#citing-this-notebook">
+   Citing this Notebook
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#additional-information">
+   Additional information
+  </a>
+ </li>
+</ul>
+
+                        </nav>
+                    </div>
+                </div>
+            </div>
+            
+              <div>
+                
+  <div class="tex2jax_ignore mathjax_ignore section" id="concatenating-a-gridded-rainfall-dataset-into-a-time-series">
+<h1>Concatenating a gridded rainfall dataset into a time series<a class="headerlink" href="#concatenating-a-gridded-rainfall-dataset-into-a-time-series" title="Permalink to this headline">¶</a></h1>
+<p><svg version="1.1" width="16" height="16" class="octicon octicon-tag" viewBox="0 0 16 16" aria-hidden="true"><path fill-rule="evenodd" d="M2.5 7.775V2.75a.25.25 0 01.25-.25h5.025a.25.25 0 01.177.073l6.25 6.25a.25.25 0 010 .354l-5.025 5.025a.25.25 0 01-.354 0l-6.25-6.25a.25.25 0 01-.073-.177zm-1.5 0V2.75C1 1.784 1.784 1 2.75 1h5.025c.464 0 .91.184 1.238.513l6.25 6.25a1.75 1.75 0 010 2.474l-5.026 5.026a1.75 1.75 0 01-2.474 0l-6.25-6.25A1.75 1.75 0 011 7.775zM6 5a1 1 0 100 2 1 1 0 000-2z"></path></svg>
+<span class="sphinx-bs badge badge-primary">Wildfires</span>
+<span class="sphinx-bs badge badge-secondary">Preprocessing</span></p>
+<p><a class="reference external" href="https://w3id.org/ro-id/1b8921af-e77f-4ccf-ae38-4813cdceba0f"><img alt="RoHub - FAIR Executable Research Object" src="https://img.shields.io/badge/RoHub-FAIR_Executable_Research_Object-2ea44f?logo=Open+Access&amp;logoColor=blue" /></a></p>
+<div class="section" id="context">
+<h2>Context<a class="headerlink" href="#context" title="Permalink to this headline">¶</a></h2>
+<div class="section" id="purpose">
+<h3>Purpose<a class="headerlink" href="#purpose" title="Permalink to this headline">¶</a></h3>
+<p>To load and extract a region of interest from a gridded rainfall dataset, and concatenate into a time series using the <a class="reference external" href="https://scitools-iris.readthedocs.io/en/stable/">Iris package</a>.</p>
+</div>
+<div class="section" id="preprocessing-description">
+<h3>Preprocessing description<a class="headerlink" href="#preprocessing-description" title="Permalink to this headline">¶</a></h3>
+<p>Time series data allows us to carry out a wide range of analyses including but not limited to trend, seasonality, anomaly detection and causality. As most of the climatological datasets are gridded, we provide a general tool to preprocess them into time series. The example global dataset from NCEP/NCAR reanalysis has a fairly low resolution (T62 Gaussian grid or approximately 1.9 * 1.9 degrees lat/long) which allows easy execution. It is openly available with a variety of atmospheric variables at near surface levels in daily and monthly frequencies as well as long-term monthly mean in NetCDF format, which is described in and can be obtained from <a class="reference external" href="https://psl.noaa.gov/data/gridded/data.ncep.reanalysis.derived.surfaceflux.html">this landing page</a>.</p>
+<p>This notebook uses a single sample data file for global daily precipitation rate (monthly mean) included with the notebook.</p>
+</div>
+<div class="section" id="highlights">
+<h3>Highlights<a class="headerlink" href="#highlights" title="Permalink to this headline">¶</a></h3>
+<ul class="simple">
+<li><p>Data for the entire globe is loaded and plotted using Iris</p></li>
+<li><p>Seasonal means are created by aggregating the data</p></li>
+<li><p>The Indonesian Borneo region is extracted and plotted</p></li>
+<li><p>The area-averaged time series for Indonesian Borneo region is created</p></li>
+<li><p>A particular season and timeframe are extracted from the time series</p></li>
+</ul>
+</div>
+<div class="section" id="contributions">
+<h3>Contributions<a class="headerlink" href="#contributions" title="Permalink to this headline">¶</a></h3>
+<div class="section" id="notebook">
+<h4>Notebook<a class="headerlink" href="#notebook" title="Permalink to this headline">¶</a></h4>
+<ul class="simple">
+<li><p>Timothy Lam (author), University of Exeter, <a class="reference external" href="https://github.com/timo0thy">&#64;timo0thy</a></p></li>
+<li><p>Marlene Kretschmer (author), University of Reading, <a class="reference external" href="https://github.com/MarleneKretschmer">&#64;MarleneKretschmer</a></p></li>
+<li><p>Samantha Adams (author), Met Office Informatics Lab, <a class="reference external" href="https://github.com/svadams">&#64;svadams</a></p></li>
+<li><p>Rachel Prudden (author), Met Office Informatics Lab, <a class="reference external" href="https://github.com/RPrudden">&#64;RPrudden</a></p></li>
+<li><p>Elena Saggioro (author), University of Reading, <a class="reference external" href="https://github.com/ESaggioro">&#64;ESaggioro</a></p></li>
+<li><p>Nick (reviewer), The Alan Turing Institute, <a class="reference external" href="https://github.com/">&#64;</a></p></li>
+</ul>
+</div>
+<div class="section" id="dataset-originator-creator">
+<h4>Dataset originator/creator<a class="headerlink" href="#dataset-originator-creator" title="Permalink to this headline">¶</a></h4>
+<ul class="simple">
+<li><p>NOAA National Center for Environmental Prediction (creator)</p></li>
+</ul>
+</div>
+<div class="section" id="dataset-authors">
+<h4>Dataset authors<a class="headerlink" href="#dataset-authors" title="Permalink to this headline">¶</a></h4>
+<ul class="simple">
+<li><p>Eugenia Kalnay, Director, NCEP Environmental Modeling Center</p></li>
+</ul>
+</div>
+<div class="section" id="dataset-documentation">
+<h4>Dataset documentation<a class="headerlink" href="#dataset-documentation" title="Permalink to this headline">¶</a></h4>
+<span class="target" id="id1"></span><div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>Note this data should be used only for non-commercial purposes.</p>
+</div>
+</div>
+</div>
+</div>
+<div class="section" id="install-and-load-libraries">
+<h2>Install and load libraries<a class="headerlink" href="#install-and-load-libraries" title="Permalink to this headline">¶</a></h2>
+<div class="cell tag_hide-input docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">os</span>
+<span class="kn">import</span> <span class="nn">iris</span>
+<span class="kn">import</span> <span class="nn">iris.quickplot</span> <span class="k">as</span> <span class="nn">qplt</span>
+<span class="kn">import</span> <span class="nn">iris.coord_categorisation</span> <span class="k">as</span> <span class="nn">coord_cat</span>
+
+<span class="kn">import</span> <span class="nn">numpy</span> <span class="k">as</span> <span class="nn">np</span>
+<span class="kn">import</span> <span class="nn">matplotlib.pyplot</span> <span class="k">as</span> <span class="nn">plt</span>
+
+<span class="kn">import</span> <span class="nn">urllib.request</span>
+
+<span class="kn">import</span> <span class="nn">warnings</span>
+<span class="n">warnings</span><span class="o">.</span><span class="n">filterwarnings</span><span class="p">(</span><span class="n">action</span><span class="o">=</span><span class="s1">&#39;ignore&#39;</span><span class="p">)</span>
+
+<span class="o">%</span><span class="k">matplotlib</span> inline
+</pre></div>
+</div>
+</div>
+</div>
+</div>
+<div class="section" id="set-project-structure">
+<h2>Set project structure<a class="headerlink" href="#set-project-structure" title="Permalink to this headline">¶</a></h2>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">notebook_folder</span> <span class="o">=</span> <span class="s1">&#39;./wildfires-preprocessing-timeseries_Borneo&#39;</span>
+<span class="k">if</span> <span class="ow">not</span> <span class="n">os</span><span class="o">.</span><span class="n">path</span><span class="o">.</span><span class="n">exists</span><span class="p">(</span><span class="n">notebook_folder</span><span class="p">):</span>
+    <span class="n">os</span><span class="o">.</span><span class="n">makedirs</span><span class="p">(</span><span class="n">notebook_folder</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+</div>
+</div>
+<div class="section" id="retrieve-and-or-load-a-sample-data-file">
+<h2>Retrieve and/or load a sample data file<a class="headerlink" href="#retrieve-and-or-load-a-sample-data-file" title="Permalink to this headline">¶</a></h2>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">filepath</span> <span class="o">=</span> <span class="s1">&#39;https://downloads.psl.noaa.gov/Datasets/ncep.reanalysis.derived/surface_gauss/&#39;</span>
+<span class="n">filename</span> <span class="o">=</span> <span class="s1">&#39;prate.sfc.mon.mean.nc&#39;</span>
+
+<span class="k">if</span> <span class="ow">not</span> <span class="n">os</span><span class="o">.</span><span class="n">path</span><span class="o">.</span><span class="n">exists</span><span class="p">(</span><span class="n">notebook_folder</span><span class="o">+</span><span class="s1">&#39;/&#39;</span><span class="o">+</span><span class="n">filename</span><span class="p">):</span>
+    <span class="n">urllib</span><span class="o">.</span><span class="n">request</span><span class="o">.</span><span class="n">urlretrieve</span><span class="p">(</span><span class="n">filepath</span><span class="o">+</span><span class="n">filename</span><span class="p">,</span> <span class="n">os</span><span class="o">.</span><span class="n">path</span><span class="o">.</span><span class="n">join</span><span class="p">(</span><span class="n">notebook_folder</span><span class="p">,</span> <span class="n">filename</span><span class="p">))</span>
+    
+<span class="c1"># use &#39;intake&#39; package to download data, just in case the link changes and the old one no longer works...</span>
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># Load monthly precipitation data into an iris cube</span>
+<span class="n">precip</span> <span class="o">=</span> <span class="n">iris</span><span class="o">.</span><span class="n">load_cube</span><span class="p">(</span><span class="n">os</span><span class="o">.</span><span class="n">path</span><span class="o">.</span><span class="n">join</span><span class="p">(</span><span class="n">notebook_folder</span><span class="p">,</span> <span class="n">filename</span><span class="p">),</span> <span class="s1">&#39;Monthly Mean of Precipitation Rate&#39;</span><span class="p">)</span>
+<span class="n">precip</span><span class="o">.</span><span class="n">coord</span><span class="p">(</span><span class="s1">&#39;latitude&#39;</span><span class="p">)</span><span class="o">.</span><span class="n">guess_bounds</span><span class="p">()</span>
+<span class="n">precip</span><span class="o">.</span><span class="n">coord</span><span class="p">(</span><span class="s1">&#39;longitude&#39;</span><span class="p">)</span><span class="o">.</span><span class="n">guess_bounds</span><span class="p">()</span>
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="nb">print</span> <span class="p">(</span><span class="n">precip</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span><span class="o">.</span><span class="n">data</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>[[1.9127938e-06 1.8837651e-06 1.8515068e-06 ... 2.1256988e-06
+  2.0418272e-06 1.9708589e-06]
+ [2.2246593e-07 2.2246593e-07 2.0311094e-07 ... 2.7407921e-07
+  2.3536924e-07 2.1601426e-07]
+ [4.9547411e-06 5.2644209e-06 5.5482942e-06 ... 3.5902260e-06
+  4.0482864e-06 4.5257093e-06]
+ ...
+ [1.3031156e-06 1.9547335e-06 3.2999012e-06 ... 5.3214569e-07
+  6.9988891e-07 9.3214874e-07]
+ [2.3708619e-06 2.6902153e-06 3.0805372e-06 ... 1.6289207e-06
+  1.8547289e-06 2.0805371e-06]
+ [3.1837712e-06 3.3386111e-06 3.5515161e-06 ... 2.7773165e-06
+  2.8805432e-06 3.0482863e-06]]
+</pre></div>
+</div>
+</div>
+</div>
+</div>
+<div class="section" id="visualisation">
+<h2>Visualisation<a class="headerlink" href="#visualisation" title="Permalink to this headline">¶</a></h2>
+<p>Here we use the Iris wrapper to matplotlib pyplot to plot the gridded data with added coastline.</p>
+<div class="cell tag_hide-input docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">qplt</span><span class="o">.</span><span class="n">pcolormesh</span><span class="p">(</span><span class="n">precip</span><span class="p">[</span><span class="mi">0</span><span class="p">])</span> <span class="c1"># plot the first time in the cube</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">gca</span><span class="p">()</span><span class="o">.</span><span class="n">coastlines</span><span class="p">()</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>&lt;cartopy.mpl.feature_artist.FeatureArtist at 0x7ffb48e314c0&gt;
+</pre></div>
+</div>
+<img alt="../../../_images/wildfires-preprocessing-timeseries_10_1.png" src="../../../_images/wildfires-preprocessing-timeseries_10_1.png" />
+</div>
+</div>
+</div>
+<div class="section" id="create-seasonal-means">
+<h2>Create seasonal means<a class="headerlink" href="#create-seasonal-means" title="Permalink to this headline">¶</a></h2>
+<p>Here we construct seasonal means from the monthly data for each grid, for the purpose of extracting a particular season of interest later on.</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># Add auxiliary coordinates to the cube to indicate each season</span>
+<span class="n">coord_cat</span><span class="o">.</span><span class="n">add_season</span><span class="p">(</span><span class="n">precip</span><span class="p">,</span> <span class="s1">&#39;time&#39;</span><span class="p">,</span> <span class="n">name</span><span class="o">=</span><span class="s1">&#39;clim_season&#39;</span><span class="p">)</span>
+<span class="n">coord_cat</span><span class="o">.</span><span class="n">add_season_year</span><span class="p">(</span><span class="n">precip</span><span class="p">,</span> <span class="s1">&#39;time&#39;</span><span class="p">,</span> <span class="n">name</span><span class="o">=</span><span class="s1">&#39;season_year&#39;</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="nb">print</span><span class="p">(</span><span class="n">precip</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Monthly Mean of Precipitation Rate / (unknown) (time: 892; latitude: 94; longitude: 192)
+    Dimension coordinates:
+        time                                        x              -              -
+        latitude                                    -              x              -
+        longitude                                   -              -              x
+    Auxiliary coordinates:
+        clim_season                                 x              -              -
+        season_year                                 x              -              -
+    Attributes:
+        Conventions                            &#39;COARDS&#39;
+        NCO                                    &#39;20121013&#39;
+        References                             &#39;http://www.psl.noaa.gov/data/gridded/data.ncep.reanalysis.derived.htm...
+        actual_range                           array([-2.3283064e-10, 5.8903999e-04], dtype=float32)
+        dataset                                &#39;NCEP Reanalysis Derived Products&#39;
+        dataset_title                          &#39;NCEP-NCAR Reanalysis 1&#39;
+        description                            &#39;Data is from NMC initialized reanalysis\n(4x/day).  It consists of T42...
+        history                                &#39;Mon Jul  5 23:55:54 1999: ncrcat prate.mon.mean.nc /Datasets/ncep.reanalysis.derived/surface_gauss/prate.mon.mean.nc...
+        invalid_units                          &#39;Kg/m^2/s&#39;
+        least_significant_digit                0
+        level_desc                             &#39;Surface&#39;
+        parent_stat                            &#39;Individual Obs&#39;
+        platform                               &#39;Model&#39;
+        precision                              1
+        statistic                              &#39;Mean&#39;
+        title                                  &#39;monthly mean prate.sfc from the NCEP Reanalysis&#39;
+        valid_range                            array([-400., 700.], dtype=float32)
+        var_desc                               &#39;Precipitation Rate&#39;
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># Aggregate by season</span>
+<span class="n">annual_seasonal_mean</span> <span class="o">=</span> <span class="n">precip</span><span class="o">.</span><span class="n">aggregated_by</span><span class="p">(</span>
+    <span class="p">[</span><span class="s1">&#39;clim_season&#39;</span><span class="p">,</span> <span class="s1">&#39;season_year&#39;</span><span class="p">],</span>
+    <span class="n">iris</span><span class="o">.</span><span class="n">analysis</span><span class="o">.</span><span class="n">MEAN</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># Check this worked</span>
+<span class="k">for</span> <span class="n">season</span><span class="p">,</span> <span class="n">year</span> <span class="ow">in</span> <span class="nb">zip</span><span class="p">(</span>
+    <span class="n">annual_seasonal_mean</span><span class="o">.</span><span class="n">coord</span><span class="p">(</span><span class="s1">&#39;clim_season&#39;</span><span class="p">)[:</span><span class="mi">10</span><span class="p">]</span><span class="o">.</span><span class="n">points</span><span class="p">,</span>
+    <span class="n">annual_seasonal_mean</span><span class="o">.</span><span class="n">coord</span><span class="p">(</span><span class="s1">&#39;season_year&#39;</span><span class="p">)[:</span><span class="mi">10</span><span class="p">]</span><span class="o">.</span><span class="n">points</span><span class="p">):</span>
+    <span class="nb">print</span><span class="p">(</span><span class="n">season</span> <span class="o">+</span> <span class="s1">&#39; &#39;</span> <span class="o">+</span> <span class="nb">str</span><span class="p">(</span><span class="n">year</span><span class="p">))</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>djf 1948
+mam 1948
+jja 1948
+son 1948
+djf 1949
+mam 1949
+jja 1949
+son 1949
+djf 1950
+mam 1950
+</pre></div>
+</div>
+</div>
+</div>
+</div>
+<div class="section" id="extract-borneo-region">
+<h2>Extract Borneo region<a class="headerlink" href="#extract-borneo-region" title="Permalink to this headline">¶</a></h2>
+<p>Here we extract our area of study which covers the Indonesian Borneo region, as specified by Melendy et al. (2014) (available at <a class="reference external" href="https://daac.ornl.gov/CMS/guides/CMS_LiDAR_Indonesia.html">https://daac.ornl.gov/CMS/guides/CMS_LiDAR_Indonesia.html</a>).</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># Create a constraint for the latitude and Longitude extents</span>
+
+<span class="n">Borneo_lat</span> <span class="o">=</span> <span class="n">iris</span><span class="o">.</span><span class="n">Constraint</span><span class="p">(</span><span class="n">latitude</span><span class="o">=</span><span class="k">lambda</span> <span class="n">v</span><span class="p">:</span> <span class="n">v</span> <span class="o">&gt;</span> <span class="o">-</span><span class="mf">4.757</span> <span class="ow">and</span> <span class="n">v</span> <span class="o">&lt;=</span> <span class="mf">3.211</span> <span class="p">)</span>
+<span class="n">Borneo_lon</span> <span class="o">=</span> <span class="n">iris</span><span class="o">.</span><span class="n">Constraint</span><span class="p">(</span><span class="n">longitude</span><span class="o">=</span><span class="k">lambda</span> <span class="n">v</span><span class="p">:</span> <span class="n">v</span> <span class="o">&gt;</span> <span class="mf">107.815</span> <span class="ow">and</span> <span class="n">v</span> <span class="o">&lt;=</span> <span class="mf">117.987</span> <span class="p">)</span>
+
+<span class="c1"># Extract data based on the spatial extent</span>
+<span class="n">Borneo</span> <span class="o">=</span>  <span class="n">annual_seasonal_mean</span><span class="o">.</span><span class="n">extract</span><span class="p">(</span><span class="n">Borneo_lat</span> <span class="o">&amp;</span> <span class="n">Borneo_lon</span><span class="p">)</span> 
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># Plot data of the first season in the study region</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">Borneo</span><span class="p">)</span>
+<span class="n">qplt</span><span class="o">.</span><span class="n">pcolormesh</span><span class="p">(</span><span class="n">Borneo</span><span class="p">[</span><span class="mi">0</span><span class="p">])</span> <span class="c1"># plot the first timestep in the cube</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">gca</span><span class="p">()</span><span class="o">.</span><span class="n">coastlines</span><span class="p">()</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Monthly Mean of Precipitation Rate / (unknown) (time: 298; latitude: 4; longitude: 5)
+    Dimension coordinates:
+        time                                        x              -             -
+        latitude                                    -              x             -
+        longitude                                   -              -             x
+    Auxiliary coordinates:
+        clim_season                                 x              -             -
+        season_year                                 x              -             -
+    Cell methods:
+        mean                                   clim_season, season_year
+    Attributes:
+        Conventions                            &#39;COARDS&#39;
+        NCO                                    &#39;20121013&#39;
+        References                             &#39;http://www.psl.noaa.gov/data/gridded/data.ncep.reanalysis.derived.htm...
+        actual_range                           array([-2.3283064e-10, 5.8903999e-04], dtype=float32)
+        dataset                                &#39;NCEP Reanalysis Derived Products&#39;
+        dataset_title                          &#39;NCEP-NCAR Reanalysis 1&#39;
+        description                            &#39;Data is from NMC initialized reanalysis\n(4x/day).  It consists of T42...
+        history                                &#39;Mon Jul  5 23:55:54 1999: ncrcat prate.mon.mean.nc /Datasets/ncep.reanalysis.derived/surface_gauss/prate.mon.mean.nc...
+        invalid_units                          &#39;Kg/m^2/s&#39;
+        least_significant_digit                0
+        level_desc                             &#39;Surface&#39;
+        parent_stat                            &#39;Individual Obs&#39;
+        platform                               &#39;Model&#39;
+        precision                              1
+        statistic                              &#39;Mean&#39;
+        title                                  &#39;monthly mean prate.sfc from the NCEP Reanalysis&#39;
+        valid_range                            array([-400., 700.], dtype=float32)
+        var_desc                               &#39;Precipitation Rate&#39;
+</pre></div>
+</div>
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>&lt;cartopy.mpl.feature_artist.FeatureArtist at 0x7ffb1171d370&gt;
+</pre></div>
+</div>
+<img alt="../../../_images/wildfires-preprocessing-timeseries_18_2.png" src="../../../_images/wildfires-preprocessing-timeseries_18_2.png" />
+</div>
+</div>
+</div>
+<div class="section" id="create-area-averaged-time-series">
+<h2>Create area-averaged time series<a class="headerlink" href="#create-area-averaged-time-series" title="Permalink to this headline">¶</a></h2>
+<p>To construct a seasonal rainfall time series for the study region, we first compute the areal average rainfall.</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># Create area-weights array</span>
+<span class="n">grid_area_weights</span> <span class="o">=</span> <span class="n">iris</span><span class="o">.</span><span class="n">analysis</span><span class="o">.</span><span class="n">cartography</span><span class="o">.</span><span class="n">area_weights</span><span class="p">(</span><span class="n">Borneo</span><span class="p">)</span>
+
+<span class="c1"># Perform the area-weighted mean using the computed grid-box areas.</span>
+<span class="n">Borneo_mean</span> <span class="o">=</span> <span class="n">Borneo</span><span class="o">.</span><span class="n">collapsed</span><span class="p">([</span><span class="s1">&#39;latitude&#39;</span><span class="p">,</span> <span class="s1">&#39;longitude&#39;</span><span class="p">],</span>
+                                <span class="n">iris</span><span class="o">.</span><span class="n">analysis</span><span class="o">.</span><span class="n">MEAN</span><span class="p">,</span>
+                                <span class="n">weights</span><span class="o">=</span><span class="n">grid_area_weights</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+</div>
+<p>We then extract the temporal timescale of interest (Boreal Summers from 1950 - 2019).</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">jja_constraint</span> <span class="o">=</span> <span class="n">iris</span><span class="o">.</span><span class="n">Constraint</span><span class="p">(</span><span class="n">clim_season</span><span class="o">=</span><span class="s1">&#39;jja&#39;</span><span class="p">)</span>
+<span class="n">year_constraint</span> <span class="o">=</span> <span class="n">iris</span><span class="o">.</span><span class="n">Constraint</span><span class="p">(</span><span class="n">season_year</span><span class="o">=</span><span class="k">lambda</span> <span class="n">v</span><span class="p">:</span> <span class="n">v</span> <span class="o">&gt;</span> <span class="mi">1949</span> <span class="ow">and</span> <span class="n">v</span> <span class="o">&lt;=</span> <span class="mi">2019</span> <span class="p">)</span>
+
+<span class="n">Borneo_jja</span> <span class="o">=</span> <span class="n">Borneo_mean</span><span class="o">.</span><span class="n">extract</span><span class="p">(</span><span class="n">jja_constraint</span> <span class="o">&amp;</span> <span class="n">year_constraint</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">Borneo_jja</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Monthly Mean of Precipitation Rate / (unknown) (time: 70)
+    Dimension coordinates:
+        time                                        x
+    Auxiliary coordinates:
+        clim_season                                 x
+        season_year                                 x
+    Scalar coordinates:
+        latitude                               0.0 degrees, bound=(-3.80947, 3.80947) degrees
+        longitude                              114.375 degrees, bound=(109.6875, 119.0625) degrees
+    Cell methods:
+        mean                                   clim_season, season_year
+        mean                                   latitude, longitude
+    Attributes:
+        Conventions                            &#39;COARDS&#39;
+        NCO                                    &#39;20121013&#39;
+        References                             &#39;http://www.psl.noaa.gov/data/gridded/data.ncep.reanalysis.derived.htm...
+        actual_range                           array([-2.3283064e-10, 5.8903999e-04], dtype=float32)
+        dataset                                &#39;NCEP Reanalysis Derived Products&#39;
+        dataset_title                          &#39;NCEP-NCAR Reanalysis 1&#39;
+        description                            &#39;Data is from NMC initialized reanalysis\n(4x/day).  It consists of T42...
+        history                                &#39;Mon Jul  5 23:55:54 1999: ncrcat prate.mon.mean.nc /Datasets/ncep.reanalysis.derived/surface_gauss/prate.mon.mean.nc...
+        invalid_units                          &#39;Kg/m^2/s&#39;
+        least_significant_digit                0
+        level_desc                             &#39;Surface&#39;
+        parent_stat                            &#39;Individual Obs&#39;
+        platform                               &#39;Model&#39;
+        precision                              1
+        statistic                              &#39;Mean&#39;
+        title                                  &#39;monthly mean prate.sfc from the NCEP Reanalysis&#39;
+        valid_range                            array([-400., 700.], dtype=float32)
+        var_desc                               &#39;Precipitation Rate&#39;
+</pre></div>
+</div>
+</div>
+</div>
+<p>Finally, we use the Iris wrapper to matplotlib pyplot to plot the time series generated.</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">qplt</span><span class="o">.</span><span class="n">plot</span><span class="p">(</span><span class="n">Borneo_jja</span><span class="p">[</span><span class="o">-</span><span class="mi">71</span><span class="p">:</span><span class="o">-</span><span class="mi">1</span><span class="p">])</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">title</span><span class="p">(</span><span class="s1">&#39;Borneo JJA Precip&#39;</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Text(0.5, 1.0, &#39;Borneo JJA Precip&#39;)
+</pre></div>
+</div>
+<img alt="../../../_images/wildfires-preprocessing-timeseries_24_1.png" src="../../../_images/wildfires-preprocessing-timeseries_24_1.png" />
+</div>
+</div>
+<div class="section" id="save-as-a-new-netcdf-file">
+<h3>Save as a new NetCDF file<a class="headerlink" href="#save-as-a-new-netcdf-file" title="Permalink to this headline">¶</a></h3>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">iris</span><span class="o">.</span><span class="n">save</span><span class="p">(</span><span class="n">Borneo_jja</span><span class="p">,</span> <span class="n">os</span><span class="o">.</span><span class="n">path</span><span class="o">.</span><span class="n">join</span><span class="p">(</span><span class="n">notebook_folder</span><span class="p">,</span> <span class="s1">&#39;Borneo_precip_mean.nc&#39;</span><span class="p">))</span>
+</pre></div>
+</div>
+</div>
+</div>
+</div>
+</div>
+<div class="section" id="summary">
+<h2>Summary<a class="headerlink" href="#summary" title="Permalink to this headline">¶</a></h2>
+<p>This notebook has demonstrated the use of the Iris package to easily load, plot and manipulate gridded environmental NetCDF data.</p>
+</div>
+<div class="section" id="citing-this-notebook">
+<h2>Citing this Notebook<a class="headerlink" href="#citing-this-notebook" title="Permalink to this headline">¶</a></h2>
+<p>Timothy Lam, Marlene Kretschmer, Samantha Adams, Rachel Prudden, Elena Saggioro, and XXX. “Concatenating a gridded rainfall dataset into a time series (Jupyter Notebook) published in the Environmental Data Science book.” ROHub.  XXX, XX,2022. Available at <link>.</p>
+</div>
+<div class="section" id="additional-information">
+<h2>Additional information<a class="headerlink" href="#additional-information" title="Permalink to this headline">¶</a></h2>
+<p><strong>License</strong>: The code in this notebook is licensed under the MIT License. The Environmental Data Science book is licensed under the Creative Commons by Attribution 4.0 license. See further details <a class="reference external" href="https://github.com/alan-turing-institute/environmental-ds-book/blob/master/LICENSE.md">here</a>.</p>
+<p><strong>Contact</strong>: If you have any suggestion or report an issue with this notebook, feel free to <a class="reference external" href="https://github.com/alan-turing-institute/environmental-ds-book/issues/new/choose">create an issue</a> or send a direct message to <a class="reference external" href="mailto:environmental&#46;ds&#46;book&#37;&#52;&#48;gmail&#46;com">environmental<span>&#46;</span>ds<span>&#46;</span>book<span>&#64;</span>gmail<span>&#46;</span>com</a>.</p>
+<div class="cell tag_remove-input docutils container">
+<div class="cell_output docutils container">
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Last tested: 2022-05-30
+</pre></div>
+</div>
+</div>
+</div>
+</div>
+</div>
+
+    <script type="text/x-thebe-config">
+    {
+        requestKernel: true,
+        binderOptions: {
+            repo: "binder-examples/jupyter-stacks-datascience",
+            ref: "master",
+        },
+        codeMirrorConfig: {
+            theme: "abcdef",
+            mode: "python"
+        },
+        kernelOptions: {
+            kernelName: "python3",
+            path: "./gallery/preprocessing/wildfires-preprocessing-timeseries"
+        },
+        predefinedOutput: true
+    }
+    </script>
+    <script>kernelName = 'python3'</script>
+
+              </div>
+              
+            
+                <!-- Previous / next buttons -->
+<div class='prev-next-area'>
+</div>
+            
+        </div>
+    </div>
+    <footer class="footer">
+  <p>
+    
+      By The Environmental DS Community. This site is powered by <a href="https://www.netlify.com/">Netlify</a>.<br/>
+    
+        &copy; Copyright 2021.<br/>
+  </p>
+</footer>
+</main>
+
+
+      </div>
+    </div>
+  
+  <script src="../../../_static/js/index.be7d3bbb2ef33a8344ce.js"></script>
+
+  </body>
+</html>
