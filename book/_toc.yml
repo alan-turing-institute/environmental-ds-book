@@ -20,11 +20,6 @@ parts:
         title: MOD021KM and FIRMS (NASA)
       - file: gallery/exploration/wildfires-exploration-fires_seviri/wildfires-exploration-fires_seviri
         title: SEVIRI Level 1.5 (EUMESAT)
-  - file: gallery/preprocessing
-    title: Preprocessing
-    sections:
-      - file: gallery/preprocessing/wildfires-preprocessing-timeseries/wildfires-preprocessing-timeseries
-        title: Wildfires NCEP/NCAR (NOAA)
   - file: gallery/modelling
     title: Modelling
     sections:
