@@ -1,0 +1,27 @@
+name: Pull-request
+
+on:
+  pull_request:
+    paths:
+      - "book/**"
+
+jobs:
+  update-submodules:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v2
+        with:
+          persist-credentials: false
+      - name: Checkout, Merge and commit files
+        run: |
+          git config --global user.email "acocac@users.noreply.github.com"
+          git config --global user.name "acocac"
+          git submodule update --init --recursive
+          git submodule foreach git reset --hard origin/render
+          git add .
+          git commit -m "Update submodules to latest revisions" -a --allow-empty
+      - name: Push changes
+        uses: ad-m/github-push-action@master
+        with:
+          github_token: ${{ secrets.GITHUB_TOKEN }}
