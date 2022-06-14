@@ -22,6 +22,9 @@ parts:
         title: SEVIRI Level 1.5 (EUMESAT)
   - file: gallery/preprocessing
     title: Preprocessing
+    sections:
+      - file: gallery/preprocessing/general-preprocessing-rainfall_noaa/general-preprocessing-rainfall_noaa
+        title: Rainfall NCEP/NCAR (NOAA)
   - file: gallery/modelling
     title: Modelling
     sections:
