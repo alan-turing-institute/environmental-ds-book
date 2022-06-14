@@ -5,6 +5,6 @@ dependencies:
   - python=3.9
   - pip
   - pip:
-        - jupyter-book
+        - jupyter-book==0.12.1
         - ghp-import
         - sphinx_togglebutton
