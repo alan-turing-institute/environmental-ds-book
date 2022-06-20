@@ -13,7 +13,7 @@ parts:
     title: Exploration
     sections:
       - file: gallery/exploration/agriculture-exploration-cosmosuk/agriculture-exploration-cosmosuk
-        title: Cosmos-UK soil moisture (CEH)
+        title: Cosmos-UK Soil Moisture (UKCEH)
       - file: gallery/exploration/urban-exploration-climate_ukv/urban-exploration-climate_ukv
         title: UKV high-resolution (Met Office)
       - file: gallery/exploration/wildfires-exploration-fires_modis/wildfires-exploration-fires_modis
