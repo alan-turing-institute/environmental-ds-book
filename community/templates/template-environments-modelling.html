@@ -324,11 +324,6 @@ const thebe_selector_output = ".output, .cell_output"
     </a>
    </li>
    <li class="toctree-l2">
-    <a class="reference internal" href="template-environments-sensors.html">
-     Notebook Sensors
-    </a>
-   </li>
-   <li class="toctree-l2">
     <a class="reference internal" href="template-environments-preprocessing.html">
      Notebook Pre-processing
     </a>
@@ -511,8 +506,8 @@ const thebe_selector_output = ".output, .cell_output"
   </ul>
  </li>
  <li class="toc-h2 nav-item toc-entry">
-  <a class="reference internal nav-link" href="#install-and-load-libraries">
-   Install and load libraries
+  <a class="reference internal nav-link" href="#load-libraries">
+   Load libraries
   </a>
  </li>
  <li class="toc-h2 nav-item toc-entry">
@@ -615,8 +610,8 @@ const thebe_selector_output = ".output, .cell_output"
   </ul>
  </li>
  <li class="toc-h2 nav-item toc-entry">
-  <a class="reference internal nav-link" href="#install-and-load-libraries">
-   Install and load libraries
+  <a class="reference internal nav-link" href="#load-libraries">
+   Load libraries
   </a>
  </li>
  <li class="toc-h2 nav-item toc-entry">
@@ -704,10 +699,9 @@ const thebe_selector_output = ".output, .cell_output"
 </div>
 </div>
 </div>
-<div class="section" id="install-and-load-libraries">
-<h2>Install and load libraries<a class="headerlink" href="#install-and-load-libraries" title="Permalink to this headline">¶</a></h2>
-<p><em>For installation, add only libraries not listed in the <a class="reference external" href="https://github.com/alan-turing-institute/environmental-ds-book/blob/master/environment.yml">environment.yml</a> file, but required by the notebook. Libraries can be installed in silent mode e.g. <code class="docutils literal notranslate"><span class="pre">pip</span> <span class="pre">-q</span> <span class="pre">install</span> <span class="pre">&lt;package_name&gt;</span></code></em></p>
-<p><em>For loading libraries, order them according to their role e.g. libraries to manipulate folders i.e. os (first), handle data i.e. numpy, xarray (second), visualisation e.g. holoviews (third), etc. The cell below contains two libraries, <code class="docutils literal notranslate"><span class="pre">os</span></code> and <code class="docutils literal notranslate"><span class="pre">warning</span></code> which are common among the notebooks. Don’t remove them.</em></p>
+<div class="section" id="load-libraries">
+<h2>Load libraries<a class="headerlink" href="#load-libraries" title="Permalink to this headline">¶</a></h2>
+<p>List libraries according to their role e.g. system/files manipulation i.e. os (first), data handling i.e. numpy, xarray (second), visualisation e.g. holoviews (third), etc. The cell below contains two libraries, <code class="docutils literal notranslate"><span class="pre">os</span></code> and <code class="docutils literal notranslate"><span class="pre">warning</span></code> which are common among the notebooks. Don’t remove them.*</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">os</span>
@@ -723,7 +717,7 @@ const thebe_selector_output = ".output, .cell_output"
 <p><em>The cell below creates a separate folder to save the notebook outputs. This facilitates the reader to inspect inputs/outputs stored within a defined destination folder. Change <code class="docutils literal notranslate"><span class="pre">&lt;replace-by-notebook-filename&gt;</span></code> with your notebook identifier.</em></p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">notebook_folder</span> <span class="o">=</span> <span class="s1">&#39;../modelling/&lt;replace-by-notebook-filename&gt;&#39;</span>
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">notebook_folder</span> <span class="o">=</span> <span class="s1">&#39;./&lt;replace-by-notebook-filename&gt;&#39;</span>
 <span class="k">if</span> <span class="ow">not</span> <span class="n">os</span><span class="o">.</span><span class="n">path</span><span class="o">.</span><span class="n">exists</span><span class="p">(</span><span class="n">notebook_folder</span><span class="p">):</span>
     <span class="n">os</span><span class="o">.</span><span class="n">makedirs</span><span class="p">(</span><span class="n">notebook_folder</span><span class="p">)</span>
 </pre></div>
