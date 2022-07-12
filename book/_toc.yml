@@ -69,8 +69,8 @@ parts:
       title: Online Journal Club
     - file: community/templates/template-coworking-showtell
       title: Online Show and Tell
-    - file: community/templates/template-environments-sensors
-      title: Notebook Sensors
+    - file: community/templates/template-environments-exploration
+      title: Notebook Exploration
     - file: community/templates/template-environments-preprocessing
       title: Notebook Pre-processing
     - file: community/templates/template-environments-modelling
