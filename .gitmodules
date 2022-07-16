@@ -30,3 +30,7 @@
 	path = book/gallery/exploration/agriculture-exploration-cosmosuk
 	url = https://github.com/Environmental-DS-Book/agriculture-exploration-cosmosuk.git
 	branch = render
+[submodule "book/gallery/preprocessing/general-preprocessing-rainfall_noaa"]
+	path = book/gallery/preprocessing/general-preprocessing-rainfall_noaa
+	url = https://github.com/Environmental-DS-Book/general-preprocessing-rainfall_noaa
+	branch = render

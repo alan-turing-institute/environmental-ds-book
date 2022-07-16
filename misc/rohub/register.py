@@ -10,28 +10,27 @@ rohub.login(username=config.username, password=config.password)
 
 # metadata
 metadata_contribution = {
-    'environment': 'agriculture',
+    'environment': 'general',
     'topic': 'exploration',
-    'filename': 'agriculture-exploration-cosmosuk',
-    'title': 'Cosmos-UK soil moisture',
-    'inputs': {'input1':{'name':"Inputs of the Jupyter Notebook - Cosmos-UK soil moisture",
-                         'url':"https://doi.org/10.5281/zenodo.6567018"},
+    'filename': 'general-preprocessing-rainfall_noaa',
+    'title': 'Concatenating a gridded rainfall reanalysis dataset into a time series',
+    'inputs': {'input1':{'name':"Inputs of the Jupyter Notebook - Concatenating a gridded rainfall reanalysis dataset into a time series",
+                         'url':"https://downloads.psl.noaa.gov/Datasets/ncep.reanalysis.derived/surface_gauss/prate.sfc.mon.mean.nc"},
                },
-    'outputs': {'content': 'table and figures',
-               'url': "https://doi.org/10.5281/zenodo.6566942"},
+    'outputs': {'content': 'figures',
+               'url': "https://doi.org/10.5281/zenodo.6824189"},
     'author_GHuser': 'Environmental-DS-Book',
-    'references':{'ref1':{'name':'Daily and sub-daily hydrometeorological and soil data (2013-2019) [cosmos-uk]','url':"https://doi.org/10.5285/b5c190e4-e35d-40ea-8fbe-598da03a1185"},
-                  'ref2':{'name':'Soil water content in southern england derived from a cosmic-ray soil moisture observing system – cosmos-uk','url':"https://doi.org/10.1002/hyp.10929"},
-                  'ref3':{'name':'Cosmos: the cosmic-ray soil moisture observing system','url':"https://doi.org/10.5194/hess-16-4079-2012"}},
-    'sketch': {'title':'Image showing interactive plot of IceNet seasonal forecasts of Artic sea ice according to four lead times and months in 2020',
-               'path':'_temp/rohub/agriculture-exploration-cosmosuk/interactive_plotting.png'}
+    'references':{'ref1':{'name':'The NMC/NCAR 40-year reanalysis project','url':"http://doi.org/10.1175/1520-0477(1996)077%3C0437:TNYRP%3E2.0.CO;2"},
+                  'ref1':{'name':'Quantifying Causal Pathways of Teleconnections','url':"https://doi.org/10.1175/BAMS-D-20-0117.1"}},
+    'sketch': {'title':'Image showing interactive plot of global monthly precipitation mean computed from NCEP/NCAR reanalysis dataset',
+               'path':'_temp/rohub/general-preprocessing-rainfall_noaa/interactive_plotting.png'}
 }
 
 title_nb = metadata_contribution['title']
 
 metadata_rohub = {
     'title': f'{title_nb} (Jupyter Notebook) published in the Environmental Data Science book',
-    'research_areas': ['Environmental research', 'Soil science', 'Hydrology'],
+    'research_areas': ['Environmental research', 'Climatology'],
     'description': f'The research object refers to the {title_nb} notebook published in the Environmental Data Science book.',
     'ros_type': 'Executable Research Object',
     'ros_template': 'Executable Research Object folders structure',
@@ -44,31 +43,49 @@ ro_description=metadata_rohub['description']
 ro_ros_type=metadata_rohub['ros_type']
 ro_ros_template=metadata_rohub['ros_template']
 
-ro = rohub.ros_create(title=ro_title, research_areas=ro_research_areas, description=ro_description, ros_type=ro_ros_type, template=ro_ros_template)
+ro = rohub.ros_create(title=ro_title, research_areas=ro_research_areas, description=ro_description, ros_type=ro_ros_type, use_template=ro_ros_template)
 
 # edition
 authors=[
-        {"user_id": "https://github.com/acocac",
-         "display_name": "Alejandro Coca-Castro",
-         "name": "Alejandro Coca-Castro",
-         "affiliation": "The Alan Turing Institute"},
-        # {"user_id": "https://orcid.org/0000-0003-0808-3480",
-        #  "display_name": "Raquel Carmo",
-        #  "name": "Raquel Carmo",
-        #  "affiliation": "European Space Agency Φ-lab"},
+        {"user_id": "https://github.com/timo0thy",
+         "display_name": "Timothy Lam",
+         "name": "Timothy Lam",
+         "email": "tlam@turing.ac.uk",
+         "affiliation": "University of Exeter"},
+        {"user_id": "https://github.com/MarleneKretschmer",
+         "display_name": "Marlene Kretschmer",
+         "name": "Marlene Kretschmer",
+         "email": "m.j.a.kretschmer@reading.ac.uk",
+         "affiliation": "University of Reading"},
+        {"user_id": "https://github.com/svadams",
+         "display_name": "Samantha Adams",
+         "name": "Samantha Adams",
+         "email": "samantha.adams@metoffice.gov.uk",
+         "affiliation": "Met Office Informatics Lab"},
+        {"user_id": "https://github.com/RPrudden",
+         "display_name": "Rachel Prudden",
+         "name": "Rachel Prudden",
+         "email": "rachel.prudden@informaticslab.co.uk",
+         "affiliation": "Met Office Informatics Lab"},
+        {"user_id": "https://github.com/ESaggioro",
+         "display_name": "Elena Saggioro",
+         "name": "Elena Saggioro",
+         "email": "e.saggioro@pgr.reading.ac.uk",
+         "affiliation": "University of Reading"},
         ]
 
 ro.set_authors(agents=authors)
 
 reviewers=[
     {"user_id": "https://github.com/dorankhamis",
-     "display_name": "Doran Khamis",
-     "name": "Doran Khamis",
-     "affiliation": "UK Centre for Ecology & Hydrology"},
-    {"user_id": "https://github.com/mattfry-ceh",
-     "display_name": "Matt Fry",
-     "name": "Matt Fry",
-     "affiliation": "UK Centre for Ecology & Hydrology"},
+     "display_name": "Nick Homer",
+     "name": "Nick Homer",
+     "email": "nhomer@turing.ac.uk",
+     "affiliation": "University of Edinburgh"},
+    {"user_id": "https://github.com/acocac",
+     "display_name": "Alejandro Coca-Castro",
+     "name": "Alejandro Coca-Castro",
+     "affiliation": "The Alan Turing Institute"},
         ]
 
 
