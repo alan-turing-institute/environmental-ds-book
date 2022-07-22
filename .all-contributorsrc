@@ -130,7 +130,9 @@
       "avatar_url": "https://avatars.githubusercontent.com/u/8168508?v=4",
       "profile": "http://www.mn.uio.no/geo/english/people/adm/annefou/",
       "contributions": [
-        "ideas"
+        "ideas",
+        "infra",
+        "maintenance"
       ]
     }
   ],
