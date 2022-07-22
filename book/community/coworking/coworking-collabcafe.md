@@ -6,7 +6,7 @@
 :::
 
 _The Environmental Data Science_ Collaboration Cafes (or 'Cafés' with an accent) are virtual co-working spaces that are held fortnightly on the fourth Tuesday every two months for 2 hours.
-The schedule will be updated periodically on the [Google Calendar](The schedule for the show and tell can be viewed from the [community calendar](https://calendar.google.com/calendar/embed?src=environmental.ds.book%40gmail.com&ctz=Europe%2FLondon) as per the community requirement.
+The schedule will be updated periodically on the [Google Calendar] (The schedule for the show and tell can be viewed from the [community calendar](https://calendar.google.com/calendar/embed?src=environmental.ds.book%40gmail.com&ctz=Europe%2FLondon) as per the community requirement).
 
 We host these calls online using [Zoom](https://www.zoom.us/) where we make use of the [breakout rooms](#breakout-rooms) feature to allow small groups to use the 2 hours as best fits them.
 One or two members from the core team are always available on the call to support anyone wanting to learn more about collaborating on GitHub, getting a virtual tour of our GitHub repository or the book, and help you to make your first pull request (PR).
@@ -16,7 +16,7 @@ One or two members from the core team are always available on the call to suppor
 The schedule for the collaboration cafe can be viewed from the [community calendar](https://calendar.google.com/calendar/embed?src=environmental.ds.book%40gmail.com&ctz=Europe%2FLondon).
 We also announce calls through [Twitter](https://twitter.com/EnvDSbook).
 
-Though scheduled for 2 hours, we understand that for many interested participants it might be impossible to commit to the entire 2 hours on one or multiple occasions, therefore, you are welcome to join for as long as your schedule allows.
+Though scheduled for 2 hours, we understand that for many interested participants it might be impossible to commit to the entire 2 hours on one or multiple occasions. Therefore, you are welcome to join for as long as your schedule allows.
 
 If the current schedule of the online Collaboration Cafe is not suitable for your time zone, you are welcome to host a separate collaboration cafe for your community/time zone.
 Please open a new issue or reach out to _The Environmental Data Science_ team members for details.
@@ -66,12 +66,12 @@ The welcome, introductions, breaks, and the open discussion will all happen in t
 
 #### Pomodoro sessions
 
-Pomodoro sessions can happen either in the main zoom room in silence or in [breakout rooms](#breakout-rooms).
+Pomodoro sessions can happen either in the main Zoom room, in silence, or in [breakout rooms](#breakout-rooms).
 We won't record the Pomodoro parts of the Collaboration Cafe, nor conversations in the breakout rooms.
-You don't need to know in advance what you're going to do in those Pomodoro sessions!
+You don't need to know in advance what you're going to do in these Pomodoro sessions!
 There will always be someone who can help you develop a goal, or allocate a task that you can do in a couple of rounds of 20 minutes.
 
-#### If joining this call later
+#### If joining the call later
 
 During a typical Pomodoro session, attendees are sent to breakout rooms based on the topic they are working on.
 If you join later, you will be able to check the remaining time in the ongoing Pomodoro by opening the shared clock in your browser (link should be provided in the shared notes).
@@ -81,10 +81,10 @@ If you know in advance what time you will join the coworking call, you can let t
 
 ### Sign-up and icebreaker
 
-If you're interested in joining the next Collaboration Cafe, please let the organisers know by adding your name to the **Sign Up** section of the [HackMD notes page](https://hackmd.io/@environmental-ds/collaboration-cafe#Sign-up-below).
+If you are interested in joining the next Collaboration Cafe, please let the organisers know by adding your name to the **Sign Up** section of the [HackMD notes page](https://hackmd.io/@environmental-ds/collaboration-cafe#Sign-up-below).
 Adding your name is helpful for the organisers, so they can prepare for the call.
 But don't worry if you don't sign up in advance.
-It's ok to join at any time for as long as you'd like.
+It's okay to join at any time for as long as you'd like.
 
 In addition to your names, we will encourage everyone to add a short response to an icebreaker question, that will help us all learn something personal about all the different people on the call.
 
@@ -103,7 +103,7 @@ Here's an example from the first Collaboration Cafe in June 2021:
 > *Name + Something you watch (video, movie, documentary. etc) recently that was inspiring for you? + emoji that best explain your day*
 > *(Remember that this is a public document. You can use a pseudonym if you'd prefer.)*
 >
-> * Alejandro + [Black Holes: The Edge of All We Know](https://www.rottentomatoes.com/m/black_holes_the_edge_of_all_we_know) + :milky_way:
+> * Alejandro + [Black Holes: The Edge of All We Know](https://www.rottentomatoes.com/m/black_holes_the_edge_of_all_we_know) + 🌌
 > * Scott + [Coded Bias](https://www.imdb.com/title/tt11394170/) + 🧠
 
 As you can see, there's a reminder in the notes that they are in a public document.
@@ -120,7 +120,7 @@ These don't have to be Turing Way "branded"!
 
 We want the Collaboration Cafes to be a place that welcomes new and old members to _The Turing Way_ community.
 
-In brainstorming these events, we imagined that some people may want to add new material that they've created before to the book, others may want to finish a contribution that they've started, and still others might want to learn new skills including _how_ to contribute to _The Turing Way_.
+In brainstorming these events, we imagined that some people may want to add new material that they've created to the book, others may want to finish a contribution that they've started, and still others might want to learn new skills including _how_ to contribute to _The Environmental Daata Science book_.
 These are **all** great reasons to join us!
 
 We'll always have someone on the team available to help you brainstorm your first contribution, and answer any questions about how to incorporate your work.
@@ -158,7 +158,7 @@ Breakout room conversation topics might include:
 * Finding a good first issue
 * Reading and giving feedback on a chapter with the original author
 * Reading and giving feedback on a chapter with a new reader
-* Brainstorming _where_ your topics could best fit into _The Turing Way_
+* Brainstorming _where_ your topics could best fit into _The Environmental Data Science book_
 * Bug squashing - removing barriers (technical and otherwise)
 
 The person chairing the call will put you into the specific breakout rooms for the Pomodoro sessions and then bring you back into the main room for the 5-minute breaks and the broader conversation at the end of the Collaboration Cafe.

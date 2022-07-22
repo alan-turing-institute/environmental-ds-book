@@ -2,8 +2,9 @@ name: envds-book
 channels:
   - conda-forge
 dependencies:
-  - python=3.8
+  - python=3.9
   - pip
   - pip:
-        - jupyter-book==0.11.2
+        - jupyter-book==0.12.3
+        - ghp-import
         - sphinx_togglebutton

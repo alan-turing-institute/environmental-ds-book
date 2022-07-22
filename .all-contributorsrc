@@ -134,6 +134,60 @@
         "infra",
         "maintenance"
       ]
+    },
+    {
+      "login": "mattfry-ceh",
+      "name": "Matt Fry",
+      "avatar_url": "https://avatars.githubusercontent.com/u/12858205?v=4",
+      "profile": "https://github.com/mattfry-ceh",
+      "contributions": [
+        "review"
+      ]
+    },
+    {
+      "login": "dorankhamis",
+      "name": "Doran Khamis",
+      "avatar_url": "https://avatars.githubusercontent.com/u/6764290?v=4",
+      "profile": "https://github.com/dorankhamis",
+      "contributions": [
+        "review"
+      ]
+    },
+    {
+      "login": "timo0thy",
+      "name": "timo0thy",
+      "avatar_url": "https://avatars.githubusercontent.com/u/51698422?v=4",
+      "profile": "https://github.com/timo0thy",
+      "contributions": [
+        "content"
+      ]
+    },
+    {
+      "login": "NHomer-Edi",
+      "name": "NHomer-Edi",
+      "avatar_url": "https://avatars.githubusercontent.com/u/73164641?v=4",
+      "profile": "https://github.com/NHomer-Edi",
+      "contributions": [
+        "content"
+      ]
+    },
+    {
+      "login": "edwardchalstrey1",
+      "name": "Ed Chalstrey",
+      "avatar_url": "https://avatars.githubusercontent.com/u/5486164?v=4",
+      "profile": "http://edchalstrey.com/",
+      "contributions": [
+        "ideas"
+      ]
+    },
+    {
+      "login": "nbarlowATI",
+      "name": "nbarlowATI",
+      "avatar_url": "https://avatars.githubusercontent.com/u/33832774?v=4",
+      "profile": "https://github.com/nbarlowATI",
+      "contributions": [
+        "review"
+      ]
     }
   ],
   "contributorsPerLine": 7,
@@ -141,5 +195,6 @@
   "projectOwner": "alan-turing-institute",
   "repoType": "github",
   "repoHost": "https://github.com",
-  "skipCi": true
+  "skipCi": true,
+  "contributorsSortAlphabetically": true
 }

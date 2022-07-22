@@ -1,7 +1,7 @@
 (cm-readings)=
 # Interesting readings
 
-*This section consist of a set of suggested readings for this book by environment or topic of interest.*
+*This section consist of a set of suggested readings for this book by topic of interest.*
 
 ## Digital Twins
 :::{rubric} Conceptual

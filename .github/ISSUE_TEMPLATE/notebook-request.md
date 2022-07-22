@@ -16,7 +16,7 @@ labels: ["notebook"]
 <!--- Mark a single option applicable for the notebook -->
 <!--- If other, please specify -->
 
-- [ ] Sensor visualisation
+- [ ] Exploration
 - [ ] Preprocessing
 - [ ] Modelling
 - [ ] Post-processing

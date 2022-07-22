@@ -11,3 +11,5 @@
 .vscode/settings.json
 .Rproj.user
 .idea
+
+_temp/

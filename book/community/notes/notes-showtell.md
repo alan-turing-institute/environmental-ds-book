@@ -5,9 +5,9 @@ tags: environmental-ds, show-and-tell
 
 *A **permanent document** exists in the HackMD: [https://hackmd.io/@environmental-ds/show-tell](https://hackmd.io/@environmental-ds/show-tell) that is regularly updated with the empty template for next event.*
 
-## _The Environmental Data Science_ ⛰ 🌳 🏙️ ❄️ 🔥 🌊  online Show & Tell
+# _The Environmental Data Science_ ⛰ 🌳 🏙️ ❄️ 🔥 🌊  online Show & Tell
 
-### 25 January 2022
+## 25 January 2022
 
 Thank you for joining the _The Environmental Data Science_'s online Show & Tell 🎬 💬 ! 
 
