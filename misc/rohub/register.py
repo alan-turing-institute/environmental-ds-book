@@ -14,14 +14,14 @@ metadata_contribution = {
     'topic': 'exploration',
     'filename': 'general-preprocessing-rainfall_noaa',
     'title': 'Concatenating a gridded rainfall reanalysis dataset into a time series',
-    'inputs': {'input1':{'name':"Inputs of the Jupyter Notebook - Concatenating a gridded rainfall reanalysis dataset into a time series",
+    'inputs': {'input1':{'name':"of the Jupyter Notebook - Concatenating a gridded rainfall reanalysis dataset into a time series",
                          'url':"https://downloads.psl.noaa.gov/Datasets/ncep.reanalysis.derived/surface_gauss/prate.sfc.mon.mean.nc"},
                },
     'outputs': {'content': 'figures',
                'url': "https://doi.org/10.5281/zenodo.6824189"},
     'author_GHuser': 'Environmental-DS-Book',
     'references':{'ref1':{'name':'The NMC/NCAR 40-year reanalysis project','url':"http://doi.org/10.1175/1520-0477(1996)077%3C0437:TNYRP%3E2.0.CO;2"},
-                  'ref1':{'name':'Quantifying Causal Pathways of Teleconnections','url':"https://doi.org/10.1175/BAMS-D-20-0117.1"}},
+                  'ref2':{'name':'Quantifying Causal Pathways of Teleconnections','url':"https://doi.org/10.1175/BAMS-D-20-0117.1"}},
     'sketch': {'title':'Image showing interactive plot of global monthly precipitation mean computed from NCEP/NCAR reanalysis dataset',
                'path':'_temp/rohub/general-preprocessing-rainfall_noaa/interactive_plotting.png'}
 }
