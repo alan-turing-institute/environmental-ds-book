@@ -68,6 +68,8 @@ parts:
   - file: community/templates
     title: Template Collection
     sections:
+    - file: community/templates/template-review-checklist
+      title: Review Checklist
     - file: community/templates/template-coworking-collabcafe
       title: Online Collaboration Cafe
     - file: community/templates/template-coworking-journalclub
