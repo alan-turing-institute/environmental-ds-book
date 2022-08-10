@@ -1,91 +1,44 @@
-(cm-template-coworking-collabcafe)=
-# Collaboration Cafe Call Template
+(cm-template-review-checklist)=
+# Review Checklist Template
 
 :::{note}
-*This HackMD is re-used under a CC-BY license from [_The Turing Way_ collaboration cafe template](https://github.com/alan-turing-institute/the-turing-way/blob/master/book/website/community-handbook/templates/template-coworking-collabcafe.md)*
-
-*A **permanent document** exists in the HackMD: [https://hackmd.io/@environmental-ds/collaboration-cafe](https://hackmd.io/@environmental-ds/collaboration-cafe) that is regularly updated with the empty template for next event.*
+The checklist template follows the suggested review criteria for [SciPy Proceedings](https://github.com/scipy-conference/scipy_proceedings/blob/632099a7e62d192a5d66156dc70547fd9f35cb81/review_criteria.md) and 
+[Turing Data Stories](https://github.com/alan-turing-institute/TuringDataStories/blob/3675d78f5a6641500392b16b987fc22756a1fa1d/.github/ISSUE_TEMPLATE/review_template.md)
 :::
 
-## _The Environmental Data Science_ ⛰ 🌳 🏙️ ❄️ 🔥 🌊  online Collaboration Cafe 
+## Review Checklist
 
-### DATE MONTH YEAR | Theme
+#### Code of conduct
+- [ ] I confirm that I read and will adhere to the Environmental Data Science [code of conduct](https://github.com/alan-turing-institute/environmental-ds-book/blob/master/CODE_OF_CONDUCT.md).
 
-Thank you for joining the _The Environmental Data Science_'s online Collaboration Cafe! 
+#### General checks
+- [ ] **Notebook:** Is the source code for this data story available as a notebook in the linked pull request?
+- [ ] **Contribution and authorship:** Does the author list seem appropriate and complete?
+- [ ] **Scope and eligibility:** Does the submission contain an original and complete analysis according to the [theme](https://github.com/alan-turing-institute/environmental-ds-book/blob/master/book/community/guidelines/guidelines-submission.md#navigation) selected?
 
-We're delighted to have you here ☕ ✨ 🍰
+#### Reproducibility
+- [ ] Does the notebook run in a local environment?
+- [ ] Does the notebook build and run in binder?
+- [ ] Are all data sources openly accessible and properly cited (e.g. with citation to a persistent DOI) in the heading section?
 
-**What?** *The Environmental Data Science is a **community aiming to learn and discuss scientific software practises/developments fostered by AI and data science for a better understanding of our Planet Earth and environmental systems**. 
-[Collaboration Cafes](https://github.com/alan-turing-institute/environmental-ds-book/blob/master/book/community/coworking/coworking-collabcafe.md) are **online coworking calls** that engage anyone interested in learning and discussing about relevant themes in AI and data science to environmental studies*.
+#### Pedagogy
+- [ ] Are the notebook purpose and highlights clear?
+- [ ] Does the notebook demonstrate some specific data analysis or visualisation techniques?
+- [ ] Is the notebook well documented, using both markdown cells and comments in code cells?
+- [ ] Does the conclusion section provide clear and concise final say on the tools, analysis and/or datasets used?
+- [ ] Is the notebook narrative well written (it does not require editing for structure, language, or writing quality)?
 
-*Read more about it here: https://the-turing-way.netlify.app/community-handbook/coworking.html*
+#### Ethical 
 
-**Who?** ***Everyone** interested in reproducible, ethical, and inclusive data science and research for environmental studies are welcome to join the full or any part of The Environmental Data Science project, community, and/or this call.*
+- [ ] Is any linkage of datasets in the notebook unlikely to lead to an increased risk of the personal identification of individuals?
+- [ ] Is the notebook truthful and clear about any limitations of the analysis (and potential biases in data and/or tools)?
+- [ ] Is the notebook unlikely to lead to negative social outcomes, such as (but not limited to) increasing discrimination or injustice?
 
-**When?** DD Month YYYY, HH:MM BST (link for local time from https://arewemeetingyet.com)
+#### Other Requirements
+- [ ] All mentioned software should be formally and consistently cited wherever possible.
+- [ ] Acronyms should be spelled out upon first mention.
+- [ ] Licence conditions on images and figures must be respected (Creative Commons, etc.).
 
-**How?** *Zoom link will be provided 10 minutes before the call*
+## AOB
 
-***All questions, comments and recommendations are welcome!***
-
-### Useful links
-
-* All about [online Collaboration Cafes](https://github.com/alan-turing-institute/environmental-ds-book/blob/master/book/community/coworking/coworking-collabcafe.md)
-
-### Code of conduct
-
-* [Take a moment to read this](https://github.com/alan-turing-institute/environmental-ds-book/blob/master/CODE_OF_CONDUCT.md)
-
-### Sign up below
-
-*Name + <A fun Icebreaker> + an emoji to represent it ([emoji cheatsheet](https://github.com/ikatyang/emoji-cheat-sheet/blob/master/README.md))*
-
-*(Remember that this is a public document. You can use a pseudonym if you'd prefer.)*
-
-### Conversation Starters
-
-*Advertise and promote your event, or anything exciting you're working on.* ✨
-
-*
-*
-
-### Schedule
-
-https://cuckoo.team/environmental-ai
-
-| Duration | Activity |
-| ---- | -------- |
-| Start | 👋 Welcome, code of conduct review |
-| 10 mins | Introductions and personal goal setting |
-| 20 mins | 🍅 1st Pomodoro session |
-| 5 mins | ☕️ Break |
-| 20 mins | 🍅 2nd Pomodoro session |
-| 5 mins | ☕️ Break  |
-| 20 mins | 🍅 3rd Pomodoro session |
-| 5 mins | ☕️ Break |
-| 30 mins | Open discussion: celebrations, reflections and future directions |
-| 5 mins | 👋 Close |
-
-### Breakout rooms: Topic proposals
-
-*If you have an idea for a topic you'd like to discuss in a breakout room, please add it below and put your name next to it. If you like one of the topics that is already suggested, please add your name next to that one. Team work makes the dream work. For more information about breakout rooms see [the description on GitHub](https://github.com/alan-turing-institute/the-turing-way/blob/master/project_management/online-collaboration-cafe.md#breakout-rooms).*
-
-Topic for breakout / Names
-
-*
-*
-
-### Notes and questions
-
-*
-*
-
-### Request for reviews!
-
-*
-*
-
-### Feedback at the end of the call
-
-*
-*
+<!--Please write here any considerations to be taken when reviewing this story-->
