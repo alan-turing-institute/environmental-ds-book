@@ -63,6 +63,6 @@ The project also thanks the [OLS-4 training programme](https://openlifesci.org/o
 
 ## Credits
 
-This project is created using the excellent open source [Jupyter Book project](https://jupyterbook.org/) and the [executablebooks/cookiecutter-jupyter-book template](https://github.com/executablebooks/cookiecutter-jupyter-book).
+This project is created using the excellent open source [Jupyter Book project](https://jupyterbook.org/) and the [executablebooks/cookiecutter-jupyter-book template](https://github.com/executablebooks/cookiecutter-jupyter-book). The individual notebooks repositories are hosted at the [Environmental-DS-Book](https://github.com/Environmental-DS-Book) organisation. The **How to run** section in the `README` of each notebook repository is adapted from the [Project Pythia Cookbook](https://cookbooks.projectpythia.org/) project.   
 
-We also acknowledge the template of `README`, `LICENSE` and `community-handbook` guide, in particular the `coworking` section, provided by [the Turing Way project](https://github.com/alan-turing-institute/the-turing-way). 
+We also acknowledge the template of `README`, `LICENSE` and `community-handbook` guide, in particular the `coworking` section, provided by [the Turing Way project](https://github.com/alan-turing-institute/the-turing-way). Other templates adapted include the review checklist/criteria templates provided by [Turing Data Stories](https://github.com/alan-turing-institute/TuringDataStories/blob/master/.github/ISSUE_TEMPLATE/review_template.md) and [SciPy Proceedings](https://github.com/scipy-conference/scipy_proceedings/blob/632099a7e62d192a5d66156dc70547fd9f35cb81/review_criteria.md).

@@ -12,7 +12,7 @@ The checklist template follows the suggested review criteria for [SciPy Proceedi
 - [ ] I confirm that I read and will adhere to the Environmental Data Science [code of conduct](https://github.com/alan-turing-institute/environmental-ds-book/blob/master/CODE_OF_CONDUCT.md).
 
 #### General checks
-- [ ] **Notebook:** Is the source code for this data story available as a notebook in the linked pull request?
+- [ ] **Notebook:** Is the notebook file part of the PR?
 - [ ] **Contribution and authorship:** Does the author list seem appropriate and complete?
 - [ ] **Scope and eligibility:** Does the submission contain an original and complete analysis according to the [theme](https://github.com/alan-turing-institute/environmental-ds-book/blob/master/book/community/guidelines/guidelines-submission.md#navigation) selected?
 
