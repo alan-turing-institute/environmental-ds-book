@@ -6,10 +6,10 @@ This section covers guidelines related to effective and inclusive collaboration 
 ## General
 Inspired by [the Turing Way Guide for Collaboration](https://the-turing-way.netlify.app/collaboration/maintain-review/maintain-review-maintenance.html), the Environmental DS book has the following defined community roles: 
 
-* Maintainers: to provide support with keeping the existing source code updated by keeping track of new contributions and/or update versions of the Jupyter book.
-* Contributors: to create/design narrative and/or executable content.
-* Reviewer: to review narrative and/or executable content.
-* Reader/User: to read/share content, occasionally raise errors such as typos and bugs and fix them.
+* **Maintainers**: to provide support with keeping the existing source code updated by keeping track of new contributions and/or update versions of the Jupyter book.
+* **Contributors**: to create/design narrative and/or executable content.
+* **Reviewer**: to review narrative and/or executable content.
+* **Reader/User**: to read/share content, occasionally raise errors such as typos and bugs and fix them.
 
 ## Executable notebooks
 We present below the main stages and roles involved in the publication of EnvDS executable notebooks.
