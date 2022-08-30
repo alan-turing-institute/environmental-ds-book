@@ -20,7 +20,7 @@ Preparing and publishing EnvDS notebooks are like seedlings.
 Each of them is unique, however there is a common ground i.e. stages in the research life cycle of each one. 
 The diagram below aims to illustrate the main stages of the review process and publishing EnvDS notebooks represented by plant growth icons (inner circle) and some auxiliary icons self-describing the main task per stage.
 
-```{figure} figures/publication-stages.jpg
+```{figure} ../figures/publication_stages.jpg
 ---
 name: publication-stages
 alt: Diagram illustrating the publication of EnvDS notebooks according to six stages representing by icons arranged in two inner circles around an u-turn arrow. Icons in the inner circle represent publication stages using plant growth cycle. The external inner circle represents with more general-focused circles. 
@@ -46,12 +46,12 @@ Commits and conversations should be conducted in the *review branch* created by 
 
 ### Roles
 
-```{figure} figures/publication-roles.jpg
+```{figure} ../figures/publication_roles.jpg
 ---
 name: publication-roles
 alt: Diagram illustrating the roles within the publication process of EnvDS notebooks according to six stages representing by icons arranged in the first column. 
 ---
-Illustration by [@acocac](https://github.com/acocac). Zenodo. [http://doi.org/10.5281/zenodo.7030142](https://doi.org/10.5281/zenodo.7030142)
+Illustration by [@acocac](https://github.com/acocac). Optionally involvement is highlighted with a color Zenodo. [http://doi.org/10.5281/zenodo.7030142](https://doi.org/10.5281/zenodo.7030142)
 ```
 
 * Corresponding author: 
