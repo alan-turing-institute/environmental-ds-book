@@ -37,12 +37,12 @@ The stage includes ensuring the notebook repo with a first draft version is tran
 The notebook should generate the same outputs as the initial repository hosted in the GitHub account of the corresponding author. 
 The editor will create a review branch in which will tag corresponding author and reviewers indicating the main aspects of the review process. 
 
-* Review round(s): corresponding author and reviewer(s) work together to improve the proposed plain and executable content of the notebook. 
+* **Review round(s)**: corresponding author and reviewer(s) work together to improve the proposed plain and executable content of the notebook. 
 Commits and conversations should be conducted in the *review branch* created by the editorial team. 
 
-* Post-print: once reviewer(s) and editor(s) recommend the notebook for publication, the editorial team will share proofs (the draft of the final formatting) through a preview in the main repo of the Environmental DS book.
+* **Post-print**: once reviewer(s) and editor(s) recommend the notebook for publication, the editorial team will share proofs (the draft of the final formatting) through a preview in the main repo of the Environmental DS book.
 
-* Publication: refers to the dissemination of the notebook in the official communication channels of the project e.g.Twitter and optionally by other communication channels of preference by authors, reviewers and/or community.
+* **Publication**: refers to the dissemination of the notebook in the official communication channels of the project e.g.Twitter and optionally by other communication channels of preference by authors, reviewers and/or community.
 
 ### Roles
 
@@ -54,10 +54,10 @@ alt: Diagram illustrating the roles within the publication process of EnvDS note
 Illustration by [@acocac](https://github.com/acocac). Optionally involvement is highlighted with a color Zenodo. [http://doi.org/10.5281/zenodo.7030142](https://doi.org/10.5281/zenodo.7030142)
 ```
 
-* Corresponding author: 
-* Reviewer:
-* Moderator:
-* Editorial team:
-* Community: 
+* **Corresponding author**: 
+* **Reviewer**:
+* **Moderator**:
+* **Editorial team**:
+* **Community**: 
 
 We cover further details of submission and reviewing processes in the following subsections. 
