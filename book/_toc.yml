@@ -4,9 +4,16 @@ parts:
 - caption: Preamble
   chapters:
   - file: preamble/about
+    title: About
   - file: preamble/who-for
+    title: Audience
   - file: preamble/how-to
+    title: Usage
   - file: preamble/attribution
+    title: Citation and reuse
+  - file: preamble/contribute
+    title: Contribute
+
 - caption: Gallery
   chapters:
   - file: gallery/exploration
@@ -39,12 +46,20 @@ parts:
 - caption: Community
   chapters:
   - file: community/guidelines
-    title: Publishing guidelines
+    title: Guidelines
     sections:
-    - file: community/guidelines/guidelines-submission
-      title: Submission
+    - file: community/guidelines/guidelines-idea
+      title: Notebook idea
+    - file: community/guidelines/guidelines-preparation
+      title: Preparation
     - file: community/guidelines/guidelines-reviewing
       title: Reviewing
+    - file: community/guidelines/guidelines-publication
+      title: Publication
+    - file: community/guidelines/guidelines-postpublication
+      title: Post-publication
+    - file: community/guidelines/guidelines-faq
+      title: FAQ
   - file: community/coworking
     title: Coworking Calls
     sections:
@@ -82,8 +97,6 @@ parts:
       title: Notebook Modelling
     - file: community/templates/template-environments-postprocessing
       title: Notebook Post-processing
-  - file: community/readings
-    title: Interesting readings
 - caption: Afterword
   chapters:
   - file: afterword/glossary
