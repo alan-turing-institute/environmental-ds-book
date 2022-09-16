@@ -1,4 +1,4 @@
-name: envds-book
+name: eds-book
 channels:
   - conda-forge
 dependencies:
