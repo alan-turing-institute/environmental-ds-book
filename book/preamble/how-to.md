@@ -28,7 +28,7 @@ From within the `enviromental-ds-book` directory in your favorite terminal, do t
 
 ```
 conda env create --file environment.yml
-conda activate envds-book
+conda activate eds-book
 ```
 
 Now you are ready to run `jupyter lab` in your terminal to work with various notebooks and projects from a single environment file on your local computer.
