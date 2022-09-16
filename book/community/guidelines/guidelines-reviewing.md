@@ -1,6 +1,8 @@
 (cm-guidelines-reviewing)=
 # Reviewing guidelines
 
+Authors will respond to reviewer-raised issues (if any are raised) on the submission repository’s issue tracker. Reviewer and editor contributions, like any other contributions, should be acknowledged in the repository.
+
 ## Context
 As a reviewer, you contribute to the technical quality of the content published by our community. 
 
