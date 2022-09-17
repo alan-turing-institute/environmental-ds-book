@@ -769,7 +769,7 @@ const thebe_selector_output = ".output, .cell_output"
 <span class="sphinx-bs badge badge-primary">Urban</span>
 <span class="sphinx-bs badge badge-secondary">Exploration</span></p>
 <p><a class="reference external" href="https://w3id.org/ro-id/1b8921af-e77f-4ccf-ae38-4813cdceba0f"><img alt="RoHub - FAIR Executable Research Object" src="https://img.shields.io/badge/RoHub-FAIR_Executable_Research_Object-2ea44f?logo=Open+Access&amp;logoColor=blue" /></a></p>
-<p><a class="reference external" href="https://mybinder.org/v2/gh/Environmental-DS-Book/urban-exploration-climate_ukv/main?labpath=urban-exploration-climate_ukv.ipynb"><img alt="Binder" src="https://mybinder.org/badge_logo.svg" /></a></p>
+<p><a class="reference external" href="https://notebooks.gesis.org/binder/v2/gh/Environmental-DS-Book/urban-exploration-climate_ukv/main?labpath=urban-exploration-climate_ukv.ipynb"><img alt="Binder" src="https://mybinder.org/badge_logo.svg" /></a></p>
 <div class="section" id="context">
 <h2>Context<a class="headerlink" href="#context" title="Permalink to this headline">¶</a></h2>
 <div class="section" id="purpose">
@@ -841,7 +841,9 @@ made openly available as part of the Met Office contribution to the COVID 19 mod
 
 <span class="kn">from</span> <span class="nn">iris.fileformats.pp</span> <span class="kn">import</span> <span class="n">EARTH_RADIUS</span>
 
+<span class="kn">import</span> <span class="nn">requests</span>
 <span class="kn">import</span> <span class="nn">urllib.request</span>
+<span class="kn">import</span> <span class="nn">pooch</span>
 
 <span class="kn">import</span> <span class="nn">numpy</span> <span class="k">as</span> <span class="nn">np</span>
 <span class="kn">import</span> <span class="nn">matplotlib.pyplot</span> <span class="k">as</span> <span class="nn">plt</span>
@@ -873,13 +875,22 @@ made openly available as part of the Met Office contribution to the COVID 19 mod
 <div class="cell_input docutils container">
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">filepath</span> <span class="o">=</span> <span class="s1">&#39;https://metdatasa.blob.core.windows.net/covid19-response-non-commercial/metoffice_ukv_daily/t1o5m_mean/&#39;</span>
 <span class="n">filename</span> <span class="o">=</span> <span class="s1">&#39;ukv_daily_t1o5m_mean_20150801.nc&#39;</span>
-<span class="n">urllib</span><span class="o">.</span><span class="n">request</span><span class="o">.</span><span class="n">urlretrieve</span><span class="p">(</span><span class="n">filepath</span><span class="o">+</span><span class="n">filename</span><span class="p">,</span> <span class="n">os</span><span class="o">.</span><span class="n">path</span><span class="o">.</span><span class="n">join</span><span class="p">(</span><span class="n">notebook_folder</span><span class="p">,</span> <span class="n">filename</span><span class="p">))</span>
+
+<span class="n">response</span> <span class="o">=</span> <span class="n">requests</span><span class="o">.</span><span class="n">get</span><span class="p">(</span><span class="n">filepath</span><span class="o">+</span><span class="n">filename</span><span class="p">)</span>
+<span class="k">if</span> <span class="n">response</span><span class="o">.</span><span class="n">status_code</span> <span class="o">==</span> <span class="mi">200</span><span class="p">:</span>
+    <span class="n">urllib</span><span class="o">.</span><span class="n">request</span><span class="o">.</span><span class="n">urlretrieve</span><span class="p">(</span><span class="n">filepath</span><span class="o">+</span><span class="n">filename</span><span class="p">,</span> <span class="n">os</span><span class="o">.</span><span class="n">path</span><span class="o">.</span><span class="n">join</span><span class="p">(</span><span class="n">notebook_folder</span><span class="p">,</span> <span class="n">filename</span><span class="p">))</span>
+<span class="k">else</span><span class="p">:</span>
+    <span class="n">pooch</span><span class="o">.</span><span class="n">retrieve</span><span class="p">(</span>
+        <span class="n">url</span><span class="o">=</span><span class="s2">&quot;doi:10.5281/zenodo.7087009/ukv_daily_t1o5m_mean_20150801.nc&quot;</span><span class="p">,</span>
+        <span class="n">known_hash</span><span class="o">=</span><span class="s2">&quot;md5:b71e092ead092f419f12073ddf2d3256&quot;</span><span class="p">,</span>
+        <span class="n">path</span><span class="o">=</span><span class="n">notebook_folder</span><span class="p">,</span>
+        <span class="n">fname</span><span class="o">=</span><span class="s2">&quot;ukv_daily_t1o5m_mean_20150801.nc&quot;</span>
+    <span class="p">)</span>
 </pre></div>
 </div>
 </div>
 <div class="cell_output docutils container">
-<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>(&#39;./urban-sensors-climate_ukv/ukv_daily_t1o5m_mean_20150801.nc&#39;,
- &lt;http.client.HTTPMessage at 0x7fe8047130a0&gt;)
+<div class="output stderr highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Downloading data from &#39;doi:10.5281/zenodo.7087009/ukv_daily_t1o5m_mean_20150801.nc&#39; to file &#39;/home/runner/work/urban-exploration-climate_ukv/urban-exploration-climate_ukv/urban-sensors-climate_ukv/ukv_daily_t1o5m_mean_20150801.nc&#39;.
 </pre></div>
 </div>
 </div>
@@ -911,7 +922,7 @@ made openly available as part of the Met Office contribution to the COVID 19 mod
 </div>
 </div>
 <div class="cell_output docutils container">
-<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>&lt;cartopy.mpl.gridliner.Gridliner at 0x7fe7c93772b0&gt;
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>&lt;cartopy.mpl.gridliner.Gridliner at 0x7fa235240e20&gt;
 </pre></div>
 </div>
 <img alt="../../../_images/urban-exploration-climate_ukv_9_1.png" src="../../../_images/urban-exploration-climate_ukv_9_1.png" />
@@ -955,7 +966,7 @@ made openly available as part of the Met Office contribution to the COVID 19 mod
 </div>
 </div>
 <div class="cell_output docutils container">
-<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>&lt;cartopy.mpl.gridliner.Gridliner at 0x7fe7c92676d0&gt;
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>&lt;cartopy.mpl.gridliner.Gridliner at 0x7fa234dadd60&gt;
 </pre></div>
 </div>
 <img alt="../../../_images/urban-exploration-climate_ukv_13_1.png" src="../../../_images/urban-exploration-climate_ukv_13_1.png" />
@@ -991,7 +1002,7 @@ made openly available as part of the Met Office contribution to the COVID 19 mod
 </div>
 </div>
 <div class="cell_output docutils container">
-<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>&lt;cartopy.mpl.gridliner.Gridliner at 0x7fe7c8eeb7f0&gt;
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>&lt;cartopy.mpl.gridliner.Gridliner at 0x7fa234cff850&gt;
 </pre></div>
 </div>
 <img alt="../../../_images/urban-exploration-climate_ukv_17_1.png" src="../../../_images/urban-exploration-climate_ukv_17_1.png" />
@@ -1064,7 +1075,7 @@ made openly available as part of the Met Office contribution to the COVID 19 mod
 <p><strong>Contact</strong>: If you have any suggestion or report an issue with this notebook, feel free to <a class="reference external" href="https://github.com/alan-turing-institute/environmental-ds-book/issues/new/choose">create an issue</a> or send a direct message to <a class="reference external" href="mailto:environmental&#46;ds&#46;book&#37;&#52;&#48;gmail&#46;com">environmental<span>&#46;</span>ds<span>&#46;</span>book<span>&#64;</span>gmail<span>&#46;</span>com</a>.</p>
 <div class="cell tag_remove-input docutils container">
 <div class="cell_output docutils container">
-<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Last tested: 2022-06-14
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Last tested: 2022-09-16
 </pre></div>
 </div>
 </div>
