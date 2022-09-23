@@ -21,7 +21,7 @@ metadata_contribution = {
     'requirements_txt': False
 }
 
-title_nb = metadata_contribution['title']
+filename_nb = metadata_contribution['filename']
 
 myros = rohub.list_my_ros()
 
@@ -83,7 +83,7 @@ rese_description = f"Conda environment when user want to have the same libraries
 ro.add_external_resource(res_type=rese_res_type, input_url=rese_file_url, title=rese_title, description=rese_description, folder='tool')
 
 ##add location
-geojson = os.path.join('book/_temp/rohub',title_nb,'studyarea.geojson')
+geojson = os.path.join('_temp/rohub',filename_nb,'studyarea.geojson')
 ro.add_geolocation(body_specification_json=geojson)
 
 ##MODIFY
