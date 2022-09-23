@@ -12,25 +12,25 @@ rohub.login(username=config.username, password=config.password)
 metadata_contribution = {
     'environment': 'general',
     'topic': 'exploration',
-    'filename': 'general-preprocessing-rainfall_noaa',
-    'title': 'Concatenating a gridded rainfall reanalysis dataset into a time series',
-    'inputs': {'input1':{'name':"of the Jupyter Notebook - Concatenating a gridded rainfall reanalysis dataset into a time series",
-                         'url':"https://downloads.psl.noaa.gov/Datasets/ncep.reanalysis.derived/surface_gauss/prate.sfc.mon.mean.nc"},
+    'filename': 'general-exploration-landcover_io',
+    'title': 'Exploring Land Cover Data (Impact Observatory)',
+    'inputs': {'input1':{'name':"of the Jupyter Notebook - Exploring Land Cover Data (Impact Observatory)",
+                         'url':"https://planetarycomputer.microsoft.com/api/stac/v1/collections/io-lulc"},
                },
-    'outputs': {'content': 'figures',
-               'url': "https://doi.org/10.5281/zenodo.6824189"},
+    'outputs': {'content': 'figures and tables',
+               'url': "https://doi.org/10.5281/zenodo.7101976"},
     'author_GHuser': 'Environmental-DS-Book',
-    'references':{'ref1':{'name':'The NMC/NCAR 40-year reanalysis project','url':"http://doi.org/10.1175/1520-0477(1996)077%3C0437:TNYRP%3E2.0.CO;2"},
-                  'ref2':{'name':'Quantifying Causal Pathways of Teleconnections','url':"https://doi.org/10.1175/BAMS-D-20-0117.1"}},
+    'references':{'ref1':{'name':'Global land use / land cover with Sentinel 2 and deep learning','url':"http://doi.org/10.1109/IGARSS47720.2021.9553499"},
+                  'ref2':{'name':'Impact Observatory - Methodology & Accuracy Summary','url':"https://www.impactobservatory.com/static/lulc_methodology_accuracy-ee742a0a389a85a0d4e7295941504ac2.pdf"}},
     'sketch': {'title':'Image showing interactive plot of global monthly precipitation mean computed from NCEP/NCAR reanalysis dataset',
-               'path':'_temp/rohub/general-preprocessing-rainfall_noaa/interactive_plotting.png'}
+               'path':'_temp/rohub/general-exploration-landcover_io/interactive_plotting.png'}
 }
 
 title_nb = metadata_contribution['title']
 
 metadata_rohub = {
     'title': f'{title_nb} (Jupyter Notebook) published in the Environmental Data Science book',
-    'research_areas': ['Environmental research', 'Climatology'],
+    'research_areas': ['Environmental research', 'Geography'],
     'description': f'The research object refers to the {title_nb} notebook published in the Environmental Data Science book.',
     'ros_type': 'Executable Research Object',
     'ros_template': 'Executable Research Object folders structure',
@@ -47,49 +47,28 @@ ro = rohub.ros_create(title=ro_title, research_areas=ro_research_areas, descript
 
 # edition
 authors=[
-        {"user_id": "https://github.com/timo0thy",
-         "display_name": "Timothy Lam",
-         "name": "Timothy Lam",
-         "email": "tlam@turing.ac.uk",
-         "affiliation": "University of Exeter"},
-        {"user_id": "https://github.com/MarleneKretschmer",
-         "display_name": "Marlene Kretschmer",
-         "name": "Marlene Kretschmer",
-         "email": "m.j.a.kretschmer@reading.ac.uk",
-         "affiliation": "University of Reading"},
-        {"user_id": "https://github.com/svadams",
-         "display_name": "Samantha Adams",
-         "name": "Samantha Adams",
-         "email": "samantha.adams@metoffice.gov.uk",
-         "affiliation": "Met Office Informatics Lab"},
-        {"user_id": "https://github.com/RPrudden",
-         "display_name": "Rachel Prudden",
-         "name": "Rachel Prudden",
-         "email": "rachel.prudden@informaticslab.co.uk",
-         "affiliation": "Met Office Informatics Lab"},
-        {"user_id": "https://github.com/ESaggioro",
-         "display_name": "Elena Saggioro",
-         "name": "Elena Saggioro",
-         "email": "e.saggioro@pgr.reading.ac.uk",
-         "affiliation": "University of Reading"},
+        {"user_id": "https://github.com/jamesdamillington",
+         "display_name": "James Millington",
+         "name": "James Millington",
+         "email": "james.millington@kcl.ac.uk",
+         "affiliation": "King's College London"},
         ]
 
 ro.set_authors(agents=authors)
 
 reviewers=[
-    {"user_id": "https://github.com/NHomer-Edi",
-     "display_name": "Nick Homer",
-     "name": "Nick Homer",
-     "email": "nhomer@turing.ac.uk",
-     "affiliation": "University of Edinburgh"},
-    {"user_id": "https://github.com/acocac",
-     "display_name": "Alejandro Coca-Castro",
-     "name": "Alejandro Coca-Castro",
-     "affiliation": "The Alan Turing Institute",
-     "email": "acoca@turing.ac.uk"
+    {"user_id": "https://github.com/aedebus",
+     "display_name": "Amandine Debus",
+     "name": "Amandine Debus",
+     "email": "aed58@cam.ac.uk",
+     "affiliation": "University of Cambridge"},
+    {"user_id": "Anne Fouilloux",
+     "display_name": "Anne Fouilloux",
+     "name": "Anne Fouilloux",
+     "affiliation": "Nordic e-Infrastructure Collaboration (NeIC)",
+     "email": "annefou@geo.uio.no"
      },
         ]
-
 
 ro.set_contributors(agents=reviewers)
 
@@ -107,7 +86,7 @@ my_res_int0=ro.add_internal_resource(res_type=resi_res_type,file_path=resi_file_
 
 ## tool
 rese_res_type="Jupyter Notebook"
-rese_file_url=f"https://sgithub.com/{metadata_contribution['author_GHuser']}/{metadata_contribution['filename']}/blob/main/{metadata_contribution['filename']}.ipynb"
+rese_file_url=f"https://github.com/{metadata_contribution['author_GHuser']}/{metadata_contribution['filename']}/blob/main/{metadata_contribution['filename']}.ipynb"
 rese_title=f"Jupyter notebook"
 rese_description="Jupyter Notebook hosted by the Environmental Data Science Book"
 
