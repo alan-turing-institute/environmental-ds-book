@@ -31,19 +31,22 @@ Commits and conversations should be conducted in the *review branch* created by 
 
 ## Roles
 
-```{figure} ../figures/guidelines/publication_roles.jpg
----
-name: publication-roles
-alt: Diagram illustrating the roles within the publication process of EDS notebooks according to six stages representing by icons arranged in the first column. 
----
-Diagram illustrating the roles within the publication process of EDS notebooks according to six stages representing by icons arranged in the first column. Illustration by [@acocac](https://github.com/acocac). Zenodo: [http://doi.org/10.5281/zenodo.7030142](https://doi.org/10.5281/zenodo.7030142)
-```
+The table below indicates the roles within EDS notebooks according to six stages of publication process represented in the figure above.  
+
+| Stage                       |               Where               | Author | Reviewer | Moderator | Editorial team | Community | 
+|:----------------------------|:---------------------------------:|:------:|:--------:|:--------:| :---: |:--------:|
+| Notebook idea               |         EDS repo (issues)         |   ✅    |          |          |   ✅    |     ✅    |
+| Preparation                 |  Notebook repo (preprint branch)  |   ✅    |          |          |   ✅    |          |
+| Review round(s)             |   Notebook repo (review branch)   |   ✅    |     ✅    |     ✅    |   ✅    |          |
+| Post-print                  | Notebook repo (post-print branch) |   ✅    |     ⭕     |          |   ✅    |          |
+| Publication                 |      EDS repo (main branch)       |   ⭕ ️    |          |          |   ✅    |          |
+| Post-publication            |      Notebook repo (issues)       |   ⭕ ️    |          |          |   ✅    |     ✅    |
 
 * **Corresponding author**: leads the preparation, implementation and reporting to changes of the submitted notebook. 
 * **Reviewer**: provides feedback for improving the proposed plain and executable content of the notebook.
 * **Moderator**: assists in mediating conversation between author(s) and reviewer(s)
 * **Editorial team**: supports the transfer of the notebook in the EDS organisation, share proofs of the recommended notebook and ensure the dissemination in the publication in the available social networks of EDS book. 
-  * **Community**: suggests and makes constructive comments of the notebook idea or published notebook. 
+* **Community**: suggests and makes constructive comments of the notebook idea or published notebook. 
 
 ### Themes
 
