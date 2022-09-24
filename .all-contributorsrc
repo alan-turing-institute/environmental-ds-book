@@ -189,6 +189,15 @@
       "contributions": [
         "review"
       ]
+    },
+    {
+      "login": "aedebus",
+      "name": "Amandine Debus",
+      "avatar_url": "https://avatars.githubusercontent.com/u/92375762?v=4",
+      "profile": "https://github.com/aedebus",
+      "contributions": [
+        "review"
+      ]
     }
   ],
   "contributorsPerLine": 7,
