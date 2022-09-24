@@ -198,6 +198,15 @@
       "contributions": [
         "review"
       ]
+    },
+    {
+      "login": "jamesdamillington",
+      "name": "James Millington",
+      "avatar_url": "https://avatars.githubusercontent.com/u/5046372?v=4",
+      "profile": "https://landscapemodelling.net",
+      "contributions": [
+        "content"
+      ]
     }
   ],
   "contributorsPerLine": 7,

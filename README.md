@@ -1,7 +1,7 @@
 <img src="book/figures/logo/logo.png" width="180" align="Right" /></a>
 
 <!-- ALL-CONTRIBUTORS-BADGE:START - Do not remove or modify this section -->
-[![All Contributors](https://img.shields.io/badge/all_contributors-20-orange.svg?style=flat-square)](#contributors-)
+[![All Contributors](https://img.shields.io/badge/all_contributors-21-orange.svg?style=flat-square)](#contributors-)
 <!-- ALL-CONTRIBUTORS-BADGE:END -->
 
 # The Environmental Data Science book
@@ -31,18 +31,19 @@ We welcome and recognize all contributions. You can see a list of current contri
       <td align="center"><a href="https://github.com/Delphine-L"><img src="https://avatars.githubusercontent.com/u/11195061?v=4?s=100" width="100px;" alt=""/><br /><sub><b>Delphine Lariviere</b></sub></a><br /><a href="#ideas-Delphine-L" title="Ideas, Planning, & Feedback">🤔</a></td>
       <td align="center"><a href="https://github.com/dorankhamis"><img src="https://avatars.githubusercontent.com/u/6764290?v=4?s=100" width="100px;" alt=""/><br /><sub><b>Doran Khamis</b></sub></a><br /><a href="https://github.com/alan-turing-institute/environmental-ds-book/pulls?q=is%3Apr+reviewed-by%3Adorankhamis" title="Reviewed Pull Requests">👀</a></td>
       <td align="center"><a href="http://edchalstrey.com/"><img src="https://avatars.githubusercontent.com/u/5486164?v=4?s=100" width="100px;" alt=""/><br /><sub><b>Ed Chalstrey</b></sub></a><br /><a href="#ideas-edwardchalstrey1" title="Ideas, Planning, & Feedback">🤔</a></td>
-      <td align="center"><a href="https://whitakerlab.github.io"><img src="https://avatars.githubusercontent.com/u/3626306?v=4?s=100" width="100px;" alt=""/><br /><sub><b>Kirstie Whitaker</b></sub></a><br /><a href="#ideas-KirstieJane" title="Ideas, Planning, & Feedback">🤔</a></td>
+      <td align="center"><a href="https://landscapemodelling.net"><img src="https://avatars.githubusercontent.com/u/5046372?v=4?s=100" width="100px;" alt=""/><br /><sub><b>James Millington</b></sub></a><br /><a href="#content-jamesdamillington" title="Content">🖋</a></td>
     </tr>
     <tr>
+      <td align="center"><a href="https://whitakerlab.github.io"><img src="https://avatars.githubusercontent.com/u/3626306?v=4?s=100" width="100px;" alt=""/><br /><sub><b>Kirstie Whitaker</b></sub></a><br /><a href="#ideas-KirstieJane" title="Ideas, Planning, & Feedback">🤔</a></td>
       <td align="center"><a href="https://github.com/mja2106"><img src="https://avatars.githubusercontent.com/u/33626681?v=4?s=100" width="100px;" alt=""/><br /><sub><b>Matt Allen</b></sub></a><br /><a href="https://github.com/alan-turing-institute/environmental-ds-book/pulls?q=is%3Apr+reviewed-by%3Amja2106" title="Reviewed Pull Requests">👀</a></td>
       <td align="center"><a href="https://github.com/mattfry-ceh"><img src="https://avatars.githubusercontent.com/u/12858205?v=4?s=100" width="100px;" alt=""/><br /><sub><b>Matt Fry</b></sub></a><br /><a href="https://github.com/alan-turing-institute/environmental-ds-book/pulls?q=is%3Apr+reviewed-by%3Amattfry-ceh" title="Reviewed Pull Requests">👀</a></td>
       <td align="center"><a href="https://github.com/NHomer-Edi"><img src="https://avatars.githubusercontent.com/u/73164641?v=4?s=100" width="100px;" alt=""/><br /><sub><b>NHomer-Edi</b></sub></a><br /><a href="#content-NHomer-Edi" title="Content">🖋</a></td>
       <td align="center"><a href="https://github.com/raquelcarmo"><img src="https://avatars.githubusercontent.com/u/30031382?v=4?s=100" width="100px;" alt=""/><br /><sub><b>Raquel Carmo</b></sub></a><br /><a href="#blog-raquelcarmo" title="Blogposts">📝</a> <a href="https://github.com/alan-turing-institute/environmental-ds-book/commits?author=raquelcarmo" title="Code">💻</a></td>
       <td align="center"><a href="https://github.com/samueljackson92"><img src="https://avatars.githubusercontent.com/u/2487781?v=4?s=100" width="100px;" alt=""/><br /><sub><b>Samuel Jackson</b></sub></a><br /><a href="#blog-samueljackson92" title="Blogposts">📝</a> <a href="https://github.com/alan-turing-institute/environmental-ds-book/commits?author=samueljackson92" title="Code">💻</a></td>
       <td align="center"><a href="https://sgibson91.github.io/"><img src="https://avatars.githubusercontent.com/u/44771837?v=4?s=100" width="100px;" alt=""/><br /><sub><b>Sarah Gibson</b></sub></a><br /><a href="#ideas-sgibson91" title="Ideas, Planning, & Feedback">🤔</a></td>
-      <td align="center"><a href="https://scotthosking.com"><img src="https://avatars.githubusercontent.com/u/10783052?v=4?s=100" width="100px;" alt=""/><br /><sub><b>Scott Hosking</b></sub></a><br /><a href="#ideas-scotthosking" title="Ideas, Planning, & Feedback">🤔</a></td>
     </tr>
     <tr>
+      <td align="center"><a href="https://scotthosking.com"><img src="https://avatars.githubusercontent.com/u/10783052?v=4?s=100" width="100px;" alt=""/><br /><sub><b>Scott Hosking</b></sub></a><br /><a href="#ideas-scotthosking" title="Ideas, Planning, & Feedback">🤔</a></td>
       <td align="center"><a href="https://www.bas.ac.uk/profile/tomand"><img src="https://avatars.githubusercontent.com/u/26459412?v=4?s=100" width="100px;" alt=""/><br /><sub><b>Tom Andersson</b></sub></a><br /><a href="https://github.com/alan-turing-institute/environmental-ds-book/pulls?q=is%3Apr+reviewed-by%3Atom-andersson" title="Reviewed Pull Requests">👀</a></td>
       <td align="center"><a href="https://github.com/jmifdal"><img src="https://avatars.githubusercontent.com/u/15648611?v=4?s=100" width="100px;" alt=""/><br /><sub><b>jmifdal</b></sub></a><br /><a href="#blog-jmifdal" title="Blogposts">📝</a> <a href="https://github.com/alan-turing-institute/environmental-ds-book/commits?author=jmifdal" title="Code">💻</a></td>
       <td align="center"><a href="https://github.com/nbarlowATI"><img src="https://avatars.githubusercontent.com/u/33832774?v=4?s=100" width="100px;" alt=""/><br /><sub><b>nbarlowATI</b></sub></a><br /><a href="https://github.com/alan-turing-institute/environmental-ds-book/pulls?q=is%3Apr+reviewed-by%3AnbarlowATI" title="Reviewed Pull Requests">👀</a></td>
