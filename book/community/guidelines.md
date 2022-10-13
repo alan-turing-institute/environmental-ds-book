@@ -19,8 +19,9 @@ Diagram illustrating the publication of EDS notebooks according to six steps rep
 The Editor-in-chief (EiC) makes a quick check and validates the proposed notebook with a general feedback including potential datasets/methods/tools to be considered.
 Once the idea is validated, the EiC assigns an editor who starts a conversation with authors about potential reviewers.
 
-* **Preparation**: the EiC prepares the notebook repository for the reviewing process. 
-The step includes ensuring the notebook repo with a first draft version is transferred to the [Environmental-DS-Book organisation](https://github.com/Environmental-DS-Book). 
+* **Preparation**: Authors prepare a first working version of the notebook and notify the editor when is ready with a link to the notebook repository hosted in a personal GitHub account.
+The editor validates the notebook runs in Binder and confirms its reproducibility to the EiC to start the reviewing process. 
+The EiC transfers the notebook repository from the personal GitHub account to the [Environmental-DS-Book organisation](https://github.com/Environmental-DS-Book). 
 
 * **Review round(s)**: Once 2 or 3 reviewers are found, the editor officially start the review. 
 Authors and reviewers work together to improve the proposed plain and executable content of the notebook. 
@@ -38,14 +39,14 @@ The EiC asks authors to proof-read the notebook and indicate any remaining typos
 The table below indicates the roles within the publication of EDS notebooks according to the steps mentioned in the previous section. 
 Mandatory and optional participation are illustrated by ✅ and ⭕ icons, respectively.
 
-| Stage                       |               Where               | Authors | Reviewers | Editors-in-chief | Editors | Community | 
-|:----------------------------|:---------------------------------:|:-------:|:---------:|:----------------:|:-------:|:---------:|
-| Notebook idea               |         EDS repo (issues)         |    ✅    |           |        ✅          |         |           |
-| Preparation                 |  Notebook repo (preprint branch)  |    ✅    |           |        ✅          |         |           |
-| Review round(s)             |   Notebook repo (review branch)   |    ✅    |     ✅     |        ✅         |    ✅    |           |
-| Post-print                  | Notebook repo (post-print branch) |    ✅    |     ⭕     |        ✅          |    ✅    |           |
-| Publication                 |      EDS repo (main branch)       |   ⭕ ️   |           |         ✅         |         |           |
-| Post-publication            |      Notebook repo (issues)       |   ⭕ ️   |           |         ✅         |         |     ✅     |
+| Stage                       |                Where                | Authors | Reviewers | Editors-in-chief | Editors | Community | 
+|:----------------------------|:-----------------------------------:|:-------:|:---------:|:----------------:|:-------:|:---------:|
+| Notebook idea               |         EDS repo (*issues*)         |    ✅    |           |        ✅          |         |           |
+| Preparation                 |  Notebook repo (*preprint branch*)  |    ✅    |           |        ✅          |         |           |
+| Review round(s)             |   Notebook repo (*review branch*)   |    ✅    |     ✅     |        ✅         |    ✅    |           |
+| Post-print                  | Notebook repo (*post-print branch*) |    ✅    |     ⭕     |        ✅          |    ✅    |           |
+| Publication                 |      EDS repo (*main branch*)       |   ⭕ ️   |           |         ✅         |         |           |
+| Post-publication            |      Notebook repo (*issues*)       |   ⭕ ️   |           |         ✅         |         |     ✅     |
 
 * **Authors**: prepare, implement and report changes of the submitted notebook. 
 * **Reviewers**: provide feedback for improving the proposed plain and executable content of the notebook.
