@@ -48,16 +48,16 @@ parts:
   - file: community/guidelines
     title: Guidelines
     sections:
-    - file: community/guidelines/guidelines-idea
-      title: Notebook idea
-    - file: community/guidelines/guidelines-preparation
-      title: Preparation
-    - file: community/guidelines/guidelines-reviewing
-      title: Reviewing
-    - file: community/guidelines/guidelines-publication
-      title: Publication
-    - file: community/guidelines/guidelines-postpublication
-      title: Post-publication
+    - file: community/guidelines/guidelines-authors
+      title: Guide for Authors
+    - file: community/guidelines/guidelines-reviewers
+      title: Guide for Reviewers
+    - file: community/guidelines/guidelines-moderators
+      title: Guide for Moderators
+    - file: community/guidelines/guidelines-editors
+      title: Guide for Editors
+    - file: community/guidelines/guidelines-community
+      title: Guide for Community
     - file: community/guidelines/guidelines-faq
       title: FAQ
   - file: community/coworking
