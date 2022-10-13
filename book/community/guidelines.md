@@ -33,14 +33,14 @@ Commits and conversations should be conducted in the *review branch* created by 
 
 The table below indicates the roles within EDS notebooks according to six stages of publication process represented in the figure above.  
 
-| Stage                       |               Where               | Author | Reviewer | Moderator | Editorial team | Community | 
-|:----------------------------|:---------------------------------:|:------:|:--------:|:--------:| :---: |:--------:|
-| Notebook idea               |         EDS repo (issues)         |   ✅    |          |          |   ✅    |     ✅    |
-| Preparation                 |  Notebook repo (preprint branch)  |   ✅    |          |          |   ✅    |          |
-| Review round(s)             |   Notebook repo (review branch)   |   ✅    |     ✅    |     ✅    |   ✅    |          |
-| Post-print                  | Notebook repo (post-print branch) |   ✅    |     ⭕     |          |   ✅    |          |
-| Publication                 |      EDS repo (main branch)       |   ⭕ ️    |          |          |   ✅    |          |
-| Post-publication            |      Notebook repo (issues)       |   ⭕ ️    |          |          |   ✅    |     ✅    |
+| Stage                       |               Where               | Authors | Reviewers | Moderators | Editorial team | Community | 
+|:----------------------------|:---------------------------------:|:-------:|:---------:|:----------:| :---: |:--------:|
+| Notebook idea               |         EDS repo (issues)         |    ✅    |           |            |   ✅    |     ✅    |
+| Preparation                 |  Notebook repo (preprint branch)  |    ✅    |           |            |   ✅    |          |
+| Review round(s)             |   Notebook repo (review branch)   |    ✅    |     ✅     |     ✅      |   ✅    |          |
+| Post-print                  | Notebook repo (post-print branch) |    ✅    |     ⭕     |            |   ✅    |          |
+| Publication                 |      EDS repo (main branch)       |   ⭕ ️   |           |            |   ✅    |          |
+| Post-publication            |      Notebook repo (issues)       |   ⭕ ️   |           |            |   ✅    |     ✅    |
 
 * **Corresponding author**: leads the preparation, implementation and reporting to changes of the submitted notebook. 
 * **Reviewer**: provides feedback for improving the proposed plain and executable content of the notebook.
