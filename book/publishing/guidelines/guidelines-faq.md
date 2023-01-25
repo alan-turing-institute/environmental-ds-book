@@ -1,4 +1,4 @@
-(cm-guidelines-faq)=
+(pb-guidelines-faq)=
 
 # FAQ
 
