@@ -45,7 +45,7 @@ parts:
         title: Sea ice forecasting (IceNet)
 - caption: Publishing
   chapters:
-  - file: publishing/guidelines
+  - file: publishing/about
     title: About EDS notebooks
     sections:
     - file: publishing/about/aims-and-scope
