@@ -57,7 +57,7 @@ parts:
   - file: publishing/guidelines
     title: Guidelines
     sections:
-    - file: publishing/guidelines/guidelines-author
+    - file: publishing/guidelines/guidelines-authors
       title: Guide for Authors
     - file: publishing/guidelines/guidelines-reviewers
       title: Guide for Reviewers
@@ -67,7 +67,7 @@ parts:
       title: Guide for Editor in Chief
     - file: publishing/guidelines/guidelines-community
       title: Guide for Community
-    - file: publishing/guides/guidelines-faq
+    - file: publishing/guidelines/guidelines-faq
       title: FAQ
 - caption: Community
   chapters:
