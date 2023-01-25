@@ -43,23 +43,34 @@ parts:
         title: Detecting floating objects (ESA Phi-Lab)
       - file: gallery/modelling/polar-modelling-icenet/polar-modelling-icenet
         title: Sea ice forecasting (IceNet)
-- caption: Community
+- caption: Publishing
   chapters:
-  - file: community/guidelines
+  - file: publishing/guidelines
+    title: About EDS notebooks
+    sections:
+    - file: publishing/about/aims-and-scope
+      title: Aims & Scope
+    - file: publishing/about/review-benefits
+      title: Benefits of Reviewing Notebooks
+    - file: publishing/about/review-technologies
+      title: Technologies
+  - file: publishing/guidelines
     title: Guidelines
     sections:
-    - file: community/guidelines/guidelines-authors
+    - file: publishing/guidelines/guidelines-author
       title: Guide for Authors
-    - file: community/guidelines/guidelines-reviewers
+    - file: publishing/guidelines/guidelines-reviewers
       title: Guide for Reviewers
-    - file: community/guidelines/guidelines-moderators
-      title: Guide for Moderators
-    - file: community/guidelines/guidelines-editors
+    - file: publishing/guidelines/guidelines-editors
       title: Guide for Editors
-    - file: community/guidelines/guidelines-community
+    - file: publishing/guidelines/guidelines-eic
+      title: Guide for Editor in Chief
+    - file: publishing/guidelines/guidelines-community
       title: Guide for Community
-    - file: community/guidelines/guidelines-faq
+    - file: publishing/guides/guidelines-faq
       title: FAQ
+- caption: Community
+  chapters:
   - file: community/coworking
     title: Coworking Calls
     sections:
