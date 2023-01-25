@@ -67,8 +67,8 @@ parts:
       title: Guide for Editor in Chief
     - file: publishing/guidelines/guidelines-community
       title: Guide for Community
-    - file: publishing/guidelines/guidelines-faq
-      title: FAQ
+  - file: publishing/faq
+    title: FAQ
 - caption: Community
   chapters:
   - file: community/coworking
