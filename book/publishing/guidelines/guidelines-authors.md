@@ -19,14 +19,14 @@ Previous submissions had a mix of technical and domain focus.
 
 ## Notebook Idea
 
-In this step, we provide a transparent discussion space to validate notebooks ideas (NBI) before their review with the EDS book community. 
+In this step, we provide a transparent discussion space to validate notebooks ideas (NBI) before their review. 
 
 Submitting a NBI is as simple as:
 
 * Open a NBI [issue](https://github.com/alan-turing-institute/environmental-ds-book/issues/new/choose).
 * Fill the NBI template with some description of the notebook and information about the input data and target theme.
-* Wait for Editors-in-chief and/or community (optional) to feedback the notebook idea according to these checks.
-* Once you get a minimal and satisfactory review, we encourage to start the preparation stage.
+* Wait for Editors-in-chief and/or community (optional) to provide feedback.
+* Once you get a minimal and satisfactory feedback, we encourage to start preparing the notebook repository.
 
 ## Notebook Repository
 
@@ -54,12 +54,12 @@ After an approval of the draft version of the notebook by EiC, please transfer t
 EiC will assist you to prepare the notebook repository for the review process.
 
 ## Pre-review
-EiC will open a PR containing all relevant information for pre-reviewing the notebook. 
-An editor will be assigned to moderate the review and find reviewers.
-Once reviewers agreed on the revision, a review issue is open by EiC. 
+EiC will open a PRE-REVIEW issue where a handling editor and authors suggest reviewers. 
+The editor can give initial direction to the authors for improving the notebook can already happen here, especially if the notebook lacks some requested sections.
+Once reviewers agreed on the revision, a REVIEW issue is open by EiC. 
 
 ## Review
-The review issue aims to be a space where editor will moderate timings and conversation between authors and reviewers.
+The REVIEW issue aims to be a space where editor will moderate timings and conversation between authors and reviewers.
 Reviewers will open issues in the notebook repository indicating their main suggestions. 
 Authors should address reviewers suggestions according to their relevance.
 Once reviewers recommend the notebook for publication, the editor will contact EiC to start the post-print stage.
@@ -80,8 +80,10 @@ EiC will lead publishing asking authors to proof-read the notebook and indicate 
 ## Publication
 While EiC will announce the notebook in the EDS book social accounts, authors should promote their work in their communication channels.
 
-Some authors have promoted EDS notebooks in Lindkedin. Others have added them to their online CV and/or personal website.
+Some authors have promoted EDS notebooks in LinkedIn. 
+Others have added them to their online CV and/or personal website.
 
 ## Post-publication
-EDS book community and other practicioners in GitHub could suggest changes in the notebook. 
-Where relevant, EiC will notify authors about proposed changes and their acceptance. If the authors consider suggestions as a substantial contribution, EiC will acknowledge it by adding the contributor's name to the citation of the notebook.
+EDS book community and other practitioners in GitHub could suggest changes in the notebook. 
+Where relevant, EiC will notify authors about proposed changes and their acceptance. 
+If the authors consider suggestions as a substantial contribution, EiC will acknowledge it by adding the contributor's name to the citation of the notebook.
