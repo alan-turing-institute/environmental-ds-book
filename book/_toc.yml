@@ -110,5 +110,4 @@ parts:
       title: Notebook Post-processing
 - caption: Afterword
   chapters:
-  - file: afterword/glossary
   - file: afterword/bibliography
