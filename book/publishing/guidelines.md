@@ -48,17 +48,6 @@ Mandatory and optional participation are illustrated by ✅ and ⭕ icons, respe
 * **Editors**: find reviewers, moderate the conversation between reviewers and authors. 
 * **Community**: explore and/or make constructive comments of the published notebook. 
 
-### Themes
-
-EDS notebooks are categorized under four proposed topics or themes:
-
-* **Exploration**: highlights a particular environmental sensor with visualization and interpretation of the corresponding layers of information.
-* **Preprocessing**: refers to all procedures to clean and prepare environmental data for analysis. The notebook should highlight differences between the raw and preprocessed data.
-* **Modelling**: comprises models to analyse a given environmental system. 
-* **Post-processing**: refers to post-process routines to fine tune and/or adjust modelling outputs.
-
-We cover further details of submission and reviewing processes by role in the following subsections. 
-
 ### Conflict of interest
 The definition of a conflict of Interest in peer review is a circumstance that makes you “unable to make an impartial scientific judgement or evaluation” (PNAS Conflict of Interest Policy). The Environmental Data Science community is concerned with avoiding any actual conflicts of interest, and being sufficiently transparent that we avoid the appearance of conflicts of interest as well.
 
