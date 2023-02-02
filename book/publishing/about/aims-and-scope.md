@@ -14,7 +14,7 @@ The ideal notebook length is XX (TBD) lines, although in certain exceptions long
 
 Notebook submissions to EDS book must:
 
-* Be fully open, under the Open Definition. This means that any text content or graphical objects should be under a Creative Commons license (ideally CC-BY) and code components should be under an OSI-approved license. 
+* Be fully open, under the Open Definition. This means that any text content or graphical objects should be under a Creative Commons license (ideally CC-BY) and code components should be under an OSI-approved MIT license. 
 * Documentation of computational cells should be complete for self-learning or adoption by EDS book users. 
 * Notebook submissions should make a clear contribution to Environmental Data Science using available open-source software. 
 * Authors wishing to make a pre-submission enquiry should open an issue on the EDS Book repository.
