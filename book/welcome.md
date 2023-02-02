@@ -1,6 +1,6 @@
 # Welcome 
 
-_The Environmental Data Science Book or EDS Book_ is a **living**, **open** and **community-driven** online resource to showcase and support the publication of data, research and open-source tools for collaborative, reproducible and transparent Environmental Data Science.
+_The Environmental Data Science book or EDS book_ is a **living**, **open** and **community-driven** online resource to showcase and support the publication of data, research and open-source tools for collaborative, reproducible and transparent Environmental Data Science.
 
 ```{figure} figures/welcome.jpg
 ---
@@ -10,7 +10,7 @@ alt: The Environmental Data Science project aims to engage the wider scientific 
 Illustration by Scriberia as part of _The Turing Way_ book dash in November 2021. Zenodo. [http://doi.org/10.5281/zenodo.5706310](http://doi.org/10.5281/zenodo.5706310)
 ```
 
-_EDS Book_ is:
+_EDS book_ is:
 
 * a digital resource
 * a community
