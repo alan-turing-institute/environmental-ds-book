@@ -2,16 +2,16 @@
 # How to use EDS book notebooks
 
 While we provide a rendered version of the interactive material, in some cases the outputs of the code may be hidden by default. 
-To experiment and interact with the executable notebooks, we suggest the following pathways to do this:
+To experiment and interact with the executable EDS book notebooks, we suggest the following pathways to do this:
 
 ## Public users: interact through a cloud-based Binder service 
-This will work well for many of the executable notebooks.
-Each notebook has a [binder](https://mybinder.readthedocs.io/en/latest/index.html) badge which creates a custom computing environment to run executable content online. 
+This will work well for many of executable notebooks.
+Each notebook has a [binder](https://mybinder.readthedocs.io/en/latest/index.html) badge which builds the virtual computing environment with specific dependencies.
 Among the available BinderHubs, we use those with vCPU >= 2 and RAM (GB) >=8. 
 This [GitHub comment](https://github.com/pangeo-data/pangeo-binder/issues/195#issuecomment-989107771) indicates some current BinderHubs available.   
 
 ## Local conda environment
-Each notebook repository provides instructions on how to run the same environment locally. 
+The README across all notebooks repositories provides instructions on how to run the same environment locally using conda. 
 
 If you aren't familiar with Anaconda or GitHub, we suggest exploring the following resources:
 
