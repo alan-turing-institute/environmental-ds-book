@@ -1,7 +1,7 @@
 (pr-about)=
 # About this book
 
-_The EDS Book_ showcase and support the publication of data, research and open-source tools using **Data Science and AI** for monitoring and modelling a wide diversity of environmental systems. 
+_EDS Book_ showcases and supports the publication of data, research and open-source tools using **Data Science and AI** for monitoring and modelling a wide diversity of environmental systems. 
 
 Through the publication of executable use cases e.g. Jupyter Notebooks, the resource aims to be a **living**, **open** and **community-driven** online resource guiding the scientific community about information extraction and analysis from environmental sensors (including ground sensors, drones, and satellite Earth observations) and other type of data from a wide diversity of sources, innovative research and open-source tools.
 
