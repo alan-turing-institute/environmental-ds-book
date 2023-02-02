@@ -29,37 +29,37 @@ The `book folder` holds the website content and other relevant files (table of c
 
 For the book content, the following contributions are accepted:
 * **Narrative content**: include plain text, citations, equations, figures, special content blocks and more.
-* **Executable content**: consists of computational material in a given programming language e.g. python along a narrative.
+* **Executable content**: consists of computational material in a given programming language e.g. python.
 
 :::{seealso}
 Please visit the corresponding Jupyter Book guidelines for [`narrative`](https://jupyterbook.org/content/index.html#write-narrative-content) and [`executable`]('https://jupyterbook.org/execute/index.html#write-executable-content) content. 
 :::
 
-The `_toc.yml` file sets the main sections of the EDS book. 
+The `_toc.yml` file sets the main sections of EDS book. 
 It is a simple configuration file specifying a table of content from all the executable and narrative content found in the ``book`` folder (and in subfolders). 
-The current version of the book consists of four key sections:
+The current version of the book consists of five key sections:
 
 * **Preamble**: contains narrative content i.e. plain markdown files describing the aims of the book, the target audience, how to use, attribution and how to contribute.
 * **Gallery**: contains all published executable content. Notebooks are categorised across different themes: exploration, modelling, etc to differentiate the type of analysis or procedure.
-* **Publishing**: provides an introduction of peer-reviewing notebooks, its relevance and guidelines to publish in the EDS book.
+* **Publishing**: provides an introduction of peer-reviewing notebooks, its relevance and guidelines to publish in EDS book.
 * **Community**: compiles community-related resources such as notes of co-working meetings.
 * **Afterword**: describes miscellaneous material such as glossary and bibliography. 
 
 ## Roles
-Inspired by [the Turing Way Guide for Collaboration](https://the-turing-way.netlify.app/collaboration/maintain-review/maintain-review-maintenance.html), the EDS book has the following defined community roles: 
+Inspired by [the Turing Way Guide for Collaboration](https://the-turing-way.netlify.app/collaboration/maintain-review/maintain-review-maintenance.html), EDS book has the following defined community roles: 
 
 * **Maintainers**: to provide support with keeping the existing source code updated by keeping track of new contributions and/or update versions of the Jupyter book.
 * **Contributors**: to create/design narrative and/or executable content.
 * **Reviewers**: to review narrative and/or executable content.
-* **Reader/User**: to read/share content, occasionally raise errors such as typos and bugs and fix them.
+* **Readers/Users**: to read/share content, occasionally raise errors such as typos and bugs and fix them.
 
 ## Recognising Contributions
-We welcome and recognise all kinds of contributions, from fixing small errors, to developing documentation, maintaining the project infrastructure, writing or reviewing executable notebooks.
+We welcome and recognise all kinds of contributions, from fixing small errors, to developing documentation, maintaining the project infrastructure, writing or reviewing narrative and/or executable notebooks.
 
-_The EDS Book_ follows the [all-contributors](https://allcontributors.org) specifications.
+_EDS book_ follows the [all-contributors](https://allcontributors.org) specifications.
 The all-contributors bot usage is described [here](https://allcontributors.org/docs/en/bot/usage).
 You can see a list of current contributors [here](https://github.com/alan-turing-institute/environmental-ds-book/blob/master/contributors.md). 
 
 # Code of Conduct
-Please note that the EDS book open-source repository and community are aligned with a [Contributor Code of Conduct](CODE_OF_CONDUCT.md). 
-By contributing to the EDS book you agree to abide by its terms.
+Please note that EDS book open-source repository and community are aligned with a [Contributor Code of Conduct](CODE_OF_CONDUCT.md). 
+By contributing to EDS book you agree to abide by its terms.
