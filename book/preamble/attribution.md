@@ -1,7 +1,7 @@
 (pr-attribution)=
 # How to cite and reuse this material
 
-The narrative content or graphical objects of _EDS Book_ are licensed for free and open consumption under the following license: [Creative Commons Attribution 4.0 International (CC BY 4.0)](https://creativecommons.org/licenses/by/4.0/). 
+The narrative content or graphical objects of _EDS book_ are licensed for free and open consumption under the following license: [Creative Commons Attribution 4.0 International (CC BY 4.0)](https://creativecommons.org/licenses/by/4.0/). 
 Please use and re-use whatever you need, for any purpose but giving appropriate credit to EDS book community and/or mentioned attribution within the text (usually visible at the end of a section page).
 
 Every release of the source code repository is archived with a DOI:
