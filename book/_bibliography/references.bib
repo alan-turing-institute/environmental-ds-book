@@ -1,44 +1,51 @@
-# Digital Twins
+# Book
+@software{ttw-2022,
+    author = {{The Turing Way Community}},
+    doi = {10.5281/zenodo.3233853},
+    license = {CC-BY-4.0},month = {7},
+    title = {{The Turing Way: A handbook for reproducible, ethical and collaborative research}},
+    version = {1.0.2},
+    year = {2022}}
 
-@article{Niederer2021,
-abstract = {Mathematical modeling and simulation are moving from being powerful development and analysis tools towards having increased roles in operational monitoring, control and decision support, in which models of specific entities are continually updated in the form of a digital twin. However, current digital twins are largely the result of bespoke technical solutions that are difficult to scale. We discuss two exemplar applications that motivate challenges and opportunities for scaling digital twins, and that underscore potential barriers to wider adoption of this technology. Development in digital-twin technology has been rapidly growing across a range of industries and disciplines. However, to ensure a wider and more robust adoption of such technology, various challenges must be addressed by the computational science community.},
-author = {Niederer, Steven A. and Sacks, Michael S. and Girolami, Mark and Willcox, Karen},
-doi = {10.1038/s43588-021-00072-5},
-journal = {Nature Computational Science},
-title = {{Scaling digital twins from the artisanal to the industrial}},
-year = {2021},
-topic = {dt-conceptual}
+@article{RossHellauer2017openreview,
+	title = {Survey on open peer review: Attitudes and experience amongst editors, authors and reviewers},
+	volume = {12},
+	url = {https://doi.org/10.1371/journal.pone.0189311},
+	doi = {10.1371/journal.pone.0189311},
+	number = {12},
+	journal = {PLoS ONE},
+	author = {Ross-Hellauer, Tony and Deppe, Arvin and Schmidt, Birgit},
+	month = dec,
+	year = {2017},
+	pages = {1--28},
 }
 
-@misc{ward2021continuous,
-      title={Continuous calibration of a digital twin: comparison of particle filter and Bayesian calibration approaches},
-      author={Rebecca Ward and Ruchi Choudhary and Alastair Gregory and Melanie Jans-Singh and Mark Girolami},
-      year={2021},
-      eprint={2011.09810},
-      archivePrefix={arXiv},
-      primaryClass={cs.CE},
-      topic = {dt-experimental}
+@Article{Barker2022-FAIR4RS,
+author={Barker, Michelle
+and Chue Hong, Neil P.
+and Katz, Daniel S.
+and Lamprecht, Anna-Lena
+and Martinez-Ortiz, Carlos
+and Psomopoulos, Fotis
+and Harrow, Jennifer
+and Castro, Leyla Jael
+and Gruenpeter, Morane
+and Martinez, Paula Andrea
+and Honeyman, Tom},
+title={Introducing the FAIR Principles for research software},
+journal={Scientific Data},
+year={2022},
+month={Oct},
+day={14},
+volume={9},
+number={1},
+pages={622},
+abstract={Research software is a fundamental and vital part of research, yet significant challenges to discoverability, productivity, quality, reproducibility, and sustainability exist. Improving the practice of scholarship is a common goal of the open science, open source, and FAIR (Findable, Accessible, Interoperable and Reusable) communities and research software is now being understood as a type of digital object to which FAIR should be applied. This emergence reflects a maturation of the research community to better understand the crucial role of FAIR research software in maximising research value. The FAIR for Research Software (FAIR4RS) Working Group has adapted the FAIR Guiding Principles to create the FAIR Principles for Research Software (FAIR4RS Principles). The contents and context of the FAIR4RS Principles are summarised here to provide the basis for discussion of their adoption. Examples of implementation by organisations are provided to share information on how to maximise the value of research outputs, and to encourage others to amplify the importance and impact of this work.},
+issn={2052-4463},
+doi={10.1038/s41597-022-01710-x},
+url={https://doi.org/10.1038/s41597-022-01710-x}
 }
 
-@article{Kapteyn2021,
-author={Kapteyn, Michael G.
-and Pretorius, Jacob V. R.
-and Willcox, Karen E.},
-title={A probabilistic graphical model foundation for enabling predictive digital twins at scale},
-journal={Nature Computational Science},
-year={2021},
-month={May},
-day={01},
-volume={1},
-number={5},
-pages={337-347},
-abstract={A unifying mathematical formulation is needed to move from one-off digital twins built through custom implementations to robust digital twin implementations at scale. This work proposes a probabilistic graphical model as a formal mathematical representation of a digital twin and its associated physical asset. We create an abstraction of the asset--twin system as a set of coupled dynamical systems, evolving over time through their respective state spaces and interacting via observed data and control inputs. The formal definition of this coupled system as a probabilistic graphical model enables us to draw upon well-established theory and methods from Bayesian statistics, dynamical systems and control theory. The declarative and general nature of the proposed digital twin model make it rigorous yet flexible, enabling its application at scale in a diverse range of application areas. We demonstrate how the model is instantiated to enable a structural digital twin of an unmanned aerial vehicle (UAV). The digital twin is calibrated using experimental data from a physical UAV asset. Its use in dynamic decision-making is then illustrated in a synthetic example where the UAV undergoes an in-flight damage event and the digital twin is dynamically updated using sensor data. The graphical model foundation ensures that the digital twin calibration and updating process is principled, unified and able to scale to an entire fleet of digital twins.},
-issn={2662-8457},
-doi={10.1038/s43588-021-00069-0},
-topic = {dt-experimental}
-}
-
-# Others
 @misc{HBR2019Belonging,
 	author = {Carr, Evan W. and Reece, Andrew and Kellerman, Gabriella Rosen and Robichaux, Alexi},
 	title = {{The Value of Belonging at Work}},
@@ -59,11 +66,11 @@ topic = {dt-experimental}
 	url = {https://www.lifehack.org/articles/productivity/the-pomodoro-technique-is-it-right-for-you.html}
 }
 
+
+
 # Demonstrators
 
-## forest
-
-### forest-modelling-treecrown_deepforest
+## forest-modelling-treecrown_deepforest
 
 @article{Weinstein2020_MEE,
    abstract = {Abstract Remote sensing of forested landscapes can transform the speed, scale and cost of forest research. The delineation of individual trees in remote sensing images is an essential task in forest analysis. Here we introduce a new Python package, DeepForest that detects individual trees in high resolution RGB imagery using deep learning. While deep learning has proven highly effective in a range of computer vision tasks, it requires large amounts of training data that are typically difficult to obtain in ecological studies. DeepForest overcomes this limitation by including a model pretrained on over 30 million algorithmically generated crowns from 22 forests and fine-tuned using 10,000 hand-labelled crowns from six forests. The package supports the application of this general model to new data, fine tuning the model to new datasets with user labelled crowns, training new models and evaluating model predictions. This simplifies the process of using and retraining deep learning models for a range of forests, sensors and spatial resolutions. We illustrate the workflow of DeepForest using data from the National Ecological Observatory Network, a tropical forest in French Guiana, and street trees from Portland, Oregon.},
@@ -109,9 +116,7 @@ topic = {dt-experimental}
    topic = {forest-modelling-treecrown_deepforest}
 }
 
-## polar
-
-### polar-modelling-icenet
+## polar-modelling-icenet
 
 @article{Andersson2021,
    abstract = {Anthropogenic warming has led to an unprecedented year-round reduction in Arctic sea ice extent. This has far-reaching consequences for indigenous and local communities, polar ecosystems, and global climate, motivating the need for accurate seasonal sea ice forecasts. While physics-based dynamical models can successfully forecast sea ice concentration several weeks ahead, they struggle to outperform simple statistical benchmarks at longer lead times. We present a probabilistic, deep learning sea ice forecasting system, IceNet. The system has been trained on climate simulations and observational data to forecast the next 6 months of monthly-averaged sea ice concentration maps. We show that IceNet advances the range of accurate sea ice forecasts, outperforming a state-of-the-art dynamical model in seasonal forecasts of summer sea ice, particularly for extreme sea ice events. This step-change in sea ice forecasting ability brings us closer to conservation tools that mitigate risks associated with rapid sea ice loss.},
@@ -128,9 +133,7 @@ topic = {dt-experimental}
    topic = {polar-modelling-icenet}
 }
 
-## urban
-
-### urban-sensors-climate_ukv
+## urban-sensors-climate_ukv
 
 @misc{MetOffice,
  author = {McCaie, Theo},
@@ -142,9 +145,7 @@ topic = {dt-experimental}
  topic = {urban-sensors-climate_ukv}
 }
 
-## wildfires
-
-### wildfires-sensors-fires_modis
+## wildfires-sensors-fires_modis
 
 @techreport{firms,
      title = {{MODIS Collection 6 Active Fire Product User’s Guide Revision B}},
@@ -158,7 +159,7 @@ topic = {dt-experimental}
      topic = {wildfires-sensors-fires_modis}
 }
 
-### wildfires-sensors-fires_seviri
+## wildfires-sensors-fires_seviri
 
 @article{wooster2015lsa,
   title={LSA SAF Meteosat FRP products--Part 1: Algorithms, product contents, and analysis},
@@ -180,7 +181,7 @@ topic = {dt-experimental}
   topic = {wildfires-sensors-fires_seviri}
   }
 
-### ocean-modelling-litter-philab
+## ocean-modelling-litter-philab
 
 @inproceedings{Mifdal2021,
    abstract = {Marine litter is a growing problem that has been attracting attention and raising concerns over the last years. Significant quantities of plastic can be found in the oceans due to the unfiltered discharge of waste into rivers, poor waste management, or lost fishing nets. The floating elements drift on the surface of water bodies and can be aggregated by processes, such as river plumes, windrows, oceanic fronts, or currents. In this paper, we focus on detecting big patches of floating objects that can contain plastic as well as other materials with optical Sentinel 2 data. In contrast to previous work that focuses on pixel-wise spectral responses of some bands, we employ a deep learning predictor that learns the spatial characteristics of floating objects. Along with this work, we provide a hand-labeled Sentinel 2 dataset of floating objects on the sea surface and other water bodies such as lakes together with pre-trained deep learning models. Our experiments demonstrate that harnessing the spatial patterns learned with a CNN is advantageous over pixel-wise classifications that use hand-crafted features. We further provide an analysis of the categories of floating objects that we captured while labeling the dataset and analyze the feature importance for the CNN predictions. Finally, we outline the limitations of trained CNN on several systematic failure cases that we would like to address in future work by increasing the diversity in the dataset and tackling the domain shift between regions and satellite acquisitions. The dataset introduced in this work is the first to provide public large-scale data for floating litter detection and we hope it will give more insights into developing techniques for floating litter detection and classification. Source code and data are available at https://github.com/ESA-PhiLab/floatingobjects.},
@@ -209,7 +210,7 @@ topic = {dt-experimental}
    topic = {ocean-modelling-litter-philab}
 }
 
-### agriculture-sensors-cosmosuk
+## agriculture-sensors-cosmosuk
 
 @article{Evans2016_cosmosuk,
    abstract = {Cosmic-ray soil moisture sensors have the advantage of a large measurement footprint (approximately 700 m in diameter) and are able to operate continuously to provide area-averaged near-surface (top 10–20 cm) volumetric soil moisture content at the field scale. This paper presents the application of this technique at four sites in southern England over almost 3 years. Results show the soil moisture response to contrasting climatic conditions during 2011–2014 and are the first such field-scale measurements made in the UK. These four sites are prototype stations for a UK COsmic-ray Soil Moisture Observing System, and particular consideration is given to sensor operating conditions in the UK. Comparison of these soil water content observations with the Joint UK Land Environment Simulator 10-cm soil moisture layer shows that these data can be used to test and diagnose model performance and indicate the potential for assimilation of these data into hydro-meteorological models. The application of these large-area soil water content measurements to evaluate remotely sensed soil moisture products is also demonstrated. Numerous applications and the future development of a national COsmic-ray Soil Moisture Observing System network are discussed. Copyright © 2016 John Wiley & Sons, Ltd.},
