@@ -26,7 +26,7 @@ After confirming reviewers availability, the editor opens a REVIEW issue to mode
 
 To review a notebook, we provide a review template (see below) with a checklist.
 
-```{include} ../templates/review-template.md
+```{include} ../../templates/review-template.md
 ```
 
 Copy and paste the above checklist as a comment into the notebook REVIEW issue.
