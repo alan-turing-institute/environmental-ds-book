@@ -11,7 +11,7 @@ Notebooks has been an excellent tool for prototyping and writing examples to sho
 
 The EDS book aims to complement the science and methodological development embedded within academic journals using open infrastructure to translate research outputs into FAIR notebooks which benefit from a collaborative and open reviewing process (Figure 1).
 
-```{figure} ./figures/notebook-cycle.jpg
+```{figure} ../figures/notebook-cycle.jpg
 ---
 name: notebook-cycle
 alt: The Environmental Data Science project aims to engage the wider scientific research community on information extraction and analysis from environmental sensors using innovative data science.
