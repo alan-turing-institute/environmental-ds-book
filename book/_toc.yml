@@ -52,7 +52,7 @@ parts:
       title: Aims & Scope
     - file: publishing/about/review-benefits
       title: Benefits of Reviewing Notebooks
-    - file: publishing/about/review-technologies
+    - file: publishing/about/notebooks-technologies
       title: Technologies
   - file: publishing/guidelines
     title: Guidelines
