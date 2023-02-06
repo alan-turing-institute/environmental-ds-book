@@ -48,13 +48,6 @@ Mandatory and optional participation are illustrated by ✅ and ⭕ icons, respe
 * **Editors**: find reviewers, moderate the conversation between reviewers and authors. 
 * **Community**: explore and/or make constructive comments of the published notebook. 
 
-### Conflict of interest
-The definition of a conflict of Interest in peer review is a circumstance that makes you “unable to make an impartial scientific judgement or evaluation” (PNAS Conflict of Interest Policy). The Environmental Data Science community is concerned with avoiding any actual conflicts of interest, and being sufficiently transparent that we avoid the appearance of conflicts of interest as well.
-
-As a reviewer, conflict of interests are your present or previous association with any authors of a submission: recent (past four years) collaborators in funded research or work that is published; and lifetime for the family members, business partners, and thesis student/advisor or mentor. In addition, your recent (past year) association with the same organisation of a submitter is a COI, for example, being employed at the same institution.
-
-If you think you are able to make an impartial assessment of the work, you should request that the conflict be waived. For example, if you and a submitter were two of 2000 authors of a high energy physics paper but did not actually collaborate. Or if you and a submitter worked together 6 years ago, but due to delays in the publishing industry, a paper from that collaboration with both of you as authors was published 2 year ago. Or if you and a submitter are both employed by the same very large organisation but in different units without any knowledge of each other.
-
 ### Attribution 
 Some material in this section and derived guidelines has been adapted from [Neurolibre](https://docs.neurolibre.org/en/latest/REVIEWER.html), the [Journal of Open Source Education](https://openjournals.readthedocs.io/en/jose/index.html) and [pyOpenSci](https://www.pyopensci.org/software-peer-review/index.html) reviewing guidelines, released under CC BY 3.0, CC BY 4.0 and CC BY-SA 4.0, respectively.
 
