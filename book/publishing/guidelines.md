@@ -46,7 +46,7 @@ Mandatory and optional participation are illustrated by ✅ and ⭕ icons, respe
 * **Reviewers**: provide feedback for improving the proposed plain and executable content of the notebook.
 * **Editors-in-chief**: validate the notebook idea, make suggestions to improve it, prepare the notebook for its revision, assign editors, lead publishing and moderate post-publication.
 * **Editors**: find reviewers, moderate the conversation between reviewers and authors. 
-* **Community**: explore and/or make constructive comments of the published notebook. 
+* **Community**: explore and/or make constructive comments of the notebook at the idea stage (optional) or after publication. 
 
 ### Attribution 
 Some material in this section and derived guidelines has been adapted from [Neurolibre](https://docs.neurolibre.org/en/latest/REVIEWER.html), the [Journal of Open Source Education](https://openjournals.readthedocs.io/en/jose/index.html) and [pyOpenSci](https://www.pyopensci.org/software-peer-review/index.html) reviewing guidelines, released under CC BY 3.0, CC BY 4.0 and CC BY-SA 4.0, respectively.
