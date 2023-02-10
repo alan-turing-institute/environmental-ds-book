@@ -38,7 +38,3 @@ The checklist template follows the suggested review criteria for [SciPy Proceedi
 - [ ] All mentioned software should be formally and consistently cited wherever possible.
 - [ ] Acronyms should be spelled out upon first mention.
 - [ ] Licence conditions on images and figures must be respected (Creative Commons, etc.).
-
-## AOB
-
-<!--Please write here any considerations to be taken when reviewing this story-->
