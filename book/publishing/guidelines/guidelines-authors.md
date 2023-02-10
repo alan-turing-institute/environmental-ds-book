@@ -55,24 +55,14 @@ EiC will assist you to prepare the notebook repository for the review process.
 
 ## Pre-review
 EiC will open a PRE-REVIEW issue where a handling editor and authors suggest reviewers. 
-The editor can give initial direction to the authors for improving the notebook can already happen here, especially if the notebook lacks some requested sections.
+The editor can give initial directions to authors for improving the notebook, especially if the notebook lacks some requested sections.
 Once reviewers agreed on the revision, a REVIEW issue is open by EiC. 
 
 ## Review
-The REVIEW issue aims to be a space where editor will moderate timings and conversation between authors and reviewers.
+The REVIEW issue aims to be the key space where editor will moderate timings and conversation between authors and reviewers.
 Reviewers will open issues in the notebook repository indicating their main suggestions. 
 Authors should address reviewers suggestions according to their relevance.
 Once reviewers recommend the notebook for publication, the editor will contact EiC to start the post-print stage.
-
-### Interation
-The interaction between authors and reviewers is facilitated through ReviewNB, a third-party plugin in GitHub for displaying Jupyter Notebook content. 
-Sharing and viewing the content is much easier and faster than with any other platform e.g. Binder. 
-The inline review comments interface is useful and user-friendly. 
-While it supports major visualisation libraries and interactive widgets, it does not render bokeh-related plots.
-
-In addition to ReviewNB, other platforms which facilitates the reviewing are:
-* [notebooksharing.space](https://notebooksharing.space/): supports bokeh-related widgets. Only ask the author to upload the notebook in this platform when you want to inspect the interactive content not rendered in ReviewNB. Note the notebook file is limited up to 10 MB.
-* [Netlify previews](https://docs.netlify.com/site-deploys/deploy-previews/): a preview hosted by Netlify can be also inspected in the pull request of the contribution (only at the post-print stage). 
 
 ## Post-print
 EiC will lead publishing asking authors to proof-read the notebook and indicate any remaining typos, badly formed citations, awkward wording, etc.
@@ -84,6 +74,6 @@ Some authors have promoted EDS notebooks in LinkedIn.
 Others have added them to their online CV and/or personal website.
 
 ## Post-publication
-EDS book community and other practitioners in GitHub could suggest changes in the notebook. 
+EDS book community and other practitioners in GitHub complying EDS book complying our [code of conduct](https://raw.githubusercontent.com/alan-turing-institute/environmental-ds-book/master/CODE_OF_CONDUCT.md) could suggest changes in the notebook. 
 Where relevant, EiC will notify authors about proposed changes and their acceptance. 
 If the authors consider suggestions as a substantial contribution, EiC will acknowledge it by adding the contributor's name to the citation of the notebook.
