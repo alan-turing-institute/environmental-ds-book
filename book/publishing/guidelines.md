@@ -33,14 +33,14 @@ Where relevant, EiC will notify authors about proposed changes and their accepta
 The table below indicates the key roles within the publication of EDS book notebooks according to the steps mentioned above. 
 Mandatory and optional participation are illustrated by ✅ and ⭕ icons, respectively.
 
-| Stage                   |           Where in GitHub           | Authors | Reviewers | Editors-in-chief | Editors | Community | 
-|:------------------------|:-----------------------------------:|:-------:|:---------:|:----------------:|:-------:|:---------:|
-| Notebook idea           |         EDS repo (*issues*)         |    ✅    |           |        ✅          |         |     ⭕     |
-| Preparation             |       EDS repo (*issues*)           |    ✅    |           |        ✅          |         |           |
-| Prereview and Review    |         EDS repo (*issues*)         |    ✅    |     ✅     |        ✅         |    ✅    |           |
-| Post-print              | Notebook repo (*post-print branch*) |    ✅    |     ⭕     |        ✅          |         |           |
-| Publication             |      EDS repo (*main branch*)       |   ⭕ ️   |           |         ✅         |         |           |
-| Post-publication        |      Notebook repo (*issues*)       |   ⭕ ️   |           |         ✅         |         |     ✅     |
+| Stage                   |      Where in GitHub      | Authors | Reviewers | Editors-in-chief | Editors | Community | 
+|:------------------------|:-------------------------:|:-------:|:---------:|:----------------:|:-------:|:---------:|
+| Notebook idea           |    EDS repo (*issues*)    |    ✅    |           |        ✅          |         |     ⭕     |
+| Preparation             |    EDS repo (*issues*)    |    ✅    |           |        ✅          |         |           |
+| Prereview and Review    |    EDS repo (*issues*)    |    ✅    |     ✅     |        ✅         |    ✅    |           |
+| Post-print              | EDS repo (*pull request*) |    ✅    |     ⭕     |        ✅          |         |           |
+| Publication             | EDS repo (*main branch*)  |   ⭕ ️   |           |         ✅         |         |           |
+| Post-publication        | Notebook repo (*issues*)  |   ⭕ ️   |           |         ✅         |         |     ✅     |
 
 * **Authors**: prepare, implement and report changes of the submitted notebook. 
 * **Reviewers**: provide feedback for improving the proposed plain and executable content of the notebook.
