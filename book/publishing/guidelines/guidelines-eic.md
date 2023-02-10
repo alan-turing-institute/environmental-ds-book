@@ -33,8 +33,8 @@ For example, "forest-modelling-treecrown.ipynb".
 
 ## Pre-review
 EiC will open a PRE-REVIEW issue containing all relevant information of the notebook including a link to the notebook idea issue.
-EiC assigns an editor to moderate the review and find reviewers.
-Once reviewers agreed on the revision, EiC opens a REVIEW issue 
+EiC assign an editor to moderate the review and find reviewers.
+Once reviewers agreed on the revision, EiC open a REVIEW issue 
 
 ## Review
 The REVIEW issue aims to be a space where editor will moderate timings and conversation between authors and reviewers.
