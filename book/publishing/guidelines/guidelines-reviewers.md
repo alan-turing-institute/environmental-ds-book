@@ -1,7 +1,6 @@
 (pb-guidelines-reviewers)=
 
 # Guide for Reviewers
-
 Welcome to the guide for notebooks reviewers of the EDS book! 
 
 Before you begin this process, please be sure to [understand how the publication process works](pb-guidelines).
@@ -12,28 +11,29 @@ Below you will find the main steps we suggest to follow to review notebooks subm
 
 ## Scope and Aims
 Thank you for considering reviewing a notebook for EDS book.
-Our review process aims to be collaborative, transparent and inclusive. 
+Our review process aims to be open, collaborative, transparent and inclusive.
 We therefore welcome reviewers from a diversity of background and with varying levels of programming/domain expertise.
 
-Previous reviews had a mix of technical and domain focus.
+We encourage reviewers to adhere to the principles of the [Open Science Peer Review Oath](https://doi.org/10.12688/f1000research.5686.2).
 
 ## Pre-review
 An editor will confirm reviewers interest to review the notebook by tagging them into a PRE-REVIEW issue within the main EDS book repository.
 The PRE-REVIEW contains some relevant information of the notebook including a link to the notebook idea issue. 
 
 ## Review
-After confirming reviewers availability, the editor opens a REVIEW issue to moderate a high-level discussion between notebook authors and reviewers. 
+After confirming reviewers availability, editors-in-chief (EiC) opens a REVIEW issue to moderate a high-level discussion between notebook authors and reviewers. 
 
 To review a notebook, we provide a review template (see below) with a checklist.
 
-```{include} ../../templates/review-template.md
+```{include} ../../templates/reviewers/reviewers-review-checklist.md
 ```
 
-Copy and paste the above checklist as a comment into the notebook REVIEW issue.
+The checklist will be available within the first comment of the notebook REVIEW issue created by EiC.
 
-Additional comments are welcome in the same issue or directly to the notebook repo if you choose. 
+Additional comments are welcome in the same issue or directly to the notebook repo. 
 
-If reviewers do the latter, we encourage cross-referencing them within the notebook REVIEW issue thread. 
+If reviewers do the latter, they will find a PR in the notebook repository where authors and reviewers carry out the discussion through ReviewNB, a third-party plugin in GitHub for displaying and commenting Jupyter Notebooks (see further details [here](../about/notebooks-technologies.md)).
+Reviewers can open issues in the notebook repo too and link the URL of the notebook REVIEW issue thread.
 This facilitates centralizing comments.
 
 Authors should respond within 3 weeks with their changes to the notebook in response to reviewers comments.

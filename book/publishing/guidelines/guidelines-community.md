@@ -1,7 +1,6 @@
 (pb-guidelines-community)=
 
 # Guide for Notebooks Community
-
 Welcome to the guide for notebooks community of the EDS book! 
 
 Before you begin this process, please be sure to [understand how the publication process works](pb-guidelines).
@@ -12,17 +11,16 @@ Below you will find the main steps we suggest to follow to participate in a disc
 
 ## Scope and Aims
 Thank you for considering contributing to the review workflow of a notebook submission to EDS book.
-Our review process aims to be collaborative, transparent and inclusive. 
+Our review process aims to be open, collaborative, transparent and inclusive. 
 We therefore welcome community feedback from a diversity of background and with varying levels of programming/domain expertise.
 
-Previous submissions had a mix of technical and domain focus.
-
 ## Notebook Idea
-
 We highly appreciate providing feedback to the notebook idea.
-Any kind of suggestion related to datasets, open-source packages or ecosystems, credits, etc will be valuable for authors.  
+Any kind of suggestion related to datasets, open-source packages or ecosystems, credits, etc would be valuable for authors.  
 
 ## Post-publication
 We encourage post-publication feedback from anyone interested in published notebooks in EDS book.
+You can report bugs and derivative work in the notebook repository hosted by the [Environmental-DS-Book organisation](https://github.com/Environmental-DS-Book) (see for instance a [PR](https://github.com/Environmental-DS-Book/forest-modelling-treecrown_deepforest/pull/1) in the DeepForest notebook). 
 
-You can report bugs and derivative work in the notebook repository hosted by the [Environmental-DS-Book organisation](https://github.com/Environmental-DS-Book) (see for instance a [PR](https://github.com/Environmental-DS-Book/forest-modelling-treecrown_deepforest/pull/1) in the DeepForest notebook)
+Editors-in-chief will contact notebook authors when changes are considerably relevant for either narrative or interactive contents.
+If the authors consider suggestions as a substantial contribution, EiC will acknowledge it by adding the contributor's name to the citation of the notebook.

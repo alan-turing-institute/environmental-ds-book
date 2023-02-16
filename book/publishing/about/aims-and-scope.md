@@ -20,7 +20,6 @@ Notebook submissions to EDS book must:
 * Authors wishing to make a pre-submission enquiry should open an issue on the EDS Book repository.
 
 # Themes
-
 EDS notebooks are categorized under four proposed topics or themes:
 
 * **Exploration**: highlights a particular environmental sensor with visualization and interpretation of the corresponding layers of information.

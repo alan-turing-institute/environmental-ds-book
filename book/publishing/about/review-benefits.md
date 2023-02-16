@@ -1,7 +1,6 @@
 (pb-about-reviewingbenefits)=
 
 # Benefits of Open Peer Review Notebooks
-
 Peer review should be seen as process that helps to improve the quality of the research and an important exercise in collaboration. 
 It can be done on a wide variety of research outputs, including{cite}`ttw-2022`:
 

@@ -1,10 +1,9 @@
 (pb-guidelines)=
-# Guidelines for EDS book notebooks
 
+# Guidelines for EDS book notebooks
 This section introduces the publication process, roles and themes in EDS book computational notebooks.
 
 ## Publication process
-
 The main steps when submitting and publishing EDS book notebooks are:
 
 * **Notebook idea**: authors open a [notebook idea issue](https://github.com/alan-turing-institute/environmental-ds-book/issues/new/choose) in the main EDS book repository. 
@@ -29,7 +28,6 @@ Authors and reviewers are welcome to use other communication channels of their p
 Where relevant, EiC will notify authors about proposed changes and their acceptance. If the authors consider suggestions as a substantial contribution, EiC will acknowledge it by adding the contributor's name to the citation of the notebook. 
 
 ## Roles
-
 The table below indicates the key roles within the publication of EDS book notebooks according to the steps mentioned above. 
 Mandatory and optional participation are illustrated by ✅ and ⭕ icons, respectively.
 
