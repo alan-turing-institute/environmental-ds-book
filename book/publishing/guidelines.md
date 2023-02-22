@@ -47,4 +47,4 @@ Mandatory and optional participation are illustrated by ✅ and ⭕ icons, respe
 * **Community**: explore and/or make constructive comments of the notebook at the idea stage (optional) or after publication. 
 
 ### Attribution 
-Some material in this section and derived guidelines has been adapted from [Neurolibre](https://docs.neurolibre.org/en/latest/REVIEWER.html), the [Journal of Open Source Education](https://openjournals.readthedocs.io/en/jose/index.html) and [pyOpenSci](https://www.pyopensci.org/software-peer-review/index.html) reviewing guidelines, released under CC BY 3.0, CC BY 4.0 and CC BY-SA 4.0, respectively.
+Some material in this section and derived guidelines have been adapted from [Neurolibre](https://docs.neurolibre.org/en/latest/REVIEWER.html), the [Journal of Open Source Education](https://openjournals.readthedocs.io/en/jose/index.html) and [pyOpenSci](https://www.pyopensci.org/software-peer-review/index.html) reviewing guidelines, released under CC BY 3.0, CC BY 4.0 and CC BY-SA 4.0, respectively.
