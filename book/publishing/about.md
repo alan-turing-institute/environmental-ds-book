@@ -33,7 +33,7 @@ EDS book notebooks support FAIR principles for research software (FAIR4RS){cite}
    - The same platform allows handling notebooks versions and assign distinct identifiers. 
 - **A: Software, and its metadata, is retrievable via standardised protocols**: 
   - Notebooks repositories can be retrieved from Git Clone from GitHub.
-  - RoHub packages EDS book notebooks with their metadata using Research Object Crate (RO-Crate). 
+  - RoHub packages EDS book notebooks with their metadata using [Research Object Crate (RO-Crate)](https://www.researchobject.org/ro-crate/). 
 - **I: Software interoperates with other software by exchanging data and/or metadata, and/or through interaction via application programming interfaces (APIs), described through standards**: 
   - The Jupyter ecosystem facilitates exchanging data and/or metadata of all published notebooks.  through standardised protocols, including a [RESTful web service  architecture implemented in Jupyter notebook](https://github.com/jupyter/jupyter/wiki/Jupyter-Notebook-Server-API).
   - Notebooks repositories have a dedicate folder to provide lock environments which pin dependencies according to three main operating systems: Windows, Linux and MacOS. 
