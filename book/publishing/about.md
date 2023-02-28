@@ -41,7 +41,8 @@ EDS book notebooks support FAIR principles for research software (FAIR4RS){cite}
   - Users have multiple pathways to run notebooks. Notebooks repositories contain clear instructions on how to install their computational environment and dependencies in users own system. We also lower the barrier to access notebooks through public or community cloud-based services in Binder and JupyterHubs.
   - Notebook repositories and their RoHub repositories can be reused under an OSI-approved MIT license.
 
-Additional to following FAIR principles, we expand the pedagogical possibilities of Jupyter Notebook and community-centred open infrastructure services to build and connect a community of environmental data scientists and enthusiasts in open-source developments at all levels of seniority.
+Additional to following FAIR principles, we expand the pedagogical possibilities of Jupyter Notebook and community-centred open infrastructure services.
+We aim to build and connect a community of environmental data scientists and enthusiasts in open-source developments at all levels of seniority.
 
 Since the official launch of EDS book in December 2021, the community has successfully published numerous notebooks covering exploration, preprocessing and modelling from environmental datasets.
 
