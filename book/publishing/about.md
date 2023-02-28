@@ -5,8 +5,8 @@ With the great diversity in open data, software and computational resources, env
 This presents a timely opportunity for advancing the cyberinfrastructure for showcasing these emerging developments. 
 Building upon existing open science communities such as the [Turing Way](https://the-turing-way.netlify.app/) and [Pangeo](https://pangeo.io), EDS book aims at educating and leveraging good scientific software and data management practises among environmental scientists through peer-reviewed findable, accessible, interoperable and reusable (FAIR) computational notebooks. 
 
-Computation notebooks (CNs) allow users to combine interactive code with text and graphical objects. 
-CNs have become a successful mechanism for sharing the analysis of data and documenting research workflows. 
+Computation notebooks allow users to combine interactive code with text and graphical objects. 
+They have become a successful mechanism for sharing the analysis of data and documenting research workflows. 
 Notebooks has been an excellent tool for prototyping and writing examples to showcase a piece of software. 
 
 The EDS book aims to complement the science and methodological development embedded within academic journals using open infrastructure to translate research outputs into FAIR notebooks which benefit from a collaborative and open reviewing process (Figure 2).
