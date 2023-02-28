@@ -7,7 +7,7 @@ This section introduces the publication process, roles and themes in EDS book co
 The main steps when submitting and publishing EDS book notebooks are:
 
 * **Notebook idea**: authors open a [notebook idea issue](https://github.com/alan-turing-institute/environmental-ds-book/issues/new/choose) in the main EDS book repository. 
-Editors-in-chief (EiC) validates the proposed notebook with a general feedback including potential datasets/methods/tools to be considered.
+Editors-in-Chief (EiC) validates the proposed notebook with a general feedback including potential datasets/methods/tools to be considered.
 
 * **Preparation**: Authors prepare a first working (and reproducible) version of the notebook with a notification to EiC. The notebook repository should be hosted in a personal GitHub account.
 EiC verify the notebook runs in Binder and confirms its feasibility. 

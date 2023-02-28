@@ -15,7 +15,7 @@ Our review process aims to be open, collaborative, transparent and inclusive.
 We therefore welcome editors from a diversity of background and with varying levels of programming/domain expertise.
 
 ## Pre-review
-Once a notebook idea comes in, it will be validated by Editors-in-chief(EiC). 
+Once a notebook idea comes in, it will be validated by Editors-in-Chief (EiC). 
 From there, it moves to a PRE-REVIEW issue, where EIC will assign an editor (or a volunteering editor self-assigns).
 
 ### Finding Reviewers
