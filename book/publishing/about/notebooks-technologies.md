@@ -7,7 +7,7 @@ This section indicates the main technologies for peer-reviewing and sharing EDS 
 The interaction between authors and reviewers in the notebook repository is facilitated through [ReviewNB](https://www.reviewnb.com/), a third-party plugin in GitHub for displaying and commenting Jupyter Notebooks. 
 Sharing and viewing the content is much easier and faster than with any other platform e.g. Binder or GitHub recent feature that renders Jupyter Notebook rich diffs on (see [here](https://blog.reviewnb.com/github-not-rendering-interactive-notebook-widgets/)). 
 The inline review comments interface is useful and user-friendly. 
-While it supports major visualisation libraries and interactive widgets, it does not render bokeh-related plots.
+While it supports major visualisation libraries and interactive widgets, it does not render certain libraries for interactive charts and plots e.g. [Bokeh](https://github.com/bokeh/bokeh).
 
 In addition to ReviewNB, other platforms which facilitates the reviewing are:
 * [notebooksharing.space](https://notebooksharing.space/) (optional at the review stage): supports bokeh-related widgets. Reviewers can ask the author to upload the notebook in this platform to inspect the interactive content not rendered in ReviewNB. 
