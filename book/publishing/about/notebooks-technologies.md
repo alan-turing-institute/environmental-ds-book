@@ -34,7 +34,7 @@ You can find further information of latest ReviewNB developments in https://blog
 ## Research objects and RoHub
 Research objects (ROs) are living resources helping to organise and describe the inputs, materials, and methods used in a scientific experiment and obtained as a result and not only at the end when publishing the research outcomes{cite}`ttw-2022`.
 
-[RoHub](https://reliance.rohub.org/){cite}`rohub-2018` is a Research Object management platform that enables researchers to collaboratively manage, share and preserve their research work (data, software, workflows, models, presentations, videos, articles, etc.){cite}`ttw-2022`. 
+[RoHub](https://reliance.rohub.org/) is a Research Object management platform{cite}`rohub-2018` that enables researchers to collaboratively manage, share and preserve their research work (data, software, workflows, models, presentations, videos, articles, etc.){cite}`ttw-2022`. 
 RoHub implements the full RO model and paradigm: resources associated to a particular research work are aggregated into a single FAIR digital object, and metadata relevant for understanding and interpreting the content is represented as semantic metadata that are user and machine readable{cite}`ttw-2022`.
 
 All EDS book notebooks are findable in RoHub.
