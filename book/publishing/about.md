@@ -9,7 +9,7 @@ Computation notebooks (CNs) allow users to combine interactive code with text an
 CNs have become a successful mechanism for sharing the analysis of data and documenting research workflows. 
 Notebooks has been an excellent tool for prototyping and writing examples to showcase a piece of software. 
 
-The EDS book aims to complement the science and methodological development embedded within academic journals using open infrastructure to translate research outputs into FAIR notebooks which benefit from a collaborative and open reviewing process (Figure 1).
+The EDS book aims to complement the science and methodological development embedded within academic journals using open infrastructure to translate research outputs into FAIR notebooks which benefit from a collaborative and open reviewing process (Figure 2).
 
 ```{figure} ../figures/notebook-cycle.jpg
 ---
