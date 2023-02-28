@@ -27,7 +27,7 @@ Let's highlight below the main features of ReviewNB according to its [official d
 - [Team conversations](https://blog.reviewnb.com/commenting-for-jupyter/) directly on Jupyter Notebooks
 
 In EDS book, we use ReviewNB in the review step. 
-Once Editors-in-chief or reviewers open a PR in the notebook repository, it will include a link to view changes on ReviewNB.
+Once Editors-in-Chief or reviewers open a PR in the notebook repository, it will include a link to view changes on ReviewNB.
 
 You can find further information of latest ReviewNB developments in https://blog.reviewnb.com/.
 

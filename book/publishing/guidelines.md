@@ -31,18 +31,18 @@ Where relevant, EiC will notify authors about proposed changes and their accepta
 The table below indicates the key roles within the publication of EDS book notebooks according to the steps mentioned above. 
 Mandatory and optional participation are illustrated by ✅ and ⭕ icons, respectively.
 
-| Stage                   |      Where in GitHub      | Authors | Reviewers | Editors-in-chief | Editors | Community | 
+| Stage                   |      Where in GitHub      | Authors | Reviewers | Editors-in-Chief | Editors | Community | 
 |:------------------------|:-------------------------:|:-------:|:---------:|:----------------:|:-------:|:---------:|
-| Notebook idea           |    EDS repo (*issues*)    |    ✅    |           |        ✅          |         |     ⭕     |
-| Preparation             |    EDS repo (*issues*)    |    ✅    |           |        ✅          |         |           |
+| Notebook idea           |    EDS repo (*issues*)    |    ✅    |           |        ✅         |         |     ⭕     |
+| Preparation             |    EDS repo (*issues*)    |    ✅    |           |        ✅         |         |           |
 | Prereview and Review    |    EDS repo (*issues*)    |    ✅    |     ✅     |        ✅         |    ✅    |           |
-| Post-print              | EDS repo (*pull request*) |    ✅    |     ⭕     |        ✅          |         |           |
-| Publication             | EDS repo (*main branch*)  |   ⭕ ️   |           |         ✅         |         |           |
-| Post-publication        | Notebook repo (*issues*)  |   ⭕ ️   |           |         ✅         |         |     ✅     |
+| Post-print              | EDS repo (*pull request*) |    ✅    |     ⭕     |        ✅         |         |           |
+| Publication             | EDS repo (*main branch*)  |   ⭕ ️   |           |        ✅         |         |           |
+| Post-publication        | Notebook repo (*issues*)  |   ⭕ ️   |           |        ✅         |         |     ✅     |
 
 * **Authors**: prepare, implement and report changes of the submitted notebook. 
 * **Reviewers**: provide feedback for improving the proposed plain and executable content of the notebook.
-* **Editors-in-chief**: validate the notebook idea, make suggestions to improve it, prepare the notebook for its revision, assign editors, lead publishing and moderate post-publication.
+* **Editors-in-Chief**: validate the notebook idea, make suggestions to improve it, prepare the notebook for its revision, assign editors, lead publishing and moderate post-publication.
 * **Editors**: find reviewers, moderate the conversation between reviewers and authors. 
 * **Community**: explore and/or make constructive comments of the notebook at the idea stage (optional) or after publication. 
 

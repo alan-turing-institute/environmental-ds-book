@@ -22,5 +22,5 @@ Any kind of suggestion related to datasets, open-source packages or ecosystems, 
 We encourage post-publication feedback from anyone interested in published notebooks in EDS book.
 You can report bugs and derivative work in the notebook repository hosted by the [Environmental-DS-Book organisation](https://github.com/Environmental-DS-Book) (see for instance a [PR](https://github.com/Environmental-DS-Book/forest-modelling-treecrown_deepforest/pull/1) in the DeepForest notebook). 
 
-Editors-in-chief will contact notebook authors when changes are considerably relevant for either narrative or interactive contents.
+Editors-in-Chief will contact notebook authors when changes are considerably relevant for either narrative or interactive contents.
 If the authors consider suggestions as a substantial contribution, EiC will acknowledge it by adding the contributor's name to the citation of the notebook.
