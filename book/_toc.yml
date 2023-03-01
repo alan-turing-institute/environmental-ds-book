@@ -64,7 +64,7 @@ parts:
     - file: publishing/guidelines/guidelines-editors
       title: Guide for Editors
     - file: publishing/guidelines/guidelines-eic
-    - title: Guide for Editor in Chief
+      title: Guide for Editor in Chief
     - file: publishing/guidelines/guidelines-community
       title: Guide for Community
   - file: publishing/faq
