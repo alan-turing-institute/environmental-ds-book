@@ -23,6 +23,13 @@ The PRE-REVIEW contains some relevant information of the notebook including a li
 ## Review
 After confirming reviewers availability, Editors-in-Chief (EiC) opens a REVIEW issue to moderate a high-level discussion between notebook authors and reviewers. 
 
+```{important}
+If you are submitting a review, we appreciate submission within **2 weeks** of accepting a review. 
+Authors will be asked to respond to reviewers’ comments within **2 weeks** of the last-submitted review.
+We suggest an additional **1 week** for reviewer approval of changes.
+Please contact the editor directly or in the REVIEW issue thread to inform possible delays.
+```
+
 To review a notebook, we provide a review template (see below) with a checklist.
 
 ```{include} ../../templates/reviewers/reviewers-review-checklist.md
