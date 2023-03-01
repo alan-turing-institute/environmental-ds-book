@@ -57,9 +57,17 @@ Once reviewers agreed on the revision, EiC opens a REVIEW issue.
 
 ## Review
 The REVIEW issue aims to be the key space where editor will moderate timings and high-level conversation between authors and reviewers.
+
+```{important}
+Reviewers will be asked to provide review feedback as comments on the REVIEW issue or directly to the notebook repo within **2 weeks**.
+You should respond to reviewers’ comments within **2 weeks** of the last-submitted review.
+Please contact the editor directly or in the REVIEW issue thread to inform possible delays.
+```
+
 Authors should address reviewers suggestions according to their relevance. Each reviewer is guided by a checklist which facilitate to evaluate the notebook.
 Reviewers are encouraged to make detailed comments directly to the notebook repo. 
 To facilitate this, EiC opens a PR in the notebook repository where authors and reviewers carry out the discussion through ReviewNB, a third-party plugin in GitHub for displaying and commenting Jupyter Notebooks (see further details [here](../about/notebooks-technologies.md)).
+
 Once reviewers recommend the notebook for publication, the editor pings EiC to start the post-print stage.
 
 ## Post-print
