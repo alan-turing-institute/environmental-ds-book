@@ -1,5 +1,6 @@
 (templates-reviewers-review-checklist)=
 
+```markdown
 *Please check off boxes as applicable, and elaborate in comments below. 
 Your review is not limited to these topics, as described in the reviewer guide*
 
@@ -40,3 +41,4 @@ Your review is not limited to these topics, as described in the reviewer guide*
 ### Final approval (post-review)
 
 - [ ] **Authors has responded to my review and made changes to my satisfaction. I recommend approving the notebook for publication.**
+```
