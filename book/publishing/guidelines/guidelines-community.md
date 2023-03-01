@@ -18,7 +18,8 @@ We therefore welcome community feedback from a diversity of background and with 
 We highly appreciate providing feedback to the notebook idea.
 Any kind of suggestion related to datasets, open-source packages or ecosystems, credits, etc would be valuable for authors.  
 
-In addition to the above contribution, anyone from the community is welcome to open a Notebook Idea, and ask for 
+In addition to the above contribution, anyone from the community with not much programming skills is welcome to suggest a Notebook Idea and ask for help to materialize it as a notebook submission.
+Please refer to the section of Notebook Idea in the [guidelines for authors](pb-guidelines-authors) to get further details of the process.
 
 ## Post-publication
 We encourage post-publication feedback from anyone interested in published notebooks in EDS book.
