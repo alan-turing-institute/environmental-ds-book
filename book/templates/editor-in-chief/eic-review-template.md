@@ -3,7 +3,7 @@
 # Editors-in-chief REVIEW Template
 
 :::{note}
-The review template follows the Journal of Open Source Education's review issue and [checklist template](https://openjournals.readthedocs.io/en/jose/review_checklist.html) and 
+The REVIEW template follows the Journal of Open Source Education's review issue and [checklist template](https://openjournals.readthedocs.io/en/jose/review_checklist.html) 
 :::
 
 # Notebook Review: [Issue#<prereview-ID>](https://github.com/alan-turing-institute/environmental-ds-book/issues/<prereview-ID>,) 
@@ -14,40 +14,39 @@ The review template follows the Journal of Open Source Education's review issue 
     </a>
 </p>
 
-**Submitting author:** <author-github-handle>
+**Submitting author:** [AUTHOR GITHUB HANDLE]
 
-**Repository:** <notebook-github-repository>
+**Repository:** [NOTEBOOK REPOSITORY LINK]
 
-**Notebook idea issue:** <notebook-idea-issue-ID>
+**Notebook idea issue:** [NOTEBOOK IDEA ISSUE ID]
 
-**Editor:** <editor-github-handle>
+**Editor:** [EDITOR GITHUB HANDLE]
 
-**Reviewer:** <reviewer1-github-handle>, <reviewer2-github-handle>
+**Reviewer:** [REVIEWER1 GITHUB HANDLE], [REVIEWER2 GITHUB HANDLE]
 
-**Managing EiC:** <eic-github-handle>
+**Managing EiC:** [EIC GITHUB HANDLE]
 
 ## Status
 
 **Reviewer instructions & questions**
 
-Hi 👋 <reviewer1-github-handle> & <reviewer2-github-handle>, please carry out your review in this issue by updating the checklist below. 
+Hi 👋 [REVIEWER1 GITHUB HANDLE] & [REVIEWER2 GITHUB HANDLE], please carry out your review in this issue by updating the checklist below. 
 
 As a reviewer, you contribute to the technical quality of the content published by our community. 
 
-Before the review, EiC check if the submission fits the minimum requirements. 
+Before the review, EiC checked if the submission fits the minimum requirements. 
 
 The quality of the proposed contribution can be assessed through scientific, technical and code criteria. 
 
 The reviewer guidelines are available here: <change-URL>. 
-Any questions/concerns please let <editor-github-handle> know.
+Any questions/concerns please let [EDITOR GITHUB HANDLE] know.
 
-## Review Checklist for <reviewer1-github-handle>
-
-```{include} ../../templates/reviewers/reviewers-review-checklist.md
-```
-
-## Review Checklist for <reviewer2-github-handle>
+## Review Checklist for [REVIEWER1 GITHUB HANDLE]
 
 ```{include} ../../templates/reviewers/reviewers-review-checklist.md
 ```
 
+## Review Checklist for [REVIEWER2 GITHUB HANDLE]
+
+```{include} ../../templates/reviewers/reviewers-review-checklist.md
+```
