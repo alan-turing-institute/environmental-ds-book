@@ -2,27 +2,29 @@
 
 # Editors-in-chief PRE-REVIEW Template
 
-**Submitting author:** <author-github-handle>
+:::{note}
+The PRE-REVIEW template follows the Journal of Open Source Education's [pre-review issue template](https://openjournals.readthedocs.io/en/jose/editing.html) 
+:::
 
-**Repository:** <github-repository>
+**Submitting author:** [AUTHOR GITHUB HANDLE]
 
-**Notebook idea issue:** <notebook-idea-issue-ID>
+**Repository:** [NOTEBOOK REPOSITORY LINK]
+
+**Notebook idea issue:** [NOTEBOOK IDEA ISSUE ID]
 
 **Editor:** Pending
 
 **Reviewer:** Pending
 
-**Managing EiC:** <eic-github-handle>
+**Managing EiC:** [EIC GITHUB HANDLE]
 
 ## Status
 
 **Author instructions**
 
-Thanks for submitting your paper to EDS book <author-github-handle>. 
+Thanks for submitting your notebook to EDS book. 
 
-**Currently, there isn't an EDS editor assigned** to your paper.
-
-<author-github-handle> if you have any suggestions for potential reviewers then please mention them here in this thread (without tagging them with an @).
+[AUTHOR GITHUB HANDLE] if you have any suggestions for potential reviewers then please mention them here in this thread (without tagging them with an @).
 
 **Editor instructions**
 
