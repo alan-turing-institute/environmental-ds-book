@@ -16,13 +16,13 @@
     For example, "forest-modelling-treecrown.ipynb"
   - [ ] Fill `notebook_name` and `quay_image` keys in the `config.json` file
   - [ ] Copy README template ([python](eic-readme-python.md), R, Julia) and replace the fields in the following lines:
-    - [ ] replace `<repository name>` in 
-      - [ ] L16, `<a href="https://github.com/Environmental-DS-Book/<repository name>/blob/main/LICENSE">`
-      - [ ] L19, `<repository name>` in `<a href="https://notebooks.gesis.org/binder/v2/gh/Environmental-DS-Book/<repositoryname>/main?labpath=<repositoryname>.ipynb">`
-      - [ ] L22, `<a href="https://github.com/Environmental-DS-Book/<repositoryname>/actions/workflows/publish.yml/badge.svg">`
-      - [ ] L23, `<img alt="Continuous integration badge" src="https://github.com/Environmental-DS-Book/general-exploration-landcover_io/actions/workflows/publish.yml/badge.svg">`
-      - [ ] L49, `git clone https://github.com/Environmental-DS-Book/<repositoryname>.git`
-      - [ ] L54, `cd <repositoryname>`
-      - [ ] L60, `conda activate <repositoryname>`
-    - [ ] replace `<rohub_w3id>` in L29
+    - [ ] replace `[repository name]` in 
+      - [ ] L16, `<a href="https://github.com/Environmental-DS-Book/[repository name]/blob/main/LICENSE">`
+      - [ ] L19, `<a href="https://notebooks.gesis.org/binder/v2/gh/Environmental-DS-Book/[repository name]/main?labpath=[repository name].ipynb">`
+      - [ ] L22, `<a href="https://github.com/Environmental-DS-Book/[repository name]/actions/workflows/publish.yml/badge.svg">`
+      - [ ] L23, `<img alt="Continuous integration badge" src="https://github.com/Environmental-DS-Book/[repository name]/actions/workflows/publish.yml/badge.svg">`
+      - [ ] L49, `git clone https://github.com/Environmental-DS-Book/[repository name].git`
+      - [ ] L54, `cd [repository name]`
+      - [ ] L60, `conda activate [repository name]`
+    - [ ] replace `[rohub_w3id]` in L29
 - [ ] Merge the new branch to main
