@@ -1,11 +1,10 @@
 (templates-editor-review-invitation)=
 
-# Editor Review Invitation
-
 :::{note}
-The review invitation follows [pyOpenSci reviewer request template](https://raw.githubusercontent.com/pyOpenSci/software-peer-review/main/appendices/reviewer-request-template.md) 
+The review invitation follows [pyOpenSci reviewer request template](https://raw.githubusercontent.com/pyOpenSci/software-peer-review/main/appendices/reviewer-request-template.md). 
 :::
 
+```markdown
 Hi, this is [EDITOR-Name]. 
 I'm writing to ask if you have time to review a notebook for EDS book. 
 EDS book has an open peer review of computational notebooks that support environmental science. 
@@ -34,3 +33,4 @@ Sincerely,
 
 [EDITOR]
 EDS book editor.
+```
