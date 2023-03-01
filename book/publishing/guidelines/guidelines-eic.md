@@ -37,8 +37,14 @@ Copy and paste the markdown below in the issue:
 ```{include} ../../templates/editor-in-chief/eic-prereview-template.md
 ```
 
-EiC assign an editor to moderate the review and find reviewers. 
-Once reviewers agreed on the revision, EiC open a REVIEW issue 
+EiC assign an editor to moderate the review and find reviewers.
+
+```{important}
+The assigned editor should confirm acceptance and availability within **1 week**.
+```
+
+After the editor acceptance, EiC will update the heading at the top of the issue with [EDITOR GITHUB HANDLE] next to **Editor:** section.
+Once reviewers agreed on the revision, EiC open a REVIEW issue.
 
 ## Review
 The REVIEW issue aims to be a space where editor will moderate timings and conversation between authors and reviewers.
