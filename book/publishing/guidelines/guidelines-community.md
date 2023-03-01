@@ -18,6 +18,8 @@ We therefore welcome community feedback from a diversity of background and with 
 We highly appreciate providing feedback to the notebook idea.
 Any kind of suggestion related to datasets, open-source packages or ecosystems, credits, etc would be valuable for authors.  
 
+In addition to the above contribution, anyone from the community is welcome to open a Notebook Idea, and ask for 
+
 ## Post-publication
 We encourage post-publication feedback from anyone interested in published notebooks in EDS book.
 You can report bugs and derivative work in the notebook repository hosted by the [Environmental-DS-Book organisation](https://github.com/Environmental-DS-Book) (see for instance a [PR](https://github.com/Environmental-DS-Book/forest-modelling-treecrown_deepforest/pull/1) in the DeepForest notebook). 
