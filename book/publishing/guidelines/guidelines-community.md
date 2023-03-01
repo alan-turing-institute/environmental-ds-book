@@ -1,6 +1,6 @@
 (pb-guidelines-community)=
 
-# Guide for Notebooks Community
+# Guide for Community
 Welcome to the guide for notebooks community of the EDS book! 
 
 Before you begin this process, please be sure to [understand how the publication process works](pb-guidelines).

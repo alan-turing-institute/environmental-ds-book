@@ -1,6 +1,6 @@
 (pb-guidelines-eic)=
 
-# Guide for Notebooks Editors-in-chief
+# Guide for Editors-in-chief
 Welcome to the guide for notebooks EiC of the EDS book! 
 
 Before you begin this process, please be sure to [understand how the publication process works](pb-guidelines).

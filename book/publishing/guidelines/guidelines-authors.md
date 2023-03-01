@@ -1,6 +1,6 @@
 (pb-guidelines-authors)=
 
-# Guide for Notebooks Authors
+# Guide for Authors
 Welcome to the guide for notebooks authors of the EDS book! 
 
 Before you begin this process, please be sure to [understand how the publication process works](pb-guidelines).

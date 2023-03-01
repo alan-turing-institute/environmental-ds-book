@@ -1,6 +1,6 @@
 (pb-guidelines-editors)=
 
-# Guide for Notebooks Editors
+# Guide for Editors
 Welcome to the guide for notebooks editors of the EDS book! 
 
 Before you begin this process, please be sure to [understand how the publication process works](pb-guidelines).
