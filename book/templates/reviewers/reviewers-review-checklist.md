@@ -1,5 +1,10 @@
 (templates-reviewers-review-checklist)=
 
+:::{note}
+The checklist template follows the suggested review criteria for [SciPy Proceedings](https://github.com/scipy-conference/scipy_proceedings/blob/632099a7e62d192a5d66156dc70547fd9f35cb81/review_criteria.md) and 
+[Turing Data Stories](https://github.com/alan-turing-institute/TuringDataStories/blob/3675d78f5a6641500392b16b987fc22756a1fa1d/.github/ISSUE_TEMPLATE/review_template.md)
+:::
+
 ```markdown
 *Please check off boxes as applicable, and elaborate in comments below. 
 Your review is not limited to these topics, as described in the reviewer guide*
