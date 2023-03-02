@@ -1,11 +1,10 @@
 (templates-eic-prereview-template)=
 
-# Editors-in-chief PRE-REVIEW Template
-
 :::{note}
 The PRE-REVIEW template follows the Journal of Open Source Education's [pre-review issue template](https://openjournals.readthedocs.io/en/jose/editing.html) 
 :::
 
+```markdown
 **Submitting author:** [AUTHOR GITHUB HANDLE]
 
 **Repository:** [NOTEBOOK REPOSITORY LINK]
@@ -31,3 +30,4 @@ Thanks for submitting your notebook to EDS book.
 Thank you for considering managing the review workflow of a notebook submission to EDS book.
 
 Please find and assign reviewers and start the main review.
+```
