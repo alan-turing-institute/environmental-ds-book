@@ -48,9 +48,15 @@ Once reviewers agreed on the revision, EiC open a REVIEW issue.
 
 ## Review
 The REVIEW issue aims to be a space where editor will moderate timings and conversation between authors and reviewers.
+EiC open it and replace the default first comment the markdown template below:
+
+
+```{include} ../../templates/editor-in-chief/eic-review-template.md
+```
+
 To facilitate the discussion, EiC creates a new branch `review` to add reviewers info (name, affiliation, GitHub handle) in the contribution section of the notebook. 
 Then EiC commit and push changes to create a PR in the notebook repository. 
-The PR will trigger ReviewNB, a third-party plugin in GitHub for displaying and commenting Jupyter Notebooks (see further details [here]).
+The PR will trigger ReviewNB, a third-party plugin in GitHub for displaying and commenting Jupyter Notebooks (see further details [here](../about/notebooks-technologies.md)).
 
 Once reviewers recommend the notebook for publication, EiC will be notified by the editor to start the post-print stage.
 
