@@ -1,11 +1,10 @@
 (templates-eic-review-template)=
 
-# Editors-in-chief REVIEW Template
-
 :::{note}
 The REVIEW template follows the Journal of Open Source Education's review issue and [checklist template](https://openjournals.readthedocs.io/en/jose/review_checklist.html) 
 :::
 
+```markdown
 # Notebook Review: [Issue#<prereview-ID>](https://github.com/alan-turing-institute/environmental-ds-book/issues/<prereview-ID>,) 
 
 <p align="left">
@@ -50,3 +49,4 @@ Any questions/concerns please let [EDITOR GITHUB HANDLE] know.
 
 ```{include} ../../templates/reviewers/reviewers-review-checklist.md
 ```
+```markdown
