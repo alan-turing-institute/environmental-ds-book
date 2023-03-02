@@ -24,7 +24,7 @@ The PRE-REVIEW contains some relevant information of the notebook including a li
 After confirming reviewers availability, Editors-in-Chief (EiC) opens a REVIEW issue to moderate a high-level discussion between notebook authors and reviewers. 
 
 ```{important}
-If you are submitting a review, we appreciate submission within **2 weeks** of accepting a review. 
+Reviewers will be asked to conduct the review within **2 weeks** of accepting the invitation by the assigned editor. 
 Authors will be asked to respond to reviewers’ comments within **2 weeks** of the last-submitted review.
 We suggest an additional **1 week** for reviewer approval of changes.
 Please contact the editor directly or in the REVIEW issue thread to inform possible delays.
@@ -35,12 +35,12 @@ To review a notebook, we provide a review template (see below) with a checklist.
 ```{include} ../../templates/reviewers/reviewers-review-checklist.md
 ```
 
-The checklist will be available within the first comment of the notebook REVIEW issue created by EiC.
+The checklist will be available per reviewer within the first comment of the notebook REVIEW issue created by EiC.
 
-Additional comments are welcome in the same issue or directly to the notebook repo. 
+Additional comments are welcome on the same issue or directly to the notebook repo. 
 
 If reviewers do the latter, they will find a PR in the notebook repository where authors and reviewers carry out the discussion through ReviewNB, a third-party plugin in GitHub for displaying and commenting Jupyter Notebooks (see further details [here](../about/notebooks-technologies.md)).
 Reviewers can open issues in the notebook repo too and link the URL of the notebook REVIEW issue thread.
 This facilitates centralizing comments.
 
-Authors should respond within 3 weeks with their changes to the notebook in response to reviewers comments.
+Authors should respond within 2 weeks with their changes to the notebook in response to reviewers comments.
