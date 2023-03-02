@@ -99,13 +99,6 @@ parts:
     - file: community/templates/template-coworking-showtell
       title: Online Show and Tell
     - file: community/templates/template-environments-exploration
-      title: Notebook Exploration
-    - file: community/templates/template-environments-preprocessing
-      title: Notebook Pre-processing
-    - file: community/templates/template-environments-modelling
-      title: Notebook Modelling
-    - file: community/templates/template-environments-postprocessing
-      title: Notebook Post-processing
 - caption: Afterword
   chapters:
   - file: afterword/bibliography
