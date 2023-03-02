@@ -1,7 +1,6 @@
 (templates-eic-preparation-checklist)=
 
-# Editors-in-chief Preparation Checklist Template
-
+```markdown
 ## Check notebook repository
 - [ ] The notebook repository is available in a public personal repository
 - [ ] The notebook runs in Binder according to the PR indicated by the author
@@ -26,3 +25,4 @@
       - [ ] L60, `conda activate [repository name]`
     - [ ] replace `[rohub_w3id]` in L29
 - [ ] Merge the new branch to main
+```
