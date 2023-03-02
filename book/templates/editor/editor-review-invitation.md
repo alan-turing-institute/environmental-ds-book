@@ -6,7 +6,7 @@ The review invitation follows [pyOpenSci reviewer request template](https://raw.
 
 ```markdown
 Hi, this is [EDITOR-Name]. 
-I'm writing to ask if you have time to review a notebook for EDS book. 
+I'm writing to ask if you have time to review a notebook for the Environmental Data Science (EDS) book. 
 EDS book has an open peer review of computational notebooks that support environmental science. 
 Accepted notebooks become a part of our EDS book notebooks gallery. 
 Our review process is similar to that of open journals however it focuses on ensuring high quality notebooks that are reusable to the Environmental science community.
