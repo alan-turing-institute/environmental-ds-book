@@ -5,6 +5,8 @@ The PRE-REVIEW template follows the Journal of Open Source Education's [pre-revi
 :::
 
 ```markdown
+# Notebook Pre-Review
+
 **Submitting author:** [AUTHOR GITHUB HANDLE]
 
 **Repository:** [NOTEBOOK REPOSITORY LINK]

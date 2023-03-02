@@ -5,10 +5,10 @@ The REVIEW template follows the Journal of Open Source Education's review issue 
 :::
 
 ```markdown
-# Notebook Review: [Issue#<prereview-ID>](https://github.com/alan-turing-institute/environmental-ds-book/issues/<prereview-ID>,) 
+# Notebook Review: Issue#[PREREVIEW ID]
 
 <p align="left">
-    <a href="https://notebooks.gesis.org/binder/v2/gh/Environmental-DS-Book/<notebook-github-repository>/review?labpath=<notebook-name>.ipynb">
+    <a href="https://notebooks.gesis.org/binder/v2/gh/Environmental-DS-Book/[NOTEBOOK NAME]/review?labpath=[NOTEBOOK NAME].ipynb">
         <img alt="Binder" src="https://mybinder.org/badge_logo.svg">
     </a>
 </p>
