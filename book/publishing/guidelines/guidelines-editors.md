@@ -52,9 +52,9 @@ We ask that editors respond their availability to edit a new submission in a tim
 ### Continued attention to assigned submissions
 Editors are responsible that submissions progress smoothly through the editorial process. 
 
-In general aim for 2 weeks for review, 2 weeks for subsequent changes, and 1 week for reviewer approval of changes.
+In general aim for **2 weeks** for review, **2 weeks** for subsequent changes, and **1 week** for reviewer approval of changes.
 
-If a review has not been submitted after 2 weeks, ping the reviewer(s) within the REVIEW issue to ensure they are aware of the **2 week** deadline.
+If a review has not been submitted after **2 weeks**, ping the reviewer(s) within the REVIEW issue to ensure they are aware of the **2 week** deadline.
 
 Sometimes reviews go stale, either because reviewers fail to complete their review or an author has been slow to respond to a reviewers' feedback. 
 
