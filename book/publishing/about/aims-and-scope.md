@@ -10,7 +10,8 @@ We consider submissions from all areas of environmental science. This includes (
 Submissions could be at any stage from notebook idea to a working prototype from an existing GitHub repository. 
 The notebook should address scientific and/or technical aspects that EDS book audience could adopt, reuse, and/or extend for their purposes.
 
-The ideal notebook length is XX (TBD) lines, although in certain exceptions long notebooks are also acceptable.
+The optimal notebook has between 100 and 500 for physical lines of code in `Code Cells`, and 500 to 5000 comments in `Markdown Cells`.
+We have determined these ranges from the pool of published notebooks (by March 2023) using [cloc](https://github.com/AlDanial/cloc), a handy open-source tool to count blank lines, comment lines, and physical lines of source code in many programming languages.
 
 Notebook submissions to EDS book must:
 
