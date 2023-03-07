@@ -1,0 +1,734 @@
+
+<!DOCTYPE html>
+
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Guidelines for EDS book notebooks &#8212; The Environmental Data Science book</title>
+    
+  <link href="../_static/css/theme.css" rel="stylesheet">
+  <link href="../_static/css/index.ff1ffe594081f20da1ef19478df9384b.css" rel="stylesheet">
+
+    
+  <link rel="stylesheet"
+    href="../_static/vendor/fontawesome/5.13.0/css/all.min.css">
+  <link rel="preload" as="font" type="font/woff2" crossorigin
+    href="../_static/vendor/fontawesome/5.13.0/webfonts/fa-solid-900.woff2">
+  <link rel="preload" as="font" type="font/woff2" crossorigin
+    href="../_static/vendor/fontawesome/5.13.0/webfonts/fa-brands-400.woff2">
+
+    
+      
+
+    
+    <link rel="stylesheet" type="text/css" href="../_static/pygments.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/sphinx-book-theme.css?digest=c3fdc42140077d1ad13ad2f1588a4309" />
+    <link rel="stylesheet" type="text/css" href="../_static/togglebutton.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/copybutton.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/mystnb.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/sphinx-thebe.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/panels-main.c949a650a448cc0ae9fd3441c0e17fb0.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/panels-variables.06eb56fa6e07937060861dad626602ad.css" />
+    
+  <link rel="preload" as="script" href="../_static/js/index.be7d3bbb2ef33a8344ce.js">
+
+    <script data-url_root="../" id="documentation_options" src="../_static/documentation_options.js"></script>
+    <script src="../_static/jquery.js"></script>
+    <script src="../_static/underscore.js"></script>
+    <script src="../_static/doctools.js"></script>
+    <script src="../_static/clipboard.min.js"></script>
+    <script src="../_static/copybutton.js"></script>
+    <script>let toggleHintShow = 'Click to show';</script>
+    <script>let toggleHintHide = 'Click to hide';</script>
+    <script>let toggleOpenOnPrint = 'true';</script>
+    <script src="../_static/togglebutton.js"></script>
+    <script>var togglebuttonSelector = '.toggle, .admonition.dropdown, .tag_hide_input div.cell_input, .tag_hide-input div.cell_input, .tag_hide_output div.cell_output, .tag_hide-output div.cell_output, .tag_hide_cell.cell, .tag_hide-cell.cell';</script>
+    <script src="../_static/sphinx-book-theme.d59cb220de22ca1c485ebbdc042f0030.js"></script>
+    <script>const THEBE_JS_URL = "https://unpkg.com/thebe@0.8.2/lib/index.js"
+const thebe_selector = ".thebe,.cell"
+const thebe_selector_input = "pre"
+const thebe_selector_output = ".output, .cell_output"
+</script>
+    <script async="async" src="../_static/sphinx-thebe.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/require.js/2.3.4/require.min.js"></script>
+    <script src="https://unpkg.com/@jupyter-widgets/html-manager@^0.20.1/dist/embed-amd.js"></script>
+    <link rel="index" title="Index" href="../genindex.html" />
+    <link rel="search" title="Search" href="../search.html" />
+    <link rel="next" title="Guide for Authors" href="guidelines/guidelines-authors.html" />
+    <link rel="prev" title="Technologies in EDS Book Notebooks" href="about/notebooks-technologies.html" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="docsearch:language" content="en">
+    
+
+    <!-- Google Analytics -->
+    
+<script async="" src="https://www.google-analytics.com/analytics.js"></script>
+<script>
+                        window.ga = window.ga || function () {
+                            (ga.q = ga.q || []).push(arguments) };
+                        ga.l = +new Date;
+                        ga('create', 'UA-214298162-1', 'auto');
+                        ga('set', 'anonymizeIp', true);
+                        ga('send', 'pageview');
+                    </script>
+
+  </head>
+  <body data-spy="scroll" data-target="#bd-toc-nav" data-offset="80">
+    
+    <div class="container-fluid" id="banner"></div>
+
+    
+
+    <div class="container-xl">
+      <div class="row">
+          
+<div class="col-12 col-md-3 bd-sidebar site-navigation show" id="site-navigation">
+    
+        <div class="navbar-brand-box">
+    <a class="navbar-brand text-wrap" href="../index.html">
+      
+        <!-- `logo` is deprecated in Sphinx 4.0, so remove this when we stop supporting 3 -->
+        
+      
+      
+      <img src="../_static/logo.png" class="logo" alt="logo">
+      
+      
+      <h1 class="site-logo" id="site-title">The Environmental Data Science book</h1>
+      
+    </a>
+</div><form class="bd-search d-flex align-items-center" action="../search.html" method="get">
+  <i class="icon fas fa-search"></i>
+  <input type="search" class="form-control" name="q" id="search-input" placeholder="Search this book..." aria-label="Search this book..." autocomplete="off" >
+</form><nav class="bd-links" id="bd-docs-nav" aria-label="Main">
+    <div class="bd-toc-item active">
+        <ul class="nav bd-sidenav">
+ <li class="toctree-l1">
+  <a class="reference internal" href="../welcome.html">
+   Welcome
+  </a>
+ </li>
+</ul>
+<p aria-level="2" class="caption" role="heading">
+ <span class="caption-text">
+  Preamble
+ </span>
+</p>
+<ul class="nav bd-sidenav">
+ <li class="toctree-l1">
+  <a class="reference internal" href="../preamble/about.html">
+   About EDS book
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../preamble/who-for.html">
+   Audience
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../preamble/how-to.html">
+   Usage
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../preamble/attribution.html">
+   Citation and reuse
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../preamble/contribute.html">
+   Contribute
+  </a>
+ </li>
+</ul>
+<p aria-level="2" class="caption" role="heading">
+ <span class="caption-text">
+  Gallery
+ </span>
+</p>
+<ul class="nav bd-sidenav">
+ <li class="toctree-l1 has-children">
+  <a class="reference internal" href="../gallery/exploration.html">
+   Exploration
+  </a>
+  <input class="toctree-checkbox" id="toctree-checkbox-1" name="toctree-checkbox-1" type="checkbox"/>
+  <label for="toctree-checkbox-1">
+   <i class="fas fa-chevron-down">
+   </i>
+  </label>
+  <ul>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../gallery/exploration/general-exploration-landcover_io/general-exploration-landcover_io.html">
+     Land Cover Data (Impact Observatory)
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../gallery/exploration/agriculture-exploration-cosmosuk/agriculture-exploration-cosmosuk.html">
+     Cosmos-UK Soil Moisture (UKCEH)
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../gallery/exploration/urban-exploration-climate_ukv/urban-exploration-climate_ukv.html">
+     UKV high-resolution (Met Office)
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../gallery/exploration/wildfires-exploration-fires_modis/wildfires-exploration-fires_modis.html">
+     MOD021KM and FIRMS (NASA)
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../gallery/exploration/wildfires-exploration-fires_seviri/wildfires-exploration-fires_seviri.html">
+     SEVIRI Level 1.5 (EUMESAT)
+    </a>
+   </li>
+  </ul>
+ </li>
+ <li class="toctree-l1 has-children">
+  <a class="reference internal" href="../gallery/preprocessing.html">
+   Preprocessing
+  </a>
+  <input class="toctree-checkbox" id="toctree-checkbox-2" name="toctree-checkbox-2" type="checkbox"/>
+  <label for="toctree-checkbox-2">
+   <i class="fas fa-chevron-down">
+   </i>
+  </label>
+  <ul>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../gallery/preprocessing/general-preprocessing-rainfall_noaa/general-preprocessing-rainfall_noaa.html">
+     Rainfall NCEP/NCAR (NOAA)
+    </a>
+   </li>
+  </ul>
+ </li>
+ <li class="toctree-l1 has-children">
+  <a class="reference internal" href="../gallery/modelling.html">
+   Modelling
+  </a>
+  <input class="toctree-checkbox" id="toctree-checkbox-3" name="toctree-checkbox-3" type="checkbox"/>
+  <label for="toctree-checkbox-3">
+   <i class="fas fa-chevron-down">
+   </i>
+  </label>
+  <ul>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../gallery/modelling/forest-modelling-treecrown_deepforest/forest-modelling-treecrown_deepforest.html">
+     Tree crown (DeepForest)
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../gallery/modelling/forest-modelling-treecrown_detectreeRGB/forest-modelling-treecrown_detectreeRGB.html">
+     Tree crown (DetectreeRGB)
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../gallery/modelling/ocean-modelling-litter-philab/ocean-modelling-litter-philab.html">
+     Detecting floating objects (ESA Phi-Lab)
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../gallery/modelling/polar-modelling-icenet/polar-modelling-icenet.html">
+     Sea ice forecasting (IceNet)
+    </a>
+   </li>
+  </ul>
+ </li>
+</ul>
+<p aria-level="2" class="caption" role="heading">
+ <span class="caption-text">
+  Publishing
+ </span>
+</p>
+<ul class="current nav bd-sidenav">
+ <li class="toctree-l1 has-children">
+  <a class="reference internal" href="about.html">
+   About EDS notebooks
+  </a>
+  <input class="toctree-checkbox" id="toctree-checkbox-4" name="toctree-checkbox-4" type="checkbox"/>
+  <label for="toctree-checkbox-4">
+   <i class="fas fa-chevron-down">
+   </i>
+  </label>
+  <ul>
+   <li class="toctree-l2">
+    <a class="reference internal" href="about/aims-and-scope.html">
+     Aims and Scope
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="about/review-benefits.html">
+     Benefits of Reviewing Notebooks
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="about/notebooks-technologies.html">
+     Technologies
+    </a>
+   </li>
+  </ul>
+ </li>
+ <li class="toctree-l1 current active has-children">
+  <a class="current reference internal" href="#">
+   Guidelines
+  </a>
+  <input checked="" class="toctree-checkbox" id="toctree-checkbox-5" name="toctree-checkbox-5" type="checkbox"/>
+  <label for="toctree-checkbox-5">
+   <i class="fas fa-chevron-down">
+   </i>
+  </label>
+  <ul>
+   <li class="toctree-l2">
+    <a class="reference internal" href="guidelines/guidelines-authors.html">
+     Guide for Authors
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="guidelines/guidelines-reviewers.html">
+     Guide for Reviewers
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="guidelines/guidelines-editors.html">
+     Guide for Editors
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="guidelines/guidelines-eic.html">
+     Guide for Editor in Chief
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="guidelines/guidelines-community.html">
+     Guide for Community
+    </a>
+   </li>
+  </ul>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="faq.html">
+   FAQ
+  </a>
+ </li>
+</ul>
+<p aria-level="2" class="caption" role="heading">
+ <span class="caption-text">
+  Community
+ </span>
+</p>
+<ul class="nav bd-sidenav">
+ <li class="toctree-l1 has-children">
+  <a class="reference internal" href="../community/coworking.html">
+   Coworking Calls
+  </a>
+  <input class="toctree-checkbox" id="toctree-checkbox-6" name="toctree-checkbox-6" type="checkbox"/>
+  <label for="toctree-checkbox-6">
+   <i class="fas fa-chevron-down">
+   </i>
+  </label>
+  <ul>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../community/coworking/coworking-motivation.html">
+     Background, Motivations, and Techniques
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../community/coworking/coworking-collabcafe.html">
+     Online Collaboration Cafe
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../community/coworking/coworking-showtell.html">
+     Online Show and Tell
+    </a>
+   </li>
+  </ul>
+ </li>
+ <li class="toctree-l1 has-children">
+  <a class="reference internal" href="../community/notes.html">
+   Meeting Notes
+  </a>
+  <input class="toctree-checkbox" id="toctree-checkbox-7" name="toctree-checkbox-7" type="checkbox"/>
+  <label for="toctree-checkbox-7">
+   <i class="fas fa-chevron-down">
+   </i>
+  </label>
+  <ul>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../community/notes/notes-collabcafe.html">
+     <em>
+      The Environmental Data Science
+     </em>
+     ⛰ 🌳 🏙️ ❄️ 🔥 🌊  online Collaboration Cafe
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../community/notes/notes-journalclub.html">
+     Online Journal Club
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../community/notes/notes-showtell.html">
+     Online Show and Tell
+    </a>
+   </li>
+  </ul>
+ </li>
+ <li class="toctree-l1 has-children">
+  <a class="reference internal" href="../community/templates.html">
+   Template Collection
+  </a>
+  <input class="toctree-checkbox" id="toctree-checkbox-8" name="toctree-checkbox-8" type="checkbox"/>
+  <label for="toctree-checkbox-8">
+   <i class="fas fa-chevron-down">
+   </i>
+  </label>
+  <ul>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../community/templates/template-coworking-collabcafe.html">
+     Online Collaboration Cafe
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../community/templates/template-coworking-journalclub.html">
+     Online Journal Club
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../community/templates/template-coworking-showtell.html">
+     Online Show and Tell
+    </a>
+   </li>
+  </ul>
+ </li>
+</ul>
+<p aria-level="2" class="caption" role="heading">
+ <span class="caption-text">
+  Afterword
+ </span>
+</p>
+<ul class="nav bd-sidenav">
+ <li class="toctree-l1">
+  <a class="reference internal" href="../afterword/bibliography.html">
+   Bibliography
+  </a>
+ </li>
+</ul>
+
+    </div>
+</nav> <!-- To handle the deprecated key -->
+
+<div class="navbar_extra_footer">
+  Powered by <a href="https://jupyterbook.org">Jupyter Book</a>
+</div>
+
+</div>
+
+
+          
+
+
+          
+<main class="col py-md-3 pl-md-4 bd-content overflow-auto" role="main">
+    
+    <div class="topbar container-xl fixed-top">
+    <div class="topbar-contents row">
+        <div class="col-12 col-md-3 bd-topbar-whitespace site-navigation show"></div>
+        <div class="col pl-md-4 topbar-main">
+            
+            <button id="navbar-toggler" class="navbar-toggler ml-0" type="button" data-toggle="collapse"
+                data-toggle="tooltip" data-placement="bottom" data-target=".site-navigation" aria-controls="navbar-menu"
+                aria-expanded="true" aria-label="Toggle navigation" aria-controls="site-navigation"
+                title="Toggle navigation" data-toggle="tooltip" data-placement="left">
+                <i class="fas fa-bars"></i>
+                <i class="fas fa-arrow-left"></i>
+                <i class="fas fa-arrow-up"></i>
+            </button>
+            
+            
+<div class="dropdown-buttons-trigger">
+    <button id="dropdown-buttons-trigger" class="btn btn-secondary topbarbtn" aria-label="Download this page"><i
+            class="fas fa-download"></i></button>
+
+    <div class="dropdown-buttons">
+        <!-- ipynb file if we had a myst markdown file -->
+        
+        <!-- Download raw file -->
+        <a class="dropdown-buttons" href="../_sources/publishing/guidelines.md"><button type="button"
+                class="btn btn-secondary topbarbtn" title="Download source file" data-toggle="tooltip"
+                data-placement="left">.md</button></a>
+        <!-- Download PDF via print -->
+        <button type="button" id="download-print" class="btn btn-secondary topbarbtn" title="Print to PDF"
+                onclick="printPdf(this)" data-toggle="tooltip" data-placement="left">.pdf</button>
+    </div>
+</div>
+
+            <!-- Source interaction buttons -->
+
+<div class="dropdown-buttons-trigger">
+    <button id="dropdown-buttons-trigger" class="btn btn-secondary topbarbtn"
+        aria-label="Connect with source repository"><i class="fab fa-github"></i></button>
+    <div class="dropdown-buttons sourcebuttons">
+        <a class="repository-button"
+            href="https://github.com/alan-turing-institute/environmental-ds-book"><button type="button" class="btn btn-secondary topbarbtn"
+                data-toggle="tooltip" data-placement="left" title="Source repository"><i
+                    class="fab fa-github"></i>repository</button></a>
+        <a class="issues-button"
+            href="https://github.com/alan-turing-institute/environmental-ds-book/issues/new?title=Issue%20on%20page%20%2Fpublishing/guidelines.html&body=Your%20issue%20content%20here."><button
+                type="button" class="btn btn-secondary topbarbtn" data-toggle="tooltip" data-placement="left"
+                title="Open an issue"><i class="fas fa-lightbulb"></i>open issue</button></a>
+        <a class="edit-button" href="https://github.com/alan-turing-institute/environmental-ds-book/edit/master/book/publishing/guidelines.md"><button
+                type="button" class="btn btn-secondary topbarbtn" data-toggle="tooltip" data-placement="left"
+                title="Edit this page"><i class="fas fa-pencil-alt"></i>suggest edit</button></a>
+    </div>
+</div>
+
+            <!-- Full screen (wrap in <a> to have style consistency -->
+
+<a class="full-screen-button"><button type="button" class="btn btn-secondary topbarbtn" data-toggle="tooltip"
+        data-placement="bottom" onclick="toggleFullScreen()" aria-label="Fullscreen mode"
+        title="Fullscreen mode"><i
+            class="fas fa-expand"></i></button></a>
+
+            <!-- Launch buttons -->
+
+        </div>
+
+        <!-- Table of contents -->
+        <div class="d-none d-md-block col-md-2 bd-toc show noprint">
+            
+            <div class="tocsection onthispage pt-5 pb-3">
+                <i class="fas fa-list"></i> Contents
+            </div>
+            <nav id="bd-toc-nav" aria-label="Page">
+                <ul class="visible nav section-nav flex-column">
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#publication-process">
+   Publication process
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#roles">
+   Roles
+  </a>
+  <ul class="nav section-nav flex-column">
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#attribution">
+     Attribution
+    </a>
+   </li>
+  </ul>
+ </li>
+</ul>
+
+            </nav>
+        </div>
+    </div>
+</div>
+    <div id="main-content" class="row">
+        <div class="col-12 col-md-9 pl-md-3 pr-md-0">
+            <!-- Table of contents that is only displayed when printing the page -->
+            <div id="jb-print-docs-body" class="onlyprint">
+                <h1>Guidelines for EDS book notebooks</h1>
+                <!-- Table of contents -->
+                <div id="print-main-content">
+                    <div id="jb-print-toc">
+                        
+                        <div>
+                            <h2> Contents </h2>
+                        </div>
+                        <nav aria-label="Page">
+                            <ul class="visible nav section-nav flex-column">
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#publication-process">
+   Publication process
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#roles">
+   Roles
+  </a>
+  <ul class="nav section-nav flex-column">
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#attribution">
+     Attribution
+    </a>
+   </li>
+  </ul>
+ </li>
+</ul>
+
+                        </nav>
+                    </div>
+                </div>
+            </div>
+            
+              <div>
+                
+  <div class="tex2jax_ignore mathjax_ignore section" id="guidelines-for-eds-book-notebooks">
+<span id="pb-guidelines"></span><h1>Guidelines for EDS book notebooks<a class="headerlink" href="#guidelines-for-eds-book-notebooks" title="Permalink to this headline">¶</a></h1>
+<p>This section introduces the publication process, roles and themes in EDS book computational notebooks.</p>
+<div class="section" id="publication-process">
+<h2>Publication process<a class="headerlink" href="#publication-process" title="Permalink to this headline">¶</a></h2>
+<p>The main steps when submitting and publishing EDS book notebooks are:</p>
+<ul class="simple">
+<li><p><strong>Notebook idea</strong>: authors open a <a class="reference external" href="https://github.com/alan-turing-institute/environmental-ds-book/issues/new/choose">notebook idea issue</a> in the main EDS book repository.
+Editors-in-Chief (EiC) validates the proposed notebook with a general feedback including potential datasets/methods/tools to be considered.</p></li>
+<li><p><strong>Preparation</strong>: authors prepare a first working (and reproducible) version of the notebook with a notification to EiC. The notebook repository should be hosted in a personal GitHub account.
+EiC verify the notebook runs in Binder and confirms its feasibility.
+After the Binder checkpoint, EiC transfer the notebook repository from the personal GitHub account to the <a class="reference external" href="https://github.com/Environmental-DS-Book">Environmental-DS-Book organisation</a>.</p></li>
+<li><p><strong>Pre-review and review</strong>: EiC open a <em>PRE-REVIEW</em> issue to assign an editor.
+The assigned editor should find 2 reviewers to start the review process.
+Authors and reviewers work together to improve the plain and executable content of the notebook.
+All proposed changes and conversations should be conducted within a <em>REVIEW</em> issue opened at the main EDS book repository.</p></li>
+<li><p><strong>Post-print</strong>: after reviewers and editor confirm their recommendation to accept the notebook for publication, EiC will share proofs (the draft of the final formatting) hosted as a Pull Request in the main repo of the EDS book.
+EiC ask authors to proof-read the notebook and indicate any remaining typos, badly formed citations, awkward wording, etc.</p></li>
+<li><p><strong>Publication</strong>: EiC disseminate the publication through the official communication channels of the EDS book community e.g. <a class="reference external" href="https://twitter.com/EnvDSbook">Twitter</a>, <a class="reference external" href="https://fosstodon.org/&#64;EDSbook">Mastodon</a>.
+Authors and reviewers are welcome to use same or alternative communication channels of their preference.</p></li>
+<li><p><strong>Post-publication</strong>: Anyone from the EDS book community or registered in GitHub complying our <a class="reference external" href="https://raw.githubusercontent.com/alan-turing-institute/environmental-ds-book/master/CODE_OF_CONDUCT.md">code of conduct</a> is welcome to suggest improvements and/or clarifications in the published notebook.
+Where relevant, EiC will notify authors about proposed changes and their acceptance. If the authors consider suggestions as a substantial contribution, EiC will acknowledge it by adding the contributor’s name to the citation of the notebook.</p></li>
+</ul>
+</div>
+<div class="section" id="roles">
+<h2>Roles<a class="headerlink" href="#roles" title="Permalink to this headline">¶</a></h2>
+<p>The table below indicates the key roles within the publication of EDS book notebooks according to the steps mentioned above.
+Mandatory and optional participation are illustrated by ✅ and ⭕ icons, respectively.</p>
+<table class="colwidths-auto table">
+<thead>
+<tr class="row-odd"><th class="text-align:left head"><p>Stage</p></th>
+<th class="text-align:center head"><p>Where in GitHub</p></th>
+<th class="text-align:center head"><p>Authors</p></th>
+<th class="text-align:center head"><p>Reviewers</p></th>
+<th class="text-align:center head"><p>Editors-in-Chief</p></th>
+<th class="text-align:center head"><p>Editors</p></th>
+<th class="text-align:center head"><p>Community</p></th>
+</tr>
+</thead>
+<tbody>
+<tr class="row-even"><td class="text-align:left"><p>Notebook idea</p></td>
+<td class="text-align:center"><p>EDS repo (<em>issues</em>)</p></td>
+<td class="text-align:center"><p>✅</p></td>
+<td class="text-align:center"><p></p></td>
+<td class="text-align:center"><p>✅</p></td>
+<td class="text-align:center"><p></p></td>
+<td class="text-align:center"><p>⭕</p></td>
+</tr>
+<tr class="row-odd"><td class="text-align:left"><p>Preparation</p></td>
+<td class="text-align:center"><p>EDS repo (<em>issues</em>)</p></td>
+<td class="text-align:center"><p>✅</p></td>
+<td class="text-align:center"><p></p></td>
+<td class="text-align:center"><p>✅</p></td>
+<td class="text-align:center"><p></p></td>
+<td class="text-align:center"><p></p></td>
+</tr>
+<tr class="row-even"><td class="text-align:left"><p>Prereview and Review</p></td>
+<td class="text-align:center"><p>EDS repo (<em>issues</em>)</p></td>
+<td class="text-align:center"><p>✅</p></td>
+<td class="text-align:center"><p>✅</p></td>
+<td class="text-align:center"><p>✅</p></td>
+<td class="text-align:center"><p>✅</p></td>
+<td class="text-align:center"><p></p></td>
+</tr>
+<tr class="row-odd"><td class="text-align:left"><p>Post-print</p></td>
+<td class="text-align:center"><p>EDS repo (<em>pull request</em>)</p></td>
+<td class="text-align:center"><p>✅</p></td>
+<td class="text-align:center"><p>⭕</p></td>
+<td class="text-align:center"><p>✅</p></td>
+<td class="text-align:center"><p></p></td>
+<td class="text-align:center"><p></p></td>
+</tr>
+<tr class="row-even"><td class="text-align:left"><p>Publication</p></td>
+<td class="text-align:center"><p>EDS repo (<em>main branch</em>)</p></td>
+<td class="text-align:center"><p>⭕ ️</p></td>
+<td class="text-align:center"><p></p></td>
+<td class="text-align:center"><p>✅</p></td>
+<td class="text-align:center"><p></p></td>
+<td class="text-align:center"><p></p></td>
+</tr>
+<tr class="row-odd"><td class="text-align:left"><p>Post-publication</p></td>
+<td class="text-align:center"><p>Notebook repo (<em>issues</em>)</p></td>
+<td class="text-align:center"><p>⭕ ️</p></td>
+<td class="text-align:center"><p></p></td>
+<td class="text-align:center"><p>✅</p></td>
+<td class="text-align:center"><p></p></td>
+<td class="text-align:center"><p>✅</p></td>
+</tr>
+</tbody>
+</table>
+<ul class="simple">
+<li><p><strong>Authors</strong>: prepare, implement and report changes of the submitted notebook.</p></li>
+<li><p><strong>Reviewers</strong>: provide feedback for improving the proposed plain and executable content of the notebook.</p></li>
+<li><p><strong>Editors-in-Chief</strong>: validate the notebook idea, make suggestions to improve it, prepare the notebook for its revision, assign editors, lead publishing and moderate post-publication.</p></li>
+<li><p><strong>Editors</strong>: find reviewers, moderate the conversation between reviewers and authors.</p></li>
+<li><p><strong>Community</strong>: propose, explore and/or make constructive comments of the notebook at the idea stage (optional) or after publication.</p></li>
+</ul>
+<div class="section" id="attribution">
+<h3>Attribution<a class="headerlink" href="#attribution" title="Permalink to this headline">¶</a></h3>
+<p>Some material in this section and derived guidelines have been adapted from <a class="reference external" href="https://docs.neurolibre.org/en/latest/REVIEWER.html">Neurolibre</a>, the <a class="reference external" href="https://openjournals.readthedocs.io/en/jose/index.html">Journal of Open Source Education</a> and <a class="reference external" href="https://www.pyopensci.org/software-peer-review/index.html">pyOpenSci</a> reviewing guidelines, released under CC BY 3.0, CC BY 4.0 and CC BY-SA 4.0, respectively.</p>
+</div>
+</div>
+<div class="toctree-wrapper compound">
+</div>
+</div>
+
+    <script type="text/x-thebe-config">
+    {
+        requestKernel: true,
+        binderOptions: {
+            repo: "binder-examples/jupyter-stacks-datascience",
+            ref: "master",
+        },
+        codeMirrorConfig: {
+            theme: "abcdef",
+            mode: "python"
+        },
+        kernelOptions: {
+            kernelName: "python3",
+            path: "./publishing"
+        },
+        predefinedOutput: true
+    }
+    </script>
+    <script>kernelName = 'python3'</script>
+
+              </div>
+              
+            
+                <!-- Previous / next buttons -->
+<div class='prev-next-area'> 
+    <a class='left-prev' id="prev-link" href="about/notebooks-technologies.html" title="previous page">
+        <i class="fas fa-angle-left"></i>
+        <div class="prev-next-info">
+            <p class="prev-next-subtitle">previous</p>
+            <p class="prev-next-title">Technologies in EDS Book Notebooks</p>
+        </div>
+    </a>
+    <a class='right-next' id="next-link" href="guidelines/guidelines-authors.html" title="next page">
+    <div class="prev-next-info">
+        <p class="prev-next-subtitle">next</p>
+        <p class="prev-next-title">Guide for Authors</p>
+    </div>
+    <i class="fas fa-angle-right"></i>
+    </a>
+</div>
+            
+        </div>
+    </div>
+    <footer class="footer">
+  <p>
+    
+      By The Environmental DS Community. This site is powered by <a href="https://www.netlify.com/">Netlify</a>.<br/>
+    
+        &copy; Copyright 2021.<br/>
+  </p>
+</footer>
+</main>
+
+
+      </div>
+    </div>
+  
+  <script src="../_static/js/index.be7d3bbb2ef33a8344ce.js"></script>
+
+  </body>
+</html>
