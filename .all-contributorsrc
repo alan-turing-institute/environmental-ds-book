@@ -218,6 +218,16 @@
       "contributions": [
         "ideas"
       ]
+    },
+    {
+      "login": "EstherPlomp",
+      "name": "Esther Plomp",
+      "avatar_url": "https://avatars.githubusercontent.com/u/46314469?v=4",
+      "profile": "https://github.com/EstherPlomp",
+      "contributions": [
+        "review",
+        "ideas"
+      ]
     }
   ],
   "contributorsPerLine": 7,
