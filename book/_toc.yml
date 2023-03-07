@@ -4,9 +4,16 @@ parts:
 - caption: Preamble
   chapters:
   - file: preamble/about
+    title: About EDS book
   - file: preamble/who-for
+    title: Audience
   - file: preamble/how-to
+    title: Usage
   - file: preamble/attribution
+    title: Citation and reuse
+  - file: preamble/contribute
+    title: Contribute
+
 - caption: Gallery
   chapters:
   - file: gallery/exploration
@@ -38,15 +45,34 @@ parts:
         title: Detecting floating objects (ESA Phi-Lab)
       - file: gallery/modelling/polar-modelling-icenet/polar-modelling-icenet
         title: Sea ice forecasting (IceNet)
+- caption: Publishing
+  chapters:
+  - file: publishing/about
+    title: About EDS notebooks
+    sections:
+    - file: publishing/about/aims-and-scope
+      title: Aims & Scope
+    - file: publishing/about/review-benefits
+      title: Benefits of Reviewing Notebooks
+    - file: publishing/about/notebooks-technologies
+      title: Technologies
+  - file: publishing/guidelines
+    title: Guidelines
+    sections:
+    - file: publishing/guidelines/guidelines-authors
+      title: Guide for Authors
+    - file: publishing/guidelines/guidelines-reviewers
+      title: Guide for Reviewers
+    - file: publishing/guidelines/guidelines-editors
+      title: Guide for Editors
+    - file: publishing/guidelines/guidelines-eic
+      title: Guide for Editor in Chief
+    - file: publishing/guidelines/guidelines-community
+      title: Guide for Community
+  - file: publishing/faq
+    title: FAQ
 - caption: Community
   chapters:
-  - file: community/guidelines
-    title: Publishing guidelines
-    sections:
-    - file: community/guidelines/guidelines-submission
-      title: Submission
-    - file: community/guidelines/guidelines-reviewing
-      title: Reviewing
   - file: community/coworking
     title: Coworking Calls
     sections:
@@ -68,8 +94,6 @@ parts:
   - file: community/templates
     title: Template Collection
     sections:
-    - file: community/templates/template-review-checklist
-      title: Review Checklist
     - file: community/templates/template-coworking-collabcafe
       title: Online Collaboration Cafe
     - file: community/templates/template-coworking-journalclub
@@ -77,17 +101,6 @@ parts:
     - file: community/templates/template-coworking-showtell
       title: Online Show and Tell
     - file: community/templates/template-environments-exploration
-      title: Notebook Exploration
-    - file: community/templates/template-environments-preprocessing
-      title: Notebook Pre-processing
-    - file: community/templates/template-environments-modelling
-      title: Notebook Modelling
-    - file: community/templates/template-environments-postprocessing
-      title: Notebook Post-processing
-  - file: community/readings
-    title: Interesting readings
 - caption: Afterword
   chapters:
-  - file: afterword/glossary
   - file: afterword/bibliography
-  - file: afterword/statistics
