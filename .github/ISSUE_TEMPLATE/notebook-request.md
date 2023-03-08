@@ -12,6 +12,13 @@ labels: ["notebook"]
 <!--- Provide further context of the purpose of the notebook -->
 <!--- Where possible describe data sources (and links), packages, codebase, etc -->
 
+## Programming language
+<!--- Provide further context of the programming language of the notebook -->
+<!--- We only support the languages below -->
+- [ ] Python
+- [ ] R
+- [ ] Julia
+
 ## Data Science Component
 <!--- Mark a single option applicable for the notebook -->
 <!--- If other, please specify -->
@@ -32,5 +39,11 @@ labels: ["notebook"]
 - [ ] The proposed notebook uses open-source packages
 - [ ] The proposed notebook is associated to existing publication(s)
 
+## Submission track
+<!--- Mark a single option applicable for the notebook -->
+<!--- If other, please specify -->
+- [ ] Regular
+- [ ] Other:
+
 ## Additional information 
-<!--- Add any other context about the notebook here -->
+<!--- Add any other context a§bout the notebook here -->
