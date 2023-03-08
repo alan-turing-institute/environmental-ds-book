@@ -27,8 +27,8 @@ Submitting a NBI is as simple as:
 ### Notebook Repository
 After validating the notebook idea, a first draft of the notebook should be created by using a notebook repository template according to the target programming language:
 * [Python](https://github.com/Environmental-DS-Book/template_python)
-* R (TODO)
-* Julia (TODO)
+* [R](https://github.com/Environmental-DS-Book/template_r)
+* [Julia](https://github.com/Environmental-DS-Book/template_julia)
 
 The repository templates are adapted from [2i2c hub-user-image-template](https://github.com/2i2c-org/hub-user-image-template). 
 The corresponding author should open a Pull Request to start editing the notebook and dependencies files. 
