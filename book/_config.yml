@@ -5,8 +5,8 @@
 
 #######################################################################################
 # Book settings
-title                       : The Environmental Data Science book # The title of the book. Will be placed in the left navbar.
-author                      : The Environmental DS Community. This site is powered by <a href="https://www.netlify.com/">Netlify</a>. # The author of the book
+title                       : Environmental Data Science Book # The title of the book. Will be placed in the left navbar.
+author                      : EDS book Community. This site is powered by <a href="https://www.netlify.com/">Netlify</a>. # The author of the book
 copyright                   : "2021"  # Copyright year to be placed in the footer
 logo                        : "./figures/logo/logo.png"  # A path to the book logo
 
