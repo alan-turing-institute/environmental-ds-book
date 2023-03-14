@@ -19,7 +19,7 @@ metadata_contribution = {
                },
     'outputs': {'content': 'figures and tables',
                'url': "https://doi.org/10.5281/zenodo.7101976"},
-    'author_GHuser': 'Environmental-DS-Book',
+    'author_GHuser': 'eds-book-gallery',
     'references':{'ref1':{'name':'Global land use / land cover with Sentinel 2 and deep learning','url':"http://doi.org/10.1109/IGARSS47720.2021.9553499"},
                   'ref2':{'name':'Impact Observatory - Methodology & Accuracy Summary','url':"https://www.impactobservatory.com/static/lulc_methodology_accuracy-ee742a0a389a85a0d4e7295941504ac2.pdf"}},
     'sketch': {'title':'Image showing interactive plot of global monthly precipitation mean computed from NCEP/NCAR reanalysis dataset',

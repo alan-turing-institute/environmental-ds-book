@@ -15,7 +15,7 @@ metadata_contribution = {
     'topic': 'exploration',
     'filename': 'general-exploration-landcover_io',
     'title': 'Exploring Land Cover Data (Impact Observatory)',
-    'author_GHuser': 'Environmental-DS-Book',
+    'author_GHuser': 'eds-book-gallery',
     #'conda_os_files': ['osx'],
     'conda_os_files': ['linux', 'osx', 'win'],
     'requirements_txt': False
