@@ -26,9 +26,9 @@ Submitting a NBI is as simple as:
 
 ### Notebook Repository
 After validating the notebook idea, a first draft of the notebook should be created by using a notebook repository template according to the target programming language:
-* [Python](https://github.com/Environmental-DS-Book/template_python)
-* [R](https://github.com/Environmental-DS-Book/template_r)
-* [Julia](https://github.com/Environmental-DS-Book/template_julia)
+* [Python](https://github.com/eds-book-gallery/template_python)
+* [R](https://github.com/eds-book-gallery/template_r)
+* [Julia](https://github.com/eds-book-gallery/template_julia)
 
 The repository templates are adapted from [2i2c hub-user-image-template](https://github.com/2i2c-org/hub-user-image-template). 
 The corresponding author should open a Pull Request to start editing the notebook and dependencies files. 
@@ -46,7 +46,7 @@ Some general guidelines are:
 When the minimal working version of the notebook is ready, authors should tag EiC in the PR with the latest Binder badge.
 EiC will check how reproducible is the notebook and its feasibility for the reviewing stage. 
 
-After EiC's approval of the draft version of the notebook, authors transfer the notebook repository to the [Environmental Data Science book organisation](https://github.com/Environmental-DS-Book). 
+After EiC's approval of the draft version of the notebook, authors transfer the notebook repository to the [eds-book-gallery](https://github.com/eds-book-gallery) organisation. 
 Please see [here](https://docs.github.com/en/enterprise-server@3.4/repositories/creating-and-managing-repositories/transferring-a-repository) how to transfer repositories according to the official GitHub documentation. 
 
 EiC will assist you to prepare the notebook repository for the review process.
