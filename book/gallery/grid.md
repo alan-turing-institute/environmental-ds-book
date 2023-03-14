@@ -6,7 +6,7 @@
 
 :::{grid-item-card} Land Cover Data <br> (Impact Observatory)
 :margin: 3 0 0 0
-:link: ./list/general-exploration-landcover_io.html
+:link: ./list/general-exploration-landcover_io/general-exploration-landcover_io.html
 :link-type: url
 :text-align: center
 :shadow: md
@@ -42,7 +42,7 @@ Millington (2022)
 
 :::{grid-item-card} Cosmos-UK Soil Moisture <br> (UKCEH)
 :margin: 3 0 0 0
-:link: ./list/agriculture-exploration-cosmosuk.html
+:link: ./list/agriculture-exploration-cosmosuk/agriculture-exploration-cosmosuk.html
 :link-type: url
 :text-align: center
 :shadow: md
@@ -78,7 +78,7 @@ Coca-Castro (2022)
 
 :::{grid-item-card} Rainfall NCEP/NCAR <br> (NOAA)
 :margin: 3 0 0 0
-:link: ./list/general-preprocessing-rainfall_noaa.html
+:link: ./list/general-preprocessing-rainfall_noaa/general-preprocessing-rainfall_noaa.html
 :link-type: url
 :text-align: center
 :shadow: md
@@ -114,7 +114,7 @@ Lam *et al.* (2022)
 
 :::{grid-item-card} Sea ice forecasting <br> (IceNet)
 :margin: 3 0 0 0
-:link: ./list/polar-modelling-icenet.html
+:link: ./list/polar-modelling-icenet/polar-modelling-icenet.html
 :link-type: url
 :text-align: center
 :shadow: md
@@ -150,7 +150,7 @@ Coca-Castro (2022)
 
 :::{grid-item-card} Tree crown <br> (DetectreeRGB)
 :margin: 3 0 0 0
-:link: ./list/forest-modelling-treecrown_detectreeRGB.html
+:link: ./list/forest-modelling-treecrown_detectreeRGB/forest-modelling-treecrown_detectreeRGB.html
 :link-type: url
 :text-align: center
 :shadow: md
@@ -186,7 +186,7 @@ Hickman (2022)
 
 :::{grid-item-card} SEVIRI Level 1.5 <br> (EUMESAT)
 :margin: 3 0 0 0
-:link: ./list/wildfires-exploration-fires_seviri.html
+:link: ./list/wildfires-exploration-fires_seviri/wildfires-exploration-fires_seviri.html
 :link-type: url
 :text-align: center
 :shadow: md
@@ -222,7 +222,7 @@ Jackson (2022)
 
 :::{grid-item-card} Tree crown <br> (DeepForest)
 :margin: 3 0 0 0
-:link: ./list/forest-modelling-treecrown_deepforest.html
+:link: ./list/forest-modelling-treecrown_deepforest/forest-modelling-treecrown_deepforest.html
 :link-type: url
 :text-align: center
 :shadow: md
@@ -258,7 +258,7 @@ Coca-Castro (2022)
 
 :::{grid-item-card} MOD021KM and FIRMS <br> (NASA)
 :margin: 3 0 0 0
-:link: ./list/wildfires-exploration-fires_modis.html
+:link: ./list//wildfires-exploration-fires_modis/wildfires-exploration-fires_modis.html
 :link-type: url
 :text-align: center
 :shadow: md
@@ -294,7 +294,7 @@ Jackson (2022)
 
 :::{grid-item-card} UKV high-resolution <br> (Met Office)
 :margin: 3 0 0 0
-:link: ./list/urban-exploration-climate_ukv.html
+:link: ./list/urban-exploration-climate_ukv/urban-exploration-climate_ukv.html
 :link-type: url
 :text-align: center
 :shadow: md
@@ -330,7 +330,7 @@ Adams (2022)
 
 :::{grid-item-card} Detecting floating objects <br> (ESA Phi-Lab)
 :margin: 3 0 0 0
-:link: ./list/ocean-modelling-litter-philab.html
+:link: ./list/ocean-modelling-litter-philab/ocean-modelling-litter-philab.html
 :link-type: url
 :text-align: center
 :shadow: md
