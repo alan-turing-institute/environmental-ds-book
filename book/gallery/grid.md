@@ -42,7 +42,7 @@ Millington (2022)
 
 :::{grid-item-card} Cosmos-UK Soil Moisture <br> (UKCEH)
 :margin: 3 0 0 0
-:link: ./list/agriculture-exploration-cosmosuk/agriculture-exploration-cosmosuk.html
+:link: ./agriculture-exploration-cosmosuk/agriculture-exploration-cosmosuk.html
 :link-type: url
 :text-align: center
 :shadow: md

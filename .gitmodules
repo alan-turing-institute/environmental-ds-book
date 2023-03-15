@@ -38,3 +38,7 @@
 	path = book/gallery/list/general-exploration-landcover_io
 	url = https://github.com/eds-book-gallery/general-exploration-landcover_io
 	branch = render
+[submodule "book/gallery/agriculture-exploration-cosmosuk"]
+	path = book/gallery/agriculture-exploration-cosmosuk
+	url = https://github.com/eds-book-gallery/agriculture-exploration-cosmosuk
+	branch = render
