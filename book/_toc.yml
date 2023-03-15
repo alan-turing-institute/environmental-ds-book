@@ -24,21 +24,21 @@ parts:
         title: Land Cover Data (Impact Observatory)
       - file: gallery/list/agriculture-exploration-cosmosuk/agriculture-exploration-cosmosuk
         title: Cosmos-UK Soil Moisture (UKCEH)
-      - file: gallery/preprocessing/general-preprocessing-rainfall_noaa/general-preprocessing-rainfall_noaa
+      - file: gallery/list/general-preprocessing-rainfall_noaa/general-preprocessing-rainfall_noaa
         title: Rainfall NCEP/NCAR (NOAA)
-      - file: gallery/modelling/polar-modelling-icenet/polar-modelling-icenet
+      - file: gallery/list/polar-modelling-icenet/polar-modelling-icenet
         title: Sea ice forecasting (IceNet)
-      - file: gallery/modelling/forest-modelling-treecrown_detectreeRGB/forest-modelling-treecrown_detectreeRGB
+      - file: gallery/list/forest-modelling-treecrown_detectreeRGB/forest-modelling-treecrown_detectreeRGB
         title: Tree crown (DetectreeRGB)
       - file: gallery/list/wildfires-exploration-fires_seviri/wildfires-exploration-fires_seviri
         title: SEVIRI Level 1.5 (EUMESAT)
-      - file: gallery/modelling/forest-modelling-treecrown_deepforest/forest-modelling-treecrown_deepforest
+      - file: gallery/list/forest-modelling-treecrown_deepforest/forest-modelling-treecrown_deepforest
         title: Tree crown (DeepForest)
       - file: gallery/list/wildfires-exploration-fires_modis/wildfires-exploration-fires_modis
         title: MOD021KM and FIRMS (NASA)
       - file: gallery/list/urban-exploration-climate_ukv/urban-exploration-climate_ukv
         title: UKV high-resolution (Met Office)
-      - file: gallery/modelling/ocean-modelling-litter-philab/ocean-modelling-litter-philab
+      - file: gallery/list/ocean-modelling-litter-philab/ocean-modelling-litter-philab
         title: Detecting floating objects (ESA Phi-Lab)
 - caption: Publishing
   chapters:
