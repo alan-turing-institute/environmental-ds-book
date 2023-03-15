@@ -47,7 +47,7 @@ Millington (2022)
 :text-align: center
 :shadow: md
 
-{bdg-primary}`General`
+{bdg-primary}`Agriculture`
 {bdg-secondary}`Exploration`
 <br>
 {bdg-warning}`Regular`
