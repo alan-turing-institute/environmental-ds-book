@@ -20,8 +20,8 @@ parts:
   - file: gallery/list
     title: List
     sections:
-      - file: gallery/list/general-exploration-landcover_io/general-exploration-landcover_io
-        title: Land Cover Data (Impact Observatory)
+#      - file: gallery/list/general-exploration-landcover_io/general-exploration-landcover_io
+#        title: Land Cover Data (Impact Observatory)
       - file: gallery/list/agriculture-exploration-cosmosuk/agriculture-exploration-cosmosuk
         title: Cosmos-UK Soil Moisture (UKCEH)
       - file: gallery/list/general-preprocessing-rainfall_noaa/general-preprocessing-rainfall_noaa
