@@ -15,31 +15,29 @@ parts:
     title: Contribute
 - caption: Notebooks
   chapters:
-  - file: gallery/grid
+  - file: notebooks/gallery
     title: Gallery
-  - file: gallery/list
-    title: List
     sections:
 #      - file: gallery/list/general-exploration-landcover_io/general-exploration-landcover_io
 #        title: Land Cover Data (Impact Observatory)
-      - file: gallery/list/agriculture-exploration-cosmosuk/agriculture-exploration-cosmosuk
-        title: Cosmos-UK Soil Moisture (UKCEH)
-      - file: gallery/list/general-preprocessing-rainfall_noaa/general-preprocessing-rainfall_noaa
-        title: Rainfall NCEP/NCAR (NOAA)
-      - file: gallery/list/polar-modelling-icenet/polar-modelling-icenet
-        title: Sea ice forecasting (IceNet)
-      - file: gallery/list/forest-modelling-treecrown_detectreeRGB/forest-modelling-treecrown_detectreeRGB
-        title: Tree crown (DetectreeRGB)
-      - file: gallery/list/wildfires-exploration-fires_seviri/wildfires-exploration-fires_seviri
-        title: SEVIRI Level 1.5 (EUMESAT)
-      - file: gallery/list/forest-modelling-treecrown_deepforest/forest-modelling-treecrown_deepforest
-        title: Tree crown (DeepForest)
-      - file: gallery/list/wildfires-exploration-fires_modis/wildfires-exploration-fires_modis
-        title: MOD021KM and FIRMS (NASA)
-      - file: gallery/list/urban-exploration-climate_ukv/urban-exploration-climate_ukv
+#      - file: gallery/list/agriculture-exploration-cosmosuk/agriculture-exploration-cosmosuk
+#        title: Cosmos-UK Soil Moisture (UKCEH)
+#      - file: gallery/list/general-preprocessing-rainfall_noaa/general-preprocessing-rainfall_noaa
+#        title: Rainfall NCEP/NCAR (NOAA)
+#      - file: gallery/list/polar-modelling-icenet/polar-modelling-icenet
+#        title: Sea ice forecasting (IceNet)
+#      - file: gallery/list/forest-modelling-treecrown_detectreeRGB/forest-modelling-treecrown_detectreeRGB
+#        title: Tree crown (DetectreeRGB)
+#      - file: gallery/list/wildfires-exploration-fires_seviri/wildfires-exploration-fires_seviri
+#        title: SEVIRI Level 1.5 (EUMESAT)
+#      - file: gallery/list/forest-modelling-treecrown_deepforest/forest-modelling-treecrown_deepforest
+#        title: Tree crown (DeepForest)
+#      - file: gallery/list/wildfires-exploration-fires_modis/wildfires-exploration-fires_modis
+#        title: MOD021KM and FIRMS (NASA)
+      - file: notebooks/gallery/1b8921af-e77f-4ccf-ae38-4813cdceba0f/notebook
         title: UKV high-resolution (Met Office)
-      - file: gallery/list/ocean-modelling-litter-philab/ocean-modelling-litter-philab
-        title: Detecting floating objects (ESA Phi-Lab)
+#      - file: gallery/list/ocean-modelling-litter-philab/ocean-modelling-litter-philab
+#        title: Detecting floating objects (ESA Phi-Lab)
 - caption: Publishing
   chapters:
   - file: publishing/about
