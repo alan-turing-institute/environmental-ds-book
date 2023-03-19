@@ -1,44 +1,4 @@
-[submodule "book/gallery/list/ocean-modelling-litter-philab"]
-	path = book/gallery/list/ocean-modelling-litter-philab
-	url = https://github.com/eds-book-gallery/ocean-modelling-litter-philab
-	branch = render
-[submodule "book/gallery/list/urban-exploration-climate_ukv"]
-	path = book/gallery/list/urban-exploration-climate_ukv
-	url = https://github.com/eds-book-gallery/urban-exploration-climate_ukv
-	branch = render
-[submodule "book/gallery/list/wildfires-exploration-fires_modis"]
-	path = book/gallery/list/wildfires-exploration-fires_modis
-	url = https://github.com/eds-book-gallery/wildfires-exploration-fires_modis
-	branch = render
-[submodule "book/gallery/list/forest-modelling-treecrown_deepforest"]
-	path = book/gallery/list/forest-modelling-treecrown_deepforest
-	url = https://github.com/eds-book-gallery/forest-modelling-treecrown_deepforest
-	branch = render
-[submodule "book/gallery/list/wildfires-exploration-fires_seviri"]
-	path = book/gallery/list/wildfires-exploration-fires_seviri
-	url = https://github.com/eds-book-gallery/wildfires-exploration-fires_seviri
-	branch = render
-[submodule "book/gallery/list/forest-modelling-treecrown_detectreeRGB"]
-	path = book/gallery/list/forest-modelling-treecrown_detectreeRGB
-	url = https://github.com/eds-book-gallery/forest-modelling-treecrown_detectreeRGB
-	branch = render
-[submodule "book/gallery/list/polar-modelling-icenet"]
-	path = book/gallery/list/polar-modelling-icenet
-	url = https://github.com/eds-book-gallery/polar-modelling-icenet
-	branch = render
-[submodule "book/gallery/list/general-preprocessing-rainfall_noaa"]
-	path = book/gallery/list/general-preprocessing-rainfall_noaa
-	url = https://github.com/eds-book-gallery/general-preprocessing-rainfall_noaa
-	branch = render
-[submodule "book/gallery/list/agriculture-exploration-cosmosuk"]
-	path = book/gallery/list/agriculture-exploration-cosmosuk
-	url = https://github.com/eds-book-gallery/agriculture-exploration-cosmosuk
-	branch = render
-[submodule "book/gallery/list/general-exploration-landcover_io"]
-	path = book/gallery/list/general-exploration-landcover_io
-	url = https://github.com/eds-book-gallery/general-exploration-landcover_io
-	branch = render
-[submodule "book/gallery/agriculture-exploration-cosmosuk"]
-	path = book/gallery/agriculture-exploration-cosmosuk
-	url = https://github.com/eds-book-gallery/agriculture-exploration-cosmosuk
+[submodule "book/notebooks/gallery/1b8921af-e77f-4ccf-ae38-4813cdceba0f"]
+	path = book/notebooks/gallery/1b8921af-e77f-4ccf-ae38-4813cdceba0f
+	url = https://github.com/eds-book-gallery/1b8921af-e77f-4ccf-ae38-4813cdceba0f
 	branch = render
