@@ -294,7 +294,7 @@ Jackson (2022)
 
 :::{grid-item-card} UKV high-resolution <br> (Met Office)
 :margin: 3 0 0 0
-:link: ./list/urban-exploration-climate_ukv/urban-exploration-climate_ukv.html
+:link: ./gallery/1b8921af-e77f-4ccf-ae38-4813cdceba0f/notebook.html
 :link-type: url
 :text-align: center
 :shadow: md
