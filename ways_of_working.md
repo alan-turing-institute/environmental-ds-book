@@ -18,11 +18,11 @@ It further outlines expectations and responsibilities with regard to working on 
 The following people are no longer volunteering on the project (although they remain very valuable members of the community!)
 You can request contact information through the project members above, or tag them in the GitHub issues and Pull Requests so others can answer if the folks you're looking for are not around.
 
-| Name                                                                  | Role & Affiliation                       | Full-Time Equivalent (or %) on the project  | Time period allocated to the project |
-|-----------------------------------------------------------------------|------------------------------------------|---------------------------------------------|--------------------------------------|
+| Name                                                                  | Role & Affiliation                       | Full-Time Equivalent (or %) on the project | Time period allocated to the project |
+|-----------------------------------------------------------------------|------------------------------------------|--------------------------------------------|--------------------------------------|
 | Nick Homer <br>([@NHomer-Edi](https://github.com/NHomer-Edi))         | PhD Student, University of Edinburgh     | in-kind Turing PhD Enrichment Collaboration | March 2022 - Sept 2022               |
-| Timothy Lam <br>([@LydiaFrance](https://github.com/timo0thy))         | PhD Student, University of Exeter        | in-kind Turing PhD Enrichment Collaboration | March 2022 - Sept 2022               |
-| Delphine Lariviere <br>([@Delphine-L](https://github.com/Delphine-L)) | Research Assistant Professor, Penn State University      | in-kind Mentor OLS-4                        | Sep 2021 - Jan 2022                  |
+| Timothy Lam <br>([@timo0thy](https://github.com/timo0thy))         | PhD Student, University of Exeter        | in-kind Turing PhD Enrichment Collaboration | March 2022 - Sept 2022               |
+| Delphine Lariviere <br>([@Delphine-L](https://github.com/Delphine-L)) | Research Assistant Professor, Penn State University      | in-kind OLS-4 Mentor                       | Sep 2021 - Jan 2022                  |
 
 ## Commitments
 
