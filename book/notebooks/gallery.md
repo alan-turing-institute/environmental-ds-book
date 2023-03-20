@@ -6,7 +6,7 @@
 
 :::{grid-item-card} Land Cover Data <br> (Impact Observatory)
 :margin: 3 0 0 0
-:link: ./list/general-exploration-landcover_io/general-exploration-landcover_io.html
+:link: ./gallery/b128b282-dee7-44a7-bc21-f1fd21452a83/notebook.html
 :link-type: url
 :text-align: center
 :shadow: md
@@ -24,25 +24,25 @@
 Millington (2022)
 
 <p align="center">
-    <a href="https://github.com/Environmental-DS-Book/general-exploration-landcover_io/blob/main/LICENSE">
+    <a href="https://github.com/eds-book-gallery/b128b282-dee7-44a7-bc21-f1fd21452a83/blob/main/LICENSE">
         <img alt="License" src="https://img.shields.io/badge/License-MIT-yellow.svg">
     </a>
-    <a href="https://notebooks.gesis.org/binder/v2/gh/Environmental-DS-Book/general-exploration-landcover_io/main?labpath=general-exploration-landcover_io.ipynb">
+    <a href="https://notebooks.gesis.org/binder/v2/gh/eds-book-gallery/b128b282-dee7-44a7-bc21-f1fd21452a83/main?labpath=notebook.ipynb">
         <img alt="Binder" src="https://mybinder.org/badge_logo.svg">
     </a>
-    <a href="https://github.com/Environmental-DS-Book/general-exploration-landcover_io/actions/workflows/render.yaml/badge.svg">
-        <img alt="Continuous integration badge" src="https://github.com/Environmental-DS-Book/general-exploration-landcover_io/actions/workflows/render.yaml/badge.svg">
+    <a href="https://github.com/eds-book-gallery/b128b282-dee7-44a7-bc21-f1fd21452a83/actions/workflows/render.yaml">
+        <img alt="Render" src="https://github.com/eds-book-gallery/b128b282-dee7-44a7-bc21-f1fd21452a83/actions/workflows/render.yaml/badge.svg">
     </a>
-    <a href="https://doi.org/10.24424/pf69-pg61">
-        <img alt="DOI" src="https://zenodo.org/badge/DOI/10.24424/pf69-pg61.svg">
-    </a>    
+    <a href="https://doi.org/10.24424/7cde-g605">
+        <img alt="DOI" src="https://zenodo.org/badge/DOI/10.24424/7cde-g605.svg">
+    </a>
     <br/>
 </p>
 :::
 
 :::{grid-item-card} Cosmos-UK Soil Moisture <br> (UKCEH)
 :margin: 3 0 0 0
-:link: ./agriculture-exploration-cosmosuk/agriculture-exploration-cosmosuk.html
+:link: ./gallery/435f534c-e49b-43c3-9bd6-3393100bef3f/notebook.html
 :link-type: url
 :text-align: center
 :shadow: md
@@ -60,17 +60,17 @@ Millington (2022)
 Coca-Castro (2022)
 
 <p align="center">
-    <a href="https://github.com/Environmental-DS-Book/agriculture-exploration-cosmosuk/blob/main/LICENSE">
+    <a href="https://github.com/eds-book-gallery/435f534c-e49b-43c3-9bd6-3393100bef3f/blob/main/LICENSE">
         <img alt="License" src="https://img.shields.io/badge/License-MIT-yellow.svg">
     </a>
-    <a href="https://notebooks.gesis.org/binder/v2/gh/Environmental-DS-Book/agriculture-exploration-cosmosuk/main?labpath=agriculture-exploration-cosmosuk.ipynb">
+    <a href="https://notebooks.gesis.org/binder/v2/gh/eds-book-gallery/435f534c-e49b-43c3-9bd6-3393100bef3f/main?labpath=notebook.ipynb">
         <img alt="Binder" src="https://mybinder.org/badge_logo.svg">
     </a>
-    <a href="https://github.com/Environmental-DS-Book/agriculture-exploration-cosmosuk/actions/workflows/render.yaml/badge.svg">
-        <img alt="Continuous integration badge" src="https://github.com/Environmental-DS-Book/agriculture-exploration-cosmosuk/actions/workflows/render.yaml/badge.svg">
+    <a href="https://github.com/eds-book-gallery/435f534c-e49b-43c3-9bd6-3393100bef3f/actions/workflows/render.yaml">
+        <img alt="Render" src="https://github.com/eds-book-gallery/435f534c-e49b-43c3-9bd6-3393100bef3f/actions/workflows/render.yaml/badge.svg">
     </a>
-    <a href="https://doi.org/10.24424/pf69-pg61">
-        <img alt="DOI" src="https://zenodo.org/badge/DOI/10.24424/pf69-pg61.svg">
+    <a href="https://doi.org/10.24424/y99k-rz74">
+        <img alt="DOI" src="https://zenodo.org/badge/DOI/10.24424/y99k-rz74.svg">
     </a>
     <br/>
 </p>
@@ -78,7 +78,7 @@ Coca-Castro (2022)
 
 :::{grid-item-card} Rainfall NCEP/NCAR <br> (NOAA)
 :margin: 3 0 0 0
-:link: ./list/general-preprocessing-rainfall_noaa/general-preprocessing-rainfall_noaa.html
+:link: ./gallery/ea34568e-d86e-4720-be2f-3f826f66a26c/notebook.html
 :link-type: url
 :text-align: center
 :shadow: md
@@ -96,17 +96,17 @@ Coca-Castro (2022)
 Lam *et al.* (2022)
 
 <p align="center">
-    <a href="https://github.com/Environmental-DS-Book/general-preprocessing-rainfall_noaa/blob/main/LICENSE">
+    <a href="https://github.com/eds-book-gallery/ea34568e-d86e-4720-be2f-3f826f66a26c/blob/main/LICENSE">
         <img alt="License" src="https://img.shields.io/badge/License-MIT-yellow.svg">
     </a>
-    <a href="https://notebooks.gesis.org/binder/v2/gh/Environmental-DS-Book/general-preprocessing-rainfall_noaa/main?labpath=general-preprocessing-rainfall_noaa.ipynb">
+    <a href="https://notebooks.gesis.org/binder/v2/gh/eds-book-gallery/ea34568e-d86e-4720-be2f-3f826f66a26c/main?labpath=notebook.ipynb">
         <img alt="Binder" src="https://mybinder.org/badge_logo.svg">
     </a>
-    <a href="https://github.com/Environmental-DS-Book/general-preprocessing-rainfall_noaa/actions/workflows/render.yaml/badge.svg">
-        <img alt="Continuous integration badge" src="https://github.com/Environmental-DS-Book/general-preprocessing-rainfall_noaa/actions/workflows/render.yaml/badge.svg">
+    <a href="https://github.com/eds-book-gallery/ea34568e-d86e-4720-be2f-3f826f66a26c/actions/workflows/render.yaml">
+        <img alt="Render" src="https://github.com/eds-book-gallery/ea34568e-d86e-4720-be2f-3f826f66a26c/actions/workflows/render.yaml/badge.svg">
     </a>
-    <a href="https://doi.org/10.24424/pf69-pg61">
-        <img alt="DOI" src="https://zenodo.org/badge/DOI/10.24424/pf69-pg61.svg">
+    <a href="https://doi.org/10.24424/1vw8-6519">
+        <img alt="DOI" src="https://zenodo.org/badge/DOI/10.24424/1vw8-6519.svg">
     </a>
     <br/>
 </p>
@@ -114,7 +114,7 @@ Lam *et al.* (2022)
 
 :::{grid-item-card} Sea ice forecasting <br> (IceNet)
 :margin: 3 0 0 0
-:link: ./list/polar-modelling-icenet/polar-modelling-icenet.html
+:link: ./gallery/ac327c3a-5264-40a2-8c6e-1e8d7c4b37ef/notebook.html
 :link-type: url
 :text-align: center
 :shadow: md
@@ -132,17 +132,17 @@ Lam *et al.* (2022)
 Coca-Castro (2022)
 
 <p align="center">
-    <a href="https://github.com/Environmental-DS-Book/polar-modelling-icenet/blob/main/LICENSE">
+    <a href="https://github.com/eds-book-gallery/ac327c3a-5264-40a2-8c6e-1e8d7c4b37ef/blob/main/LICENSE">
         <img alt="License" src="https://img.shields.io/badge/License-MIT-yellow.svg">
     </a>
-    <a href="https://notebooks.gesis.org/binder/v2/gh/Environmental-DS-Book/polar-modelling-icenet/main?labpath=polar-modelling-icenet.ipynb">
+    <a href="https://notebooks.gesis.org/binder/v2/gh/eds-book-gallery/ac327c3a-5264-40a2-8c6e-1e8d7c4b37ef/main?labpath=notebook.ipynb">
         <img alt="Binder" src="https://mybinder.org/badge_logo.svg">
     </a>
-    <a href="https://github.com/Environmental-DS-Book/polar-modelling-icenet/actions/workflows/render.yaml/badge.svg">
-        <img alt="Continuous integration badge" src="https://github.com/Environmental-DS-Book/polar-modelling-icenet/actions/workflows/render.yaml/badge.svg">
+    <a href="https://github.com/eds-book-gallery/ac327c3a-5264-40a2-8c6e-1e8d7c4b37ef/actions/workflows/render.yaml">
+        <img alt="Render" src="https://github.com/eds-book-gallery/ac327c3a-5264-40a2-8c6e-1e8d7c4b37ef/actions/workflows/render.yaml/badge.svg">
     </a>
-    <a href="https://doi.org/10.24424/pf69-pg61">
-        <img alt="DOI" src="https://zenodo.org/badge/DOI/10.24424/pf69-pg61.svg">
+    <a href="https://doi.org/10.24424/m8ew-pg51">
+        <img alt="DOI" src="https://zenodo.org/badge/DOI/10.24424/m8ew-pg51.svg">
     </a>
     <br/>
 </p>
@@ -150,7 +150,7 @@ Coca-Castro (2022)
 
 :::{grid-item-card} Tree crown <br> (DetectreeRGB)
 :margin: 3 0 0 0
-:link: ./list/forest-modelling-treecrown_detectreeRGB/forest-modelling-treecrown_detectreeRGB.html
+:link: ./gallery/94486a7f-e046-461f-bbb9-334ec7b57040/notebook.html
 :link-type: url
 :text-align: center
 :shadow: md
@@ -168,17 +168,17 @@ Coca-Castro (2022)
 Hickman (2022)
 
 <p align="center">
-    <a href="https://github.com/Environmental-DS-Book/forest-modelling-treecrown_detectreeRGB/blob/main/LICENSE">
+    <a href="https://github.com/eds-book-gallery/94486a7f-e046-461f-bbb9-334ec7b57040/blob/main/LICENSE">
         <img alt="License" src="https://img.shields.io/badge/License-MIT-yellow.svg">
     </a>
-    <a href="https://notebooks.gesis.org/binder/v2/gh/Environmental-DS-Book/forest-modelling-treecrown_detectreeRGB/main?labpath=forest-modelling-treecrown_detectreeRGB.ipynb">
+    <a href="https://notebooks.gesis.org/binder/v2/gh/eds-book-gallery/94486a7f-e046-461f-bbb9-334ec7b57040/main?labpath=notebook.ipynb">
         <img alt="Binder" src="https://mybinder.org/badge_logo.svg">
     </a>
-    <a href="https://github.com/Environmental-DS-Book/forest-modelling-treecrown_detectreeRGB/actions/workflows/render.yaml/badge.svg">
-        <img alt="Continuous integration badge" src="https://github.com/Environmental-DS-Book/forest-modelling-treecrown_detectreeRGB/actions/workflows/render.yaml/badge.svg">
+    <a href="https://github.com/eds-book-gallery/94486a7f-e046-461f-bbb9-334ec7b57040/actions/workflows/render.yaml">
+        <img alt="Render" src="https://github.com/eds-book-gallery/94486a7f-e046-461f-bbb9-334ec7b57040/actions/workflows/render.yaml/badge.svg">
     </a>
-    <a href="https://doi.org/10.24424/pf69-pg61">
-        <img alt="DOI" src="https://zenodo.org/badge/DOI/10.24424/pf69-pg61.svg">
+    <a href="https://doi.org/10.24424/2h9y-jn41">
+        <img alt="DOI" src="https://zenodo.org/badge/DOI/10.24424/2h9y-jn41.svg">
     </a>
     <br/>
 </p>
@@ -186,7 +186,7 @@ Hickman (2022)
 
 :::{grid-item-card} SEVIRI Level 1.5 <br> (EUMESAT)
 :margin: 3 0 0 0
-:link: ./list/wildfires-exploration-fires_seviri/wildfires-exploration-fires_seviri.html
+:link: ./gallery/bc30df18-fce2-42fa-aade-1ce5b7f3ca3c/notebook.html
 :link-type: url
 :text-align: center
 :shadow: md
@@ -204,17 +204,17 @@ Hickman (2022)
 Jackson (2022)
 
 <p align="center">
-    <a href="https://github.com/Environmental-DS-Book/wildfires-exploration-fires_seviri/blob/main/LICENSE">
+    <a href="https://github.com/eds-book-gallery/bc30df18-fce2-42fa-aade-1ce5b7f3ca3c/blob/main/LICENSE">
         <img alt="License" src="https://img.shields.io/badge/License-MIT-yellow.svg">
     </a>
-    <a href="https://notebooks.gesis.org/binder/v2/gh/Environmental-DS-Book/wildfires-exploration-fires_seviri/main?labpath=wildfires-exploration-fires_seviri.ipynb">
+    <a href="https://notebooks.gesis.org/binder/v2/gh/eds-book-gallery/bc30df18-fce2-42fa-aade-1ce5b7f3ca3c/main?labpath=notebook.ipynb">
         <img alt="Binder" src="https://mybinder.org/badge_logo.svg">
     </a>
-    <a href="https://github.com/Environmental-DS-Book/wildfires-exploration-fires_seviri/actions/workflows/render.yaml/badge.svg">
-        <img alt="Continuous integration badge" src="https://github.com/Environmental-DS-Book/wildfires-exploration-fires_seviri/actions/workflows/render.yaml/badge.svg">
+    <a href="https://github.com/eds-book-gallery/bc30df18-fce2-42fa-aade-1ce5b7f3ca3c/actions/workflows/render.yaml/badge.svg">
+        <img alt="Render" src="https://github.com/eds-book-gallery/bc30df18-fce2-42fa-aade-1ce5b7f3ca3c/actions/workflows/render.yaml/badge.svg">
     </a>
-    <a href="https://doi.org/10.24424/pf69-pg61">
-        <img alt="DOI" src="https://zenodo.org/badge/DOI/10.24424/pf69-pg61.svg">
+    <a href="https://doi.org/10.24424/w9n8-r354">
+        <img alt="DOI" src="https://zenodo.org/badge/DOI/10.24424/w9n8-r354.svg">
     </a>
     <br/>
 </p>
@@ -222,7 +222,7 @@ Jackson (2022)
 
 :::{grid-item-card} Tree crown <br> (DeepForest)
 :margin: 3 0 0 0
-:link: ./list/forest-modelling-treecrown_deepforest/forest-modelling-treecrown_deepforest.html
+:link: ./gallery/15d986da-2d7c-44fb-af71-700494485def/notebook.html
 :link-type: url
 :text-align: center
 :shadow: md
@@ -240,17 +240,17 @@ Jackson (2022)
 Coca-Castro (2022)
 
 <p align="center">
-    <a href="https://github.com/Environmental-DS-Book/forest-modelling-treecrown_deepforest/blob/main/LICENSE">
+    <a href="https://github.com/eds-book-gallery/15d986da-2d7c-44fb-af71-700494485def/blob/main/LICENSE">
         <img alt="License" src="https://img.shields.io/badge/License-MIT-yellow.svg">
     </a>
-    <a href="https://notebooks.gesis.org/binder/v2/gh/Environmental-DS-Book/forest-modelling-treecrown_deepforest/main?labpath=forest-modelling-treecrown_deepforest.ipynb">
+    <a href="https://notebooks.gesis.org/binder/v2/gh/eds-book-gallery/15d986da-2d7c-44fb-af71-700494485def/main?labpath=notebook.ipynb">
         <img alt="Binder" src="https://mybinder.org/badge_logo.svg">
     </a>
-    <a href="https://github.com/Environmental-DS-Book/forest-modelling-treecrown_deepforest/actions/workflows/render.yaml/badge.svg">
-        <img alt="Continuous integration badge" src="https://github.com/Environmental-DS-Book/forest-modelling-treecrown_deepforest/actions/workflows/render.yaml/badge.svg">
+    <a href="https://github.com/eds-book-gallery/15d986da-2d7c-44fb-af71-700494485def/actions/workflows/render.yaml">
+        <img alt="Render" src="https://github.com/eds-book-gallery/15d986da-2d7c-44fb-af71-700494485def/actions/workflows/render.yaml/badge.svg">
     </a>
-    <a href="https://doi.org/10.24424/pf69-pg61">
-        <img alt="DOI" src="https://zenodo.org/badge/DOI/10.24424/pf69-pg61.svg">
+    <a href="https://doi.org/10.24424/td9g-0533">
+        <img alt="DOI" src="https://zenodo.org/badge/DOI/10.24424/td9g-0533.svg">
     </a>
     <br/>
 </p>
@@ -258,7 +258,7 @@ Coca-Castro (2022)
 
 :::{grid-item-card} MOD021KM and FIRMS <br> (NASA)
 :margin: 3 0 0 0
-:link: ./list//wildfires-exploration-fires_modis/wildfires-exploration-fires_modis.html
+:link: ./gallery/a2875cdc-ba6a-49dc-aab7-cdf7c4fc0fa8/notebook.html
 :link-type: url
 :text-align: center
 :shadow: md
@@ -276,17 +276,17 @@ Coca-Castro (2022)
 Jackson (2022)
 
 <p align="center">
-    <a href="https://github.com/Environmental-DS-Book/wildfires-exploration-fires_seviri/blob/main/LICENSE">
+    <a href="https://github.com/eds-book-gallery/a2875cdc-ba6a-49dc-aab7-cdf7c4fc0fa8/blob/main/LICENSE">
         <img alt="License" src="https://img.shields.io/badge/License-MIT-yellow.svg">
     </a>
-    <a href="https://notebooks.gesis.org/binder/v2/gh/Environmental-DS-Book/wildfires-exploration-fires_modis/main?labpath=wildfires-exploration-fires_modis.ipynb">
+    <a href="https://notebooks.gesis.org/binder/v2/gh/eds-book-gallery/a2875cdc-ba6a-49dc-aab7-cdf7c4fc0fa8/main?labpath=notebook.ipynb">
         <img alt="Binder" src="https://mybinder.org/badge_logo.svg">
     </a>
-    <a href="https://github.com/Environmental-DS-Book/wildfires-exploration-fires_modis/actions/workflows/render.yaml/badge.svg">
-        <img alt="Continuous integration badge" src="https://github.com/Environmental-DS-Book/wildfires-exploration-fires_modis/actions/workflows/render.yaml/badge.svg">
+    <a href="https://github.com/eds-book-gallery/a2875cdc-ba6a-49dc-aab7-cdf7c4fc0fa8/actions/workflows/render.yaml">
+        <img alt="Render" src="https://github.com/eds-book-gallery/a2875cdc-ba6a-49dc-aab7-cdf7c4fc0fa8/actions/workflows/render.yaml/badge.svg">
     </a>
-    <a href="https://doi.org/10.24424/pf69-pg61">
-        <img alt="DOI" src="https://zenodo.org/badge/DOI/10.24424/pf69-pg61.svg">
+    <a href="https://doi.org/10.24424/qd7g-tr70">
+        <img alt="DOI" src="https://zenodo.org/badge/DOI/10.24424/qd7g-tr70.svg">
     </a>
     <br/>
 </p>
@@ -312,17 +312,17 @@ Jackson (2022)
 Adams (2022)
 
 <p align="center">
-    <a href="https://github.com/Environmental-DS-Book/urban-exploration-climate_ukv/blob/main/LICENSE">
+    <a href="https://github.com/eds-book-gallery/1b8921af-e77f-4ccf-ae38-4813cdceba0f/blob/main/LICENSE">
         <img alt="License" src="https://img.shields.io/badge/License-MIT-yellow.svg">
     </a>
-    <a href="https://notebooks.gesis.org/binder/v2/gh/Environmental-DS-Book/urban-exploration-climate_ukv/main?labpath=urban-exploration-climate_ukv.ipynb">
+    <a href="https://notebooks.gesis.org/binder/v2/gh/eds-book-gallery/1b8921af-e77f-4ccf-ae38-4813cdceba0f/main?labpath=1b8921af-e77f-4ccf-ae38-4813cdceba0f.ipynb">
         <img alt="Binder" src="https://mybinder.org/badge_logo.svg">
     </a>
-    <a href="https://github.com/Environmental-DS-Book/urban-exploration-climate_ukv/actions/workflows/render.yaml/badge.svg">
-        <img alt="Continuous integration badge" src="https://github.com/Environmental-DS-Book/urban-exploration-climate_ukv/actions/workflows/render.yaml/badge.svg">
+    <a href="https://github.com/eds-book-gallery/1b8921af-e77f-4ccf-ae38-4813cdceba0f/actions/workflows/render.yaml">
+        <img alt="Render" src="https://github.com/eds-book-gallery/1b8921af-e77f-4ccf-ae38-4813cdceba0f/actions/workflows/render.yaml/badge.svg">
     </a>
-    <a href="https://doi.org/10.24424/pf69-pg61">
-        <img alt="DOI" src="https://zenodo.org/badge/DOI/10.24424/pf69-pg61.svg">
+    <a href="https://doi.org/10.24424/pbvr-gd04">
+        <img alt="DOI" src="https://zenodo.org/badge/DOI/10.24424/pbvr-gd04.svg">
     </a>
     <br/>
 </p>
@@ -330,7 +330,7 @@ Adams (2022)
 
 :::{grid-item-card} Detecting floating objects <br> (ESA Phi-Lab)
 :margin: 3 0 0 0
-:link: ./list/ocean-modelling-litter-philab/ocean-modelling-litter-philab.html
+:link: ./gallery/b34facfa-cea8-48f5-89f6-f11ce00812a9/notebook.html
 :link-type: url
 :text-align: center
 :shadow: md
@@ -348,17 +348,17 @@ Adams (2022)
 Mifdal *et al.* (2022)
 
 <p align="center">
-    <a href="https://github.com/Environmental-DS-Book/ocean-modelling-litter-philab/blob/main/LICENSE">
+    <a href="https://github.com/eds-book-gallery/b34facfa-cea8-48f5-89f6-f11ce00812a9/blob/main/LICENSE">
         <img alt="License" src="https://img.shields.io/badge/License-MIT-yellow.svg">
     </a>
-    <a href="https://notebooks.gesis.org/binder/v2/gh/Environmental-DS-Book/ocean-modelling-litter-philab/main?labpath=ocean-modelling-litter-philab.ipynb">
+    <a href="https://notebooks.gesis.org/binder/v2/gh/eds-book-gallery/b34facfa-cea8-48f5-89f6-f11ce00812a9/main?labpath=notebook.ipynb">
         <img alt="Binder" src="https://mybinder.org/badge_logo.svg">
     </a>
-    <a href="https://github.com/Environmental-DS-Book/ocean-modelling-litter-philab/actions/workflows/render.yaml/badge.svg">
-        <img alt="Continuous integration badge" src="https://github.com/Environmental-DS-Book/ocean-modelling-litter-philab/actions/workflows/render.yaml/badge.svg">
+    <a href="https://github.com/eds-book-gallery/b34facfa-cea8-48f5-89f6-f11ce00812a9/actions/workflows/render.yaml">
+        <img alt="Render" src="https://github.com/eds-book-gallery/b34facfa-cea8-48f5-89f6-f11ce00812a9/actions/workflows/render.yaml/badge.svg">
     </a>
-    <a href="https://doi.org/10.24424/pf69-pg61">
-        <img alt="DOI" src="https://zenodo.org/badge/DOI/10.24424/pf69-pg61.svg">
+    <a href="https://doi.org/10.24424/pbvr-gd04">
+        <img alt="DOI" src="https://zenodo.org/badge/DOI/10.24424/pbvr-gd04.svg">
     </a>
     <br/>
 </p>
