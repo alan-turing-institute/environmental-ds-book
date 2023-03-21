@@ -1,7 +1,7 @@
 # Resources for representing Environmental Data Science book at external events
 
 ## What is The Environmental Data Science book?
-- A book: [https://the-environmental-ds-book.netlify.app/welcome.html](https://the-environmental-ds-book.netlify.app/welcome.html)
+- A book: [https://edsbook.org/welcome.html](https://edsbook.org/welcome.html)
 - An open source project: [https://github.com/alan-turing-institute/environmental-ds-book](https://github.com/alan-turing-institute/environmental-ds-book)
 - A community: *The Environmental DS* is an open-source collaborative project that involves and supports its members of diverse skills and backgrounds to ensure that data science is accessible and useful for everyone interested in Environmental sciences. 
 
