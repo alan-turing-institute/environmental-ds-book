@@ -8,7 +8,7 @@ The REVIEW template follows the Journal of Open Source Education's review issue 
 # Notebook Review: Issue#[PREREVIEW ID]
 
 <p align="left">
-    <a href="https://notebooks.gesis.org/binder/v2/gh/Environmental-DS-Book/[NOTEBOOK NAME]/review?labpath=[NOTEBOOK NAME].ipynb">
+    <a href="https://notebooks.gesis.org/binder/v2/gh/eds-book-gallery/[NOTEBOOK NAME]/review?labpath=[NOTEBOOK NAME].ipynb">
         <img alt="Binder" src="https://mybinder.org/badge_logo.svg">
     </a>
 </p>
@@ -40,13 +40,9 @@ The quality of the proposed contribution can be assessed through scientific, tec
 The reviewer guidelines are available here: <change-URL>. 
 Any questions/concerns please let [EDITOR GITHUB HANDLE] know.
 
-## Review Checklist for [REVIEWER1 GITHUB HANDLE]
+## Review Checklist for [REVIEWER GITHUB HANDLE]
 
 ```{include} ../../templates/reviewers/reviewers-review-checklist.md
 ```
 
-## Review Checklist for [REVIEWER2 GITHUB HANDLE]
-
-```{include} ../../templates/reviewers/reviewers-review-checklist.md
-```
 ```markdown

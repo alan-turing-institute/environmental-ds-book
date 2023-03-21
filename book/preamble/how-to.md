@@ -20,22 +20,22 @@ If you aren't familiar with Anaconda or GitHub, we suggest exploring the followi
 * (optional) Basic knowledge of [Jupyter notebooks](https://jupyter-notebook.readthedocs.io/en/stable/)
 
 Notebooks repositories also provide lock files for installing exactly the same package across different operating system. 
-For instance, for recreating the environment of the notebook [`forest-modelling-treecrown_deepforest`](https://github.com/eds-book-gallery/forest-modelling-treecrown_deepforest) on Linux:
+For instance, for recreating the environment of the notebook [Tree crown detection using DeepForest](https://https://github.com/eds-book-gallery/15d986da-2d7c-44fb-af71-700494485def) on MacOS:
 
 ```
-conda create -n forest-modelling-treecrown_deepforest --file=https://raw.githubusercontent.com/eds-book-gallery/forest-modelling-treecrown_deepforest/main/.lock/conda-linux-64.lock
+conda create -n 15d986da-2d7c-44fb-af71-700494485def --file=https://raw.githubusercontent.com/eds-book-gallery/15d986da-2d7c-44fb-af71-700494485def/main/.lock/conda-osx-64.lock
 ```
 
 Certain notebooks require to install some packages via `pip`. If this is the case, you'll find a `requirements.txt` file which can be run:
 
 ```
-pip install -r https://raw.githubusercontent.com/eds-book-gallery/forest-modelling-treecrown_deepforest/main/.lock/requirements.txt
+pip install -r https://raw.githubusercontent.com/eds-book-gallery/15d986da-2d7c-44fb-af71-700494485def/main/.lock/requirements.txt
 ```
 
 For Linux, MacOSX, or Windows, if you're not concerned with package versions and simply want to have the same libraries installed on your system you can run:
 
 ```
-wget https://raw.githubusercontent.com/eds-book-gallery/forest-modelling-treecrown_deepforest/main/.binder/environment.yml
+wget https://raw.githubusercontent.com/eds-book-gallery/15d986da-2d7c-44fb-af71-700494485def/main/.binder/environment.yml
 conda env create environment.yml
 ```
 
