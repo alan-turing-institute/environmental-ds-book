@@ -38,6 +38,8 @@ parts:
         title: UKV high-resolution (Met Office)
       - file: notebooks/gallery/b34facfa-cea8-48f5-89f6-f11ce00812a9/notebook
         title: Detecting floating objects (ESA Phi-Lab)
+  - file: notebooks/how-to
+    title: Usage
 - caption: Publishing
   chapters:
   - file: publishing/about
