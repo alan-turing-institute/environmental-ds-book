@@ -20,7 +20,7 @@ If you aren't familiar with Anaconda or GitHub, we suggest exploring the followi
 * (optional) Basic knowledge of [Jupyter notebooks](https://jupyter-notebook.readthedocs.io/en/stable/)
 
 Notebooks repositories also provide lock files for installing exactly the same package across different operating system. 
-For instance, for recreating the environment of the notebook [Tree crown detection using DeepForest](https://https://github.com/eds-book-gallery/15d986da-2d7c-44fb-af71-700494485def) on MacOS:
+For instance, for recreating the environment of the notebook [Tree crown detection using DeepForest](https://github.com/eds-book-gallery/15d986da-2d7c-44fb-af71-700494485def) on MacOS:
 
 ```
 conda create -n 15d986da-2d7c-44fb-af71-700494485def --file=https://raw.githubusercontent.com/eds-book-gallery/15d986da-2d7c-44fb-af71-700494485def/main/.lock/conda-osx-64.lock
