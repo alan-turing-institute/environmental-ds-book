@@ -1,0 +1,1939 @@
+
+<!DOCTYPE html>
+
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Sea ice forecasting using IceNet &#8212; Environmental Data Science Book</title>
+    
+  <link href="../../../_static/css/theme.css" rel="stylesheet">
+  <link href="../../../_static/css/index.ff1ffe594081f20da1ef19478df9384b.css" rel="stylesheet">
+
+    
+  <link rel="stylesheet"
+    href="../../../_static/vendor/fontawesome/5.13.0/css/all.min.css">
+  <link rel="preload" as="font" type="font/woff2" crossorigin
+    href="../../../_static/vendor/fontawesome/5.13.0/webfonts/fa-solid-900.woff2">
+  <link rel="preload" as="font" type="font/woff2" crossorigin
+    href="../../../_static/vendor/fontawesome/5.13.0/webfonts/fa-brands-400.woff2">
+
+    
+      
+
+    
+    <link rel="stylesheet" type="text/css" href="../../../_static/pygments.css" />
+    <link rel="stylesheet" type="text/css" href="../../../_static/sphinx-book-theme.css?digest=c3fdc42140077d1ad13ad2f1588a4309" />
+    <link rel="stylesheet" type="text/css" href="../../../_static/togglebutton.css" />
+    <link rel="stylesheet" type="text/css" href="../../../_static/copybutton.css" />
+    <link rel="stylesheet" type="text/css" href="../../../_static/mystnb.css" />
+    <link rel="stylesheet" type="text/css" href="../../../_static/sphinx-thebe.css" />
+    <link rel="stylesheet" type="text/css" href="../../../_static/panels-main.c949a650a448cc0ae9fd3441c0e17fb0.css" />
+    <link rel="stylesheet" type="text/css" href="../../../_static/panels-variables.06eb56fa6e07937060861dad626602ad.css" />
+    <link rel="stylesheet" type="text/css" href="../../../_static/design-style.4045f2051d55cab465a707391d5b2007.min.css" />
+    
+  <link rel="preload" as="script" href="../../../_static/js/index.be7d3bbb2ef33a8344ce.js">
+
+    <script data-url_root="../../../" id="documentation_options" src="../../../_static/documentation_options.js"></script>
+    <script src="../../../_static/jquery.js"></script>
+    <script src="../../../_static/underscore.js"></script>
+    <script src="../../../_static/doctools.js"></script>
+    <script src="../../../_static/clipboard.min.js"></script>
+    <script src="../../../_static/copybutton.js"></script>
+    <script>let toggleHintShow = 'Click to show';</script>
+    <script>let toggleHintHide = 'Click to hide';</script>
+    <script>let toggleOpenOnPrint = 'true';</script>
+    <script src="../../../_static/togglebutton.js"></script>
+    <script>var togglebuttonSelector = '.toggle, .admonition.dropdown, .tag_hide_input div.cell_input, .tag_hide-input div.cell_input, .tag_hide_output div.cell_output, .tag_hide-output div.cell_output, .tag_hide_cell.cell, .tag_hide-cell.cell';</script>
+    <script src="../../../_static/sphinx-book-theme.d59cb220de22ca1c485ebbdc042f0030.js"></script>
+    <script src="../../../_static/design-tabs.js"></script>
+    <script>const THEBE_JS_URL = "https://unpkg.com/thebe@0.8.2/lib/index.js"
+const thebe_selector = ".thebe,.cell"
+const thebe_selector_input = "pre"
+const thebe_selector_output = ".output, .cell_output"
+</script>
+    <script async="async" src="../../../_static/sphinx-thebe.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/require.js/2.3.4/require.min.js"></script>
+    <script src="https://unpkg.com/@jupyter-widgets/html-manager@^0.20.1/dist/embed-amd.js"></script>
+    <link rel="index" title="Index" href="../../../genindex.html" />
+    <link rel="search" title="Search" href="../../../search.html" />
+    <link rel="next" title="Tree crown delineation using detectreeRGB" href="../94486a7f-e046-461f-bbb9-334ec7b57040/notebook.html" />
+    <link rel="prev" title="Concatenating a gridded rainfall reanalysis dataset into a time series" href="../ea34568e-d86e-4720-be2f-3f826f66a26c/notebook.html" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="docsearch:language" content="en">
+    
+
+    <!-- Google Analytics -->
+    
+<script async="" src="https://www.google-analytics.com/analytics.js"></script>
+<script>
+                        window.ga = window.ga || function () {
+                            (ga.q = ga.q || []).push(arguments) };
+                        ga.l = +new Date;
+                        ga('create', 'UA-214298162-1', 'auto');
+                        ga('set', 'anonymizeIp', true);
+                        ga('send', 'pageview');
+                    </script>
+
+  </head>
+  <body data-spy="scroll" data-target="#bd-toc-nav" data-offset="80">
+    
+    <div class="container-fluid" id="banner"></div>
+
+    
+
+    <div class="container-xl">
+      <div class="row">
+          
+<div class="col-12 col-md-3 bd-sidebar site-navigation show" id="site-navigation">
+    
+        <div class="navbar-brand-box">
+    <a class="navbar-brand text-wrap" href="../../../index.html">
+      
+        <!-- `logo` is deprecated in Sphinx 4.0, so remove this when we stop supporting 3 -->
+        
+      
+      
+      <img src="../../../_static/logo.png" class="logo" alt="logo">
+      
+      
+      <h1 class="site-logo" id="site-title">Environmental Data Science Book</h1>
+      
+    </a>
+</div><form class="bd-search d-flex align-items-center" action="../../../search.html" method="get">
+  <i class="icon fas fa-search"></i>
+  <input type="search" class="form-control" name="q" id="search-input" placeholder="Search this book..." aria-label="Search this book..." autocomplete="off" >
+</form><nav class="bd-links" id="bd-docs-nav" aria-label="Main">
+    <div class="bd-toc-item active">
+        <ul class="nav bd-sidenav">
+ <li class="toctree-l1">
+  <a class="reference internal" href="../../../welcome.html">
+   Welcome
+  </a>
+ </li>
+</ul>
+<p aria-level="2" class="caption" role="heading">
+ <span class="caption-text">
+  Preamble
+ </span>
+</p>
+<ul class="nav bd-sidenav">
+ <li class="toctree-l1">
+  <a class="reference internal" href="../../../preamble/about.html">
+   About EDS book
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../../../preamble/who-for.html">
+   Audience
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../../../preamble/how-to.html">
+   Usage
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../../../preamble/attribution.html">
+   Citation and reuse
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../../../preamble/contribute.html">
+   Contribute
+  </a>
+ </li>
+</ul>
+<p aria-level="2" class="caption" role="heading">
+ <span class="caption-text">
+  Notebooks
+ </span>
+</p>
+<ul class="current nav bd-sidenav">
+ <li class="toctree-l1 current active has-children">
+  <a class="reference internal" href="../../gallery.html">
+   Gallery
+  </a>
+  <input checked="" class="toctree-checkbox" id="toctree-checkbox-1" name="toctree-checkbox-1" type="checkbox"/>
+  <label for="toctree-checkbox-1">
+   <i class="fas fa-chevron-down">
+   </i>
+  </label>
+  <ul class="current">
+   <li class="toctree-l2">
+    <a class="reference internal" href="../b128b282-dee7-44a7-bc21-f1fd21452a83/notebook.html">
+     Land Cover Data (Impact Observatory)
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../435f534c-e49b-43c3-9bd6-3393100bef3f/notebook.html">
+     Cosmos-UK Soil Moisture (UKCEH)
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../ea34568e-d86e-4720-be2f-3f826f66a26c/notebook.html">
+     Rainfall NCEP/NCAR (NOAA)
+    </a>
+   </li>
+   <li class="toctree-l2 current active">
+    <a class="current reference internal" href="#">
+     Sea ice forecasting (IceNet)
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../94486a7f-e046-461f-bbb9-334ec7b57040/notebook.html">
+     Tree crown (DetectreeRGB)
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../bc30df18-fce2-42fa-aade-1ce5b7f3ca3c/notebook.html">
+     SEVIRI Level 1.5 (EUMESAT)
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../15d986da-2d7c-44fb-af71-700494485def/notebook.html">
+     Tree crown (DeepForest)
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../a2875cdc-ba6a-49dc-aab7-cdf7c4fc0fa8/notebook.html">
+     MOD021KM and FIRMS (NASA)
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../1b8921af-e77f-4ccf-ae38-4813cdceba0f/notebook.html">
+     UKV high-resolution (Met Office)
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../b34facfa-cea8-48f5-89f6-f11ce00812a9/notebook.html">
+     Detecting floating objects (ESA Phi-Lab)
+    </a>
+   </li>
+  </ul>
+ </li>
+</ul>
+<p aria-level="2" class="caption" role="heading">
+ <span class="caption-text">
+  Publishing
+ </span>
+</p>
+<ul class="nav bd-sidenav">
+ <li class="toctree-l1 has-children">
+  <a class="reference internal" href="../../../publishing/about.html">
+   About EDS notebooks
+  </a>
+  <input class="toctree-checkbox" id="toctree-checkbox-2" name="toctree-checkbox-2" type="checkbox"/>
+  <label for="toctree-checkbox-2">
+   <i class="fas fa-chevron-down">
+   </i>
+  </label>
+  <ul>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../../../publishing/about/aims-and-scope.html">
+     Aims and Scope
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../../../publishing/about/review-benefits.html">
+     Benefits of Reviewing Notebooks
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../../../publishing/about/notebooks-technologies.html">
+     Technologies
+    </a>
+   </li>
+  </ul>
+ </li>
+ <li class="toctree-l1 has-children">
+  <a class="reference internal" href="../../../publishing/guidelines.html">
+   Guidelines
+  </a>
+  <input class="toctree-checkbox" id="toctree-checkbox-3" name="toctree-checkbox-3" type="checkbox"/>
+  <label for="toctree-checkbox-3">
+   <i class="fas fa-chevron-down">
+   </i>
+  </label>
+  <ul>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../../../publishing/guidelines/guidelines-authors.html">
+     Guide for Authors
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../../../publishing/guidelines/guidelines-reviewers.html">
+     Guide for Reviewers
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../../../publishing/guidelines/guidelines-editors.html">
+     Guide for Editors
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../../../publishing/guidelines/guidelines-eic.html">
+     Guide for Editor in Chief
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../../../publishing/guidelines/guidelines-community.html">
+     Guide for Community
+    </a>
+   </li>
+  </ul>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../../../publishing/faq.html">
+   FAQ
+  </a>
+ </li>
+</ul>
+<p aria-level="2" class="caption" role="heading">
+ <span class="caption-text">
+  Community
+ </span>
+</p>
+<ul class="nav bd-sidenav">
+ <li class="toctree-l1 has-children">
+  <a class="reference internal" href="../../../community/coworking.html">
+   Coworking Calls
+  </a>
+  <input class="toctree-checkbox" id="toctree-checkbox-4" name="toctree-checkbox-4" type="checkbox"/>
+  <label for="toctree-checkbox-4">
+   <i class="fas fa-chevron-down">
+   </i>
+  </label>
+  <ul>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../../../community/coworking/coworking-motivation.html">
+     Background, Motivations, and Techniques
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../../../community/coworking/coworking-collabcafe.html">
+     Online Collaboration Cafe
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../../../community/coworking/coworking-showtell.html">
+     Online Show and Tell
+    </a>
+   </li>
+  </ul>
+ </li>
+ <li class="toctree-l1 has-children">
+  <a class="reference internal" href="../../../community/notes.html">
+   Meeting Notes
+  </a>
+  <input class="toctree-checkbox" id="toctree-checkbox-5" name="toctree-checkbox-5" type="checkbox"/>
+  <label for="toctree-checkbox-5">
+   <i class="fas fa-chevron-down">
+   </i>
+  </label>
+  <ul>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../../../community/notes/notes-collabcafe.html">
+     <em>
+      The Environmental Data Science
+     </em>
+     ⛰ 🌳 🏙️ ❄️ 🔥 🌊  online Collaboration Cafe
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../../../community/notes/notes-journalclub.html">
+     Online Journal Club
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../../../community/notes/notes-showtell.html">
+     Online Show and Tell
+    </a>
+   </li>
+  </ul>
+ </li>
+ <li class="toctree-l1 has-children">
+  <a class="reference internal" href="../../../community/templates.html">
+   Template Collection
+  </a>
+  <input class="toctree-checkbox" id="toctree-checkbox-6" name="toctree-checkbox-6" type="checkbox"/>
+  <label for="toctree-checkbox-6">
+   <i class="fas fa-chevron-down">
+   </i>
+  </label>
+  <ul>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../../../community/templates/template-coworking-collabcafe.html">
+     Online Collaboration Cafe
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../../../community/templates/template-coworking-journalclub.html">
+     Online Journal Club
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../../../community/templates/template-coworking-showtell.html">
+     Online Show and Tell
+    </a>
+   </li>
+  </ul>
+ </li>
+</ul>
+<p aria-level="2" class="caption" role="heading">
+ <span class="caption-text">
+  Afterword
+ </span>
+</p>
+<ul class="nav bd-sidenav">
+ <li class="toctree-l1">
+  <a class="reference internal" href="../../../afterword/bibliography.html">
+   Bibliography
+  </a>
+ </li>
+</ul>
+
+    </div>
+</nav> <!-- To handle the deprecated key -->
+
+<div class="navbar_extra_footer">
+  Powered by <a href="https://jupyterbook.org">Jupyter Book</a>
+</div>
+
+</div>
+
+
+          
+
+
+          
+<main class="col py-md-3 pl-md-4 bd-content overflow-auto" role="main">
+    
+    <div class="topbar container-xl fixed-top">
+    <div class="topbar-contents row">
+        <div class="col-12 col-md-3 bd-topbar-whitespace site-navigation show"></div>
+        <div class="col pl-md-4 topbar-main">
+            
+            <button id="navbar-toggler" class="navbar-toggler ml-0" type="button" data-toggle="collapse"
+                data-toggle="tooltip" data-placement="bottom" data-target=".site-navigation" aria-controls="navbar-menu"
+                aria-expanded="true" aria-label="Toggle navigation" aria-controls="site-navigation"
+                title="Toggle navigation" data-toggle="tooltip" data-placement="left">
+                <i class="fas fa-bars"></i>
+                <i class="fas fa-arrow-left"></i>
+                <i class="fas fa-arrow-up"></i>
+            </button>
+            
+            
+<div class="dropdown-buttons-trigger">
+    <button id="dropdown-buttons-trigger" class="btn btn-secondary topbarbtn" aria-label="Download this page"><i
+            class="fas fa-download"></i></button>
+
+    <div class="dropdown-buttons">
+        <!-- ipynb file if we had a myst markdown file -->
+        
+        <!-- Download raw file -->
+        <a class="dropdown-buttons" href="../../../_sources/notebooks/gallery/ac327c3a-5264-40a2-8c6e-1e8d7c4b37ef/notebook.ipynb"><button type="button"
+                class="btn btn-secondary topbarbtn" title="Download source file" data-toggle="tooltip"
+                data-placement="left">.ipynb</button></a>
+        <!-- Download PDF via print -->
+        <button type="button" id="download-print" class="btn btn-secondary topbarbtn" title="Print to PDF"
+                onclick="printPdf(this)" data-toggle="tooltip" data-placement="left">.pdf</button>
+    </div>
+</div>
+
+            <!-- Source interaction buttons -->
+
+<div class="dropdown-buttons-trigger">
+    <button id="dropdown-buttons-trigger" class="btn btn-secondary topbarbtn"
+        aria-label="Connect with source repository"><i class="fab fa-github"></i></button>
+    <div class="dropdown-buttons sourcebuttons">
+        <a class="repository-button"
+            href="https://github.com/alan-turing-institute/environmental-ds-book"><button type="button" class="btn btn-secondary topbarbtn"
+                data-toggle="tooltip" data-placement="left" title="Source repository"><i
+                    class="fab fa-github"></i>repository</button></a>
+        <a class="issues-button"
+            href="https://github.com/alan-turing-institute/environmental-ds-book/issues/new?title=Issue%20on%20page%20%2Fnotebooks/gallery/ac327c3a-5264-40a2-8c6e-1e8d7c4b37ef/notebook.html&body=Your%20issue%20content%20here."><button
+                type="button" class="btn btn-secondary topbarbtn" data-toggle="tooltip" data-placement="left"
+                title="Open an issue"><i class="fas fa-lightbulb"></i>open issue</button></a>
+        <a class="edit-button" href="https://github.com/alan-turing-institute/environmental-ds-book/edit/master/book/notebooks/gallery/ac327c3a-5264-40a2-8c6e-1e8d7c4b37ef/notebook.ipynb"><button
+                type="button" class="btn btn-secondary topbarbtn" data-toggle="tooltip" data-placement="left"
+                title="Edit this page"><i class="fas fa-pencil-alt"></i>suggest edit</button></a>
+    </div>
+</div>
+
+            <!-- Full screen (wrap in <a> to have style consistency -->
+
+<a class="full-screen-button"><button type="button" class="btn btn-secondary topbarbtn" data-toggle="tooltip"
+        data-placement="bottom" onclick="toggleFullScreen()" aria-label="Fullscreen mode"
+        title="Fullscreen mode"><i
+            class="fas fa-expand"></i></button></a>
+
+            <!-- Launch buttons -->
+
+        </div>
+
+        <!-- Table of contents -->
+        <div class="d-none d-md-block col-md-2 bd-toc show noprint">
+            
+            <div class="tocsection onthispage pt-5 pb-3">
+                <i class="fas fa-list"></i> Contents
+            </div>
+            <nav id="bd-toc-nav" aria-label="Page">
+                <ul class="visible nav section-nav flex-column">
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#context">
+   Context
+  </a>
+  <ul class="nav section-nav flex-column">
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#purpose">
+     Purpose
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#modelling-approach">
+     Modelling approach
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#highlights">
+     Highlights
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#contributions">
+     Contributions
+    </a>
+    <ul class="nav section-nav flex-column">
+     <li class="toc-h4 nav-item toc-entry">
+      <a class="reference internal nav-link" href="#notebook">
+       Notebook
+      </a>
+     </li>
+     <li class="toc-h4 nav-item toc-entry">
+      <a class="reference internal nav-link" href="#modelling-codebase">
+       Modelling codebase
+      </a>
+     </li>
+     <li class="toc-h4 nav-item toc-entry">
+      <a class="reference internal nav-link" href="#modelling-publications">
+       Modelling publications
+      </a>
+     </li>
+     <li class="toc-h4 nav-item toc-entry">
+      <a class="reference internal nav-link" href="#modelling-funding">
+       Modelling funding
+      </a>
+     </li>
+    </ul>
+   </li>
+  </ul>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#clone-the-icenet-github-repo">
+   Clone the IceNet GitHub repo
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#install-dependencies-only-for-the-pangeo-jupyterhub">
+   Install dependencies (only for the Pangeo JupyterHub)
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#load-libraries">
+   Load libraries
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#set-project-structure">
+   Set project structure
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#download-input-data-and-models">
+   Download input data and models
+  </a>
+  <ul class="nav section-nav flex-column">
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#download-pretrained-icenet-models">
+     Download pretrained IceNet models
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#download-era5-data-climate-observations">
+     Download ERA5 data (climate observations)
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#download-ground-truth-sic">
+     Download ground truth SIC
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#download-mask">
+     Download mask
+    </a>
+   </li>
+  </ul>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#data-loader">
+   Data loader
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#load-networks">
+   Load networks
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#modelling">
+   Modelling
+  </a>
+  <ul class="nav section-nav flex-column">
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#forecast-settings">
+     Forecast settings
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#set-up-forecast-folder">
+     Set up forecast folder
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#load-ground-truth-sic">
+     Load ground truth SIC
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#set-up-forecast-dataarray-dictionary">
+     Set up forecast DataArray dictionary
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#build-up-forecasts">
+     Build up forecasts
+    </a>
+   </li>
+  </ul>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#results">
+   Results
+  </a>
+  <ul class="nav section-nav flex-column">
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#settings">
+     Settings
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#setup">
+     Setup
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#monthly-masks-active-grid-cell-regions-to-compute-metrics-over">
+     Monthly masks (active grid cell regions to compute metrics over)
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#download-previous-results">
+     Download previous results
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#initialise-results-dataframe">
+     Initialise results dataframe
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#compute-icenet-sic">
+     Compute IceNet SIC
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#ground-truth-sic">
+     Ground truth SIC
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#monthwise-masks">
+     Monthwise masks
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#compute-performance-metrics">
+     Compute performance metrics
+    </a>
+   </li>
+  </ul>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#analysis">
+   Analysis
+  </a>
+  <ul class="nav section-nav flex-column">
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#plot-settings">
+     Plot settings
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#preprocess-results-dataset">
+     Preprocess results dataset
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#ice-edge">
+     Ice edge
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#model-performance-comparison">
+     Model performance comparison
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#monthly-performance-comparison">
+     Monthly performance comparison
+    </a>
+   </li>
+  </ul>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#summary">
+   Summary
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#citing-this-notebook">
+   Citing this Notebook
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#additional-information">
+   Additional information
+  </a>
+ </li>
+</ul>
+
+            </nav>
+        </div>
+    </div>
+</div>
+    <div id="main-content" class="row">
+        <div class="col-12 col-md-9 pl-md-3 pr-md-0">
+            <!-- Table of contents that is only displayed when printing the page -->
+            <div id="jb-print-docs-body" class="onlyprint">
+                <h1>Sea ice forecasting using IceNet</h1>
+                <!-- Table of contents -->
+                <div id="print-main-content">
+                    <div id="jb-print-toc">
+                        
+                        <div>
+                            <h2> Contents </h2>
+                        </div>
+                        <nav aria-label="Page">
+                            <ul class="visible nav section-nav flex-column">
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#context">
+   Context
+  </a>
+  <ul class="nav section-nav flex-column">
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#purpose">
+     Purpose
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#modelling-approach">
+     Modelling approach
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#highlights">
+     Highlights
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#contributions">
+     Contributions
+    </a>
+    <ul class="nav section-nav flex-column">
+     <li class="toc-h4 nav-item toc-entry">
+      <a class="reference internal nav-link" href="#notebook">
+       Notebook
+      </a>
+     </li>
+     <li class="toc-h4 nav-item toc-entry">
+      <a class="reference internal nav-link" href="#modelling-codebase">
+       Modelling codebase
+      </a>
+     </li>
+     <li class="toc-h4 nav-item toc-entry">
+      <a class="reference internal nav-link" href="#modelling-publications">
+       Modelling publications
+      </a>
+     </li>
+     <li class="toc-h4 nav-item toc-entry">
+      <a class="reference internal nav-link" href="#modelling-funding">
+       Modelling funding
+      </a>
+     </li>
+    </ul>
+   </li>
+  </ul>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#clone-the-icenet-github-repo">
+   Clone the IceNet GitHub repo
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#install-dependencies-only-for-the-pangeo-jupyterhub">
+   Install dependencies (only for the Pangeo JupyterHub)
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#load-libraries">
+   Load libraries
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#set-project-structure">
+   Set project structure
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#download-input-data-and-models">
+   Download input data and models
+  </a>
+  <ul class="nav section-nav flex-column">
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#download-pretrained-icenet-models">
+     Download pretrained IceNet models
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#download-era5-data-climate-observations">
+     Download ERA5 data (climate observations)
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#download-ground-truth-sic">
+     Download ground truth SIC
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#download-mask">
+     Download mask
+    </a>
+   </li>
+  </ul>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#data-loader">
+   Data loader
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#load-networks">
+   Load networks
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#modelling">
+   Modelling
+  </a>
+  <ul class="nav section-nav flex-column">
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#forecast-settings">
+     Forecast settings
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#set-up-forecast-folder">
+     Set up forecast folder
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#load-ground-truth-sic">
+     Load ground truth SIC
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#set-up-forecast-dataarray-dictionary">
+     Set up forecast DataArray dictionary
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#build-up-forecasts">
+     Build up forecasts
+    </a>
+   </li>
+  </ul>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#results">
+   Results
+  </a>
+  <ul class="nav section-nav flex-column">
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#settings">
+     Settings
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#setup">
+     Setup
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#monthly-masks-active-grid-cell-regions-to-compute-metrics-over">
+     Monthly masks (active grid cell regions to compute metrics over)
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#download-previous-results">
+     Download previous results
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#initialise-results-dataframe">
+     Initialise results dataframe
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#compute-icenet-sic">
+     Compute IceNet SIC
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#ground-truth-sic">
+     Ground truth SIC
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#monthwise-masks">
+     Monthwise masks
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#compute-performance-metrics">
+     Compute performance metrics
+    </a>
+   </li>
+  </ul>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#analysis">
+   Analysis
+  </a>
+  <ul class="nav section-nav flex-column">
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#plot-settings">
+     Plot settings
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#preprocess-results-dataset">
+     Preprocess results dataset
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#ice-edge">
+     Ice edge
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#model-performance-comparison">
+     Model performance comparison
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#monthly-performance-comparison">
+     Monthly performance comparison
+    </a>
+   </li>
+  </ul>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#summary">
+   Summary
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#citing-this-notebook">
+   Citing this Notebook
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#additional-information">
+   Additional information
+  </a>
+ </li>
+</ul>
+
+                        </nav>
+                    </div>
+                </div>
+            </div>
+            
+              <div>
+                
+  <div class="tex2jax_ignore mathjax_ignore section" id="sea-ice-forecasting-using-icenet">
+<h1>Sea ice forecasting using IceNet<a class="headerlink" href="#sea-ice-forecasting-using-icenet" title="Permalink to this headline">¶</a></h1>
+<p><svg version="1.1" width="16" height="16" class="octicon octicon-tag" viewBox="0 0 16 16" aria-hidden="true"><path fill-rule="evenodd" d="M2.5 7.775V2.75a.25.25 0 01.25-.25h5.025a.25.25 0 01.177.073l6.25 6.25a.25.25 0 010 .354l-5.025 5.025a.25.25 0 01-.354 0l-6.25-6.25a.25.25 0 01-.073-.177zm-1.5 0V2.75C1 1.784 1.784 1 2.75 1h5.025c.464 0 .91.184 1.238.513l6.25 6.25a1.75 1.75 0 010 2.474l-5.026 5.026a1.75 1.75 0 01-2.474 0l-6.25-6.25A1.75 1.75 0 011 7.775zM6 5a1 1 0 100 2 1 1 0 000-2z"></path></svg>
+<span class="sd-sphinx-override sd-badge sd-bg-primary sd-bg-text-primary">Polar</span>
+<span class="sd-sphinx-override sd-badge sd-bg-secondary sd-bg-text-secondary">Modelling</span>
+<span class="sd-sphinx-override sd-badge sd-bg-warning sd-bg-text-warning">Regular</span>
+<span class="sd-sphinx-override sd-badge sd-bg-info sd-bg-text-info">Python</span></p>
+<p><a class="reference external" href="https://w3id.org/ro-id/ac327c3a-5264-40a2-8c6e-1e8d7c4b37ef"><img alt="RoHub - FAIR Executable Research Object" src="https://img.shields.io/badge/RoHub-FAIR_Executable_Research_Object-2ea44f?logo=Open+Access&amp;logoColor=blue" /></a></p>
+<p><a class="reference external" href="https://notebooks.gesis.org/binder/v2/gh/eds-book-gallery/ac327c3a-5264-40a2-8c6e-1e8d7c4b37ef/main?labpath=notebook.ipynb"><img alt="Binder" src="https://mybinder.org/badge_logo.svg" /></a></p>
+<p><a class="reference external" href="https://us-central1-b.gcp.pangeo.io/hub/user-redirect/git-pull?repo=https%3A%2F%2Fgithub.com%2Feds-book-gallery%2Fac327c3a-5264-40a2-8c6e-1e8d7c4b37ef&amp;urlpath=lab%2Ftree%2Fac327c3a-5264-40a2-8c6e-1e8d7c4b37ef%2Fnotebook.ipynb&amp;branch=main"><img alt="Pangeo 2i2c JupyterHub" src="https://img.shields.io/static/v1.svg?logo=Jupyter&amp;label=PangeoJupyterHub&amp;message=2i2c&amp;color=orange" /></a></p>
+<p><a class="reference external" href="https://doi.org/10.24424/m8ew-pg51"><img alt="DOI" src="https://zenodo.org/badge/DOI/10.24424/m8ew-pg51.svg" /></a></p>
+<div class="section" id="context">
+<h2>Context<a class="headerlink" href="#context" title="Permalink to this headline">¶</a></h2>
+<div class="section" id="purpose">
+<h3>Purpose<a class="headerlink" href="#purpose" title="Permalink to this headline">¶</a></h3>
+<p>Demonstrate IceNet, a deep learning sea ice forecasting system trained using climate simulations and observational data.</p>
+</div>
+<div class="section" id="modelling-approach">
+<h3>Modelling approach<a class="headerlink" href="#modelling-approach" title="Permalink to this headline">¶</a></h3>
+<p><strong>IceNet</strong> is a probabilistic, deep learning sea ice forecasting system. The model, an ensemble of U-Net networks, learns how sea ice changes from climate simulations and observational data to forecast up to 6 months of monthly-averaged sea ice concentration maps at 25 km resolution. IceNet advances the range of accurate sea ice forecasts, outperforming a state-of-the-art dynamical model in seasonal forecasts of summer sea ice, particularly for extreme sea ice events. IceNet was implemented in Python 3.7 using TensorFlow v2.2.0. Further details can be found in the Nature Communications paper <a class="reference external" href="https://www.nature.com/articles/s41467-021-25257-4"><em>Seasonal Arctic sea ice forecasting with probabilistic deep learning</em></a>.</p>
+</div>
+<div class="section" id="highlights">
+<h3>Highlights<a class="headerlink" href="#highlights" title="Permalink to this headline">¶</a></h3>
+<ul class="simple">
+<li><p>Clone and access IceNet’s codebase to produce seasonal Arctic sea ice forecasts using 3 out of 25 five pre-trained IceNet models <a class="reference external" href="https://doi.org/10.5285/71820e7d-c628-4e32-969f-464b7efb187c">downloaded from the Polar Data Centre</a>.</p></li>
+<li><p>Forecast a single year, 2020, using IceNet’s preprocessed environmental input data downloaded from a Zenodo repository.</p></li>
+<li><p>Visualise IceNet’s seasonal ice edge predictions at 4- to 1-month lead times.</p></li>
+<li><p>Interactive plots comparing IceNet predictions against ECMWF SEAS5 physics-based sea ice concentration and a linear trend statistical benchmark.</p></li>
+</ul>
+</div>
+<div class="section" id="contributions">
+<h3>Contributions<a class="headerlink" href="#contributions" title="Permalink to this headline">¶</a></h3>
+<div class="section" id="notebook">
+<h4>Notebook<a class="headerlink" href="#notebook" title="Permalink to this headline">¶</a></h4>
+<ul class="simple">
+<li><p>Alejandro Coca-Castro (author), The Alan Turing Institute, <a class="reference external" href="https://github.com/acocac">&#64;acocac</a></p></li>
+<li><p>Tom R. Andersson (reviewer), British Antarctic Survey, <a class="reference external" href="https://github.com/tom-andersson">&#64;tom-andersson</a></p></li>
+<li><p>Nick Barlow (reviewer), The Alan Turing Institute, <a class="reference external" href="https://github.com/nbarlowATI">&#64;nbarlowATI</a></p></li>
+</ul>
+</div>
+<div class="section" id="modelling-codebase">
+<h4>Modelling codebase<a class="headerlink" href="#modelling-codebase" title="Permalink to this headline">¶</a></h4>
+<ul class="simple">
+<li><p>Tom R. Andersson (author), British Antarctic Survey, <a class="reference external" href="https://github.com/tom-andersson">&#64;tom-andersson</a></p></li>
+<li><p>James Byrne (contributor), British Antarctic Survey, <a class="reference external" href="https://github.com/JimCircadian">&#64;JimCircadian</a></p></li>
+<li><p>Tony Phillips (contributor), British Antarctic Survey</p></li>
+</ul>
+</div>
+<div class="section" id="modelling-publications">
+<h4>Modelling publications<a class="headerlink" href="#modelling-publications" title="Permalink to this headline">¶</a></h4>
+<div class="docutils container" id="id1">
+<ul class="simple">
+<li id="id11"><p>Tom R Andersson, J Scott Hosking, María Pérez-Ortiz, Brooks Paige, Andrew Elliott, Chris Russell, Stephen Law, Daniel C Jones, Jeremy Wilkinson, Tony Phillips, James Byrne, Steffen Tietsche, Beena Balan Sarojini, Eduardo Blanchard-Wrigglesworth, Yevgeny Aksenov, Rod Downie, and Emily Shuckburgh. Seasonal arctic sea ice forecasting with probabilistic deep learning. <em>Nature Communications</em>, 12:5124, 2021. URL: <a class="reference external" href="https://doi.org/10.1038/s41467-021-25257-4">https://doi.org/10.1038/s41467-021-25257-4</a>, <a class="reference external" href="https://doi.org/10.1038/s41467-021-25257-4">doi:10.1038/s41467-021-25257-4</a>.</p></li>
+</ul>
+</div>
+</div>
+<div class="section" id="modelling-funding">
+<h4>Modelling funding<a class="headerlink" href="#modelling-funding" title="Permalink to this headline">¶</a></h4>
+<p>The IceNet project was supported by Wave 1 of The UKRI Strategic Priorities Fund under the EPSRC Grant EP/T001569/1, particularly the AI for Science’ theme within that grant and The Alan Turing Institute.</p>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>The notebook contributors acknowledge the IceNet developers for providing a fully reproducible and public code available at <a class="reference external" href="https://github.com/tom-andersson/icenet-paper">https://github.com/tom-andersson/icenet-paper</a>. Some snippets from IceNet’s source code were adapted to this notebook.</p>
+</div>
+</div>
+</div>
+</div>
+<div class="section" id="clone-the-icenet-github-repo">
+<h2>Clone the IceNet GitHub repo<a class="headerlink" href="#clone-the-icenet-github-repo" title="Permalink to this headline">¶</a></h2>
+<div class="cell tag_hide-input docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="o">!</span>git<span class="w"> </span>clone<span class="w"> </span>-q<span class="w"> </span>https://github.com/tom-andersson/icenet-paper.git<span class="w"> </span>notebook
+</pre></div>
+</div>
+</div>
+</div>
+</div>
+<div class="section" id="install-dependencies-only-for-the-pangeo-jupyterhub">
+<h2>Install dependencies (only for the Pangeo JupyterHub)<a class="headerlink" href="#install-dependencies-only-for-the-pangeo-jupyterhub" title="Permalink to this headline">¶</a></h2>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">os</span>
+
+<span class="k">if</span> <span class="n">os</span><span class="o">.</span><span class="n">environ</span><span class="p">[</span><span class="s1">&#39;CONDA_DEFAULT_ENV&#39;</span><span class="p">]</span> <span class="o">==</span> <span class="s1">&#39;notebook&#39;</span><span class="p">:</span>
+    <span class="o">!</span>pip<span class="w"> </span>-q<span class="w"> </span>install<span class="w"> </span>tensorflow
+    <span class="o">!</span>conda<span class="w"> </span>install<span class="w"> </span>-y<span class="w"> </span>-c<span class="w"> </span>conda-forge<span class="w"> </span>iris
+</pre></div>
+</div>
+</div>
+</div>
+</div>
+<div class="section" id="load-libraries">
+<h2>Load libraries<a class="headerlink" href="#load-libraries" title="Permalink to this headline">¶</a></h2>
+<div class="cell tag_hide-input docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># system</span>
+<span class="kn">import</span> <span class="nn">sys</span>
+<span class="n">sys</span><span class="o">.</span><span class="n">path</span><span class="o">.</span><span class="n">insert</span><span class="p">(</span><span class="mi">0</span><span class="p">,</span> <span class="n">os</span><span class="o">.</span><span class="n">path</span><span class="o">.</span><span class="n">join</span><span class="p">(</span><span class="n">os</span><span class="o">.</span><span class="n">getcwd</span><span class="p">(),</span> <span class="s1">&#39;notebook&#39;</span><span class="p">,</span> <span class="s1">&#39;icenet&#39;</span><span class="p">))</span>
+
+<span class="c1"># data</span>
+<span class="kn">import</span> <span class="nn">json</span>
+<span class="kn">import</span> <span class="nn">pandas</span> <span class="k">as</span> <span class="nn">pd</span>
+<span class="kn">import</span> <span class="nn">numpy</span> <span class="k">as</span> <span class="nn">np</span>
+<span class="kn">import</span> <span class="nn">xarray</span> <span class="k">as</span> <span class="nn">xr</span>
+
+<span class="c1"># custom functions from the icenet repo</span>
+<span class="kn">from</span> <span class="nn">utils</span> <span class="kn">import</span> <span class="n">IceNetDataLoader</span><span class="p">,</span> <span class="n">create_results_dataset_index</span><span class="p">,</span> <span class="n">arr_to_ice_edge_arr</span>
+
+<span class="c1"># modelling</span>
+<span class="kn">from</span> <span class="nn">tensorflow.keras.models</span> <span class="kn">import</span> <span class="n">load_model</span>
+
+<span class="c1"># plotting</span>
+<span class="kn">import</span> <span class="nn">matplotlib.pyplot</span> <span class="k">as</span> <span class="nn">plt</span>
+<span class="kn">from</span> <span class="nn">matplotlib.figure</span> <span class="kn">import</span> <span class="n">Figure</span>
+<span class="kn">from</span> <span class="nn">matplotlib.backends.backend_agg</span> <span class="kn">import</span> <span class="n">FigureCanvas</span>
+<span class="kn">from</span> <span class="nn">matplotlib.offsetbox</span> <span class="kn">import</span> <span class="n">AnchoredText</span>
+
+<span class="kn">import</span> <span class="nn">holoviews</span> <span class="k">as</span> <span class="nn">hv</span>
+
+<span class="kn">import</span> <span class="nn">hvplot.pandas</span>
+<span class="kn">import</span> <span class="nn">hvplot.xarray</span>
+
+<span class="kn">from</span> <span class="nn">bokeh.models.formatters</span> <span class="kn">import</span> <span class="n">DatetimeTickFormatter</span>
+
+<span class="kn">import</span> <span class="nn">panel</span> <span class="k">as</span> <span class="nn">pn</span>
+<span class="n">pn</span><span class="o">.</span><span class="n">extension</span><span class="p">()</span>
+
+<span class="c1"># utils</span>
+<span class="kn">import</span> <span class="nn">urllib.request</span>
+<span class="kn">import</span> <span class="nn">re</span>
+<span class="kn">from</span> <span class="nn">tqdm.notebook</span> <span class="kn">import</span> <span class="n">tqdm</span>
+<span class="kn">import</span> <span class="nn">calendar</span>
+<span class="kn">from</span> <span class="nn">pprint</span> <span class="kn">import</span> <span class="n">pprint</span>
+<span class="kn">import</span> <span class="nn">warnings</span>
+<span class="n">warnings</span><span class="o">.</span><span class="n">filterwarnings</span><span class="p">(</span><span class="n">action</span><span class="o">=</span><span class="s1">&#39;ignore&#39;</span><span class="p">)</span>
+
+<span class="n">pd</span><span class="o">.</span><span class="n">options</span><span class="o">.</span><span class="n">display</span><span class="o">.</span><span class="n">max_columns</span> <span class="o">=</span> <span class="mi">10</span>
+<span class="n">hv</span><span class="o">.</span><span class="n">extension</span><span class="p">(</span><span class="s1">&#39;bokeh&#39;</span><span class="p">,</span> <span class="n">width</span><span class="o">=</span><span class="mi">100</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+</div>
+</div>
+<div class="section" id="set-project-structure">
+<h2>Set project structure<a class="headerlink" href="#set-project-structure" title="Permalink to this headline">¶</a></h2>
+<p>Let’s follow the structure of the IceNet paper as it is indicated in the source code <a class="reference external" href="https://github.com/tom-andersson/icenet-paper/blob/main/icenet/config.py">config.py</a> file. The structure allows conveniently using IceNet’s custom data loader.</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># data folder</span>
+<span class="n">data_folder</span> <span class="o">=</span> <span class="s1">&#39;./data&#39;</span>
+<span class="n">notebook_folder</span> <span class="o">=</span> <span class="s1">&#39;./notebook&#39;</span>
+
+<span class="n">config</span> <span class="o">=</span> <span class="p">{</span>
+    <span class="s1">&#39;obs_data_folder&#39;</span><span class="p">:</span> <span class="n">os</span><span class="o">.</span><span class="n">path</span><span class="o">.</span><span class="n">join</span><span class="p">(</span><span class="n">data_folder</span><span class="p">,</span> <span class="s1">&#39;obs&#39;</span><span class="p">),</span>
+    <span class="s1">&#39;mask_data_folder&#39;</span><span class="p">:</span> <span class="n">os</span><span class="o">.</span><span class="n">path</span><span class="o">.</span><span class="n">join</span><span class="p">(</span><span class="n">data_folder</span><span class="p">,</span> <span class="s1">&#39;masks&#39;</span><span class="p">),</span>
+    <span class="s1">&#39;forecast_data_folder&#39;</span><span class="p">:</span> <span class="n">os</span><span class="o">.</span><span class="n">path</span><span class="o">.</span><span class="n">join</span><span class="p">(</span><span class="n">data_folder</span><span class="p">,</span> <span class="s1">&#39;forecasts&#39;</span><span class="p">),</span>
+    <span class="s1">&#39;network_dataset_folder&#39;</span><span class="p">:</span> <span class="n">os</span><span class="o">.</span><span class="n">path</span><span class="o">.</span><span class="n">join</span><span class="p">(</span><span class="n">data_folder</span><span class="p">,</span> <span class="s1">&#39;network_datasets&#39;</span><span class="p">),</span>
+    <span class="s1">&#39;dataloader_config_folder&#39;</span><span class="p">:</span> <span class="n">os</span><span class="o">.</span><span class="n">path</span><span class="o">.</span><span class="n">join</span><span class="p">(</span><span class="n">data_folder</span><span class="p">,</span> <span class="s1">&#39;dataloader_configs&#39;</span><span class="p">),</span>
+    <span class="s1">&#39;network_h5_files_folder&#39;</span><span class="p">:</span> <span class="n">os</span><span class="o">.</span><span class="n">path</span><span class="o">.</span><span class="n">join</span><span class="p">(</span><span class="n">data_folder</span><span class="p">,</span> <span class="s1">&#39;networks&#39;</span><span class="p">),</span>
+    <span class="s1">&#39;forecast_results_folder&#39;</span><span class="p">:</span> <span class="n">os</span><span class="o">.</span><span class="n">path</span><span class="o">.</span><span class="n">join</span><span class="p">(</span><span class="n">data_folder</span><span class="p">,</span> <span class="s1">&#39;results&#39;</span><span class="p">),</span>
+<span class="p">}</span>
+
+<span class="c1"># Generate the folder structure through a list of comprehension</span>
+<span class="p">[</span><span class="n">os</span><span class="o">.</span><span class="n">makedirs</span><span class="p">(</span><span class="n">val</span><span class="p">)</span> <span class="k">for</span> <span class="n">key</span><span class="p">,</span> <span class="n">val</span> <span class="ow">in</span> <span class="n">config</span><span class="o">.</span><span class="n">items</span><span class="p">()</span> <span class="k">if</span> <span class="ow">not</span> <span class="n">os</span><span class="o">.</span><span class="n">path</span><span class="o">.</span><span class="n">exists</span><span class="p">(</span><span class="n">val</span><span class="p">)]</span>
+</pre></div>
+</div>
+</div>
+</div>
+</div>
+<div class="section" id="download-input-data-and-models">
+<h2>Download input data and models<a class="headerlink" href="#download-input-data-and-models" title="Permalink to this headline">¶</a></h2>
+<p>IceNet consists of 25 ensemble members i.e. models. For this demonstrator, we only download three of them to reduce computational cost (note that this will reduce performance compared with the full ensemble). We also fetch analysis-ready i.e. preprocessed data of climate observations, ground truth sea ice concentration (SIC) and a IceNet’s project configuration file from a Zenodo repository. Finally, we call a script from the IceNet paper repo to generate masks required for computing metrics and visualisation.</p>
+<div class="section" id="download-pretrained-icenet-models">
+<h3>Download pretrained IceNet models<a class="headerlink" href="#download-pretrained-icenet-models" title="Permalink to this headline">¶</a></h3>
+<p>Let’s download 3 out of 25 ensemble members <a class="reference external" href="https://doi.org/10.5285/71820e7d-c628-4e32-969f-464b7efb187c">retrieved from the Polar Data Centre</a>. The models are numbered from 36 to 60. For this example we use the networks 36, 42 and 53. It is worth to mention other pre-computed results from the Nature Communications paper can be downloaded including output results table, uncertainty, netCDF forecast of the 25 ensemble members, among others.</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">url</span> <span class="o">=</span> <span class="s1">&#39;https://ramadda.data.bas.ac.uk/repository/entry/get/&#39;</span>
+
+<span class="n">target_networks</span> <span class="o">=</span> <span class="p">[</span><span class="mi">36</span><span class="p">,</span> <span class="mi">42</span><span class="p">,</span> <span class="mi">53</span><span class="p">]</span>
+
+<span class="k">for</span> <span class="n">network</span> <span class="ow">in</span> <span class="n">target_networks</span><span class="p">:</span>
+    <span class="n">urllib</span><span class="o">.</span><span class="n">request</span><span class="o">.</span><span class="n">urlretrieve</span><span class="p">(</span><span class="n">url</span> <span class="o">+</span> <span class="sa">f</span><span class="s1">&#39;network_tempscaled_</span><span class="si">{</span><span class="n">network</span><span class="si">}</span><span class="s1">.h5?entryid=synth%3A71820e7d-c628-4e32-969f-464b7efb187c%3AL25ldXJhbF9uZXR3b3JrX21vZGVsL25ldHdvcmtfdGVtcHNjYWxlZF8zNi5oNQ%3D%3D&#39;</span><span class="p">,</span>
+                               <span class="n">os</span><span class="o">.</span><span class="n">path</span><span class="o">.</span><span class="n">join</span><span class="p">(</span><span class="n">config</span><span class="p">[</span><span class="s1">&#39;network_h5_files_folder&#39;</span><span class="p">],</span><span class="sa">f</span><span class="s1">&#39;network_tempscaled_</span><span class="si">{</span><span class="n">network</span><span class="si">}</span><span class="s1">.h5&#39;</span><span class="p">))</span>
+</pre></div>
+</div>
+</div>
+</div>
+</div>
+<div class="section" id="download-era5-data-climate-observations">
+<h3>Download ERA5 data (climate observations)<a class="headerlink" href="#download-era5-data-climate-observations" title="Permalink to this headline">¶</a></h3>
+<p>Let’s download analysis-ready i.e. preprocessed ERA5 observations from a zenodo repository.</p>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>The analysis-ready data were generated by running the script <code class="docutils literal notranslate"><span class="pre">python3</span> <span class="pre">icenet/preproc_icenet_data.py</span></code> in step <strong>3.2) Preprocess the raw data</strong> according to the <a class="reference external" href="https://github.com/tom-andersson/icenet-paper">icenet-paper repository</a>. The scripts normalise the raw NetCDF data, downloaded using the bash file <code class="docutils literal notranslate"><span class="pre">./download_era5_data_in_parallel.sh</span></code> (see the step <strong>2) Download data</strong>), and saves it as monthly <code class="docutils literal notranslate"><span class="pre">NumPy</span></code> files.</p>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">filename</span> <span class="o">=</span> <span class="s1">&#39;dataset1.zip&#39;</span>
+<span class="n">url</span> <span class="o">=</span> <span class="sa">f</span><span class="s1">&#39;https://zenodo.org/record/5516869/files/</span><span class="si">{</span><span class="n">filename</span><span class="si">}</span><span class="s1">?download=1&#39;</span>
+
+<span class="k">if</span> <span class="ow">not</span> <span class="n">os</span><span class="o">.</span><span class="n">path</span><span class="o">.</span><span class="n">isfile</span><span class="p">(</span><span class="n">config</span><span class="p">[</span><span class="s1">&#39;network_dataset_folder&#39;</span><span class="p">]</span> <span class="o">+</span> <span class="s1">&#39;/dataset1.zip&#39;</span><span class="p">)</span> <span class="ow">or</span> <span class="n">os</span><span class="o">.</span><span class="n">path</span><span class="o">.</span><span class="n">getsize</span><span class="p">(</span><span class="n">config</span><span class="p">[</span><span class="s1">&#39;network_dataset_folder&#39;</span><span class="p">]</span> <span class="o">+</span> <span class="s1">&#39;/dataset1.zip&#39;</span><span class="p">)</span> <span class="o">==</span> <span class="mi">0</span><span class="p">:</span>
+    <span class="n">urllib</span><span class="o">.</span><span class="n">request</span><span class="o">.</span><span class="n">urlretrieve</span><span class="p">(</span><span class="n">url</span><span class="p">,</span> <span class="n">config</span><span class="p">[</span><span class="s1">&#39;network_dataset_folder&#39;</span><span class="p">]</span> <span class="o">+</span> <span class="s1">&#39;/dataset1.zip&#39;</span><span class="p">)</span>
+    <span class="o">!</span>unzip<span class="w"> </span>-qq<span class="w"> </span>./data/network_datasets/dataset1.zip<span class="w"> </span>-d<span class="w"> </span>./data/network_datasets
+</pre></div>
+</div>
+</div>
+</div>
+</div>
+<div class="section" id="download-ground-truth-sic">
+<h3>Download ground truth SIC<a class="headerlink" href="#download-ground-truth-sic" title="Permalink to this headline">¶</a></h3>
+<p>We additionally download analysis-ready i.e. ground truth SIC data from a zenodo repository.</p>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>The analysis-ready ground truth SIC data were generated by running the script <code class="docutils literal notranslate"><span class="pre">python3</span> <span class="pre">icenet/download_sic_data.py</span></code> in step <strong>2) Download data</strong> according to the <a class="reference external" href="https://github.com/tom-andersson/icenet-paper">icenet-paper repository</a>. The script downloads and concatenate <a class="reference external" href="https://osisaf-hl.met.no/v2p1-sea-ice-index">OSI-SAF SIC data</a>, OSI-450 (1979-2015) and OSI-430-b (2016-ownards), and saves it as monthly averages in a <code class="docutils literal notranslate"><span class="pre">netCDF</span></code> file.</p>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">filename</span> <span class="o">=</span> <span class="s1">&#39;siconca_EASE.nc&#39;</span>
+<span class="n">url</span> <span class="o">=</span> <span class="sa">f</span><span class="s1">&#39;https://zenodo.org/record/5516869/files/</span><span class="si">{</span><span class="n">filename</span><span class="si">}</span><span class="s1">?download=1&#39;</span>
+
+<span class="k">if</span> <span class="ow">not</span> <span class="n">os</span><span class="o">.</span><span class="n">path</span><span class="o">.</span><span class="n">isfile</span><span class="p">(</span><span class="n">filename</span><span class="p">)</span> <span class="ow">or</span> <span class="n">os</span><span class="o">.</span><span class="n">path</span><span class="o">.</span><span class="n">getsize</span><span class="p">(</span><span class="n">filename</span><span class="p">)</span> <span class="o">==</span> <span class="mi">0</span><span class="p">:</span>
+    <span class="n">urllib</span><span class="o">.</span><span class="n">request</span><span class="o">.</span><span class="n">urlretrieve</span><span class="p">(</span><span class="n">url</span><span class="p">,</span> <span class="n">config</span><span class="p">[</span><span class="s1">&#39;obs_data_folder&#39;</span><span class="p">]</span> <span class="o">+</span> <span class="s1">&#39;/&#39;</span> <span class="o">+</span> <span class="n">filename</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+</div>
+</div>
+<div class="section" id="download-mask">
+<h3>Download mask<a class="headerlink" href="#download-mask" title="Permalink to this headline">¶</a></h3>
+<p>The script <code class="docutils literal notranslate"><span class="pre">icenet/gen_masks.py</span></code> generates masks for land, the polar holes, OSI-SAF monthly maximum ice extent (the <em>active
+grid cell region</em>), and the Arctic regions &amp; coastline. Figures of the
+masks are saved in the <strong>./figures</strong> folder.</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="o">!</span>python<span class="w"> </span>ac327c3a-5264-40a2-8c6e-1e8d7c4b37ef/icenet/gen_masks.py
+</pre></div>
+</div>
+</div>
+</div>
+</div>
+</div>
+<div class="section" id="data-loader">
+<h2>Data loader<a class="headerlink" href="#data-loader" title="Permalink to this headline">¶</a></h2>
+<p>The following lines show how to download and read a given IceNet’s configuration <code class="docutils literal notranslate"><span class="pre">JSON</span></code> file into a custom loader, <strong>IceNetDataLoader</strong>. The loader conveniently dictates which variables are input to the networks, which climate simulations are used for pre-training, and how far ahead to forecast.</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">dataloader_ID</span> <span class="o">=</span> <span class="s1">&#39;2021_09_03_1300_icenet_demo.json&#39;</span>
+<span class="n">url</span> <span class="o">=</span> <span class="sa">f</span><span class="s1">&#39;https://zenodo.org/record/5516869/files/</span><span class="si">{</span><span class="n">dataloader_ID</span><span class="si">}</span><span class="s1">?download=1&#39;</span>
+
+<span class="k">if</span> <span class="ow">not</span> <span class="n">os</span><span class="o">.</span><span class="n">path</span><span class="o">.</span><span class="n">isfile</span><span class="p">(</span><span class="n">config</span><span class="p">[</span><span class="s1">&#39;dataloader_config_folder&#39;</span><span class="p">]</span> <span class="o">+</span> <span class="s1">&#39;/&#39;</span> <span class="o">+</span> <span class="n">dataloader_ID</span><span class="p">)</span> <span class="ow">or</span> <span class="n">os</span><span class="o">.</span><span class="n">path</span><span class="o">.</span><span class="n">getsize</span><span class="p">(</span><span class="n">config</span><span class="p">[</span><span class="s1">&#39;dataloader_config_folder&#39;</span><span class="p">]</span> <span class="o">+</span> <span class="s1">&#39;/&#39;</span> <span class="o">+</span> <span class="n">dataloader_ID</span><span class="p">)</span> <span class="o">==</span> <span class="mi">0</span><span class="p">:</span>
+    <span class="n">urllib</span><span class="o">.</span><span class="n">request</span><span class="o">.</span><span class="n">urlretrieve</span><span class="p">(</span><span class="n">url</span><span class="p">,</span> <span class="n">config</span><span class="p">[</span><span class="s1">&#39;dataloader_config_folder&#39;</span><span class="p">]</span> <span class="o">+</span> <span class="s1">&#39;/&#39;</span> <span class="o">+</span> <span class="n">dataloader_ID</span><span class="p">)</span>
+
+<span class="k">with</span> <span class="nb">open</span><span class="p">(</span><span class="n">config</span><span class="p">[</span><span class="s1">&#39;dataloader_config_folder&#39;</span><span class="p">]</span> <span class="o">+</span> <span class="s1">&#39;/&#39;</span> <span class="o">+</span> <span class="n">dataloader_ID</span><span class="p">,</span> <span class="s1">&#39;r&#39;</span><span class="p">)</span> <span class="k">as</span> <span class="n">readfile</span><span class="p">:</span>
+    <span class="n">dataloader_config</span> <span class="o">=</span> <span class="n">json</span><span class="o">.</span><span class="n">load</span><span class="p">(</span><span class="n">readfile</span><span class="p">)</span>
+
+<span class="n">pprint</span><span class="p">(</span><span class="n">dataloader_config</span><span class="p">[</span><span class="s1">&#39;input_data&#39;</span><span class="p">])</span>
+</pre></div>
+</div>
+</div>
+</div>
+<p>The <code class="docutils literal notranslate"><span class="pre">input_data</span></code> element of the IceNet’s <code class="docutils literal notranslate"><span class="pre">JSON</span></code> file lists input variables and corresponding settings. We use the same input data as in the Nature Communications paper which consists of SIC, 11 climate variables, statistical SIC forecasts, and metadata (see <a class="reference external" href="https://static-content.springer.com/esm/art%3A10.1038%2Fs41467-021-25257-4/MediaObjects/41467_2021_25257_MOESM1_ESM.pdf">Supplementary Table 2</a>). These layers are stacked in an identical manner to the RGB channels of a traditional image, amounting to 50 channels in total.</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># Load dataloader</span>
+<span class="n">dataloader_config_fpath</span> <span class="o">=</span> <span class="n">os</span><span class="o">.</span><span class="n">path</span><span class="o">.</span><span class="n">join</span><span class="p">(</span><span class="n">config</span><span class="p">[</span><span class="s1">&#39;dataloader_config_folder&#39;</span><span class="p">],</span> <span class="n">dataloader_ID</span><span class="p">)</span>
+
+<span class="c1"># Data loader</span>
+<span class="nb">print</span><span class="p">(</span><span class="s2">&quot;</span><span class="se">\n</span><span class="s2">Setting up the data loader with config file: </span><span class="si">{}</span><span class="se">\n\n</span><span class="s2">&quot;</span><span class="o">.</span><span class="n">format</span><span class="p">(</span><span class="n">dataloader_ID</span><span class="p">))</span>
+<span class="n">dataloader</span> <span class="o">=</span> <span class="n">IceNetDataLoader</span><span class="p">(</span><span class="n">dataloader_config_fpath</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="s1">&#39;</span><span class="se">\n\n</span><span class="s1">Done.</span><span class="se">\n</span><span class="s1">&#39;</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+</div>
+</div>
+<div class="section" id="load-networks">
+<h2>Load networks<a class="headerlink" href="#load-networks" title="Permalink to this headline">¶</a></h2>
+<p>Let’s also load the ensemble IceNet’s members using the <code class="docutils literal notranslate"><span class="pre">load_model</span></code> function imported from Keras API with Tensorflow backend.</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">network_regex</span> <span class="o">=</span> <span class="n">re</span><span class="o">.</span><span class="n">compile</span><span class="p">(</span><span class="s1">&#39;^network_tempscaled_([0-9]*).h5$&#39;</span><span class="p">)</span>
+
+<span class="n">network_fpaths</span> <span class="o">=</span> <span class="p">[</span><span class="n">os</span><span class="o">.</span><span class="n">path</span><span class="o">.</span><span class="n">join</span><span class="p">(</span><span class="n">config</span><span class="p">[</span><span class="s1">&#39;network_h5_files_folder&#39;</span><span class="p">],</span> <span class="n">f</span><span class="p">)</span> <span class="k">for</span> <span class="n">f</span> <span class="ow">in</span>
+                      <span class="nb">sorted</span><span class="p">(</span><span class="n">os</span><span class="o">.</span><span class="n">listdir</span><span class="p">(</span><span class="n">config</span><span class="p">[</span><span class="s1">&#39;network_h5_files_folder&#39;</span><span class="p">]))</span> <span class="k">if</span> <span class="n">network_regex</span><span class="o">.</span><span class="n">match</span><span class="p">(</span><span class="n">f</span><span class="p">)]</span>
+
+<span class="n">ensemble_seeds</span> <span class="o">=</span> <span class="p">[</span><span class="n">network_regex</span><span class="o">.</span><span class="n">match</span><span class="p">(</span><span class="n">f</span><span class="p">)[</span><span class="mi">1</span><span class="p">]</span> <span class="k">for</span> <span class="n">f</span> <span class="ow">in</span>
+                  <span class="nb">sorted</span><span class="p">(</span><span class="n">os</span><span class="o">.</span><span class="n">listdir</span><span class="p">(</span><span class="n">config</span><span class="p">[</span><span class="s1">&#39;network_h5_files_folder&#39;</span><span class="p">]))</span> <span class="k">if</span> <span class="n">network_regex</span><span class="o">.</span><span class="n">match</span><span class="p">(</span><span class="n">f</span><span class="p">)]</span>
+
+<span class="n">networks</span> <span class="o">=</span> <span class="p">[]</span>
+<span class="k">for</span> <span class="n">network_fpath</span> <span class="ow">in</span> <span class="n">network_fpaths</span><span class="p">:</span>
+    <span class="nb">print</span><span class="p">(</span><span class="s1">&#39;Loading model from </span><span class="si">{}</span><span class="s1">... &#39;</span><span class="o">.</span><span class="n">format</span><span class="p">(</span><span class="n">network_fpath</span><span class="p">),</span> <span class="n">end</span><span class="o">=</span><span class="s1">&#39;&#39;</span><span class="p">,</span> <span class="n">flush</span><span class="o">=</span><span class="kc">True</span><span class="p">)</span>
+    <span class="n">networks</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="n">load_model</span><span class="p">(</span><span class="n">network_fpath</span><span class="p">,</span> <span class="nb">compile</span><span class="o">=</span><span class="kc">False</span><span class="p">))</span>
+    <span class="nb">print</span><span class="p">(</span><span class="s1">&#39;Done.&#39;</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+</div>
+</div>
+<div class="section" id="modelling">
+<h2>Modelling<a class="headerlink" href="#modelling" title="Permalink to this headline">¶</a></h2>
+<div class="section" id="forecast-settings">
+<h3>Forecast settings<a class="headerlink" href="#forecast-settings" title="Permalink to this headline">¶</a></h3>
+<p>Now let’s set the target model and forecast dates, start <code class="docutils literal notranslate"><span class="pre">forecast_start</span></code> (Jan 2020) and end <code class="docutils literal notranslate"><span class="pre">forecast_end</span></code> (Dec 2020). We also extract the number of forecast months from the IceNet’s custom dataloader.</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">model</span> <span class="o">=</span> <span class="s1">&#39;IceNet&#39;</span>
+
+<span class="n">forecast_start</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">Timestamp</span><span class="p">(</span><span class="s1">&#39;2020-01-01&#39;</span><span class="p">)</span>
+<span class="n">forecast_end</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">Timestamp</span><span class="p">(</span><span class="s1">&#39;2020-12-01&#39;</span><span class="p">)</span>
+
+<span class="n">n_forecast_months</span> <span class="o">=</span> <span class="n">dataloader</span><span class="o">.</span><span class="n">config</span><span class="p">[</span><span class="s1">&#39;n_forecast_months&#39;</span><span class="p">]</span>
+<span class="nb">print</span><span class="p">(</span><span class="s1">&#39;</span><span class="se">\n</span><span class="s1"># of forecast months: </span><span class="si">{}</span><span class="se">\n</span><span class="s1">&#39;</span><span class="o">.</span><span class="n">format</span><span class="p">(</span><span class="n">n_forecast_months</span><span class="p">))</span>
+</pre></div>
+</div>
+</div>
+</div>
+</div>
+<div class="section" id="set-up-forecast-folder">
+<h3>Set up forecast folder<a class="headerlink" href="#set-up-forecast-folder" title="Permalink to this headline">¶</a></h3>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">forecast_folder</span> <span class="o">=</span> <span class="n">os</span><span class="o">.</span><span class="n">path</span><span class="o">.</span><span class="n">join</span><span class="p">(</span><span class="n">config</span><span class="p">[</span><span class="s1">&#39;forecast_data_folder&#39;</span><span class="p">],</span> <span class="s1">&#39;icenet&#39;</span><span class="p">,</span> <span class="n">dataloader_ID</span><span class="p">,</span> <span class="n">model</span><span class="p">)</span>
+
+<span class="k">if</span> <span class="ow">not</span> <span class="n">os</span><span class="o">.</span><span class="n">path</span><span class="o">.</span><span class="n">exists</span><span class="p">(</span><span class="n">forecast_folder</span><span class="p">):</span>
+    <span class="n">os</span><span class="o">.</span><span class="n">makedirs</span><span class="p">(</span><span class="n">forecast_folder</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+</div>
+</div>
+<div class="section" id="load-ground-truth-sic">
+<h3>Load ground truth SIC<a class="headerlink" href="#load-ground-truth-sic" title="Permalink to this headline">¶</a></h3>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="nb">print</span><span class="p">(</span><span class="s1">&#39;Loading ground truth SIC... &#39;</span><span class="p">,</span> <span class="n">end</span><span class="o">=</span><span class="s1">&#39;&#39;</span><span class="p">,</span> <span class="n">flush</span><span class="o">=</span><span class="kc">True</span><span class="p">)</span>
+<span class="n">true_sic_fpath</span> <span class="o">=</span> <span class="n">os</span><span class="o">.</span><span class="n">path</span><span class="o">.</span><span class="n">join</span><span class="p">(</span><span class="n">config</span><span class="p">[</span><span class="s1">&#39;obs_data_folder&#39;</span><span class="p">],</span> <span class="s1">&#39;siconca_EASE.nc&#39;</span><span class="p">)</span>
+<span class="n">true_sic_da</span> <span class="o">=</span> <span class="n">xr</span><span class="o">.</span><span class="n">open_dataarray</span><span class="p">(</span><span class="n">true_sic_fpath</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="s1">&#39;Done.&#39;</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+</div>
+</div>
+<div class="section" id="set-up-forecast-dataarray-dictionary">
+<h3>Set up forecast DataArray dictionary<a class="headerlink" href="#set-up-forecast-dataarray-dictionary" title="Permalink to this headline">¶</a></h3>
+<p>Now we are setting up an empty <code class="docutils literal notranslate"><span class="pre">xarray</span> <span class="pre">DataArray</span></code> object that we will use to store IceNet’s forecasts. <code class="docutils literal notranslate"><span class="pre">DataArrays</span></code> let you conveniently handle, query and visualise spatio-temporal data, such as the forecast predictions generated by the IceNet system.</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># define list of lead times</span>
+<span class="n">leadtimes</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">arange</span><span class="p">(</span><span class="mi">1</span><span class="p">,</span> <span class="n">n_forecast_months</span><span class="o">+</span><span class="mi">1</span><span class="p">)</span>
+
+<span class="c1"># add ensemble to the list of models</span>
+<span class="n">ensemble_seeds_and_mean</span> <span class="o">=</span> <span class="n">ensemble_seeds</span><span class="o">.</span><span class="n">copy</span><span class="p">()</span>
+<span class="n">ensemble_seeds_and_mean</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="s1">&#39;ensemble&#39;</span><span class="p">)</span>
+
+<span class="n">all_target_dates</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">date_range</span><span class="p">(</span>
+    <span class="n">start</span><span class="o">=</span><span class="n">forecast_start</span><span class="p">,</span>
+    <span class="n">end</span><span class="o">=</span><span class="n">forecast_end</span><span class="p">,</span>
+    <span class="n">freq</span><span class="o">=</span><span class="s1">&#39;MS&#39;</span>
+<span class="p">)</span>
+
+<span class="n">all_start_dates</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">date_range</span><span class="p">(</span>
+    <span class="n">start</span><span class="o">=</span><span class="n">forecast_start</span> <span class="o">-</span> <span class="n">pd</span><span class="o">.</span><span class="n">DateOffset</span><span class="p">(</span><span class="n">months</span><span class="o">=</span><span class="n">n_forecast_months</span><span class="o">-</span><span class="mi">1</span><span class="p">),</span>
+    <span class="n">end</span><span class="o">=</span><span class="n">forecast_end</span><span class="p">,</span>
+    <span class="n">freq</span><span class="o">=</span><span class="s1">&#39;MS&#39;</span>
+<span class="p">)</span>
+
+<span class="n">shape</span> <span class="o">=</span> <span class="p">(</span><span class="nb">len</span><span class="p">(</span><span class="n">all_target_dates</span><span class="p">),</span>
+         <span class="o">*</span><span class="n">dataloader</span><span class="o">.</span><span class="n">config</span><span class="p">[</span><span class="s1">&#39;raw_data_shape&#39;</span><span class="p">],</span>
+         <span class="n">n_forecast_months</span><span class="p">)</span>
+
+<span class="n">coords</span> <span class="o">=</span> <span class="p">{</span>
+    <span class="s1">&#39;time&#39;</span><span class="p">:</span> <span class="n">all_target_dates</span><span class="p">,</span>  <span class="c1"># To be sliced to target dates</span>
+    <span class="s1">&#39;yc&#39;</span><span class="p">:</span> <span class="n">true_sic_da</span><span class="o">.</span><span class="n">coords</span><span class="p">[</span><span class="s1">&#39;yc&#39;</span><span class="p">],</span>
+    <span class="s1">&#39;xc&#39;</span><span class="p">:</span> <span class="n">true_sic_da</span><span class="o">.</span><span class="n">coords</span><span class="p">[</span><span class="s1">&#39;xc&#39;</span><span class="p">],</span>
+    <span class="s1">&#39;lon&#39;</span><span class="p">:</span> <span class="n">true_sic_da</span><span class="o">.</span><span class="n">isel</span><span class="p">(</span><span class="n">time</span><span class="o">=</span><span class="mi">0</span><span class="p">)</span><span class="o">.</span><span class="n">coords</span><span class="p">[</span><span class="s1">&#39;lon&#39;</span><span class="p">],</span>
+    <span class="s1">&#39;lat&#39;</span><span class="p">:</span> <span class="n">true_sic_da</span><span class="o">.</span><span class="n">isel</span><span class="p">(</span><span class="n">time</span><span class="o">=</span><span class="mi">0</span><span class="p">)</span><span class="o">.</span><span class="n">coords</span><span class="p">[</span><span class="s1">&#39;lat&#39;</span><span class="p">],</span>
+    <span class="s1">&#39;leadtime&#39;</span><span class="p">:</span> <span class="n">leadtimes</span><span class="p">,</span>
+    <span class="s1">&#39;seed&#39;</span><span class="p">:</span> <span class="n">ensemble_seeds_and_mean</span><span class="p">,</span>
+    <span class="s1">&#39;ice_class&#39;</span><span class="p">:</span> <span class="p">[</span><span class="s1">&#39;no_ice&#39;</span><span class="p">,</span> <span class="s1">&#39;marginal_ice&#39;</span><span class="p">,</span> <span class="s1">&#39;full_ice&#39;</span><span class="p">]</span>
+<span class="p">}</span>
+
+<span class="c1"># Probabilistic SIC class forecasts</span>
+<span class="n">dims</span> <span class="o">=</span> <span class="p">(</span><span class="s1">&#39;seed&#39;</span><span class="p">,</span> <span class="s1">&#39;time&#39;</span><span class="p">,</span> <span class="s1">&#39;yc&#39;</span><span class="p">,</span> <span class="s1">&#39;xc&#39;</span><span class="p">,</span> <span class="s1">&#39;leadtime&#39;</span><span class="p">,</span> <span class="s1">&#39;ice_class&#39;</span><span class="p">)</span>
+<span class="n">shape</span> <span class="o">=</span> <span class="p">(</span><span class="nb">len</span><span class="p">(</span><span class="n">ensemble_seeds_and_mean</span><span class="p">),</span> <span class="o">*</span><span class="n">shape</span><span class="p">,</span> <span class="mi">3</span><span class="p">)</span>
+
+<span class="n">model_forecast</span> <span class="o">=</span> <span class="n">xr</span><span class="o">.</span><span class="n">DataArray</span><span class="p">(</span>
+    <span class="n">data</span><span class="o">=</span><span class="n">np</span><span class="o">.</span><span class="n">zeros</span><span class="p">(</span><span class="n">shape</span><span class="p">,</span> <span class="n">dtype</span><span class="o">=</span><span class="n">np</span><span class="o">.</span><span class="n">float32</span><span class="p">),</span>
+    <span class="n">coords</span><span class="o">=</span><span class="n">coords</span><span class="p">,</span>
+    <span class="n">dims</span><span class="o">=</span><span class="n">dims</span>
+<span class="p">)</span>
+</pre></div>
+</div>
+</div>
+</div>
+</div>
+<div class="section" id="build-up-forecasts">
+<h3>Build up forecasts<a class="headerlink" href="#build-up-forecasts" title="Permalink to this headline">¶</a></h3>
+<p>In this step, we generate IceNet’s forecast for the target period and write it into the empty <code class="docutils literal notranslate"><span class="pre">DataArrays</span></code> object. IceNet’s outputs are forecasts of three sea ice concentration (SIC) classes: open-water (SIC ≤ 15%), marginal ice (15% &lt; SIC &lt; 80%) and full ice (SIC ≥ 80%) for the following 6 months in the form of discrete probability distributions at each grid cell.</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="k">for</span> <span class="n">start_date</span> <span class="ow">in</span> <span class="n">tqdm</span><span class="p">(</span><span class="n">all_start_dates</span><span class="p">):</span>
+
+    <span class="c1"># Target forecast dates for the forecast beginning at this `start_date`</span>
+    <span class="n">target_dates</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">date_range</span><span class="p">(</span>
+        <span class="n">start</span><span class="o">=</span><span class="n">start_date</span><span class="p">,</span>
+        <span class="n">end</span><span class="o">=</span><span class="n">start_date</span> <span class="o">+</span> <span class="n">pd</span><span class="o">.</span><span class="n">DateOffset</span><span class="p">(</span><span class="n">months</span><span class="o">=</span><span class="n">n_forecast_months</span><span class="o">-</span><span class="mi">1</span><span class="p">),</span>
+        <span class="n">freq</span><span class="o">=</span><span class="s1">&#39;MS&#39;</span>
+    <span class="p">)</span>
+
+    <span class="n">X</span><span class="p">,</span> <span class="n">y</span><span class="p">,</span> <span class="n">sample_weights</span> <span class="o">=</span> <span class="n">dataloader</span><span class="o">.</span><span class="n">data_generation</span><span class="p">([</span><span class="n">start_date</span><span class="p">])</span>
+    <span class="n">mask</span> <span class="o">=</span> <span class="n">sample_weights</span> <span class="o">&gt;</span> <span class="mi">0</span>
+    <span class="n">pred</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">array</span><span class="p">([</span><span class="n">network</span><span class="o">.</span><span class="n">predict</span><span class="p">(</span><span class="n">X</span><span class="p">)[</span><span class="mi">0</span><span class="p">]</span> <span class="k">for</span> <span class="n">network</span> <span class="ow">in</span> <span class="n">networks</span><span class="p">])</span>
+    <span class="n">pred</span> <span class="o">*=</span> <span class="n">mask</span>  <span class="c1"># mask outside active grid cell region to zero</span>
+    <span class="c1"># concat ensemble mean to the set of network predictions</span>
+    <span class="n">ensemble_mean_pred</span> <span class="o">=</span> <span class="n">pred</span><span class="o">.</span><span class="n">mean</span><span class="p">(</span><span class="n">axis</span><span class="o">=</span><span class="mi">0</span><span class="p">,</span> <span class="n">keepdims</span><span class="o">=</span><span class="kc">True</span><span class="p">)</span>
+    <span class="n">pred</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">concatenate</span><span class="p">([</span><span class="n">pred</span><span class="p">,</span> <span class="n">ensemble_mean_pred</span><span class="p">],</span> <span class="n">axis</span><span class="o">=</span><span class="mi">0</span><span class="p">)</span>
+
+    <span class="k">for</span> <span class="n">i</span><span class="p">,</span> <span class="p">(</span><span class="n">target_date</span><span class="p">,</span> <span class="n">leadtime</span><span class="p">)</span> <span class="ow">in</span> <span class="nb">enumerate</span><span class="p">(</span><span class="nb">zip</span><span class="p">(</span><span class="n">target_dates</span><span class="p">,</span> <span class="n">leadtimes</span><span class="p">)):</span>
+        <span class="k">if</span> <span class="n">target_date</span> <span class="ow">in</span> <span class="n">all_target_dates</span><span class="p">:</span>
+                <span class="n">model_forecast</span><span class="o">.</span>\
+                    <span class="n">loc</span><span class="p">[:,</span> <span class="n">target_date</span><span class="p">,</span> <span class="p">:,</span> <span class="p">:,</span> <span class="n">leadtime</span><span class="p">]</span> <span class="o">=</span> <span class="n">pred</span><span class="p">[</span><span class="o">...</span><span class="p">,</span> <span class="n">i</span><span class="p">]</span>
+                
+<span class="nb">print</span><span class="p">(</span><span class="s1">&#39;Saving forecast NetCDF for </span><span class="si">{}</span><span class="s1">... &#39;</span><span class="o">.</span><span class="n">format</span><span class="p">(</span><span class="n">model</span><span class="p">),</span> <span class="n">end</span><span class="o">=</span><span class="s1">&#39;&#39;</span><span class="p">,</span> <span class="n">flush</span><span class="o">=</span><span class="kc">True</span><span class="p">)</span>
+
+<span class="n">forecast_fpath</span> <span class="o">=</span> <span class="n">os</span><span class="o">.</span><span class="n">path</span><span class="o">.</span><span class="n">join</span><span class="p">(</span><span class="n">forecast_folder</span><span class="p">,</span> <span class="sa">f</span><span class="s1">&#39;</span><span class="si">{</span><span class="n">model</span><span class="o">.</span><span class="n">lower</span><span class="p">()</span><span class="si">}</span><span class="s1">_forecasts.nc&#39;</span><span class="o">.</span><span class="n">format</span><span class="p">(</span><span class="n">model</span><span class="o">.</span><span class="n">lower</span><span class="p">()))</span>
+<span class="n">model_forecast</span><span class="o">.</span><span class="n">to_netcdf</span><span class="p">(</span><span class="n">forecast_fpath</span><span class="p">)</span> <span class="c1">#export file as Net</span>
+
+<span class="nb">print</span><span class="p">(</span><span class="s1">&#39;Done.&#39;</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+</div>
+</div>
+</div>
+<div class="section" id="results">
+<h2>Results<a class="headerlink" href="#results" title="Permalink to this headline">¶</a></h2>
+<div class="section" id="settings">
+<h3>Settings<a class="headerlink" href="#settings" title="Permalink to this headline">¶</a></h3>
+<p>The IceNet codebase allows computing operations in the memory or with <code class="docutils literal notranslate"><span class="pre">dask</span></code>. The computation in dask is optimal for predicting longer target periods (see further info in <a class="reference external" href="https://github.com/tom-andersson/icenet-paper/blob/27ca44694eaa3cb5f02fd824c618c46a6701a301/icenet/analyse_heldout_predictions.py#L23">icenet/analyse_heldout_predictions.py</a>). The following lines show how to compute in the memory.</p>
+</div>
+<div class="section" id="setup">
+<h3>Setup<a class="headerlink" href="#setup" title="Permalink to this headline">¶</a></h3>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">metric_compute_list</span> <span class="o">=</span> <span class="p">[</span><span class="s1">&#39;Binary accuracy&#39;</span><span class="p">,</span> <span class="s1">&#39;SIE error&#39;</span><span class="p">]</span>
+
+<span class="n">forecast_fpath</span> <span class="o">=</span> <span class="n">os</span><span class="o">.</span><span class="n">path</span><span class="o">.</span><span class="n">join</span><span class="p">(</span><span class="n">forecast_folder</span><span class="p">,</span> <span class="sa">f</span><span class="s1">&#39;</span><span class="si">{</span><span class="n">model</span><span class="o">.</span><span class="n">lower</span><span class="p">()</span><span class="si">}</span><span class="s1">_forecasts.nc&#39;</span><span class="o">.</span><span class="n">format</span><span class="p">(</span><span class="n">model</span><span class="o">.</span><span class="n">lower</span><span class="p">()))</span>
+
+<span class="n">chunks</span> <span class="o">=</span> <span class="p">{</span><span class="s1">&#39;seed&#39;</span><span class="p">:</span> <span class="mi">1</span><span class="p">}</span>
+<span class="n">icenet_forecast_da</span> <span class="o">=</span> <span class="n">xr</span><span class="o">.</span><span class="n">open_dataarray</span><span class="p">(</span><span class="n">forecast_fpath</span><span class="p">,</span> <span class="n">chunks</span><span class="o">=</span><span class="n">chunks</span><span class="p">)</span>
+<span class="n">icenet_seeds</span> <span class="o">=</span> <span class="n">icenet_forecast_da</span><span class="o">.</span><span class="n">seed</span><span class="o">.</span><span class="n">values</span>
+</pre></div>
+</div>
+</div>
+</div>
+</div>
+<div class="section" id="monthly-masks-active-grid-cell-regions-to-compute-metrics-over">
+<h3>Monthly masks (active grid cell regions to compute metrics over)<a class="headerlink" href="#monthly-masks-active-grid-cell-regions-to-compute-metrics-over" title="Permalink to this headline">¶</a></h3>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">mask_fpath_format</span> <span class="o">=</span> <span class="n">os</span><span class="o">.</span><span class="n">path</span><span class="o">.</span><span class="n">join</span><span class="p">(</span><span class="n">config</span><span class="p">[</span><span class="s1">&#39;mask_data_folder&#39;</span><span class="p">],</span> <span class="s1">&#39;active_grid_cell_mask_</span><span class="si">{}</span><span class="s1">.npy&#39;</span><span class="p">)</span>
+
+<span class="n">month_mask_da</span> <span class="o">=</span> <span class="n">xr</span><span class="o">.</span><span class="n">DataArray</span><span class="p">(</span><span class="n">np</span><span class="o">.</span><span class="n">array</span><span class="p">(</span>
+    <span class="p">[</span><span class="n">np</span><span class="o">.</span><span class="n">load</span><span class="p">(</span><span class="n">mask_fpath_format</span><span class="o">.</span><span class="n">format</span><span class="p">(</span><span class="s1">&#39;</span><span class="si">{:02d}</span><span class="s1">&#39;</span><span class="o">.</span><span class="n">format</span><span class="p">(</span><span class="n">month</span><span class="p">)))</span> <span class="k">for</span>
+     <span class="n">month</span> <span class="ow">in</span> <span class="n">np</span><span class="o">.</span><span class="n">arange</span><span class="p">(</span><span class="mi">1</span><span class="p">,</span> <span class="mi">12</span><span class="o">+</span><span class="mi">1</span><span class="p">)],</span>
+<span class="p">))</span>
+</pre></div>
+</div>
+</div>
+</div>
+</div>
+<div class="section" id="download-previous-results">
+<h3>Download previous results<a class="headerlink" href="#download-previous-results" title="Permalink to this headline">¶</a></h3>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">url</span> <span class="o">=</span> <span class="s1">&#39;https://ramadda.data.bas.ac.uk/repository/entry/get/&#39;</span>
+<span class="n">fn</span> <span class="o">=</span> <span class="s1">&#39;2021_07_01_183913_forecast_results.csv&#39;</span>
+<span class="n">fn_suffix</span> <span class="o">=</span> <span class="s1">&#39;?entryid=synth%3A71820e7d-c628-4e32-969f-464b7efb187c%3AL3Jlc3VsdHMvZm9yZWNhc3RfcmVzdWx0cy8yMDIxXzA3XzAxXzE4MzkxM19mb3JlY2FzdF9yZXN1bHRzLmNzdg%3D%3D&#39;</span>
+
+<span class="k">if</span> <span class="ow">not</span> <span class="n">os</span><span class="o">.</span><span class="n">path</span><span class="o">.</span><span class="n">isfile</span><span class="p">(</span><span class="n">os</span><span class="o">.</span><span class="n">path</span><span class="o">.</span><span class="n">join</span><span class="p">(</span><span class="n">config</span><span class="p">[</span><span class="s1">&#39;forecast_results_folder&#39;</span><span class="p">],</span><span class="n">fn</span><span class="p">)):</span>
+    <span class="n">urllib</span><span class="o">.</span><span class="n">request</span><span class="o">.</span><span class="n">urlretrieve</span><span class="p">(</span><span class="n">url</span> <span class="o">+</span> <span class="n">fn</span> <span class="o">+</span> <span class="n">fn_suffix</span><span class="p">,</span> <span class="n">os</span><span class="o">.</span><span class="n">path</span><span class="o">.</span><span class="n">join</span><span class="p">(</span><span class="n">config</span><span class="p">[</span><span class="s1">&#39;forecast_results_folder&#39;</span><span class="p">],</span><span class="n">fn</span><span class="p">))</span>
+</pre></div>
+</div>
+</div>
+</div>
+</div>
+<div class="section" id="initialise-results-dataframe">
+<h3>Initialise results dataframe<a class="headerlink" href="#initialise-results-dataframe" title="Permalink to this headline">¶</a></h3>
+<p>Now we write forecast results over a old results file generated for IceNet’s nature communications paper. The old results file contains the performance of all 25 ensemble models,  ECMWF SEAS5 physics-based sea ice probability forecast and linear trend benchmark. For the purposes of this demonstrator, we remove the IceNet’s ensemble records to replace with the performance of 3 assessed ensemble models.</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">now</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">Timestamp</span><span class="o">.</span><span class="n">now</span><span class="p">()</span>
+<span class="n">new_results_df_fname</span> <span class="o">=</span> <span class="n">now</span><span class="o">.</span><span class="n">strftime</span><span class="p">(</span><span class="s1">&#39;%Y_%m_</span><span class="si">%d</span><span class="s1">_%H%M%S_forecast_results.csv&#39;</span><span class="p">)</span>
+<span class="n">new_results_df_fpath</span> <span class="o">=</span> <span class="n">os</span><span class="o">.</span><span class="n">path</span><span class="o">.</span><span class="n">join</span><span class="p">(</span><span class="n">config</span><span class="p">[</span><span class="s1">&#39;forecast_results_folder&#39;</span><span class="p">],</span> <span class="n">new_results_df_fname</span><span class="p">)</span>
+
+<span class="nb">print</span><span class="p">(</span><span class="s1">&#39;New results will be saved to </span><span class="si">{}</span><span class="se">\n\n</span><span class="s1">&#39;</span><span class="o">.</span><span class="n">format</span><span class="p">(</span><span class="n">new_results_df_fpath</span><span class="p">))</span>
+
+<span class="n">results_df_fnames</span> <span class="o">=</span> <span class="nb">sorted</span><span class="p">([</span><span class="n">f</span> <span class="k">for</span> <span class="n">f</span> <span class="ow">in</span> <span class="n">os</span><span class="o">.</span><span class="n">listdir</span><span class="p">(</span><span class="n">config</span><span class="p">[</span><span class="s1">&#39;forecast_results_folder&#39;</span><span class="p">])</span> <span class="k">if</span> <span class="n">re</span><span class="o">.</span><span class="n">compile</span><span class="p">(</span><span class="s1">&#39;.*.csv&#39;</span><span class="p">)</span><span class="o">.</span><span class="n">match</span><span class="p">(</span><span class="n">f</span><span class="p">)])</span>
+<span class="k">if</span> <span class="nb">len</span><span class="p">(</span><span class="n">results_df_fnames</span><span class="p">)</span> <span class="o">&gt;=</span> <span class="mi">1</span><span class="p">:</span>
+    <span class="n">old_results_df_fname</span> <span class="o">=</span> <span class="n">results_df_fnames</span><span class="p">[</span><span class="o">-</span><span class="mi">1</span><span class="p">]</span>
+    <span class="n">old_results_df_fpath</span> <span class="o">=</span> <span class="n">os</span><span class="o">.</span><span class="n">path</span><span class="o">.</span><span class="n">join</span><span class="p">(</span><span class="n">config</span><span class="p">[</span><span class="s1">&#39;forecast_results_folder&#39;</span><span class="p">],</span> <span class="n">old_results_df_fname</span><span class="p">)</span>
+    <span class="nb">print</span><span class="p">(</span><span class="s1">&#39;</span><span class="se">\n\n</span><span class="s1">Loading previous results dataset from </span><span class="si">{}</span><span class="s1">&#39;</span><span class="o">.</span><span class="n">format</span><span class="p">(</span><span class="n">old_results_df_fpath</span><span class="p">))</span>
+
+<span class="c1"># Load previous results, do not interpret &#39;NA&#39; as NaN</span>
+<span class="n">results_df</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">read_csv</span><span class="p">(</span><span class="n">old_results_df_fpath</span><span class="p">,</span> <span class="n">keep_default_na</span><span class="o">=</span><span class="kc">False</span><span class="p">,</span> <span class="n">comment</span><span class="o">=</span><span class="s1">&#39;#&#39;</span><span class="p">)</span>
+
+<span class="c1"># Remove existing IceNet results</span>
+<span class="n">results_df</span> <span class="o">=</span> <span class="n">results_df</span><span class="p">[</span><span class="o">~</span><span class="n">results_df</span><span class="p">[</span><span class="s1">&#39;Model&#39;</span><span class="p">]</span><span class="o">.</span><span class="n">str</span><span class="o">.</span><span class="n">startswith</span><span class="p">(</span><span class="s1">&#39;IceNet&#39;</span><span class="p">)]</span>
+
+<span class="c1"># Drop spurious index column if present</span>
+<span class="n">results_df</span> <span class="o">=</span> <span class="n">results_df</span><span class="o">.</span><span class="n">drop</span><span class="p">(</span><span class="s1">&#39;Unnamed: 0&#39;</span><span class="p">,</span> <span class="n">axis</span><span class="o">=</span><span class="mi">1</span><span class="p">,</span> <span class="n">errors</span><span class="o">=</span><span class="s1">&#39;ignore&#39;</span><span class="p">)</span>
+<span class="n">results_df</span><span class="p">[</span><span class="s1">&#39;Forecast date&#39;</span><span class="p">]</span> <span class="o">=</span> <span class="p">[</span><span class="n">pd</span><span class="o">.</span><span class="n">Timestamp</span><span class="p">(</span><span class="n">date</span><span class="p">)</span> <span class="k">for</span> <span class="n">date</span> <span class="ow">in</span> <span class="n">results_df</span><span class="p">[</span><span class="s1">&#39;Forecast date&#39;</span><span class="p">]]</span>
+
+<span class="n">results_df</span> <span class="o">=</span> <span class="n">results_df</span><span class="o">.</span><span class="n">set_index</span><span class="p">([</span><span class="s1">&#39;Model&#39;</span><span class="p">,</span> <span class="s1">&#39;Ensemble member&#39;</span><span class="p">,</span> <span class="s1">&#39;Leadtime&#39;</span><span class="p">,</span> <span class="s1">&#39;Forecast date&#39;</span><span class="p">])</span>
+
+<span class="c1"># Add new models to the dataframe</span>
+<span class="n">multi_index</span> <span class="o">=</span> <span class="n">create_results_dataset_index</span><span class="p">([</span><span class="n">model</span><span class="p">],</span> <span class="n">leadtimes</span><span class="p">,</span> <span class="n">all_target_dates</span><span class="p">,</span> <span class="n">model</span><span class="p">,</span> <span class="n">icenet_seeds</span><span class="p">)</span>
+<span class="n">results_df</span> <span class="o">=</span> <span class="n">results_df</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="n">pd</span><span class="o">.</span><span class="n">DataFrame</span><span class="p">(</span><span class="n">index</span><span class="o">=</span><span class="n">multi_index</span><span class="p">))</span><span class="o">.</span><span class="n">sort_index</span><span class="p">()</span>
+</pre></div>
+</div>
+</div>
+</div>
+</div>
+<div class="section" id="compute-icenet-sic">
+<h3>Compute IceNet SIC<a class="headerlink" href="#compute-icenet-sic" title="Permalink to this headline">¶</a></h3>
+<p>We obtain the sea ice probability (SIC&gt;15%) for each ensemble member and ensemble mean by summing IceNet’s marginal ice (15%&lt;SIC&lt;80%) and full ice class (SIC&gt;80%) probabilities.</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">icenet_sip_da</span> <span class="o">=</span> <span class="n">icenet_forecast_da</span><span class="o">.</span><span class="n">sel</span><span class="p">(</span><span class="n">ice_class</span><span class="o">=</span><span class="p">[</span><span class="s1">&#39;marginal_ice&#39;</span><span class="p">,</span> <span class="s1">&#39;full_ice&#39;</span><span class="p">])</span><span class="o">.</span><span class="n">sum</span><span class="p">(</span><span class="s1">&#39;ice_class&#39;</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+</div>
+</div>
+<div class="section" id="ground-truth-sic">
+<h3>Ground truth SIC<a class="headerlink" href="#ground-truth-sic" title="Permalink to this headline">¶</a></h3>
+<p>Let’s also load ground truth SIC which was already preprocessed and generated from .</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">true_sic_fpath</span> <span class="o">=</span> <span class="n">os</span><span class="o">.</span><span class="n">path</span><span class="o">.</span><span class="n">join</span><span class="p">(</span><span class="n">config</span><span class="p">[</span><span class="s1">&#39;obs_data_folder&#39;</span><span class="p">],</span> <span class="s1">&#39;siconca_EASE.nc&#39;</span><span class="p">)</span>
+<span class="n">true_sic_da</span> <span class="o">=</span> <span class="n">xr</span><span class="o">.</span><span class="n">open_dataarray</span><span class="p">(</span><span class="n">true_sic_fpath</span><span class="p">,</span> <span class="n">chunks</span><span class="o">=</span><span class="p">{})</span>
+<span class="n">true_sic_da</span> <span class="o">=</span> <span class="n">true_sic_da</span><span class="o">.</span><span class="n">load</span><span class="p">()</span>
+<span class="n">true_sic_da</span> <span class="o">=</span> <span class="n">true_sic_da</span><span class="o">.</span><span class="n">sel</span><span class="p">(</span><span class="n">time</span><span class="o">=</span><span class="n">all_target_dates</span><span class="p">)</span>
+
+<span class="k">if</span> <span class="s1">&#39;Binary accuracy&#39;</span> <span class="ow">in</span> <span class="n">metric_compute_list</span><span class="p">:</span>
+    <span class="n">binary_true_da</span> <span class="o">=</span> <span class="n">true_sic_da</span> <span class="o">&gt;</span> <span class="mf">0.15</span>
+</pre></div>
+</div>
+</div>
+</div>
+</div>
+<div class="section" id="monthwise-masks">
+<h3>Monthwise masks<a class="headerlink" href="#monthwise-masks" title="Permalink to this headline">¶</a></h3>
+<p>As we are showing in the next section, the monthly masks, stacked into a <code class="docutils literal notranslate"><span class="pre">DataArrays</span></code> object, are relevant to compute metrics only in the active grid cell region.</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">months</span> <span class="o">=</span> <span class="p">[</span><span class="n">pd</span><span class="o">.</span><span class="n">Timestamp</span><span class="p">(</span><span class="n">date</span><span class="p">)</span><span class="o">.</span><span class="n">month</span> <span class="o">-</span> <span class="mi">1</span> <span class="k">for</span> <span class="n">date</span> <span class="ow">in</span> <span class="n">all_target_dates</span><span class="p">]</span>
+<span class="n">mask_da</span> <span class="o">=</span> <span class="n">xr</span><span class="o">.</span><span class="n">DataArray</span><span class="p">(</span>
+    <span class="p">[</span><span class="n">month_mask_da</span><span class="p">[</span><span class="n">month</span><span class="p">]</span> <span class="k">for</span> <span class="n">month</span> <span class="ow">in</span> <span class="n">months</span><span class="p">],</span>
+    <span class="n">dims</span><span class="o">=</span><span class="p">(</span><span class="s1">&#39;time&#39;</span><span class="p">,</span> <span class="s1">&#39;yc&#39;</span><span class="p">,</span> <span class="s1">&#39;xc&#39;</span><span class="p">),</span>
+    <span class="n">coords</span><span class="o">=</span><span class="p">{</span>
+        <span class="s1">&#39;time&#39;</span><span class="p">:</span> <span class="n">true_sic_da</span><span class="o">.</span><span class="n">time</span><span class="o">.</span><span class="n">values</span><span class="p">,</span>
+        <span class="s1">&#39;yc&#39;</span><span class="p">:</span> <span class="n">true_sic_da</span><span class="o">.</span><span class="n">yc</span><span class="o">.</span><span class="n">values</span><span class="p">,</span>
+        <span class="s1">&#39;xc&#39;</span><span class="p">:</span> <span class="n">true_sic_da</span><span class="o">.</span><span class="n">xc</span><span class="o">.</span><span class="n">values</span><span class="p">,</span>
+    <span class="p">}</span>
+<span class="p">)</span>
+</pre></div>
+</div>
+</div>
+</div>
+</div>
+<div class="section" id="compute-performance-metrics">
+<h3>Compute performance metrics<a class="headerlink" href="#compute-performance-metrics" title="Permalink to this headline">¶</a></h3>
+<p>To analyse the forecast performance, IceNet’s researchers compute two metrics, <code class="docutils literal notranslate"><span class="pre">Binary</span> <span class="pre">accuracy</span></code> and <code class="docutils literal notranslate"><span class="pre">Sea</span> <span class="pre">Ice</span> <span class="pre">Extent</span> <span class="pre">(SIE)</span> <span class="pre">error</span></code>. The former is generated over an active grid cell region for a given calendar month and can be seen as a normalised version of the integrated ice edge error (IIEE) (see further information of the meaning in Methods in the IceNet’s <a class="reference external" href="https://www.nature.com/articles/s41467-021-25257-4"><em>Nature communications</em></a> paper. The latter, SIE error, is the difference between the overpredicted area and the underpredicted area. Both metrics are complementary, being the binary accuracy more robust for assessing IceNet’s relative seasonal forecast skill for September.</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="nb">print</span><span class="p">(</span><span class="s1">&#39;Analysing forecasts: </span><span class="se">\n\n</span><span class="s1">&#39;</span><span class="p">)</span>
+
+<span class="nb">print</span><span class="p">(</span><span class="s1">&#39;Computing metrics:&#39;</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">metric_compute_list</span><span class="p">)</span>
+
+<span class="n">binary_forecast_da</span> <span class="o">=</span> <span class="n">icenet_sip_da</span> <span class="o">&gt;</span> <span class="mf">0.5</span>
+
+<span class="n">compute_ds</span> <span class="o">=</span> <span class="n">xr</span><span class="o">.</span><span class="n">Dataset</span><span class="p">()</span>
+<span class="k">for</span> <span class="n">metric</span> <span class="ow">in</span> <span class="n">metric_compute_list</span><span class="p">:</span>
+
+    <span class="k">if</span> <span class="n">metric</span> <span class="o">==</span> <span class="s1">&#39;Binary accuracy&#39;</span><span class="p">:</span>
+        <span class="n">binary_correct_da</span> <span class="o">=</span> <span class="p">(</span><span class="n">binary_forecast_da</span> <span class="o">==</span> <span class="n">binary_true_da</span><span class="p">)</span><span class="o">.</span><span class="n">astype</span><span class="p">(</span><span class="n">np</span><span class="o">.</span><span class="n">float32</span><span class="p">)</span>
+        <span class="n">binary_correct_weighted_da</span> <span class="o">=</span> <span class="n">binary_correct_da</span><span class="o">.</span><span class="n">weighted</span><span class="p">(</span><span class="n">mask_da</span><span class="p">)</span>
+
+        <span class="c1"># Mean percentage of correct classifications over the active</span>
+        <span class="c1">#   grid cell area</span>
+        <span class="n">ds_binacc</span> <span class="o">=</span> <span class="p">(</span><span class="n">binary_correct_weighted_da</span><span class="o">.</span><span class="n">mean</span><span class="p">(</span><span class="n">dim</span><span class="o">=</span><span class="p">[</span><span class="s1">&#39;yc&#39;</span><span class="p">,</span> <span class="s1">&#39;xc&#39;</span><span class="p">])</span> <span class="o">*</span> <span class="mi">100</span><span class="p">)</span>
+        <span class="n">compute_ds</span><span class="p">[</span><span class="n">metric</span><span class="p">]</span> <span class="o">=</span> <span class="n">ds_binacc</span>
+
+    <span class="k">elif</span> <span class="n">metric</span> <span class="o">==</span> <span class="s1">&#39;SIE error&#39;</span><span class="p">:</span>
+        <span class="n">binary_forecast_weighted_da</span> <span class="o">=</span> <span class="n">binary_forecast_da</span><span class="o">.</span><span class="n">astype</span><span class="p">(</span><span class="nb">int</span><span class="p">)</span><span class="o">.</span><span class="n">weighted</span><span class="p">(</span><span class="n">mask_da</span><span class="p">)</span>
+        <span class="n">binary_true_weighted_da</span> <span class="o">=</span> <span class="n">binary_true_da</span><span class="o">.</span><span class="n">astype</span><span class="p">(</span><span class="nb">int</span><span class="p">)</span><span class="o">.</span><span class="n">weighted</span><span class="p">(</span><span class="n">mask_da</span><span class="p">)</span>
+
+        <span class="n">ds_sie_error</span> <span class="o">=</span> <span class="p">(</span>
+            <span class="n">binary_forecast_weighted_da</span><span class="o">.</span><span class="n">sum</span><span class="p">([</span><span class="s1">&#39;xc&#39;</span><span class="p">,</span> <span class="s1">&#39;yc&#39;</span><span class="p">])</span> <span class="o">-</span>
+            <span class="n">binary_true_weighted_da</span><span class="o">.</span><span class="n">sum</span><span class="p">([</span><span class="s1">&#39;xc&#39;</span><span class="p">,</span> <span class="s1">&#39;yc&#39;</span><span class="p">])</span>
+        <span class="p">)</span> <span class="o">*</span> <span class="mi">25</span><span class="o">**</span><span class="mi">2</span>
+
+        <span class="n">compute_ds</span><span class="p">[</span><span class="n">metric</span><span class="p">]</span> <span class="o">=</span> <span class="n">ds_sie_error</span>
+
+<span class="nb">print</span><span class="p">(</span><span class="s1">&#39;Writing to results dataset...&#39;</span><span class="p">)</span>
+<span class="k">for</span> <span class="n">compute_da</span> <span class="ow">in</span> <span class="nb">iter</span><span class="p">(</span><span class="n">compute_ds</span><span class="o">.</span><span class="n">data_vars</span><span class="o">.</span><span class="n">values</span><span class="p">()):</span>
+    <span class="n">metric</span> <span class="o">=</span> <span class="n">compute_da</span><span class="o">.</span><span class="n">name</span>
+
+    <span class="n">compute_df_index</span> <span class="o">=</span> <span class="n">results_df</span><span class="o">.</span><span class="n">loc</span><span class="p">[</span>
+        <span class="n">pd</span><span class="o">.</span><span class="n">IndexSlice</span><span class="p">[</span><span class="n">model</span><span class="p">,</span> <span class="p">:,</span> <span class="n">leadtimes</span><span class="p">,</span> <span class="n">all_target_dates</span><span class="p">],</span> <span class="n">metric</span><span class="p">]</span><span class="o">.</span>\
+        <span class="n">droplevel</span><span class="p">(</span><span class="mi">0</span><span class="p">)</span><span class="o">.</span><span class="n">index</span>
+
+    <span class="c1"># Ensure indexes are aligned for assigning to results_df</span>
+    <span class="n">compute_df</span> <span class="o">=</span> <span class="n">compute_da</span><span class="o">.</span><span class="n">to_dataframe</span><span class="p">()</span><span class="o">.</span><span class="n">reset_index</span><span class="p">()</span><span class="o">.</span>\
+        <span class="n">set_index</span><span class="p">([</span><span class="s1">&#39;seed&#39;</span><span class="p">,</span> <span class="s1">&#39;leadtime&#39;</span><span class="p">,</span> <span class="s1">&#39;time&#39;</span><span class="p">])</span><span class="o">.</span>\
+        <span class="n">reindex</span><span class="p">(</span><span class="n">index</span><span class="o">=</span><span class="n">compute_df_index</span><span class="p">)</span>
+
+    <span class="n">results_df</span><span class="o">.</span><span class="n">loc</span><span class="p">[</span><span class="n">pd</span><span class="o">.</span><span class="n">IndexSlice</span><span class="p">[</span><span class="n">model</span><span class="p">,</span> <span class="p">:,</span> <span class="n">leadtimes</span><span class="p">,</span> <span class="n">all_target_dates</span><span class="p">],</span> <span class="n">metric</span><span class="p">]</span> <span class="o">=</span> \
+        <span class="n">compute_df</span><span class="o">.</span><span class="n">values</span>
+
+<span class="nb">print</span><span class="p">(</span><span class="s1">&#39;</span><span class="se">\n</span><span class="s1">Checkpointing results dataset... &#39;</span><span class="p">,</span> <span class="n">end</span><span class="o">=</span><span class="s1">&#39;&#39;</span><span class="p">,</span> <span class="n">flush</span><span class="o">=</span><span class="kc">True</span><span class="p">)</span>
+<span class="n">results_df</span><span class="o">.</span><span class="n">to_csv</span><span class="p">(</span><span class="n">new_results_df_fpath</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="s1">&#39;Done.&#39;</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+</div>
+</div>
+</div>
+<div class="section" id="analysis">
+<h2>Analysis<a class="headerlink" href="#analysis" title="Permalink to this headline">¶</a></h2>
+<p>In this section, we explore the forecast results and provide some interpretation. Note we use a small sample of the data so the results are only for demonstration purposes.</p>
+<div class="section" id="plot-settings">
+<h3>Plot settings<a class="headerlink" href="#plot-settings" title="Permalink to this headline">¶</a></h3>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">settings_lineplots</span> <span class="o">=</span> <span class="nb">dict</span><span class="p">(</span><span class="n">padding</span><span class="o">=</span><span class="mf">0.1</span><span class="p">,</span> <span class="n">height</span><span class="o">=</span><span class="mi">400</span><span class="p">,</span> <span class="n">width</span><span class="o">=</span><span class="mi">700</span><span class="p">,</span> <span class="n">fontsize</span><span class="o">=</span><span class="p">{</span><span class="s1">&#39;title&#39;</span><span class="p">:</span> <span class="s1">&#39;120%&#39;</span><span class="p">,</span><span class="s1">&#39;labels&#39;</span><span class="p">:</span> <span class="s1">&#39;120%&#39;</span><span class="p">,</span> <span class="s1">&#39;ticks&#39;</span><span class="p">:</span> <span class="s1">&#39;100%&#39;</span><span class="p">})</span>
+</pre></div>
+</div>
+</div>
+</div>
+</div>
+<div class="section" id="preprocess-results-dataset">
+<h3>Preprocess results dataset<a class="headerlink" href="#preprocess-results-dataset" title="Permalink to this headline">¶</a></h3>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># Reset index to preprocess results dataset</span>
+<span class="n">results_df</span> <span class="o">=</span> <span class="n">results_df</span><span class="o">.</span><span class="n">reset_index</span><span class="p">()</span>
+
+<span class="n">results_df</span><span class="p">[</span><span class="s1">&#39;Forecast date&#39;</span><span class="p">]</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">to_datetime</span><span class="p">(</span><span class="n">results_df</span><span class="p">[</span><span class="s1">&#39;Forecast date&#39;</span><span class="p">])</span>
+
+<span class="n">month_names</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">array</span><span class="p">([</span><span class="s1">&#39;Jan&#39;</span><span class="p">,</span> <span class="s1">&#39;Feb&#39;</span><span class="p">,</span> <span class="s1">&#39;Mar&#39;</span><span class="p">,</span> <span class="s1">&#39;Apr&#39;</span><span class="p">,</span> <span class="s1">&#39;May&#39;</span><span class="p">,</span> <span class="s1">&#39;Jun&#39;</span><span class="p">,</span>
+                        <span class="s1">&#39;Jul&#39;</span><span class="p">,</span> <span class="s1">&#39;Aug&#39;</span><span class="p">,</span> <span class="s1">&#39;Sept&#39;</span><span class="p">,</span> <span class="s1">&#39;Oct&#39;</span><span class="p">,</span> <span class="s1">&#39;Nov&#39;</span><span class="p">,</span> <span class="s1">&#39;Dec&#39;</span><span class="p">])</span>
+<span class="n">forecast_month_names</span> <span class="o">=</span> <span class="n">month_names</span><span class="p">[</span><span class="n">results_df</span><span class="p">[</span><span class="s1">&#39;Forecast date&#39;</span><span class="p">]</span><span class="o">.</span><span class="n">dt</span><span class="o">.</span><span class="n">month</span><span class="o">.</span><span class="n">values</span> <span class="o">-</span> <span class="mi">1</span><span class="p">]</span>
+<span class="n">results_df</span><span class="p">[</span><span class="s1">&#39;Calendar month&#39;</span><span class="p">]</span> <span class="o">=</span> <span class="n">forecast_month_names</span>
+
+<span class="n">results_df</span> <span class="o">=</span> <span class="n">results_df</span><span class="o">.</span><span class="n">set_index</span><span class="p">([</span><span class="s1">&#39;Model&#39;</span><span class="p">,</span> <span class="s1">&#39;Ensemble member&#39;</span><span class="p">,</span> <span class="s1">&#39;Leadtime&#39;</span><span class="p">,</span> <span class="s1">&#39;Forecast date&#39;</span><span class="p">])</span>
+
+<span class="c1"># subset target period</span>
+<span class="n">results_df</span> <span class="o">=</span> <span class="n">results_df</span><span class="o">.</span><span class="n">loc</span><span class="p">(</span><span class="n">axis</span><span class="o">=</span><span class="mi">0</span><span class="p">)[</span><span class="n">pd</span><span class="o">.</span><span class="n">IndexSlice</span><span class="p">[:,</span> <span class="p">:,</span> <span class="p">:,</span> <span class="nb">slice</span><span class="p">(</span><span class="n">forecast_start</span><span class="p">,</span> <span class="n">forecast_end</span><span class="p">)]]</span>
+
+<span class="n">results_df</span> <span class="o">=</span> <span class="n">results_df</span><span class="o">.</span><span class="n">sort_index</span><span class="p">()</span>
+</pre></div>
+</div>
+</div>
+</div>
+<p>Let’s inspect the results <code class="docutils literal notranslate"><span class="pre">pandas</span> <span class="pre">data.frame</span></code> reporting the monthly performance of each ensemble member for the target period.</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">results_df</span><span class="o">.</span><span class="n">head</span><span class="p">()</span>
+</pre></div>
+</div>
+</div>
+</div>
+</div>
+<div class="section" id="ice-edge">
+<h3>Ice edge<a class="headerlink" href="#ice-edge" title="Permalink to this headline">¶</a></h3>
+<p>The following figure shows a method to interactively plotting how <strong>IceNet</strong> updates its forecasts using new initial conditions as the lead time decreases, with the predicted ice edge approaching the true ice edge. The observed ice edge (in black) is defined as the sea ice concentration (SIC)=15% contour. IceNet’s predicted ice edge (in green) is determined from its sea ice probability forecast as the P(SIC&gt;15%)=0.5 contour.</p>
+<p>The dashboard (sliders + figure) is generated through the <code class="docutils literal notranslate"><span class="pre">panel</span></code> library, <a class="reference external" href="https://panel.holoviz.org/index.html">an open-source Python library that lets you create custom interactive web apps and dashboards</a>. In the settings below, we define two sliders which essentially allow us to interact with two variables, the month and lead time.</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># set target year </span>
+<span class="n">year</span> <span class="o">=</span> <span class="mi">2020</span>
+
+<span class="c1"># set sliders</span>
+<span class="n">month_name</span> <span class="o">=</span> <span class="p">[</span><span class="sa">f</span><span class="s1">&#39;</span><span class="si">{</span><span class="n">calendar</span><span class="o">.</span><span class="n">month_name</span><span class="p">[</span><span class="n">m</span><span class="p">]</span><span class="si">}</span><span class="s1"> </span><span class="si">{</span><span class="n">year</span><span class="si">}</span><span class="s1">&#39;</span> <span class="k">for</span> <span class="n">m</span> <span class="ow">in</span> <span class="nb">list</span><span class="p">(</span><span class="nb">range</span><span class="p">(</span><span class="mi">1</span><span class="p">,</span> <span class="mi">13</span><span class="p">))]</span>
+
+<span class="n">month_slider</span> <span class="o">=</span> <span class="n">pn</span><span class="o">.</span><span class="n">widgets</span><span class="o">.</span><span class="n">DiscreteSlider</span><span class="p">(</span><span class="n">name</span><span class="o">=</span><span class="s2">&quot;Month&quot;</span><span class="p">,</span> <span class="n">options</span><span class="o">=</span><span class="n">month_name</span><span class="p">,</span> <span class="n">value</span><span class="o">=</span><span class="s1">&#39;September 2020&#39;</span><span class="p">,</span> <span class="n">width</span><span class="o">=</span><span class="mi">200</span><span class="p">)</span>
+
+<span class="n">lead_slider</span> <span class="o">=</span> <span class="n">pn</span><span class="o">.</span><span class="n">widgets</span><span class="o">.</span><span class="n">IntSlider</span><span class="p">(</span><span class="n">name</span><span class="o">=</span><span class="s2">&quot;Lead time (months)&quot;</span><span class="p">,</span> <span class="n">start</span><span class="o">=</span><span class="mi">1</span><span class="p">,</span> <span class="n">end</span><span class="o">=</span><span class="mi">4</span><span class="p">,</span> <span class="n">step</span><span class="o">=</span><span class="mi">1</span><span class="p">,</span> <span class="n">value</span><span class="o">=</span><span class="mi">4</span><span class="p">,</span> <span class="n">direction</span><span class="o">=</span><span class="s1">&#39;rtl&#39;</span><span class="p">,</span> <span class="n">width</span><span class="o">=</span><span class="mi">200</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+</div>
+<div class="admonition important">
+<p class="admonition-title">Important</p>
+<p>The interactive figure below essentially reproduces <a class="reference external" href="https://www.nature.com/articles/s41467-021-25257-4/figures/2">Figure 2</a> of the IceNet paper, however it covers a larger geographical extent i.e. in March when the ice edge extent is largest. Also, we visualise each month of the target period of this demonstrator (January to December 2020). Some script snippets were extracted from the IceNet script <code class="docutils literal notranslate"><span class="pre">python3</span> <span class="pre">icenet/plot_paper_figures.py</span></code> (see <a class="reference external" href="https://github.com/tom-andersson/icenet-paper/blob/main/icenet/plot_paper_figures.py">line 182</a>). Note we define alpha and colours for coastline and land mask object. These configurations allow overlapping these layers correctly to differentiate IceNet predictions and SIC ground truth.</p>
+</div>
+<div class="cell tag_hide-input docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1">## set boundaries</span>
+<span class="n">mask</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">load</span><span class="p">(</span><span class="n">os</span><span class="o">.</span><span class="n">path</span><span class="o">.</span><span class="n">join</span><span class="p">(</span><span class="n">config</span><span class="p">[</span><span class="s1">&#39;mask_data_folder&#39;</span><span class="p">],</span>
+                            <span class="s1">&#39;active_grid_cell_mask_</span><span class="si">{}</span><span class="s1">.npy&#39;</span><span class="o">.</span><span class="n">format</span><span class="p">(</span><span class="s1">&#39;03&#39;</span><span class="p">)))</span>
+
+<span class="n">min_0</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">min</span><span class="p">(</span><span class="n">np</span><span class="o">.</span><span class="n">argwhere</span><span class="p">(</span><span class="n">mask</span><span class="p">)[:,</span> <span class="mi">0</span><span class="p">])</span>
+<span class="n">max_0</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">max</span><span class="p">(</span><span class="n">np</span><span class="o">.</span><span class="n">argwhere</span><span class="p">(</span><span class="n">mask</span><span class="p">)[:,</span> <span class="mi">0</span><span class="p">])</span>
+<span class="n">mid_0</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">mean</span><span class="p">((</span><span class="n">min_0</span><span class="p">,</span> <span class="n">max_0</span><span class="p">))</span><span class="o">.</span><span class="n">astype</span><span class="p">(</span><span class="nb">int</span><span class="p">)</span>
+<span class="n">min_1</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">min</span><span class="p">(</span><span class="n">np</span><span class="o">.</span><span class="n">argwhere</span><span class="p">(</span><span class="n">mask</span><span class="p">)[:,</span> <span class="mi">1</span><span class="p">])</span>
+<span class="n">max_1</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">max</span><span class="p">(</span><span class="n">np</span><span class="o">.</span><span class="n">argwhere</span><span class="p">(</span><span class="n">mask</span><span class="p">)[:,</span> <span class="mi">1</span><span class="p">])</span>
+<span class="n">mid_1</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">mean</span><span class="p">((</span><span class="n">min_1</span><span class="p">,</span> <span class="n">max_1</span><span class="p">))</span><span class="o">.</span><span class="n">astype</span><span class="p">(</span><span class="nb">int</span><span class="p">)</span>
+<span class="n">max_diff</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">max</span><span class="p">([</span><span class="n">mid_0</span><span class="o">-</span><span class="n">min_0</span><span class="p">,</span> <span class="n">mid_1</span><span class="o">-</span><span class="n">min_1</span><span class="p">])</span>
+<span class="n">max_diff</span> <span class="o">*=</span> <span class="mf">.85</span>  <span class="c1"># Zoom in</span>
+<span class="n">max_diff</span> <span class="o">=</span> <span class="nb">int</span><span class="p">(</span><span class="n">max_diff</span><span class="p">)</span>
+<span class="n">top</span> <span class="o">=</span> <span class="n">mid_0</span> <span class="o">-</span> <span class="n">max_diff</span> <span class="o">+</span> <span class="mi">10</span>
+<span class="n">bot</span> <span class="o">=</span> <span class="n">mid_0</span> <span class="o">+</span> <span class="n">max_diff</span> <span class="o">+</span> <span class="mi">10</span>
+<span class="n">left</span> <span class="o">=</span> <span class="n">mid_1</span> <span class="o">-</span> <span class="n">max_diff</span>
+<span class="n">right</span> <span class="o">=</span> <span class="n">mid_1</span> <span class="o">+</span> <span class="n">max_diff</span>
+
+<span class="c1">## land and region masks</span>
+<span class="n">land_mask</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">load</span><span class="p">(</span><span class="n">os</span><span class="o">.</span><span class="n">path</span><span class="o">.</span><span class="n">join</span><span class="p">(</span><span class="n">config</span><span class="p">[</span><span class="s1">&#39;mask_data_folder&#39;</span><span class="p">],</span> <span class="s1">&#39;land_mask.npy&#39;</span><span class="p">))</span>
+<span class="n">region_mask</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">load</span><span class="p">(</span><span class="n">os</span><span class="o">.</span><span class="n">path</span><span class="o">.</span><span class="n">join</span><span class="p">(</span><span class="n">config</span><span class="p">[</span><span class="s1">&#39;mask_data_folder&#39;</span><span class="p">],</span> <span class="s1">&#39;region_mask.npy&#39;</span><span class="p">))</span>
+
+<span class="c1">## define coastline and land layers</span>
+<span class="n">arr</span> <span class="o">=</span> <span class="n">region_mask</span> <span class="o">==</span> <span class="mi">13</span>
+<span class="n">coastline_rgba_arr</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">zeros</span><span class="p">((</span><span class="o">*</span><span class="n">arr</span><span class="o">.</span><span class="n">shape</span><span class="p">,</span> <span class="mi">4</span><span class="p">))</span>
+<span class="n">coastline_rgba_arr</span><span class="p">[:,</span> <span class="p">:,</span> <span class="mi">3</span><span class="p">]</span> <span class="o">=</span> <span class="n">arr</span>  <span class="c1"># alpha channel</span>
+<span class="n">coastline_rgba_arr</span><span class="p">[:,</span> <span class="p">:,</span> <span class="p">:</span><span class="mi">3</span><span class="p">]</span> <span class="o">=</span> <span class="mf">.5</span>  <span class="c1"># black coastline</span>
+<span class="n">land_mask_rgba_arr</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">zeros</span><span class="p">((</span><span class="o">*</span><span class="n">arr</span><span class="o">.</span><span class="n">shape</span><span class="p">,</span> <span class="mi">4</span><span class="p">))</span>
+<span class="n">land_mask_rgba_arr</span><span class="p">[:,</span> <span class="p">:,</span> <span class="mi">3</span><span class="p">]</span> <span class="o">=</span> <span class="n">land_mask</span>  <span class="c1"># alpha channel</span>
+<span class="n">land_mask_rgba_arr</span><span class="p">[:,</span> <span class="p">:,</span> <span class="p">:</span><span class="mi">3</span><span class="p">]</span> <span class="o">=</span> <span class="mf">.5</span>  <span class="c1"># gray land</span>
+
+<span class="c1">## line colours</span>
+<span class="n">pred_ice_edge_rgb</span> <span class="o">=</span> <span class="s1">&#39;green&#39;</span>
+<span class="n">true_ice_edge_rgb</span> <span class="o">=</span> <span class="s1">&#39;black&#39;</span>
+
+<span class="c1">## define plot function</span>
+<span class="nd">@pn</span><span class="o">.</span><span class="n">depends</span><span class="p">(</span><span class="n">month_slider</span><span class="o">.</span><span class="n">param</span><span class="o">.</span><span class="n">value</span><span class="p">,</span> <span class="n">lead_slider</span><span class="o">.</span><span class="n">param</span><span class="o">.</span><span class="n">value</span><span class="p">)</span>
+<span class="k">def</span> <span class="nf">plot_forecast</span><span class="p">(</span><span class="n">month</span><span class="p">,</span> <span class="n">leadtime</span><span class="p">):</span>
+    <span class="n">tdate</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">Timestamp</span><span class="p">(</span><span class="n">year</span><span class="p">,</span><span class="n">month_name</span><span class="o">.</span><span class="n">index</span><span class="p">(</span><span class="n">month</span><span class="p">)</span><span class="o">+</span><span class="mi">1</span><span class="p">,</span><span class="mi">1</span><span class="p">)</span>
+
+    <span class="n">fig0</span> <span class="o">=</span> <span class="n">Figure</span><span class="p">(</span><span class="n">figsize</span><span class="o">=</span><span class="p">(</span><span class="mi">8</span><span class="p">,</span> <span class="mi">8</span><span class="p">))</span>
+    <span class="n">ax0</span> <span class="o">=</span> <span class="n">fig0</span><span class="o">.</span><span class="n">subplots</span><span class="p">()</span>
+    <span class="n">FigureCanvas</span><span class="p">(</span><span class="n">fig0</span><span class="p">)</span>  <span class="c1"># not needed for mpl &gt;= 3.1</span>
+
+    <span class="n">ax0</span><span class="o">.</span><span class="n">imshow</span><span class="p">(</span><span class="n">coastline_rgba_arr</span><span class="p">[</span><span class="n">top</span><span class="p">:</span><span class="n">bot</span><span class="p">,</span> <span class="n">left</span><span class="p">:</span><span class="n">right</span><span class="p">,</span> <span class="p">:],</span> <span class="n">zorder</span><span class="o">=</span><span class="mi">20</span><span class="p">)</span>
+    <span class="n">ax0</span><span class="o">.</span><span class="n">imshow</span><span class="p">(</span><span class="n">land_mask_rgba_arr</span><span class="p">[</span><span class="n">top</span><span class="p">:</span><span class="n">bot</span><span class="p">,</span> <span class="n">left</span><span class="p">:</span><span class="n">right</span><span class="p">,</span> <span class="p">:],</span> <span class="n">zorder</span><span class="o">=</span><span class="mi">1</span><span class="p">)</span>
+
+    <span class="n">icenet_sip</span> <span class="o">=</span> <span class="n">icenet_sip_da</span><span class="o">.</span><span class="n">sel</span><span class="p">(</span><span class="n">time</span><span class="o">=</span><span class="n">tdate</span><span class="p">,</span> <span class="n">leadtime</span><span class="o">=</span><span class="n">leadtime</span><span class="p">,</span> <span class="n">seed</span><span class="o">=</span><span class="s1">&#39;ensemble&#39;</span><span class="p">)</span><span class="o">.</span><span class="n">data</span>
+    <span class="n">ax0</span><span class="o">.</span><span class="n">contour</span><span class="p">(</span>
+        <span class="n">icenet_sip</span><span class="p">[</span><span class="n">top</span><span class="p">:</span><span class="n">bot</span><span class="p">,</span> <span class="n">left</span><span class="p">:</span><span class="n">right</span><span class="p">],</span>
+        <span class="n">levels</span><span class="o">=</span><span class="p">[</span><span class="mf">0.5</span><span class="p">],</span>
+        <span class="n">colors</span><span class="o">=</span><span class="p">[</span><span class="n">pred_ice_edge_rgb</span><span class="p">],</span>
+        <span class="n">zorder</span><span class="o">=</span><span class="mi">1</span><span class="p">,</span>
+        <span class="n">linewidths</span><span class="o">=</span><span class="mf">1.5</span><span class="p">,</span>
+    <span class="p">)</span>
+
+    <span class="n">groundtruth_sic</span> <span class="o">=</span> <span class="n">true_sic_da</span><span class="o">.</span><span class="n">sel</span><span class="p">(</span><span class="n">time</span><span class="o">=</span><span class="n">tdate</span><span class="p">)</span>
+    <span class="n">gt_img</span> <span class="o">=</span> <span class="p">(</span><span class="n">groundtruth_sic</span><span class="o">&gt;</span><span class="mf">0.15</span><span class="p">)</span><span class="o">.</span><span class="n">data</span>
+
+    <span class="n">ax0</span><span class="o">.</span><span class="n">contour</span><span class="p">(</span>
+        <span class="n">gt_img</span><span class="p">[</span><span class="n">top</span><span class="p">:</span><span class="n">bot</span><span class="p">,</span> <span class="n">left</span><span class="p">:</span><span class="n">right</span><span class="p">],</span>
+        <span class="n">levels</span><span class="o">=</span><span class="p">[</span><span class="mf">0.5</span><span class="p">],</span>
+        <span class="n">colors</span><span class="o">=</span><span class="p">[</span><span class="n">true_ice_edge_rgb</span><span class="p">],</span>
+        <span class="n">zorder</span><span class="o">=</span><span class="mi">1</span><span class="p">,</span>
+        <span class="n">linewidths</span><span class="o">=</span><span class="mf">1.5</span>
+    <span class="p">)</span>
+    <span class="n">ax0</span><span class="o">.</span><span class="n">tick_params</span><span class="p">(</span><span class="n">which</span><span class="o">=</span><span class="s1">&#39;both&#39;</span><span class="p">,</span> <span class="n">bottom</span><span class="o">=</span><span class="kc">False</span><span class="p">,</span> <span class="n">left</span><span class="o">=</span><span class="kc">False</span><span class="p">,</span> <span class="n">labelbottom</span><span class="o">=</span><span class="kc">False</span><span class="p">,</span> <span class="n">labelleft</span><span class="o">=</span><span class="kc">False</span><span class="p">)</span>
+
+    <span class="n">proxy</span> <span class="o">=</span> <span class="p">[</span><span class="n">plt</span><span class="o">.</span><span class="n">Line2D</span><span class="p">([</span><span class="mi">0</span><span class="p">],</span> <span class="p">[</span><span class="mi">1</span><span class="p">],</span> <span class="n">color</span><span class="o">=</span><span class="n">true_ice_edge_rgb</span><span class="p">),</span>
+                         <span class="n">plt</span><span class="o">.</span><span class="n">Line2D</span><span class="p">([</span><span class="mi">0</span><span class="p">],</span> <span class="p">[</span><span class="mi">1</span><span class="p">],</span> <span class="n">color</span><span class="o">=</span><span class="n">pred_ice_edge_rgb</span><span class="p">)]</span>
+
+    <span class="n">ax0</span><span class="o">.</span><span class="n">legend</span><span class="p">(</span><span class="n">proxy</span><span class="p">,</span> <span class="p">[</span><span class="s1">&#39;Observed&#39;</span><span class="p">,</span> <span class="s1">&#39;Predicted&#39;</span><span class="p">],</span>
+                          <span class="n">loc</span><span class="o">=</span><span class="s1">&#39;upper left&#39;</span><span class="p">,</span> <span class="n">fontsize</span><span class="o">=</span><span class="mi">11</span><span class="p">)</span>
+
+    <span class="n">ax0</span><span class="o">.</span><span class="n">set_title</span><span class="p">(</span><span class="sa">f</span><span class="s1">&#39;Date = </span><span class="si">{</span><span class="n">month</span><span class="si">}</span><span class="s1"> &amp; Lead time = </span><span class="si">{</span><span class="n">leadtime</span><span class="si">}</span><span class="s1"> months&#39;</span><span class="p">)</span>
+
+    <span class="n">acc</span> <span class="o">=</span> <span class="n">results_df</span><span class="o">.</span><span class="n">loc</span><span class="p">[</span><span class="s1">&#39;IceNet&#39;</span><span class="p">,</span> <span class="s1">&#39;ensemble&#39;</span><span class="p">,</span> <span class="n">leadtime</span><span class="p">,</span> <span class="n">tdate</span><span class="p">][</span><span class="s1">&#39;Binary accuracy&#39;</span><span class="p">]</span>
+    <span class="n">sie_err</span> <span class="o">=</span> <span class="n">results_df</span><span class="o">.</span><span class="n">loc</span><span class="p">[</span><span class="s1">&#39;IceNet&#39;</span><span class="p">,</span> <span class="s1">&#39;ensemble&#39;</span><span class="p">,</span> <span class="n">leadtime</span><span class="p">,</span> <span class="n">tdate</span><span class="p">][</span><span class="s1">&#39;SIE error&#39;</span><span class="p">]</span>
+
+    <span class="n">Afont</span> <span class="o">=</span> <span class="p">{</span>
+        <span class="s1">&#39;backgroundcolor&#39;</span><span class="p">:</span> <span class="s1">&#39;lightgray&#39;</span><span class="p">,</span>
+        <span class="s1">&#39;color&#39;</span><span class="p">:</span>  <span class="s1">&#39;black&#39;</span><span class="p">,</span>
+        <span class="s1">&#39;weight&#39;</span><span class="p">:</span> <span class="s1">&#39;normal&#39;</span><span class="p">,</span>
+        <span class="s1">&#39;size&#39;</span><span class="p">:</span> <span class="mi">11</span><span class="p">,</span>
+        <span class="p">}</span>
+
+    <span class="n">t</span> <span class="o">=</span> <span class="n">AnchoredText</span><span class="p">(</span><span class="s1">&#39;Binary acc: </span><span class="si">{:.1f}</span><span class="s1">% </span><span class="se">\n</span><span class="s1">SIE error: </span><span class="si">{:+.3f}</span><span class="s1"> mil km$^2$&#39;</span><span class="o">.</span><span class="n">format</span><span class="p">(</span><span class="n">acc</span><span class="p">,</span><span class="n">sie_err</span><span class="o">/</span><span class="mf">1e6</span><span class="p">),</span> <span class="n">prop</span><span class="o">=</span><span class="n">Afont</span><span class="p">,</span> <span class="n">loc</span><span class="o">=</span><span class="s1">&#39;lower right&#39;</span><span class="p">,</span> <span class="n">pad</span><span class="o">=</span><span class="mf">0.5</span><span class="p">,</span> <span class="n">borderpad</span><span class="o">=</span><span class="mf">0.4</span><span class="p">,</span> <span class="n">frameon</span><span class="o">=</span><span class="kc">False</span><span class="p">)</span>
+    <span class="n">t</span> <span class="o">=</span> <span class="n">ax0</span><span class="o">.</span><span class="n">add_artist</span><span class="p">(</span><span class="n">t</span><span class="p">)</span>
+    <span class="n">t</span><span class="o">.</span><span class="n">zorder</span> <span class="o">=</span> <span class="mi">21</span>
+
+    <span class="k">return</span> <span class="n">pn</span><span class="o">.</span><span class="n">pane</span><span class="o">.</span><span class="n">Matplotlib</span><span class="p">(</span><span class="n">fig0</span><span class="p">,</span> <span class="n">tight</span><span class="o">=</span><span class="kc">True</span><span class="p">,</span> <span class="n">dpi</span><span class="o">=</span><span class="mi">150</span><span class="p">)</span>
+
+<span class="n">plot_ie</span> <span class="o">=</span> <span class="n">pn</span><span class="o">.</span><span class="n">Row</span><span class="p">(</span>
+    <span class="n">plot_forecast</span><span class="p">,</span>
+    <span class="n">pn</span><span class="o">.</span><span class="n">Column</span><span class="p">(</span><span class="n">pn</span><span class="o">.</span><span class="n">Spacer</span><span class="p">(</span><span class="n">height</span><span class="o">=</span><span class="mi">5</span><span class="p">),</span> <span class="n">month_slider</span><span class="p">,</span> <span class="n">pn</span><span class="o">.</span><span class="n">Spacer</span><span class="p">(</span><span class="n">height</span><span class="o">=</span><span class="mi">15</span><span class="p">),</span> <span class="n">lead_slider</span><span class="p">,</span> <span class="n">background</span><span class="o">=</span><span class="s1">&#39;#f0f0f0&#39;</span><span class="p">,</span> <span class="n">sizing_mode</span><span class="o">=</span><span class="s2">&quot;fixed&quot;</span><span class="p">),</span>
+    <span class="n">width_policy</span><span class="o">=</span><span class="s1">&#39;max&#39;</span><span class="p">,</span> <span class="n">height_policy</span><span class="o">=</span><span class="s1">&#39;max&#39;</span><span class="p">,</span> 
+<span class="p">)</span>
+
+<span class="n">plot_ie</span><span class="o">.</span><span class="n">embed</span><span class="p">()</span>
+</pre></div>
+</div>
+</div>
+</div>
+</div>
+<div class="section" id="model-performance-comparison">
+<h3>Model performance comparison<a class="headerlink" href="#model-performance-comparison" title="Permalink to this headline">¶</a></h3>
+<p>The figure below shows the mean binary accuracy versus lead time over the 12 forecasted dates for IceNet, SEAS5 and linear trend benchmark. We observe IceNet outperform SEAS5 and linear trend models at lead times of 2 months and beyond.</p>
+<div class="cell tag_hide-input docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">results_mean</span> <span class="o">=</span> <span class="n">results_df</span><span class="p">[</span><span class="s1">&#39;Binary accuracy&#39;</span><span class="p">]</span><span class="o">.</span><span class="n">groupby</span><span class="p">([</span><span class="s1">&#39;Model&#39;</span><span class="p">,</span><span class="s1">&#39;Ensemble member&#39;</span><span class="p">,</span><span class="s1">&#39;Leadtime&#39;</span><span class="p">])</span><span class="o">.</span><span class="n">mean</span><span class="p">()</span><span class="o">.</span><span class="n">reset_index</span><span class="p">()</span>
+<span class="n">results_mean</span> <span class="o">=</span> <span class="n">results_mean</span><span class="p">[</span><span class="n">results_mean</span><span class="p">[</span><span class="s1">&#39;Ensemble member&#39;</span><span class="p">]</span><span class="o">.</span><span class="n">isin</span><span class="p">([</span><span class="s1">&#39;NA&#39;</span><span class="p">,</span><span class="s1">&#39;ensemble&#39;</span><span class="p">])]</span>
+
+<span class="n">plot_ba</span> <span class="o">=</span> <span class="n">results_mean</span><span class="o">.</span><span class="n">hvplot</span><span class="p">(</span><span class="n">x</span><span class="o">=</span><span class="s1">&#39;Leadtime&#39;</span><span class="p">,</span> <span class="n">y</span><span class="o">=</span><span class="s1">&#39;Binary accuracy&#39;</span><span class="p">,</span> <span class="n">by</span><span class="o">=</span><span class="s1">&#39;Model&#39;</span><span class="p">,</span>
+                        <span class="n">label</span><span class="o">=</span><span class="s1">&#39;Lead times comparison&#39;</span><span class="p">,</span>
+                        <span class="n">ylabel</span><span class="o">=</span><span class="s1">&#39;Binary accuracy&#39;</span><span class="p">,</span>
+                        <span class="n">xlabel</span><span class="o">=</span><span class="s1">&#39;Lead time (months)&#39;</span><span class="p">,</span>
+                        <span class="n">color</span><span class="o">=</span><span class="p">[</span><span class="s1">&#39;#1f77b4&#39;</span><span class="p">,</span> <span class="s1">&#39;gray&#39;</span><span class="p">,</span> <span class="s1">&#39;#d62728&#39;</span><span class="p">])</span>
+<span class="n">plot_ba</span><span class="o">.</span><span class="n">opts</span><span class="p">(</span><span class="n">legend_position</span><span class="o">=</span><span class="s1">&#39;top_right&#39;</span><span class="p">,</span> <span class="o">**</span><span class="n">settings_lineplots</span><span class="p">)</span>
+<span class="n">plot_ba</span>
+</pre></div>
+</div>
+</div>
+</div>
+</div>
+<div class="section" id="monthly-performance-comparison">
+<h3>Monthly performance comparison<a class="headerlink" href="#monthly-performance-comparison" title="Permalink to this headline">¶</a></h3>
+<p>Different to the previous plot, the following figure compares the performance of the three models from January to December in 2020 by seasonal lead time. We confirm IceNet’s ability of seasonal forecast of summer ice (August, September and October) at lead times of two months and beyond outperforming both SEAS5 and the linear trend.</p>
+<p>We also observe SEAS5 outperforms IceNet at a 1-month lead time over time, except in October. According to the Nature communications paper, this is likely because IceNet only receives monthly averages as input, smearing the weather phenomena and initial conditions that dominate predictability on such short timescales.</p>
+<div class="cell tag_hide-input docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">lead_slider</span> <span class="o">=</span> <span class="n">pn</span><span class="o">.</span><span class="n">widgets</span><span class="o">.</span><span class="n">IntSlider</span><span class="p">(</span><span class="n">name</span><span class="o">=</span><span class="s2">&quot;Lead time (months)&quot;</span><span class="p">,</span> <span class="n">start</span><span class="o">=</span><span class="mi">1</span><span class="p">,</span> <span class="n">end</span><span class="o">=</span><span class="mi">4</span><span class="p">,</span> <span class="n">step</span><span class="o">=</span><span class="mi">1</span><span class="p">,</span> <span class="n">width</span><span class="o">=</span><span class="mi">150</span><span class="p">)</span>
+
+<span class="n">results_plot</span> <span class="o">=</span> <span class="n">results_df</span><span class="o">.</span><span class="n">reset_index</span><span class="p">()</span>
+
+<span class="n">formatter</span> <span class="o">=</span> <span class="n">DatetimeTickFormatter</span><span class="p">(</span><span class="n">months</span><span class="o">=</span><span class="s1">&#39;%b&#39;</span><span class="p">)</span>
+
+<span class="nd">@pn</span><span class="o">.</span><span class="n">depends</span><span class="p">(</span><span class="n">lead_slider</span><span class="o">.</span><span class="n">param</span><span class="o">.</span><span class="n">value</span><span class="p">)</span>
+<span class="k">def</span> <span class="nf">plot_month</span><span class="p">(</span><span class="n">leadtime</span><span class="p">):</span>
+
+    <span class="n">results_lt</span> <span class="o">=</span> <span class="n">results_plot</span><span class="p">[</span><span class="n">results_plot</span><span class="o">.</span><span class="n">Leadtime</span><span class="o">==</span><span class="n">leadtime</span><span class="p">]</span>
+    <span class="n">plot_ba_month</span> <span class="o">=</span> <span class="n">results_lt</span><span class="o">.</span><span class="n">hvplot</span><span class="p">(</span><span class="n">x</span><span class="o">=</span><span class="s1">&#39;Forecast date&#39;</span><span class="p">,</span>
+                                <span class="n">y</span><span class="o">=</span><span class="s1">&#39;Binary accuracy&#39;</span><span class="p">,</span>
+                                <span class="n">by</span><span class="o">=</span><span class="s1">&#39;Model&#39;</span><span class="p">,</span>
+                                <span class="n">label</span><span class="o">=</span><span class="s1">&#39;Monthly comparison&#39;</span><span class="p">,</span>
+                                <span class="n">ylabel</span><span class="o">=</span><span class="s1">&#39;Binary accuracy&#39;</span><span class="p">,</span>
+                                <span class="n">xlabel</span><span class="o">=</span><span class="s1">&#39;Forecast month&#39;</span><span class="p">,</span>
+                                <span class="n">color</span><span class="o">=</span><span class="p">[</span><span class="s1">&#39;#1f77b4&#39;</span><span class="p">,</span> <span class="s1">&#39;gray&#39;</span><span class="p">,</span> <span class="s1">&#39;#d62728&#39;</span><span class="p">],</span>
+                                <span class="n">xformatter</span><span class="o">=</span><span class="n">formatter</span><span class="p">)</span>
+
+    <span class="k">return</span> <span class="n">plot_ba_month</span><span class="o">.</span><span class="n">opts</span><span class="p">(</span><span class="n">legend_position</span><span class="o">=</span><span class="s1">&#39;bottom_left&#39;</span><span class="p">,</span> <span class="o">**</span><span class="n">settings_lineplots</span><span class="p">)</span>
+
+<span class="n">plot_month</span> <span class="o">=</span> <span class="n">pn</span><span class="o">.</span><span class="n">Row</span><span class="p">(</span>
+    <span class="n">plot_month</span><span class="p">,</span>
+    <span class="n">pn</span><span class="o">.</span><span class="n">Column</span><span class="p">(</span><span class="n">pn</span><span class="o">.</span><span class="n">Spacer</span><span class="p">(</span><span class="n">height</span><span class="o">=</span><span class="mi">5</span><span class="p">),</span> <span class="n">lead_slider</span><span class="p">,</span> <span class="n">background</span><span class="o">=</span><span class="s1">&#39;#f0f0f0&#39;</span><span class="p">),</span>
+    <span class="n">width_policy</span><span class="o">=</span><span class="s1">&#39;max&#39;</span><span class="p">,</span> <span class="n">height_policy</span><span class="o">=</span><span class="s1">&#39;max&#39;</span>
+<span class="p">)</span>
+
+<span class="n">plot_month</span><span class="o">.</span><span class="n">embed</span><span class="p">()</span>
+</pre></div>
+</div>
+</div>
+</div>
+</div>
+</div>
+<div class="section" id="summary">
+<h2>Summary<a class="headerlink" href="#summary" title="Permalink to this headline">¶</a></h2>
+<p>This notebook has demonstrated the use of:</p>
+<ul class="simple">
+<li><p>A custom dataloader, <code class="docutils literal notranslate"><span class="pre">IceNetDataLoader</span></code>, to conveniently dictate which variables are input to the networks, which climate simulations are used for pre-training, and how far ahead to forecast.</p></li>
+<li><p>How to append, filter, and manipulate new forecast results using <code class="docutils literal notranslate"><span class="pre">pandas</span></code>.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">matplotlib</span></code> framed into a <code class="docutils literal notranslate"><span class="pre">panels</span></code> dashboard to visualise the IceNet forecast within the modelled period and four lead times.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">hvplot</span></code> to plot time series data for comparing the performance of IceNet predictions against ECMWF SEAS5 physics-based sea ice concentration and a linear trend statistical benchmark.</p></li>
+</ul>
+<p>The IceNet’s Nature Communications paper <a class="reference external" href="https://www.nature.com/articles/s41467-021-25257-4"><em>Seasonal Arctic sea ice forecasting with probabilistic deep learning</em></a> provides
+further information of other key aspects e.g. variable importance, model calibration, etc. which for sake of simplicity  are not covered in the demonstrator.</p>
+</div>
+<div class="section" id="citing-this-notebook">
+<h2>Citing this Notebook<a class="headerlink" href="#citing-this-notebook" title="Permalink to this headline">¶</a></h2>
+<p>Alejandro Coca-Castro, Tom Andersson, and Nick Barlow. “Sea ice forecasting using IceNet (Jupyter Notebook) published in the Environmental Data Science book.” ROHub. Apr 03 ,2022. <a class="reference external" href="https://doi.org/10.24424/m8ew-pg51">https://doi.org/10.24424/m8ew-pg51</a>.</p>
+</div>
+<div class="section" id="additional-information">
+<h2>Additional information<a class="headerlink" href="#additional-information" title="Permalink to this headline">¶</a></h2>
+<p><strong>Codebase</strong>: <code class="docutils literal notranslate"><span class="pre">IceNet</span></code> 1.0.0 with commit <mark><a class="reference external" href="https://github.com/tom-andersson/icenet-paper/compare/v1.0.0...main">9d69ad7</a></mark></p>
+<p><strong>License</strong>: The code in this notebook is licensed under the MIT License. The Environmental Data Science book is licensed under the Creative Commons by Attribution 4.0 license. See further details <a class="reference external" href="https://github.com/alan-turing-institute/environmental-ds-book/blob/master/LICENSE.md">here</a>.</p>
+<p><strong>Contact</strong>: If you have any suggestion or report an issue with this notebook, feel free to <a class="reference external" href="https://github.com/alan-turing-institute/environmental-ds-book/issues/new/choose">create an issue</a> or send a direct message to <a class="reference external" href="mailto:environmental&#46;ds&#46;book&#37;&#52;&#48;gmail&#46;com">environmental<span>&#46;</span>ds<span>&#46;</span>book<span>&#64;</span>gmail<span>&#46;</span>com</a>.</p>
+<div class="cell tag_remove-input docutils container">
+</div>
+</div>
+</div>
+
+    <script type="text/x-thebe-config">
+    {
+        requestKernel: true,
+        binderOptions: {
+            repo: "binder-examples/jupyter-stacks-datascience",
+            ref: "master",
+        },
+        codeMirrorConfig: {
+            theme: "abcdef",
+            mode: "python"
+        },
+        kernelOptions: {
+            kernelName: "python3",
+            path: "./notebooks/gallery/ac327c3a-5264-40a2-8c6e-1e8d7c4b37ef"
+        },
+        predefinedOutput: true
+    }
+    </script>
+    <script>kernelName = 'python3'</script>
+
+              </div>
+              
+            
+                <!-- Previous / next buttons -->
+<div class='prev-next-area'> 
+    <a class='left-prev' id="prev-link" href="../ea34568e-d86e-4720-be2f-3f826f66a26c/notebook.html" title="previous page">
+        <i class="fas fa-angle-left"></i>
+        <div class="prev-next-info">
+            <p class="prev-next-subtitle">previous</p>
+            <p class="prev-next-title">Concatenating a gridded rainfall reanalysis dataset into a time series</p>
+        </div>
+    </a>
+    <a class='right-next' id="next-link" href="../94486a7f-e046-461f-bbb9-334ec7b57040/notebook.html" title="next page">
+    <div class="prev-next-info">
+        <p class="prev-next-subtitle">next</p>
+        <p class="prev-next-title">Tree crown delineation using detectreeRGB</p>
+    </div>
+    <i class="fas fa-angle-right"></i>
+    </a>
+</div>
+            
+        </div>
+    </div>
+    <footer class="footer">
+  <p>
+    
+      By EDS book Community. This site is powered by <a href="https://www.netlify.com/">Netlify</a>.<br/>
+    
+        &copy; Copyright 2021.<br/>
+  </p>
+</footer>
+</main>
+
+
+      </div>
+    </div>
+  
+  <script src="../../../_static/js/index.be7d3bbb2ef33a8344ce.js"></script>
+
+  </body>
+</html>

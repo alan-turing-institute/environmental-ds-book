@@ -1,0 +1,1341 @@
+
+<!DOCTYPE html>
+
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>SEVIRI Level 1.5 &#8212; Environmental Data Science Book</title>
+    
+  <link href="../../../_static/css/theme.css" rel="stylesheet">
+  <link href="../../../_static/css/index.ff1ffe594081f20da1ef19478df9384b.css" rel="stylesheet">
+
+    
+  <link rel="stylesheet"
+    href="../../../_static/vendor/fontawesome/5.13.0/css/all.min.css">
+  <link rel="preload" as="font" type="font/woff2" crossorigin
+    href="../../../_static/vendor/fontawesome/5.13.0/webfonts/fa-solid-900.woff2">
+  <link rel="preload" as="font" type="font/woff2" crossorigin
+    href="../../../_static/vendor/fontawesome/5.13.0/webfonts/fa-brands-400.woff2">
+
+    
+      
+
+    
+    <link rel="stylesheet" type="text/css" href="../../../_static/pygments.css" />
+    <link rel="stylesheet" type="text/css" href="../../../_static/sphinx-book-theme.css?digest=c3fdc42140077d1ad13ad2f1588a4309" />
+    <link rel="stylesheet" type="text/css" href="../../../_static/togglebutton.css" />
+    <link rel="stylesheet" type="text/css" href="../../../_static/copybutton.css" />
+    <link rel="stylesheet" type="text/css" href="../../../_static/mystnb.css" />
+    <link rel="stylesheet" type="text/css" href="../../../_static/sphinx-thebe.css" />
+    <link rel="stylesheet" type="text/css" href="../../../_static/panels-main.c949a650a448cc0ae9fd3441c0e17fb0.css" />
+    <link rel="stylesheet" type="text/css" href="../../../_static/panels-variables.06eb56fa6e07937060861dad626602ad.css" />
+    <link rel="stylesheet" type="text/css" href="../../../_static/design-style.4045f2051d55cab465a707391d5b2007.min.css" />
+    
+  <link rel="preload" as="script" href="../../../_static/js/index.be7d3bbb2ef33a8344ce.js">
+
+    <script data-url_root="../../../" id="documentation_options" src="../../../_static/documentation_options.js"></script>
+    <script src="../../../_static/jquery.js"></script>
+    <script src="../../../_static/underscore.js"></script>
+    <script src="../../../_static/doctools.js"></script>
+    <script src="../../../_static/clipboard.min.js"></script>
+    <script src="../../../_static/copybutton.js"></script>
+    <script>let toggleHintShow = 'Click to show';</script>
+    <script>let toggleHintHide = 'Click to hide';</script>
+    <script>let toggleOpenOnPrint = 'true';</script>
+    <script src="../../../_static/togglebutton.js"></script>
+    <script>var togglebuttonSelector = '.toggle, .admonition.dropdown, .tag_hide_input div.cell_input, .tag_hide-input div.cell_input, .tag_hide_output div.cell_output, .tag_hide-output div.cell_output, .tag_hide_cell.cell, .tag_hide-cell.cell';</script>
+    <script src="../../../_static/sphinx-book-theme.d59cb220de22ca1c485ebbdc042f0030.js"></script>
+    <script src="../../../_static/design-tabs.js"></script>
+    <script>const THEBE_JS_URL = "https://unpkg.com/thebe@0.8.2/lib/index.js"
+const thebe_selector = ".thebe,.cell"
+const thebe_selector_input = "pre"
+const thebe_selector_output = ".output, .cell_output"
+</script>
+    <script async="async" src="../../../_static/sphinx-thebe.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/require.js/2.3.4/require.min.js"></script>
+    <script src="https://unpkg.com/@jupyter-widgets/html-manager@^0.20.1/dist/embed-amd.js"></script>
+    <link rel="index" title="Index" href="../../../genindex.html" />
+    <link rel="search" title="Search" href="../../../search.html" />
+    <link rel="next" title="Tree crown detection using DeepForest" href="../15d986da-2d7c-44fb-af71-700494485def/notebook.html" />
+    <link rel="prev" title="Tree crown delineation using detectreeRGB" href="../94486a7f-e046-461f-bbb9-334ec7b57040/notebook.html" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="docsearch:language" content="en">
+    
+
+    <!-- Google Analytics -->
+    
+<script async="" src="https://www.google-analytics.com/analytics.js"></script>
+<script>
+                        window.ga = window.ga || function () {
+                            (ga.q = ga.q || []).push(arguments) };
+                        ga.l = +new Date;
+                        ga('create', 'UA-214298162-1', 'auto');
+                        ga('set', 'anonymizeIp', true);
+                        ga('send', 'pageview');
+                    </script>
+
+  </head>
+  <body data-spy="scroll" data-target="#bd-toc-nav" data-offset="80">
+    
+    <div class="container-fluid" id="banner"></div>
+
+    
+
+    <div class="container-xl">
+      <div class="row">
+          
+<div class="col-12 col-md-3 bd-sidebar site-navigation show" id="site-navigation">
+    
+        <div class="navbar-brand-box">
+    <a class="navbar-brand text-wrap" href="../../../index.html">
+      
+        <!-- `logo` is deprecated in Sphinx 4.0, so remove this when we stop supporting 3 -->
+        
+      
+      
+      <img src="../../../_static/logo.png" class="logo" alt="logo">
+      
+      
+      <h1 class="site-logo" id="site-title">Environmental Data Science Book</h1>
+      
+    </a>
+</div><form class="bd-search d-flex align-items-center" action="../../../search.html" method="get">
+  <i class="icon fas fa-search"></i>
+  <input type="search" class="form-control" name="q" id="search-input" placeholder="Search this book..." aria-label="Search this book..." autocomplete="off" >
+</form><nav class="bd-links" id="bd-docs-nav" aria-label="Main">
+    <div class="bd-toc-item active">
+        <ul class="nav bd-sidenav">
+ <li class="toctree-l1">
+  <a class="reference internal" href="../../../welcome.html">
+   Welcome
+  </a>
+ </li>
+</ul>
+<p aria-level="2" class="caption" role="heading">
+ <span class="caption-text">
+  Preamble
+ </span>
+</p>
+<ul class="nav bd-sidenav">
+ <li class="toctree-l1">
+  <a class="reference internal" href="../../../preamble/about.html">
+   About EDS book
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../../../preamble/who-for.html">
+   Audience
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../../../preamble/how-to.html">
+   Usage
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../../../preamble/attribution.html">
+   Citation and reuse
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../../../preamble/contribute.html">
+   Contribute
+  </a>
+ </li>
+</ul>
+<p aria-level="2" class="caption" role="heading">
+ <span class="caption-text">
+  Notebooks
+ </span>
+</p>
+<ul class="current nav bd-sidenav">
+ <li class="toctree-l1 current active has-children">
+  <a class="reference internal" href="../../gallery.html">
+   Gallery
+  </a>
+  <input checked="" class="toctree-checkbox" id="toctree-checkbox-1" name="toctree-checkbox-1" type="checkbox"/>
+  <label for="toctree-checkbox-1">
+   <i class="fas fa-chevron-down">
+   </i>
+  </label>
+  <ul class="current">
+   <li class="toctree-l2">
+    <a class="reference internal" href="../b128b282-dee7-44a7-bc21-f1fd21452a83/notebook.html">
+     Land Cover Data (Impact Observatory)
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../435f534c-e49b-43c3-9bd6-3393100bef3f/notebook.html">
+     Cosmos-UK Soil Moisture (UKCEH)
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../ea34568e-d86e-4720-be2f-3f826f66a26c/notebook.html">
+     Rainfall NCEP/NCAR (NOAA)
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../ac327c3a-5264-40a2-8c6e-1e8d7c4b37ef/notebook.html">
+     Sea ice forecasting (IceNet)
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../94486a7f-e046-461f-bbb9-334ec7b57040/notebook.html">
+     Tree crown (DetectreeRGB)
+    </a>
+   </li>
+   <li class="toctree-l2 current active">
+    <a class="current reference internal" href="#">
+     SEVIRI Level 1.5 (EUMESAT)
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../15d986da-2d7c-44fb-af71-700494485def/notebook.html">
+     Tree crown (DeepForest)
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../a2875cdc-ba6a-49dc-aab7-cdf7c4fc0fa8/notebook.html">
+     MOD021KM and FIRMS (NASA)
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../1b8921af-e77f-4ccf-ae38-4813cdceba0f/notebook.html">
+     UKV high-resolution (Met Office)
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../b34facfa-cea8-48f5-89f6-f11ce00812a9/notebook.html">
+     Detecting floating objects (ESA Phi-Lab)
+    </a>
+   </li>
+  </ul>
+ </li>
+</ul>
+<p aria-level="2" class="caption" role="heading">
+ <span class="caption-text">
+  Publishing
+ </span>
+</p>
+<ul class="nav bd-sidenav">
+ <li class="toctree-l1 has-children">
+  <a class="reference internal" href="../../../publishing/about.html">
+   About EDS notebooks
+  </a>
+  <input class="toctree-checkbox" id="toctree-checkbox-2" name="toctree-checkbox-2" type="checkbox"/>
+  <label for="toctree-checkbox-2">
+   <i class="fas fa-chevron-down">
+   </i>
+  </label>
+  <ul>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../../../publishing/about/aims-and-scope.html">
+     Aims and Scope
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../../../publishing/about/review-benefits.html">
+     Benefits of Reviewing Notebooks
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../../../publishing/about/notebooks-technologies.html">
+     Technologies
+    </a>
+   </li>
+  </ul>
+ </li>
+ <li class="toctree-l1 has-children">
+  <a class="reference internal" href="../../../publishing/guidelines.html">
+   Guidelines
+  </a>
+  <input class="toctree-checkbox" id="toctree-checkbox-3" name="toctree-checkbox-3" type="checkbox"/>
+  <label for="toctree-checkbox-3">
+   <i class="fas fa-chevron-down">
+   </i>
+  </label>
+  <ul>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../../../publishing/guidelines/guidelines-authors.html">
+     Guide for Authors
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../../../publishing/guidelines/guidelines-reviewers.html">
+     Guide for Reviewers
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../../../publishing/guidelines/guidelines-editors.html">
+     Guide for Editors
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../../../publishing/guidelines/guidelines-eic.html">
+     Guide for Editor in Chief
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../../../publishing/guidelines/guidelines-community.html">
+     Guide for Community
+    </a>
+   </li>
+  </ul>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../../../publishing/faq.html">
+   FAQ
+  </a>
+ </li>
+</ul>
+<p aria-level="2" class="caption" role="heading">
+ <span class="caption-text">
+  Community
+ </span>
+</p>
+<ul class="nav bd-sidenav">
+ <li class="toctree-l1 has-children">
+  <a class="reference internal" href="../../../community/coworking.html">
+   Coworking Calls
+  </a>
+  <input class="toctree-checkbox" id="toctree-checkbox-4" name="toctree-checkbox-4" type="checkbox"/>
+  <label for="toctree-checkbox-4">
+   <i class="fas fa-chevron-down">
+   </i>
+  </label>
+  <ul>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../../../community/coworking/coworking-motivation.html">
+     Background, Motivations, and Techniques
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../../../community/coworking/coworking-collabcafe.html">
+     Online Collaboration Cafe
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../../../community/coworking/coworking-showtell.html">
+     Online Show and Tell
+    </a>
+   </li>
+  </ul>
+ </li>
+ <li class="toctree-l1 has-children">
+  <a class="reference internal" href="../../../community/notes.html">
+   Meeting Notes
+  </a>
+  <input class="toctree-checkbox" id="toctree-checkbox-5" name="toctree-checkbox-5" type="checkbox"/>
+  <label for="toctree-checkbox-5">
+   <i class="fas fa-chevron-down">
+   </i>
+  </label>
+  <ul>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../../../community/notes/notes-collabcafe.html">
+     <em>
+      The Environmental Data Science
+     </em>
+     ⛰ 🌳 🏙️ ❄️ 🔥 🌊  online Collaboration Cafe
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../../../community/notes/notes-journalclub.html">
+     Online Journal Club
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../../../community/notes/notes-showtell.html">
+     Online Show and Tell
+    </a>
+   </li>
+  </ul>
+ </li>
+ <li class="toctree-l1 has-children">
+  <a class="reference internal" href="../../../community/templates.html">
+   Template Collection
+  </a>
+  <input class="toctree-checkbox" id="toctree-checkbox-6" name="toctree-checkbox-6" type="checkbox"/>
+  <label for="toctree-checkbox-6">
+   <i class="fas fa-chevron-down">
+   </i>
+  </label>
+  <ul>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../../../community/templates/template-coworking-collabcafe.html">
+     Online Collaboration Cafe
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../../../community/templates/template-coworking-journalclub.html">
+     Online Journal Club
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../../../community/templates/template-coworking-showtell.html">
+     Online Show and Tell
+    </a>
+   </li>
+  </ul>
+ </li>
+</ul>
+<p aria-level="2" class="caption" role="heading">
+ <span class="caption-text">
+  Afterword
+ </span>
+</p>
+<ul class="nav bd-sidenav">
+ <li class="toctree-l1">
+  <a class="reference internal" href="../../../afterword/bibliography.html">
+   Bibliography
+  </a>
+ </li>
+</ul>
+
+    </div>
+</nav> <!-- To handle the deprecated key -->
+
+<div class="navbar_extra_footer">
+  Powered by <a href="https://jupyterbook.org">Jupyter Book</a>
+</div>
+
+</div>
+
+
+          
+
+
+          
+<main class="col py-md-3 pl-md-4 bd-content overflow-auto" role="main">
+    
+    <div class="topbar container-xl fixed-top">
+    <div class="topbar-contents row">
+        <div class="col-12 col-md-3 bd-topbar-whitespace site-navigation show"></div>
+        <div class="col pl-md-4 topbar-main">
+            
+            <button id="navbar-toggler" class="navbar-toggler ml-0" type="button" data-toggle="collapse"
+                data-toggle="tooltip" data-placement="bottom" data-target=".site-navigation" aria-controls="navbar-menu"
+                aria-expanded="true" aria-label="Toggle navigation" aria-controls="site-navigation"
+                title="Toggle navigation" data-toggle="tooltip" data-placement="left">
+                <i class="fas fa-bars"></i>
+                <i class="fas fa-arrow-left"></i>
+                <i class="fas fa-arrow-up"></i>
+            </button>
+            
+            
+<div class="dropdown-buttons-trigger">
+    <button id="dropdown-buttons-trigger" class="btn btn-secondary topbarbtn" aria-label="Download this page"><i
+            class="fas fa-download"></i></button>
+
+    <div class="dropdown-buttons">
+        <!-- ipynb file if we had a myst markdown file -->
+        
+        <!-- Download raw file -->
+        <a class="dropdown-buttons" href="../../../_sources/notebooks/gallery/bc30df18-fce2-42fa-aade-1ce5b7f3ca3c/notebook.ipynb"><button type="button"
+                class="btn btn-secondary topbarbtn" title="Download source file" data-toggle="tooltip"
+                data-placement="left">.ipynb</button></a>
+        <!-- Download PDF via print -->
+        <button type="button" id="download-print" class="btn btn-secondary topbarbtn" title="Print to PDF"
+                onclick="printPdf(this)" data-toggle="tooltip" data-placement="left">.pdf</button>
+    </div>
+</div>
+
+            <!-- Source interaction buttons -->
+
+<div class="dropdown-buttons-trigger">
+    <button id="dropdown-buttons-trigger" class="btn btn-secondary topbarbtn"
+        aria-label="Connect with source repository"><i class="fab fa-github"></i></button>
+    <div class="dropdown-buttons sourcebuttons">
+        <a class="repository-button"
+            href="https://github.com/alan-turing-institute/environmental-ds-book"><button type="button" class="btn btn-secondary topbarbtn"
+                data-toggle="tooltip" data-placement="left" title="Source repository"><i
+                    class="fab fa-github"></i>repository</button></a>
+        <a class="issues-button"
+            href="https://github.com/alan-turing-institute/environmental-ds-book/issues/new?title=Issue%20on%20page%20%2Fnotebooks/gallery/bc30df18-fce2-42fa-aade-1ce5b7f3ca3c/notebook.html&body=Your%20issue%20content%20here."><button
+                type="button" class="btn btn-secondary topbarbtn" data-toggle="tooltip" data-placement="left"
+                title="Open an issue"><i class="fas fa-lightbulb"></i>open issue</button></a>
+        <a class="edit-button" href="https://github.com/alan-turing-institute/environmental-ds-book/edit/master/book/notebooks/gallery/bc30df18-fce2-42fa-aade-1ce5b7f3ca3c/notebook.ipynb"><button
+                type="button" class="btn btn-secondary topbarbtn" data-toggle="tooltip" data-placement="left"
+                title="Edit this page"><i class="fas fa-pencil-alt"></i>suggest edit</button></a>
+    </div>
+</div>
+
+            <!-- Full screen (wrap in <a> to have style consistency -->
+
+<a class="full-screen-button"><button type="button" class="btn btn-secondary topbarbtn" data-toggle="tooltip"
+        data-placement="bottom" onclick="toggleFullScreen()" aria-label="Fullscreen mode"
+        title="Fullscreen mode"><i
+            class="fas fa-expand"></i></button></a>
+
+            <!-- Launch buttons -->
+
+        </div>
+
+        <!-- Table of contents -->
+        <div class="d-none d-md-block col-md-2 bd-toc show noprint">
+            
+            <div class="tocsection onthispage pt-5 pb-3">
+                <i class="fas fa-list"></i> Contents
+            </div>
+            <nav id="bd-toc-nav" aria-label="Page">
+                <ul class="visible nav section-nav flex-column">
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#context">
+   Context
+  </a>
+  <ul class="nav section-nav flex-column">
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#purpose">
+     Purpose
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#sensor-description">
+     Sensor description
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#highlights">
+     Highlights
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#contributions">
+     Contributions
+    </a>
+    <ul class="nav section-nav flex-column">
+     <li class="toc-h4 nav-item toc-entry">
+      <a class="reference internal nav-link" href="#notebook">
+       Notebook
+      </a>
+     </li>
+     <li class="toc-h4 nav-item toc-entry">
+      <a class="reference internal nav-link" href="#dataset-originator-creator">
+       Dataset originator/creator
+      </a>
+      <ul class="nav section-nav flex-column">
+       <li class="toc-h5 nav-item toc-entry">
+        <a class="reference internal nav-link" href="#seviri-level-1-5-image-data-msg-0-degree">
+         SEVIRI Level 1.5 Image Data - MSG - 0 degree
+        </a>
+       </li>
+       <li class="toc-h5 nav-item toc-entry">
+        <a class="reference internal nav-link" href="#frppixel">
+         FRPPIXEL
+        </a>
+       </li>
+      </ul>
+     </li>
+     <li class="toc-h4 nav-item toc-entry">
+      <a class="reference internal nav-link" href="#dataset-authors">
+       Dataset authors
+      </a>
+      <ul class="nav section-nav flex-column">
+       <li class="toc-h5 nav-item toc-entry">
+        <a class="reference internal nav-link" href="#id1">
+         SEVIRI Level 1.5 Image Data - MSG - 0 degree
+        </a>
+       </li>
+       <li class="toc-h5 nav-item toc-entry">
+        <a class="reference internal nav-link" href="#id2">
+         FRPPIXEL
+        </a>
+       </li>
+      </ul>
+     </li>
+     <li class="toc-h4 nav-item toc-entry">
+      <a class="reference internal nav-link" href="#dataset-documentation">
+       Dataset documentation
+      </a>
+     </li>
+    </ul>
+   </li>
+  </ul>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#install-and-load-libraries">
+   Install and load libraries
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#set-project-structure">
+   Set project structure
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#fetch-data">
+   Fetch Data
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#load-seviri-satellite-data">
+   Load SEVIRI Satellite Data
+  </a>
+  <ul class="nav section-nav flex-column">
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#resample-to-a-different-projection">
+     Resample to a different projection
+    </a>
+   </li>
+  </ul>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#load-seviri-fire-database">
+   Load SEVIRI Fire Database
+  </a>
+  <ul class="nav section-nav flex-column">
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#geographical-distribution-of-fires">
+     Geographical distribution of Fires
+    </a>
+   </li>
+  </ul>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#visualising-fire-pixels-with-satellite-imagery">
+   Visualising Fire Pixels with Satellite Imagery
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#summary">
+   Summary
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#citing-this-notebook">
+   Citing this Notebook
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#additional-information">
+   Additional information
+  </a>
+ </li>
+</ul>
+
+            </nav>
+        </div>
+    </div>
+</div>
+    <div id="main-content" class="row">
+        <div class="col-12 col-md-9 pl-md-3 pr-md-0">
+            <!-- Table of contents that is only displayed when printing the page -->
+            <div id="jb-print-docs-body" class="onlyprint">
+                <h1>SEVIRI Level 1.5</h1>
+                <!-- Table of contents -->
+                <div id="print-main-content">
+                    <div id="jb-print-toc">
+                        
+                        <div>
+                            <h2> Contents </h2>
+                        </div>
+                        <nav aria-label="Page">
+                            <ul class="visible nav section-nav flex-column">
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#context">
+   Context
+  </a>
+  <ul class="nav section-nav flex-column">
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#purpose">
+     Purpose
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#sensor-description">
+     Sensor description
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#highlights">
+     Highlights
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#contributions">
+     Contributions
+    </a>
+    <ul class="nav section-nav flex-column">
+     <li class="toc-h4 nav-item toc-entry">
+      <a class="reference internal nav-link" href="#notebook">
+       Notebook
+      </a>
+     </li>
+     <li class="toc-h4 nav-item toc-entry">
+      <a class="reference internal nav-link" href="#dataset-originator-creator">
+       Dataset originator/creator
+      </a>
+      <ul class="nav section-nav flex-column">
+       <li class="toc-h5 nav-item toc-entry">
+        <a class="reference internal nav-link" href="#seviri-level-1-5-image-data-msg-0-degree">
+         SEVIRI Level 1.5 Image Data - MSG - 0 degree
+        </a>
+       </li>
+       <li class="toc-h5 nav-item toc-entry">
+        <a class="reference internal nav-link" href="#frppixel">
+         FRPPIXEL
+        </a>
+       </li>
+      </ul>
+     </li>
+     <li class="toc-h4 nav-item toc-entry">
+      <a class="reference internal nav-link" href="#dataset-authors">
+       Dataset authors
+      </a>
+      <ul class="nav section-nav flex-column">
+       <li class="toc-h5 nav-item toc-entry">
+        <a class="reference internal nav-link" href="#id1">
+         SEVIRI Level 1.5 Image Data - MSG - 0 degree
+        </a>
+       </li>
+       <li class="toc-h5 nav-item toc-entry">
+        <a class="reference internal nav-link" href="#id2">
+         FRPPIXEL
+        </a>
+       </li>
+      </ul>
+     </li>
+     <li class="toc-h4 nav-item toc-entry">
+      <a class="reference internal nav-link" href="#dataset-documentation">
+       Dataset documentation
+      </a>
+     </li>
+    </ul>
+   </li>
+  </ul>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#install-and-load-libraries">
+   Install and load libraries
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#set-project-structure">
+   Set project structure
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#fetch-data">
+   Fetch Data
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#load-seviri-satellite-data">
+   Load SEVIRI Satellite Data
+  </a>
+  <ul class="nav section-nav flex-column">
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#resample-to-a-different-projection">
+     Resample to a different projection
+    </a>
+   </li>
+  </ul>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#load-seviri-fire-database">
+   Load SEVIRI Fire Database
+  </a>
+  <ul class="nav section-nav flex-column">
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#geographical-distribution-of-fires">
+     Geographical distribution of Fires
+    </a>
+   </li>
+  </ul>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#visualising-fire-pixels-with-satellite-imagery">
+   Visualising Fire Pixels with Satellite Imagery
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#summary">
+   Summary
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#citing-this-notebook">
+   Citing this Notebook
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#additional-information">
+   Additional information
+  </a>
+ </li>
+</ul>
+
+                        </nav>
+                    </div>
+                </div>
+            </div>
+            
+              <div>
+                
+  <div class="tex2jax_ignore mathjax_ignore section" id="seviri-level-1-5">
+<h1>SEVIRI Level 1.5<a class="headerlink" href="#seviri-level-1-5" title="Permalink to this headline">¶</a></h1>
+<p><svg version="1.1" width="16" height="16" class="octicon octicon-tag" viewBox="0 0 16 16" aria-hidden="true"><path fill-rule="evenodd" d="M2.5 7.775V2.75a.25.25 0 01.25-.25h5.025a.25.25 0 01.177.073l6.25 6.25a.25.25 0 010 .354l-5.025 5.025a.25.25 0 01-.354 0l-6.25-6.25a.25.25 0 01-.073-.177zm-1.5 0V2.75C1 1.784 1.784 1 2.75 1h5.025c.464 0 .91.184 1.238.513l6.25 6.25a1.75 1.75 0 010 2.474l-5.026 5.026a1.75 1.75 0 01-2.474 0l-6.25-6.25A1.75 1.75 0 011 7.775zM6 5a1 1 0 100 2 1 1 0 000-2z"></path></svg>
+<span class="sd-sphinx-override sd-badge sd-bg-primary sd-bg-text-primary">Wildfires</span>
+<span class="sd-sphinx-override sd-badge sd-bg-secondary sd-bg-text-secondary">Exploration</span>
+<span class="sd-sphinx-override sd-badge sd-bg-warning sd-bg-text-warning">Regular</span>
+<span class="sd-sphinx-override sd-badge sd-bg-info sd-bg-text-info">Python</span></p>
+<p><a class="reference external" href="https://w3id.org/ro-id/bc30df18-fce2-42fa-aade-1ce5b7f3ca3c"><img alt="RoHub - FAIR Executable Research Object" src="https://img.shields.io/badge/RoHub-FAIR_Executable_Research_Object-2ea44f?logo=Open+Access&amp;logoColor=blue" /></a></p>
+<p><a class="reference external" href="https://notebooks.gesis.org/binder/v2/gh/eds-book-gallery/bc30df18-fce2-42fa-aade-1ce5b7f3ca3c/main?labpath=notebook.ipynb"><img alt="Binder" src="https://mybinder.org/badge_logo.svg" /></a></p>
+<p><a class="reference external" href="https://doi.org/10.24424/w9n8-r354"><img alt="DOI" src="https://zenodo.org/badge/DOI/10.24424/w9n8-r354.svg" /></a></p>
+<div class="section" id="context">
+<h2>Context<a class="headerlink" href="#context" title="Permalink to this headline">¶</a></h2>
+<div class="section" id="purpose">
+<h3>Purpose<a class="headerlink" href="#purpose" title="Permalink to this headline">¶</a></h3>
+<p>Explore <a class="reference external" href="https://www.eumetsat.int/seviri">SEVIRI</a> satellite imagery and wildfire data that is open and free for scientific use.</p>
+</div>
+<div class="section" id="sensor-description">
+<h3>Sensor description<a class="headerlink" href="#sensor-description" title="Permalink to this headline">¶</a></h3>
+<p>The <a class="reference external" href="https://data.eumetsat.int/data/map/EO:EUM:DAT:MSG:HRSEVIRI">SEVIRI Level 1.5 Image Data</a> product contains provides 12 spectral channels. Level 1.5 image data corresponds to the geolocated and radiometrically pre-processed image data, ready for further processing, e.g. the extraction of meteorological products.</p>
+</div>
+<div class="section" id="highlights">
+<h3>Highlights<a class="headerlink" href="#highlights" title="Permalink to this headline">¶</a></h3>
+<ul class="simple">
+<li><p>Use <code class="docutils literal notranslate"><span class="pre">satpy</span></code> to load, visualise, and regrid SEVIRI level 1.5 data.</p></li>
+<li><p>Fetch a fire database containing some 8080 fires from September 1st, 2020.</p></li>
+<li><p>Visualisation of fire pixels from the database.</p></li>
+<li><p>Visualisation of the fire pixels alongside bands from the SEVIRI satellite data.</p></li>
+<li><p>Demonstration of how to write a custom <code class="docutils literal notranslate"><span class="pre">intake</span></code> driver for <code class="docutils literal notranslate"><span class="pre">satpy</span></code>.</p></li>
+</ul>
+</div>
+<div class="section" id="contributions">
+<h3>Contributions<a class="headerlink" href="#contributions" title="Permalink to this headline">¶</a></h3>
+<div class="section" id="notebook">
+<h4>Notebook<a class="headerlink" href="#notebook" title="Permalink to this headline">¶</a></h4>
+<ul class="simple">
+<li><p>Samuel Jackson (author), Science &amp; Technology Facilities Council, <a class="reference external" href="https://github.com/samueljackson92">&#64;samueljackson92</a></p></li>
+<li><p>Alejandro Coca-Castro (reviewer), The Alan Turing Institute, <a class="reference external" href="https://github.com/acocac">&#64;acocac</a></p></li>
+</ul>
+</div>
+<div class="section" id="dataset-originator-creator">
+<h4>Dataset originator/creator<a class="headerlink" href="#dataset-originator-creator" title="Permalink to this headline">¶</a></h4>
+<div class="section" id="seviri-level-1-5-image-data-msg-0-degree">
+<h5>SEVIRI Level 1.5 Image Data - MSG - 0 degree<a class="headerlink" href="#seviri-level-1-5-image-data-msg-0-degree" title="Permalink to this headline">¶</a></h5>
+<ul class="simple">
+<li><p>European Organisation for the Exploitation of Meteorological Satellites (EUMETSAT)</p></li>
+</ul>
+</div>
+<div class="section" id="frppixel">
+<h5>FRPPIXEL<a class="headerlink" href="#frppixel" title="Permalink to this headline">¶</a></h5>
+<ul class="simple">
+<li><p>Land Surface Analysis, Satellite Application Facility on Land Surface Analysis (LSA SAF)</p></li>
+</ul>
+</div>
+</div>
+<div class="section" id="dataset-authors">
+<h4>Dataset authors<a class="headerlink" href="#dataset-authors" title="Permalink to this headline">¶</a></h4>
+<div class="section" id="id1">
+<h5>SEVIRI Level 1.5 Image Data - MSG - 0 degree<a class="headerlink" href="#id1" title="Permalink to this headline">¶</a></h5>
+<ul class="simple">
+<li><p>European Organisation for the Exploitation of Meteorological Satellites (EUMETSAT)</p></li>
+</ul>
+</div>
+<div class="section" id="id2">
+<h5>FRPPIXEL<a class="headerlink" href="#id2" title="Permalink to this headline">¶</a></h5>
+<ul class="simple">
+<li><p>Land Surface Analysis, Satellite Application Facility on Land Surface Analysis (LSA SAF)</p></li>
+</ul>
+</div>
+</div>
+<div class="section" id="dataset-documentation">
+<h4>Dataset documentation<a class="headerlink" href="#dataset-documentation" title="Permalink to this headline">¶</a></h4>
+<div class="docutils container" id="id3">
+<ul class="simple">
+<li id="id17"><p>Martin Wooster, Jiangping He, Weidong Xu, and Alessio Lattanzio. Frp - product user manual. URL: <a class="reference external" href="https://nextcloud.lsasvcs.ipma.pt/s/pnDEepeq8zqRyrq">https://nextcloud.lsasvcs.ipma.pt/s/pnDEepeq8zqRyrq</a> (visited on 2021-11-18).</p></li>
+<li id="id16"><p>MJ Wooster, G Roberts, PH Freeborn, W Xu, Y Govaerts, R Beeby, J He, A Lattanzio, D Fisher, and R Mullen. Lsa saf meteosat frp products–part 1: algorithms, product contents, and analysis. <em>Atmospheric Chemistry and Physics</em>, 15(22):13217–13239, 2015.</p></li>
+</ul>
+</div>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>The author acknowledges <a class="reference external" href="https://www.eumetsat.int">EUMETSAT</a>.</p>
+</div>
+</div>
+</div>
+</div>
+<div class="section" id="install-and-load-libraries">
+<h2>Install and load libraries<a class="headerlink" href="#install-and-load-libraries" title="Permalink to this headline">¶</a></h2>
+<div class="cell tag_hide-input docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="o">!</span>pip<span class="w"> </span>-q<span class="w"> </span>install<span class="w"> </span>pyspectral
+<span class="o">!</span>pip<span class="w"> </span>-q<span class="w"> </span>install<span class="w"> </span><span class="s1">&#39;satpy==0.26.0&#39;</span>
+<span class="o">!</span>pip<span class="w"> </span>-q<span class="w"> </span>install<span class="w"> </span>pyorbital
+<span class="o">!</span>pip<span class="w"> </span>-q<span class="w"> </span>install<span class="w"> </span>geopandas
+<span class="o">!</span>pip<span class="w"> </span>-q<span class="w"> </span>install<span class="w"> </span>geoviews
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell tag_hide-input docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">pandas</span> <span class="k">as</span> <span class="nn">pd</span>
+<span class="kn">import</span> <span class="nn">numpy</span> <span class="k">as</span> <span class="nn">np</span>
+<span class="kn">import</span> <span class="nn">geopandas</span>
+<span class="kn">import</span> <span class="nn">intake</span>
+<span class="kn">import</span> <span class="nn">fsspec</span><span class="o">,</span> <span class="nn">aiohttp</span>
+<span class="kn">import</span> <span class="nn">hvplot.xarray</span>
+<span class="kn">import</span> <span class="nn">hvplot.pandas</span>
+<span class="kn">import</span> <span class="nn">holoviews</span> <span class="k">as</span> <span class="nn">hv</span>
+<span class="kn">import</span> <span class="nn">panel</span> <span class="k">as</span> <span class="nn">pn</span>
+<span class="kn">import</span> <span class="nn">satpy</span>
+<span class="kn">import</span> <span class="nn">xarray</span> <span class="k">as</span> <span class="nn">xr</span>
+<span class="kn">import</span> <span class="nn">tempfile</span>
+<span class="kn">from</span> <span class="nn">scipy.spatial</span> <span class="kn">import</span> <span class="n">cKDTree</span>
+<span class="kn">from</span> <span class="nn">satpy.writers</span> <span class="kn">import</span> <span class="n">get_enhanced_image</span>
+<span class="kn">from</span> <span class="nn">getpass</span> <span class="kn">import</span> <span class="n">getpass</span>
+<span class="kn">from</span> <span class="nn">pathlib</span> <span class="kn">import</span> <span class="n">Path</span>
+<span class="kn">from</span> <span class="nn">pyresample</span> <span class="kn">import</span> <span class="n">geometry</span>
+<span class="kn">from</span> <span class="nn">pyresample</span> <span class="kn">import</span> <span class="n">create_area_def</span>
+<span class="kn">import</span> <span class="nn">datetime</span>
+<span class="kn">import</span> <span class="nn">urllib.request</span>
+<span class="kn">import</span> <span class="nn">os.path</span>
+<span class="kn">import</span> <span class="nn">requests</span>
+<span class="kn">from</span> <span class="nn">pathlib</span> <span class="kn">import</span> <span class="n">Path</span>
+<span class="kn">from</span> <span class="nn">dotenv</span> <span class="kn">import</span> <span class="n">load_dotenv</span>
+<span class="kn">import</span> <span class="nn">warnings</span>
+<span class="n">warnings</span><span class="o">.</span><span class="n">filterwarnings</span><span class="p">(</span><span class="n">action</span><span class="o">=</span><span class="s1">&#39;ignore&#39;</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+</div>
+</div>
+<div class="section" id="set-project-structure">
+<h2>Set project structure<a class="headerlink" href="#set-project-structure" title="Permalink to this headline">¶</a></h2>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">notebook_folder</span> <span class="o">=</span> <span class="n">Path</span><span class="p">(</span><span class="s1">&#39;./notebook&#39;</span><span class="p">)</span>
+<span class="k">if</span> <span class="ow">not</span> <span class="n">notebook_folder</span><span class="o">.</span><span class="n">exists</span><span class="p">():</span>
+    <span class="n">notebook_folder</span><span class="o">.</span><span class="n">mkdir</span><span class="p">(</span><span class="n">exist_ok</span><span class="o">=</span><span class="kc">True</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+</div>
+</div>
+<div class="section" id="fetch-data">
+<h2>Fetch Data<a class="headerlink" href="#fetch-data" title="Permalink to this headline">¶</a></h2>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>To download data from the <a class="reference external" href="https://data.eumetsat.int/data/map/EO:EUM:DAT:MSG:HRSEVIRI">EUMETSAT’s Data site</a> you must have a valid account. Please register with EUMETSAT’s data sevices if you do not already have an account. Then provide your consumer key and consumer secret when prompted in the cell below. Your consumer key and consumer secret can be found at the following url: <a class="reference external" href="https://api.eumetsat.int/api-key/">https://api.eumetsat.int/api-key/</a></p>
+<p>Now you should successfully be able to download SEVIRI data.</p>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">file_path</span> <span class="o">=</span> <span class="n">notebook_folder</span> <span class="o">/</span> <span class="s1">&#39;MSG4-SEVI-MSG15-0100-NA-20200901104243.230000000Z-NA.nat&#39;</span>
+
+<span class="k">if</span> <span class="ow">not</span> <span class="n">file_path</span><span class="o">.</span><span class="n">is_file</span><span class="p">()</span> <span class="ow">or</span> <span class="n">file_path</span><span class="o">.</span><span class="n">stat</span><span class="p">()</span><span class="o">.</span><span class="n">st_size</span>  <span class="o">==</span> <span class="mi">0</span><span class="p">:</span>
+    <span class="n">load_dotenv</span><span class="p">()</span>
+    <span class="n">consumer_key</span> <span class="o">=</span> <span class="n">os</span><span class="o">.</span><span class="n">environ</span><span class="o">.</span><span class="n">get</span><span class="p">(</span><span class="s2">&quot;EUMESAT_API_KEY&quot;</span><span class="p">)</span> <span class="c1">#replace for your EUMESAT consumer key if run local or in Binder</span>
+    <span class="n">consumer_secret</span> <span class="o">=</span> <span class="n">os</span><span class="o">.</span><span class="n">environ</span><span class="o">.</span><span class="n">get</span><span class="p">(</span><span class="s2">&quot;EUMESAT_API_SECRET&quot;</span><span class="p">)</span> <span class="c1">#replace for your EUMESAT consumer secret if run local or in Binder</span>
+
+    <span class="n">token_url</span> <span class="o">=</span> <span class="s1">&#39;https://api.eumetsat.int/token&#39;</span>
+    <span class="n">response</span> <span class="o">=</span> <span class="n">requests</span><span class="o">.</span><span class="n">post</span><span class="p">(</span>
+            <span class="n">token_url</span><span class="p">,</span>
+            <span class="n">auth</span><span class="o">=</span><span class="n">requests</span><span class="o">.</span><span class="n">auth</span><span class="o">.</span><span class="n">HTTPBasicAuth</span><span class="p">(</span><span class="n">consumer_key</span><span class="p">,</span> <span class="n">consumer_secret</span><span class="p">),</span>
+            <span class="n">data</span> <span class="o">=</span> <span class="p">{</span><span class="s1">&#39;grant_type&#39;</span><span class="p">:</span> <span class="s1">&#39;client_credentials&#39;</span><span class="p">},</span>
+            <span class="n">headers</span> <span class="o">=</span> <span class="p">{</span><span class="s2">&quot;Content-Type&quot;</span> <span class="p">:</span> <span class="s2">&quot;application/x-www-form-urlencoded&quot;</span><span class="p">}</span>
+        <span class="p">)</span>
+
+    <span class="n">access_token</span> <span class="o">=</span> <span class="n">response</span><span class="o">.</span><span class="n">json</span><span class="p">()[</span><span class="s1">&#39;access_token&#39;</span><span class="p">]</span>
+
+    <span class="n">filename</span> <span class="o">=</span> <span class="s1">&#39;MSG4-SEVI-MSG15-0100-NA-20200901104243.230000000Z-NA.nat&#39;</span>
+
+    <span class="n">product_url</span> <span class="o">=</span> <span class="s1">&#39;https://api.eumetsat.int/data/download/collections/EO%3AEUM%3ADAT%3AMSG%3AHRSEVIRI/products/MSG4-SEVI-MSG15-0100-NA-20200901104243.230000000Z-NA/entry&#39;</span>
+    <span class="n">product_url</span> <span class="o">+=</span> <span class="sa">f</span><span class="s1">&#39;?name=</span><span class="si">{</span><span class="n">filename</span><span class="si">}</span><span class="s1">&#39;</span>
+    <span class="n">product_url</span> <span class="o">+=</span> <span class="sa">f</span><span class="s1">&#39;&amp;access_token=</span><span class="si">{</span><span class="n">access_token</span><span class="si">}</span><span class="s1">&#39;</span>
+
+    <span class="n">urllib</span><span class="o">.</span><span class="n">request</span><span class="o">.</span><span class="n">urlretrieve</span><span class="p">(</span><span class="n">product_url</span><span class="p">,</span> <span class="nb">str</span><span class="p">(</span><span class="n">file_path</span><span class="p">))</span>
+</pre></div>
+</div>
+</div>
+</div>
+<p>Download the fire pixel data for this day from Zenodo. This data is not directly downloadable from the internet, so we share a subset of fires for this imagery here.</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">filename</span> <span class="o">=</span> <span class="s1">&#39;HDF5_LSASAF_MSG_FRP-PIXEL-ListProduct_MSG-Disk_202009011045&#39;</span>
+<span class="n">file_path</span> <span class="o">=</span> <span class="n">notebook_folder</span> <span class="o">/</span> <span class="n">filename</span>
+<span class="n">url</span> <span class="o">=</span> <span class="sa">f</span><span class="s1">&#39;https://zenodo.org/record/5717106/files/</span><span class="si">{</span><span class="n">filename</span><span class="si">}</span><span class="s1">?download=1&#39;</span>
+
+<span class="k">if</span> <span class="ow">not</span> <span class="n">file_path</span><span class="o">.</span><span class="n">is_file</span><span class="p">()</span> <span class="ow">or</span> <span class="n">file_path</span><span class="o">.</span><span class="n">stat</span><span class="p">()</span><span class="o">.</span><span class="n">st_size</span>  <span class="o">==</span> <span class="mi">0</span><span class="p">:</span>
+    <span class="n">urllib</span><span class="o">.</span><span class="n">request</span><span class="o">.</span><span class="n">urlretrieve</span><span class="p">(</span><span class="n">url</span><span class="p">,</span> <span class="n">file_path</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+</div>
+<p>Load an intake catalog for the downloaded data</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">catalog_file</span> <span class="o">=</span> <span class="n">notebook_folder</span> <span class="o">/</span> <span class="s1">&#39;catalog.yaml&#39;</span>
+
+<span class="k">with</span> <span class="n">catalog_file</span><span class="o">.</span><span class="n">open</span><span class="p">(</span><span class="s1">&#39;w&#39;</span><span class="p">)</span> <span class="k">as</span> <span class="n">f</span><span class="p">:</span>
+    <span class="n">f</span><span class="o">.</span><span class="n">write</span><span class="p">(</span><span class="s1">&#39;&#39;&#39;</span>
+<span class="s1">sources:</span>
+<span class="s1">    seviri_l1b:</span>
+<span class="s1">      args:</span>
+<span class="s1">        urlpath: &#39;notebook/MSG4-SEVI-MSG15-0100-NA-20200901104243.230000000Z-NA.nat&#39;</span>
+<span class="s1">        reader: &#39;seviri_l1b_native&#39;</span>
+<span class="s1">      description: &quot;SEVIRI Level 1.5 Products&quot;</span>
+<span class="s1">      driver: SatpySource</span>
+<span class="s1">      metadata: </span><span class="si">{}</span>
+<span class="s1">    seviri_fires:</span>
+<span class="s1">      args:</span>
+<span class="s1">        urlpath: &#39;notebook/HDF5_LSASAF_MSG_FRP-PIXEL-ListProduct_MSG-Disk_202009011045&#39;</span>
+<span class="s1">      description: &quot;SEVIRI Level 2 Fires&quot;</span>
+<span class="s1">      driver: netcdf</span>
+<span class="s1">      metadata: </span><span class="si">{}</span>
+<span class="s1">&#39;&#39;&#39;</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="kn">from</span> <span class="nn">intake.source.base</span> <span class="kn">import</span> <span class="n">PatternMixin</span>
+<span class="kn">from</span> <span class="nn">intake.source.base</span> <span class="kn">import</span> <span class="n">DataSource</span><span class="p">,</span> <span class="n">Schema</span>
+
+<span class="kn">import</span> <span class="nn">glob</span>
+
+<span class="k">class</span> <span class="nc">SatpySource</span><span class="p">(</span><span class="n">DataSource</span><span class="p">,</span> <span class="n">PatternMixin</span><span class="p">):</span>
+<span class="w">    </span><span class="sd">&quot;&quot;&quot;Intake driver for data supported by satpy.Scene&quot;&quot;&quot;</span>
+    
+    <span class="n">container</span> <span class="o">=</span> <span class="s1">&#39;python&#39;</span>
+    <span class="n">name</span> <span class="o">=</span> <span class="s1">&#39;satpy&#39;</span>
+    <span class="n">version</span> <span class="o">=</span> <span class="s1">&#39;0.0.1&#39;</span>
+    <span class="n">partition_access</span> <span class="o">=</span> <span class="kc">False</span>
+
+    <span class="k">def</span> <span class="fm">__init__</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">urlpath</span><span class="p">,</span> <span class="n">reader</span><span class="o">=</span><span class="kc">None</span><span class="p">,</span> <span class="n">metadata</span><span class="o">=</span><span class="kc">None</span><span class="p">,</span> <span class="n">path_as_pattern</span><span class="o">=</span><span class="kc">True</span><span class="p">):</span>
+<span class="w">        </span><span class="sd">&quot;&quot;&quot;</span>
+<span class="sd">        Parameters</span>
+<span class="sd">        ----------</span>
+<span class="sd">        path: str, location of model pkl file</span>
+<span class="sd">        Either the absolute or relative path to the file</span>
+<span class="sd">        opened. Some examples:</span>
+<span class="sd">          - ``{{ CATALOG_DIR }}/file.nat``</span>
+<span class="sd">          - ``{{ CATALOG_DIR }}/*.nc``</span>
+<span class="sd">        reader: str, optional</span>
+<span class="sd">        Name of the satpy reader to use when loading data (ie. ``modis_l1b``)</span>
+<span class="sd">        metadata: dict, optional</span>
+<span class="sd">        Additional metadata to pass to the intake catalog</span>
+<span class="sd">        path_as_pattern: bool or str, optional</span>
+<span class="sd">        Whether to treat the path as a pattern (ie. ``data_{field}.nc``)</span>
+<span class="sd">        and create new coodinates in the output corresponding to pattern</span>
+<span class="sd">        fields. If str, is treated as pattern to match on. Default is True.</span>
+<span class="sd">        &quot;&quot;&quot;</span>
+
+        <span class="bp">self</span><span class="o">.</span><span class="n">path_as_pattern</span> <span class="o">=</span> <span class="n">path_as_pattern</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">urlpath</span> <span class="o">=</span> <span class="n">urlpath</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">_reader</span> <span class="o">=</span> <span class="n">reader</span>
+        <span class="nb">super</span><span class="p">(</span><span class="n">SatpySource</span><span class="p">,</span> <span class="bp">self</span><span class="p">)</span><span class="o">.</span><span class="fm">__init__</span><span class="p">(</span><span class="n">metadata</span><span class="o">=</span><span class="n">metadata</span><span class="p">)</span>
+
+    <span class="k">def</span> <span class="nf">_load</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+        <span class="n">files</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">urlpath</span>
+        <span class="n">files</span> <span class="o">=</span> <span class="nb">list</span><span class="p">(</span><span class="n">glob</span><span class="o">.</span><span class="n">glob</span><span class="p">(</span><span class="n">files</span><span class="p">))</span>
+        <span class="k">return</span> <span class="n">satpy</span><span class="o">.</span><span class="n">Scene</span><span class="p">(</span><span class="n">files</span><span class="p">,</span> <span class="n">reader</span><span class="o">=</span><span class="bp">self</span><span class="o">.</span><span class="n">_reader</span><span class="p">)</span>
+    
+    <span class="k">def</span> <span class="nf">_get_schema</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">_schema</span> <span class="o">=</span> <span class="n">Schema</span><span class="p">(</span>
+            <span class="n">npartitions</span><span class="o">=</span><span class="mi">1</span><span class="p">,</span>
+            <span class="n">extra_metadata</span><span class="o">=</span><span class="p">{}</span>
+        <span class="p">)</span>
+        <span class="k">return</span> <span class="bp">self</span><span class="o">.</span><span class="n">_schema</span>
+
+    <span class="k">def</span> <span class="nf">read</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">_load_metadata</span><span class="p">()</span>
+        <span class="k">return</span> <span class="bp">self</span><span class="o">.</span><span class="n">_load</span><span class="p">()</span>
+
+<span class="n">intake</span><span class="o">.</span><span class="n">register_driver</span><span class="p">(</span><span class="s1">&#39;SatpySource&#39;</span><span class="p">,</span> <span class="n">SatpySource</span><span class="p">)</span>
+<span class="n">cat</span> <span class="o">=</span> <span class="n">intake</span><span class="o">.</span><span class="n">open_catalog</span><span class="p">(</span><span class="n">catalog_file</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+</div>
+</div>
+<div class="section" id="load-seviri-satellite-data">
+<h2>Load SEVIRI Satellite Data<a class="headerlink" href="#load-seviri-satellite-data" title="Permalink to this headline">¶</a></h2>
+<p>Here we use <code class="docutils literal notranslate"><span class="pre">satpy</span></code> to load the SEVIRI level 1b data into memory. As well as loading the image data, <code class="docutils literal notranslate"><span class="pre">satpy</span></code> provides a easy way to regrid the data to different coordinate systems.</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">scn</span> <span class="o">=</span> <span class="n">cat</span><span class="p">[</span><span class="s1">&#39;seviri_l1b&#39;</span><span class="p">]</span><span class="o">.</span><span class="n">read</span><span class="p">()</span>
+<span class="n">scn</span>
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell tag_hide-input docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">scn</span><span class="o">.</span><span class="n">load</span><span class="p">([</span><span class="s1">&#39;natural_color&#39;</span><span class="p">,</span> <span class="s1">&#39;IR_039&#39;</span><span class="p">,</span> <span class="s1">&#39;IR_108&#39;</span><span class="p">])</span>
+<span class="n">plot_seviri_raw</span> <span class="o">=</span> <span class="n">scn</span><span class="o">.</span><span class="n">show</span><span class="p">(</span><span class="s1">&#39;natural_color&#39;</span><span class="p">)</span>
+<span class="n">plot_seviri_raw</span>
+</pre></div>
+</div>
+</div>
+</div>
+<div class="section" id="resample-to-a-different-projection">
+<h3>Resample to a different projection<a class="headerlink" href="#resample-to-a-different-projection" title="Permalink to this headline">¶</a></h3>
+<p>In the plot above you can see that the raw SEVIRI data has distortion towards edge of the image. By regridding the data we can avoid some of this distortion.</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">area_id</span> <span class="o">=</span> <span class="s2">&quot;Southern Africa&quot;</span>
+<span class="n">description</span> <span class="o">=</span> <span class="s2">&quot;Southern Africa in Mercator-Projection&quot;</span>
+<span class="n">proj_id</span> <span class="o">=</span> <span class="s2">&quot;Southern Africa&quot;</span>
+<span class="n">proj_dict</span> <span class="o">=</span> <span class="p">{</span><span class="s2">&quot;proj&quot;</span><span class="p">:</span> <span class="s2">&quot;eqc&quot;</span><span class="p">}</span>
+
+<span class="n">width</span> <span class="o">=</span> <span class="mi">1000</span>    <span class="c1"># width of the result domain in pixels</span>
+<span class="n">height</span> <span class="o">=</span> <span class="mi">1000</span>   <span class="c1"># height of the result domain in pixels</span>
+
+<span class="n">llx</span> <span class="o">=</span>  <span class="mi">0</span>    <span class="c1"># projection x coordinate of lower left corner of lower left pixel</span>
+<span class="n">lly</span> <span class="o">=</span>  <span class="o">-</span><span class="mf">30e5</span>  <span class="c1"># projection y coordinate of lower left corner of lower left pixel</span>
+<span class="n">urx</span> <span class="o">=</span>  <span class="mf">55e5</span>   <span class="c1"># projection x coordinate of upper right corner of upper right pixel</span>
+<span class="n">ury</span> <span class="o">=</span>  <span class="mf">10e5</span>   <span class="c1"># projection y coordinate of upper right corner of upper right pixel</span>
+
+<span class="n">area_extent</span> <span class="o">=</span> <span class="p">(</span><span class="n">llx</span><span class="p">,</span><span class="n">lly</span><span class="p">,</span><span class="n">urx</span><span class="p">,</span><span class="n">ury</span><span class="p">)</span>
+
+<span class="n">resolution</span><span class="o">=</span><span class="mi">3000</span>
+<span class="n">center</span> <span class="o">=</span><span class="p">(</span><span class="mi">0</span><span class="p">,</span><span class="mi">0</span><span class="p">)</span>
+<span class="n">area_def</span> <span class="o">=</span> <span class="n">create_area_def</span><span class="p">(</span><span class="n">area_id</span><span class="p">,</span> <span class="n">proj_dict</span><span class="p">,</span> <span class="n">resolution</span><span class="o">=</span><span class="n">resolution</span><span class="p">,</span> <span class="n">area_extent</span><span class="o">=</span><span class="n">area_extent</span><span class="p">)</span>
+
+<span class="n">seviri_scn</span> <span class="o">=</span> <span class="n">scn</span><span class="o">.</span><span class="n">resample</span><span class="p">(</span><span class="n">area_def</span><span class="p">,</span> <span class="n">radius_of_influence</span><span class="o">=</span><span class="mi">10000</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell tag_hide-input docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">plot_seviri_scn</span> <span class="o">=</span> <span class="n">seviri_scn</span><span class="o">.</span><span class="n">show</span><span class="p">(</span><span class="s1">&#39;natural_color&#39;</span><span class="p">)</span>
+<span class="n">plot_seviri_scn</span>
+</pre></div>
+</div>
+</div>
+</div>
+</div>
+</div>
+<div class="section" id="load-seviri-fire-database">
+<h2>Load SEVIRI Fire Database<a class="headerlink" href="#load-seviri-fire-database" title="Permalink to this headline">¶</a></h2>
+<p>Now we’re going to load the SEVIRI fire database from HDF file. This contains the longitude, latitude, and time of where fires have been detected to occur. It also includes an estimate of the Fire Radiative Power (FRP), a measure of the intensity of the fire, for each fire detected.</p>
+<div class="cell tag_hide-input docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># Scale factors for the SEVIRI fire product from:</span>
+<span class="c1"># https://nextcloud.lsasvcs.ipma.pt/s/CZa8RwDxjGqYezS?dir=undefined&amp;openfile=105793</span>
+
+<span class="n">SCALE_FACTORS</span> <span class="o">=</span> <span class="nb">dict</span><span class="p">(</span>
+    <span class="n">FRP</span><span class="o">=</span><span class="mi">10</span><span class="p">,</span>
+    <span class="n">FRP_UNCERTAINTY</span><span class="o">=</span><span class="mi">100</span><span class="p">,</span>
+    <span class="n">ERR_FRP_COEFF</span><span class="o">=</span><span class="mi">10000</span><span class="p">,</span>
+    <span class="n">ERR_BACKGROUND</span><span class="o">=</span><span class="mi">10000</span><span class="p">,</span>
+    <span class="n">ERR_ATM_TRANS</span><span class="o">=</span><span class="mi">10000</span><span class="p">,</span>
+    <span class="n">ERR_VERT_COMP</span><span class="o">=</span><span class="mi">10000</span><span class="p">,</span>
+    <span class="n">ERR_RADIOMETRIC</span><span class="o">=</span><span class="mi">10000</span><span class="p">,</span>
+    <span class="n">LATITUDE</span><span class="o">=</span><span class="mi">100</span><span class="p">,</span>
+    <span class="n">LONGITUDE</span><span class="o">=</span><span class="mi">100</span><span class="p">,</span>
+    <span class="n">FIRE_CONFIDENCE</span><span class="o">=</span><span class="mi">100</span><span class="p">,</span>
+    <span class="n">BT_MIR</span><span class="o">=</span><span class="mi">10</span><span class="p">,</span>
+    <span class="n">BT_TIR</span><span class="o">=</span><span class="mi">10</span><span class="p">,</span>
+    <span class="n">BW_BT_MIR</span><span class="o">=</span><span class="mi">10</span><span class="p">,</span>
+    <span class="n">BW_BTD</span><span class="o">=</span><span class="mi">10</span><span class="p">,</span>
+    <span class="n">PIXEL_SIZE</span><span class="o">=</span><span class="mi">100</span><span class="p">,</span>
+    <span class="n">PIXEL_VZA</span><span class="o">=</span><span class="mi">100</span><span class="p">,</span>
+    <span class="n">PIXEL_ATM_TRANS</span><span class="o">=</span><span class="mi">10000</span><span class="p">,</span>
+    <span class="n">RAD_PIX</span><span class="o">=</span><span class="mi">10000</span><span class="p">,</span>
+    <span class="n">STD_BCK</span><span class="o">=</span><span class="mi">10000</span>
+<span class="p">)</span>
+
+<span class="k">def</span> <span class="nf">process_fire_product</span><span class="p">(</span><span class="n">fire_pixels</span><span class="p">):</span>
+    <span class="c1"># Hack: xarray randomly loads some columns as coordinates, which don&#39;t get converted to a dataframe</span>
+    <span class="c1"># Correct here by removing them as coords and renaming them back to their original name</span>
+    <span class="n">coords</span> <span class="o">=</span> <span class="nb">list</span><span class="p">(</span><span class="n">fire_pixels</span><span class="o">.</span><span class="n">coords</span><span class="o">.</span><span class="n">keys</span><span class="p">())</span>
+    <span class="n">fire_pixels</span> <span class="o">=</span> <span class="n">fire_pixels</span><span class="o">.</span><span class="n">reset_index</span><span class="p">(</span><span class="n">coords</span><span class="p">)</span><span class="o">.</span><span class="n">reset_coords</span><span class="p">()</span>
+    <span class="n">fire_pixels</span> <span class="o">=</span> <span class="n">fire_pixels</span><span class="o">.</span><span class="n">swap_dims</span><span class="p">({</span><span class="n">key</span><span class="p">:</span> <span class="sa">f</span><span class="s1">&#39;phony_dim_0&#39;</span> <span class="k">for</span> <span class="n">key</span> <span class="ow">in</span> <span class="nb">list</span><span class="p">(</span><span class="n">fire_pixels</span><span class="o">.</span><span class="n">dims</span><span class="o">.</span><span class="n">keys</span><span class="p">())})</span>
+    <span class="n">fire_pixels</span> <span class="o">=</span> <span class="n">fire_pixels</span><span class="o">.</span><span class="n">rename</span><span class="p">({</span><span class="sa">f</span><span class="s2">&quot;</span><span class="si">{</span><span class="n">name</span><span class="si">}</span><span class="s2">_&quot;</span><span class="p">:</span> <span class="n">name</span> <span class="k">for</span> <span class="n">name</span> <span class="ow">in</span> <span class="n">coords</span><span class="p">})</span>
+    <span class="n">fire_pixels</span> <span class="o">=</span> <span class="n">fire_pixels</span><span class="o">.</span><span class="n">to_dataframe</span><span class="p">()</span>
+
+    <span class="k">for</span> <span class="n">c</span> <span class="ow">in</span> <span class="n">fire_pixels</span><span class="o">.</span><span class="n">columns</span><span class="p">:</span>
+        <span class="k">if</span> <span class="n">c</span> <span class="ow">in</span> <span class="n">SCALE_FACTORS</span><span class="p">:</span>
+            <span class="n">fire_pixels</span><span class="p">[</span><span class="n">c</span><span class="p">]</span> <span class="o">=</span> <span class="n">fire_pixels</span><span class="p">[</span><span class="n">c</span><span class="p">]</span> <span class="o">/</span> <span class="n">SCALE_FACTORS</span><span class="p">[</span><span class="n">c</span><span class="p">]</span>
+        
+    <span class="n">fire_pixels</span><span class="p">[</span><span class="s1">&#39;ABS_LINE_1KM&#39;</span><span class="p">]</span> <span class="o">=</span> <span class="n">fire_pixels</span><span class="o">.</span><span class="n">ABS_LINE</span> <span class="o">//</span> <span class="mi">2</span>
+    <span class="n">fire_pixels</span><span class="p">[</span><span class="s1">&#39;ABS_PIXEL_1KM&#39;</span><span class="p">]</span> <span class="o">=</span> <span class="n">fire_pixels</span><span class="o">.</span><span class="n">ABS_PIXEL</span> <span class="o">//</span> <span class="mi">2</span>
+    <span class="n">fire_pixels</span><span class="o">.</span><span class="n">index</span><span class="o">.</span><span class="n">name</span> <span class="o">=</span> <span class="s1">&#39;index&#39;</span>
+    <span class="k">return</span> <span class="n">fire_pixels</span>
+
+<span class="k">def</span> <span class="nf">parse_l2_timestamp</span><span class="p">(</span><span class="n">product_name</span><span class="p">):</span>
+<span class="w">    </span><span class="sd">&quot;&quot;&quot;Parse the timestamp from the SEVIRI L2 product name&quot;&quot;&quot;</span>
+    <span class="n">timestamp</span> <span class="o">=</span> <span class="n">product_name</span><span class="o">.</span><span class="n">split</span><span class="p">(</span><span class="s1">&#39;_&#39;</span><span class="p">)[</span><span class="o">-</span><span class="mi">1</span><span class="p">]</span>
+    <span class="n">timestamp</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">to_datetime</span><span class="p">(</span><span class="n">timestamp</span><span class="p">,</span> <span class="nb">format</span><span class="o">=</span><span class="s1">&#39;%Y%m</span><span class="si">%d</span><span class="s1">%H%M&#39;</span><span class="p">)</span>
+    <span class="k">return</span> <span class="n">timestamp</span>
+
+<span class="c1"># Read in fires, scale and rename dimensions</span>
+<span class="n">fires</span> <span class="o">=</span> <span class="n">cat</span><span class="p">[</span><span class="s1">&#39;seviri_fires&#39;</span><span class="p">]</span><span class="o">.</span><span class="n">read</span><span class="p">()</span>
+<span class="n">fires</span> <span class="o">=</span> <span class="n">process_fire_product</span><span class="p">(</span><span class="n">fires</span><span class="p">)</span>
+<span class="n">fires</span> <span class="o">=</span> <span class="n">fires</span><span class="o">.</span><span class="n">rename</span><span class="p">({</span><span class="s1">&#39;LONGITUDE&#39;</span><span class="p">:</span> <span class="s1">&#39;longitude&#39;</span><span class="p">,</span> <span class="s1">&#39;LATITUDE&#39;</span><span class="p">:</span> <span class="s1">&#39;latitude&#39;</span><span class="p">,</span> <span class="s1">&#39;FRP&#39;</span><span class="p">:</span> <span class="s1">&#39;frp&#39;</span><span class="p">},</span> <span class="n">axis</span><span class="o">=</span><span class="mi">1</span><span class="p">)</span>
+
+<span class="c1"># Grab the timestamp of the product</span>
+<span class="n">urlpath</span> <span class="o">=</span> <span class="n">cat</span><span class="p">[</span><span class="s1">&#39;seviri_fires&#39;</span><span class="p">]</span><span class="o">.</span><span class="n">describe</span><span class="p">()[</span><span class="s1">&#39;args&#39;</span><span class="p">][</span><span class="s1">&#39;urlpath&#39;</span><span class="p">]</span>
+<span class="n">fires</span><span class="p">[</span><span class="s1">&#39;timestamp&#39;</span><span class="p">]</span> <span class="o">=</span> <span class="n">parse_l2_timestamp</span><span class="p">(</span><span class="n">urlpath</span><span class="p">)</span>
+
+<span class="c1"># Convert to geopandas</span>
+<span class="n">fires</span> <span class="o">=</span> <span class="n">geopandas</span><span class="o">.</span><span class="n">GeoDataFrame</span><span class="p">(</span>
+    <span class="n">fires</span><span class="p">,</span> <span class="n">geometry</span><span class="o">=</span><span class="n">geopandas</span><span class="o">.</span><span class="n">points_from_xy</span><span class="p">(</span><span class="n">fires</span><span class="o">.</span><span class="n">longitude</span><span class="p">,</span> <span class="n">fires</span><span class="o">.</span><span class="n">latitude</span><span class="p">))</span>
+
+<span class="c1"># We&#39;re only interested in data from Southern Africa for now</span>
+<span class="n">llx</span> <span class="o">=</span>  <span class="mi">0</span>    <span class="c1"># projection x coordinate of lower left corner of lower left pixel</span>
+<span class="n">lly</span> <span class="o">=</span>  <span class="o">-</span><span class="mi">30</span>  <span class="c1"># projection y coordinate of lower left corner of lower left pixel</span>
+<span class="n">urx</span> <span class="o">=</span>  <span class="mi">55</span>   <span class="c1"># projection x coordinate of upper right corner of upper right pixel</span>
+<span class="n">ury</span> <span class="o">=</span>  <span class="mi">10</span>   <span class="c1"># projection y coordinate of upper right corner of upper right pixel</span>
+
+<span class="n">fires</span> <span class="o">=</span> <span class="n">fires</span><span class="o">.</span><span class="n">cx</span><span class="p">[</span><span class="n">llx</span><span class="p">:</span><span class="n">urx</span><span class="p">,</span> <span class="n">lly</span><span class="p">:</span><span class="n">ury</span><span class="p">]</span>
+<span class="n">fires</span> <span class="o">=</span> <span class="n">fires</span><span class="o">.</span><span class="n">sort_index</span><span class="p">()</span>
+<span class="n">fires</span>
+</pre></div>
+</div>
+</div>
+</div>
+<div class="section" id="geographical-distribution-of-fires">
+<h3>Geographical distribution of Fires<a class="headerlink" href="#geographical-distribution-of-fires" title="Permalink to this headline">¶</a></h3>
+<p>Here we plot the geographical distribution of fires detected by SEVIRI over Southern Africa.</p>
+<div class="cell tag_hide-input docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">fires</span><span class="o">.</span><span class="n">hvplot</span><span class="o">.</span><span class="n">points</span><span class="p">(</span><span class="s1">&#39;longitude&#39;</span><span class="p">,</span> <span class="s1">&#39;latitude&#39;</span><span class="p">,</span> <span class="n">c</span><span class="o">=</span><span class="s1">&#39;frp&#39;</span><span class="p">,</span> <span class="n">geo</span><span class="o">=</span><span class="kc">True</span><span class="p">,</span> <span class="n">alpha</span><span class="o">=</span><span class="mf">0.2</span><span class="p">,</span>
+                    <span class="n">tiles</span><span class="o">=</span><span class="s1">&#39;ESRI&#39;</span><span class="p">,</span> <span class="n">xlim</span><span class="o">=</span><span class="p">(</span><span class="n">llx</span><span class="p">,</span> <span class="n">urx</span><span class="p">),</span> <span class="n">ylim</span><span class="o">=</span><span class="p">(</span><span class="n">lly</span><span class="p">,</span> <span class="n">ury</span><span class="p">),</span> <span class="n">cmap</span><span class="o">=</span><span class="s1">&#39;autumn&#39;</span><span class="p">,</span> <span class="n">logz</span><span class="o">=</span><span class="kc">True</span><span class="p">,</span>
+                    <span class="n">dynamic</span><span class="o">=</span><span class="kc">False</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+</div>
+</div>
+</div>
+<div class="section" id="visualising-fire-pixels-with-satellite-imagery">
+<h2>Visualising Fire Pixels with Satellite Imagery<a class="headerlink" href="#visualising-fire-pixels-with-satellite-imagery" title="Permalink to this headline">¶</a></h2>
+<p>Visualise a color image of the SEVIRI region using <code class="docutils literal notranslate"><span class="pre">hvplot</span></code>.</p>
+<div class="cell tag_hide-input docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">seviri_dataset</span> <span class="o">=</span> <span class="n">seviri_scn</span><span class="o">.</span><span class="n">to_xarray_dataset</span><span class="p">()</span>
+
+<span class="n">img</span> <span class="o">=</span> <span class="n">get_enhanced_image</span><span class="p">(</span><span class="n">seviri_scn</span><span class="p">[</span><span class="s1">&#39;natural_color&#39;</span><span class="p">]</span><span class="o">.</span><span class="n">squeeze</span><span class="p">())</span>
+<span class="n">img</span> <span class="o">=</span> <span class="n">img</span><span class="o">.</span><span class="n">data</span>
+<span class="n">img</span> <span class="o">=</span> <span class="n">img</span><span class="o">.</span><span class="n">clip</span><span class="p">(</span><span class="mi">0</span><span class="p">,</span> <span class="mi">1</span><span class="p">)</span>
+<span class="n">img</span> <span class="o">=</span> <span class="p">(</span><span class="n">img</span> <span class="o">*</span> <span class="mi">255</span><span class="p">)</span><span class="o">.</span><span class="n">astype</span><span class="p">(</span><span class="n">np</span><span class="o">.</span><span class="n">uint8</span><span class="p">)</span>
+
+<span class="n">seviri_dataset</span><span class="p">[</span><span class="s1">&#39;natural_color&#39;</span><span class="p">]</span> <span class="o">=</span> <span class="n">img</span>
+
+<span class="n">grid</span> <span class="o">=</span> <span class="n">seviri_scn</span><span class="o">.</span><span class="n">min_area</span><span class="p">()</span><span class="o">.</span><span class="n">get_lonlats</span><span class="p">()</span>
+<span class="n">lons</span><span class="p">,</span> <span class="n">lats</span> <span class="o">=</span> <span class="n">grid</span><span class="p">[</span><span class="mi">0</span><span class="p">][</span><span class="mi">0</span><span class="p">],</span> <span class="n">grid</span><span class="p">[</span><span class="mi">1</span><span class="p">][:,</span> <span class="mi">0</span><span class="p">]</span>
+<span class="n">seviri_dataset</span> <span class="o">=</span> <span class="n">seviri_dataset</span><span class="o">.</span><span class="n">assign_coords</span><span class="p">(</span><span class="nb">dict</span><span class="p">(</span><span class="n">x</span><span class="o">=</span><span class="n">lons</span><span class="p">,</span> <span class="n">y</span><span class="o">=</span><span class="n">lats</span><span class="p">))</span>
+<span class="n">seviri_dataset</span> <span class="o">=</span> <span class="n">seviri_dataset</span><span class="o">.</span><span class="n">rename</span><span class="p">(</span><span class="nb">dict</span><span class="p">(</span><span class="n">x</span><span class="o">=</span><span class="s1">&#39;longitude&#39;</span><span class="p">,</span> <span class="n">y</span><span class="o">=</span><span class="s1">&#39;latitude&#39;</span><span class="p">))</span>
+
+<span class="n">plot_SEVIRI_rgb</span> <span class="o">=</span> <span class="n">seviri_dataset</span><span class="p">[</span><span class="s1">&#39;natural_color&#39;</span><span class="p">]</span><span class="o">.</span><span class="n">hvplot</span><span class="o">.</span><span class="n">rgb</span><span class="p">(</span><span class="n">x</span><span class="o">=</span><span class="s1">&#39;longitude&#39;</span><span class="p">,</span> <span class="n">y</span><span class="o">=</span><span class="s1">&#39;latitude&#39;</span><span class="p">,</span> <span class="n">bands</span><span class="o">=</span><span class="s1">&#39;bands&#39;</span><span class="p">,</span> <span class="n">rasterize</span><span class="o">=</span><span class="kc">True</span><span class="p">,</span> <span class="n">data_aspect</span><span class="o">=</span><span class="mi">1</span><span class="p">)</span>
+<span class="n">plot_SEVIRI_rgb</span>
+</pre></div>
+</div>
+</div>
+</div>
+<p>Now overlay the fire pixels ontop of the SEVIRI image, along with the FRP for each fire pixel. Try zooming in with <code class="docutils literal notranslate"><span class="pre">rasterize=False</span></code>, you should be able to see clear smoke trails at the locations of some of the fires!</p>
+<div class="cell tag_hide-input docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">rgb</span> <span class="o">=</span> <span class="n">seviri_dataset</span><span class="p">[</span><span class="s1">&#39;natural_color&#39;</span><span class="p">]</span><span class="o">.</span><span class="n">hvplot</span><span class="o">.</span><span class="n">rgb</span><span class="p">(</span><span class="n">x</span><span class="o">=</span><span class="s1">&#39;longitude&#39;</span><span class="p">,</span> <span class="n">y</span><span class="o">=</span><span class="s1">&#39;latitude&#39;</span><span class="p">,</span> <span class="n">bands</span><span class="o">=</span><span class="s1">&#39;bands&#39;</span><span class="p">,</span> <span class="n">data_aspect</span><span class="o">=</span><span class="mi">1</span><span class="p">,</span> <span class="n">hover</span><span class="o">=</span><span class="kc">False</span><span class="p">,</span> <span class="n">title</span><span class="o">=</span><span class="s1">&#39;True Colour&#39;</span><span class="p">,</span> <span class="n">rasterize</span><span class="o">=</span><span class="kc">True</span><span class="p">)</span>
+<span class="n">points</span> <span class="o">=</span> <span class="n">fires</span><span class="o">.</span><span class="n">hvplot</span><span class="o">.</span><span class="n">points</span><span class="p">(</span><span class="s1">&#39;longitude&#39;</span><span class="p">,</span> <span class="s1">&#39;latitude&#39;</span><span class="p">,</span> <span class="n">c</span><span class="o">=</span><span class="s1">&#39;frp&#39;</span><span class="p">,</span> <span class="n">cmap</span><span class="o">=</span><span class="s1">&#39;autumn&#39;</span><span class="p">,</span> <span class="n">logz</span><span class="o">=</span><span class="kc">True</span><span class="p">,</span> <span class="n">alpha</span><span class="o">=</span><span class="mf">0.4</span><span class="p">)</span>
+<span class="n">plot_fires_SEVIRI_rgb</span> <span class="o">=</span> <span class="n">rgb</span><span class="o">*</span><span class="n">points</span>
+<span class="n">plot_fires_SEVIRI_rgb</span>
+</pre></div>
+</div>
+</div>
+</div>
+<p>We can also overlay the fire pixels ontop of the band difference between SEVIRI 3.9 and 10.8 micron wavelength bands. The 3.9 and 10.8 bands are thermal bands. Fires will appear as very bright pixels in the difference between these two bands. Try zooming in with <code class="docutils literal notranslate"><span class="pre">rasterize=False</span></code>, you should be able to clearly see bright spots at the location of each fire pixel.</p>
+<div class="cell tag_hide-input docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">band_difference</span> <span class="o">=</span> <span class="n">seviri_dataset</span><span class="p">[</span><span class="s1">&#39;IR_039&#39;</span><span class="p">]</span> <span class="o">-</span> <span class="n">seviri_dataset</span><span class="p">[</span><span class="s1">&#39;IR_108&#39;</span><span class="p">]</span>
+<span class="n">thermal</span> <span class="o">=</span> <span class="n">band_difference</span><span class="o">.</span><span class="n">hvplot</span><span class="o">.</span><span class="n">image</span><span class="p">(</span><span class="n">x</span><span class="o">=</span><span class="s1">&#39;longitude&#39;</span><span class="p">,</span> <span class="n">y</span><span class="o">=</span><span class="s1">&#39;latitude&#39;</span><span class="p">,</span> <span class="n">cmap</span><span class="o">=</span><span class="s1">&#39;viridis&#39;</span><span class="p">,</span> <span class="n">data_aspect</span><span class="o">=</span><span class="mi">1</span><span class="p">,</span> <span class="n">hover</span><span class="o">=</span><span class="kc">False</span><span class="p">,</span> <span class="n">title</span><span class="o">=</span><span class="s1">&#39;Band 20: 3.7 micron&#39;</span><span class="p">,</span> <span class="n">rasterize</span><span class="o">=</span><span class="kc">True</span><span class="p">)</span>
+<span class="n">points</span> <span class="o">=</span> <span class="n">fires</span><span class="o">.</span><span class="n">hvplot</span><span class="o">.</span><span class="n">points</span><span class="p">(</span><span class="s1">&#39;longitude&#39;</span><span class="p">,</span> <span class="s1">&#39;latitude&#39;</span><span class="p">,</span> <span class="n">c</span><span class="o">=</span><span class="s1">&#39;frp&#39;</span><span class="p">,</span> <span class="n">cmap</span><span class="o">=</span><span class="s1">&#39;autumn&#39;</span><span class="p">,</span> <span class="n">logz</span><span class="o">=</span><span class="kc">True</span><span class="p">,</span> <span class="n">alpha</span><span class="o">=</span><span class="mf">0.4</span><span class="p">)</span>
+<span class="n">plot_fires_SEVIRI_thermal</span> <span class="o">=</span> <span class="n">thermal</span><span class="o">*</span><span class="n">points</span>
+<span class="n">plot_fires_SEVIRI_thermal</span>
+</pre></div>
+</div>
+</div>
+</div>
+</div>
+<div class="section" id="summary">
+<h2>Summary<a class="headerlink" href="#summary" title="Permalink to this headline">¶</a></h2>
+<p>This notebook has demonstrated the use of:</p>
+<ul class="simple">
+<li><p>The <code class="docutils literal notranslate"><span class="pre">satpy</span></code> package to easily load, plot and regrid satellite data from the SEVIRI sensor.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">hvplot</span></code> to interatively visualise wildfire pixels detected from the SEVIRI sensor.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">geopandas</span></code> to load, filter, and manipulate historical wildfire pixel data.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">intake</span></code> the load data, including using a custom plugin for obsecure file formats.</p></li>
+</ul>
+</div>
+<div class="section" id="citing-this-notebook">
+<h2>Citing this Notebook<a class="headerlink" href="#citing-this-notebook" title="Permalink to this headline">¶</a></h2>
+<p>Samuel Jackson, and Alejandro Coca-Castro. “SEVIRI Level 1.5 (Jupyter Notebook) published in the Environmental Data Science book.” ROHub. Feb 26 ,2022. <a class="reference external" href="https://doi.org/10.24424/w9n8-r354">https://doi.org/10.24424/w9n8-r354</a>.</p>
+</div>
+<div class="section" id="additional-information">
+<h2>Additional information<a class="headerlink" href="#additional-information" title="Permalink to this headline">¶</a></h2>
+<p><strong>License</strong>: The code in this notebook is licensed under the MIT License. The Environmental Data Science book is licensed under the Creative Commons by Attribution 4.0 license. See further details <a class="reference external" href="https://github.com/alan-turing-institute/environmental-ds-book/blob/master/LICENSE.md">here</a>.</p>
+<p><strong>Contact</strong>: If you have any suggestion or report an issue with this notebook, feel free to <a class="reference external" href="https://github.com/alan-turing-institute/environmental-ds-book/issues/new/choose">create an issue</a> or send a direct message to <a class="reference external" href="mailto:environmental&#46;ds&#46;book&#37;&#52;&#48;gmail&#46;com">environmental<span>&#46;</span>ds<span>&#46;</span>book<span>&#64;</span>gmail<span>&#46;</span>com</a>.</p>
+<div class="cell tag_remove-input docutils container">
+</div>
+</div>
+</div>
+
+    <script type="text/x-thebe-config">
+    {
+        requestKernel: true,
+        binderOptions: {
+            repo: "binder-examples/jupyter-stacks-datascience",
+            ref: "master",
+        },
+        codeMirrorConfig: {
+            theme: "abcdef",
+            mode: "python"
+        },
+        kernelOptions: {
+            kernelName: "python3",
+            path: "./notebooks/gallery/bc30df18-fce2-42fa-aade-1ce5b7f3ca3c"
+        },
+        predefinedOutput: true
+    }
+    </script>
+    <script>kernelName = 'python3'</script>
+
+              </div>
+              
+            
+                <!-- Previous / next buttons -->
+<div class='prev-next-area'> 
+    <a class='left-prev' id="prev-link" href="../94486a7f-e046-461f-bbb9-334ec7b57040/notebook.html" title="previous page">
+        <i class="fas fa-angle-left"></i>
+        <div class="prev-next-info">
+            <p class="prev-next-subtitle">previous</p>
+            <p class="prev-next-title">Tree crown delineation using detectreeRGB</p>
+        </div>
+    </a>
+    <a class='right-next' id="next-link" href="../15d986da-2d7c-44fb-af71-700494485def/notebook.html" title="next page">
+    <div class="prev-next-info">
+        <p class="prev-next-subtitle">next</p>
+        <p class="prev-next-title">Tree crown detection using DeepForest</p>
+    </div>
+    <i class="fas fa-angle-right"></i>
+    </a>
+</div>
+            
+        </div>
+    </div>
+    <footer class="footer">
+  <p>
+    
+      By EDS book Community. This site is powered by <a href="https://www.netlify.com/">Netlify</a>.<br/>
+    
+        &copy; Copyright 2021.<br/>
+  </p>
+</footer>
+</main>
+
+
+      </div>
+    </div>
+  
+  <script src="../../../_static/js/index.be7d3bbb2ef33a8344ce.js"></script>
+
+  </body>
+</html>
