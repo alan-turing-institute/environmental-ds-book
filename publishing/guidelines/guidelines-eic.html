@@ -129,11 +129,6 @@ const thebe_selector_output = ".output, .cell_output"
   </a>
  </li>
  <li class="toctree-l1">
-  <a class="reference internal" href="../../preamble/how-to.html">
-   Usage
-  </a>
- </li>
- <li class="toctree-l1">
   <a class="reference internal" href="../../preamble/attribution.html">
    Citation and reuse
   </a>
@@ -211,6 +206,11 @@ const thebe_selector_output = ".output, .cell_output"
     </a>
    </li>
   </ul>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../../notebooks/how-to.html">
+   Usage
+  </a>
  </li>
 </ul>
 <p aria-level="2" class="caption" role="heading">
@@ -506,11 +506,6 @@ const thebe_selector_output = ".output, .cell_output"
   </a>
  </li>
  <li class="toc-h2 nav-item toc-entry">
-  <a class="reference internal nav-link" href="#review-checklist-for-reviewer2-github-handle">
-   Review Checklist for [REVIEWER2 GITHUB HANDLE]
-  </a>
- </li>
- <li class="toc-h2 nav-item toc-entry">
   <a class="reference internal nav-link" href="#post-print">
    Post-print
   </a>
@@ -571,11 +566,6 @@ const thebe_selector_output = ".output, .cell_output"
   </a>
  </li>
  <li class="toc-h2 nav-item toc-entry">
-  <a class="reference internal nav-link" href="#review-checklist-for-reviewer2-github-handle">
-   Review Checklist for [REVIEWER2 GITHUB HANDLE]
-  </a>
- </li>
- <li class="toc-h2 nav-item toc-entry">
   <a class="reference internal nav-link" href="#post-print">
    Post-print
   </a>
@@ -618,7 +608,7 @@ Our review process aims to be open, collaborative, transparent and inclusive.</p
 <h2>Notebook Repository<a class="headerlink" href="#notebook-repository" title="Permalink to this headline">¶</a></h2>
 <p>EiC validate how reproducible is the notebook and its feasibility for the reviewing stage.
 This process is aided by the Binder badge in a PR in the corresponding author’s notebook repository.</p>
-<p>After validating a minimal working version, EiC transfer the notebook repository to the <a class="reference external" href="https://github.com/Environmental-DS-Book">Environmental Data Science book organisation</a>.</p>
+<p>After validating a minimal working version, EiC transfer the notebook repository to the <a class="reference external" href="https://github.com/eds-book-gallery">Environmental Data Science book organisation</a>.</p>
 <p>The notebook in the transferred repository should generate the same outputs as the initial repository hosted in the GitHub account of the corresponding author.</p>
 <p>Before moving to PRE-REVIEW, EiC open a new issue <code class="docutils literal notranslate"><span class="pre">Preparation</span></code> in the notebook repository and complete the checklist below:</p>
 <div class="highlight-markdown notranslate" id="templates-eic-preparation-checklist"><div class="highlight"><pre><span></span><span class="gu">## Check notebook repository</span>
@@ -636,11 +626,11 @@ This process is aided by the Binder badge in a PR in the corresponding author’
 <span class="w">  </span><span class="k">- [ ]</span> Fill <span class="sb">`notebook_name`</span> and <span class="sb">`quay_image`</span> keys in the <span class="sb">`config.json`</span> file
 <span class="w">  </span><span class="k">- [ ]</span> Copy README template ([python](eic-readme-python.md), R, Julia) and replace the fields in the following lines:
 <span class="w">    </span><span class="k">- [ ]</span> replace <span class="sb">`[repository name]`</span> in 
-<span class="w">      </span><span class="k">- [ ]</span> L16, <span class="sb">`&lt;a href=&quot;https://github.com/Environmental-DS-Book/[repository name]/blob/main/LICENSE&quot;&gt;`</span>
-<span class="w">      </span><span class="k">- [ ]</span> L19, <span class="sb">`&lt;a href=&quot;https://notebooks.gesis.org/binder/v2/gh/Environmental-DS-Book/[repository name]/main?labpath=[repository name].ipynb&quot;&gt;`</span>
-<span class="w">      </span><span class="k">- [ ]</span> L22, <span class="sb">`&lt;a href=&quot;https://github.com/Environmental-DS-Book/[repository name]/actions/workflows/publish.yml/badge.svg&quot;&gt;`</span>
-<span class="w">      </span><span class="k">- [ ]</span> L23, <span class="sb">`&lt;img alt=&quot;Continuous integration badge&quot; src=&quot;https://github.com/Environmental-DS-Book/[repository name]/actions/workflows/publish.yml/badge.svg&quot;&gt;`</span>
-<span class="w">      </span><span class="k">- [ ]</span> L49, <span class="sb">`git clone https://github.com/Environmental-DS-Book/[repository name].git`</span>
+<span class="w">      </span><span class="k">- [ ]</span> L16, <span class="sb">`&lt;a href=&quot;https://github.com/eds-book-gallery/[repository name]/blob/main/LICENSE&quot;&gt;`</span>
+<span class="w">      </span><span class="k">- [ ]</span> L19, <span class="sb">`&lt;a href=&quot;https://notebooks.gesis.org/binder/v2/gh/eds-book-gallery/[repository name]/main?labpath=[repository name].ipynb&quot;&gt;`</span>
+<span class="w">      </span><span class="k">- [ ]</span> L22, <span class="sb">`&lt;a href=&quot;https://github.com/eds-book-gallery/[repository name]/actions/workflows/publish.yml/badge.svg&quot;&gt;`</span>
+<span class="w">      </span><span class="k">- [ ]</span> L23, <span class="sb">`&lt;img alt=&quot;Continuous integration badge&quot; src=&quot;https://github.com/eds-book-gallery/[repository name]/actions/workflows/publish.yml/badge.svg&quot;&gt;`</span>
+<span class="w">      </span><span class="k">- [ ]</span> L49, <span class="sb">`git clone https://github.com/eds-book-gallery/[repository name].git`</span>
 <span class="w">      </span><span class="k">- [ ]</span> L54, <span class="sb">`cd [repository name]`</span>
 <span class="w">      </span><span class="k">- [ ]</span> L60, <span class="sb">`conda activate [repository name]`</span>
 <span class="w">    </span><span class="k">- [ ]</span> replace <span class="sb">`[rohub_w3id]`</span> in L29
@@ -704,7 +694,7 @@ EiC open it and replace the default first comment the markdown template below:</
 <div class="highlight-markdown notranslate"><div class="highlight"><pre><span></span><span class="gh"># Notebook Review: Issue#[PREREVIEW ID]</span>
 
 &lt;p align=&quot;left&quot;&gt;
-    &lt;a href=&quot;https://notebooks.gesis.org/binder/v2/gh/Environmental-DS-Book/[NOTEBOOK NAME]/review?labpath=[NOTEBOOK NAME].ipynb&quot;&gt;
+    &lt;a href=&quot;https://notebooks.gesis.org/binder/v2/gh/eds-book-gallery/[NOTEBOOK NAME]/review?labpath=[NOTEBOOK NAME].ipynb&quot;&gt;
         &lt;img alt=&quot;Binder&quot; src=&quot;https://mybinder.org/badge_logo.svg&quot;&gt;
     &lt;/a&gt;
 &lt;/p&gt;
@@ -736,59 +726,9 @@ The quality of the proposed contribution can be assessed through scientific, tec
 The reviewer guidelines are available here: &lt;change-URL&gt;. 
 Any questions/concerns please let [EDITOR GITHUB HANDLE] know.
 
-<span class="gu">## Review Checklist for [REVIEWER1 GITHUB HANDLE]</span>
+<span class="gu">## Review Checklist for [REVIEWER GITHUB HANDLE]</span>
 
 ```{include} ../../templates/reviewers/reviewers-review-checklist.md
-</pre></div>
-</div>
-</div>
-<div class="section" id="review-checklist-for-reviewer2-github-handle">
-<h2>Review Checklist for [REVIEWER2 GITHUB HANDLE]<a class="headerlink" href="#review-checklist-for-reviewer2-github-handle" title="Permalink to this headline">¶</a></h2>
-<div class="admonition note" id="templates-reviewers-review-checklist">
-<p class="admonition-title">Note</p>
-<p>The checklist template follows the suggested review criteria for <a class="reference external" href="https://github.com/scipy-conference/scipy_proceedings/blob/632099a7e62d192a5d66156dc70547fd9f35cb81/review_criteria.md">SciPy Proceedings</a> and
-<a class="reference external" href="https://github.com/alan-turing-institute/TuringDataStories/blob/3675d78f5a6641500392b16b987fc22756a1fa1d/.github/ISSUE_TEMPLATE/review_template.md">Turing Data Stories</a></p>
-</div>
-<div class="highlight-markdown notranslate"><div class="highlight"><pre><span></span>*Please check off boxes as applicable, and elaborate in comments below. 
-Your review is not limited to these topics, as described in the reviewer guide*
-
-<span class="gu">### Conflict of interest</span>
-<span class="k">- [ ]</span> As the reviewer I confirm that there are no conflicts of interest for me to review this work (If you are unsure whether you are in conflict, please speak to your editor <span class="ge">_before_</span> starting your review).
-
-<span class="gu">### Code of conduct an peer-review principles</span>
-<span class="k">- [ ]</span> I confirm that I read and will adhere to the Environmental Data Science [<span class="nt">code of conduct</span>](<span class="na">https://github.com/alan-turing-institute/environmental-ds-book/blob/master/CODE_OF_CONDUCT.md</span>).
-<span class="k">- [ ]</span> I confirm that I read and will adhere to [<span class="nt">Open Science Peer Review Oath</span>](<span class="na">https://doi.org/10.12688/f1000research.5686.2</span>) 
-
-<span class="gu">### General checks</span>
-<span class="k">- [ ]</span> <span class="gs">**Notebook:**</span> Is the notebook file part of the PR?
-<span class="k">- [ ]</span> <span class="gs">**Contribution and authorship:**</span> Does the author list seem appropriate and complete (full name, affiliation, and GitHub/ORCID handle)?
-<span class="k">- [ ]</span> <span class="gs">**Scope and eligibility:**</span> Does the submission contain an original and complete analysis according to the [<span class="nt">theme</span>](<span class="na">pb-about-aimsscope</span>) selected?
-
-<span class="gu">### Reproducibility</span>
-<span class="k">- [ ]</span> Does the notebook run in a local environment?
-<span class="k">- [ ]</span> Does the notebook build and run in binder?
-<span class="k">- [ ]</span> Are all data sources openly accessible and properly cited (e.g. with citation to a persistent DOI) in the heading section?
-
-<span class="gu">### Pedagogy</span>
-<span class="k">- [ ]</span> Are the notebook purpose and highlights clear?
-<span class="k">- [ ]</span> Does the notebook demonstrate some specific data analysis or visualisation techniques?
-<span class="k">- [ ]</span> Is the notebook well documented, using both markdown cells and comments in code cells?
-<span class="k">- [ ]</span> Does the conclusion section provide clear and concise final say on the tools, analysis and/or datasets used?
-<span class="k">- [ ]</span> Is the notebook narrative well written (it does not require editing for structure, language, or writing quality)?
-
-<span class="gu">### Ethical</span>
-<span class="k">- [ ]</span> Is any linkage of datasets in the notebook unlikely to lead to an increased risk of the personal identification of individuals?
-<span class="k">- [ ]</span> Is the notebook truthful and clear about any limitations of the analysis (and potential biases in data and/or tools)?
-<span class="k">- [ ]</span> Is the notebook unlikely to lead to negative social outcomes, such as (but not limited to) increasing discrimination or injustice?
-
-<span class="gu">### Other Requirements</span>
-<span class="k">- [ ]</span> All mentioned software should be formally and consistently cited wherever possible.
-<span class="k">- [ ]</span> Acronyms should be spelled out upon first mention.
-<span class="k">- [ ]</span> Licence conditions on images and figures must be respected (Creative Commons, etc.).
-
-<span class="gu">### Final approval (post-review)</span>
-
-<span class="k">- [ ]</span> <span class="gs">**Authors has responded to my review and made changes to my satisfaction. I recommend approving the notebook for publication.**</span>
 </pre></div>
 </div>
 <div class="highlight-markdown notranslate"><div class="highlight"><pre><span></span>

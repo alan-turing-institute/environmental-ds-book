@@ -27,7 +27,7 @@ Building upon recent efforts by [EarthCube Peer-Reviewed Jupyter Notebooks initi
 EDS book notebooks support FAIR principles for research software (FAIR4RS){cite}`Barker2022-FAIR4RS` as describe below:
 
 - **F: Software, and its associated metadata, is easy for both humans and machines to find**: 
-   - All notebooks are hosted as separate repositories in [EDS Book GitHub organisation](https://github.com/Environmental-DS-Book). 
+   - All notebooks are hosted as separate repositories in [EDS Book Gallery GitHub organisation](https://github.com/eds-book-gallery). 
    - Rendered versions of notebooks are indexed and centralized into a Jupyter Book hosted as [a repository in the Alan Turing Institute GitHub organisation](https://github.com/alan-turing-institute/environmental-ds-book/). 
    - Notebooks metadata (inputs, outputs, bibliography and software) are findable in [ROHub](https://reliance.rohub.org/), a Research Object management platform that enables researchers to collaboratively manage, share and preserve their research work (read further in [the technologies sections of EDS book notebooks](pb-about-techologies)). 
    - The same platform allows handling notebooks versions and assign distinct identifiers. 
