@@ -20,7 +20,7 @@ In this step, we suggest providing feedback to the notebook idea.
 EiC validate how reproducible is the notebook and its feasibility for the reviewing stage. 
 This process is aided by the Binder badge in a PR in the corresponding author's notebook repository.
 
-After validating a minimal working version, EiC transfer the notebook repository to the [Environmental Data Science book organisation](https://github.com/Environmental-DS-Book). 
+After validating a minimal working version, EiC transfer the notebook repository to the [Environmental Data Science book organisation](https://github.com/eds-book-gallery). 
 
 The notebook in the transferred repository should generate the same outputs as the initial repository hosted in the GitHub account of the corresponding author. 
 
@@ -49,7 +49,6 @@ Once reviewers agreed on the revision, EiC open a REVIEW issue.
 ## Review
 The REVIEW issue aims to be a space where editor will moderate timings and conversation between authors and reviewers.
 EiC open it and replace the default first comment the markdown template below:
-
 
 ```{include} ../../templates/editor-in-chief/eic-review-template.md
 ```
