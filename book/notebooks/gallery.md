@@ -14,7 +14,7 @@
 {bdg-primary}`General`
 {bdg-secondary}`Exploration`
 <br>
-{bdg-warning}`Regular`
+{bdg-warning}`Standard`
 {bdg-info}`Python`
 ^^^
 
@@ -25,16 +25,16 @@ Millington (2022)
 
 <p align="center">
     <a href="https://github.com/eds-book-gallery/b128b282-dee7-44a7-bc21-f1fd21452a83/blob/main/LICENSE">
-        <img alt="License" src="https://img.shields.io/badge/License-MIT-yellow.svg">
+        <img alt="license" src="https://img.shields.io/badge/license-MIT-yellow.svg">
     </a>
     <a href="https://notebooks.gesis.org/binder/v2/gh/eds-book-gallery/b128b282-dee7-44a7-bc21-f1fd21452a83/main?labpath=notebook.ipynb">
-        <img alt="Binder" src="https://mybinder.org/badge_logo.svg">
+        <img alt="binder" src="https://mybinder.org/badge_logo.svg">
     </a>
     <a href="https://github.com/eds-book-gallery/b128b282-dee7-44a7-bc21-f1fd21452a83/actions/workflows/render.yaml">
-        <img alt="Render" src="https://github.com/eds-book-gallery/b128b282-dee7-44a7-bc21-f1fd21452a83/actions/workflows/render.yaml/badge.svg">
+        <img alt="render" src="https://github.com/eds-book-gallery/b128b282-dee7-44a7-bc21-f1fd21452a83/actions/workflows/render.yaml/badge.svg">
     </a>
     <a href="https://doi.org/10.24424/7cde-g605">
-        <img alt="DOI" src="https://zenodo.org/badge/DOI/10.24424/7cde-g605.svg">
+        <img alt="doi" src="https://zenodo.org/badge/DOI/10.24424/7cde-g605.svg">
     </a>
     <br/>
 </p>
@@ -50,7 +50,7 @@ Millington (2022)
 {bdg-primary}`Agriculture`
 {bdg-secondary}`Exploration`
 <br>
-{bdg-warning}`Regular`
+{bdg-warning}`Standard`
 {bdg-info}`Python`
 ^^^
 
@@ -61,16 +61,16 @@ Coca-Castro (2022)
 
 <p align="center">
     <a href="https://github.com/eds-book-gallery/435f534c-e49b-43c3-9bd6-3393100bef3f/blob/main/LICENSE">
-        <img alt="License" src="https://img.shields.io/badge/License-MIT-yellow.svg">
+        <img alt="license" src="https://img.shields.io/badge/license-MIT-yellow.svg">
     </a>
     <a href="https://notebooks.gesis.org/binder/v2/gh/eds-book-gallery/435f534c-e49b-43c3-9bd6-3393100bef3f/main?labpath=notebook.ipynb">
-        <img alt="Binder" src="https://mybinder.org/badge_logo.svg">
+        <img alt="binder" src="https://mybinder.org/badge_logo.svg">
     </a>
     <a href="https://github.com/eds-book-gallery/435f534c-e49b-43c3-9bd6-3393100bef3f/actions/workflows/render.yaml">
-        <img alt="Render" src="https://github.com/eds-book-gallery/435f534c-e49b-43c3-9bd6-3393100bef3f/actions/workflows/render.yaml/badge.svg">
+        <img alt="render" src="https://github.com/eds-book-gallery/435f534c-e49b-43c3-9bd6-3393100bef3f/actions/workflows/render.yaml/badge.svg">
     </a>
     <a href="https://doi.org/10.24424/y99k-rz74">
-        <img alt="DOI" src="https://zenodo.org/badge/DOI/10.24424/y99k-rz74.svg">
+        <img alt="doi" src="https://zenodo.org/badge/DOI/10.24424/y99k-rz74.svg">
     </a>
     <br/>
 </p>
@@ -86,7 +86,7 @@ Coca-Castro (2022)
 {bdg-primary}`General`
 {bdg-secondary}`Preprocessing`
 <br>
-{bdg-warning}`Regular`
+{bdg-warning}`Standard`
 {bdg-info}`Python`
 ^^^
 
@@ -97,16 +97,16 @@ Lam *et al.* (2022)
 
 <p align="center">
     <a href="https://github.com/eds-book-gallery/ea34568e-d86e-4720-be2f-3f826f66a26c/blob/main/LICENSE">
-        <img alt="License" src="https://img.shields.io/badge/License-MIT-yellow.svg">
+        <img alt="license" src="https://img.shields.io/badge/license-MIT-yellow.svg">
     </a>
     <a href="https://notebooks.gesis.org/binder/v2/gh/eds-book-gallery/ea34568e-d86e-4720-be2f-3f826f66a26c/main?labpath=notebook.ipynb">
-        <img alt="Binder" src="https://mybinder.org/badge_logo.svg">
+        <img alt="binder" src="https://mybinder.org/badge_logo.svg">
     </a>
     <a href="https://github.com/eds-book-gallery/ea34568e-d86e-4720-be2f-3f826f66a26c/actions/workflows/render.yaml">
-        <img alt="Render" src="https://github.com/eds-book-gallery/ea34568e-d86e-4720-be2f-3f826f66a26c/actions/workflows/render.yaml/badge.svg">
+        <img alt="render" src="https://github.com/eds-book-gallery/ea34568e-d86e-4720-be2f-3f826f66a26c/actions/workflows/render.yaml/badge.svg">
     </a>
     <a href="https://doi.org/10.24424/1vw8-6519">
-        <img alt="DOI" src="https://zenodo.org/badge/DOI/10.24424/1vw8-6519.svg">
+        <img alt="doi" src="https://zenodo.org/badge/DOI/10.24424/1vw8-6519.svg">
     </a>
     <br/>
 </p>
@@ -122,7 +122,7 @@ Lam *et al.* (2022)
 {bdg-primary}`Polar`
 {bdg-secondary}`Modelling`
 <br>
-{bdg-warning}`Regular`
+{bdg-warning}`Standard`
 {bdg-info}`Python`
 ^^^
 
@@ -133,16 +133,16 @@ Coca-Castro (2022)
 
 <p align="center">
     <a href="https://github.com/eds-book-gallery/ac327c3a-5264-40a2-8c6e-1e8d7c4b37ef/blob/main/LICENSE">
-        <img alt="License" src="https://img.shields.io/badge/License-MIT-yellow.svg">
+        <img alt="license" src="https://img.shields.io/badge/license-MIT-yellow.svg">
     </a>
     <a href="https://notebooks.gesis.org/binder/v2/gh/eds-book-gallery/ac327c3a-5264-40a2-8c6e-1e8d7c4b37ef/main?labpath=notebook.ipynb">
-        <img alt="Binder" src="https://mybinder.org/badge_logo.svg">
+        <img alt="binder" src="https://mybinder.org/badge_logo.svg">
     </a>
     <a href="https://github.com/eds-book-gallery/ac327c3a-5264-40a2-8c6e-1e8d7c4b37ef/actions/workflows/render.yaml">
-        <img alt="Render" src="https://github.com/eds-book-gallery/ac327c3a-5264-40a2-8c6e-1e8d7c4b37ef/actions/workflows/render.yaml/badge.svg">
+        <img alt="render" src="https://github.com/eds-book-gallery/ac327c3a-5264-40a2-8c6e-1e8d7c4b37ef/actions/workflows/render.yaml/badge.svg">
     </a>
     <a href="https://doi.org/10.24424/m8ew-pg51">
-        <img alt="DOI" src="https://zenodo.org/badge/DOI/10.24424/m8ew-pg51.svg">
+        <img alt="doi" src="https://zenodo.org/badge/DOI/10.24424/m8ew-pg51.svg">
     </a>
     <br/>
 </p>
@@ -158,7 +158,7 @@ Coca-Castro (2022)
 {bdg-primary}`Forest`
 {bdg-secondary}`Modelling`
 <br>
-{bdg-warning}`Regular`
+{bdg-warning}`Standard`
 {bdg-info}`Python`
 ^^^
 
@@ -169,16 +169,16 @@ Hickman (2022)
 
 <p align="center">
     <a href="https://github.com/eds-book-gallery/94486a7f-e046-461f-bbb9-334ec7b57040/blob/main/LICENSE">
-        <img alt="License" src="https://img.shields.io/badge/License-MIT-yellow.svg">
+        <img alt="license" src="https://img.shields.io/badge/license-MIT-yellow.svg">
     </a>
     <a href="https://notebooks.gesis.org/binder/v2/gh/eds-book-gallery/94486a7f-e046-461f-bbb9-334ec7b57040/main?labpath=notebook.ipynb">
-        <img alt="Binder" src="https://mybinder.org/badge_logo.svg">
+        <img alt="binder" src="https://mybinder.org/badge_logo.svg">
     </a>
     <a href="https://github.com/eds-book-gallery/94486a7f-e046-461f-bbb9-334ec7b57040/actions/workflows/render.yaml">
-        <img alt="Render" src="https://github.com/eds-book-gallery/94486a7f-e046-461f-bbb9-334ec7b57040/actions/workflows/render.yaml/badge.svg">
+        <img alt="render" src="https://github.com/eds-book-gallery/94486a7f-e046-461f-bbb9-334ec7b57040/actions/workflows/render.yaml/badge.svg">
     </a>
     <a href="https://doi.org/10.24424/2h9y-jn41">
-        <img alt="DOI" src="https://zenodo.org/badge/DOI/10.24424/2h9y-jn41.svg">
+        <img alt="doi" src="https://zenodo.org/badge/DOI/10.24424/2h9y-jn41.svg">
     </a>
     <br/>
 </p>
@@ -194,7 +194,7 @@ Hickman (2022)
 {bdg-primary}`Wildfires`
 {bdg-secondary}`Exploration`
 <br>
-{bdg-warning}`Regular`
+{bdg-warning}`Standard`
 {bdg-info}`Python`
 ^^^
 
@@ -205,16 +205,16 @@ Jackson (2022)
 
 <p align="center">
     <a href="https://github.com/eds-book-gallery/bc30df18-fce2-42fa-aade-1ce5b7f3ca3c/blob/main/LICENSE">
-        <img alt="License" src="https://img.shields.io/badge/License-MIT-yellow.svg">
+        <img alt="license" src="https://img.shields.io/badge/license-MIT-yellow.svg">
     </a>
     <a href="https://notebooks.gesis.org/binder/v2/gh/eds-book-gallery/bc30df18-fce2-42fa-aade-1ce5b7f3ca3c/main?labpath=notebook.ipynb">
-        <img alt="Binder" src="https://mybinder.org/badge_logo.svg">
+        <img alt="binder" src="https://mybinder.org/badge_logo.svg">
     </a>
     <a href="https://github.com/eds-book-gallery/bc30df18-fce2-42fa-aade-1ce5b7f3ca3c/actions/workflows/render.yaml/badge.svg">
-        <img alt="Render" src="https://github.com/eds-book-gallery/bc30df18-fce2-42fa-aade-1ce5b7f3ca3c/actions/workflows/render.yaml/badge.svg">
+        <img alt="render" src="https://github.com/eds-book-gallery/bc30df18-fce2-42fa-aade-1ce5b7f3ca3c/actions/workflows/render.yaml/badge.svg">
     </a>
     <a href="https://doi.org/10.24424/w9n8-r354">
-        <img alt="DOI" src="https://zenodo.org/badge/DOI/10.24424/w9n8-r354.svg">
+        <img alt="doi" src="https://zenodo.org/badge/DOI/10.24424/w9n8-r354.svg">
     </a>
     <br/>
 </p>
@@ -230,7 +230,7 @@ Jackson (2022)
 {bdg-primary}`Forest`
 {bdg-secondary}`Modelling`
 <br>
-{bdg-warning}`Regular`
+{bdg-warning}`Standard`
 {bdg-info}`Python`
 ^^^
 
@@ -241,16 +241,16 @@ Coca-Castro (2022)
 
 <p align="center">
     <a href="https://github.com/eds-book-gallery/15d986da-2d7c-44fb-af71-700494485def/blob/main/LICENSE">
-        <img alt="License" src="https://img.shields.io/badge/License-MIT-yellow.svg">
+        <img alt="license" src="https://img.shields.io/badge/license-MIT-yellow.svg">
     </a>
     <a href="https://notebooks.gesis.org/binder/v2/gh/eds-book-gallery/15d986da-2d7c-44fb-af71-700494485def/main?labpath=notebook.ipynb">
-        <img alt="Binder" src="https://mybinder.org/badge_logo.svg">
+        <img alt="binder" src="https://mybinder.org/badge_logo.svg">
     </a>
     <a href="https://github.com/eds-book-gallery/15d986da-2d7c-44fb-af71-700494485def/actions/workflows/render.yaml">
-        <img alt="Render" src="https://github.com/eds-book-gallery/15d986da-2d7c-44fb-af71-700494485def/actions/workflows/render.yaml/badge.svg">
+        <img alt="render" src="https://github.com/eds-book-gallery/15d986da-2d7c-44fb-af71-700494485def/actions/workflows/render.yaml/badge.svg">
     </a>
     <a href="https://doi.org/10.24424/td9g-0533">
-        <img alt="DOI" src="https://zenodo.org/badge/DOI/10.24424/td9g-0533.svg">
+        <img alt="doi" src="https://zenodo.org/badge/DOI/10.24424/td9g-0533.svg">
     </a>
     <br/>
 </p>
@@ -266,7 +266,7 @@ Coca-Castro (2022)
 {bdg-primary}`Wildfires`
 {bdg-secondary}`Exploration`
 <br>
-{bdg-warning}`Regular`
+{bdg-warning}`Standard`
 {bdg-info}`Python`
 ^^^
 
@@ -277,16 +277,16 @@ Jackson (2022)
 
 <p align="center">
     <a href="https://github.com/eds-book-gallery/a2875cdc-ba6a-49dc-aab7-cdf7c4fc0fa8/blob/main/LICENSE">
-        <img alt="License" src="https://img.shields.io/badge/License-MIT-yellow.svg">
+        <img alt="license" src="https://img.shields.io/badge/license-MIT-yellow.svg">
     </a>
     <a href="https://notebooks.gesis.org/binder/v2/gh/eds-book-gallery/a2875cdc-ba6a-49dc-aab7-cdf7c4fc0fa8/main?labpath=notebook.ipynb">
-        <img alt="Binder" src="https://mybinder.org/badge_logo.svg">
+        <img alt="binder" src="https://mybinder.org/badge_logo.svg">
     </a>
     <a href="https://github.com/eds-book-gallery/a2875cdc-ba6a-49dc-aab7-cdf7c4fc0fa8/actions/workflows/render.yaml">
-        <img alt="Render" src="https://github.com/eds-book-gallery/a2875cdc-ba6a-49dc-aab7-cdf7c4fc0fa8/actions/workflows/render.yaml/badge.svg">
+        <img alt="render" src="https://github.com/eds-book-gallery/a2875cdc-ba6a-49dc-aab7-cdf7c4fc0fa8/actions/workflows/render.yaml/badge.svg">
     </a>
     <a href="https://doi.org/10.24424/qd7g-tr70">
-        <img alt="DOI" src="https://zenodo.org/badge/DOI/10.24424/qd7g-tr70.svg">
+        <img alt="doi" src="https://zenodo.org/badge/DOI/10.24424/qd7g-tr70.svg">
     </a>
     <br/>
 </p>
@@ -302,7 +302,7 @@ Jackson (2022)
 {bdg-primary}`Urban`
 {bdg-secondary}`Exploration`
 <br>
-{bdg-warning}`Regular`
+{bdg-warning}`Standard`
 {bdg-info}`Python`
 ^^^
 
@@ -313,16 +313,16 @@ Adams (2022)
 
 <p align="center">
     <a href="https://github.com/eds-book-gallery/1b8921af-e77f-4ccf-ae38-4813cdceba0f/blob/main/LICENSE">
-        <img alt="License" src="https://img.shields.io/badge/License-MIT-yellow.svg">
+        <img alt="license" src="https://img.shields.io/badge/license-MIT-yellow.svg">
     </a>
     <a href="https://notebooks.gesis.org/binder/v2/gh/eds-book-gallery/1b8921af-e77f-4ccf-ae38-4813cdceba0f/main?labpath=1b8921af-e77f-4ccf-ae38-4813cdceba0f.ipynb">
-        <img alt="Binder" src="https://mybinder.org/badge_logo.svg">
+        <img alt="binder" src="https://mybinder.org/badge_logo.svg">
     </a>
     <a href="https://github.com/eds-book-gallery/1b8921af-e77f-4ccf-ae38-4813cdceba0f/actions/workflows/render.yaml">
-        <img alt="Render" src="https://github.com/eds-book-gallery/1b8921af-e77f-4ccf-ae38-4813cdceba0f/actions/workflows/render.yaml/badge.svg">
+        <img alt="render" src="https://github.com/eds-book-gallery/1b8921af-e77f-4ccf-ae38-4813cdceba0f/actions/workflows/render.yaml/badge.svg">
     </a>
     <a href="https://doi.org/10.24424/pbvr-gd04">
-        <img alt="DOI" src="https://zenodo.org/badge/DOI/10.24424/pbvr-gd04.svg">
+        <img alt="doi" src="https://zenodo.org/badge/DOI/10.24424/pbvr-gd04.svg">
     </a>
     <br/>
 </p>
@@ -338,7 +338,7 @@ Adams (2022)
 {bdg-primary}`Ocean`
 {bdg-secondary}`Modelling`
 <br>
-{bdg-warning}`Regular`
+{bdg-warning}`Standard`
 {bdg-info}`Python`
 ^^^
 
@@ -349,16 +349,16 @@ Mifdal *et al.* (2022)
 
 <p align="center">
     <a href="https://github.com/eds-book-gallery/b34facfa-cea8-48f5-89f6-f11ce00812a9/blob/main/LICENSE">
-        <img alt="License" src="https://img.shields.io/badge/License-MIT-yellow.svg">
+        <img alt="license" src="https://img.shields.io/badge/license-MIT-yellow.svg">
     </a>
     <a href="https://notebooks.gesis.org/binder/v2/gh/eds-book-gallery/b34facfa-cea8-48f5-89f6-f11ce00812a9/main?labpath=notebook.ipynb">
-        <img alt="Binder" src="https://mybinder.org/badge_logo.svg">
+        <img alt="binder" src="https://mybinder.org/badge_logo.svg">
     </a>
     <a href="https://github.com/eds-book-gallery/b34facfa-cea8-48f5-89f6-f11ce00812a9/actions/workflows/render.yaml">
-        <img alt="Render" src="https://github.com/eds-book-gallery/b34facfa-cea8-48f5-89f6-f11ce00812a9/actions/workflows/render.yaml/badge.svg">
+        <img alt="render" src="https://github.com/eds-book-gallery/b34facfa-cea8-48f5-89f6-f11ce00812a9/actions/workflows/render.yaml/badge.svg">
     </a>
     <a href="https://doi.org/10.24424/pbvr-gd04">
-        <img alt="DOI" src="https://zenodo.org/badge/DOI/10.24424/pbvr-gd04.svg">
+        <img alt="doi" src="https://zenodo.org/badge/DOI/10.24424/pbvr-gd04.svg">
     </a>
     <br/>
 </p>
