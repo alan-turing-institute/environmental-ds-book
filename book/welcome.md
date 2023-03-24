@@ -23,8 +23,8 @@ We target to make sense of:
 * innovative research in Environmental Data Science 
 * open-source tools for Environmental Data Science
 
-We have a gallery with a diversity of EDS book notebooks, all them following FAIR principles for research software (FAIR4RS){cite}`Barker2022-FAIR4RS`. 
-Visit our {ref}`Gallery <nb-gallery>` to access and navigate all community-led published notebooks.
+We have a *gallery* with a diversity of EDS book notebooks, all them following FAIR principles for research software (FAIR4RS){cite}`Barker2022-FAIR4RS`. 
+Visit our {ref}`Gallery <nb-gallery>` to access and navigate our community-led published notebooks.
 
 :::::{container}
 ::::{grid} 1 3 3 3
@@ -32,7 +32,7 @@ Visit our {ref}`Gallery <nb-gallery>` to access and navigate all community-led p
 
 :::{grid-item-card} Land Cover Data <br> (Impact Observatory)
 :margin: 3 0 0 0
-:link: ./gallery/b128b282-dee7-44a7-bc21-f1fd21452a83/notebook.html
+:link: ../notebook/gallery/b128b282-dee7-44a7-bc21-f1fd21452a83/notebook.html
 :link-type: url
 :text-align: center
 :shadow: md
@@ -68,7 +68,7 @@ Millington (2022)
 
 :::{grid-item-card} Sea ice forecasting <br> (IceNet)
 :margin: 3 0 0 0
-:link: ./gallery/ac327c3a-5264-40a2-8c6e-1e8d7c4b37ef/notebook.html
+:link: ../notebook/gallery/ac327c3a-5264-40a2-8c6e-1e8d7c4b37ef/notebook.html
 :link-type: url
 :text-align: center
 :shadow: md
@@ -104,7 +104,7 @@ Coca-Castro (2022)
 
 :::{grid-item-card} Detecting floating objects <br> (ESA Phi-Lab)
 :margin: 3 0 0 0
-:link: ./gallery/b34facfa-cea8-48f5-89f6-f11ce00812a9/notebook.html
+:link: ../notebook/gallery/b34facfa-cea8-48f5-89f6-f11ce00812a9/notebook.html
 :link-type: url
 :text-align: center
 :shadow: md
