@@ -1,3 +1,4 @@
+(nb-gallery)=
 # Gallery
 
 :::::{container}
