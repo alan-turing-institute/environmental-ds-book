@@ -5,10 +5,6 @@ parts:
   chapters:
   - file: preamble/about
     title: About EDS book
-  - file: preamble/who-for
-    title: Audience
-  - file: preamble/how-to
-    title: Usage
   - file: preamble/attribution
     title: Citation and reuse
   - file: preamble/contribute
