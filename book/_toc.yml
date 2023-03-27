@@ -4,7 +4,7 @@ parts:
 - caption: Preamble
   chapters:
   - file: preamble/about
-    title: About EDS book
+    title: Our book
   - file: preamble/who-for
     title: Audience
   - file: preamble/how-to
@@ -15,6 +15,15 @@ parts:
     title: Contribute
 - caption: Notebooks
   chapters:
+  - file: notebooks/about
+    title: Our notebooks
+    sections:
+    - file: notebooks/about/aims-and-scope
+      title: Aims & Scope
+    - file: notebooks/about/review-benefits
+      title: Benefits of Reviewing Notebooks
+    - file: notebooks/about/notebooks-technologies
+      title: Technologies
   - file: notebooks/gallery
     title: Gallery
     sections:
@@ -42,17 +51,8 @@ parts:
     title: Usage
 - caption: Publishing
   chapters:
-  - file: publishing/about
-    title: About EDS notebooks
-    sections:
-    - file: publishing/about/aims-and-scope
-      title: Aims & Scope
-    - file: publishing/about/review-benefits
-      title: Benefits of Reviewing Notebooks
-    - file: publishing/about/notebooks-technologies
-      title: Technologies
   - file: publishing/guidelines
-    title: Guidelines
+    title: Our guidelines
     sections:
     - file: publishing/guidelines/guidelines-authors
       title: Guide for Authors
@@ -68,34 +68,8 @@ parts:
     title: FAQ
 - caption: Community
   chapters:
-  - file: community/coworking
-    title: Coworking Calls
-    sections:
-    - file: community/coworking/coworking-motivation
-      title: Background, Motivations, and Techniques
-    - file: community/coworking/coworking-collabcafe
-      title: Online Collaboration Cafe
-    - file: community/coworking/coworking-showtell
-      title: Online Show and Tell
-  - file: community/notes
-    title: Meeting Notes
-    sections:
-    - file: community/notes/notes-collabcafe
-      title: Online Collaboration Cafe
-    - file: community/notes/notes-journalclub
-      title: Online Journal Club
-    - file: community/notes/notes-showtell
-      title: Online Show and Tell
-  - file: community/templates
-    title: Template Collection
-    sections:
-    - file: community/templates/template-coworking-collabcafe
-      title: Online Collaboration Cafe
-    - file: community/templates/template-coworking-journalclub
-      title: Online Journal Club
-    - file: community/templates/template-coworking-showtell
-      title: Online Show and Tell
-    - file: community/templates/template-environments-exploration
+  - file: community/about
+    title: Our community
 - caption: Afterword
   chapters:
   - file: afterword/bibliography
