@@ -1,5 +1,5 @@
 (pr-about-audience)=
-# About this book
+# About EDS book
 
 _EDS book_ showcases and supports the publication of data, research and open-source tools using **Data Science and AI** for characterizing, monitoring and/or modelling a wide diversity of environmental systems. 
 
