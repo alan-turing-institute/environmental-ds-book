@@ -4,15 +4,15 @@ parts:
 - caption: Preamble
   chapters:
   - file: preamble/about
-    title: Our book
+    title: Our Book
   - file: preamble/attribution
-    title: Citation and reuse
+    title: Citation and Reuse
   - file: preamble/contribute
     title: Contribute
 - caption: Notebooks
   chapters:
   - file: notebooks/about
-    title: Our notebooks
+    title: Our Notebooks
     sections:
     - file: notebooks/about/aims-and-scope
       title: Aims & Scope
@@ -48,7 +48,7 @@ parts:
 - caption: Publishing
   chapters:
   - file: publishing/guidelines
-    title: Our guidelines
+    title: Our Guidelines
     sections:
     - file: publishing/guidelines/guidelines-authors
       title: Guide for Authors
@@ -65,7 +65,7 @@ parts:
 - caption: Community
   chapters:
   - file: community/about
-    title: Our community
+    title: Our Community
 - caption: Afterword
   chapters:
   - file: afterword/bibliography
