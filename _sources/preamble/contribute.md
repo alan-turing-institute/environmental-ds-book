@@ -39,14 +39,14 @@ The `_toc.yml` file sets the main sections of EDS book.
 It is a simple configuration file specifying a table of content from all the executable and narrative content found in the ``book`` folder (and in subfolders). 
 The current version of the book consists of five key sections:
 
-* **Preamble**: contains narrative content i.e. plain markdown files describing the aims of the book, the target audience, how to use, attribution and how to contribute.
-* **Gallery**: contains all published executable content. Notebooks are categorised across different themes: exploration, modelling, etc to differentiate the type of analysis or procedure.
-* **Publishing**: provides an introduction of peer-reviewing notebooks, its relevance and guidelines to publish in EDS book.
-* **Community**: compiles community-related resources such as notes of co-working meetings.
-* **Afterword**: describes miscellaneous material such as glossary and bibliography. 
+* **Preamble**: contains narrative content i.e. plain markdown files describing the aims of the book, the target audience, attribution and how to contribute.
+* **Notebooks**: contains all published executable content listed within a gridded gallery or with individual links. 
+* **Publishing**: provides an introduction of open review, its relevance to computational notebooks and guidelines to publish in EDS book.
+* **Community**: compiles community-related resources such as activities in various open science communities and shared notes of EDS book co-working meetings.
+* **Afterword**: describes miscellaneous material such as bibliography. 
 
 ## Roles
-Inspired by [the Turing Way Guide for Collaboration](https://the-turing-way.netlify.app/collaboration/maintain-review/maintain-review-maintenance.html), EDS book has the following defined community roles: 
+Inspired by [the Turing Way Guide for Collaboration](https://github.com/alan-turing-institute/the-turing-way/blob/main/book/website/collaboration/collaboration.md), EDS book has the following defined community roles: 
 
 * **Maintainers**: to provide support with keeping the existing source code updated by keeping track of new contributions and/or update versions of the Jupyter book.
 * **Contributors**: to create/design narrative and/or executable content.
@@ -61,5 +61,5 @@ The all-contributors bot usage is described [here](https://allcontributors.org/d
 You can see a list of current contributors [here](https://github.com/alan-turing-institute/environmental-ds-book/blob/master/contributors.md). 
 
 # Code of Conduct
-Please note that EDS book open-source repository and community are aligned with a [Contributor Code of Conduct](CODE_OF_CONDUCT.md). 
+Please note that EDS book open-source repository and community are aligned with a [Contributor Code of Conduct](./../../CODE_OF_CONDUCT.md). 
 By contributing to EDS book you agree to abide by its terms.
