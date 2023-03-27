@@ -1,4 +1,4 @@
-(pb-about-technologies)=
+(nb-about-technologies)=
 
 # Technologies in EDS Book Notebooks
 This section indicates the main technologies for peer-reviewing and sharing EDS book notebooks.

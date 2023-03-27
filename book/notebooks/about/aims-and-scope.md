@@ -1,4 +1,4 @@
-(pb-about-aimsscope)=
+(nb-about-aimsscope)=
 
 # Aims and Scope
 We consider submissions from all areas of environmental science. This includes (but it is not restricted to):
