@@ -15,7 +15,7 @@ Please find below the proposed community and team meetings (from April 2023) to 
 
 ## Meeting structure
 - Collaboration cafes: we will continue our community shared-out of recent progress, achievements or events at _The Turing Way_ [Collaboration Cafes](https://the-turing-way.netlify.app/community-handbook/coworking/coworking-collabcafe.html). At least one of core EDS book members (as described in the [Ways of Working document](https://github.com/alan-turing-institute/environmental-ds-book/blob/master/ways_of_working.md)) will be attending the collaboration cafe to onboard or discuss relevant topics within _EDS book_ and _The Turing Way_ communities. 
-- Co-working sessions: we are merging separate working groups into co-working sessions. According to the size of the call, we will create breakout rooms (to allow multiple small groups and discussions).
+- Co-working sessions: we are merging separate working groups meetings into co-working sessions. According to the size of the call, we will create breakout rooms (to allow multiple small groups and discussions).
 
 ## Meeting dates and calendar
 - Collaboration cafes: held fortnightly on the *first and third Wednesdays* of each month for 2 hours (see _The Turing Way_ [Community Calendar](https://calendar.google.com/calendar?cid=dGhldHVyaW5nd2F5QGdtYWlsLmNvbQ)).
