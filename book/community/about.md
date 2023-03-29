@@ -1,4 +1,5 @@
 (cm-about)=
+
 # About EDS book community
 
 Inspired by [_The Turing Way_ community coworking calls](https://the-turing-way.netlify.app/community-handbook/coworking.html), our community had some virtual meetings between 2021 and 2022 with the following two group-oriented formats:
