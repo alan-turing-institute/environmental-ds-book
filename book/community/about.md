@@ -14,15 +14,22 @@ While the above virtual spaces were fruitful and productive with lots of fun int
 Please find below the proposed community and team meetings (from April 2023) to discuss important topics and to invite broader participation from others.
 
 ## Meeting structure
-- Collaboration cafes: we will continue our community shared-out of recent progress, achievements or events at _The Turing Way_ [Collaboration Cafes](https://the-turing-way.netlify.app/community-handbook/coworking/coworking-collabcafe.html). At least one of core EDS book members (as described in the [Ways of Working document](https://github.com/alan-turing-institute/environmental-ds-book/blob/master/ways_of_working.md)) will be attending the collaboration cafe to onboard or discuss relevant topics within _EDS book_ and _The Turing Way_ communities. 
+- Collaboration cafes: we will continue our community shared-out of recent progress, achievements or events at _The Turing Way_ [Collaboration Cafes](https://the-turing-way.netlify.app/community-handbook/coworking/coworking-collabcafe.html). At least one of core EDS book members (as described in the [Ways of Working document](https://github.com/alan-turing-institute/environmental-ds-book/blob/master/ways_of_working.md)) will be attending the collaboration cafe to onboard or discuss relevant topics within _EDS book_ and _The Turing Way_ communities. Members of both communities are also welcome to join to a dedicated channel ([#environmental-sustainability](https://theturingway.slack.com/archives/C04RCMAEPUZ)) in _The Turing Way_ Slack for discussing broadly relevant topics aligned to Open Research in Environment & Sustainability.  
 - Co-working sessions: we are merging separate working groups meetings into co-working sessions. According to the size of the call, we will create breakout rooms (to allow multiple small groups and discussions).
 
 ## Meeting dates and calendar
 - Collaboration cafes: held fortnightly on the *first and third Wednesdays* of each month for 2 hours (see _The Turing Way_ [Community Calendar](https://calendar.google.com/calendar?cid=dGhldHVyaW5nd2F5QGdtYWlsLmNvbQ)).
 - Co-working sessions: held fortnightly on the *second Friday* of each month for 1 hour (see _EDS book_ [Community Calendar](https://calendar.google.com/calendar/u/1?cid=ZW52aXJvbm1lbnRhbC5kcy5ib29rQGdtYWlsLmNvbQ)).
 
+## Async community support channels
+If you're looking for asynchronous support or chat with the EDS book community, there are a lot of options:
+
+* Start a discussion on [EDS book repository](https://github.com/alan-turing-institute/environmental-ds-book/discussions).
+* Chat with EDS book members; Join [our Gitter channel](https://matrix.to/#/#eds-book:gitter.im).
+* Open an [issue to report bugs or request features](https://github.com/alan-turing-institute/environmental-ds-book/issues/new/choose).
+
 # Open Research Calendar
-Additional to our community meetings, we encourage our readers/users to subscribe to the Open Research Calendar (ORC).
+Additional to our community meetings and async communication channels, we encourage you to subscribe to the Open Research Calendar (ORC).
 
 ORC collects exciting events related to Open Research through a [Google Calendar](https://openresearchcalendar.org/calendar/) and [twitter bot](https://twitter.com/OpenResearchCal).
 
