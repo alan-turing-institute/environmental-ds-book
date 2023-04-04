@@ -22,6 +22,23 @@ labels: ["notebook"]
 - [ ] Post-processing
 - [ ] Other: 
 
+## Submission type
+<!--- Mark a single option applicable for the notebook -->
+<!--- If other, please specify -->
+
+- [ ] Standard
+- [ ] Special Issue
+- [ ] Other:
+
+## Programming language
+<!--- Mark a single option applicable for the notebook -->
+<!--- If other, please specify -->
+
+- [ ] Python
+- [ ] R
+- [ ] Julia
+- [ ] Other:
+
 ## Checklist:
 <!--- The checklist will allow us having an early diagnosis of the feasibility of the notebook -->
 <!--- Go over all the following points, and put an `x` in all the boxes that apply -->
