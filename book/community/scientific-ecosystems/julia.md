@@ -1,4 +1,4 @@
-(cm-scientific-ecosystems-python)=
+(cm-scientific-ecosystems-julia)=
 
 # Julia
 
