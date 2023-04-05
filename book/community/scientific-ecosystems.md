@@ -1,7 +1,6 @@
 (cm-scientific-ecosystems)=
 
 # Context
-
 There is a wide diversity of open source software (OSS) suited to Environmental research. 
 
 Awareness of such developments across programming languages could help decide which is more appropriate for a specific environmental analysis task if not subject to personal choice.
