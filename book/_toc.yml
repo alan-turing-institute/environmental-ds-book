@@ -66,6 +66,15 @@ parts:
   chapters:
   - file: community/about
     title: Our Community
+  - file: community/scientific-ecosystems
+    title: Scientific Ecosystems
+    sections:
+    - file: community/scientific-ecosystems/python
+      title: Python
+    - file: community/scientific-ecosystems/r
+      title: R
+    - file: community/scientific-ecosystems/julia
+      title: Julia
 - caption: Afterword
   chapters:
   - file: afterword/bibliography
