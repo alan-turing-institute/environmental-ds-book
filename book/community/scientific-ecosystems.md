@@ -1,5 +1,7 @@
 (cm-scientific-ecosystems)=
 
+# Context
+
 There is a wide diversity of open source software (OSS) suited to Environmental research. 
 
 Awareness of such developments across programming languages could help decide which is more appropriate for a specific environmental analysis task if not subject to personal choice.
@@ -11,4 +13,5 @@ The report provides a comprehensible examination of the health and state of OSS 
 Authors identified 1339 OSS projects worldwide. Of these, 1188 projects are hosted on GitHub, 27 on GitLab and 125 on other websites or self-hosted Git platforms{cite}`Augspurger2023_OpenSustainability`.
 
 # Ecosystems for Environmental Data Science
+
 Python, R and Julia are the main languages for environmental science.
