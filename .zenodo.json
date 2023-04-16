@@ -25,16 +25,4 @@
         }
     ], 
     "access_right": "open", 
-    "related_identifiers": [
-        {
-            "scheme": "url", 
-            "identifier": "https://github.com/alan-turing-institute/environmental-ds-book/tree/0.0.2", 
-            "relation": "isSupplementTo"
-        }, 
-        {
-            "scheme": "doi", 
-            "identifier": "10.5281/zenodo.5918931", 
-            "relation": "isVersionOf"
-        }
-    ]
 }
