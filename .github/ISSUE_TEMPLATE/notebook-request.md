@@ -20,7 +20,7 @@ labels: ["notebook"]
 - [ ] Preprocessing
 - [ ] Modelling
 - [ ] Post-processing
-- [ ] Other: 
+- [ ] Other (e.g. Reproducibility): 
 
 ## Submission type
 <!--- Mark a single option applicable for the notebook -->
@@ -28,7 +28,7 @@ labels: ["notebook"]
 
 - [ ] Standard
 - [ ] Special Issue
-- [ ] Other:
+- [ ] Other (e.g. CI2023 Reproducibility Challenge):
 
 ## Programming language
 <!--- Mark a single option applicable for the notebook -->
