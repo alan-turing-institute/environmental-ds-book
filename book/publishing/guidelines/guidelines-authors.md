@@ -35,7 +35,7 @@ The corresponding author should open a Pull Request to start editing the noteboo
 Within each PR, a comment will be added containing "Test this PR on Binder" badge. 
 
 Some general guidelines are:
-* Fill the information header according to your use case. Feel free to guide from previous published notebooks, see for instance the [IceNet notebook](https://github.com/alan-turing-institute/environmental-ds-book/blob/master/book/gallery/modelling/polar-modelling-icenet.ipynb).
+* Fill the information header according to your use case. Feel free to guide from previous published notebooks, see for instance the [IceNet notebook](https://edsbook.org/notebooks/gallery/ac327c3a-5264-40a2-8c6e-1e8d7c4b37ef/notebook.html).
 * Change the structure of the remaining sections of the notebook according to your preference.
   * We advise following the 10 rules of compelling notebooks provided by the EarthCube initiative available in their [Notebook Template](https://github.com/earthcube/NotebookTemplates/blob/main/EC_05_Template_Notebook_for_EarthCube_Long_Version.ipynb) (section `Data processing and analysis`).
 * For `python` packages, we suggest exploring the [Pangeo stack](https://pangeo.io/). The Pangeo community curates a wide diversity of environments in the `pangeo-docker-images` [repository](https://github.com/pangeo-data/pangeo-docker-images/tree/master/pangeo-notebook). 
