@@ -44,8 +44,7 @@ Any questions/concerns please let [EDITOR GITHUB HANDLE] know.
 
 ## Review checklist for [REVIEWER GITHUB HANDLE]
 
-*Please check off boxes as applicable, and elaborate in comments below. 
-Your review is not limited to these topics, as described in the reviewer guide*
+*Please check off boxes as applicable, and elaborate in comments below. Your review is not limited to these topics, as described in the reviewer guide.*
 
 ### Conflict of interest
 - [ ] As the reviewer I confirm that there are no conflicts of interest for me to review this work (If you are unsure whether you are in conflict, please speak to your editor _before_ starting your review).
