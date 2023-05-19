@@ -537,13 +537,12 @@ This process is aided by the Binder badge in a PR in the corresponding author’
 <span class="gu">## Filename and README</span>
 <span class="k">- [ ]</span> Create and checkout a new branch <span class="sb">`preparation`</span>
 <span class="k">- [ ]</span> Commit and push the following changes:
-<span class="w">  </span><span class="k">- [ ]</span> Rename the filename of the template to the pattern (XXX-YYY-ZZZ, where XXX refers to the environmental system, YYY to the theme and ZZZ to a preferred identifier of the model, sensor or pre/post-processing pipeline). 
-    For example, &quot;forest-modelling-treecrown.ipynb&quot;
+<span class="w">  </span><span class="k">- [ ]</span> Rename the filename of the template to notebook.ipynb
 <span class="w">  </span><span class="k">- [ ]</span> Fill <span class="sb">`notebook_name`</span> and <span class="sb">`quay_image`</span> keys in the <span class="sb">`config.json`</span> file
 <span class="w">  </span><span class="k">- [ ]</span> Copy README template ([python](eic-readme-python.md), R, Julia) and replace the fields in the following lines:
 <span class="w">    </span><span class="k">- [ ]</span> replace <span class="sb">`[repository name]`</span> in 
 <span class="w">      </span><span class="k">- [ ]</span> L16, <span class="sb">`&lt;a href=&quot;https://github.com/eds-book-gallery/[repository name]/blob/main/LICENSE&quot;&gt;`</span>
-<span class="w">      </span><span class="k">- [ ]</span> L19, <span class="sb">`&lt;a href=&quot;https://notebooks.gesis.org/binder/v2/gh/eds-book-gallery/[repository name]/main?labpath=[repository name].ipynb&quot;&gt;`</span>
+<span class="w">      </span><span class="k">- [ ]</span> L19, <span class="sb">`&lt;a href=&quot;https://notebooks.gesis.org/binder/v2/gh/eds-book-gallery/[repository name]/main?labpath=notebook.ipynb&quot;&gt;`</span>
 <span class="w">      </span><span class="k">- [ ]</span> L22, <span class="sb">`&lt;a href=&quot;https://github.com/eds-book-gallery/[repository name]/actions/workflows/publish.yml/badge.svg&quot;&gt;`</span>
 <span class="w">      </span><span class="k">- [ ]</span> L23, <span class="sb">`&lt;img alt=&quot;Continuous integration badge&quot; src=&quot;https://github.com/eds-book-gallery/[repository name]/actions/workflows/publish.yml/badge.svg&quot;&gt;`</span>
 <span class="w">      </span><span class="k">- [ ]</span> L49, <span class="sb">`git clone https://github.com/eds-book-gallery/[repository name].git`</span>
@@ -551,6 +550,18 @@ This process is aided by the Binder badge in a PR in the corresponding author’
 <span class="w">      </span><span class="k">- [ ]</span> L60, <span class="sb">`conda activate [repository name]`</span>
 <span class="w">    </span><span class="k">- [ ]</span> replace <span class="sb">`[rohub_w3id]`</span> in L29
 <span class="k">- [ ]</span> Merge the new branch to main
+
+<span class="gu">## PRE-REVIEW</span>
+<span class="k">- [ ]</span> Open a PRE-REVIEW issue
+<span class="k">- [ ]</span> Fill the required fields.  
+<span class="k">- [ ]</span> Validate reviewers interest and availability
+<span class="k">- [ ]</span> Close the PRE-REVIEW
+
+<span class="gu">## REVIEW</span>
+<span class="k">- [ ]</span> Open a REVIEW issue
+<span class="k">- [ ]</span> Fill the required fields   
+<span class="k">- [ ]</span> Add reviewers
+<span class="k">- [ ]</span> Provide details of the notebook using [<span class="nt">cloc</span>](<span class="na">https://github.com/AlDanial/cloc</span>).
 </pre></div>
 </div>
 </div>
@@ -558,39 +569,6 @@ This process is aided by the Binder badge in a PR in the corresponding author’
 <h2>Pre-review<a class="headerlink" href="#pre-review" title="Permalink to this headline">¶</a></h2>
 <p>EiC open a PRE-REVIEW issue containing all relevant information of the notebook including a link to the notebook idea issue.</p>
 <p>Copy and paste the markdown below in the issue:</p>
-<div class="admonition note" id="templates-eic-prereview-template">
-<p class="admonition-title">Note</p>
-<p>The PRE-REVIEW template follows the Journal of Open Source Education’s <a class="reference external" href="https://openjournals.readthedocs.io/en/jose/editing.html">pre-review issue template</a></p>
-</div>
-<div class="highlight-markdown notranslate"><div class="highlight"><pre><span></span><span class="gh"># Notebook Pre-Review</span>
-
-<span class="gs">**Submitting author:**</span> [AUTHOR GITHUB HANDLE]
-
-<span class="gs">**Repository:**</span> [NOTEBOOK REPOSITORY LINK]
-
-<span class="gs">**Notebook idea issue:**</span> [NOTEBOOK IDEA ISSUE ID]
-
-<span class="gs">**Editor:**</span> Pending
-
-<span class="gs">**Reviewer:**</span> Pending
-
-<span class="gs">**Managing EiC:**</span> [EIC GITHUB HANDLE]
-
-<span class="gu">## Status</span>
-
-<span class="gs">**Author instructions**</span>
-
-Thanks for submitting your notebook to EDS book. 
-
-[AUTHOR GITHUB HANDLE] if you have any suggestions for potential reviewers then please mention them here in this thread (without tagging them with an @).
-
-<span class="gs">**Editor instructions**</span>
-
-Thank you for considering managing the review workflow of a notebook submission to EDS book.
-
-Please find and assign reviewers and start the main review.
-</pre></div>
-</div>
 <p>EiC assign an editor to moderate the review and find reviewers.</p>
 <div class="admonition important">
 <p class="admonition-title">Important</p>
@@ -603,53 +581,6 @@ Once reviewers agreed on the revision, EiC open a REVIEW issue.</p>
 <h2>Review<a class="headerlink" href="#review" title="Permalink to this headline">¶</a></h2>
 <p>The REVIEW issue aims to be a space where editor will moderate timings and conversation between authors and reviewers.
 EiC open it and replace the default first comment the markdown template below:</p>
-<div class="admonition note" id="templates-eic-review-template">
-<p class="admonition-title">Note</p>
-<p>The REVIEW template follows the Journal of Open Source Education’s review issue and <a class="reference external" href="https://openjournals.readthedocs.io/en/jose/review_checklist.html">checklist template</a></p>
-</div>
-<div class="highlight-markdown notranslate"><div class="highlight"><pre><span></span><span class="gh"># Notebook Review: Issue#[PREREVIEW ID]</span>
-
-&lt;p align=&quot;left&quot;&gt;
-    &lt;a href=&quot;https://notebooks.gesis.org/binder/v2/gh/eds-book-gallery/[NOTEBOOK NAME]/review?labpath=[NOTEBOOK NAME].ipynb&quot;&gt;
-        &lt;img alt=&quot;Binder&quot; src=&quot;https://mybinder.org/badge_logo.svg&quot;&gt;
-    &lt;/a&gt;
-&lt;/p&gt;
-
-<span class="gs">**Submitting author:**</span> [AUTHOR GITHUB HANDLE]
-
-<span class="gs">**Repository:**</span> [NOTEBOOK REPOSITORY LINK]
-
-<span class="gs">**Notebook idea issue:**</span> [NOTEBOOK IDEA ISSUE ID]
-
-<span class="gs">**Editor:**</span> [EDITOR GITHUB HANDLE]
-
-<span class="gs">**Reviewer:**</span> [REVIEWER1 GITHUB HANDLE], [REVIEWER2 GITHUB HANDLE]
-
-<span class="gs">**Managing EiC:**</span> [EIC GITHUB HANDLE]
-
-<span class="gu">## Status</span>
-
-<span class="gs">**Reviewer instructions &amp; questions**</span>
-
-Hi 👋 [REVIEWER1 GITHUB HANDLE] &amp; [REVIEWER2 GITHUB HANDLE], please carry out your review in this issue by updating the checklist below. 
-
-As a reviewer, you contribute to the technical quality of the content published by our community. 
-
-Before the review, EiC checked if the submission fits the minimum requirements. 
-
-The quality of the proposed contribution can be assessed through scientific, technical and code criteria. 
-
-The reviewer guidelines are available here: &lt;change-URL&gt;. 
-Any questions/concerns please let [EDITOR GITHUB HANDLE] know.
-
-<span class="gu">## Review Checklist for [REVIEWER GITHUB HANDLE]</span>
-
-```{include} ../../templates/reviewers/reviewers-review-checklist.md
-</pre></div>
-</div>
-<div class="highlight-markdown notranslate"><div class="highlight"><pre><span></span>
-</pre></div>
-</div>
 <p>To facilitate the discussion, EiC creates a new branch <code class="docutils literal notranslate"><span class="pre">review</span></code> to add reviewers info (name, affiliation, GitHub handle) in the contribution section of the notebook.
 Then EiC commit and push changes to create a PR in the notebook repository.
 The PR will trigger ReviewNB, a third-party plugin in GitHub for displaying and commenting Jupyter Notebooks (see further details <span class="xref myst">here</span>).</p>
