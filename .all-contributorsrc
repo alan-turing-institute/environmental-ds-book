@@ -237,6 +237,15 @@
       "contributions": [
         "ideas"
       ]
+    },
+    {
+      "login": "ViktorDomazetoski",
+      "name": "Viktor Domazetoski",
+      "avatar_url": "https://avatars.githubusercontent.com/u/101590116?v=4",
+      "profile": "https://github.com/ViktorDomazetoski",
+      "contributions": [
+        "bug"
+      ]
     }
   ],
   "contributorsPerLine": 7,
