@@ -87,10 +87,9 @@ Your review is not limited to these topics, as described in the reviewer guide*
 
 ## Additional instructions
 
-Reviewer comments are welcome on this REVIEW issue or directly to the notebook repository.
+Reviewer general comments are welcome on this REVIEW issue or directly to the notebook repository.
 
 If you do the latter, you will find a Pull Request titled REVIEW where you can carry out the discussion with authors through ReviewNB, a third-party plugin in GitHub for displaying and commenting Jupyter Notebooks (see further details [here](https://edsbook.org/notebooks/about/notebooks-technologies.html#reviewnb)). 
-Reviewers can open issues in the notebook repo too and link the URL of the notebook REVIEW issue thread. This facilitates centralizing comments.
 
 In addition to ReviewNB, we suggest to explore or run the notebook in:
 * **Binder** (run): Click the Launch Binder button at the top level of this message.
