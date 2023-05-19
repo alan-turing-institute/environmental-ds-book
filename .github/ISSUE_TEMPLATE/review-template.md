@@ -39,7 +39,7 @@ Before the review, EiC checked if the submission fits the minimum requirements.
 
 The quality of the proposed contribution can be assessed through scientific, technical and code criteria. 
 
-The reviewer guidelines are available here: <change-URL>. 
+The reviewer guidelines are available here: https://edsbook.org/publishing/guidelines/guidelines-reviewers.html. 
 Any questions/concerns please let [EDITOR GITHUB HANDLE] know.
 
 ## Review checklist for [REVIEWER GITHUB HANDLE]
@@ -55,9 +55,9 @@ Your review is not limited to these topics, as described in the reviewer guide*
 - [ ] I confirm that I read and will adhere to [Open Science Peer Review Oath](https://doi.org/10.12688/f1000research.5686.2) 
 
 ### General checks
-- [ ] **Notebook:** Is the notebook file part of the notebook repository?
+- [ ] **Notebook:** Is the notebook file (``notebook.ipynb``) part of the notebook repository?
 - [ ] **Contribution and authorship:** Does the author list seem appropriate and complete (full name, affiliation, and GitHub/ORCID handle)?
-- [ ] **Scope and eligibility:** Does the submission contain an original and complete analysis according to the [theme](pb-about-aimsscope) selected?
+- [ ] **Scope and eligibility:** Does the submission contain an original and complete analysis according to the [scope of EDS book](https://edsbook.org/notebooks/about/aims-and-scope.html#aims-and-scope)?
 
 ### Reproducibility
 - [ ] Does the notebook run in a local environment?
@@ -93,4 +93,4 @@ If you do the latter, you will find a Pull Request titled REVIEW where you can c
 
 In addition to ReviewNB, we suggest to explore or run the notebook in:
 * **Binder** (run): Click the Launch Binder button at the top level of this message.
-* **Netlify** (only previews): a preview hosted by Netlify can be also inspected in the pull request of the contribution in EDS book (see link in Notebook preview).
+* **Netlify** (only previews): a preview hosted by Netlify can be also inspected in the pull request of the contribution in EDS book (see link in *Notebook preview*).
