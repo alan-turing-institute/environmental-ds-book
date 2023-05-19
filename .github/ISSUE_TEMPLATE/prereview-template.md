@@ -1,6 +1,6 @@
 ---
 name: "\U0001F50D PRE REVIEW"
-about: Log a PRE REVIEW!
+about: Log a PRE REVIEW issue!
 title: '[PRE REVIEW]'
 labels: ["prereview"]
 ---
