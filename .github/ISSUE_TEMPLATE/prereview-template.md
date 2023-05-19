@@ -1,6 +1,6 @@
 ---
-name: "\U0001F4D7 Notebook Idea"
-about: Log a notebook idea!
+name: "\U0001F50D PRE REVIEW"
+about: Log a PRE REVIEW!
 title: '[PRE REVIEW]'
 labels: ["prereview"]
 ---
