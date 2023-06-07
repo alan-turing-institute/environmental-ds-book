@@ -51,7 +51,7 @@ html:
   use_issues_button: true
   use_repository_button: true
   use_edit_page_button: true  # Whether to add an "Suggest edit" button to pages. If `true`, repository information in repository: must be filled in
-  google_analytics_id: "UA-214298162-1"
+  google_analytics_id: "G-364360094"
 
 repository:
   url: https://github.com/alan-turing-institute/environmental-ds-book # Online location of your book
