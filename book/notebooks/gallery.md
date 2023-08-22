@@ -67,9 +67,9 @@ Millington (2022)
     <a href="https://github.com/eds-book-gallery/b128b282-dee7-44a7-bc21-f1fd21452a83/actions/workflows/render.yaml">
         <img alt="render" src="https://github.com/eds-book-gallery/b128b282-dee7-44a7-bc21-f1fd21452a83/actions/workflows/render.yaml/badge.svg">
     </a>
-#    <a href="https://doi.org/10.24424/7cde-g605">
-#        <img alt="doi" src="https://zenodo.org/badge/DOI/10.24424/7cde-g605.svg">
-#    </a>
+    <a href="https://doi.org/10.24424/7cde-g605">
+        <img alt="doi" src="https://zenodo.org/badge/DOI/10.24424/7cde-g605.svg">
+    </a>
     <br/>
 </p>
 :::
