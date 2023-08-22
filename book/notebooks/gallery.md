@@ -5,21 +5,38 @@
 ::::{grid} 1 3 3 3
 :gutter: 2
 
-:::{grid-item-card} Land Cover Data <br> (Impact Observatory)
+:::{grid-item-card} Learning the Underlying Physics of a Simulation Model of the Ocean's Temperature  <br> (CIRC23)
 :margin: 3 0 0 0
-:link: ./gallery/b128b282-dee7-44a7-bc21-f1fd21452a83/notebook.html
+:link: ./gallery/3286b92f-4fae-4cc6-a29e-e408bc844542/notebook.html
 :link-type: url
 :text-align: center
 :shadow: md
 
-{bdg-primary}`General`
-{bdg-secondary}`Exploration`
+{bdg-primary}`Ocean`
+{bdg-secondary}`Modelling`
 <br>
-{bdg-warning}`Standard`
+{bdg-warning}`Special Issue`
 {bdg-info}`Python`
 ^^^
 
-<img src="https://user-images.githubusercontent.com/13321552/222927496-511cc8b4-5665-4229-8900-2774f76c5231.png?raw=True"/>
+<img src="https://camo.githubusercontent.com/009ffa79fb95f6c0f7fcf58b7424322724ccb432e485cc5aeb347f54ad7ba1ec/68747470733a2f2f7777772e636f6d6d6f6e647265616d732e6f72672f6d656469612d6c6962726172792f6f6365616e2d737572666163652d74656d7065726174757265732e6a70673f69643d33333639393138382677696474683d31323030266865696768743d343030267175616c6974793d393026636f6f7264696e617465733d3025324336363725324330253243363637"/>
+
++++
+Malhotra *et al.* (2023)
+
+<p align="center">
+    <a href="https://github.com/eds-book-gallery/3286b92f-4fae-4cc6-a29e-e408bc844542/blob/main/LICENSE">
+        <img alt="license" src="https://img.shields.io/badge/license-MIT-yellow.svg">
+    </a>
+    <a href="https://notebooks.gesis.org/binder/v2/gh/eds-book-gallery/3286b92f-4fae-4cc6-a29e-e408bc844542/postprint?labpath=notebook.ipynb">
+        <img alt="binder" src="https://mybinder.org/badge_logo.svg">
+    </a>
+    <a href="https://github.com/eds-book-gallery/3286b92f-4fae-4cc6-a29e-e408bc844542/actions/workflows/render.yaml">
+        <img alt="render" src="https://github.com/eds-book-gallery/3286b92f-4fae-4cc6-a29e-e408bc844542/actions/workflows/render.yaml/badge.svg">
+    </a>
+    <br/>
+</p>
+:::
 
 +++
 Millington (2022)
@@ -34,9 +51,9 @@ Millington (2022)
     <a href="https://github.com/eds-book-gallery/b128b282-dee7-44a7-bc21-f1fd21452a83/actions/workflows/render.yaml">
         <img alt="render" src="https://github.com/eds-book-gallery/b128b282-dee7-44a7-bc21-f1fd21452a83/actions/workflows/render.yaml/badge.svg">
     </a>
-    <a href="https://doi.org/10.24424/7cde-g605">
-        <img alt="doi" src="https://zenodo.org/badge/DOI/10.24424/7cde-g605.svg">
-    </a>
+#    <a href="https://doi.org/10.24424/7cde-g605">
+#        <img alt="doi" src="https://zenodo.org/badge/DOI/10.24424/7cde-g605.svg">
+#    </a>
     <br/>
 </p>
 :::
