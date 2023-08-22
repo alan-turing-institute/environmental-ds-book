@@ -38,6 +38,22 @@ Malhotra *et al.* (2023)
 </p>
 :::
 
+:::{grid-item-card} Land Cover Data <br> (Impact Observatory)
+:margin: 3 0 0 0
+:link: ./gallery/b128b282-dee7-44a7-bc21-f1fd21452a83/notebook.html
+:link-type: url
+:text-align: center
+:shadow: md
+
+{bdg-primary}`General`
+{bdg-secondary}`Exploration`
+<br>
+{bdg-warning}`Standard`
+{bdg-info}`Python`
+^^^
+
+<img src="https://user-images.githubusercontent.com/13321552/222927496-511cc8b4-5665-4229-8900-2774f76c5231.png?raw=True"/>
+
 +++
 Millington (2022)
 
