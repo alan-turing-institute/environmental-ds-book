@@ -5,9 +5,9 @@
 ::::{grid} 1 3 3 3
 :gutter: 2
 
-:::{grid-item-card} Land Cover Data <br> (Impact Observatory)
+:::{grid-item-card} Deep learning and variational inversion for climate change research (CIRC23)
 :margin: 3 0 0 0
-:link: ./gallery/b128b282-dee7-44a7-bc21-f1fd21452a83/notebook.html
+:link: ./gallery/93463cac-471a-469d-ad52-0514fd9b67f2/notebook.html
 :link-type: url
 :text-align: center
 :shadow: md
