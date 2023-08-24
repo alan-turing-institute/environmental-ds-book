@@ -5,7 +5,7 @@
 ::::{grid} 1 3 3 3
 :gutter: 2
 
-:::{grid-item-card} Learning the Underlying Physics of a Simulation Model of the Ocean's Temperature  <br> (CIRC23)
+:::{grid-item-card} Underlying physics of the ocean's temperature <br> (CIRC23)
 :margin: 3 0 0 0
 :link: ./gallery/3286b92f-4fae-4cc6-a29e-e408bc844542/notebook.html
 :link-type: url
