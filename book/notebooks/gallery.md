@@ -13,6 +13,43 @@
 :shadow: md
 
 {bdg-primary}`General`
+{bdg-secondary}`Modelling`
+<br>
+{bdg-warning}`Special Issue`
+{bdg-info}`Python`
+^^^
+
+<img src="https://github.com/eds-book-gallery/93463cac-471a-469d-ad52-0514fd9b67f2/assets/13321552/6171eaf3-80c4-4041-8743-4af368a9c95e?raw=True"/>
+
++++
+Domazetoski et al. (2023)
+
+<p align="center">
+    <a href="https://github.com/eds-book-gallery/93463cac-471a-469d-ad52-0514fd9b67f2/blob/main/LICENSE">
+        <img alt="license" src="https://img.shields.io/badge/license-MIT-yellow.svg">
+    </a>
+    <a href="https://notebooks.gesis.org/binder/v2/gh/eds-book-gallery/93463cac-471a-469d-ad52-0514fd9b67f2/postprint?labpath=notebook.ipynb">
+        <img alt="binder" src="https://mybinder.org/badge_logo.svg">
+    </a>
+    <a href="https://github.com/eds-book-gallery/93463cac-471a-469d-ad52-0514fd9b67f2/actions/workflows/render.yaml">
+        <img alt="render" src="https://github.com/eds-book-gallery/93463cac-471a-469d-ad52-0514fd9b67f2/actions/workflows/render.yaml/badge.svg">
+    </a>
+    <a href="https://github.com/alan-turing-institute/environmental-ds-book/issues/173">
+        <img alt="review" src="https://img.shields.io/badge/view-review-purple">
+    </a>
+    <br/>
+</p>
+:::
+
+
+:::{grid-item-card} Land Cover Data <br> (Impact Observatory)
+:margin: 3 0 0 0
+:link: ./gallery/b128b282-dee7-44a7-bc21-f1fd21452a83/notebook.html
+:link-type: url
+:text-align: center
+:shadow: md
+
+{bdg-primary}`General`
 {bdg-secondary}`Exploration`
 <br>
 {bdg-warning}`Standard`
