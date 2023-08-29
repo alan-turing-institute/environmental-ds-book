@@ -58,7 +58,7 @@ authors=[
          "display_name": "Daniela Pinto Veizaga",
          "name": "Daniela Pinto Veizaga",
          "email": "daniela.pinto@berkeley.edu",
-         "orcid_id": None,
+         "orcid_id": 0009-0005-8588-3774,
          "affiliation": "University of California, Berkeley"},
         {"agent_type": "user",
          "display_name": "Jorge Eduardo Peña Velasco",
