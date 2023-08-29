@@ -34,6 +34,9 @@ Malhotra *et al.* (2023)
     <a href="https://github.com/eds-book-gallery/3286b92f-4fae-4cc6-a29e-e408bc844542/actions/workflows/render.yaml">
         <img alt="render" src="https://github.com/eds-book-gallery/3286b92f-4fae-4cc6-a29e-e408bc844542/actions/workflows/render.yaml/badge.svg">
     </a>
+    <a href="https://zenodo.org/badge/latestdoi/636822482">
+        <img alt="doi" src="https://zenodo.org/badge/636822482.svg">
+    </a>
     <br/>
 </p>
 :::
