@@ -140,6 +140,29 @@ if len(metadata_contribution['inputs']) > 0:
         my_res_ext0 = ro.add_external_resource(res_type=rese_res_type, input_url=rese_file_url, title=rese_title,
                                                description=rese_description, folder='biblio')
 
-# license
+## lock files
+rese_res_type = "File"
+
+rese_file_url=f"https://github.com/{metadata_contribution['author_GHuser']}/{metadata_contribution['reponame']}/tree/main/.lock/conda-lock.yml"
+rese_title=f"Lock conda file"
+rese_description=f"Lock conda file of the Jupyter notebook hosted by the Environmental Data Science Book"
+ro.add_external_resource(res_type=rese_res_type, input_url=rese_file_url, title=rese_title, description=rese_description, folder='tool')
+
+## environment.yml
+rese_res_type = "File"
+rese_file_url = f"https://github.com/{metadata_contribution['author_GHuser']}/{metadata_contribution['reponame']}/tree/main/.binder/environment.yml"
+rese_title = f"Conda environment"
+rese_description = f"Conda environment when user want to have the same libraries installed without concerns of package versions"
+ro.add_external_resource(res_type=rese_res_type, input_url=rese_file_url, title=rese_title, description=rese_description, folder='tool')
+
+## rendered version
+rese_res_type="Publication"
+rese_file_url=f"https://edsbook.org/notebooks/gallery/{metadata_contribution['reponame']}/notebook.html"
+rese_title=f"Online rendered version of the Jupyter notebook"
+rese_description="Rendered version of the Jupyter Notebook hosted by the Environmental Data Science Book"
+
+my_res_ext0=ro.add_external_resource(res_type=rese_res_type, input_url=rese_file_url, title=rese_title, description=rese_description, folder='tool')
+
+## license
 MIT_index = rohub.list_available_licenses().index("MIT")
 ro.set_license(license_id=rohub.list_available_licenses()[MIT_index])
