@@ -1,0 +1,1753 @@
+
+<!DOCTYPE html>
+
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Learning the underlying physics of a simulation model of the ocean’s temperature (CIRC23) &#8212; Environmental Data Science Book</title>
+    
+  <link href="../../../_static/css/theme.css" rel="stylesheet">
+  <link href="../../../_static/css/index.ff1ffe594081f20da1ef19478df9384b.css" rel="stylesheet">
+
+    
+  <link rel="stylesheet"
+    href="../../../_static/vendor/fontawesome/5.13.0/css/all.min.css">
+  <link rel="preload" as="font" type="font/woff2" crossorigin
+    href="../../../_static/vendor/fontawesome/5.13.0/webfonts/fa-solid-900.woff2">
+  <link rel="preload" as="font" type="font/woff2" crossorigin
+    href="../../../_static/vendor/fontawesome/5.13.0/webfonts/fa-brands-400.woff2">
+
+    
+      
+
+    
+    <link rel="stylesheet" type="text/css" href="../../../_static/pygments.css" />
+    <link rel="stylesheet" type="text/css" href="../../../_static/sphinx-book-theme.css?digest=c3fdc42140077d1ad13ad2f1588a4309" />
+    <link rel="stylesheet" type="text/css" href="../../../_static/togglebutton.css" />
+    <link rel="stylesheet" type="text/css" href="../../../_static/copybutton.css" />
+    <link rel="stylesheet" type="text/css" href="../../../_static/mystnb.css" />
+    <link rel="stylesheet" type="text/css" href="../../../_static/sphinx-thebe.css" />
+    <link rel="stylesheet" type="text/css" href="../../../_static/panels-main.c949a650a448cc0ae9fd3441c0e17fb0.css" />
+    <link rel="stylesheet" type="text/css" href="../../../_static/panels-variables.06eb56fa6e07937060861dad626602ad.css" />
+    <link rel="stylesheet" type="text/css" href="../../../_static/design-style.1e8bd061cd6da7fc9cf755528e8ffc24.min.css" />
+    
+  <link rel="preload" as="script" href="../../../_static/js/index.be7d3bbb2ef33a8344ce.js">
+
+    <script data-url_root="../../../" id="documentation_options" src="../../../_static/documentation_options.js"></script>
+    <script src="../../../_static/jquery.js"></script>
+    <script src="../../../_static/underscore.js"></script>
+    <script src="../../../_static/doctools.js"></script>
+    <script src="../../../_static/clipboard.min.js"></script>
+    <script src="../../../_static/copybutton.js"></script>
+    <script>let toggleHintShow = 'Click to show';</script>
+    <script>let toggleHintHide = 'Click to hide';</script>
+    <script>let toggleOpenOnPrint = 'true';</script>
+    <script src="../../../_static/togglebutton.js"></script>
+    <script>var togglebuttonSelector = '.toggle, .admonition.dropdown, .tag_hide_input div.cell_input, .tag_hide-input div.cell_input, .tag_hide_output div.cell_output, .tag_hide-output div.cell_output, .tag_hide_cell.cell, .tag_hide-cell.cell';</script>
+    <script src="../../../_static/sphinx-book-theme.d59cb220de22ca1c485ebbdc042f0030.js"></script>
+    <script src="../../../_static/design-tabs.js"></script>
+    <script>const THEBE_JS_URL = "https://unpkg.com/thebe@0.8.2/lib/index.js"
+const thebe_selector = ".thebe,.cell"
+const thebe_selector_input = "pre"
+const thebe_selector_output = ".output, .cell_output"
+</script>
+    <script async="async" src="../../../_static/sphinx-thebe.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/require.js/2.3.4/require.min.js"></script>
+    <script src="https://unpkg.com/@jupyter-widgets/html-manager@^0.20.1/dist/embed-amd.js"></script>
+    <script>window.MathJax = {"options": {"processHtmlClass": "tex2jax_process|mathjax_process|math|output_area"}}</script>
+    <script defer="defer" src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+    <link rel="index" title="Index" href="../../../genindex.html" />
+    <link rel="search" title="Search" href="../../../search.html" />
+    <link rel="next" title="Exploring Land Cover Data (Impact Observatory)" href="../b128b282-dee7-44a7-bc21-f1fd21452a83/notebook.html" />
+    <link rel="prev" title="Gallery" href="../../gallery.html" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="docsearch:language" content="en">
+    
+
+    <!-- Google Analytics -->
+    
+<script async="" src="https://www.googletagmanager.com/gtag/js?id=G-3E20PWD938"></script>
+<script>
+                    window.dataLayer = window.dataLayer || [];
+                    function gtag(){ dataLayer.push(arguments); }
+                    gtag('js', new Date());
+                    gtag('config', 'G-3E20PWD938');
+                </script>
+
+  </head>
+  <body data-spy="scroll" data-target="#bd-toc-nav" data-offset="80">
+    
+    <div class="container-fluid" id="banner"></div>
+
+    
+
+    <div class="container-xl">
+      <div class="row">
+          
+<div class="col-12 col-md-3 bd-sidebar site-navigation show" id="site-navigation">
+    
+        <div class="navbar-brand-box">
+    <a class="navbar-brand text-wrap" href="../../../index.html">
+      
+        <!-- `logo` is deprecated in Sphinx 4.0, so remove this when we stop supporting 3 -->
+        
+      
+      
+      <img src="../../../_static/logo.png" class="logo" alt="logo">
+      
+      
+      <h1 class="site-logo" id="site-title">Environmental Data Science Book</h1>
+      
+    </a>
+</div><form class="bd-search d-flex align-items-center" action="../../../search.html" method="get">
+  <i class="icon fas fa-search"></i>
+  <input type="search" class="form-control" name="q" id="search-input" placeholder="Search this book..." aria-label="Search this book..." autocomplete="off" >
+</form><nav class="bd-links" id="bd-docs-nav" aria-label="Main">
+    <div class="bd-toc-item active">
+        <ul class="nav bd-sidenav">
+ <li class="toctree-l1">
+  <a class="reference internal" href="../../../welcome.html">
+   Welcome
+  </a>
+ </li>
+</ul>
+<p aria-level="2" class="caption" role="heading">
+ <span class="caption-text">
+  Preamble
+ </span>
+</p>
+<ul class="nav bd-sidenav">
+ <li class="toctree-l1">
+  <a class="reference internal" href="../../../preamble/about.html">
+   About EDS book
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../../../preamble/attribution.html">
+   Citation and Reuse
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../../../preamble/contribute.html">
+   Contribute
+  </a>
+ </li>
+</ul>
+<p aria-level="2" class="caption" role="heading">
+ <span class="caption-text">
+  Notebooks
+ </span>
+</p>
+<ul class="current nav bd-sidenav">
+ <li class="toctree-l1 has-children">
+  <a class="reference internal" href="../../about.html">
+   Our Notebooks
+  </a>
+  <input class="toctree-checkbox" id="toctree-checkbox-1" name="toctree-checkbox-1" type="checkbox"/>
+  <label for="toctree-checkbox-1">
+   <i class="fas fa-chevron-down">
+   </i>
+  </label>
+  <ul>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../../about/aims-and-scope.html">
+     Aims and Scope
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../../about/review-benefits.html">
+     Benefits of Reviewing Notebooks
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../../about/notebooks-technologies.html">
+     Technologies
+    </a>
+   </li>
+  </ul>
+ </li>
+ <li class="toctree-l1 current active has-children">
+  <a class="reference internal" href="../../gallery.html">
+   Gallery
+  </a>
+  <input checked="" class="toctree-checkbox" id="toctree-checkbox-2" name="toctree-checkbox-2" type="checkbox"/>
+  <label for="toctree-checkbox-2">
+   <i class="fas fa-chevron-down">
+   </i>
+  </label>
+  <ul class="current">
+   <li class="toctree-l2 current active">
+    <a class="current reference internal" href="#">
+     Underlying physics of the ocean's temperature (CIRC23)
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../b128b282-dee7-44a7-bc21-f1fd21452a83/notebook.html">
+     Land Cover Data (Impact Observatory)
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../435f534c-e49b-43c3-9bd6-3393100bef3f/notebook.html">
+     Cosmos-UK Soil Moisture (UKCEH)
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../ea34568e-d86e-4720-be2f-3f826f66a26c/notebook.html">
+     Rainfall NCEP/NCAR (NOAA)
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../ac327c3a-5264-40a2-8c6e-1e8d7c4b37ef/notebook.html">
+     Sea ice forecasting (IceNet)
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../94486a7f-e046-461f-bbb9-334ec7b57040/notebook.html">
+     Tree crown (DetectreeRGB)
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../bc30df18-fce2-42fa-aade-1ce5b7f3ca3c/notebook.html">
+     SEVIRI Level 1.5 (EUMESAT)
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../15d986da-2d7c-44fb-af71-700494485def/notebook.html">
+     Tree crown (DeepForest)
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../a2875cdc-ba6a-49dc-aab7-cdf7c4fc0fa8/notebook.html">
+     MOD021KM and FIRMS (NASA)
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../1b8921af-e77f-4ccf-ae38-4813cdceba0f/notebook.html">
+     UKV high-resolution (Met Office)
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../b34facfa-cea8-48f5-89f6-f11ce00812a9/notebook.html">
+     Detecting floating objects (ESA Phi-Lab)
+    </a>
+   </li>
+  </ul>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../../how-to.html">
+   Usage
+  </a>
+ </li>
+</ul>
+<p aria-level="2" class="caption" role="heading">
+ <span class="caption-text">
+  Publishing
+ </span>
+</p>
+<ul class="nav bd-sidenav">
+ <li class="toctree-l1 has-children">
+  <a class="reference internal" href="../../../publishing/guidelines.html">
+   Our Guidelines
+  </a>
+  <input class="toctree-checkbox" id="toctree-checkbox-3" name="toctree-checkbox-3" type="checkbox"/>
+  <label for="toctree-checkbox-3">
+   <i class="fas fa-chevron-down">
+   </i>
+  </label>
+  <ul>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../../../publishing/guidelines/guidelines-authors.html">
+     Guide for Authors
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../../../publishing/guidelines/guidelines-reviewers.html">
+     Guide for Reviewers
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../../../publishing/guidelines/guidelines-editors.html">
+     Guide for Editors
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../../../publishing/guidelines/guidelines-eic.html">
+     Guide for Editor in Chief
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../../../publishing/guidelines/guidelines-community.html">
+     Guide for Community
+    </a>
+   </li>
+  </ul>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../../../publishing/faq.html">
+   FAQ
+  </a>
+ </li>
+</ul>
+<p aria-level="2" class="caption" role="heading">
+ <span class="caption-text">
+  Community
+ </span>
+</p>
+<ul class="nav bd-sidenav">
+ <li class="toctree-l1">
+  <a class="reference internal" href="../../../community/about.html">
+   Our Community
+  </a>
+ </li>
+</ul>
+<p aria-level="2" class="caption" role="heading">
+ <span class="caption-text">
+  Afterword
+ </span>
+</p>
+<ul class="nav bd-sidenav">
+ <li class="toctree-l1">
+  <a class="reference internal" href="../../../afterword/bibliography.html">
+   Bibliography
+  </a>
+ </li>
+</ul>
+
+    </div>
+</nav> <!-- To handle the deprecated key -->
+
+<div class="navbar_extra_footer">
+  Powered by <a href="https://jupyterbook.org">Jupyter Book</a>
+</div>
+
+</div>
+
+
+          
+
+
+          
+<main class="col py-md-3 pl-md-4 bd-content overflow-auto" role="main">
+    
+    <div class="topbar container-xl fixed-top">
+    <div class="topbar-contents row">
+        <div class="col-12 col-md-3 bd-topbar-whitespace site-navigation show"></div>
+        <div class="col pl-md-4 topbar-main">
+            
+            <button id="navbar-toggler" class="navbar-toggler ml-0" type="button" data-toggle="collapse"
+                data-toggle="tooltip" data-placement="bottom" data-target=".site-navigation" aria-controls="navbar-menu"
+                aria-expanded="true" aria-label="Toggle navigation" aria-controls="site-navigation"
+                title="Toggle navigation" data-toggle="tooltip" data-placement="left">
+                <i class="fas fa-bars"></i>
+                <i class="fas fa-arrow-left"></i>
+                <i class="fas fa-arrow-up"></i>
+            </button>
+            
+            
+<div class="dropdown-buttons-trigger">
+    <button id="dropdown-buttons-trigger" class="btn btn-secondary topbarbtn" aria-label="Download this page"><i
+            class="fas fa-download"></i></button>
+
+    <div class="dropdown-buttons">
+        <!-- ipynb file if we had a myst markdown file -->
+        
+        <!-- Download raw file -->
+        <a class="dropdown-buttons" href="../../../_sources/notebooks/gallery/3286b92f-4fae-4cc6-a29e-e408bc844542/notebook.ipynb"><button type="button"
+                class="btn btn-secondary topbarbtn" title="Download source file" data-toggle="tooltip"
+                data-placement="left">.ipynb</button></a>
+        <!-- Download PDF via print -->
+        <button type="button" id="download-print" class="btn btn-secondary topbarbtn" title="Print to PDF"
+                onclick="printPdf(this)" data-toggle="tooltip" data-placement="left">.pdf</button>
+    </div>
+</div>
+
+            <!-- Source interaction buttons -->
+
+<div class="dropdown-buttons-trigger">
+    <button id="dropdown-buttons-trigger" class="btn btn-secondary topbarbtn"
+        aria-label="Connect with source repository"><i class="fab fa-github"></i></button>
+    <div class="dropdown-buttons sourcebuttons">
+        <a class="repository-button"
+            href="https://github.com/alan-turing-institute/environmental-ds-book"><button type="button" class="btn btn-secondary topbarbtn"
+                data-toggle="tooltip" data-placement="left" title="Source repository"><i
+                    class="fab fa-github"></i>repository</button></a>
+        <a class="issues-button"
+            href="https://github.com/alan-turing-institute/environmental-ds-book/issues/new?title=Issue%20on%20page%20%2Fnotebooks/gallery/3286b92f-4fae-4cc6-a29e-e408bc844542/notebook.html&body=Your%20issue%20content%20here."><button
+                type="button" class="btn btn-secondary topbarbtn" data-toggle="tooltip" data-placement="left"
+                title="Open an issue"><i class="fas fa-lightbulb"></i>open issue</button></a>
+        <a class="edit-button" href="https://github.com/alan-turing-institute/environmental-ds-book/edit/master/book/notebooks/gallery/3286b92f-4fae-4cc6-a29e-e408bc844542/notebook.ipynb"><button
+                type="button" class="btn btn-secondary topbarbtn" data-toggle="tooltip" data-placement="left"
+                title="Edit this page"><i class="fas fa-pencil-alt"></i>suggest edit</button></a>
+    </div>
+</div>
+
+            <!-- Full screen (wrap in <a> to have style consistency -->
+
+<a class="full-screen-button"><button type="button" class="btn btn-secondary topbarbtn" data-toggle="tooltip"
+        data-placement="bottom" onclick="toggleFullScreen()" aria-label="Fullscreen mode"
+        title="Fullscreen mode"><i
+            class="fas fa-expand"></i></button></a>
+
+            <!-- Launch buttons -->
+
+        </div>
+
+        <!-- Table of contents -->
+        <div class="d-none d-md-block col-md-2 bd-toc show noprint">
+            
+            <div class="tocsection onthispage pt-5 pb-3">
+                <i class="fas fa-list"></i> Contents
+            </div>
+            <nav id="bd-toc-nav" aria-label="Page">
+                <ul class="visible nav section-nav flex-column">
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#context">
+   Context
+  </a>
+  <ul class="nav section-nav flex-column">
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#purpose">
+     Purpose
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#description">
+     Description
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#highlights">
+     Highlights
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#contributions">
+     Contributions
+    </a>
+    <ul class="nav section-nav flex-column">
+     <li class="toc-h4 nav-item toc-entry">
+      <a class="reference internal nav-link" href="#notebook">
+       Notebook
+      </a>
+     </li>
+     <li class="toc-h4 nav-item toc-entry">
+      <a class="reference internal nav-link" href="#modelling-codebase">
+       Modelling codebase
+      </a>
+     </li>
+     <li class="toc-h4 nav-item toc-entry">
+      <a class="reference internal nav-link" href="#modelling-publications">
+       Modelling publications
+      </a>
+     </li>
+    </ul>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#data">
+     Data
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#source-code">
+     Source code
+    </a>
+   </li>
+  </ul>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#load-libraries">
+   Load libraries
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#dataset">
+   Dataset
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#download-input-material">
+   Download input material
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#reproduce-paper">
+   Reproduce paper
+  </a>
+  <ul class="nav section-nav flex-column">
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#ocean-dynamics-figure-1">
+     Ocean dynamics (Figure 1)
+    </a>
+   </li>
+  </ul>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#model-training">
+   Model training
+  </a>
+  <ul class="nav section-nav flex-column">
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#linear-regression-a-toy-example">
+     Linear regression (A toy example)
+    </a>
+    <ul class="nav section-nav flex-column">
+     <li class="toc-h4 nav-item toc-entry">
+      <a class="reference internal nav-link" href="#model-fit-example">
+       Model fit example
+      </a>
+     </li>
+    </ul>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#performance-of-the-regressor">
+     Performance of the regressor
+    </a>
+    <ul class="nav section-nav flex-column">
+     <li class="toc-h4 nav-item toc-entry">
+      <a class="reference internal nav-link" href="#scatter-plot-for-the-control-regressor-figure-2-different-from-above">
+       Scatter plot for the control regressor (Figure 2) - Different from above
+      </a>
+     </li>
+     <li class="toc-h4 nav-item toc-entry">
+      <a class="reference internal nav-link" href="#spatial-patterns-of-errors-figure-3">
+       Spatial patterns of errors (Figure 3)
+      </a>
+     </li>
+    </ul>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#sensitivity-analysis">
+     Sensitivity analysis
+    </a>
+    <ul class="nav section-nav flex-column">
+     <li class="toc-h4 nav-item toc-entry">
+      <a class="reference internal nav-link" href="#coefficient-analysis-figure-4">
+       Coefficient analysis (Figure 4)
+      </a>
+     </li>
+     <li class="toc-h4 nav-item toc-entry">
+      <a class="reference internal nav-link" href="#witholding-experiments">
+       Witholding experiments
+      </a>
+      <ul class="nav section-nav flex-column">
+       <li class="toc-h5 nav-item toc-entry">
+        <a class="reference internal nav-link" href="#withholding-multiplicative-terms-figure-5-importance-of-non-linearity">
+         Withholding multiplicative terms: Figure 5; Importance of Non-Linearity
+        </a>
+       </li>
+       <li class="toc-h5 nav-item toc-entry">
+        <a class="reference internal nav-link" href="#withholding-3d-structure-figure-6-impact-of-vertical-structure">
+         Withholding 3D structure: Figure 6; Impact of vertical structure
+        </a>
+       </li>
+       <li class="toc-h5 nav-item toc-entry">
+        <a class="reference internal nav-link" href="#withholding-currents-figure-7-impact-of-currents">
+         Withholding currents: Figure 7; Impact of currents
+        </a>
+       </li>
+      </ul>
+     </li>
+    </ul>
+   </li>
+  </ul>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#summary">
+   Summary
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#citing-this-notebook">
+   Citing this Notebook
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#additional-information">
+   Additional information
+  </a>
+ </li>
+</ul>
+
+            </nav>
+        </div>
+    </div>
+</div>
+    <div id="main-content" class="row">
+        <div class="col-12 col-md-9 pl-md-3 pr-md-0">
+            <!-- Table of contents that is only displayed when printing the page -->
+            <div id="jb-print-docs-body" class="onlyprint">
+                <h1>Learning the underlying physics of a simulation model of the ocean’s temperature (CIRC23)</h1>
+                <!-- Table of contents -->
+                <div id="print-main-content">
+                    <div id="jb-print-toc">
+                        
+                        <div>
+                            <h2> Contents </h2>
+                        </div>
+                        <nav aria-label="Page">
+                            <ul class="visible nav section-nav flex-column">
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#context">
+   Context
+  </a>
+  <ul class="nav section-nav flex-column">
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#purpose">
+     Purpose
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#description">
+     Description
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#highlights">
+     Highlights
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#contributions">
+     Contributions
+    </a>
+    <ul class="nav section-nav flex-column">
+     <li class="toc-h4 nav-item toc-entry">
+      <a class="reference internal nav-link" href="#notebook">
+       Notebook
+      </a>
+     </li>
+     <li class="toc-h4 nav-item toc-entry">
+      <a class="reference internal nav-link" href="#modelling-codebase">
+       Modelling codebase
+      </a>
+     </li>
+     <li class="toc-h4 nav-item toc-entry">
+      <a class="reference internal nav-link" href="#modelling-publications">
+       Modelling publications
+      </a>
+     </li>
+    </ul>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#data">
+     Data
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#source-code">
+     Source code
+    </a>
+   </li>
+  </ul>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#load-libraries">
+   Load libraries
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#dataset">
+   Dataset
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#download-input-material">
+   Download input material
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#reproduce-paper">
+   Reproduce paper
+  </a>
+  <ul class="nav section-nav flex-column">
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#ocean-dynamics-figure-1">
+     Ocean dynamics (Figure 1)
+    </a>
+   </li>
+  </ul>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#model-training">
+   Model training
+  </a>
+  <ul class="nav section-nav flex-column">
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#linear-regression-a-toy-example">
+     Linear regression (A toy example)
+    </a>
+    <ul class="nav section-nav flex-column">
+     <li class="toc-h4 nav-item toc-entry">
+      <a class="reference internal nav-link" href="#model-fit-example">
+       Model fit example
+      </a>
+     </li>
+    </ul>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#performance-of-the-regressor">
+     Performance of the regressor
+    </a>
+    <ul class="nav section-nav flex-column">
+     <li class="toc-h4 nav-item toc-entry">
+      <a class="reference internal nav-link" href="#scatter-plot-for-the-control-regressor-figure-2-different-from-above">
+       Scatter plot for the control regressor (Figure 2) - Different from above
+      </a>
+     </li>
+     <li class="toc-h4 nav-item toc-entry">
+      <a class="reference internal nav-link" href="#spatial-patterns-of-errors-figure-3">
+       Spatial patterns of errors (Figure 3)
+      </a>
+     </li>
+    </ul>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#sensitivity-analysis">
+     Sensitivity analysis
+    </a>
+    <ul class="nav section-nav flex-column">
+     <li class="toc-h4 nav-item toc-entry">
+      <a class="reference internal nav-link" href="#coefficient-analysis-figure-4">
+       Coefficient analysis (Figure 4)
+      </a>
+     </li>
+     <li class="toc-h4 nav-item toc-entry">
+      <a class="reference internal nav-link" href="#witholding-experiments">
+       Witholding experiments
+      </a>
+      <ul class="nav section-nav flex-column">
+       <li class="toc-h5 nav-item toc-entry">
+        <a class="reference internal nav-link" href="#withholding-multiplicative-terms-figure-5-importance-of-non-linearity">
+         Withholding multiplicative terms: Figure 5; Importance of Non-Linearity
+        </a>
+       </li>
+       <li class="toc-h5 nav-item toc-entry">
+        <a class="reference internal nav-link" href="#withholding-3d-structure-figure-6-impact-of-vertical-structure">
+         Withholding 3D structure: Figure 6; Impact of vertical structure
+        </a>
+       </li>
+       <li class="toc-h5 nav-item toc-entry">
+        <a class="reference internal nav-link" href="#withholding-currents-figure-7-impact-of-currents">
+         Withholding currents: Figure 7; Impact of currents
+        </a>
+       </li>
+      </ul>
+     </li>
+    </ul>
+   </li>
+  </ul>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#summary">
+   Summary
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#citing-this-notebook">
+   Citing this Notebook
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#additional-information">
+   Additional information
+  </a>
+ </li>
+</ul>
+
+                        </nav>
+                    </div>
+                </div>
+            </div>
+            
+              <div>
+                
+  <div class="tex2jax_ignore mathjax_ignore section" id="learning-the-underlying-physics-of-a-simulation-model-of-the-ocean-s-temperature-circ23">
+<h1>Learning the underlying physics of a simulation model of the ocean’s temperature (CIRC23)<a class="headerlink" href="#learning-the-underlying-physics-of-a-simulation-model-of-the-ocean-s-temperature-circ23" title="Permalink to this headline">¶</a></h1>
+<p><svg version="1.1" width="16" height="16" class="octicon octicon-tag" viewBox="0 0 16 16" aria-hidden="true"><path fill-rule="evenodd" d="M2.5 7.775V2.75a.25.25 0 01.25-.25h5.025a.25.25 0 01.177.073l6.25 6.25a.25.25 0 010 .354l-5.025 5.025a.25.25 0 01-.354 0l-6.25-6.25a.25.25 0 01-.073-.177zm-1.5 0V2.75C1 1.784 1.784 1 2.75 1h5.025c.464 0 .91.184 1.238.513l6.25 6.25a1.75 1.75 0 010 2.474l-5.026 5.026a1.75 1.75 0 01-2.474 0l-6.25-6.25A1.75 1.75 0 011 7.775zM6 5a1 1 0 100 2 1 1 0 000-2z"></path></svg>
+<span class="sd-sphinx-override sd-badge sd-bg-primary sd-bg-text-primary">Ocean</span>
+<span class="sd-sphinx-override sd-badge sd-bg-secondary sd-bg-text-secondary">Modelling</span>
+<span class="sd-sphinx-override sd-badge sd-bg-warning sd-bg-text-warning">Special Issue</span>
+<span class="sd-sphinx-override sd-badge sd-bg-info sd-bg-text-info">Python</span></p>
+<p align="left">
+    <a href="https://github.com/eds-book-gallery/3286b92f-4fae-4cc6-a29e-e408bc844542/blob/main/LICENSE">
+        <img alt="license" src="https://img.shields.io/badge/license-MIT-yellow.svg">
+    </a>
+    <a href="https://notebooks.gesis.org/binder/v2/gh/eds-book-gallery/3286b92f-4fae-4cc6-a29e-e408bc844542/main?labpath=notebook.ipynb">
+        <img alt="binder" src="https://mybinder.org/badge_logo.svg">
+    </a>
+    <a href="https://github.com/eds-book-gallery/3286b92f-4fae-4cc6-a29e-e408bc844542/actions/workflows/render.yaml">
+        <img alt="render" src="https://github.com/eds-book-gallery/3286b92f-4fae-4cc6-a29e-e408bc844542/actions/workflows/render.yaml/badge.svg">
+    </a>
+    <a href="https://github.com/alan-turing-institute/environmental-ds-book/issues/172">
+        <img alt="review" src="https://img.shields.io/badge/view-review-purple">
+    </a>
+    <br/>
+</p>
+<p align="left">
+    <a href="https://w3id.org/ro-id/b078ae9c-2ae3-4c10-8a86-673b55d2b274">
+        <img alt="RoHub" src="https://img.shields.io/badge/RoHub-FAIR_Executable_Research_Object-2ea44f?logo=Open+Access&logoColor=blue">
+    </a>
+    <a href="https://zenodo.org/badge/latestdoi/636822482">
+        <img alt="doi" src="https://zenodo.org/badge/636822482.svg">
+    </a>
+</p><div class="section" id="context">
+<h2>Context<a class="headerlink" href="#context" title="Permalink to this headline">¶</a></h2>
+<p>Can data-driven models for weather and climate predictions learn the underlying physics of the system against which they are trained? Or are they simply capable of identifying statistical patterns without any clear link to the underlying physics? Furner et al. (2022) run a sensitivity analysis of a regression-based ocean temperature model, trained against simulations from a 3D ocean model setup, demostrating that regression models are capable of learning much of the physics of the underlying system.</p>
+<p><img alt="Ocean Temperature" src="https://www.commondreams.org/media-library/ocean-surface-temperatures.jpg?id=33699188&amp;width=1200&amp;height=400&amp;quality=90&amp;coordinates=0%2C667%2C0%2C667" /></p>
+<p><center>
+Source: Image generated by the NASA and taken from Common Dreams.
+</center></p>
+<div class="section" id="purpose">
+<h3>Purpose<a class="headerlink" href="#purpose" title="Permalink to this headline">¶</a></h3>
+<p>This notebook aims to complement the science and methodological development embedded within the original paper, using an open infrastructure that allows users to combine interactive code with text and graphical objects, translating research outputs into findable, accessible, interoperable and reusable outputs and code.</p>
+</div>
+<div class="section" id="description">
+<h3>Description<a class="headerlink" href="#description" title="Permalink to this headline">¶</a></h3>
+<p>The notebook demonstrates the inputs, the training of the regression model of ocean temperature and its sensitivity analysis.</p>
+</div>
+<div class="section" id="highlights">
+<h3>Highlights<a class="headerlink" href="#highlights" title="Permalink to this headline">¶</a></h3>
+<ul class="simple">
+<li><p>Load the necessary libraries and dependencies to run this notebook, i.e., numpy, xarray, etc.</p></li>
+<li><p>Fetch the original dataset used for training the regression models.</p></li>
+<li><p>Visualize the simulator outputs and inspect the temperature distributions near the equator, the poles, and the deep ocean.</p></li>
+<li><p>Showcase an example of model training for linear regression.</p></li>
+<li><p>Evaluate the performance of the regressors.</p></li>
+<li><p>Inspect the spatial distribution of the averaged errors.</p></li>
+<li><p>Perform a sensitivity analysis and run a series of withholding experiments.</p></li>
+<li><p>Summarize our findings.</p></li>
+<li><p>Provide contact information.</p></li>
+</ul>
+</div>
+<div class="section" id="contributions">
+<h3>Contributions<a class="headerlink" href="#contributions" title="Permalink to this headline">¶</a></h3>
+<div class="section" id="notebook">
+<h4>Notebook<a class="headerlink" href="#notebook" title="Permalink to this headline">¶</a></h4>
+<ul class="simple">
+<li><p>Garima Malhotra (author), University of Colorado Boulder, <a class="reference external" href="https://github.com/garimamalhotra">&#64;garimamalhotra</a></p></li>
+<li><p>Daniela Pinto Veizaga (author), University of California, Berkeley, <a class="reference external" href="https://github.com/dapivei">&#64;dapivei</a></p></li>
+<li><p>Jorge Eduardo Peña Velasco (author), Claremont McKenna College, <a class="reference external" href="https://github.com/jedpe">&#64;jedpe</a></p></li>
+<li><p>Rachel Furner (reviewer), University of Cambridge, <a class="reference external" href="https://github.com/RachelFurner">&#64;RachelFurner</a></p></li>
+<li><p>Oscar Bautista (reviewer), World Food Programme, <a class="reference external" href="https://github.com/oscarbau">&#64;oscarbau</a></p></li>
+<li><p>Ricardo Barros Lourenço (reviewer), McMaster University, <a class="reference external" href="https://github.com/ricardobarroslourenco">&#64;ricardobarroslourenco</a></p></li>
+</ul>
+</div>
+<div class="section" id="modelling-codebase">
+<h4>Modelling codebase<a class="headerlink" href="#modelling-codebase" title="Permalink to this headline">¶</a></h4>
+<ul class="simple">
+<li><p>Rachel Furner (author), University of Cambridge, <a class="reference external" href="https://github.com/RachelFurner">&#64;RachelFurner</a></p></li>
+<li><p>Garima Malhotra (contributor), University of Colorado Boulder, <a class="reference external" href="https://github.com/garimamalhotra">&#64;garimamalhotra</a></p></li>
+<li><p>Daniela Pinto Veizaga (contributor), University of California, Berkeley, <a class="reference external" href="https://github.com/dapivei">&#64;dapivei</a></p></li>
+<li><p>Jorge Eduardo Peña Velasco (contributor), Claremont McKenna College, <a class="reference external" href="https://github.com/jedpe">&#64;jedpe</a></p></li>
+</ul>
+</div>
+<div class="section" id="modelling-publications">
+<h4>Modelling publications<a class="headerlink" href="#modelling-publications" title="Permalink to this headline">¶</a></h4>
+<div class="docutils container" id="id1">
+<ul class="simple">
+<li id="id25"><p>Rachel Furner, Peter Haynes, Dave Munday, Brooks Paige, Daniel C. Jones, and Emily Shuckburgh. A sensitivity analysis of a regression model of ocean temperature. <em>Environmental Data Science</em>, 1:e11, 2022. <a class="reference external" href="https://doi.org/10.1017/eds.2022.10">doi:10.1017/eds.2022.10</a>.</p></li>
+</ul>
+</div>
+</div>
+</div>
+<div class="section" id="data">
+<h3>Data<a class="headerlink" href="#data" title="Permalink to this headline">¶</a></h3>
+<ul class="simple">
+<li><p>Furner, Rachel. (2021). MITgcm Dataset for paper: Sensitivity analysis of a data-driven model of ocean temperature (v1.1) [Data set]. Zenodo. <a class="reference external" href="https://doi.org/10.5281/zenodo.7919172">https://doi.org/10.5281/zenodo.7919172</a></p></li>
+<li><p>Malhotra, Garima, Pinto-Veizaga, Daniela, &amp; Pena, Jorge. (2023). Reproducible Challenge - Team 3 - Sensitivity analysis- Models. <a class="reference external" href="https://doi.org/10.5281/zenodo.7954232">https://doi.org/10.5281/zenodo.7954232</a></p></li>
+</ul>
+<div class="alert alert-block alert-info"> <b>Note: </b> We provide the input feature arrays truncated to first 15000 points for large arrays (in trunc_io_arrays/-> data/interim/) because of space limitation. These are provided only for the withholding experiments that are required to run this notebook. For input arrays of other witholding experiments, please contact the authors. These can be provided if the users are interested in understanding the sensitivity of the regressor for other withholding experiments (not shown in this notebook). </div>
+</div>
+<div class="section" id="source-code">
+<h3>Source code<a class="headerlink" href="#source-code" title="Permalink to this headline">¶</a></h3>
+<p>The authors of the notebook acknowledge the original creator for providing public code available at <a class="reference external" href="https://github.com/RachelFurner/RegressionModelOceanTemp">Regression Model OceanTemp</a>. An updated and enhaced version of the code is available at <a class="reference external" href="https://github.com/eds-book-gallery/repro-challenge-team-3">Reproducibility of “A sensitivity analysis of a regression model of ocean temperature”</a>.</p>
+<div class="alert alert-block alert-info"> <b>Note: </b> Significant parts from source code were adapted or written from scratch for this notebook and the reproducible challenge. </div>
+<div class="dropdown admonition">
+<p class="admonition-title">Project Resources</p>
+<p><em>The submitted notebook was implemented and tested within a <a class="reference external" href="https://github.com/pangeo-data/pangeo-eosc">cloud computing infrastructure, kindly provided by the European Open Science Cloud (EOSC)</a>. The following lines thoroughly described the characteristics of this environment.</em></p>
+<table class="colwidths-auto table">
+<thead>
+<tr class="row-odd"><th class="text-align:left head"><p></p></th>
+<th class="text-align:right head"><p></p></th>
+</tr>
+</thead>
+<tbody>
+<tr class="row-even"><td class="text-align:left"><p><strong>Operating System</strong></p></td>
+<td class="text-align:right"><p>Ubuntu 22.04.1</p></td>
+</tr>
+<tr class="row-odd"><td class="text-align:left"><p><strong>Architecture</strong></p></td>
+<td class="text-align:right"><p>x86_64</p></td>
+</tr>
+<tr class="row-even"><td class="text-align:left"><p>CPU op-mode(s)</p></td>
+<td class="text-align:right"><p>32-bit, 64-bit</p></td>
+</tr>
+<tr class="row-odd"><td class="text-align:left"><p>Address sizes</p></td>
+<td class="text-align:right"><p>48 bits physical, 48 bits virtual</p></td>
+</tr>
+<tr class="row-even"><td class="text-align:left"><p>Byte Order</p></td>
+<td class="text-align:right"><p>Little Endian</p></td>
+</tr>
+<tr class="row-odd"><td class="text-align:left"><p><strong>CPU(s)</strong></p></td>
+<td class="text-align:right"><p>128</p></td>
+</tr>
+<tr class="row-even"><td class="text-align:left"><p>On-line CPU(s) list</p></td>
+<td class="text-align:right"><p>0-127</p></td>
+</tr>
+<tr class="row-odd"><td class="text-align:left"><p><strong>Vendor ID</strong></p></td>
+<td class="text-align:right"><p>AuthenticAMD</p></td>
+</tr>
+<tr class="row-even"><td class="text-align:left"><p>Model name</p></td>
+<td class="text-align:right"><p>AMD EPYC 7543 32-Core Processor</p></td>
+</tr>
+<tr class="row-odd"><td class="text-align:left"><p>CPU family</p></td>
+<td class="text-align:right"><p>25</p></td>
+</tr>
+<tr class="row-even"><td class="text-align:left"><p>Model</p></td>
+<td class="text-align:right"><p>1</p></td>
+</tr>
+<tr class="row-odd"><td class="text-align:left"><p>Thread(s) per core</p></td>
+<td class="text-align:right"><p>2</p></td>
+</tr>
+<tr class="row-even"><td class="text-align:left"><p>Core(s) per socket</p></td>
+<td class="text-align:right"><p>32</p></td>
+</tr>
+<tr class="row-odd"><td class="text-align:left"><p>Socket(s)</p></td>
+<td class="text-align:right"><p>2</p></td>
+</tr>
+<tr class="row-even"><td class="text-align:left"><p>Stepping</p></td>
+<td class="text-align:right"><p>1</p></td>
+</tr>
+<tr class="row-odd"><td class="text-align:left"><p>Frequency boost</p></td>
+<td class="text-align:right"><p>enabled</p></td>
+</tr>
+<tr class="row-even"><td class="text-align:left"><p>CPU max MHz</p></td>
+<td class="text-align:right"><p>2800.0000</p></td>
+</tr>
+<tr class="row-odd"><td class="text-align:left"><p>CPU min MHz</p></td>
+<td class="text-align:right"><p>1500.0000</p></td>
+</tr>
+<tr class="row-even"><td class="text-align:left"><p>BogoMIPS</p></td>
+<td class="text-align:right"><p>5589.72</p></td>
+</tr>
+<tr class="row-odd"><td class="text-align:left"><p>Flags</p></td>
+<td class="text-align:right"><p>fpu vme de pse</p></td>
+</tr>
+</tbody>
+</table>
+</div>
+</div>
+</div>
+<div class="section" id="load-libraries">
+<h2>Load libraries<a class="headerlink" href="#load-libraries" title="Permalink to this headline">¶</a></h2>
+<div class="cell tag_hide-input docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># System imports</span>
+<span class="kn">import</span> <span class="nn">sys</span>
+<span class="kn">import</span> <span class="nn">warnings</span>
+<span class="kn">import</span> <span class="nn">pandas</span> <span class="k">as</span> <span class="nn">pd</span>
+
+<span class="c1"># Data handling</span>
+<span class="kn">import</span> <span class="nn">intake</span>
+
+<span class="c1"># Modelling</span>
+<span class="kn">from</span> <span class="nn">sklearn</span> <span class="kn">import</span> <span class="n">linear_model</span>
+<span class="kn">from</span> <span class="nn">sklearn.model_selection</span> <span class="kn">import</span> <span class="n">GridSearchCV</span>
+
+<span class="c1"># Custom functions from the authors&#39; repo</span>
+<span class="n">sys</span><span class="o">.</span><span class="n">path</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="s2">&quot;src/general/&quot;</span><span class="p">)</span>
+<span class="n">sys</span><span class="o">.</span><span class="n">path</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="s2">&quot;src/pipelines/&quot;</span><span class="p">)</span>
+<span class="kn">import</span> <span class="nn">CreateDataName</span> <span class="k">as</span> <span class="nn">cn</span>
+<span class="kn">import</span> <span class="nn">ReadRoutinesModifiedCloud</span> <span class="k">as</span> <span class="nn">rr</span>
+<span class="kn">from</span> <span class="nn">make_scatter_data_plots_cloud</span> <span class="kn">import</span> <span class="n">make_scatter_plots</span>
+<span class="kn">from</span> <span class="nn">make_error_data_plots_cloud</span> <span class="kn">import</span> <span class="n">make_error_plots</span>
+
+<span class="c1"># Custom functions of the reproducibility team</span>
+<span class="kn">from</span> <span class="nn">constants_cloud</span> <span class="kn">import</span> <span class="o">*</span>
+
+<span class="n">warnings</span><span class="o">.</span><span class="n">filterwarnings</span><span class="p">(</span><span class="n">action</span><span class="o">=</span><span class="s2">&quot;ignore&quot;</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+</div>
+</div>
+<div class="section" id="dataset">
+<h2>Dataset<a class="headerlink" href="#dataset" title="Permalink to this headline">¶</a></h2>
+<p>The training and validation data derive from running the Massachusetts Institute of Technology general circulation model (<a class="reference external" href="https://zenodo.org/record/4672260#.ZFgb_S-B2pY">MITgcm</a>) —a physically based model capable of simulating the ocean or the atmosphere dynamics due to isomorphisms in the governing equations. This research project relies on a simple 2° sector configuration that captures the fundamental dynamics of the ocean, including a realistic overturning circulation. This configuration features a single ocean basin, with:</p>
+<ul class="simple">
+<li><p>limited topography</p></li>
+<li><p>simplified coastlines</p></li>
+<li><p>constant idealized forcing</p></li>
+</ul>
+<p>The domain runs from 60°S to 60° N, and is just over 20° wide in longitude. The domain is bounded by land along its northern and southern edges, and a strip of land runs along the eastern/western boundary from 60° N to 40° S.  Below this, in the southernmost 20°, the simulator has a periodic boundary condition, allowing flow that exits to the east and west to return to the domain at the western and eastern boundary. The domain has flat-bottom bathymetry of 5,000 m over most of the domain, with a 2° region of 2,500-m depth at the southernmost 20° of the eastern edge.</p>
+<p>The simulator has:</p>
+<ul class="simple">
+<li><p>42 depth levels, with the surface layer being the thinnest at 10 m, and the bottom 10 levels being the maximum at 250 m. + 11 cells in the longitudinal direction</p></li>
+<li><p>78 cells in the latitudinal direction</p></li>
+</ul>
+<p>The simulator has a 12-hr time step, with fields output daily. We focus on daily-mean outputs.</p>
+</div>
+<div class="section" id="download-input-material">
+<h2>Download input material<a class="headerlink" href="#download-input-material" title="Permalink to this headline">¶</a></h2>
+<div class="alert alert-warning">
+<p><strong>Note:</strong>
+The submitted notebook (located at <code class="docutils literal notranslate"><span class="pre">notebooks/notebook_submitted.ipynb</span></code>) downloads input datasets and saved models from Zenodo repositories. This notebook version skips the download step by fetching input files directly from a cloud storage kindly provided by the <a class="reference external" href="https://github.com/pangeo-data/pangeo-eosc">European Open Science Cloud (EOSC)</a>.</p>
+</div>
+<p>The original dataset is available <a class="reference external" href="https://zenodo.org/record/7919172">here</a>. This dataset is used to train the regression model described in the paper.  To download this data locally, run the following line of code. Note that this process will take <span class="math notranslate nohighlight">\(\sim 1\)</span> hour and will require at least 52 GB of available space.</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span>%%time
+!bash &quot;infrastructure/downloader_datasets.sh&quot; &gt; &quot;../outputs/logs/download_datasets.txt&quot;
+</pre></div>
+</div>
+<p>Training this model and performing all the experiments presented in the original paper requires plenty of computing power, so, to facilitate running this notebook, we have publicly released few trained models, their predictions, and input arrays available <a class="reference external" href="https://doi.org/10.5281/zenodo.7954232">here</a>. To download this data locally, run the following line of code. This process will take <span class="math notranslate nohighlight">\(\sim 15\)</span> minutes and requires at least <span class="math notranslate nohighlight">\(\sim 20\)</span> GB available space.</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span>%%time
+!bash &quot;infrastructure/downloader_experiments.sh&quot; &gt; &quot;../outputs/logs/download_experiments.txt&quot;
+</pre></div>
+</div>
+</div>
+<div class="section" id="reproduce-paper">
+<h2>Reproduce paper<a class="headerlink" href="#reproduce-paper" title="Permalink to this headline">¶</a></h2>
+<div class="section" id="ocean-dynamics-figure-1">
+<h3>Ocean dynamics (Figure 1)<a class="headerlink" href="#ocean-dynamics-figure-1" title="Permalink to this headline">¶</a></h3>
+<p>The paper uses a  2° sector configuration to simulate ocean dynamics. This configuration features a single ocean basin, with limited topography, simplified coastlines, and constant idealized forcing. This has been used in a number of idealized simulations of Southern Ocean processes and their impacts on the global circulation. This configuration, while relatively simple, captures the fundamental dynamics of the ocean, including a realistic overturning circulation.</p>
+<p>In the following script, we load the MITGCM DATASET and visualize the configuration used to simulate the ocean dynamics. Focusing particuarly on:</p>
+<ol style="list-style-type: lower-alpha">
+<li>Temperature (°C) at 25 m below the surface for one particular day.</li>
+<li>Change in temperature between over 1 day at 25 m below the surface.</li>
+<li>Standard deviation in temperature at 25 m below the surface.</li>
+<li>Temperature (°C) at 25 m below the surface and 13° E for one particular day.</li>
+<li>Change in temperature between over 1 day in temperature at 25 m below the surface & 13° E.</li>
+<li>Standard deviation in temperature at 25 m below the surface & 13° E.</li>
+<li>Time series at 57° N, 17° E, and −25 m.</li>
+<li>Time series at 55° S, 9° E, and −25 m.</li>
+</ol><div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="o">%</span><span class="k">run</span> &quot;src/pipelines/graphs_section_cloud.py&quot;
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>================================================
+
+ LOADING MITGCM DATASET 
+
+================================================
+
+Reading in MITGCM dataset ...
+Shape of dataset: (2, 42, 78, 11)
+
+
+
+
+
+
+
+
+
+
+================================================
+
+ 25 M BELOW THE SURFACE FOR ONE PARTICULAR DAY 
+
+================================================
+
+Temperature (°C) at 25 m below the surface for one particular day.
+</pre></div>
+</div>
+<img alt="../../../_images/notebook_7_1.png" src="../../../_images/notebook_7_1.png" />
+<img alt="../../../_images/notebook_7_2.png" src="../../../_images/notebook_7_2.png" />
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Change in temperature between over 1 day at 25 m below the surface.
+</pre></div>
+</div>
+<img alt="../../../_images/notebook_7_4.png" src="../../../_images/notebook_7_4.png" />
+<img alt="../../../_images/notebook_7_5.png" src="../../../_images/notebook_7_5.png" />
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Standard deviation in temperature at 25 m below the surface.
+</pre></div>
+</div>
+<img alt="../../../_images/notebook_7_7.png" src="../../../_images/notebook_7_7.png" />
+<img alt="../../../_images/notebook_7_8.png" src="../../../_images/notebook_7_8.png" />
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>================================================
+
+ 25 M BELOW THE SURFACE &amp; AT at 13° E FOR ONE PARTICULAR DAY 
+
+================================================
+
+Temperature (°C) at 25 m below the surface &amp; at 13° E for one particular day.
+</pre></div>
+</div>
+<img alt="../../../_images/notebook_7_10.png" src="../../../_images/notebook_7_10.png" />
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Change in temperature between over 1 day in temperature at 25 m below the surface &amp; at 13° E.
+</pre></div>
+</div>
+<img alt="../../../_images/notebook_7_12.png" src="../../../_images/notebook_7_12.png" />
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Standard deviation in temperature at 25 m below the surface &amp; at 13° E.
+</pre></div>
+</div>
+<img alt="../../../_images/notebook_7_14.png" src="../../../_images/notebook_7_14.png" />
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>================================================
+
+  TIME SERIES AT 57° N, 17° E, and −25 m 
+
+================================================
+</pre></div>
+</div>
+<img alt="../../../_images/notebook_7_16.png" src="../../../_images/notebook_7_16.png" />
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>================================================
+
+  TIME SERIES AT 55° S, 9° E, and −25 m 
+
+================================================
+</pre></div>
+</div>
+<img alt="../../../_images/notebook_7_18.png" src="../../../_images/notebook_7_18.png" />
+</div>
+</div>
+<p>Notice that the domain:</p>
+<ul class="simple">
+<li><p>runs from  60°𝑆 to  60°𝑁, and is just over  20° wide in longitude.</p></li>
+<li><p>is bounded by land along the northern (and southern) edge, and a strip of land runs along the eastern (and western) boundary from 60°.
+N to  40°𝑆 (see Figure 1a). Below this, in the southernmost 20°, the simulator has a periodic boundary condition, allowing flow that exits to the east (west) to return to the domain at the western (eastern) boundary.</p></li>
+<li><p>has flat-bottom bathymetry of 5,000 m over most of the domain, with a 2° region of 2,500-m depth at the southernmost 20° of the eastern edge (i.e., the spit of land forming the eastern boundary continues to the southern boundary as a 2,500-m high subsurface ridge).</p></li>
+</ul>
+<p>Importantly, note from the figures presented, that the depth axis is scaled to give each GCM grid cell equal spacing. The simulator shows a realistic temperature distribution with warm surface water near the equator, and cooler water near the poles and in the deep ocean. Temperature changes are largest in the very north of the domain and throughout the southern region. Though changes per day are small, they accumulate over time to give cycles of around 0.2° in some regions of the domain.</p>
+</div>
+</div>
+<div class="section" id="model-training">
+<h2>Model training<a class="headerlink" href="#model-training" title="Permalink to this headline">¶</a></h2>
+<p>Model training is performed for the purely linear regression model (only linear terms) and the nolinear regression model (linear and multiplicative terms). Run parameters for the control and withholding experiments were set through the <code class="docutils literal notranslate"><span class="pre">run_vars</span></code> variable in the script <code class="docutils literal notranslate"><span class="pre">src/pipelines/TrainLinearRegressionModel.py</span></code>.</p>
+<div class="section" id="linear-regression-a-toy-example">
+<h3>Linear regression (A toy example)<a class="headerlink" href="#linear-regression-a-toy-example" title="Permalink to this headline">¶</a></h3>
+<p>For illustrative purposes, in the following section we showcase how to set parameters for a linear regression model that takes as input all the relevant variables, that is,:</p>
+<blockquote>
+<div><p>Temperature, salinity, U (East–West) and V (North–South) current components, density, U, V, and W (vertical) components of the Gent-McWilliams (GM) bolus velocities, sea surface height (SSH), latitude, longitude, and depth. The GM bolus velocities are a parameterization of the velocities resulting from ocean eddies and are used in the GM scheme to calculate the advective effects of eddy action on tracers.</p>
+</div></blockquote>
+<p>First, we define a dictionary named <code class="docutils literal notranslate"><span class="pre">run_vars</span></code>, which has all the input variables set to <code class="docutils literal notranslate"><span class="pre">True</span></code> and, <code class="docutils literal notranslate"><span class="pre">poly_degree</span></code> set to <code class="docutils literal notranslate"><span class="pre">1</span></code> – the latter parameter defines we will be running a purely linear regression.</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># Run parameters</span>
+<span class="n">run_vars</span> <span class="o">=</span> <span class="p">{</span>
+    <span class="s2">&quot;dimension&quot;</span><span class="p">:</span> <span class="mi">3</span><span class="p">,</span>
+    <span class="s2">&quot;lat&quot;</span><span class="p">:</span> <span class="kc">True</span><span class="p">,</span>
+    <span class="s2">&quot;lon&quot;</span><span class="p">:</span> <span class="kc">True</span><span class="p">,</span>
+    <span class="s2">&quot;dep&quot;</span><span class="p">:</span> <span class="kc">True</span><span class="p">,</span>
+    <span class="s2">&quot;current&quot;</span><span class="p">:</span> <span class="kc">True</span><span class="p">,</span>
+    <span class="s2">&quot;bolus_vel&quot;</span><span class="p">:</span> <span class="kc">True</span><span class="p">,</span>
+    <span class="s2">&quot;sal&quot;</span><span class="p">:</span> <span class="kc">True</span><span class="p">,</span>
+    <span class="s2">&quot;eta&quot;</span><span class="p">:</span> <span class="kc">True</span><span class="p">,</span>
+    <span class="s2">&quot;density&quot;</span><span class="p">:</span> <span class="kc">True</span><span class="p">,</span>
+    <span class="s2">&quot;poly_degree&quot;</span><span class="p">:</span> <span class="mi">1</span><span class="p">,</span>
+    <span class="s2">&quot;StepSize&quot;</span><span class="p">:</span> <span class="mi">1</span><span class="p">,</span>
+    <span class="s2">&quot;predict&quot;</span><span class="p">:</span> <span class="s2">&quot;DelT&quot;</span><span class="p">,</span>
+<span class="p">}</span>
+<span class="n">data_name</span> <span class="o">=</span> <span class="n">data_prefix</span> <span class="o">+</span> <span class="n">cn</span><span class="o">.</span><span class="n">create_dataname</span><span class="p">(</span><span class="n">run_vars</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+</div>
+<p>The following chunk of code performs the following tasks:</p>
+<ul class="simple">
+<li><p>loads the MITGCM data into input and output arrays.</p></li>
+<li><p>splits the dataset into training, validation and testing samples.</p></li>
+<li><p>normalises the dataset.</p></li>
+<li><p>saves the datasets into 1) norm_outputs_tr, array containing the normalized outputs that will be used for training, 2) norm_outputs_val, containing the normalized outputs that would be used for validation.</p></li>
+</ul>
+<p>The training-validation split ratio is set by default to <span class="math notranslate nohighlight">\(0.7\)</span>, while the validation-testing split ratio is set to <span class="math notranslate nohighlight">\(0.9\)</span>.</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># Load the data</span>
+<span class="n">cat</span> <span class="o">=</span> <span class="n">intake</span><span class="o">.</span><span class="n">open_catalog</span><span class="p">(</span><span class="s2">&quot;data/inputs_paper.yml&quot;</span><span class="p">)</span>
+
+<span class="n">mitgcm_filename</span> <span class="o">=</span> <span class="n">cat</span><span class="p">[</span><span class="s2">&quot;MITGCM_model&quot;</span><span class="p">]</span>
+<span class="n">density_file</span> <span class="o">=</span> <span class="n">cat</span><span class="p">[</span><span class="s2">&quot;density_data&quot;</span><span class="p">]</span>
+<span class="n">clim_filename</span> <span class="o">=</span> <span class="n">cat</span><span class="p">[</span><span class="s2">&quot;clim_data&quot;</span><span class="p">]</span>
+<span class="n">trainval_ratio</span> <span class="o">=</span> <span class="mf">0.7</span>
+<span class="n">valtest_ratio</span> <span class="o">=</span> <span class="mf">0.9</span>
+
+<span class="p">(</span>
+    <span class="n">norm_inputs_tr</span><span class="p">,</span>
+    <span class="n">_</span><span class="p">,</span>
+    <span class="n">_</span><span class="p">,</span>
+    <span class="n">norm_outputs_tr</span><span class="p">,</span>
+    <span class="n">norm_outputs_val</span><span class="p">,</span>
+    <span class="n">_</span><span class="p">,</span>
+    <span class="n">_</span><span class="p">,</span>
+    <span class="n">_</span><span class="p">,</span>
+    <span class="n">_</span><span class="p">,</span>
+    <span class="n">_</span><span class="p">,</span>
+    <span class="n">_</span><span class="p">,</span>
+    <span class="n">_</span><span class="p">,</span>
+    <span class="n">_</span><span class="p">,</span>
+<span class="p">)</span> <span class="o">=</span> <span class="n">rr</span><span class="o">.</span><span class="n">ReadMITGCM</span><span class="p">(</span><span class="n">mitgcm_filename</span><span class="p">,</span> <span class="n">clim_filename</span><span class="p">,</span> <span class="n">density_file</span><span class="p">,</span> <span class="n">data_name</span><span class="p">,</span> <span class="n">run_vars</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Shape of density dataset:  (18000, 42, 78, 11)
+*********************************
+Number of training &amp; validation samples &gt; 0.0005: [171979], [52235]
+Number of training &amp; validation samples &gt; 0.001:  [111033], [34604]
+Number of training &amp; validation samples &gt; 0.002:  [82846], [25565]
+Number of training &amp; validation samples &gt; 0.0025: [76097], [23495]
+Number of training &amp; validation samples &gt; 0.003:  [70810], [22054]
+Number of training &amp; validation samples &gt; 0.004:  [62849], [19632]
+Number of training &amp; validation samples &gt; 0.005:  [56885], [17853]
+*********************************
+Highest and lowest values in training data:   0.26704645, -0.23875284
+Highest and lowest values in validation data: 0.23960555, -0.26727915
+Mean of train and val sets : -5.388849e-05, 0.0001357027
+Std  of train and val sets : 0.01036672, 0.011045901
+Skew of train and val sets : [-1.0299236], [-0.20501705]
+Kurtosis of train and val sets : [101.97883], [98.24192]
+Normalising Data
+Shape for inputs and outputs: tr; val; te
+(648440, 228) (648440, 1)
+(199520, 228) (199520, 1)
+(99760, 228) (99760, 1)
+Shape for orig_temp and clim_temp, tr&amp;val
+(648440, 1) (199520, 1)
+(648440, 1) (199520, 1)
+</pre></div>
+</div>
+</div>
+</div>
+<div class="section" id="model-fit-example">
+<h4>Model fit example<a class="headerlink" href="#model-fit-example" title="Permalink to this headline">¶</a></h4>
+<p>After splitting our dataset into the corresponding subsamples (training, validation and testing), we proceed to train the model setting the following  hyperparameter:</p>
+<ul class="simple">
+<li><p><span class="math notranslate nohighlight">\(\alpha = 0.001\)</span></p></li>
+</ul>
+<p>Our cross-validation splitting strategy is set to <span class="math notranslate nohighlight">\(3\)</span> folds.</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># Model hyperparameters for the grid search</span>
+<span class="n">parameters</span> <span class="o">=</span> <span class="p">[{</span><span class="s2">&quot;alpha&quot;</span><span class="p">:</span> <span class="p">[</span><span class="mf">0.001</span><span class="p">]}]</span>
+<span class="n">n_folds</span> <span class="o">=</span> <span class="mi">3</span>
+<span class="n">lr</span> <span class="o">=</span> <span class="n">linear_model</span><span class="o">.</span><span class="n">Ridge</span><span class="p">(</span><span class="n">fit_intercept</span><span class="o">=</span><span class="kc">False</span><span class="p">)</span>
+<span class="n">lr</span> <span class="o">=</span> <span class="n">GridSearchCV</span><span class="p">(</span>
+    <span class="n">lr</span><span class="p">,</span> <span class="n">param_grid</span><span class="o">=</span><span class="n">parameters</span><span class="p">,</span> <span class="n">cv</span><span class="o">=</span><span class="n">n_folds</span><span class="p">,</span> <span class="n">scoring</span><span class="o">=</span><span class="s2">&quot;neg_mean_squared_error&quot;</span><span class="p">,</span> <span class="n">refit</span><span class="o">=</span><span class="kc">True</span>
+<span class="p">)</span>
+
+<span class="c1"># Fit the model</span>
+<span class="n">lr</span><span class="o">.</span><span class="n">fit</span><span class="p">(</span><span class="n">norm_inputs_tr</span><span class="p">,</span> <span class="n">norm_outputs_tr</span><span class="p">)</span>
+<span class="c1"># Parameters for the estimator.</span>
+<span class="n">pd</span><span class="o">.</span><span class="n">DataFrame</span><span class="o">.</span><span class="n">from_dict</span><span class="p">(</span><span class="n">lr</span><span class="o">.</span><span class="n">get_params</span><span class="p">(),</span> <span class="n">orient</span><span class="o">=</span><span class="s2">&quot;index&quot;</span><span class="p">,</span> <span class="n">columns</span><span class="o">=</span><span class="p">[</span><span class="s2">&quot;values&quot;</span><span class="p">])</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_html"><div>
+<style scoped>
+    .dataframe tbody tr th:only-of-type {
+        vertical-align: middle;
+    }
+
+    .dataframe tbody tr th {
+        vertical-align: top;
+    }
+
+    .dataframe thead th {
+        text-align: right;
+    }
+</style>
+<table border="1" class="dataframe">
+  <thead>
+    <tr style="text-align: right;">
+      <th></th>
+      <th>values</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <th>cv</th>
+      <td>3</td>
+    </tr>
+    <tr>
+      <th>error_score</th>
+      <td>NaN</td>
+    </tr>
+    <tr>
+      <th>estimator__alpha</th>
+      <td>1.0</td>
+    </tr>
+    <tr>
+      <th>estimator__copy_X</th>
+      <td>True</td>
+    </tr>
+    <tr>
+      <th>estimator__fit_intercept</th>
+      <td>False</td>
+    </tr>
+    <tr>
+      <th>estimator__max_iter</th>
+      <td>None</td>
+    </tr>
+    <tr>
+      <th>estimator__positive</th>
+      <td>False</td>
+    </tr>
+    <tr>
+      <th>estimator__random_state</th>
+      <td>None</td>
+    </tr>
+    <tr>
+      <th>estimator__solver</th>
+      <td>auto</td>
+    </tr>
+    <tr>
+      <th>estimator__tol</th>
+      <td>0.0001</td>
+    </tr>
+    <tr>
+      <th>estimator</th>
+      <td>Ridge(fit_intercept=False)</td>
+    </tr>
+    <tr>
+      <th>n_jobs</th>
+      <td>None</td>
+    </tr>
+    <tr>
+      <th>param_grid</th>
+      <td>[{'alpha': [0.001]}]</td>
+    </tr>
+    <tr>
+      <th>pre_dispatch</th>
+      <td>2*n_jobs</td>
+    </tr>
+    <tr>
+      <th>refit</th>
+      <td>True</td>
+    </tr>
+    <tr>
+      <th>return_train_score</th>
+      <td>False</td>
+    </tr>
+    <tr>
+      <th>scoring</th>
+      <td>neg_mean_squared_error</td>
+    </tr>
+    <tr>
+      <th>verbose</th>
+      <td>0</td>
+    </tr>
+  </tbody>
+</table>
+</div></div></div>
+</div>
+</div>
+</div>
+<div class="section" id="performance-of-the-regressor">
+<h3>Performance of the regressor<a class="headerlink" href="#performance-of-the-regressor" title="Permalink to this headline">¶</a></h3>
+<div class="section" id="scatter-plot-for-the-control-regressor-figure-2-different-from-above">
+<h4>Scatter plot for the control regressor (Figure 2) - Different from above<a class="headerlink" href="#scatter-plot-for-the-control-regressor-figure-2-different-from-above" title="Permalink to this headline">¶</a></h4>
+<p>We update the dictionary <code class="docutils literal notranslate"><span class="pre">run_vars</span></code>, such that <code class="docutils literal notranslate"><span class="pre">poly_degree</span></code> is set to <code class="docutils literal notranslate"><span class="pre">2</span></code> – This helps us in defining the model so that it has second-order pairwise polynomial terms, in order to capture a limited amount of nonlinear behavior through interaction between terms. This means that as well as the above inputs, we have multiplicative pairs of features</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># Setting up the parameters for the run</span>
+<span class="n">run_vars</span> <span class="o">=</span> <span class="p">{</span>
+    <span class="s2">&quot;dimension&quot;</span><span class="p">:</span> <span class="mi">3</span><span class="p">,</span>
+    <span class="s2">&quot;lat&quot;</span><span class="p">:</span> <span class="kc">True</span><span class="p">,</span>
+    <span class="s2">&quot;lon&quot;</span><span class="p">:</span> <span class="kc">True</span><span class="p">,</span>
+    <span class="s2">&quot;dep&quot;</span><span class="p">:</span> <span class="kc">True</span><span class="p">,</span>
+    <span class="s2">&quot;current&quot;</span><span class="p">:</span> <span class="kc">True</span><span class="p">,</span>
+    <span class="s2">&quot;bolus_vel&quot;</span><span class="p">:</span> <span class="kc">True</span><span class="p">,</span>
+    <span class="s2">&quot;sal&quot;</span><span class="p">:</span> <span class="kc">True</span><span class="p">,</span>
+    <span class="s2">&quot;eta&quot;</span><span class="p">:</span> <span class="kc">True</span><span class="p">,</span>
+    <span class="s2">&quot;density&quot;</span><span class="p">:</span> <span class="kc">True</span><span class="p">,</span>
+    <span class="s2">&quot;poly_degree&quot;</span><span class="p">:</span> <span class="mi">2</span><span class="p">,</span>
+    <span class="s2">&quot;StepSize&quot;</span><span class="p">:</span> <span class="mi">1</span><span class="p">,</span>
+    <span class="s2">&quot;predict&quot;</span><span class="p">:</span> <span class="s2">&quot;DelT&quot;</span><span class="p">,</span>
+<span class="p">}</span>
+<span class="n">data_name</span> <span class="o">=</span> <span class="n">data_prefix</span> <span class="o">+</span> <span class="n">cn</span><span class="o">.</span><span class="n">create_dataname</span><span class="p">(</span><span class="n">run_vars</span><span class="p">)</span>
+<span class="n">model_name</span> <span class="o">=</span> <span class="n">model_prefix</span> <span class="o">+</span> <span class="n">data_name</span>
+</pre></div>
+</div>
+</div>
+</div>
+<div class="alert alert-warning">
+<p><strong>Note:</strong>
+Some models were trained using large input datasets which will not work in the memory available of the standard Binder. Therefore, below we display the code needed for loading the input data in a markdown cell, rather than an executable cell. Instead, in the Sensitivity analysis (Figure 5) section we demonstrate how steps below work on another model which fits the memory and run the prediction function.</p>
+</div>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="c1"># Open data</span>
+<span class="n">cat</span> <span class="o">=</span> <span class="n">intake</span><span class="o">.</span><span class="n">open_catalog</span><span class="p">(</span><span class="s1">&#39;data/inputs_models.yml&#39;</span><span class="p">)</span>
+
+<span class="c1">#Loading Input Feature Arrays</span>
+<span class="n">norm_inputs_tr</span><span class="o">=</span><span class="n">cat</span><span class="p">[</span><span class="n">model_name</span><span class="p">]</span><span class="o">.</span><span class="n">to_dask</span><span class="p">()[</span><span class="s1">&#39;norm_inputs_tr&#39;</span><span class="p">]</span>
+<span class="n">norm_inputs_val</span><span class="o">=</span><span class="n">cat</span><span class="p">[</span><span class="n">model_name</span><span class="p">]</span><span class="o">.</span><span class="n">to_dask</span><span class="p">()[</span><span class="s1">&#39;norm_inputs_val&#39;</span><span class="p">]</span>
+</pre></div>
+</div>
+<p>The following script performs the following steps to make the scatter plot of predicted and true temperature change, allowing us to evaluate the performance of the control regressor.</p>
+<ol style="list-style-type: lower-alpha">
+<li>Load the true temperature change arrays, persistence arrays to calculate climatology.</li>
+<li>Load the trained model.</li>
+<li>Calculate the predicted temperature changes using the input feature arrays and the trained model.</li>
+<li>Denormalise the predictions and true outputs using the mean and standard deviation of the arrays.</li>
+<li>Calculate the mean squared errors and make the scatter plot using the denormalized arrays.</li>
+</ol>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="n">make_scatter_plots</span><span class="p">(</span><span class="n">run_vars</span><span class="p">,</span><span class="n">data_name</span><span class="p">,</span><span class="n">model_name</span><span class="p">,</span><span class="n">norm_inputs_tr</span><span class="p">,</span><span class="n">norm_inputs_val</span><span class="p">,</span><span class="n">lim</span><span class="o">=</span><span class="mi">15000</span><span class="p">,</span><span class="n">fig_prefix</span><span class="o">=</span><span class="s1">&#39;fig2&#39;</span><span class="p">)</span>
+</pre></div>
+</div>
+<p>The model captures the central part of the distribution well. While the majority of the temperature change is dominated by small near-zero changes, capturing these is key to producing a good forecast system. To a lesser extent, the regressor also captures the tails of the distribution, where temperature changes are larger, although the underprediction is more significant here. However, it is noteworthy that the model still shows some skill for these points, given that the model used is very simple and there are a relatively limited number of training samples in the tails.</p>
+</div>
+<div class="section" id="spatial-patterns-of-errors-figure-3">
+<h4>Spatial patterns of errors (Figure 3)<a class="headerlink" href="#spatial-patterns-of-errors-figure-3" title="Permalink to this headline">¶</a></h4>
+<p>To understand how the regressor performs spatially, temporally averaged absolute errors are plotted.
+These averaged errors are shown in Figure 3. Note that the regressor is only applied away from boundary and land points (in its current form, it cannot deal with spatial locations that are not surrounded on all sides by ocean points); hence, points close to land are not included in these plots. The script below performs the following steps:</p>
+<ol style="list-style-type: lower-alpha">
+<li>It loads the the MITgcm state at 500 different times from the 20-year dataset, masks the locations that are not surrounded on all sides by ocean points, and uses these fields as inputs to the regressor to forecast a single time step ahead.</li>
+<li>The set of forecasts created from these 500 input states is compared to the truth from the GCM run, and the absolute errors between the truth and the predictions are then temporally averaged.</li>
+</ol><div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="o">%</span><span class="k">run</span> &quot;src/pipelines/spatial_patterns_errors_cloud.py&quot;
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<img alt="../../../_images/notebook_18_0.png" src="../../../_images/notebook_18_0.png" />
+<img alt="../../../_images/notebook_18_11.png" src="../../../_images/notebook_18_11.png" />
+</div>
+</div>
+<p>The regressor shows the largest errors are located in the north of the domain and in the Southern Ocean. We see that the errors in the north of the domain are co-located with regions of high vertical advective temperature fluxes, and regions of high convective fluxes. These results imply the regression model struggles to fully capture the vertical processes, and the associated heat flux, in the north of the domain. The high errors in the Southern Ocean are again co-located with regions of high vertical diffusive fluxes, this time both explicit and implicit, and vertical advection.  Throughout the ocean interior where temperature changes and the fluxes associated with these are small, errors are also small as would be expected.</p>
+</div>
+</div>
+<div class="section" id="sensitivity-analysis">
+<h3>Sensitivity analysis<a class="headerlink" href="#sensitivity-analysis" title="Permalink to this headline">¶</a></h3>
+<div class="section" id="coefficient-analysis-figure-4">
+<h4>Coefficient analysis (Figure 4)<a class="headerlink" href="#coefficient-analysis-figure-4" title="Permalink to this headline">¶</a></h4>
+<p>Figure 4a shows coefficients averaged over all input locations for each variable type (i.e., for most variables, there are 27 inputs, corresponding to the 27 neighboring cells; we average over these to give a single value for each variable (temperature, salinity, etc.) and for each polynomial combination of variables).</p>
+<p>Figure 4b shows the coefficients related to polynomial interactions of temperature with temperature. These are the raw coefficients, without any averaging applied.</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="o">%</span><span class="k">run</span> &quot;src/pipelines/coecien_analysis_cloud.py&quot;
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>raw_coeffs.shape
+(1, 26106)
+raw_coeffs.shape
+(1, 26106)
+</pre></div>
+</div>
+<img alt="../../../_images/notebook_21_1.png" src="../../../_images/notebook_21_1.png" />
+<img alt="../../../_images/notebook_21_2.png" src="../../../_images/notebook_21_2.png" />
+</div>
+</div>
+<p>High-weighted inputs (those with a large magnitude coefficient) are variables which are heavily used in the predictions and therefore considered important for the predictive skill. From the above figures we infer:</p>
+<ol style="list-style-type: lower-alpha">
+<li>From Figure 4a: Density (as a linear term, not in combination with other variables) is by far the most highly weighted variable in this model. This agrees well with the current physical understanding of ocean dynamics.</li>
+<li>From Figure 4a: The location information is low weighted, particularly when interacting with other variables. This indicates that the regressor is not basing its predictions predominantly on the location of points, but on the physical variables themselves.</li>
+<li>From Figure 4b: Multiplicative interaction between temperatures at the grid point we are predicting for and the temperature at all surrounding points is very highly weighted. This fits well with our physical expectation of the system—as diffusive and advective fluxes of temperature are dominated by local gradients in temperature.</li>
+</ol>
+</div>
+<div class="section" id="witholding-experiments">
+<h4>Witholding experiments<a class="headerlink" href="#witholding-experiments" title="Permalink to this headline">¶</a></h4>
+<p>In this section, we run a series of withholding experiments. For each of the variables described with the exception of temperature, we train a new regressor leaving out that one variable group, for example, we train a new regressor with all the existing inputs except for salinity at all surrounding points and any multiplicative terms including salinity.</p>
+<div class="section" id="withholding-multiplicative-terms-figure-5-importance-of-non-linearity">
+<h5>Withholding multiplicative terms: Figure 5; Importance of Non-Linearity<a class="headerlink" href="#withholding-multiplicative-terms-figure-5-importance-of-non-linearity" title="Permalink to this headline">¶</a></h5>
+<p>We update the dictionary <code class="docutils literal notranslate"><span class="pre">run_vars</span></code>, such that <code class="docutils literal notranslate"><span class="pre">poly_degree</span></code> is set to <code class="docutils literal notranslate"><span class="pre">1</span></code> – This helps us in evaluating the performance of the purely linear model, that is, the model trained without any multiplicative terms.</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># Setting up the parameters for the run - Setting Polynomial Degree=1</span>
+<span class="n">run_vars</span> <span class="o">=</span> <span class="p">{</span>
+    <span class="s2">&quot;dimension&quot;</span><span class="p">:</span> <span class="mi">3</span><span class="p">,</span>
+    <span class="s2">&quot;lat&quot;</span><span class="p">:</span> <span class="kc">True</span><span class="p">,</span>
+    <span class="s2">&quot;lon&quot;</span><span class="p">:</span> <span class="kc">True</span><span class="p">,</span>
+    <span class="s2">&quot;dep&quot;</span><span class="p">:</span> <span class="kc">True</span><span class="p">,</span>
+    <span class="s2">&quot;current&quot;</span><span class="p">:</span> <span class="kc">True</span><span class="p">,</span>
+    <span class="s2">&quot;bolus_vel&quot;</span><span class="p">:</span> <span class="kc">True</span><span class="p">,</span>
+    <span class="s2">&quot;sal&quot;</span><span class="p">:</span> <span class="kc">True</span><span class="p">,</span>
+    <span class="s2">&quot;eta&quot;</span><span class="p">:</span> <span class="kc">True</span><span class="p">,</span>
+    <span class="s2">&quot;density&quot;</span><span class="p">:</span> <span class="kc">True</span><span class="p">,</span>
+    <span class="s2">&quot;poly_degree&quot;</span><span class="p">:</span> <span class="mi">1</span><span class="p">,</span>
+    <span class="s2">&quot;StepSize&quot;</span><span class="p">:</span> <span class="mi">1</span><span class="p">,</span>
+    <span class="s2">&quot;predict&quot;</span><span class="p">:</span> <span class="s2">&quot;DelT&quot;</span><span class="p">,</span>
+<span class="p">}</span>
+<span class="n">data_name</span> <span class="o">=</span> <span class="n">data_prefix</span> <span class="o">+</span> <span class="n">cn</span><span class="o">.</span><span class="n">create_dataname</span><span class="p">(</span><span class="n">run_vars</span><span class="p">)</span>
+<span class="n">model_name</span> <span class="o">=</span> <span class="n">model_prefix</span> <span class="o">+</span> <span class="n">data_name</span>
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># Path to the input arrays from an intake catalog</span>
+<span class="n">cat</span> <span class="o">=</span> <span class="n">intake</span><span class="o">.</span><span class="n">open_catalog</span><span class="p">(</span><span class="s2">&quot;data/inputs_models.yml&quot;</span><span class="p">)</span>
+
+<span class="n">inputs_tr_filename</span> <span class="o">=</span> <span class="n">cat</span><span class="p">[</span><span class="n">model_name</span><span class="p">](</span><span class="n">partition</span><span class="o">=</span><span class="s2">&quot;Tr&quot;</span><span class="p">)</span>
+<span class="n">inputs_val_filename</span> <span class="o">=</span> <span class="n">cat</span><span class="p">[</span><span class="n">model_name</span><span class="p">](</span><span class="n">partition</span><span class="o">=</span><span class="s2">&quot;Val&quot;</span><span class="p">)</span>
+
+<span class="c1"># Loading Input Arrays</span>
+<span class="n">norm_inputs_tr</span> <span class="o">=</span> <span class="n">inputs_tr_filename</span><span class="o">.</span><span class="n">to_dask</span><span class="p">()[</span><span class="s2">&quot;norm_inputs_tr&quot;</span><span class="p">]</span>
+<span class="n">norm_inputs_val</span> <span class="o">=</span> <span class="n">inputs_val_filename</span><span class="o">.</span><span class="n">to_dask</span><span class="p">()[</span><span class="s2">&quot;norm_inputs_val&quot;</span><span class="p">]</span>
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">make_scatter_plots</span><span class="p">(</span>
+    <span class="n">run_vars</span><span class="p">,</span>
+    <span class="n">data_name</span><span class="p">,</span>
+    <span class="n">model_name</span><span class="p">,</span>
+    <span class="n">norm_inputs_tr</span><span class="p">,</span>
+    <span class="n">norm_inputs_val</span><span class="p">,</span>
+    <span class="n">plot_val</span><span class="o">=</span><span class="kc">False</span><span class="p">,</span>
+    <span class="n">fig_prefix</span><span class="o">=</span><span class="s2">&quot;fig5&quot;</span><span class="p">,</span>
+<span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>predict values
+================================================
+
+  Predictions against truth for Training datasets for the control regressor 
+
+================================================
+</pre></div>
+</div>
+<img alt="../../../_images/notebook_25_1.png" src="../../../_images/notebook_25_1.png" />
+</div>
+</div>
+<p>We see that, without multiplicative terms, the model can capture the mean behavior of the system (zero change in temperature) but is unable to capture any of the variability. This mean behavior alone does not provide useful forecasts, as can be seen from the statistics for this experiment. Nonlinearity is shown to be critical to modeling the variability of temperature change.</p>
+</div>
+<div class="section" id="withholding-3d-structure-figure-6-impact-of-vertical-structure">
+<h5>Withholding 3D structure: Figure 6; Impact of vertical structure<a class="headerlink" href="#withholding-3d-structure-figure-6-impact-of-vertical-structure" title="Permalink to this headline">¶</a></h5>
+<p>To assess how information about the vertical structure of the ocean impacts predictions, we look at spatially averaged errors from the model trained with only a 2D neighborhood of inputs, along with the difference in error between this and the control regressor from previous Section.</p>
+<p>We update the dictionary <code class="docutils literal notranslate"><span class="pre">run_vars</span></code>, such that <code class="docutils literal notranslate"><span class="pre">dimension</span></code> is set to <code class="docutils literal notranslate"><span class="pre">2</span></code>.</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># Loading the 2D model</span>
+<span class="n">run_vars</span> <span class="o">=</span> <span class="p">{</span>
+    <span class="s2">&quot;dimension&quot;</span><span class="p">:</span> <span class="mi">2</span><span class="p">,</span>
+    <span class="s2">&quot;lat&quot;</span><span class="p">:</span> <span class="kc">True</span><span class="p">,</span>
+    <span class="s2">&quot;lon&quot;</span><span class="p">:</span> <span class="kc">True</span><span class="p">,</span>
+    <span class="s2">&quot;dep&quot;</span><span class="p">:</span> <span class="kc">True</span><span class="p">,</span>
+    <span class="s2">&quot;current&quot;</span><span class="p">:</span> <span class="kc">True</span><span class="p">,</span>
+    <span class="s2">&quot;bolus_vel&quot;</span><span class="p">:</span> <span class="kc">True</span><span class="p">,</span>
+    <span class="s2">&quot;sal&quot;</span><span class="p">:</span> <span class="kc">True</span><span class="p">,</span>
+    <span class="s2">&quot;eta&quot;</span><span class="p">:</span> <span class="kc">True</span><span class="p">,</span>
+    <span class="s2">&quot;density&quot;</span><span class="p">:</span> <span class="kc">True</span><span class="p">,</span>
+    <span class="s2">&quot;poly_degree&quot;</span><span class="p">:</span> <span class="mi">2</span><span class="p">,</span>
+    <span class="s2">&quot;StepSize&quot;</span><span class="p">:</span> <span class="mi">1</span><span class="p">,</span>
+    <span class="s2">&quot;predict&quot;</span><span class="p">:</span> <span class="s2">&quot;DelT&quot;</span><span class="p">,</span>
+<span class="p">}</span>
+<span class="n">data_name</span> <span class="o">=</span> <span class="n">data_prefix</span> <span class="o">+</span> <span class="n">cn</span><span class="o">.</span><span class="n">create_dataname</span><span class="p">(</span><span class="n">run_vars</span><span class="p">)</span>
+<span class="n">model_name</span> <span class="o">=</span> <span class="n">model_prefix</span> <span class="o">+</span> <span class="n">data_name</span>
+<span class="n">exp_name</span> <span class="o">=</span> <span class="n">exp_prefix</span> <span class="o">+</span> <span class="n">model_name</span>
+<span class="n">cntrl_name</span> <span class="o">=</span> <span class="p">(</span>
+    <span class="n">exp_prefix</span>
+    <span class="o">+</span> <span class="n">model_prefix</span>
+    <span class="o">+</span> <span class="n">data_prefix</span>
+    <span class="o">+</span> <span class="s2">&quot;3dLatLonDepUVBolSalEtaDnsPolyDeg2_Step1_PredictDelT&quot;</span>
+<span class="p">)</span>
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">exp_name</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>&#39;alpha.001_2dLatLonDepUVBolSalEtaDnsPolyDeg2_Step1_PredictDelT&#39;
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">make_error_plots</span><span class="p">(</span><span class="n">mitgcm_filename</span><span class="p">,</span> <span class="n">exp_name</span><span class="p">,</span> <span class="n">cntrl_name</span><span class="p">,</span> <span class="n">fig_prefix</span><span class="o">=</span><span class="s2">&quot;fig6&quot;</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span> ================================================
+
+ Plotting the absolute error from predictions across the grid at 500 different times averaged to give a spatial pattern of errors. 
+
+================================================
+</pre></div>
+</div>
+<img alt="../../../_images/notebook_29_1.png" src="../../../_images/notebook_29_1.png" />
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span> ================================================
+
+ Plotting the difference between this and the control run, with areas shaded in red indicating where the error has increased as a consequence of withholding information about the vertical structure, and blue indicating areas where the predictions are improved. 
+
+================================================
+</pre></div>
+</div>
+<img alt="../../../_images/notebook_29_3.png" src="../../../_images/notebook_29_3.png" />
+</div>
+</div>
+<p>Interestingly, this regressor shows some regions (the deep water in the south of the domain) where the errors are notably improved in a regressor using only 2D information. In this work, we have developed a regressor which learns one equation to be applied across all grid boxes in the domain. We optimize for best performance averaged over all relevant grid cells, but this does not enforce the best possible performance over each individual grid point/region, and so some of the resultant models will favor certain types of dynamics more than others. Given this, it is not unexpected that the new equations discovered for the withholding experiments (which again optimize for best performance averaged over the entire domain interior) may outperform the control in some locations, despite being poorer overall. Here, we see that the control model is able to perform well across the domain, and optimizes for good performance overall, rather than the much more varied performance seen in the withholding experiments. It seems that as the model which withholds vertical information is not capable of performing well in many regions of the domain, a solution is found which highly optimizes performance in other regions to minimize error overall.</p>
+</div>
+<div class="section" id="withholding-currents-figure-7-impact-of-currents">
+<h5>Withholding currents: Figure 7; Impact of currents<a class="headerlink" href="#withholding-currents-figure-7-impact-of-currents" title="Permalink to this headline">¶</a></h5>
+<p>We update the dictionary <code class="docutils literal notranslate"><span class="pre">run_vars</span></code>, such that <code class="docutils literal notranslate"><span class="pre">current</span></code> is set to <code class="docutils literal notranslate"><span class="pre">False</span></code> – This helps us in evaluating the impact of currents on the performance of the model.</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># Setting the run parameters</span>
+<span class="n">run_vars</span> <span class="o">=</span> <span class="p">{</span>
+    <span class="s2">&quot;dimension&quot;</span><span class="p">:</span> <span class="mi">3</span><span class="p">,</span>
+    <span class="s2">&quot;lat&quot;</span><span class="p">:</span> <span class="kc">True</span><span class="p">,</span>
+    <span class="s2">&quot;lon&quot;</span><span class="p">:</span> <span class="kc">True</span><span class="p">,</span>
+    <span class="s2">&quot;dep&quot;</span><span class="p">:</span> <span class="kc">True</span><span class="p">,</span>
+    <span class="s2">&quot;current&quot;</span><span class="p">:</span> <span class="kc">False</span><span class="p">,</span>
+    <span class="s2">&quot;bolus_vel&quot;</span><span class="p">:</span> <span class="kc">True</span><span class="p">,</span>
+    <span class="s2">&quot;sal&quot;</span><span class="p">:</span> <span class="kc">True</span><span class="p">,</span>
+    <span class="s2">&quot;eta&quot;</span><span class="p">:</span> <span class="kc">True</span><span class="p">,</span>
+    <span class="s2">&quot;density&quot;</span><span class="p">:</span> <span class="kc">True</span><span class="p">,</span>
+    <span class="s2">&quot;poly_degree&quot;</span><span class="p">:</span> <span class="mi">2</span><span class="p">,</span>
+    <span class="s2">&quot;StepSize&quot;</span><span class="p">:</span> <span class="mi">1</span><span class="p">,</span>
+    <span class="s2">&quot;predict&quot;</span><span class="p">:</span> <span class="s2">&quot;DelT&quot;</span><span class="p">,</span>
+<span class="p">}</span>
+<span class="n">data_name</span> <span class="o">=</span> <span class="n">data_prefix</span> <span class="o">+</span> <span class="n">cn</span><span class="o">.</span><span class="n">create_dataname</span><span class="p">(</span><span class="n">run_vars</span><span class="p">)</span>
+<span class="n">model_name</span> <span class="o">=</span> <span class="n">model_prefix</span> <span class="o">+</span> <span class="n">data_name</span>
+<span class="n">exp_name</span> <span class="o">=</span> <span class="n">exp_prefix</span> <span class="o">+</span> <span class="n">model_name</span>
+<span class="n">cntrl_name</span> <span class="o">=</span> <span class="p">(</span>
+    <span class="n">exp_prefix</span>
+    <span class="o">+</span> <span class="n">model_prefix</span>
+    <span class="o">+</span> <span class="n">data_prefix</span>
+    <span class="o">+</span> <span class="s2">&quot;3dLatLonDepUVBolSalEtaDnsPolyDeg2_Step1_PredictDelT&quot;</span>
+<span class="p">)</span>
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">exp_name</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>&#39;alpha.001_3dLatLonDepBolSalEtaDnsPolyDeg2_Step1_PredictDelT&#39;
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">make_error_plots</span><span class="p">(</span><span class="n">mitgcm_filename</span><span class="p">,</span> <span class="n">exp_name</span><span class="p">,</span> <span class="n">cntrl_name</span><span class="p">,</span> <span class="n">fig_prefix</span><span class="o">=</span><span class="s2">&quot;fig7&quot;</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span> ================================================
+
+ Plotting the absolute error from predictions across the grid at 500 different times averaged to give a spatial pattern of errors. 
+
+================================================
+</pre></div>
+</div>
+<img alt="../../../_images/notebook_33_1.png" src="../../../_images/notebook_33_1.png" />
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span> ================================================
+
+ Plotting the difference between this and the control run, with areas shaded in red indicating where the error has increased as a consequence of withholding information about the vertical structure, and blue indicating areas where the predictions are improved. 
+
+================================================
+</pre></div>
+</div>
+<img alt="../../../_images/notebook_33_3.png" src="../../../_images/notebook_33_3.png" />
+</div>
+</div>
+<p>The horizontal (U and V) components of the currents directly drive horizontal advection of temperature. They are also indirectly related to horizontal diffusion, as this is increased in regions of high currents and steep gradients. As such, we would expect that suppressing information about the horizontal currents would cause increases in error in regions where horizontal advection and horizontal diffusion is high. However, again, we note that this region of increased error is one where many processes are present, and the increased errors seen also coincide, to a lesser extent, with regions of high vertical processes (advection, diffusion, and convection), which is less in line with our physical understanding. Here, errors appear more closely matched to the horizontal processes, and so a reasonable interpretation is that the model here is behaving as expected.</p>
+</div>
+</div>
+</div>
+</div>
+<div class="section" id="summary">
+<h2>Summary<a class="headerlink" href="#summary" title="Permalink to this headline">¶</a></h2>
+<ul class="simple">
+<li><p>There has been much recent interest in developing data-driven models for weather and climate predictions. However, there are open questions regarding their generalizability and robustness, highlighting a need to better understand how they make their predictions. In particular, it is important to understand whether data-driven models learn the underlying physics of the system against which they are trained, or simply identify statistical patterns without any clear link to the underlying physics.</p></li>
+<li><p>In this notebook, we run a sensitivity analysis of a regression-based model of ocean temperature, trained against simulations from a 3D ocean model setup in a very simple configuration.</p></li>
+<li><p>We show that the regressor heavily bases its forecasts on, and is dependent on, variables known to be key to the physics such as currents and density. By contrast, the regressor does not make heavy use of inputs such as location, which have limited direct physical impacts.</p></li>
+<li><p>The model requires nonlinear interactions between inputs in order to show any meaningful skill—in line with the highly nonlinear dynamics of the ocean. Further analysis interprets the ways certain variables are used by the regression model.</p></li>
+<li><p>We see that information about the vertical profile of the water column reduces errors in regions of convective activity, and information about the currents reduces errors in regions dominated by advective processes.</p></li>
+<li><p>Our results demonstrate that even a simple regression model is capable of learning much of the physics of the system being modeled. We expect that a similar sensitivity analysis could be usefully applied to more complex ocean configurations.</p></li>
+</ul>
+</div>
+<div class="section" id="citing-this-notebook">
+<h2>Citing this Notebook<a class="headerlink" href="#citing-this-notebook" title="Permalink to this headline">¶</a></h2>
+<p>Please see <span class="xref myst">CITATION.cff</span> for the full citation information. The citation file can be exported to APA or BibTex formats (learn more <a class="reference external" href="https://docs.github.com/en/repositories/managing-your-repositorys-settings-and-features/customizing-your-repository/about-citation-files">here</a>).</p>
+</div>
+<div class="section" id="additional-information">
+<h2>Additional information<a class="headerlink" href="#additional-information" title="Permalink to this headline">¶</a></h2>
+<p><strong>Dataset</strong>: Malhotra, Garima, Pinto-Veizaga, Daniela, &amp; Pena, Jorge. (2023). Reproducible Challenge - Team 3 - Sensitivity analysis- Models. <a class="reference external" href="https://doi.org/10.5281/zenodo.7954232">https://doi.org/10.5281/zenodo.7954232</a> - Version 1</p>
+<p>Furner, Rachel. (2021). MITgcm Dataset for paper: Sensitivity analysis of a data-driven model of ocean temperature (v1.1) [Data set]. Zenodo. <a class="reference external" href="https://doi.org/10.5281/zenodo.7919172">https://doi.org/10.5281/zenodo.7919172</a> - Version 1.1</p>
+<p><strong>License</strong>: The code in this notebook is licensed under the MIT License. The Environmental Data Science book is licensed under the Creative Commons by Attribution 4.0 license. See further details <a class="reference external" href="https://github.com/alan-turing-institute/environmental-ds-book/blob/master/LICENSE.md">here</a>.</p>
+<p><strong>Contact</strong>: If you have any suggestion or report an issue with this notebook, feel free to <a class="reference external" href="https://github.com/alan-turing-institute/environmental-ds-book/issues/new/choose">create an issue</a> or or send a direct message to <a class="reference external" href="mailto:environmental&#46;ds&#46;book&#37;&#52;&#48;gmail&#46;com">environmental<span>&#46;</span>ds<span>&#46;</span>book<span>&#64;</span>gmail<span>&#46;</span>com</a>.</p>
+<div class="cell tag_remove-input docutils container">
+<div class="cell_output docutils container">
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Notebook repository version: v1.0.13
+Last tested: 2023-08-30
+</pre></div>
+</div>
+</div>
+</div>
+</div>
+</div>
+
+    <script type="text/x-thebe-config">
+    {
+        requestKernel: true,
+        binderOptions: {
+            repo: "binder-examples/jupyter-stacks-datascience",
+            ref: "master",
+        },
+        codeMirrorConfig: {
+            theme: "abcdef",
+            mode: "python"
+        },
+        kernelOptions: {
+            kernelName: "python3",
+            path: "./notebooks/gallery/3286b92f-4fae-4cc6-a29e-e408bc844542"
+        },
+        predefinedOutput: true
+    }
+    </script>
+    <script>kernelName = 'python3'</script>
+
+              </div>
+              
+            
+                <!-- Previous / next buttons -->
+<div class='prev-next-area'> 
+    <a class='left-prev' id="prev-link" href="../../gallery.html" title="previous page">
+        <i class="fas fa-angle-left"></i>
+        <div class="prev-next-info">
+            <p class="prev-next-subtitle">previous</p>
+            <p class="prev-next-title">Gallery</p>
+        </div>
+    </a>
+    <a class='right-next' id="next-link" href="../b128b282-dee7-44a7-bc21-f1fd21452a83/notebook.html" title="next page">
+    <div class="prev-next-info">
+        <p class="prev-next-subtitle">next</p>
+        <p class="prev-next-title">Exploring Land Cover Data (Impact Observatory)</p>
+    </div>
+    <i class="fas fa-angle-right"></i>
+    </a>
+</div>
+            
+        </div>
+    </div>
+    <footer class="footer">
+  <p>
+    
+      By EDS book Community. This site is powered by <a href="https://www.netlify.com/">Netlify</a>.<br/>
+    
+        &copy; Copyright 2021.<br/>
+  </p>
+</footer>
+</main>
+
+
+      </div>
+    </div>
+  
+  <script src="../../../_static/js/index.be7d3bbb2ef33a8344ce.js"></script>
+
+  </body>
+</html>
