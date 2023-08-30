@@ -246,6 +246,63 @@
       "contributions": [
         "bug"
       ]
+    },
+    {
+      "login": "garimamalhotra",
+      "name": "garimamalhotra",
+      "avatar_url": "https://avatars.githubusercontent.com/u/7003802?v=4",
+      "profile": "https://github.com/garimamalhotra",
+      "contributions": [
+        "blog",
+        "code"
+      ]
+    },
+    {
+      "login": "jedpe",
+      "name": "Jorge Eduardo Peña Velasco",
+      "avatar_url": "https://avatars.githubusercontent.com/u/17885931?v=4",
+      "profile": "https://github.com/jedpe",
+      "contributions": [
+        "blog",
+        "code"
+      ]
+    },
+    {
+      "login": "dapivei",
+      "name": "Daniela Pinto Veizaga",
+      "avatar_url": "https://avatars.githubusercontent.com/u/30577740?v=4",
+      "profile": "https://gitlab.com/dapivei",
+      "contributions": [
+        "blog",
+        "code"
+      ]
+    },
+    {
+      "login": "oscarbau",
+      "name": "oscarbau",
+      "avatar_url": "https://avatars.githubusercontent.com/u/41731874?v=4",
+      "profile": "https://github.com/oscarbau",
+      "contributions": [
+        "review"
+      ]
+    },
+    {
+      "login": "RachelFurner",
+      "name": "RachelFurner",
+      "avatar_url": "https://avatars.githubusercontent.com/u/47982456?v=4",
+      "profile": "https://github.com/RachelFurner",
+      "contributions": [
+        "review"
+      ]
+    },
+    {
+      "login": "ricardobarroslourenco",
+      "name": "Ricardo Barros Lourenço",
+      "avatar_url": "https://avatars.githubusercontent.com/u/7102375?v=4",
+      "profile": "http://about.me/ricardobarroslourenco",
+      "contributions": [
+        "review"
+      ]
     }
   ],
   "contributorsPerLine": 7,
@@ -255,5 +312,6 @@
   "repoHost": "https://github.com",
   "skipCi": true,
   "contributorsSortAlphabetically": true,
-  "commitConvention": "angular"
+  "commitConvention": "angular",
+  "commitType": "docs"
 }

@@ -38,6 +38,10 @@
 	path = book/notebooks/gallery/435f534c-e49b-43c3-9bd6-3393100bef3f
 	url = https://github.com/eds-book-gallery/435f534c-e49b-43c3-9bd6-3393100bef3f
 	branch = render
+[submodule "book/notebooks/gallery/3286b92f-4fae-4cc6-a29e-e408bc844542"]
+	path = book/notebooks/gallery/3286b92f-4fae-4cc6-a29e-e408bc844542
+	url = https://github.com/eds-book-gallery/3286b92f-4fae-4cc6-a29e-e408bc844542.git
+	branch = render
 [submodule "book/notebooks/gallery/93463cac-471a-469d-ad52-0514fd9b67f2"]
 	path = book/notebooks/gallery/93463cac-471a-469d-ad52-0514fd9b67f2
 	url = https://github.com/eds-book-gallery/93463cac-471a-469d-ad52-0514fd9b67f2.git
