@@ -276,6 +276,15 @@
         "blog",
         "code"
       ]
+    },
+    {
+      "login": "oscarbau",
+      "name": "oscarbau",
+      "avatar_url": "https://avatars.githubusercontent.com/u/41731874?v=4",
+      "profile": "https://github.com/oscarbau",
+      "contributions": [
+        "review"
+      ]
     }
   ],
   "contributorsPerLine": 7,
