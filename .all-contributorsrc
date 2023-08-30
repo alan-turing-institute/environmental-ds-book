@@ -256,6 +256,16 @@
         "blog",
         "code"
       ]
+    },
+    {
+      "login": "jedpe",
+      "name": "Jorge Eduardo Peña Velasco",
+      "avatar_url": "https://avatars.githubusercontent.com/u/17885931?v=4",
+      "profile": "https://github.com/jedpe",
+      "contributions": [
+        "blog",
+        "code"
+      ]
     }
   ],
   "contributorsPerLine": 7,
