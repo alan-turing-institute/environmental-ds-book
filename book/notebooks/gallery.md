@@ -37,6 +37,9 @@ Domazetoski et al. (2023)
     <a href="https://github.com/alan-turing-institute/environmental-ds-book/issues/173">
         <img alt="review" src="https://img.shields.io/badge/view-review-purple">
     </a>
+    <a href="https://zenodo.org/badge/latestdoi/638641256">
+        <img alt="doi" src="https://zenodo.org/badge/638641256.svg">
+    </a>
     <br/>
 </p>
 :::
