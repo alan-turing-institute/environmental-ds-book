@@ -266,6 +266,16 @@
         "blog",
         "code"
       ]
+    },
+    {
+      "login": "dapivei",
+      "name": "Daniela Pinto Veizaga",
+      "avatar_url": "https://avatars.githubusercontent.com/u/30577740?v=4",
+      "profile": "https://gitlab.com/dapivei",
+      "contributions": [
+        "blog",
+        "code"
+      ]
     }
   ],
   "contributorsPerLine": 7,
