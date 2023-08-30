@@ -34,9 +34,6 @@ Domazetoski et al. (2023)
     <a href="https://github.com/eds-book-gallery/93463cac-471a-469d-ad52-0514fd9b67f2/actions/workflows/render.yaml">
         <img alt="render" src="https://github.com/eds-book-gallery/93463cac-471a-469d-ad52-0514fd9b67f2/actions/workflows/render.yaml/badge.svg">
     </a>
-    <a href="https://github.com/alan-turing-institute/environmental-ds-book/issues/173">
-        <img alt="review" src="https://img.shields.io/badge/view-review-purple">
-    </a>
     <a href="https://zenodo.org/badge/latestdoi/638641256">
         <img alt="doi" src="https://zenodo.org/badge/638641256.svg">
     </a>
