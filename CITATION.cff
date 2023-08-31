@@ -4,7 +4,7 @@ authors:
 - family-names: "The Environmental Data Science book Community"
   given-names: "."
 title: "Environmental Data Science book: A computational notebook community for open environmental data science."
-version: v0.1.1
+version: v0.1.2
 identifiers:
   - description: The concept DOI for the collection containing all versions of the Citation File Format.
     type: doi
