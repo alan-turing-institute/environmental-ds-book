@@ -1,10 +1,9 @@
 cff-version: 1.2.0
 message: "To reference the latest version of The Environmental Data Science Book, please cite it as below."
 authors:
-- family-names: "The Environmental Data Science book Community"
-  given-names: "."
+  - name: "The Environmental Data Science book Community"
 title: "Environmental Data Science book: A computational notebook community for open environmental data science."
-version: v0.1.2
+version: v0.1.3
 identifiers:
   - description: The concept DOI for the collection containing all versions of the Citation File Format.
     type: doi
