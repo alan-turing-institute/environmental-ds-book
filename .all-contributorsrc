@@ -335,6 +335,15 @@
       "contributions": [
         "review"
       ]
+    },
+    {
+      "login": "dbhatedin",
+      "name": "Devanjan Bhattacharya",
+      "avatar_url": "https://avatars.githubusercontent.com/u/66441551?v=4",
+      "profile": "https://sites.google.com/site/bhattacharyadevanjan/home",
+      "contributions": [
+        "review"
+      ]
     }
   ],
   "contributorsPerLine": 7,
