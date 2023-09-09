@@ -305,6 +305,16 @@
       "contributions": [
         "review"
       ]
+    },
+    {
+      "login": "ancazugo",
+      "name": "Andrés Camilo Zúñiga-González",
+      "avatar_url": "https://avatars.githubusercontent.com/u/33363093?v=4",
+      "profile": "https://ancazugo.github.io",
+      "contributions": [
+        "blog",
+        "code"
+      ]
     }
   ],
   "contributorsPerLine": 7,
