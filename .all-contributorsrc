@@ -244,7 +244,9 @@
       "avatar_url": "https://avatars.githubusercontent.com/u/101590116?v=4",
       "profile": "https://github.com/ViktorDomazetoski",
       "contributions": [
-        "bug"
+        "bug",
+        "blog",
+        "code"
       ]
     }
   ],
@@ -255,5 +257,6 @@
   "repoHost": "https://github.com",
   "skipCi": true,
   "contributorsSortAlphabetically": true,
-  "commitConvention": "angular"
+  "commitConvention": "angular",
+  "commitType": "docs"
 }
