@@ -22,7 +22,7 @@
 <img src="https://github.com/eds-book-gallery/93463cac-471a-469d-ad52-0514fd9b67f2/assets/13321552/6171eaf3-80c4-4041-8743-4af368a9c95e?raw=True"/>
 
 +++
-Domazetoski et al. (2023)
+Domazetoski *et al.* (2023)
 
 <p align="center">
     <a href="https://github.com/eds-book-gallery/93463cac-471a-469d-ad52-0514fd9b67f2/blob/main/LICENSE">
