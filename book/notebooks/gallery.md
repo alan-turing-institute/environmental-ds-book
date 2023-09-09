@@ -5,6 +5,42 @@
 ::::{grid} 1 3 3 3
 :gutter: 2
 
+:::{grid-item-card} Underlying physics of the ocean's temperature <br> (CIRC23)
+:margin: 3 0 0 0
+:link: ./gallery/3286b92f-4fae-4cc6-a29e-e408bc844542/notebook.html
+:link-type: url
+:text-align: center
+:shadow: md
+
+{bdg-primary}`Ocean`
+{bdg-secondary}`Modelling`
+<br>
+{bdg-warning}`Special Issue`
+{bdg-info}`Python`
+^^^
+
+<img src="https://camo.githubusercontent.com/009ffa79fb95f6c0f7fcf58b7424322724ccb432e485cc5aeb347f54ad7ba1ec/68747470733a2f2f7777772e636f6d6d6f6e647265616d732e6f72672f6d656469612d6c6962726172792f6f6365616e2d737572666163652d74656d7065726174757265732e6a70673f69643d33333639393138382677696474683d31323030266865696768743d343030267175616c6974793d393026636f6f7264696e617465733d3025324336363725324330253243363637"/>
+
++++
+Malhotra *et al.* (2023)
+
+<p align="center">
+    <a href="https://github.com/eds-book-gallery/3286b92f-4fae-4cc6-a29e-e408bc844542/blob/main/LICENSE">
+        <img alt="license" src="https://img.shields.io/badge/license-MIT-yellow.svg">
+    </a>
+    <a href="http://mybinder.org/v2/gh/eds-book-gallery/3286b92f-4fae-4cc6-a29e-e408bc844542/postprint?labpath=notebook.ipynb">
+        <img alt="binder" src="https://mybinder.org/badge_logo.svg">
+    </a>
+    <a href="https://github.com/eds-book-gallery/3286b92f-4fae-4cc6-a29e-e408bc844542/actions/workflows/render.yaml">
+        <img alt="render" src="https://github.com/eds-book-gallery/3286b92f-4fae-4cc6-a29e-e408bc844542/actions/workflows/render.yaml/badge.svg">
+    </a>
+    <a href="https://zenodo.org/badge/latestdoi/636822482">
+        <img alt="doi" src="https://zenodo.org/badge/636822482.svg">
+    </a>
+    <br/>
+</p>
+:::
+
 :::{grid-item-card} Land Cover Data <br> (Impact Observatory)
 :margin: 3 0 0 0
 :link: ./gallery/b128b282-dee7-44a7-bc21-f1fd21452a83/notebook.html
@@ -28,14 +64,14 @@ Millington (2022)
     <a href="https://github.com/eds-book-gallery/b128b282-dee7-44a7-bc21-f1fd21452a83/blob/main/LICENSE">
         <img alt="license" src="https://img.shields.io/badge/license-MIT-yellow.svg">
     </a>
-    <a href="https://notebooks.gesis.org/binder/v2/gh/eds-book-gallery/b128b282-dee7-44a7-bc21-f1fd21452a83/main?labpath=notebook.ipynb">
+    <a href="http://mybinder.org/v2/gh/eds-book-gallery/b128b282-dee7-44a7-bc21-f1fd21452a83/main?labpath=notebook.ipynb">
         <img alt="binder" src="https://mybinder.org/badge_logo.svg">
     </a>
     <a href="https://github.com/eds-book-gallery/b128b282-dee7-44a7-bc21-f1fd21452a83/actions/workflows/render.yaml">
         <img alt="render" src="https://github.com/eds-book-gallery/b128b282-dee7-44a7-bc21-f1fd21452a83/actions/workflows/render.yaml/badge.svg">
     </a>
-    <a href="https://doi.org/10.24424/7cde-g605">
-        <img alt="doi" src="https://zenodo.org/badge/DOI/10.24424/7cde-g605.svg">
+    <a href="https://zenodo.org/badge/latestdoi/514340098">
+        <img alt="doi" src="https://zenodo.org/badge/514340098.svg">
     </a>
     <br/>
 </p>
@@ -64,14 +100,14 @@ Coca-Castro (2022)
     <a href="https://github.com/eds-book-gallery/435f534c-e49b-43c3-9bd6-3393100bef3f/blob/main/LICENSE">
         <img alt="license" src="https://img.shields.io/badge/license-MIT-yellow.svg">
     </a>
-    <a href="https://notebooks.gesis.org/binder/v2/gh/eds-book-gallery/435f534c-e49b-43c3-9bd6-3393100bef3f/main?labpath=notebook.ipynb">
+    <a href="http://mybinder.org/v2/gh/eds-book-gallery/435f534c-e49b-43c3-9bd6-3393100bef3f/main?labpath=notebook.ipynb">
         <img alt="binder" src="https://mybinder.org/badge_logo.svg">
     </a>
     <a href="https://github.com/eds-book-gallery/435f534c-e49b-43c3-9bd6-3393100bef3f/actions/workflows/render.yaml">
         <img alt="render" src="https://github.com/eds-book-gallery/435f534c-e49b-43c3-9bd6-3393100bef3f/actions/workflows/render.yaml/badge.svg">
     </a>
-    <a href="https://doi.org/10.24424/y99k-rz74">
-        <img alt="doi" src="https://zenodo.org/badge/DOI/10.24424/y99k-rz74.svg">
+    <a href="https://zenodo.org/badge/latestdoi/493432867">
+        <img alt="doi" src="https://zenodo.org/badge/493432867.svg">
     </a>
     <br/>
 </p>
@@ -100,14 +136,14 @@ Lam *et al.* (2022)
     <a href="https://github.com/eds-book-gallery/ea34568e-d86e-4720-be2f-3f826f66a26c/blob/main/LICENSE">
         <img alt="license" src="https://img.shields.io/badge/license-MIT-yellow.svg">
     </a>
-    <a href="https://notebooks.gesis.org/binder/v2/gh/eds-book-gallery/ea34568e-d86e-4720-be2f-3f826f66a26c/main?labpath=notebook.ipynb">
+    <a href="http://mybinder.org/v2/gh/eds-book-gallery/ea34568e-d86e-4720-be2f-3f826f66a26c/main?labpath=notebook.ipynb">
         <img alt="binder" src="https://mybinder.org/badge_logo.svg">
     </a>
     <a href="https://github.com/eds-book-gallery/ea34568e-d86e-4720-be2f-3f826f66a26c/actions/workflows/render.yaml">
         <img alt="render" src="https://github.com/eds-book-gallery/ea34568e-d86e-4720-be2f-3f826f66a26c/actions/workflows/render.yaml/badge.svg">
     </a>
-    <a href="https://doi.org/10.24424/1vw8-6519">
-        <img alt="doi" src="https://zenodo.org/badge/DOI/10.24424/1vw8-6519.svg">
+    <a href="https://zenodo.org/badge/latestdoi/497888281">
+        <img alt="doi" src="https://zenodo.org/badge/497888281.svg">
     </a>
     <br/>
 </p>
@@ -136,14 +172,14 @@ Coca-Castro (2022)
     <a href="https://github.com/eds-book-gallery/ac327c3a-5264-40a2-8c6e-1e8d7c4b37ef/blob/main/LICENSE">
         <img alt="license" src="https://img.shields.io/badge/license-MIT-yellow.svg">
     </a>
-    <a href="https://notebooks.gesis.org/binder/v2/gh/eds-book-gallery/ac327c3a-5264-40a2-8c6e-1e8d7c4b37ef/main?labpath=notebook.ipynb">
+    <a href="http://mybinder.org/v2/gh/eds-book-gallery/ac327c3a-5264-40a2-8c6e-1e8d7c4b37ef/main?labpath=notebook.ipynb">
         <img alt="binder" src="https://mybinder.org/badge_logo.svg">
     </a>
     <a href="https://github.com/eds-book-gallery/ac327c3a-5264-40a2-8c6e-1e8d7c4b37ef/actions/workflows/render.yaml">
         <img alt="render" src="https://github.com/eds-book-gallery/ac327c3a-5264-40a2-8c6e-1e8d7c4b37ef/actions/workflows/render.yaml/badge.svg">
     </a>
-    <a href="https://doi.org/10.24424/m8ew-pg51">
-        <img alt="doi" src="https://zenodo.org/badge/DOI/10.24424/m8ew-pg51.svg">
+    <a href="https://zenodo.org/badge/latestdoi/493604358">
+        <img alt="doi" src="https://zenodo.org/badge/493604358.svg">
     </a>
     <br/>
 </p>
@@ -172,14 +208,14 @@ Hickman (2022)
     <a href="https://github.com/eds-book-gallery/94486a7f-e046-461f-bbb9-334ec7b57040/blob/main/LICENSE">
         <img alt="license" src="https://img.shields.io/badge/license-MIT-yellow.svg">
     </a>
-    <a href="https://notebooks.gesis.org/binder/v2/gh/eds-book-gallery/94486a7f-e046-461f-bbb9-334ec7b57040/main?labpath=notebook.ipynb">
+    <a href="http://mybinder.org/v2/gh/eds-book-gallery/94486a7f-e046-461f-bbb9-334ec7b57040/main?labpath=notebook.ipynb">
         <img alt="binder" src="https://mybinder.org/badge_logo.svg">
     </a>
     <a href="https://github.com/eds-book-gallery/94486a7f-e046-461f-bbb9-334ec7b57040/actions/workflows/render.yaml">
         <img alt="render" src="https://github.com/eds-book-gallery/94486a7f-e046-461f-bbb9-334ec7b57040/actions/workflows/render.yaml/badge.svg">
     </a>
-    <a href="https://doi.org/10.24424/2h9y-jn41">
-        <img alt="doi" src="https://zenodo.org/badge/DOI/10.24424/2h9y-jn41.svg">
+    <a href="https://zenodo.org/badge/latestdoi/493595755">
+        <img alt="doi" src="https://zenodo.org/badge/493595755.svg">
     </a>
     <br/>
 </p>
@@ -208,14 +244,14 @@ Jackson (2022)
     <a href="https://github.com/eds-book-gallery/bc30df18-fce2-42fa-aade-1ce5b7f3ca3c/blob/main/LICENSE">
         <img alt="license" src="https://img.shields.io/badge/license-MIT-yellow.svg">
     </a>
-    <a href="https://notebooks.gesis.org/binder/v2/gh/eds-book-gallery/bc30df18-fce2-42fa-aade-1ce5b7f3ca3c/main?labpath=notebook.ipynb">
+    <a href="http://mybinder.org/v2/gh/eds-book-gallery/bc30df18-fce2-42fa-aade-1ce5b7f3ca3c/main?labpath=notebook.ipynb">
         <img alt="binder" src="https://mybinder.org/badge_logo.svg">
     </a>
     <a href="https://github.com/eds-book-gallery/bc30df18-fce2-42fa-aade-1ce5b7f3ca3c/actions/workflows/render.yaml/badge.svg">
         <img alt="render" src="https://github.com/eds-book-gallery/bc30df18-fce2-42fa-aade-1ce5b7f3ca3c/actions/workflows/render.yaml/badge.svg">
     </a>
-    <a href="https://doi.org/10.24424/w9n8-r354">
-        <img alt="doi" src="https://zenodo.org/badge/DOI/10.24424/w9n8-r354.svg">
+    <a href="https://zenodo.org/badge/latestdoi/493620192">
+        <img alt="doi" src="https://zenodo.org/badge/493620192.svg">
     </a>
     <br/>
 </p>
@@ -244,14 +280,14 @@ Coca-Castro (2022)
     <a href="https://github.com/eds-book-gallery/15d986da-2d7c-44fb-af71-700494485def/blob/main/LICENSE">
         <img alt="license" src="https://img.shields.io/badge/license-MIT-yellow.svg">
     </a>
-    <a href="https://notebooks.gesis.org/binder/v2/gh/eds-book-gallery/15d986da-2d7c-44fb-af71-700494485def/main?labpath=notebook.ipynb">
+    <a href="http://mybinder.org/v2/gh/eds-book-gallery/15d986da-2d7c-44fb-af71-700494485def/main?labpath=notebook.ipynb">
         <img alt="binder" src="https://mybinder.org/badge_logo.svg">
     </a>
     <a href="https://github.com/eds-book-gallery/15d986da-2d7c-44fb-af71-700494485def/actions/workflows/render.yaml">
         <img alt="render" src="https://github.com/eds-book-gallery/15d986da-2d7c-44fb-af71-700494485def/actions/workflows/render.yaml/badge.svg">
     </a>
-    <a href="https://doi.org/10.24424/td9g-0533">
-        <img alt="doi" src="https://zenodo.org/badge/DOI/10.24424/td9g-0533.svg">
+    <a href="https://zenodo.org/badge/latestdoi/493442887">
+        <img alt="doi" src="https://zenodo.org/badge/493442887.svg">
     </a>
     <br/>
 </p>
@@ -280,14 +316,14 @@ Jackson (2022)
     <a href="https://github.com/eds-book-gallery/a2875cdc-ba6a-49dc-aab7-cdf7c4fc0fa8/blob/main/LICENSE">
         <img alt="license" src="https://img.shields.io/badge/license-MIT-yellow.svg">
     </a>
-    <a href="https://notebooks.gesis.org/binder/v2/gh/eds-book-gallery/a2875cdc-ba6a-49dc-aab7-cdf7c4fc0fa8/main?labpath=notebook.ipynb">
+    <a href="http://mybinder.org/v2/gh/eds-book-gallery/a2875cdc-ba6a-49dc-aab7-cdf7c4fc0fa8/main?labpath=notebook.ipynb">
         <img alt="binder" src="https://mybinder.org/badge_logo.svg">
     </a>
     <a href="https://github.com/eds-book-gallery/a2875cdc-ba6a-49dc-aab7-cdf7c4fc0fa8/actions/workflows/render.yaml">
         <img alt="render" src="https://github.com/eds-book-gallery/a2875cdc-ba6a-49dc-aab7-cdf7c4fc0fa8/actions/workflows/render.yaml/badge.svg">
     </a>
-    <a href="https://doi.org/10.24424/qd7g-tr70">
-        <img alt="doi" src="https://zenodo.org/badge/DOI/10.24424/qd7g-tr70.svg">
+    <a href="https://zenodo.org/badge/latestdoi/493609384">
+        <img alt="doi" src="https://zenodo.org/badge/493609384.svg">
     </a>
     <br/>
 </p>
@@ -316,14 +352,14 @@ Adams (2022)
     <a href="https://github.com/eds-book-gallery/1b8921af-e77f-4ccf-ae38-4813cdceba0f/blob/main/LICENSE">
         <img alt="license" src="https://img.shields.io/badge/license-MIT-yellow.svg">
     </a>
-    <a href="https://notebooks.gesis.org/binder/v2/gh/eds-book-gallery/1b8921af-e77f-4ccf-ae38-4813cdceba0f/main?labpath=1b8921af-e77f-4ccf-ae38-4813cdceba0f.ipynb">
+    <a href="http://mybinder.org/v2/gh/eds-book-gallery/1b8921af-e77f-4ccf-ae38-4813cdceba0f/main?labpath=1b8921af-e77f-4ccf-ae38-4813cdceba0f.ipynb">
         <img alt="binder" src="https://mybinder.org/badge_logo.svg">
     </a>
     <a href="https://github.com/eds-book-gallery/1b8921af-e77f-4ccf-ae38-4813cdceba0f/actions/workflows/render.yaml">
         <img alt="render" src="https://github.com/eds-book-gallery/1b8921af-e77f-4ccf-ae38-4813cdceba0f/actions/workflows/render.yaml/badge.svg">
     </a>
-    <a href="https://doi.org/10.24424/pbvr-gd04">
-        <img alt="doi" src="https://zenodo.org/badge/DOI/10.24424/pbvr-gd04.svg">
+    <a href="https://zenodo.org/badge/latestdoi/493606224">
+        <img alt="doi" src="https://zenodo.org/badge/493606224.svg">
     </a>
     <br/>
 </p>
@@ -352,14 +388,14 @@ Mifdal *et al.* (2022)
     <a href="https://github.com/eds-book-gallery/b34facfa-cea8-48f5-89f6-f11ce00812a9/blob/main/LICENSE">
         <img alt="license" src="https://img.shields.io/badge/license-MIT-yellow.svg">
     </a>
-    <a href="https://notebooks.gesis.org/binder/v2/gh/eds-book-gallery/b34facfa-cea8-48f5-89f6-f11ce00812a9/main?labpath=notebook.ipynb">
+    <a href="http://mybinder.org/v2/gh/eds-book-gallery/b34facfa-cea8-48f5-89f6-f11ce00812a9/main?labpath=notebook.ipynb">
         <img alt="binder" src="https://mybinder.org/badge_logo.svg">
     </a>
     <a href="https://github.com/eds-book-gallery/b34facfa-cea8-48f5-89f6-f11ce00812a9/actions/workflows/render.yaml">
         <img alt="render" src="https://github.com/eds-book-gallery/b34facfa-cea8-48f5-89f6-f11ce00812a9/actions/workflows/render.yaml/badge.svg">
     </a>
-    <a href="https://doi.org/10.24424/pbvr-gd04">
-        <img alt="doi" src="https://zenodo.org/badge/DOI/10.24424/pbvr-gd04.svg">
+    <a href="https://zenodo.org/badge/latestdoi/493600192">
+        <img alt="doi" src="https://zenodo.org/badge/493600192.svg">
     </a>
     <br/>
 </p>

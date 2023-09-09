@@ -1,10 +1,10 @@
-(templates-eic-prereview-template)=
+---
+name: "\U0001F50D PRE REVIEW"
+about: Log a PRE REVIEW issue!
+title: '[PRE REVIEW]'
+labels: ["prereview"]
+---
 
-:::{note}
-The PRE-REVIEW template follows the Journal of Open Source Education's [pre-review issue template](https://openjournals.readthedocs.io/en/jose/editing.html) 
-:::
-
-```markdown
 # Notebook Pre-Review
 
 **Submitting author:** [AUTHOR GITHUB HANDLE]

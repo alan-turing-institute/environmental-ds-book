@@ -10,27 +10,28 @@ rohub.login(username=config.username, password=config.password)
 
 # metadata
 metadata_contribution = {
-    'environment': 'general',
-    'topic': 'exploration',
-    'filename': 'general-exploration-landcover_io',
-    'title': 'Exploring Land Cover Data (Impact Observatory)',
-    'inputs': {'input1':{'name':"of the Jupyter Notebook - Exploring Land Cover Data (Impact Observatory)",
-                         'url':"https://planetarycomputer.microsoft.com/api/stac/v1/collections/io-lulc"},
+    'environment': 'ocean',
+    'topic': 'modelling',
+    'reponame': '3286b92f-4fae-4cc6-a29e-e408bc844542',
+    'title': "Learning the Underlying Physics of a Simulation Model of the Ocean's Temperature (CIRC23)",
+    'inputs': {'input1':{'name':'MITgcm Dataset for paper: Sensitivity analysis of a data-driven model of ocean temperature (v1.1)',
+                         'url':'https://doi.org/10.5281/zenodo.7919172'},
+                'input2':{'name':'Reproducible Challenge - Team 3 - Sensitivity analysis- Models',
+                         'url':'https://doi.org/10.5281/zenodo.7954232'}
                },
-    'outputs': {'content': 'figures and tables',
-               'url': "https://doi.org/10.5281/zenodo.7101976"},
+    'outputs': {'content': 'figures',
+               'url': "https://doi.org/10.5281/zenodo.8271978"},
     'author_GHuser': 'eds-book-gallery',
-    'references':{'ref1':{'name':'Global land use / land cover with Sentinel 2 and deep learning','url':"http://doi.org/10.1109/IGARSS47720.2021.9553499"},
-                  'ref2':{'name':'Impact Observatory - Methodology & Accuracy Summary','url':"https://www.impactobservatory.com/static/lulc_methodology_accuracy-ee742a0a389a85a0d4e7295941504ac2.pdf"}},
-    'sketch': {'title':'Image showing interactive plot of global monthly precipitation mean computed from NCEP/NCAR reanalysis dataset',
-               'path':'_temp/rohub/general-exploration-landcover_io/interactive_plotting.png'}
+    'references':{'ref1':{'name':'A sensitivity analysis of a regression model of ocean temperature','url':"http://doi.org/10.1017/eds.2022.10"}},
+    'sketch': {'title':'Image showing spatially averaged errors from the model trained with only a 2D neighborhood of inputs',
+               'path':'_temp/rohub/circ2023-team3/plot.png'}
 }
 
 title_nb = metadata_contribution['title']
 
 metadata_rohub = {
     'title': f'{title_nb} (Jupyter Notebook) published in the Environmental Data Science book',
-    'research_areas': ['Environmental research', 'Geography'],
+    'research_areas': ['Environmental research', 'Ocean science', 'Climate science'],
     'description': f'The research object refers to the {title_nb} notebook published in the Environmental Data Science book.',
     'ros_type': 'Executable Research Object',
     'ros_template': 'Executable Research Object folders structure',
@@ -47,26 +48,45 @@ ro = rohub.ros_create(title=ro_title, research_areas=ro_research_areas, descript
 
 # edition
 authors=[
-        {"user_id": "https://github.com/jamesdamillington",
-         "display_name": "James Millington",
-         "name": "James Millington",
-         "email": "james.millington@kcl.ac.uk",
-         "affiliation": "King's College London"},
+        {"agent_type": "user",
+         "display_name": "Garima Malhotra",
+         "name": "Garima Malhotra",
+         "orcid_id": "0000-0003-4179-628X",
+         "email": "garima.malhotra@colorado.edu",
+         "affiliation": "University of Colorado Boulder"},
+        {"agent_type": "user",
+         "display_name": "Daniela Pinto Veizaga",
+         "name": "Daniela Pinto Veizaga",
+         "email": "daniela.pinto@berkeley.edu",
+         "orcid_id": "0009-0005-8588-3774",
+         "affiliation": "University of California, Berkeley"},
+        {"agent_type": "user",
+         "display_name": "Jorge Eduardo Peña Velasco",
+         "name": "Jorge Eduardo Peña Velasco",
+         "email": "jorge_eduardo2894@hotmail.com",
+         "orcid_id": None,
+         "affiliation": "Claremont McKenna College"}
         ]
 
 ro.set_authors(agents=authors)
 
 reviewers=[
-    {"user_id": "https://github.com/aedebus",
-     "display_name": "Amandine Debus",
-     "name": "Amandine Debus",
-     "email": "aed58@cam.ac.uk",
+    {"user_id": "https://github.com/RachelFurner",
+     "display_name": "Rachel Furner",
+     "name": "Rachel Furner",
+     "email": "raf59@damtp.cam.ac.uk",
      "affiliation": "University of Cambridge"},
-    {"user_id": "Anne Fouilloux",
-     "display_name": "Anne Fouilloux",
-     "name": "Anne Fouilloux",
-     "affiliation": "Nordic e-Infrastructure Collaboration (NeIC)",
-     "email": "annefou@geo.uio.no"
+    {"user_id": "https://github.com/oscarbau",
+     "display_name": "Oscar Bautista",
+     "name": "Oscar Bautista",
+     "affiliation": "World Food Programme",
+     "email": "ovbautistac@unal.edu.co"
+     },
+    {"user_id": "https://github.com/ricardobarroslourenco",
+     "display_name": "Ricardo Barros Lourenço",
+     "name": "Ricardo Barros Lourenço",
+     "affiliation": "McMaster University",
+     "email": "barroslr@mcmaster.ca"
      },
         ]
 
@@ -86,7 +106,7 @@ my_res_int0=ro.add_internal_resource(res_type=resi_res_type,file_path=resi_file_
 
 ## tool
 rese_res_type="Jupyter Notebook"
-rese_file_url=f"https://github.com/{metadata_contribution['author_GHuser']}/{metadata_contribution['filename']}/blob/main/{metadata_contribution['filename']}.ipynb"
+rese_file_url=f"https://github.com/{metadata_contribution['author_GHuser']}/{metadata_contribution['reponame']}/blob/main/notebook.ipynb"
 rese_title=f"Jupyter notebook"
 rese_description="Jupyter Notebook hosted by the Environmental Data Science Book"
 
@@ -120,6 +140,29 @@ if len(metadata_contribution['inputs']) > 0:
         my_res_ext0 = ro.add_external_resource(res_type=rese_res_type, input_url=rese_file_url, title=rese_title,
                                                description=rese_description, folder='biblio')
 
-# license
+## lock files
+rese_res_type = "File"
+
+rese_file_url=f"https://github.com/{metadata_contribution['author_GHuser']}/{metadata_contribution['reponame']}/tree/main/.lock/conda-lock.yml"
+rese_title=f"Lock conda file"
+rese_description=f"Lock conda file of the Jupyter notebook hosted by the Environmental Data Science Book"
+ro.add_external_resource(res_type=rese_res_type, input_url=rese_file_url, title=rese_title, description=rese_description, folder='tool')
+
+## environment.yml
+rese_res_type = "File"
+rese_file_url = f"https://github.com/{metadata_contribution['author_GHuser']}/{metadata_contribution['reponame']}/tree/main/.binder/environment.yml"
+rese_title = f"Conda environment"
+rese_description = f"Conda environment when user want to have the same libraries installed without concerns of package versions"
+ro.add_external_resource(res_type=rese_res_type, input_url=rese_file_url, title=rese_title, description=rese_description, folder='tool')
+
+## rendered version
+rese_res_type="Publication"
+rese_file_url=f"https://edsbook.org/notebooks/gallery/{metadata_contribution['reponame']}/notebook.html"
+rese_title=f"Online rendered version of the Jupyter notebook"
+rese_description="Rendered version of the Jupyter Notebook hosted by the Environmental Data Science Book"
+
+my_res_ext0=ro.add_external_resource(res_type=rese_res_type, input_url=rese_file_url, title=rese_title, description=rese_description, folder='tool')
+
+## license
 MIT_index = rohub.list_available_licenses().index("MIT")
 ro.set_license(license_id=rohub.list_available_licenses()[MIT_index])
