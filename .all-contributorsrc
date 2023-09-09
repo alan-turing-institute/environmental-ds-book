@@ -166,7 +166,8 @@
       "avatar_url": "https://avatars.githubusercontent.com/u/73164641?v=4",
       "profile": "https://github.com/NHomer-Edi",
       "contributions": [
-        "content"
+        "content",
+        "review"
       ]
     }
   ],
@@ -176,5 +177,7 @@
   "repoType": "github",
   "repoHost": "https://github.com",
   "skipCi": true,
-  "contributorsSortAlphabetically": true
+  "contributorsSortAlphabetically": true,
+  "commitType": "docs",
+  "commitConvention": "angular"
 }
