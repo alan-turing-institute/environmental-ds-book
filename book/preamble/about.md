@@ -1,8 +1,16 @@
-(pr-about)=
-# About this book
+(pr-about-audience)=
+# About EDS book
 
-_The Environmental Data Science_ book showcase and support the publication of data, research and open-source tools using **Data Science and AI** for monitoring and modelling a wide diversity of environmental systems. 
+_EDS book_ showcases and supports the publication of data, research and open-source tools using **Data Science and AI** for characterizing, monitoring and/or modelling a wide diversity of environmental systems. 
 
-Through the publication of executable use cases e.g. Jupyter Notebooks, the resource aims to be a **living**, **open** and **community-driven** online resource guiding the scientific community about information extraction and analysis from environmental sensors (including ground sensors, drones, and satellite Earth observations) and other type of data from a wide diversity of sources, innovative research and open-source tools.
+Through the publication of peer-reviewed executable use cases e.g. Jupyter notebooks, the resource aims to be a **living**, **open** and **community-driven** online resource guiding the scientific community about information extraction, exploration and analysis from environmental sensors (ground sensors, drones, satellite observations) and other type of data (e.g. simulations). 
 
-In addition to the book, our goal is to build a community dedicated to making collaborative, reusable and transparent Environmental data science research. In this regard, we host online {ref}`Co-working sessions <cm-coworking>` aiming to engage anyone interested in learning and discussing relevant themes in data science and AI to help understand our changing planet.
+In addition to the book, our goal is to build a computational notebook community putting open science into practice towards a collaborative, reusable and transparent environmental research. 
+
+# Who is the book for?
+
+While the scientific community is broad, we think the target audience of this book is:
+
+* Researchers with some background in environmental science interested in AI and data science methods.
+* Researchers with some background in computer science interested in environmental data science.  
+* Anyone else interested in reproducibility, inclusive, shareable and collaborative open environmental science.

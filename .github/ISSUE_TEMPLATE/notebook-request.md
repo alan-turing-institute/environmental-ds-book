@@ -16,11 +16,28 @@ labels: ["notebook"]
 <!--- Mark a single option applicable for the notebook -->
 <!--- If other, please specify -->
 
-- [ ] Sensor visualisation
+- [ ] Exploration
 - [ ] Preprocessing
 - [ ] Modelling
 - [ ] Post-processing
-- [ ] Other: 
+- [ ] Other (e.g. Reproducibility): 
+
+## Submission type
+<!--- Mark a single option applicable for the notebook -->
+<!--- If other, please specify -->
+
+- [ ] Standard
+- [ ] Special Issue
+- [ ] Other (e.g. CI2023 Reproducibility Challenge):
+
+## Programming language
+<!--- Mark a single option applicable for the notebook -->
+<!--- If other, please specify -->
+
+- [ ] Python
+- [ ] R
+- [ ] Julia
+- [ ] Other:
 
 ## Checklist:
 <!--- The checklist will allow us having an early diagnosis of the feasibility of the notebook -->

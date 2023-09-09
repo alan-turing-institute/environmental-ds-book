@@ -1,41 +1,33 @@
-<!--- Provide a general summary of your changes in the Title above -->
+<!--
+Please complete the following sections when you submit your pull request. You are encouraged to keep this top level comment box updated as you develop and respond to reviews. Note that text within html comment tags will not be rendered.
+-->
+### Summary
 
-## Before review
-- [ ] Work in progress
-- [ ] Ready for review
-- [ ] Need help!
+<!-- Describe the problem you're trying to fix in this pull request. Please reference any related issue and use fixes/close to automatically close them, if pertinent. For example: "Fixes #58", or "Addresses (but does not close) #238". -->
 
-## Description
-<!--- Describe your changes in detail -->
+Fixes #<NUM>
 
-## Motivation and Context
-<!--- Why is this change required? What problem does it solve? -->
-<!--- If it fixes an open issue, please link to the issue here -->
+*Lorem ipsum dolor sit amet, consectetur adipiscing.*
 
-## How has this been tested?
-<!--- Please describe in detail how you tested your changes -->
-<!--- Include details of your testing environment, tests ran to see how -->
-<!--- your change affects other areas of the code, etc -->
+### List of changes proposed in this PR (pull-request)
 
-## Types of changes
-<!--- What types of changes does your code introduce? Put an `x` in all the boxes that apply: -->
-- [ ] Bug fix (non-breaking change which fixes an issue)
-- [ ] New feature (non-breaking change which adds functionality)
-- [ ] New notebook and/or content
-- [ ] Documentation notebook/content update 
-- [ ] Other (please describe):
-- [ ] Feature change (upgrade version)
+<!-- We suggest using bullets (indicated by * or -) and filled checkboxes [x] here -->
 
-## Checklist:
-<!--- Go over all the following points, and put an `x` in all the boxes that apply -->
-<!--- If you're unsure about any of these, don't hesitate to ask. We're here to help! -->
-- [ ] My code follows the code style of this project: [Python](https://docs.qmk.fm/#/coding_conventions_python)
-- [ ] I have read the [CONTRIBUTING](../CONTRIBUTING.md) doc
-- [ ] I have performed a self-review of my own code
-- [ ] I have commented my code, particularly in hard-to-understand areas
-- [ ] I have made corresponding changes to the documentation
-- [ ] I have added tests to cover my changes
-- [ ] I have tested the changes and verified that they work and don't break anything (as well as I can manage)
+* *Lorem ipsum dolor sit amet, consectetur adipiscing.*
+* *Lorem ipsum dolor sit amet, consectetur adipiscing.*
 
-## Additional information 
-<!--- Add any other context about the PR here -->
+
+### What should a reviewer concentrate their feedback on?
+
+<!-- This section is particularly useful if you have a pull request that is still in development. You can guide the reviews to focus on the parts that are ready for their comments. We suggest using bullets (indicated by * or -) and filled checkboxes [x] here -->
+
+- [ ] *Lorem ipsum dolor sit amet, consectetur adipiscing.*
+- [ ] Everything looks ok?
+
+
+### Acknowledging contributors
+
+<!-- Please select the correct box -->
+
+- [ ] All contributors to this pull request are already named in the [table of contributors](https://github.com/alan-turing-institute/the-turing-way/blob/main/README.md#contributors) in the README file.
+- [ ] The following people should be added to the [table of contributors](https://github.com/alan-turing-institute/the-turing-way/blob/main/README.md#contributors) in the README file: <!-- replace this text with the GitHub IDs of any new contributors -->

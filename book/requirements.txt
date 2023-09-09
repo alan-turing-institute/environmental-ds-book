@@ -1,0 +1,4 @@
+jupyter-book==0.12.3
+ghp-import
+sphinx_togglebutton
+sphinx_design
