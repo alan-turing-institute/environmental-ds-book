@@ -6,7 +6,7 @@ Please use and re-use whatever you need, for any purpose but giving appropriate 
 
 Every release of the source code repository is archived with a DOI:
 
-[![Cite this using DOI](https://zenodo.org/badge/DOI/10.5281/zenodo.5918931.svg)](https://doi.org/10.5281/zenodo.5918931)
+[![Cite this using DOI](https://zenodo.org/badge/374708612.svg)](https://zenodo.org/badge/latestdoi/374708612)
 
 You can use this DOI to cite anything in the source code, except executable notebooks.
 
