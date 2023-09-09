@@ -325,6 +325,15 @@
         "blog",
         "code"
       ]
+    },
+    {
+      "login": "asthanameghna",
+      "name": "Meghna Asthana",
+      "avatar_url": "https://avatars.githubusercontent.com/u/34877328?v=4",
+      "profile": "https://github.com/asthanameghna",
+      "contributions": [
+        "review"
+      ]
     }
   ],
   "contributorsPerLine": 7,
