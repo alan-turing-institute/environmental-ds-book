@@ -10,28 +10,26 @@ rohub.login(username=config.username, password=config.password)
 
 # metadata
 metadata_contribution = {
-    'environment': 'ocean',
+    'environment': 'general',
     'topic': 'modelling',
-    'reponame': '3286b92f-4fae-4cc6-a29e-e408bc844542',
-    'title': "Learning the Underlying Physics of a Simulation Model of the Ocean's Temperature (CIRC23)",
-    'inputs': {'input1':{'name':'MITgcm Dataset for paper: Sensitivity analysis of a data-driven model of ocean temperature (v1.1)',
-                         'url':'https://doi.org/10.5281/zenodo.7919172'},
-                'input2':{'name':'Reproducible Challenge - Team 3 - Sensitivity analysis- Models',
-                         'url':'https://doi.org/10.5281/zenodo.7954232'}
+    'reponame': '93463cac-471a-469d-ad52-0514fd9b67f2',
+    'title': "Deep learning and variational inversion to quantify and attribute climate change (CIRC23)",
+    'inputs': {'input1':{'name':'Input dataset for paper',
+                         'url':'https://gitlab.com/ConstantinBone/detection-and-attribution-of-climate-change-a-deep-learning-and-variational-approach/-/raw/main/data_pre_ind_2.zip'},
                },
-    'outputs': {'content': 'figures',
-               'url': "https://doi.org/10.5281/zenodo.8271978"},
+    'outputs': {'content': 'figures, models and results',
+               'url': "https://doi.org/10.5281/zenodo.8279574"},
     'author_GHuser': 'eds-book-gallery',
-    'references':{'ref1':{'name':'A sensitivity analysis of a regression model of ocean temperature','url':"http://doi.org/10.1017/eds.2022.10"}},
-    'sketch': {'title':'Image showing spatially averaged errors from the model trained with only a 2D neighborhood of inputs',
-               'path':'_temp/rohub/circ2023-team3/plot.png'}
+    'references':{'ref1':{'name':'Detection and attribution of climate change: A deep learning and variational approach','url':"http://doi.org/10.1017/eds.2022.17"}},
+    'sketch': {'title':'Image showing mean and standard deviation of the simulations of 12 climate models',
+               'path':'_temp/rohub/93463cac-471a-469d-ad52-0514fd9b67f2/plot.png'}
 }
 
 title_nb = metadata_contribution['title']
 
 metadata_rohub = {
     'title': f'{title_nb} (Jupyter Notebook) published in the Environmental Data Science book',
-    'research_areas': ['Environmental research', 'Ocean science', 'Climate science'],
+    'research_areas': ['Environmental research', 'Climate science', 'Deep learning'],
     'description': f'The research object refers to the {title_nb} notebook published in the Environmental Data Science book.',
     'ros_type': 'Executable Research Object',
     'ros_template': 'Executable Research Object folders structure',
@@ -49,45 +47,46 @@ ro = rohub.ros_create(title=ro_title, research_areas=ro_research_areas, descript
 # edition
 authors=[
         {"agent_type": "user",
-         "display_name": "Garima Malhotra",
-         "name": "Garima Malhotra",
-         "orcid_id": "0000-0003-4179-628X",
-         "email": "garima.malhotra@colorado.edu",
-         "affiliation": "University of Colorado Boulder"},
+         "display_name": "Viktor Domazetoski",
+         "name": "Viktor Domazetoski",
+         "orcid_id": "0000-0001-9830-7032",
+         "email": "viktor.domazetoski@hotmail.com",
+         "affiliation": "University of Göttingen"},
         {"agent_type": "user",
-         "display_name": "Daniela Pinto Veizaga",
-         "name": "Daniela Pinto Veizaga",
-         "email": "daniela.pinto@berkeley.edu",
-         "orcid_id": "0009-0005-8588-3774",
-         "affiliation": "University of California, Berkeley"},
-        {"agent_type": "user",
-         "display_name": "Jorge Eduardo Peña Velasco",
-         "name": "Jorge Eduardo Peña Velasco",
-         "email": "jorge_eduardo2894@hotmail.com",
+         "display_name": "Andrés Zúñiga-González ",
+         "name": "Andrés Zúñiga-González ",
+         "email": "acz25@cam.ac.uk",
          "orcid_id": None,
-         "affiliation": "Claremont McKenna College"}
+         "affiliation": "University of Cambridge"},
+        {"agent_type": "user",
+         "display_name": "Owen Allemang",
+         "name": "Owen Allemang",
+         "email": "oa322@cam.ac.uk",
+         "orcid_id": None,
+         "affiliation": "University of Cambridge"}
         ]
 
 ro.set_authors(agents=authors)
 
 reviewers=[
-    {"user_id": "https://github.com/RachelFurner",
-     "display_name": "Rachel Furner",
-     "name": "Rachel Furner",
-     "email": "raf59@damtp.cam.ac.uk",
-     "affiliation": "University of Cambridge"},
-    {"user_id": "https://github.com/oscarbau",
-     "display_name": "Oscar Bautista",
-     "name": "Oscar Bautista",
-     "affiliation": "World Food Programme",
-     "email": "ovbautistac@unal.edu.co"
-     },
-    {"user_id": "https://github.com/ricardobarroslourenco",
-     "display_name": "Ricardo Barros Lourenço",
-     "name": "Ricardo Barros Lourenço",
-     "affiliation": "McMaster University",
-     "email": "barroslr@mcmaster.ca"
-     },
+    {"agent_type": "user",
+     "display_name": "Meghna Asthana",
+     "name": "Meghna Asthana",
+     "email": "masthana@turing.ac.uk",
+     "orcid_id": None,
+     "affiliation": "The Alan Turing Institute"},
+    {"agent_type": "user",
+     "display_name": "Nick Homer",
+     "name": "Nick Homer",
+     "email": "Nick.Homer@ed.ac.uk",
+     "orcid_id": None,
+     "affiliation": "The University of Edinburgh"},
+    {"agent_type": "user",
+     "display_name": "Devanjan Bhattacharya",
+     "name": "Devanjan Bhattacharya",
+     "email": "d.bhattacharya@ed.ac.uk",
+     "orcid_id": None,
+     "affiliation": "The University of Edinburgh"},
         ]
 
 ro.set_contributors(agents=reviewers)
