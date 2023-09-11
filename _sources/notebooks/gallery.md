@@ -5,6 +5,42 @@
 ::::{grid} 1 3 3 3
 :gutter: 2
 
+:::{grid-item-card} Deep learning and variational inversion for climate science (CIRC23)
+:margin: 3 0 0 0
+:link: ./gallery/93463cac-471a-469d-ad52-0514fd9b67f2/notebook.html
+:link-type: url
+:text-align: center
+:shadow: md
+
+{bdg-primary}`General`
+{bdg-secondary}`Modelling`
+<br>
+{bdg-warning}`Special Issue`
+{bdg-info}`Python`
+^^^
+
+<img src="https://github.com/eds-book-gallery/93463cac-471a-469d-ad52-0514fd9b67f2/assets/13321552/6171eaf3-80c4-4041-8743-4af368a9c95e?raw=True"/>
+
++++
+Domazetoski *et al.* (2023)
+
+<p align="center">
+    <a href="https://github.com/eds-book-gallery/93463cac-471a-469d-ad52-0514fd9b67f2/blob/main/LICENSE">
+        <img alt="license" src="https://img.shields.io/badge/license-MIT-yellow.svg">
+    </a>
+    <a href="https://notebooks.gesis.org/binder/v2/gh/eds-book-gallery/93463cac-471a-469d-ad52-0514fd9b67f2/main?labpath=notebook.ipynb">
+        <img alt="binder" src="https://mybinder.org/badge_logo.svg">
+    </a>
+    <a href="https://github.com/eds-book-gallery/93463cac-471a-469d-ad52-0514fd9b67f2/actions/workflows/render.yaml">
+        <img alt="render" src="https://github.com/eds-book-gallery/93463cac-471a-469d-ad52-0514fd9b67f2/actions/workflows/render.yaml/badge.svg">
+    </a>
+    <a href="https://zenodo.org/badge/latestdoi/638641256">
+        <img alt="doi" src="https://zenodo.org/badge/638641256.svg">
+    </a>
+    <br/>
+</p>
+:::
+
 :::{grid-item-card} Underlying physics of the ocean's temperature <br> (CIRC23)
 :margin: 3 0 0 0
 :link: ./gallery/3286b92f-4fae-4cc6-a29e-e408bc844542/notebook.html
