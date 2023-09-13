@@ -5,6 +5,42 @@
 ::::{grid} 1 3 3 3
 :gutter: 2
 
+:::{grid-item-card} Variational data assimilation with deep prior (CIRC23)
+:margin: 3 0 0 0
+:link: ./gallery/39d9c177-11da-41b2-9b64-63f4c1c834b3/notebook.html
+:link-type: url
+:text-align: center
+:shadow: md
+
+{bdg-primary}`Ocean`
+{bdg-secondary}`Modelling`
+<br>
+{bdg-warning}`Special Issue`
+{bdg-info}`Python`
+^^^
+
+<img src="https://github.com/eds-book-gallery/39d9c177-11da-41b2-9b64-63f4c1c834b3/assets/13321552/f141729a-d67d-4079-a4bb-0fa11ab8f9ac?raw=True"/>
+
++++
+Pahari *et al.* (2023)
+
+<p align="center">
+    <a href="https://github.com/eds-book-gallery/39d9c177-11da-41b2-9b64-63f4c1c834b3/blob/main/LICENSE">
+        <img alt="license" src="https://img.shields.io/badge/license-MIT-yellow.svg">
+    </a>
+    <a href="http://mybinder.org/v2/gh/eds-book-gallery/39d9c177-11da-41b2-9b64-63f4c1c834b3/main?labpath=notebook.ipynb">
+        <img alt="binder" src="https://mybinder.org/badge_logo.svg">
+    </a>
+    <a href="https://github.com/eds-book-gallery/39d9c177-11da-41b2-9b64-63f4c1c834b3/actions/workflows/render.yaml">
+        <img alt="render" src="https://github.com/eds-book-gallery/39d9c177-11da-41b2-9b64-63f4c1c834b3/actions/workflows/render.yaml/badge.svg">
+    </a>
+    <a href="https://zenodo.org/badge/latestdoi/643572395">
+        <img alt="doi" src="https://zenodo.org/badge/643572395.svg">
+    </a>
+    <br/>
+</p>
+:::
+
 :::{grid-item-card} Deep learning and variational inversion for climate science (CIRC23)
 :margin: 3 0 0 0
 :link: ./gallery/93463cac-471a-469d-ad52-0514fd9b67f2/notebook.html
