@@ -19,7 +19,7 @@
 {bdg-info}`Python`
 ^^^
 
-<img src="https://github.com/eds-book-gallery/39d9c177-11da-41b2-9b64-63f4c1c834b3/assets/13321552/f141729a-d67d-4079-a4bb-0fa11ab8f9ac?raw=True"/>
+<img src="https://github.com/eds-book-gallery/39d9c177-11da-41b2-9b64-63f4c1c834b3/assets/13321552/22a8817b-27ed-4dac-af7a-580dbce2e607?raw=True"/>
 
 +++
 Pahari *et al.* (2023)
