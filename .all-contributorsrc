@@ -344,6 +344,16 @@
       "contributions": [
         "review"
       ]
+    },
+    {
+      "login": "Mukulikaa",
+      "name": "Mukulika",
+      "avatar_url": "https://avatars.githubusercontent.com/u/60316606?v=4",
+      "profile": "https://mukulikapahari.medium.com",
+      "contributions": [
+        "blog",
+        "code"
+      ]
     }
   ],
   "contributorsPerLine": 7,
