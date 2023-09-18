@@ -364,6 +364,15 @@
         "blog",
         "code"
       ]
+    },
+    {
+      "login": "tinaok",
+      "name": "Tina Odaka",
+      "avatar_url": "https://avatars.githubusercontent.com/u/46813815?v=4",
+      "profile": "https://github.com/tinaok",
+      "contributions": [
+        "review"
+      ]
     }
   ],
   "contributorsPerLine": 7,
