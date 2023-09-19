@@ -10,26 +10,27 @@ rohub.login(username=config.username, password=config.password)
 
 # metadata
 metadata_contribution = {
-    'environment': 'general',
+    'environment': 'ocean',
     'topic': 'modelling',
-    'reponame': '93463cac-471a-469d-ad52-0514fd9b67f2',
-    'title': "Deep learning and variational inversion to quantify and attribute climate change (CIRC23)",
-    'inputs': {'input1':{'name':'Input dataset for paper',
-                         'url':'https://gitlab.com/ConstantinBone/detection-and-attribution-of-climate-change-a-deep-learning-and-variational-approach/-/raw/main/data_pre_ind_2.zip'},
+    'reponame': '39d9c177-11da-41b2-9b64-63f4c1c834b3',
+    'title': "Variational data assimilation with deep prior (CIRC23)",
+    'inputs': {'input1':{'name':'Codebase of the reproduced paper',
+                         'url':'https://github.com/ArFiloche/Deepprior4DVar_CI22'},
                },
     'outputs': {'content': 'figures, models and results',
-               'url': "https://doi.org/10.5281/zenodo.8279574"},
+               'url': "https://doi.org/10.5281/zenodo.8338556"},
     'author_GHuser': 'eds-book-gallery',
-    'references':{'ref1':{'name':'Detection and attribution of climate change: A deep learning and variational approach','url':"http://doi.org/10.1017/eds.2022.17"}},
-    'sketch': {'title':'Image showing mean and standard deviation of the simulations of 12 climate models',
-               'path':'_temp/rohub/93463cac-471a-469d-ad52-0514fd9b67f2/plot.png'}
+    'references':{'ref1':{'name':'Deep prior in variational assimilation to estimate an ocean circulation without explicit regularization',
+                          'url':"http://doi.org/10.1017/eds.2022.31"}},
+    'sketch': {'title':'Image showing an example of the estimated motion fields with various algorithms',
+               'path':'_temp/rohub/39d9c177-11da-41b2-9b64-63f4c1c834b3/plot.png'}
 }
 
 title_nb = metadata_contribution['title']
 
 metadata_rohub = {
     'title': f'{title_nb} (Jupyter Notebook) published in the Environmental Data Science book',
-    'research_areas': ['Environmental research', 'Climate science', 'Deep learning'],
+    'research_areas': ['Environmental research', 'Oceanography', 'Deep learning'],
     'description': f'The research object refers to the {title_nb} notebook published in the Environmental Data Science book.',
     'ros_type': 'Executable Research Object',
     'ros_template': 'Executable Research Object folders structure',
@@ -47,46 +48,40 @@ ro = rohub.ros_create(title=ro_title, research_areas=ro_research_areas, descript
 # edition
 authors=[
         {"agent_type": "user",
-         "display_name": "Viktor Domazetoski",
-         "name": "Viktor Domazetoski",
-         "orcid_id": "0000-0001-9830-7032",
-         "email": "viktor.domazetoski@hotmail.com",
-         "affiliation": "University of Göttingen"},
-        {"agent_type": "user",
-         "display_name": "Andrés Zúñiga-González ",
-         "name": "Andrés Zúñiga-González ",
-         "email": "acz25@cam.ac.uk",
+         "display_name": "Mukulika Pahari",
+         "name": "Mukulika Pahari",
+         "email": "mukulikapahari@gmail.com",
          "orcid_id": None,
-         "affiliation": "University of Cambridge"},
+         "affiliation": "University of Mumbai"},
         {"agent_type": "user",
-         "display_name": "Owen Allemang",
-         "name": "Owen Allemang",
-         "email": "oa322@cam.ac.uk",
+         "display_name": "Rutika Bhoir",
+         "name": "Rutika Bhoir",
+         "email": "rutikabhoir1316@gmail.com",
          "orcid_id": None,
-         "affiliation": "University of Cambridge"}
+         "affiliation": "University of Mumbai"},
         ]
 
 ro.set_authors(agents=authors)
 
 reviewers=[
     {"agent_type": "user",
-     "display_name": "Meghna Asthana",
-     "name": "Meghna Asthana",
-     "email": "masthana@turing.ac.uk",
-     "orcid_id": None,
-     "affiliation": "The Alan Turing Institute"},
+     "display_name": "Tina Odaka",
+     "name": "Tina Odaka",
+     "email": "tina.odaka@ifremer.fr",
+     "orcid_id": "0000-0002-1500-0156",
+     "affiliation": "Ifremer"},
     {"agent_type": "user",
-     "display_name": "Nick Homer",
-     "name": "Nick Homer",
-     "email": "Nick.Homer@ed.ac.uk",
-     "orcid_id": None,
-     "affiliation": "The University of Edinburgh"},
+     "display_name": "Caroline Arnold",
+     "name": "Caroline Arnold",
+     "email": "arnold@dkrz.de",
+     "orcid_id": "0000-0002-9458-1517",
+     "affiliation": "German Climate Computing Center"},
     {"agent_type": "user",
-     "display_name": "Devanjan Bhattacharya",
-     "name": "Devanjan Bhattacharya",
-     "email": "d.bhattacharya@ed.ac.uk",
+     "display_name": "Paolo Pelucchi",
+     "name": "Paolo Pelucchi",
+     "email": "paolo.pelucchi@uv.es",
      "orcid_id": None,
-     "affiliation": "The University of Edinburgh"},
+     "affiliation": "Universitat de València"},
         ]
 
 ro.set_contributors(agents=reviewers)
