@@ -1,0 +1,1508 @@
+
+<!DOCTYPE html>
+
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Variational data assimilation with deep prior (CIRC23) &#8212; Environmental Data Science Book</title>
+    
+  <link href="../../../_static/css/theme.css" rel="stylesheet">
+  <link href="../../../_static/css/index.ff1ffe594081f20da1ef19478df9384b.css" rel="stylesheet">
+
+    
+  <link rel="stylesheet"
+    href="../../../_static/vendor/fontawesome/5.13.0/css/all.min.css">
+  <link rel="preload" as="font" type="font/woff2" crossorigin
+    href="../../../_static/vendor/fontawesome/5.13.0/webfonts/fa-solid-900.woff2">
+  <link rel="preload" as="font" type="font/woff2" crossorigin
+    href="../../../_static/vendor/fontawesome/5.13.0/webfonts/fa-brands-400.woff2">
+
+    
+      
+
+    
+    <link rel="stylesheet" type="text/css" href="../../../_static/pygments.css" />
+    <link rel="stylesheet" type="text/css" href="../../../_static/sphinx-book-theme.css?digest=c3fdc42140077d1ad13ad2f1588a4309" />
+    <link rel="stylesheet" type="text/css" href="../../../_static/togglebutton.css" />
+    <link rel="stylesheet" type="text/css" href="../../../_static/copybutton.css" />
+    <link rel="stylesheet" type="text/css" href="../../../_static/mystnb.css" />
+    <link rel="stylesheet" type="text/css" href="../../../_static/sphinx-thebe.css" />
+    <link rel="stylesheet" type="text/css" href="../../../_static/panels-main.c949a650a448cc0ae9fd3441c0e17fb0.css" />
+    <link rel="stylesheet" type="text/css" href="../../../_static/panels-variables.06eb56fa6e07937060861dad626602ad.css" />
+    <link rel="stylesheet" type="text/css" href="../../../_static/design-style.1e8bd061cd6da7fc9cf755528e8ffc24.min.css" />
+    
+  <link rel="preload" as="script" href="../../../_static/js/index.be7d3bbb2ef33a8344ce.js">
+
+    <script data-url_root="../../../" id="documentation_options" src="../../../_static/documentation_options.js"></script>
+    <script src="../../../_static/jquery.js"></script>
+    <script src="../../../_static/underscore.js"></script>
+    <script src="../../../_static/doctools.js"></script>
+    <script src="../../../_static/clipboard.min.js"></script>
+    <script src="../../../_static/copybutton.js"></script>
+    <script>let toggleHintShow = 'Click to show';</script>
+    <script>let toggleHintHide = 'Click to hide';</script>
+    <script>let toggleOpenOnPrint = 'true';</script>
+    <script src="../../../_static/togglebutton.js"></script>
+    <script>var togglebuttonSelector = '.toggle, .admonition.dropdown, .tag_hide_input div.cell_input, .tag_hide-input div.cell_input, .tag_hide_output div.cell_output, .tag_hide-output div.cell_output, .tag_hide_cell.cell, .tag_hide-cell.cell';</script>
+    <script src="../../../_static/sphinx-book-theme.d59cb220de22ca1c485ebbdc042f0030.js"></script>
+    <script src="../../../_static/design-tabs.js"></script>
+    <script>const THEBE_JS_URL = "https://unpkg.com/thebe@0.8.2/lib/index.js"
+const thebe_selector = ".thebe,.cell"
+const thebe_selector_input = "pre"
+const thebe_selector_output = ".output, .cell_output"
+</script>
+    <script async="async" src="../../../_static/sphinx-thebe.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/require.js/2.3.4/require.min.js"></script>
+    <script src="https://unpkg.com/@jupyter-widgets/html-manager@^0.20.1/dist/embed-amd.js"></script>
+    <script>window.MathJax = {"options": {"processHtmlClass": "tex2jax_process|mathjax_process|math|output_area"}}</script>
+    <script defer="defer" src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+    <link rel="index" title="Index" href="../../../genindex.html" />
+    <link rel="search" title="Search" href="../../../search.html" />
+    <link rel="next" title="Deep learning and variational inversion to quantify and attribute climate change (CIRC23)" href="../93463cac-471a-469d-ad52-0514fd9b67f2/notebook.html" />
+    <link rel="prev" title="Gallery" href="../../gallery.html" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="docsearch:language" content="en">
+    
+
+    <!-- Google Analytics -->
+    
+<script async="" src="https://www.googletagmanager.com/gtag/js?id=G-3E20PWD938"></script>
+<script>
+                    window.dataLayer = window.dataLayer || [];
+                    function gtag(){ dataLayer.push(arguments); }
+                    gtag('js', new Date());
+                    gtag('config', 'G-3E20PWD938');
+                </script>
+
+  </head>
+  <body data-spy="scroll" data-target="#bd-toc-nav" data-offset="80">
+    
+    <div class="container-fluid" id="banner"></div>
+
+    
+
+    <div class="container-xl">
+      <div class="row">
+          
+<div class="col-12 col-md-3 bd-sidebar site-navigation show" id="site-navigation">
+    
+        <div class="navbar-brand-box">
+    <a class="navbar-brand text-wrap" href="../../../index.html">
+      
+        <!-- `logo` is deprecated in Sphinx 4.0, so remove this when we stop supporting 3 -->
+        
+      
+      
+      <img src="../../../_static/logo.png" class="logo" alt="logo">
+      
+      
+      <h1 class="site-logo" id="site-title">Environmental Data Science Book</h1>
+      
+    </a>
+</div><form class="bd-search d-flex align-items-center" action="../../../search.html" method="get">
+  <i class="icon fas fa-search"></i>
+  <input type="search" class="form-control" name="q" id="search-input" placeholder="Search this book..." aria-label="Search this book..." autocomplete="off" >
+</form><nav class="bd-links" id="bd-docs-nav" aria-label="Main">
+    <div class="bd-toc-item active">
+        <ul class="nav bd-sidenav">
+ <li class="toctree-l1">
+  <a class="reference internal" href="../../../welcome.html">
+   Welcome
+  </a>
+ </li>
+</ul>
+<p aria-level="2" class="caption" role="heading">
+ <span class="caption-text">
+  Preamble
+ </span>
+</p>
+<ul class="nav bd-sidenav">
+ <li class="toctree-l1">
+  <a class="reference internal" href="../../../preamble/about.html">
+   About EDS book
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../../../preamble/attribution.html">
+   Citation and Reuse
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../../../preamble/contribute.html">
+   Contribute
+  </a>
+ </li>
+</ul>
+<p aria-level="2" class="caption" role="heading">
+ <span class="caption-text">
+  Notebooks
+ </span>
+</p>
+<ul class="current nav bd-sidenav">
+ <li class="toctree-l1 has-children">
+  <a class="reference internal" href="../../about.html">
+   Our Notebooks
+  </a>
+  <input class="toctree-checkbox" id="toctree-checkbox-1" name="toctree-checkbox-1" type="checkbox"/>
+  <label for="toctree-checkbox-1">
+   <i class="fas fa-chevron-down">
+   </i>
+  </label>
+  <ul>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../../about/aims-and-scope.html">
+     Aims and Scope
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../../about/review-benefits.html">
+     Benefits of Reviewing Notebooks
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../../about/notebooks-technologies.html">
+     Technologies
+    </a>
+   </li>
+  </ul>
+ </li>
+ <li class="toctree-l1 current active has-children">
+  <a class="reference internal" href="../../gallery.html">
+   Gallery
+  </a>
+  <input checked="" class="toctree-checkbox" id="toctree-checkbox-2" name="toctree-checkbox-2" type="checkbox"/>
+  <label for="toctree-checkbox-2">
+   <i class="fas fa-chevron-down">
+   </i>
+  </label>
+  <ul class="current">
+   <li class="toctree-l2 current active">
+    <a class="current reference internal" href="#">
+     Variational data assimilation with deep prior (CIRC23)
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../93463cac-471a-469d-ad52-0514fd9b67f2/notebook.html">
+     Deep learning and variational inversion for climate science (CIRC23)
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../3286b92f-4fae-4cc6-a29e-e408bc844542/notebook.html">
+     Underlying physics of the ocean's temperature (CIRC23)
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../b128b282-dee7-44a7-bc21-f1fd21452a83/notebook.html">
+     Land Cover Data (Impact Observatory)
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../435f534c-e49b-43c3-9bd6-3393100bef3f/notebook.html">
+     Cosmos-UK Soil Moisture (UKCEH)
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../ea34568e-d86e-4720-be2f-3f826f66a26c/notebook.html">
+     Rainfall NCEP/NCAR (NOAA)
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../ac327c3a-5264-40a2-8c6e-1e8d7c4b37ef/notebook.html">
+     Sea ice forecasting (IceNet)
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../94486a7f-e046-461f-bbb9-334ec7b57040/notebook.html">
+     Tree crown (DetectreeRGB)
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../bc30df18-fce2-42fa-aade-1ce5b7f3ca3c/notebook.html">
+     SEVIRI Level 1.5 (EUMESAT)
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../15d986da-2d7c-44fb-af71-700494485def/notebook.html">
+     Tree crown (DeepForest)
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../a2875cdc-ba6a-49dc-aab7-cdf7c4fc0fa8/notebook.html">
+     MOD021KM and FIRMS (NASA)
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../1b8921af-e77f-4ccf-ae38-4813cdceba0f/notebook.html">
+     UKV high-resolution (Met Office)
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../b34facfa-cea8-48f5-89f6-f11ce00812a9/notebook.html">
+     Detecting floating objects (ESA Phi-Lab)
+    </a>
+   </li>
+  </ul>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../../how-to.html">
+   Usage
+  </a>
+ </li>
+</ul>
+<p aria-level="2" class="caption" role="heading">
+ <span class="caption-text">
+  Publishing
+ </span>
+</p>
+<ul class="nav bd-sidenav">
+ <li class="toctree-l1 has-children">
+  <a class="reference internal" href="../../../publishing/guidelines.html">
+   Our Guidelines
+  </a>
+  <input class="toctree-checkbox" id="toctree-checkbox-3" name="toctree-checkbox-3" type="checkbox"/>
+  <label for="toctree-checkbox-3">
+   <i class="fas fa-chevron-down">
+   </i>
+  </label>
+  <ul>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../../../publishing/guidelines/guidelines-authors.html">
+     Guide for Authors
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../../../publishing/guidelines/guidelines-reviewers.html">
+     Guide for Reviewers
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../../../publishing/guidelines/guidelines-editors.html">
+     Guide for Editors
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../../../publishing/guidelines/guidelines-eic.html">
+     Guide for Editor in Chief
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../../../publishing/guidelines/guidelines-community.html">
+     Guide for Community
+    </a>
+   </li>
+  </ul>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../../../publishing/faq.html">
+   FAQ
+  </a>
+ </li>
+</ul>
+<p aria-level="2" class="caption" role="heading">
+ <span class="caption-text">
+  Community
+ </span>
+</p>
+<ul class="nav bd-sidenav">
+ <li class="toctree-l1">
+  <a class="reference internal" href="../../../community/about.html">
+   Our Community
+  </a>
+ </li>
+</ul>
+<p aria-level="2" class="caption" role="heading">
+ <span class="caption-text">
+  Afterword
+ </span>
+</p>
+<ul class="nav bd-sidenav">
+ <li class="toctree-l1">
+  <a class="reference internal" href="../../../afterword/bibliography.html">
+   Bibliography
+  </a>
+ </li>
+</ul>
+
+    </div>
+</nav> <!-- To handle the deprecated key -->
+
+<div class="navbar_extra_footer">
+  Powered by <a href="https://jupyterbook.org">Jupyter Book</a>
+</div>
+
+</div>
+
+
+          
+
+
+          
+<main class="col py-md-3 pl-md-4 bd-content overflow-auto" role="main">
+    
+    <div class="topbar container-xl fixed-top">
+    <div class="topbar-contents row">
+        <div class="col-12 col-md-3 bd-topbar-whitespace site-navigation show"></div>
+        <div class="col pl-md-4 topbar-main">
+            
+            <button id="navbar-toggler" class="navbar-toggler ml-0" type="button" data-toggle="collapse"
+                data-toggle="tooltip" data-placement="bottom" data-target=".site-navigation" aria-controls="navbar-menu"
+                aria-expanded="true" aria-label="Toggle navigation" aria-controls="site-navigation"
+                title="Toggle navigation" data-toggle="tooltip" data-placement="left">
+                <i class="fas fa-bars"></i>
+                <i class="fas fa-arrow-left"></i>
+                <i class="fas fa-arrow-up"></i>
+            </button>
+            
+            
+<div class="dropdown-buttons-trigger">
+    <button id="dropdown-buttons-trigger" class="btn btn-secondary topbarbtn" aria-label="Download this page"><i
+            class="fas fa-download"></i></button>
+
+    <div class="dropdown-buttons">
+        <!-- ipynb file if we had a myst markdown file -->
+        
+        <!-- Download raw file -->
+        <a class="dropdown-buttons" href="../../../_sources/notebooks/gallery/39d9c177-11da-41b2-9b64-63f4c1c834b3/notebook.ipynb"><button type="button"
+                class="btn btn-secondary topbarbtn" title="Download source file" data-toggle="tooltip"
+                data-placement="left">.ipynb</button></a>
+        <!-- Download PDF via print -->
+        <button type="button" id="download-print" class="btn btn-secondary topbarbtn" title="Print to PDF"
+                onclick="printPdf(this)" data-toggle="tooltip" data-placement="left">.pdf</button>
+    </div>
+</div>
+
+            <!-- Source interaction buttons -->
+
+<div class="dropdown-buttons-trigger">
+    <button id="dropdown-buttons-trigger" class="btn btn-secondary topbarbtn"
+        aria-label="Connect with source repository"><i class="fab fa-github"></i></button>
+    <div class="dropdown-buttons sourcebuttons">
+        <a class="repository-button"
+            href="https://github.com/alan-turing-institute/environmental-ds-book"><button type="button" class="btn btn-secondary topbarbtn"
+                data-toggle="tooltip" data-placement="left" title="Source repository"><i
+                    class="fab fa-github"></i>repository</button></a>
+        <a class="issues-button"
+            href="https://github.com/alan-turing-institute/environmental-ds-book/issues/new?title=Issue%20on%20page%20%2Fnotebooks/gallery/39d9c177-11da-41b2-9b64-63f4c1c834b3/notebook.html&body=Your%20issue%20content%20here."><button
+                type="button" class="btn btn-secondary topbarbtn" data-toggle="tooltip" data-placement="left"
+                title="Open an issue"><i class="fas fa-lightbulb"></i>open issue</button></a>
+        <a class="edit-button" href="https://github.com/alan-turing-institute/environmental-ds-book/edit/master/book/notebooks/gallery/39d9c177-11da-41b2-9b64-63f4c1c834b3/notebook.ipynb"><button
+                type="button" class="btn btn-secondary topbarbtn" data-toggle="tooltip" data-placement="left"
+                title="Edit this page"><i class="fas fa-pencil-alt"></i>suggest edit</button></a>
+    </div>
+</div>
+
+            <!-- Full screen (wrap in <a> to have style consistency -->
+
+<a class="full-screen-button"><button type="button" class="btn btn-secondary topbarbtn" data-toggle="tooltip"
+        data-placement="bottom" onclick="toggleFullScreen()" aria-label="Fullscreen mode"
+        title="Fullscreen mode"><i
+            class="fas fa-expand"></i></button></a>
+
+            <!-- Launch buttons -->
+
+        </div>
+
+        <!-- Table of contents -->
+        <div class="d-none d-md-block col-md-2 bd-toc show noprint">
+            
+            <div class="tocsection onthispage pt-5 pb-3">
+                <i class="fas fa-list"></i> Contents
+            </div>
+            <nav id="bd-toc-nav" aria-label="Page">
+                <ul class="visible nav section-nav flex-column">
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#context">
+   Context
+  </a>
+  <ul class="nav section-nav flex-column">
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#purpose">
+     Purpose
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#description">
+     Description
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#highlights">
+     Highlights
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#contributions">
+     Contributions
+    </a>
+    <ul class="nav section-nav flex-column">
+     <li class="toc-h4 nav-item toc-entry">
+      <a class="reference internal nav-link" href="#notebook">
+       Notebook
+      </a>
+     </li>
+     <li class="toc-h4 nav-item toc-entry">
+      <a class="reference internal nav-link" href="#modelling-codebase">
+       Modelling codebase
+      </a>
+     </li>
+     <li class="toc-h4 nav-item toc-entry">
+      <a class="reference internal nav-link" href="#modelling-publications">
+       Modelling publications
+      </a>
+     </li>
+    </ul>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#source-code">
+     Source code
+    </a>
+   </li>
+  </ul>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#clone-the-paper-s-github-repository">
+   Clone the paper’s GitHub repository
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#load-libraries">
+   Load libraries
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#set-project-structure">
+   Set project structure
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#generate-data-and-run-assimilations">
+   Generate data and run assimilations
+  </a>
+  <ul class="nav section-nav flex-column">
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#fetch-data">
+     Fetch data
+    </a>
+   </li>
+  </ul>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#visualisation">
+   Visualisation
+  </a>
+  <ul class="nav section-nav flex-column">
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#initial-conditions-figure-2">
+     Initial conditions (Figure 2)
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#observations-with-noise-figure-3">
+     Observations with noise (Figure 3)
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#results-figure-4">
+     Results (Figure 4)
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#metrics-figure-5">
+     Metrics (Figure 5)
+    </a>
+   </li>
+  </ul>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#challenges-and-improvements">
+   Challenges and improvements
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#summary">
+   Summary
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#citing-this-notebook">
+   Citing this Notebook
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#additional-information">
+   Additional information
+  </a>
+ </li>
+</ul>
+
+            </nav>
+        </div>
+    </div>
+</div>
+    <div id="main-content" class="row">
+        <div class="col-12 col-md-9 pl-md-3 pr-md-0">
+            <!-- Table of contents that is only displayed when printing the page -->
+            <div id="jb-print-docs-body" class="onlyprint">
+                <h1>Variational data assimilation with deep prior (CIRC23)</h1>
+                <!-- Table of contents -->
+                <div id="print-main-content">
+                    <div id="jb-print-toc">
+                        
+                        <div>
+                            <h2> Contents </h2>
+                        </div>
+                        <nav aria-label="Page">
+                            <ul class="visible nav section-nav flex-column">
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#context">
+   Context
+  </a>
+  <ul class="nav section-nav flex-column">
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#purpose">
+     Purpose
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#description">
+     Description
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#highlights">
+     Highlights
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#contributions">
+     Contributions
+    </a>
+    <ul class="nav section-nav flex-column">
+     <li class="toc-h4 nav-item toc-entry">
+      <a class="reference internal nav-link" href="#notebook">
+       Notebook
+      </a>
+     </li>
+     <li class="toc-h4 nav-item toc-entry">
+      <a class="reference internal nav-link" href="#modelling-codebase">
+       Modelling codebase
+      </a>
+     </li>
+     <li class="toc-h4 nav-item toc-entry">
+      <a class="reference internal nav-link" href="#modelling-publications">
+       Modelling publications
+      </a>
+     </li>
+    </ul>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#source-code">
+     Source code
+    </a>
+   </li>
+  </ul>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#clone-the-paper-s-github-repository">
+   Clone the paper’s GitHub repository
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#load-libraries">
+   Load libraries
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#set-project-structure">
+   Set project structure
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#generate-data-and-run-assimilations">
+   Generate data and run assimilations
+  </a>
+  <ul class="nav section-nav flex-column">
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#fetch-data">
+     Fetch data
+    </a>
+   </li>
+  </ul>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#visualisation">
+   Visualisation
+  </a>
+  <ul class="nav section-nav flex-column">
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#initial-conditions-figure-2">
+     Initial conditions (Figure 2)
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#observations-with-noise-figure-3">
+     Observations with noise (Figure 3)
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#results-figure-4">
+     Results (Figure 4)
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#metrics-figure-5">
+     Metrics (Figure 5)
+    </a>
+   </li>
+  </ul>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#challenges-and-improvements">
+   Challenges and improvements
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#summary">
+   Summary
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#citing-this-notebook">
+   Citing this Notebook
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#additional-information">
+   Additional information
+  </a>
+ </li>
+</ul>
+
+                        </nav>
+                    </div>
+                </div>
+            </div>
+            
+              <div>
+                
+  <div class="tex2jax_ignore mathjax_ignore section" id="variational-data-assimilation-with-deep-prior-circ23">
+<h1>Variational data assimilation with deep prior (CIRC23)<a class="headerlink" href="#variational-data-assimilation-with-deep-prior-circ23" title="Permalink to this headline">¶</a></h1>
+<p><svg version="1.1" width="16" height="16" class="octicon octicon-tag" viewBox="0 0 16 16" aria-hidden="true"><path fill-rule="evenodd" d="M2.5 7.775V2.75a.25.25 0 01.25-.25h5.025a.25.25 0 01.177.073l6.25 6.25a.25.25 0 010 .354l-5.025 5.025a.25.25 0 01-.354 0l-6.25-6.25a.25.25 0 01-.073-.177zm-1.5 0V2.75C1 1.784 1.784 1 2.75 1h5.025c.464 0 .91.184 1.238.513l6.25 6.25a1.75 1.75 0 010 2.474l-5.026 5.026a1.75 1.75 0 01-2.474 0l-6.25-6.25A1.75 1.75 0 011 7.775zM6 5a1 1 0 100 2 1 1 0 000-2z"></path></svg>
+<span class="sd-sphinx-override sd-badge sd-bg-primary sd-bg-text-primary">Ocean</span>
+<span class="sd-sphinx-override sd-badge sd-bg-secondary sd-bg-text-secondary">Modelling</span>
+<span class="sd-sphinx-override sd-badge sd-bg-warning sd-bg-text-warning">Special Issue</span>
+<span class="sd-sphinx-override sd-badge sd-bg-info sd-bg-text-info">Python</span></p>
+<p align="left">
+    <a href="https://github.com/eds-book-gallery/39d9c177-11da-41b2-9b64-63f4c1c834b3/blob/main/LICENSE">
+        <img alt="license" src="https://img.shields.io/badge/license-MIT-yellow.svg">
+    </a>
+    <a href="https://github.com/eds-book-gallery/39d9c177-11da-41b2-9b64-63f4c1c834b3/actions/workflows/render.yaml">
+        <img alt="render" src="https://github.com/eds-book-gallery/39d9c177-11da-41b2-9b64-63f4c1c834b3/actions/workflows/render.yaml/badge.svg">
+    </a>
+    <a href="https://github.com/alan-turing-institute/environmental-ds-book/issues/178">
+        <img alt="review" src="https://img.shields.io/badge/view-review-purple">
+    </a>
+    <br/>
+</p>
+<p align="left">
+    <a href="https://mybinder.org/v2/gh/eds-book-gallery/39d9c177-11da-41b2-9b64-63f4c1c834b3/main?labpath=notebook.ipynb">
+        <img alt="binder" src="https://mybinder.org/badge_logo.svg">
+    </a>
+    <a href="https://replay.notebooks.egi.eu/v2/gh/eds-book-gallery/39d9c177-11da-41b2-9b64-63f4c1c834b3/main?labpath=notebook.ipynb">
+        <img alt="binder" src="https://img.shields.io/badge/launch-EGI%20binder-F5A252.svg?logo=data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAFkAAABZCAMAAABi1XidAAAB8lBMVEX///9XmsrmZYH1olJXmsr1olJXmsrmZYH1olJXmsr1olJXmsrmZYH1olL1olJXmsr1olJXmsrmZYH1olL1olJXmsrmZYH1olJXmsr1olL1olJXmsrmZYH1olL1olJXmsrmZYH1olL1olL0nFf1olJXmsrmZYH1olJXmsq8dZb1olJXmsrmZYH1olJXmspXmspXmsr1olL1olJXmsrmZYH1olJXmsr1olL1olJXmsrmZYH1olL1olLeaIVXmsrmZYH1olL1olL1olJXmsrmZYH1olLna31Xmsr1olJXmsr1olJXmsrmZYH1olLqoVr1olJXmsr1olJXmsrmZYH1olL1olKkfaPobXvviGabgadXmsqThKuofKHmZ4Dobnr1olJXmsr1olJXmspXmsr1olJXmsrfZ4TuhWn1olL1olJXmsqBi7X1olJXmspZmslbmMhbmsdemsVfl8ZgmsNim8Jpk8F0m7R4m7F5nLB6jbh7jbiDirOEibOGnKaMhq+PnaCVg6qWg6qegKaff6WhnpKofKGtnomxeZy3noG6dZi+n3vCcpPDcpPGn3bLb4/Mb47UbIrVa4rYoGjdaIbeaIXhoWHmZYHobXvpcHjqdHXreHLroVrsfG/uhGnuh2bwj2Hxk17yl1vzmljzm1j0nlX1olL3AJXWAAAAbXRSTlMAEBAQHx8gICAuLjAwMDw9PUBAQEpQUFBXV1hgYGBkcHBwcXl8gICAgoiIkJCQlJicnJ2goKCmqK+wsLC4usDAwMjP0NDQ1NbW3Nzg4ODi5+3v8PDw8/T09PX29vb39/f5+fr7+/z8/Pz9/v7+zczCxgAABC5JREFUeAHN1ul3k0UUBvCb1CTVpmpaitAGSLSpSuKCLWpbTKNJFGlcSMAFF63iUmRccNG6gLbuxkXU66JAUef/9LSpmXnyLr3T5AO/rzl5zj137p136BISy44fKJXuGN/d19PUfYeO67Znqtf2KH33Id1psXoFdW30sPZ1sMvs2D060AHqws4FHeJojLZqnw53cmfvg+XR8mC0OEjuxrXEkX5ydeVJLVIlV0e10PXk5k7dYeHu7Cj1j+49uKg7uLU61tGLw1lq27ugQYlclHC4bgv7VQ+TAyj5Zc/UjsPvs1sd5cWryWObtvWT2EPa4rtnWW3JkpjggEpbOsPr7F7EyNewtpBIslA7p43HCsnwooXTEc3UmPmCNn5lrqTJxy6nRmcavGZVt/3Da2pD5NHvsOHJCrdc1G2r3DITpU7yic7w/7Rxnjc0kt5GC4djiv2Sz3Fb2iEZg41/ddsFDoyuYrIkmFehz0HR2thPgQqMyQYb2OtB0WxsZ3BeG3+wpRb1vzl2UYBog8FfGhttFKjtAclnZYrRo9ryG9uG/FZQU4AEg8ZE9LjGMzTmqKXPLnlWVnIlQQTvxJf8ip7VgjZjyVPrjw1te5otM7RmP7xm+sK2Gv9I8Gi++BRbEkR9EBw8zRUcKxwp73xkaLiqQb+kGduJTNHG72zcW9LoJgqQxpP3/Tj//c3yB0tqzaml05/+orHLksVO+95kX7/7qgJvnjlrfr2Ggsyx0eoy9uPzN5SPd86aXggOsEKW2Prz7du3VID3/tzs/sSRs2w7ovVHKtjrX2pd7ZMlTxAYfBAL9jiDwfLkq55Tm7ifhMlTGPyCAs7RFRhn47JnlcB9RM5T97ASuZXIcVNuUDIndpDbdsfrqsOppeXl5Y+XVKdjFCTh+zGaVuj0d9zy05PPK3QzBamxdwtTCrzyg/2Rvf2EstUjordGwa/kx9mSJLr8mLLtCW8HHGJc2R5hS219IiF6PnTusOqcMl57gm0Z8kanKMAQg0qSyuZfn7zItsbGyO9QlnxY0eCuD1XL2ys/MsrQhltE7Ug0uFOzufJFE2PxBo/YAx8XPPdDwWN0MrDRYIZF0mSMKCNHgaIVFoBbNoLJ7tEQDKxGF0kcLQimojCZopv0OkNOyWCCg9XMVAi7ARJzQdM2QUh0gmBozjc3Skg6dSBRqDGYSUOu66Zg+I2fNZs/M3/f/Grl/XnyF1Gw3VKCez0PN5IUfFLqvgUN4C0qNqYs5YhPL+aVZYDE4IpUk57oSFnJm4FyCqqOE0jhY2SMyLFoo56zyo6becOS5UVDdj7Vih0zp+tcMhwRpBeLyqtIjlJKAIZSbI8SGSF3k0pA3mR5tHuwPFoa7N7reoq2bqCsAk1HqCu5uvI1n6JuRXI+S1Mco54YmYTwcn6Aeic+kssXi8XpXC4V3t7/ADuTNKaQJdScAAAAAElFTkSuQmCC">
+    </a>
+    <br/>
+</p>
+<p align="left">
+    <a href="https://w3id.org/ro-id/a6376631-ef64-4c7a-b242-893d096fd33b">
+        <img alt="RoHub" src="https://img.shields.io/badge/RoHub-FAIR_Executable_Research_Object-2ea44f?logo=Open+Access&logoColor=blue">
+    </a>
+    <a href="https://zenodo.org/badge/latestdoi/643572395">
+        <img alt="doi" src="https://zenodo.org/badge/643572395.svg">
+    </a>
+</p>
+<div class="section" id="context">
+<h2>Context<a class="headerlink" href="#context" title="Permalink to this headline">¶</a></h2>
+<div class="section" id="purpose">
+<h3>Purpose<a class="headerlink" href="#purpose" title="Permalink to this headline">¶</a></h3>
+<p>Solve data assimilation problems with implicit regularization with deep prior.</p>
+</div>
+<div class="section" id="description">
+<h3>Description<a class="headerlink" href="#description" title="Permalink to this headline">¶</a></h3>
+<p>Deep image prior, a neural network with proven results in standard inverse problems, is used to determine the state of a physical system. It is a fully unsupervised model which acts as implicit regularization in the variational data assimilation method. The algorithm is demonstrated with a shallow-water toy model and the simulated observations are compared with variational assimilation without regularization, with Tikhonov regularization and with deep prior.</p>
+</div>
+<div class="section" id="highlights">
+<h3>Highlights<a class="headerlink" href="#highlights" title="Permalink to this headline">¶</a></h3>
+<ul class="simple">
+<li><p>Fetch the modelling codebase from the GitHub repo provided with the paper.</p></li>
+<li><p>Run the main Python script to generate sample observations from a shallow-water model and variational assimilation solutions.</p></li>
+<li><p>Recreate visualizations from the paper.</p></li>
+<li><p>Compare assimilation scores and smoothness statistics between the different models.</p></li>
+</ul>
+</div>
+<div class="section" id="contributions">
+<h3>Contributions<a class="headerlink" href="#contributions" title="Permalink to this headline">¶</a></h3>
+<div class="section" id="notebook">
+<h4>Notebook<a class="headerlink" href="#notebook" title="Permalink to this headline">¶</a></h4>
+<ul class="simple">
+<li><p>Mukulika Pahari (author), University of Mumbai, <a class="reference external" href="https://github.com/Mukulikaa">&#64;Mukulikaa</a></p></li>
+<li><p>Rutika Bhoir (author), University of Mumbai, <a class="reference external" href="https://github.com/Rutika-16">&#64;Rutika-16</a></p></li>
+<li><p>Tina Odaka (reviewer), Ifremer, <a class="reference external" href="https://github.com/tinaok">&#64;tinaok</a></p></li>
+<li><p>Caroline Arnold (reviewer), German Climate Computing Center, <a class="reference external" href="https://github.com/crlna16">&#64;crlna16</a></p></li>
+<li><p>Paolo Pelucchi (reviewer), Universitat de València, <a class="reference external" href="https://github.com/polpel">&#64;polpel</a></p></li>
+</ul>
+</div>
+<div class="section" id="modelling-codebase">
+<h4>Modelling codebase<a class="headerlink" href="#modelling-codebase" title="Permalink to this headline">¶</a></h4>
+<ul class="simple">
+<li><p>Arthur Filoche (author), Sorbonne Université, <a class="reference external" href="https://github.com/ArFiloche">&#64;ArFiloche</a></p></li>
+</ul>
+</div>
+<div class="section" id="modelling-publications">
+<h4>Modelling publications<a class="headerlink" href="#modelling-publications" title="Permalink to this headline">¶</a></h4>
+<div class="docutils container" id="id1">
+<ul class="simple">
+<li id="id31"><p>Arthur Filoche, Dominique Béréziat, and Anastase Charantonis. Deep prior in variational assimilation to estimate an ocean circulation without explicit regularization. <em>Environmental Data Science</em>, 2:e2, 2023. <a class="reference external" href="https://doi.org/10.1017/eds.2022.31">doi:10.1017/eds.2022.31</a>.</p></li>
+</ul>
+</div>
+</div>
+</div>
+<div class="section" id="source-code">
+<h3>Source code<a class="headerlink" href="#source-code" title="Permalink to this headline">¶</a></h3>
+<p>The authors of the notebook acknowledge the original creator for providing public code available at <a class="reference external" href="https://github.com/ArFiloche/Deepprior4DVar_CI22">Deepprior4DVar_CI22</a>.</p>
+</div>
+</div>
+<div class="section" id="clone-the-paper-s-github-repository">
+<h2>Clone the paper’s GitHub repository<a class="headerlink" href="#clone-the-paper-s-github-repository" title="Permalink to this headline">¶</a></h2>
+<p>The cloned repository is moved to the current directory to easily import the required Python modules.</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="o">!</span>git<span class="w"> </span>clone<span class="w"> </span>-q<span class="w"> </span>https://github.com/ArFiloche/Deepprior4DVar_CI22
+</pre></div>
+</div>
+</div>
+</div>
+</div>
+<div class="section" id="load-libraries">
+<h2>Load libraries<a class="headerlink" href="#load-libraries" title="Permalink to this headline">¶</a></h2>
+<div class="cell tag_hide-input docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># system</span>
+<span class="kn">import</span> <span class="nn">sys</span>
+<span class="kn">import</span> <span class="nn">os</span>
+<span class="kn">import</span> <span class="nn">shutil</span>
+
+<span class="n">sys</span><span class="o">.</span><span class="n">path</span><span class="o">.</span><span class="n">insert</span><span class="p">(</span><span class="mi">0</span><span class="p">,</span> <span class="n">os</span><span class="o">.</span><span class="n">path</span><span class="o">.</span><span class="n">join</span><span class="p">(</span><span class="n">os</span><span class="o">.</span><span class="n">getcwd</span><span class="p">(),</span> <span class="s2">&quot;Deepprior4DVar_CI22&quot;</span><span class="p">))</span>
+
+<span class="c1"># data</span>
+<span class="kn">import</span> <span class="nn">numpy</span> <span class="k">as</span> <span class="nn">np</span>
+<span class="kn">import</span> <span class="nn">pooch</span>
+
+<span class="n">np</span><span class="o">.</span><span class="n">random</span><span class="o">.</span><span class="n">seed</span><span class="p">(</span><span class="mi">42</span><span class="p">)</span>
+
+<span class="c1"># modelling</span>
+<span class="kn">import</span> <span class="nn">torch</span>
+<span class="kn">import</span> <span class="nn">torch.optim</span> <span class="k">as</span> <span class="nn">optim</span>
+
+<span class="n">torch</span><span class="o">.</span><span class="n">manual_seed</span><span class="p">(</span><span class="mi">42</span><span class="p">)</span>
+
+<span class="c1"># custom functions from the Deepprior4DVar_CI22 repo</span>
+<span class="kn">import</span> <span class="nn">dynamics</span>
+<span class="kn">import</span> <span class="nn">utils</span>
+<span class="kn">import</span> <span class="nn">_4DVar</span>
+<span class="kn">import</span> <span class="nn">_DeepPrior4DVar</span>
+
+<span class="c1"># plotting and tables</span>
+<span class="kn">import</span> <span class="nn">matplotlib.pyplot</span> <span class="k">as</span> <span class="nn">plt</span>
+<span class="kn">import</span> <span class="nn">tabulate</span>
+
+<span class="c1"># utils</span>
+<span class="kn">import</span> <span class="nn">time</span>
+<span class="kn">import</span> <span class="nn">warnings</span>
+
+<span class="n">warnings</span><span class="o">.</span><span class="n">filterwarnings</span><span class="p">(</span><span class="n">action</span><span class="o">=</span><span class="s2">&quot;ignore&quot;</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output stderr highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>/srv/conda/envs/notebook/lib/python3.10/site-packages/torch/functional.py:504: UserWarning: torch.meshgrid: in an upcoming release, it will be required to pass the indexing argument. (Triggered internally at /opt/conda/conda-bld/pytorch_1682343904639/work/aten/src/ATen/native/TensorShape.cpp:3483.)
+  return _VF.meshgrid(tensors, **kwargs)  # type: ignore[attr-defined]
+</pre></div>
+</div>
+</div>
+</div>
+</div>
+<div class="section" id="set-project-structure">
+<h2>Set project structure<a class="headerlink" href="#set-project-structure" title="Permalink to this headline">¶</a></h2>
+<p>The following directory structure is the same as given in the project repository.</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">root_dir</span> <span class="o">=</span> <span class="s2">&quot;data/generated/&quot;</span>
+<span class="n">save_dir</span> <span class="o">=</span> <span class="s2">&quot;data/estimated/&quot;</span>
+
+<span class="k">if</span> <span class="n">os</span><span class="o">.</span><span class="n">path</span><span class="o">.</span><span class="n">exists</span><span class="p">(</span><span class="s2">&quot;data&quot;</span><span class="p">):</span>
+    <span class="n">shutil</span><span class="o">.</span><span class="n">rmtree</span><span class="p">(</span><span class="s2">&quot;data&quot;</span><span class="p">)</span>
+
+<span class="n">os</span><span class="o">.</span><span class="n">makedirs</span><span class="p">(</span><span class="n">root_dir</span><span class="p">)</span>
+<span class="n">os</span><span class="o">.</span><span class="n">makedirs</span><span class="p">(</span><span class="s2">&quot;data/results/&quot;</span><span class="p">)</span>
+<span class="n">os</span><span class="o">.</span><span class="n">makedirs</span><span class="p">(</span><span class="n">save_dir</span> <span class="o">+</span> <span class="s2">&quot;4DVar/&quot;</span><span class="p">)</span>
+<span class="n">os</span><span class="o">.</span><span class="n">makedirs</span><span class="p">(</span><span class="n">save_dir</span> <span class="o">+</span> <span class="s2">&quot;4DVar_reg/&quot;</span><span class="p">)</span>
+<span class="n">os</span><span class="o">.</span><span class="n">makedirs</span><span class="p">(</span><span class="n">save_dir</span> <span class="o">+</span> <span class="s2">&quot;4DVar_deep/&quot;</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+</div>
+</div>
+<div class="section" id="generate-data-and-run-assimilations">
+<h2>Generate data and run assimilations<a class="headerlink" href="#generate-data-and-run-assimilations" title="Permalink to this headline">¶</a></h2>
+<p>The  <code class="docutils literal notranslate"><span class="pre">Deepprior4DVar_CI22</span></code> repo has the following main modules:</p>
+<ul class="simple">
+<li><p><code class="docutils literal notranslate"><span class="pre">dynamics</span></code>: For simulating the shallow-water model.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">_4DVar</span></code>: For assimilation with and without regularization.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">_DeepPrior4DVar</span></code>: For assimilation with deep prior.</p></li>
+</ul>
+<p>The repo has a script- <code class="docutils literal notranslate"><span class="pre">main.py</span></code>, to perform all the steps required to reproduce the paper. In this notebook, this script has been run with a smaller sample size to reproduce the results. The repo also contains Jupyter notebooks for demonstration in the <code class="docutils literal notranslate"><span class="pre">notebooks_demo</span></code> directory.</p>
+<p>The first step is to generate observations from a shallow-water model initialized with initial state variables. Keeping in mind the computational limitations, the sample size has been reduced to 20 from 100, as taken in the original script. The output is stored in <code class="docutils literal notranslate"><span class="pre">data/generated</span></code>.</p>
+<div class="alert alert-block alert-info"> <b>Note: </b> You can change to the original value of n_sample=100 according to the availability of GPU resources </div><div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">n_sample</span> <span class="o">=</span> <span class="mi">20</span>
+<span class="n">dx</span> <span class="o">=</span> <span class="n">utils</span><span class="o">.</span><span class="n">data_generator</span><span class="o">.</span><span class="n">dx</span>
+<span class="n">dy</span> <span class="o">=</span> <span class="n">utils</span><span class="o">.</span><span class="n">data_generator</span><span class="o">.</span><span class="n">dy</span>
+<span class="n">dynamics_obj</span> <span class="o">=</span> <span class="n">dynamics</span><span class="o">.</span><span class="n">SW</span><span class="p">(</span><span class="n">dx</span><span class="p">,</span> <span class="n">dy</span><span class="p">)</span>
+<span class="n">generator</span> <span class="o">=</span> <span class="n">utils</span><span class="o">.</span><span class="n">DataGenerator</span><span class="p">(</span><span class="n">dynamics_obj</span><span class="p">,</span> <span class="n">T</span><span class="o">=</span><span class="mi">10</span><span class="p">,</span> <span class="n">subsample</span><span class="o">=</span><span class="mi">3</span><span class="p">,</span> <span class="n">sigma</span><span class="o">=</span><span class="mf">0.05</span><span class="p">)</span>
+<span class="n">generator</span><span class="o">.</span><span class="n">dataset</span><span class="p">(</span><span class="n">n_sample</span><span class="p">,</span> <span class="n">root_dir</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+</div>
+<p>The rest of the script is run as is. The next steps include:</p>
+<ul class="simple">
+<li><p>extracting observations from the simulated model,</p></li>
+<li><p>performing 4D variational assimilation with and without regularization,</p></li>
+<li><p>performing deep prior 4D variational assimilation,</p></li>
+<li><p>computing performance metrics,</p>
+<ul>
+<li><p>Endpoint Error - EPE</p></li>
+<li><p>Angular Error -AE</p></li>
+<li><p>||grad|| - <span class="math notranslate nohighlight">\(\parallel \nabla\mathbf{w}_0\parallel_2\)</span></p></li>
+<li><p>||div|| - <span class="math notranslate nohighlight">\(\parallel \nabla . \mathbf{w}_0\parallel_2\)</span></p></li>
+<li><p>||lap|| - <span class="math notranslate nohighlight">\(\parallel\Delta \mathbf{w}_0\parallel_2\)</span></p></li>
+</ul>
+</li>
+<li><p>storing computed metrics in a NumPy array.</p></li>
+</ul>
+<div class="alert alert-warning">
+<p><strong>Note:</strong>
+The steps indicated above require access to GPU hardware which is not available in the standard Binder. Therefore, below we display the code in a markdown cell, rather than an executable cell. Users can copy and paste the code below to a new executable cell if GPU resources are available e.g. <a class="reference external" href="https://colab.google/">Colab</a>.</p>
+</div>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="n">results</span><span class="o">=</span><span class="n">np</span><span class="o">.</span><span class="n">zeros</span><span class="p">((</span><span class="n">n_sample</span><span class="p">,</span><span class="mi">4</span><span class="p">,</span><span class="mi">5</span><span class="p">))</span> <span class="c1"># EPE, AE, ||grad||, ||div||, ||lap||</span>
+
+<span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="n">n_sample</span><span class="p">):</span>
+    <span class="c1">#load data</span>
+    <span class="n">initial_condition</span><span class="o">=</span><span class="n">np</span><span class="o">.</span><span class="n">load</span><span class="p">(</span><span class="n">root_dir</span><span class="o">+</span><span class="s1">&#39;initial_conditions/&#39;</span><span class="o">+</span><span class="s1">&#39;</span><span class="si">{0:04}</span><span class="s1">&#39;</span><span class="o">.</span><span class="n">format</span><span class="p">(</span><span class="nb">int</span><span class="p">(</span><span class="n">i</span><span class="p">))</span><span class="o">+</span><span class="s1">&#39;.npy&#39;</span><span class="p">)</span>
+    <span class="n">w0_truth</span><span class="o">=</span><span class="n">torch</span><span class="o">.</span><span class="n">Tensor</span><span class="p">(</span><span class="n">initial_condition</span><span class="p">[</span><span class="mi">1</span><span class="p">:,:,:])</span>
+
+    <span class="c1"># results</span>
+    <span class="n">results</span><span class="p">[</span><span class="n">i</span><span class="p">,</span><span class="mi">0</span><span class="p">,</span><span class="mi">0</span><span class="p">]</span><span class="o">=</span><span class="n">utils</span><span class="o">.</span><span class="n">EPE</span><span class="p">(</span><span class="n">w0_truth</span><span class="p">,</span> <span class="n">w0_truth</span><span class="p">)</span> <span class="c1">#0</span>
+    <span class="n">results</span><span class="p">[</span><span class="n">i</span><span class="p">,</span><span class="mi">0</span><span class="p">,</span><span class="mi">1</span><span class="p">]</span><span class="o">=</span><span class="n">utils</span><span class="o">.</span><span class="n">Angular_error</span><span class="p">(</span><span class="n">w0_truth</span><span class="p">,</span> <span class="n">w0_truth</span><span class="p">)</span> <span class="c1">#0</span>
+    <span class="n">results</span><span class="p">[</span><span class="n">i</span><span class="p">,</span><span class="mi">0</span><span class="p">,</span><span class="mi">2</span><span class="p">]</span><span class="o">=</span><span class="n">utils</span><span class="o">.</span><span class="n">norm_gradw</span><span class="p">(</span><span class="n">w0_truth</span><span class="p">)</span>
+    <span class="n">results</span><span class="p">[</span><span class="n">i</span><span class="p">,</span><span class="mi">0</span><span class="p">,</span><span class="mi">3</span><span class="p">]</span><span class="o">=</span><span class="n">utils</span><span class="o">.</span><span class="n">norm_divw</span><span class="p">(</span><span class="n">w0_truth</span><span class="p">)</span>
+    <span class="n">results</span><span class="p">[</span><span class="n">i</span><span class="p">,</span><span class="mi">0</span><span class="p">,</span><span class="mi">4</span><span class="p">]</span><span class="o">=</span><span class="n">utils</span><span class="o">.</span><span class="n">norm_lapw</span><span class="p">(</span><span class="n">w0_truth</span><span class="p">)</span>
+
+    <span class="n">Obs</span><span class="o">=</span><span class="n">np</span><span class="o">.</span><span class="n">load</span><span class="p">(</span><span class="n">root_dir</span><span class="o">+</span><span class="s1">&#39;Obs/&#39;</span><span class="o">+</span><span class="s1">&#39;</span><span class="si">{0:04}</span><span class="s1">&#39;</span><span class="o">.</span><span class="n">format</span><span class="p">(</span><span class="nb">int</span><span class="p">(</span><span class="n">i</span><span class="p">))</span><span class="o">+</span><span class="s1">&#39;.npy&#39;</span><span class="p">)</span>
+    <span class="n">Obs</span><span class="o">=</span><span class="n">torch</span><span class="o">.</span><span class="n">Tensor</span><span class="p">(</span><span class="n">Obs</span><span class="p">)</span>
+
+    <span class="n">Rm1</span><span class="o">=</span><span class="n">torch</span><span class="o">.</span><span class="n">ones</span><span class="p">(</span><span class="n">Obs</span><span class="o">.</span><span class="n">shape</span><span class="p">)</span><span class="o">*</span><span class="p">(</span><span class="n">Obs</span><span class="o">!=</span><span class="mi">0</span><span class="p">)</span>
+    <span class="n">Rm1</span><span class="o">=</span><span class="n">torch</span><span class="o">.</span><span class="n">Tensor</span><span class="p">(</span><span class="n">Rm1</span><span class="p">)</span>
+
+    <span class="c1">## 4D-Var #####</span>
+    <span class="n">assim</span> <span class="o">=</span> <span class="n">_4DVar</span><span class="o">.</span><span class="n">strong_4DVar</span><span class="p">(</span><span class="n">dynamics</span><span class="o">=</span><span class="n">dynamics_obj</span><span class="p">,</span>
+                         <span class="n">optimizer</span><span class="o">=</span><span class="n">optim</span><span class="o">.</span><span class="n">LBFGS</span><span class="p">([</span><span class="n">torch</span><span class="o">.</span><span class="n">zeros</span><span class="p">(</span><span class="mi">0</span><span class="p">)],</span><span class="n">lr</span><span class="o">=</span><span class="mf">0.75</span><span class="p">,</span> <span class="n">max_iter</span><span class="o">=</span><span class="mi">250</span><span class="p">))</span>
+    <span class="n">assim</span><span class="o">.</span><span class="n">fit</span><span class="p">(</span><span class="n">Obs</span><span class="o">=</span><span class="n">Obs</span><span class="p">,</span><span class="n">Rm1</span><span class="o">=</span><span class="n">Rm1</span><span class="p">)</span>
+
+    <span class="n">w0_4dvar</span><span class="o">=</span> <span class="n">assim</span><span class="o">.</span><span class="n">initial_condition</span><span class="p">[</span><span class="mi">1</span><span class="p">:,:,:]</span>
+    <span class="n">np</span><span class="o">.</span><span class="n">save</span><span class="p">(</span><span class="n">save_dir</span><span class="o">+</span><span class="s1">&#39;4DVar/&#39;</span><span class="o">+</span><span class="s1">&#39;</span><span class="si">{0:04}</span><span class="s1">&#39;</span><span class="o">.</span><span class="n">format</span><span class="p">(</span><span class="nb">int</span><span class="p">(</span><span class="n">i</span><span class="p">))</span><span class="o">+</span><span class="s1">&#39;.npy&#39;</span><span class="p">,</span> <span class="n">w0_4dvar</span><span class="p">)</span>
+
+    <span class="c1"># results</span>
+    <span class="n">results</span><span class="p">[</span><span class="n">i</span><span class="p">,</span><span class="mi">1</span><span class="p">,</span><span class="mi">0</span><span class="p">]</span><span class="o">=</span><span class="n">utils</span><span class="o">.</span><span class="n">EPE</span><span class="p">(</span><span class="n">w0_truth</span><span class="p">,</span> <span class="n">w0_4dvar</span><span class="p">)</span>
+    <span class="n">results</span><span class="p">[</span><span class="n">i</span><span class="p">,</span><span class="mi">1</span><span class="p">,</span><span class="mi">1</span><span class="p">]</span><span class="o">=</span><span class="n">utils</span><span class="o">.</span><span class="n">Angular_error</span><span class="p">(</span><span class="n">w0_truth</span><span class="p">,</span> <span class="n">w0_4dvar</span><span class="p">)</span>
+    <span class="n">results</span><span class="p">[</span><span class="n">i</span><span class="p">,</span><span class="mi">1</span><span class="p">,</span><span class="mi">2</span><span class="p">]</span><span class="o">=</span><span class="n">utils</span><span class="o">.</span><span class="n">norm_gradw</span><span class="p">(</span><span class="n">w0_4dvar</span><span class="p">)</span>
+    <span class="n">results</span><span class="p">[</span><span class="n">i</span><span class="p">,</span><span class="mi">1</span><span class="p">,</span><span class="mi">3</span><span class="p">]</span><span class="o">=</span><span class="n">utils</span><span class="o">.</span><span class="n">norm_divw</span><span class="p">(</span><span class="n">w0_4dvar</span><span class="p">)</span>
+    <span class="n">results</span><span class="p">[</span><span class="n">i</span><span class="p">,</span><span class="mi">1</span><span class="p">,</span><span class="mi">4</span><span class="p">]</span><span class="o">=</span><span class="n">utils</span><span class="o">.</span><span class="n">norm_lapw</span><span class="p">(</span><span class="n">w0_4dvar</span><span class="p">)</span>
+
+    <span class="c1">## Thikonov 4D-Var #####</span>
+    <span class="n">smoothreg</span><span class="o">=</span> <span class="n">_4DVar</span><span class="o">.</span><span class="n">smooth_regul</span><span class="p">(</span><span class="n">alpha</span><span class="o">=</span><span class="mf">5e3</span><span class="p">,</span> <span class="n">beta</span><span class="o">=</span><span class="mf">5e2</span><span class="p">,</span><span class="n">dx</span><span class="o">=</span><span class="n">dx</span><span class="p">,</span><span class="n">dy</span><span class="o">=</span><span class="n">dy</span><span class="p">)</span>
+    <span class="n">assim</span> <span class="o">=</span> <span class="n">_4DVar</span><span class="o">.</span><span class="n">strong_4DVar</span><span class="p">(</span><span class="n">dynamics</span><span class="o">=</span><span class="n">dynamics_obj</span><span class="p">,</span> <span class="n">regul</span><span class="o">=</span><span class="n">smoothreg</span><span class="p">,</span>
+                         <span class="n">optimizer</span><span class="o">=</span><span class="n">optim</span><span class="o">.</span><span class="n">LBFGS</span><span class="p">([</span><span class="n">torch</span><span class="o">.</span><span class="n">zeros</span><span class="p">(</span><span class="mi">0</span><span class="p">)],</span><span class="n">lr</span><span class="o">=</span><span class="mf">0.75</span><span class="p">,</span> <span class="n">max_iter</span><span class="o">=</span><span class="mi">250</span><span class="p">))</span>
+    <span class="n">assim</span><span class="o">.</span><span class="n">fit</span><span class="p">(</span><span class="n">Obs</span><span class="o">=</span><span class="n">Obs</span><span class="p">,</span><span class="n">Rm1</span><span class="o">=</span><span class="n">Rm1</span><span class="p">)</span>
+
+    <span class="n">w0_4dvar_reg</span><span class="o">=</span><span class="n">assim</span><span class="o">.</span><span class="n">initial_condition</span><span class="p">[</span><span class="mi">1</span><span class="p">:,:,:]</span>
+    <span class="n">np</span><span class="o">.</span><span class="n">save</span><span class="p">(</span><span class="n">save_dir</span><span class="o">+</span><span class="s1">&#39;4DVar_reg/&#39;</span><span class="o">+</span><span class="s1">&#39;</span><span class="si">{0:04}</span><span class="s1">&#39;</span><span class="o">.</span><span class="n">format</span><span class="p">(</span><span class="nb">int</span><span class="p">(</span><span class="n">i</span><span class="p">))</span><span class="o">+</span><span class="s1">&#39;.npy&#39;</span><span class="p">,</span> <span class="n">w0_4dvar_reg</span><span class="p">)</span>
+
+    <span class="c1"># results</span>
+    <span class="n">results</span><span class="p">[</span><span class="n">i</span><span class="p">,</span><span class="mi">2</span><span class="p">,</span><span class="mi">0</span><span class="p">]</span><span class="o">=</span><span class="n">utils</span><span class="o">.</span><span class="n">EPE</span><span class="p">(</span><span class="n">w0_truth</span><span class="p">,</span> <span class="n">w0_4dvar_reg</span><span class="p">)</span>
+    <span class="n">results</span><span class="p">[</span><span class="n">i</span><span class="p">,</span><span class="mi">2</span><span class="p">,</span><span class="mi">1</span><span class="p">]</span><span class="o">=</span><span class="n">utils</span><span class="o">.</span><span class="n">Angular_error</span><span class="p">(</span><span class="n">w0_truth</span><span class="p">,</span> <span class="n">w0_4dvar_reg</span><span class="p">)</span>
+    <span class="n">results</span><span class="p">[</span><span class="n">i</span><span class="p">,</span><span class="mi">2</span><span class="p">,</span><span class="mi">2</span><span class="p">]</span><span class="o">=</span><span class="n">utils</span><span class="o">.</span><span class="n">norm_gradw</span><span class="p">(</span><span class="n">w0_4dvar_reg</span><span class="p">)</span>
+    <span class="n">results</span><span class="p">[</span><span class="n">i</span><span class="p">,</span><span class="mi">2</span><span class="p">,</span><span class="mi">3</span><span class="p">]</span><span class="o">=</span><span class="n">utils</span><span class="o">.</span><span class="n">norm_divw</span><span class="p">(</span><span class="n">w0_4dvar_reg</span><span class="p">)</span>
+    <span class="n">results</span><span class="p">[</span><span class="n">i</span><span class="p">,</span><span class="mi">2</span><span class="p">,</span><span class="mi">4</span><span class="p">]</span><span class="o">=</span><span class="n">utils</span><span class="o">.</span><span class="n">norm_lapw</span><span class="p">(</span><span class="n">w0_4dvar_reg</span><span class="p">)</span>
+
+    <span class="c1">## Deep prior 4D-Var #####</span>
+    <span class="n">netG</span> <span class="o">=</span> <span class="n">_DeepPrior4DVar</span><span class="o">.</span><span class="n">Generator</span><span class="p">()</span>
+    <span class="n">netG</span><span class="o">.</span><span class="n">apply</span><span class="p">(</span><span class="n">_DeepPrior4DVar</span><span class="o">.</span><span class="n">weights_init</span><span class="p">)</span>
+
+    <span class="n">noise</span> <span class="o">=</span> <span class="n">torch</span><span class="o">.</span><span class="n">randn</span><span class="p">(</span><span class="n">netG</span><span class="o">.</span><span class="n">nz</span><span class="p">,</span> <span class="mi">1</span><span class="p">,</span> <span class="mi">1</span><span class="p">)</span>
+
+    <span class="n">assim</span><span class="o">=</span><span class="n">_DeepPrior4DVar</span><span class="o">.</span><span class="n">deeprior_strong_4DVar</span><span class="p">(</span><span class="n">generator</span><span class="o">=</span><span class="n">netG</span><span class="p">,</span> <span class="n">dynamics</span><span class="o">=</span><span class="n">dynamics_obj</span><span class="p">,</span>
+                               <span class="n">lr</span> <span class="o">=</span> <span class="mf">0.002</span><span class="p">,</span> <span class="n">beta1</span> <span class="o">=</span> <span class="mf">0.5</span><span class="p">,</span> <span class="n">n_epoch</span><span class="o">=</span><span class="mi">2000</span><span class="p">)</span>
+    <span class="n">assim</span><span class="o">.</span><span class="n">fit</span><span class="p">(</span><span class="n">noise</span><span class="p">,</span> <span class="n">Obs</span><span class="p">,</span> <span class="n">Rm1</span><span class="p">)</span>
+
+    <span class="n">w0_4dvar_deep</span><span class="o">=</span><span class="n">assim</span><span class="o">.</span><span class="n">initial_condition</span><span class="p">[</span><span class="mi">1</span><span class="p">:,:,:]</span>
+    <span class="n">np</span><span class="o">.</span><span class="n">save</span><span class="p">(</span><span class="n">save_dir</span><span class="o">+</span><span class="s1">&#39;4DVar_deep/&#39;</span><span class="o">+</span><span class="s1">&#39;</span><span class="si">{0:04}</span><span class="s1">&#39;</span><span class="o">.</span><span class="n">format</span><span class="p">(</span><span class="nb">int</span><span class="p">(</span><span class="n">i</span><span class="p">))</span><span class="o">+</span><span class="s1">&#39;.npy&#39;</span><span class="p">,</span> <span class="n">w0_4dvar_deep</span><span class="p">)</span>
+
+    <span class="c1"># results</span>
+    <span class="n">results</span><span class="p">[</span><span class="n">i</span><span class="p">,</span><span class="mi">3</span><span class="p">,</span><span class="mi">0</span><span class="p">]</span><span class="o">=</span><span class="n">utils</span><span class="o">.</span><span class="n">EPE</span><span class="p">(</span><span class="n">w0_truth</span><span class="p">,</span> <span class="n">w0_4dvar_deep</span><span class="p">)</span>
+    <span class="n">results</span><span class="p">[</span><span class="n">i</span><span class="p">,</span><span class="mi">3</span><span class="p">,</span><span class="mi">1</span><span class="p">]</span><span class="o">=</span><span class="n">utils</span><span class="o">.</span><span class="n">Angular_error</span><span class="p">(</span><span class="n">w0_truth</span><span class="p">,</span> <span class="n">w0_4dvar_deep</span><span class="p">)</span>
+    <span class="n">results</span><span class="p">[</span><span class="n">i</span><span class="p">,</span><span class="mi">3</span><span class="p">,</span><span class="mi">2</span><span class="p">]</span><span class="o">=</span><span class="n">utils</span><span class="o">.</span><span class="n">norm_gradw</span><span class="p">(</span><span class="n">w0_4dvar_deep</span><span class="p">)</span>
+    <span class="n">results</span><span class="p">[</span><span class="n">i</span><span class="p">,</span><span class="mi">3</span><span class="p">,</span><span class="mi">3</span><span class="p">]</span><span class="o">=</span><span class="n">utils</span><span class="o">.</span><span class="n">norm_divw</span><span class="p">(</span><span class="n">w0_4dvar_deep</span><span class="p">)</span>
+    <span class="n">results</span><span class="p">[</span><span class="n">i</span><span class="p">,</span><span class="mi">3</span><span class="p">,</span><span class="mi">4</span><span class="p">]</span><span class="o">=</span><span class="n">utils</span><span class="o">.</span><span class="n">norm_lapw</span><span class="p">(</span><span class="n">w0_4dvar_deep</span><span class="p">)</span>
+
+    <span class="n">elapsed</span> <span class="o">=</span> <span class="n">time</span><span class="o">.</span><span class="n">perf_counter</span><span class="p">()</span> <span class="o">-</span> <span class="n">time_start</span>
+    <span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s1">&#39;Sample </span><span class="si">{</span><span class="n">i</span><span class="si">}</span><span class="s1"> successfully run and stored in </span><span class="si">{</span><span class="n">elapsed</span><span class="w"> </span><span class="o">//</span><span class="mi">60</span><span class="si">}</span><span class="s1"> min&#39;</span><span class="p">)</span>
+
+<span class="n">np</span><span class="o">.</span><span class="n">save</span><span class="p">(</span><span class="s1">&#39;./data/results/main.npy&#39;</span><span class="p">,</span><span class="n">results</span><span class="p">)</span>
+</pre></div>
+</div>
+<div class="section" id="fetch-data">
+<h3>Fetch data<a class="headerlink" href="#fetch-data" title="Permalink to this headline">¶</a></h3>
+<p>We use <code class="docutils literal notranslate"><span class="pre">pooch</span></code> to fetch outputs of the above cell from Zenodo. This will allow us to run the rest of cells for virtual environments without GPU availability.</p>
+<div class="cell tag_hide-output docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">pooch</span><span class="o">.</span><span class="n">retrieve</span><span class="p">(</span>
+    <span class="n">url</span><span class="o">=</span><span class="s2">&quot;doi:10.5281/zenodo.8339319/data.zip&quot;</span><span class="p">,</span>
+    <span class="n">known_hash</span><span class="o">=</span><span class="s2">&quot;md5:945c6f0768147a15448fb40c1e587462&quot;</span><span class="p">,</span>
+    <span class="n">processor</span><span class="o">=</span><span class="n">pooch</span><span class="o">.</span><span class="n">Unzip</span><span class="p">(</span><span class="n">extract_dir</span><span class="o">=</span><span class="sa">f</span><span class="s2">&quot;data&quot;</span><span class="p">),</span>
+    <span class="n">path</span><span class="o">=</span><span class="sa">f</span><span class="s2">&quot;.&quot;</span><span class="p">,</span>
+<span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output stderr highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Downloading data from &#39;doi:10.5281/zenodo.8339319/data.zip&#39; to file &#39;/home/jovyan/90af5dad5f5eb903b224e65353576d9c-data.zip&#39;.
+Unzipping contents of &#39;/home/jovyan/90af5dad5f5eb903b224e65353576d9c-data.zip&#39; to &#39;/home/jovyan/data&#39;
+</pre></div>
+</div>
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>[&#39;/home/jovyan/data/.DS_Store&#39;,
+ &#39;/home/jovyan/data/results/main.npy&#39;,
+ &#39;/home/jovyan/data/estimated/4DVar/0012.npy&#39;,
+ &#39;/home/jovyan/data/estimated/4DVar/0015.npy&#39;,
+ &#39;/home/jovyan/data/estimated/4DVar/0014.npy&#39;,
+ &#39;/home/jovyan/data/estimated/4DVar/0007.npy&#39;,
+ &#39;/home/jovyan/data/estimated/4DVar/0013.npy&#39;,
+ &#39;/home/jovyan/data/estimated/4DVar/0002.npy&#39;,
+ &#39;/home/jovyan/data/estimated/4DVar/0019.npy&#39;,
+ &#39;/home/jovyan/data/estimated/4DVar/0003.npy&#39;,
+ &#39;/home/jovyan/data/estimated/4DVar/0009.npy&#39;,
+ &#39;/home/jovyan/data/estimated/4DVar/0006.npy&#39;,
+ &#39;/home/jovyan/data/estimated/4DVar/0018.npy&#39;,
+ &#39;/home/jovyan/data/estimated/4DVar/0010.npy&#39;,
+ &#39;/home/jovyan/data/estimated/4DVar/0001.npy&#39;,
+ &#39;/home/jovyan/data/estimated/4DVar/0008.npy&#39;,
+ &#39;/home/jovyan/data/estimated/4DVar/0011.npy&#39;,
+ &#39;/home/jovyan/data/estimated/4DVar/0005.npy&#39;,
+ &#39;/home/jovyan/data/estimated/4DVar/0017.npy&#39;,
+ &#39;/home/jovyan/data/estimated/4DVar/0016.npy&#39;,
+ &#39;/home/jovyan/data/estimated/4DVar/0000.npy&#39;,
+ &#39;/home/jovyan/data/estimated/4DVar/0004.npy&#39;,
+ &#39;/home/jovyan/data/estimated/4DVar_deep/0012.npy&#39;,
+ &#39;/home/jovyan/data/estimated/4DVar_deep/0015.npy&#39;,
+ &#39;/home/jovyan/data/estimated/4DVar_deep/0014.npy&#39;,
+ &#39;/home/jovyan/data/estimated/4DVar_deep/0007.npy&#39;,
+ &#39;/home/jovyan/data/estimated/4DVar_deep/0013.npy&#39;,
+ &#39;/home/jovyan/data/estimated/4DVar_deep/0002.npy&#39;,
+ &#39;/home/jovyan/data/estimated/4DVar_deep/0019.npy&#39;,
+ &#39;/home/jovyan/data/estimated/4DVar_deep/0003.npy&#39;,
+ &#39;/home/jovyan/data/estimated/4DVar_deep/0009.npy&#39;,
+ &#39;/home/jovyan/data/estimated/4DVar_deep/0006.npy&#39;,
+ &#39;/home/jovyan/data/estimated/4DVar_deep/0018.npy&#39;,
+ &#39;/home/jovyan/data/estimated/4DVar_deep/0010.npy&#39;,
+ &#39;/home/jovyan/data/estimated/4DVar_deep/0001.npy&#39;,
+ &#39;/home/jovyan/data/estimated/4DVar_deep/0008.npy&#39;,
+ &#39;/home/jovyan/data/estimated/4DVar_deep/0011.npy&#39;,
+ &#39;/home/jovyan/data/estimated/4DVar_deep/0005.npy&#39;,
+ &#39;/home/jovyan/data/estimated/4DVar_deep/0017.npy&#39;,
+ &#39;/home/jovyan/data/estimated/4DVar_deep/0016.npy&#39;,
+ &#39;/home/jovyan/data/estimated/4DVar_deep/0000.npy&#39;,
+ &#39;/home/jovyan/data/estimated/4DVar_deep/0004.npy&#39;,
+ &#39;/home/jovyan/data/estimated/4DVar_reg/0012.npy&#39;,
+ &#39;/home/jovyan/data/estimated/4DVar_reg/0015.npy&#39;,
+ &#39;/home/jovyan/data/estimated/4DVar_reg/0014.npy&#39;,
+ &#39;/home/jovyan/data/estimated/4DVar_reg/0007.npy&#39;,
+ &#39;/home/jovyan/data/estimated/4DVar_reg/0013.npy&#39;,
+ &#39;/home/jovyan/data/estimated/4DVar_reg/0002.npy&#39;,
+ &#39;/home/jovyan/data/estimated/4DVar_reg/0019.npy&#39;,
+ &#39;/home/jovyan/data/estimated/4DVar_reg/0003.npy&#39;,
+ &#39;/home/jovyan/data/estimated/4DVar_reg/0009.npy&#39;,
+ &#39;/home/jovyan/data/estimated/4DVar_reg/0006.npy&#39;,
+ &#39;/home/jovyan/data/estimated/4DVar_reg/0018.npy&#39;,
+ &#39;/home/jovyan/data/estimated/4DVar_reg/0010.npy&#39;,
+ &#39;/home/jovyan/data/estimated/4DVar_reg/0001.npy&#39;,
+ &#39;/home/jovyan/data/estimated/4DVar_reg/0008.npy&#39;,
+ &#39;/home/jovyan/data/estimated/4DVar_reg/0011.npy&#39;,
+ &#39;/home/jovyan/data/estimated/4DVar_reg/0005.npy&#39;,
+ &#39;/home/jovyan/data/estimated/4DVar_reg/0017.npy&#39;,
+ &#39;/home/jovyan/data/estimated/4DVar_reg/0016.npy&#39;,
+ &#39;/home/jovyan/data/estimated/4DVar_reg/0000.npy&#39;,
+ &#39;/home/jovyan/data/estimated/4DVar_reg/0004.npy&#39;,
+ &#39;/home/jovyan/data/generated/Obs/0012.npy&#39;,
+ &#39;/home/jovyan/data/generated/Obs/0015.npy&#39;,
+ &#39;/home/jovyan/data/generated/Obs/0014.npy&#39;,
+ &#39;/home/jovyan/data/generated/Obs/0007.npy&#39;,
+ &#39;/home/jovyan/data/generated/Obs/0013.npy&#39;,
+ &#39;/home/jovyan/data/generated/Obs/0002.npy&#39;,
+ &#39;/home/jovyan/data/generated/Obs/0019.npy&#39;,
+ &#39;/home/jovyan/data/generated/Obs/0003.npy&#39;,
+ &#39;/home/jovyan/data/generated/Obs/0009.npy&#39;,
+ &#39;/home/jovyan/data/generated/Obs/0006.npy&#39;,
+ &#39;/home/jovyan/data/generated/Obs/0018.npy&#39;,
+ &#39;/home/jovyan/data/generated/Obs/0010.npy&#39;,
+ &#39;/home/jovyan/data/generated/Obs/0001.npy&#39;,
+ &#39;/home/jovyan/data/generated/Obs/0008.npy&#39;,
+ &#39;/home/jovyan/data/generated/Obs/0011.npy&#39;,
+ &#39;/home/jovyan/data/generated/Obs/0005.npy&#39;,
+ &#39;/home/jovyan/data/generated/Obs/0017.npy&#39;,
+ &#39;/home/jovyan/data/generated/Obs/0016.npy&#39;,
+ &#39;/home/jovyan/data/generated/Obs/0000.npy&#39;,
+ &#39;/home/jovyan/data/generated/Obs/0004.npy&#39;,
+ &#39;/home/jovyan/data/generated/initial_conditions/0012.npy&#39;,
+ &#39;/home/jovyan/data/generated/initial_conditions/0015.npy&#39;,
+ &#39;/home/jovyan/data/generated/initial_conditions/0014.npy&#39;,
+ &#39;/home/jovyan/data/generated/initial_conditions/0007.npy&#39;,
+ &#39;/home/jovyan/data/generated/initial_conditions/0013.npy&#39;,
+ &#39;/home/jovyan/data/generated/initial_conditions/0002.npy&#39;,
+ &#39;/home/jovyan/data/generated/initial_conditions/0019.npy&#39;,
+ &#39;/home/jovyan/data/generated/initial_conditions/0003.npy&#39;,
+ &#39;/home/jovyan/data/generated/initial_conditions/0009.npy&#39;,
+ &#39;/home/jovyan/data/generated/initial_conditions/0006.npy&#39;,
+ &#39;/home/jovyan/data/generated/initial_conditions/0018.npy&#39;,
+ &#39;/home/jovyan/data/generated/initial_conditions/0010.npy&#39;,
+ &#39;/home/jovyan/data/generated/initial_conditions/0001.npy&#39;,
+ &#39;/home/jovyan/data/generated/initial_conditions/0008.npy&#39;,
+ &#39;/home/jovyan/data/generated/initial_conditions/0011.npy&#39;,
+ &#39;/home/jovyan/data/generated/initial_conditions/0005.npy&#39;,
+ &#39;/home/jovyan/data/generated/initial_conditions/0017.npy&#39;,
+ &#39;/home/jovyan/data/generated/initial_conditions/0016.npy&#39;,
+ &#39;/home/jovyan/data/generated/initial_conditions/0000.npy&#39;,
+ &#39;/home/jovyan/data/generated/initial_conditions/0004.npy&#39;]
+</pre></div>
+</div>
+</div>
+</div>
+</div>
+</div>
+<div class="section" id="visualisation">
+<h2>Visualisation<a class="headerlink" href="#visualisation" title="Permalink to this headline">¶</a></h2>
+<p>The data generated from the script is loaded into variables for visualization. The plots are made with the scripts provided in <code class="docutils literal notranslate"><span class="pre">utils</span></code>.</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">i</span> <span class="o">=</span> <span class="mi">0</span>
+<span class="n">root_dir</span> <span class="o">=</span> <span class="s2">&quot;data/generated/&quot;</span>
+
+<span class="n">initial_condition</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">load</span><span class="p">(</span>
+    <span class="n">root_dir</span> <span class="o">+</span> <span class="s2">&quot;initial_conditions/&quot;</span> <span class="o">+</span> <span class="s2">&quot;</span><span class="si">{0:04}</span><span class="s2">&quot;</span><span class="o">.</span><span class="n">format</span><span class="p">(</span><span class="nb">int</span><span class="p">(</span><span class="n">i</span><span class="p">))</span> <span class="o">+</span> <span class="s2">&quot;.npy&quot;</span>
+<span class="p">)</span>
+<span class="n">Obs</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">load</span><span class="p">(</span><span class="n">root_dir</span> <span class="o">+</span> <span class="s2">&quot;Obs/&quot;</span> <span class="o">+</span> <span class="s2">&quot;</span><span class="si">{0:04}</span><span class="s2">&quot;</span><span class="o">.</span><span class="n">format</span><span class="p">(</span><span class="nb">int</span><span class="p">(</span><span class="n">i</span><span class="p">))</span> <span class="o">+</span> <span class="s2">&quot;.npy&quot;</span><span class="p">)</span>
+
+<span class="n">results</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">load</span><span class="p">(</span><span class="s2">&quot;data/results/main.npy&quot;</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+</div>
+<div class="section" id="initial-conditions-figure-2">
+<h3>Initial conditions (Figure 2)<a class="headerlink" href="#initial-conditions-figure-2" title="Permalink to this headline">¶</a></h3>
+<p>The plot below shows the evolution of the simulated system. State variables of the considered system are <span class="math notranslate nohighlight">\(\eta\)</span>, the height deviation of the horizontal pressure surface from its mean height, and <span class="math notranslate nohighlight">\(w\)</span>, the associated velocity field. The considered temporal window <span class="math notranslate nohighlight">\(T\)</span> has a fixed size, in this case equal to 10.</p>
+<div class="cell tag_hide-input docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">T</span> <span class="o">=</span> <span class="mi">10</span>  <span class="c1"># Assimilation window size</span>
+
+<span class="n">X</span> <span class="o">=</span> <span class="n">torch</span><span class="o">.</span><span class="n">Tensor</span><span class="p">(</span><span class="n">initial_condition</span><span class="p">)</span>
+<span class="n">fig2</span> <span class="o">=</span> <span class="n">plt</span><span class="o">.</span><span class="n">figure</span><span class="p">(</span><span class="n">figsize</span><span class="o">=</span><span class="p">(</span><span class="mi">20</span><span class="p">,</span> <span class="mi">4</span><span class="p">))</span>
+<span class="k">for</span> <span class="n">t</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="n">T</span><span class="p">):</span>
+    <span class="n">plt</span><span class="o">.</span><span class="n">subplot</span><span class="p">(</span><span class="mi">2</span><span class="p">,</span> <span class="n">T</span><span class="p">,</span> <span class="n">t</span> <span class="o">+</span> <span class="mi">1</span><span class="p">)</span>
+    <span class="n">plt</span><span class="o">.</span><span class="n">title</span><span class="p">(</span><span class="s2">&quot;$\eta_{&quot;</span> <span class="o">+</span> <span class="nb">str</span><span class="p">(</span><span class="n">t</span><span class="p">)</span> <span class="o">+</span> <span class="s2">&quot;}$&quot;</span><span class="p">,</span> <span class="n">fontsize</span><span class="o">=</span><span class="mi">17</span><span class="p">)</span>
+    <span class="n">plt</span><span class="o">.</span><span class="n">yticks</span><span class="p">([])</span>
+    <span class="n">plt</span><span class="o">.</span><span class="n">xticks</span><span class="p">([])</span>
+
+    <span class="n">plt</span><span class="o">.</span><span class="n">imshow</span><span class="p">(</span><span class="n">X</span><span class="p">[</span><span class="mi">0</span><span class="p">,</span> <span class="p">:,</span> <span class="p">:])</span>
+    <span class="n">plt</span><span class="o">.</span><span class="n">subplot</span><span class="p">(</span><span class="mi">2</span><span class="p">,</span> <span class="n">T</span><span class="p">,</span> <span class="n">T</span> <span class="o">+</span> <span class="n">t</span> <span class="o">+</span> <span class="mi">1</span><span class="p">)</span>
+    <span class="n">utils</span><span class="o">.</span><span class="n">plot_w</span><span class="p">(</span><span class="n">X</span><span class="p">[</span><span class="mi">1</span><span class="p">,</span> <span class="p">:,</span> <span class="p">:],</span> <span class="n">X</span><span class="p">[</span><span class="mi">2</span><span class="p">,</span> <span class="p">:,</span> <span class="p">:],</span> <span class="n">quiver</span><span class="o">=</span><span class="kc">True</span><span class="p">,</span> <span class="n">title</span><span class="o">=</span><span class="s2">&quot;w_&quot;</span> <span class="o">+</span> <span class="nb">str</span><span class="p">(</span><span class="n">t</span><span class="p">),</span> <span class="n">q_scale</span><span class="o">=</span><span class="mf">2.5</span><span class="p">)</span>
+    <span class="n">plt</span><span class="o">.</span><span class="n">title</span><span class="p">(</span><span class="s2">&quot;$w_{&quot;</span> <span class="o">+</span> <span class="nb">str</span><span class="p">(</span><span class="n">t</span><span class="p">)</span> <span class="o">+</span> <span class="s2">&quot;}$&quot;</span><span class="p">,</span> <span class="n">fontsize</span><span class="o">=</span><span class="mi">17</span><span class="p">)</span>
+
+    <span class="n">X</span> <span class="o">=</span> <span class="n">dynamics_obj</span><span class="o">.</span><span class="n">forward</span><span class="p">(</span><span class="n">X</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<img alt="../../../_images/notebook_16_0.png" src="../../../_images/notebook_16_0.png" />
+</div>
+</div>
+</div>
+<div class="section" id="observations-with-noise-figure-3">
+<h3>Observations with noise (Figure 3)<a class="headerlink" href="#observations-with-noise-figure-3" title="Permalink to this headline">¶</a></h3>
+<p>The plot below shows the observations extracted from the simulated system and infused with noise.</p>
+<div class="cell tag_hide-input docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">subsample</span> <span class="o">=</span> <span class="mi">3</span>  <span class="c1"># Subsampling frequency</span>
+
+<span class="n">fig3</span> <span class="o">=</span> <span class="n">plt</span><span class="o">.</span><span class="n">figure</span><span class="p">(</span><span class="n">figsize</span><span class="o">=</span><span class="p">(</span><span class="mi">20</span><span class="p">,</span> <span class="mi">4</span><span class="p">))</span>
+
+<span class="k">for</span> <span class="n">t</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="n">T</span><span class="p">):</span>
+    <span class="n">plt</span><span class="o">.</span><span class="n">subplot</span><span class="p">(</span><span class="mi">1</span><span class="p">,</span> <span class="n">T</span><span class="p">,</span> <span class="n">t</span> <span class="o">+</span> <span class="mi">1</span><span class="p">)</span>
+    <span class="n">plt</span><span class="o">.</span><span class="n">title</span><span class="p">(</span><span class="s2">&quot;$Y_{&quot;</span> <span class="o">+</span> <span class="nb">str</span><span class="p">(</span><span class="n">t</span><span class="p">)</span> <span class="o">+</span> <span class="s2">&quot;}$&quot;</span><span class="p">,</span> <span class="n">fontsize</span><span class="o">=</span><span class="mi">17</span><span class="p">)</span>
+    <span class="k">if</span> <span class="n">t</span> <span class="o">%</span> <span class="n">subsample</span> <span class="o">==</span> <span class="mi">0</span><span class="p">:</span>
+        <span class="n">plt</span><span class="o">.</span><span class="n">imshow</span><span class="p">(</span><span class="n">Obs</span><span class="p">[</span><span class="n">t</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="p">:])</span>
+    <span class="k">else</span><span class="p">:</span>
+        <span class="n">plt</span><span class="o">.</span><span class="n">imshow</span><span class="p">(</span><span class="nb">float</span><span class="p">(</span><span class="n">np</span><span class="o">.</span><span class="n">nan</span><span class="p">)</span> <span class="o">*</span> <span class="n">Obs</span><span class="p">[</span><span class="n">t</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="p">:])</span>
+    <span class="n">plt</span><span class="o">.</span><span class="n">yticks</span><span class="p">([])</span>
+    <span class="n">plt</span><span class="o">.</span><span class="n">xticks</span><span class="p">([])</span>
+
+<span class="n">plt</span><span class="o">.</span><span class="n">show</span><span class="p">()</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<img alt="../../../_images/notebook_18_01.png" src="../../../_images/notebook_18_01.png" />
+</div>
+</div>
+</div>
+<div class="section" id="results-figure-4">
+<h3>Results (Figure 4)<a class="headerlink" href="#results-figure-4" title="Permalink to this headline">¶</a></h3>
+<p>The following plots represent the dynamical state of the system through the different assimilation approaches and the observed state. It is a reconstruction of <a class="reference external" href="https://static.cambridge.org/binary/version/id/urn:cambridge.org:id:binary:20230110163855547-0883:S2634460222000310:S2634460222000310_fig4.png">Figure 4</a> in the paper.</p>
+<div class="cell tag_hide-input docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">save_dir</span> <span class="o">=</span> <span class="s2">&quot;data/estimated/&quot;</span>
+
+<span class="n">w0_truth</span> <span class="o">=</span> <span class="n">initial_condition</span><span class="p">[</span><span class="mi">1</span><span class="p">:,</span> <span class="p">:,</span> <span class="p">:]</span>
+
+<span class="n">w0_4dvar</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">load</span><span class="p">(</span><span class="n">save_dir</span> <span class="o">+</span> <span class="s2">&quot;4DVar/&quot;</span> <span class="o">+</span> <span class="s2">&quot;</span><span class="si">{0:04}</span><span class="s2">&quot;</span><span class="o">.</span><span class="n">format</span><span class="p">(</span><span class="nb">int</span><span class="p">(</span><span class="n">i</span><span class="p">))</span> <span class="o">+</span> <span class="s2">&quot;.npy&quot;</span><span class="p">)</span>
+<span class="n">w0_4dvar_reg</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">load</span><span class="p">(</span><span class="n">save_dir</span> <span class="o">+</span> <span class="s2">&quot;4DVar_reg/&quot;</span> <span class="o">+</span> <span class="s2">&quot;</span><span class="si">{0:04}</span><span class="s2">&quot;</span><span class="o">.</span><span class="n">format</span><span class="p">(</span><span class="nb">int</span><span class="p">(</span><span class="n">i</span><span class="p">))</span> <span class="o">+</span> <span class="s2">&quot;.npy&quot;</span><span class="p">)</span>
+<span class="n">w0_4dvar_deep</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">load</span><span class="p">(</span><span class="n">save_dir</span> <span class="o">+</span> <span class="s2">&quot;4DVar_deep/&quot;</span> <span class="o">+</span> <span class="s2">&quot;</span><span class="si">{0:04}</span><span class="s2">&quot;</span><span class="o">.</span><span class="n">format</span><span class="p">(</span><span class="nb">int</span><span class="p">(</span><span class="n">i</span><span class="p">))</span> <span class="o">+</span> <span class="s2">&quot;.npy&quot;</span><span class="p">)</span>
+
+<span class="n">u0_truth</span> <span class="o">=</span> <span class="n">torch</span><span class="o">.</span><span class="n">Tensor</span><span class="p">(</span><span class="n">w0_truth</span><span class="p">[</span><span class="mi">0</span><span class="p">,</span> <span class="p">:,</span> <span class="p">:])</span>
+<span class="n">v0_truth</span> <span class="o">=</span> <span class="n">torch</span><span class="o">.</span><span class="n">Tensor</span><span class="p">(</span><span class="n">w0_truth</span><span class="p">[</span><span class="mi">1</span><span class="p">,</span> <span class="p">:,</span> <span class="p">:])</span>
+
+<span class="n">u0_4dvar</span> <span class="o">=</span> <span class="n">torch</span><span class="o">.</span><span class="n">Tensor</span><span class="p">(</span><span class="n">w0_4dvar</span><span class="p">[</span><span class="mi">0</span><span class="p">,</span> <span class="p">:,</span> <span class="p">:])</span>
+<span class="n">v0_4dvar</span> <span class="o">=</span> <span class="n">torch</span><span class="o">.</span><span class="n">Tensor</span><span class="p">(</span><span class="n">w0_4dvar</span><span class="p">[</span><span class="mi">1</span><span class="p">,</span> <span class="p">:,</span> <span class="p">:])</span>
+
+<span class="n">u0_4dvar_reg</span> <span class="o">=</span> <span class="n">torch</span><span class="o">.</span><span class="n">Tensor</span><span class="p">(</span><span class="n">w0_4dvar_reg</span><span class="p">[</span><span class="mi">0</span><span class="p">,</span> <span class="p">:,</span> <span class="p">:])</span>
+<span class="n">v0_4dvar_reg</span> <span class="o">=</span> <span class="n">torch</span><span class="o">.</span><span class="n">Tensor</span><span class="p">(</span><span class="n">w0_4dvar_reg</span><span class="p">[</span><span class="mi">1</span><span class="p">,</span> <span class="p">:,</span> <span class="p">:])</span>
+
+<span class="n">u0_4dvar_deep</span> <span class="o">=</span> <span class="n">torch</span><span class="o">.</span><span class="n">Tensor</span><span class="p">(</span><span class="n">w0_4dvar_deep</span><span class="p">[</span><span class="mi">0</span><span class="p">,</span> <span class="p">:,</span> <span class="p">:])</span>
+<span class="n">v0_4dvar_deep</span> <span class="o">=</span> <span class="n">torch</span><span class="o">.</span><span class="n">Tensor</span><span class="p">(</span><span class="n">w0_4dvar_deep</span><span class="p">[</span><span class="mi">1</span><span class="p">,</span> <span class="p">:,</span> <span class="p">:])</span>
+
+<span class="n">normalization</span> <span class="o">=</span> <span class="kc">True</span>
+<span class="n">quiver</span> <span class="o">=</span> <span class="kc">True</span>
+<span class="n">q_alpha</span> <span class="o">=</span> <span class="mf">0.5</span>
+<span class="n">q_scale</span> <span class="o">=</span> <span class="mf">2.5</span>
+<span class="n">sub</span> <span class="o">=</span> <span class="mi">4</span>
+
+<span class="n">fig4</span> <span class="o">=</span> <span class="n">plt</span><span class="o">.</span><span class="n">figure</span><span class="p">(</span><span class="n">figsize</span><span class="o">=</span><span class="p">(</span><span class="mi">20</span><span class="p">,</span> <span class="mi">10</span><span class="p">))</span>
+
+<span class="n">plt</span><span class="o">.</span><span class="n">subplot</span><span class="p">(</span><span class="mi">1</span><span class="p">,</span> <span class="mi">4</span><span class="p">,</span> <span class="mi">1</span><span class="p">)</span>
+<span class="n">utils</span><span class="o">.</span><span class="n">plot_w</span><span class="p">(</span>
+    <span class="n">u0_4dvar</span><span class="p">,</span>
+    <span class="n">v0_4dvar</span><span class="p">,</span>
+    <span class="n">normalization</span><span class="o">=</span><span class="n">normalization</span><span class="p">,</span>
+    <span class="n">quiver</span><span class="o">=</span><span class="n">quiver</span><span class="p">,</span>
+    <span class="n">q_alpha</span><span class="o">=</span><span class="n">q_alpha</span><span class="p">,</span>
+    <span class="n">q_scale</span><span class="o">=</span><span class="n">q_scale</span><span class="p">,</span>
+    <span class="n">title</span><span class="o">=</span><span class="s2">&quot;4D-Var&quot;</span><span class="p">,</span>
+<span class="p">)</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">title</span><span class="p">(</span><span class="s2">&quot;4D-Var&quot;</span><span class="p">,</span> <span class="n">fontsize</span><span class="o">=</span><span class="mi">20</span><span class="p">)</span>
+
+<span class="n">plt</span><span class="o">.</span><span class="n">subplot</span><span class="p">(</span><span class="mi">1</span><span class="p">,</span> <span class="mi">4</span><span class="p">,</span> <span class="mi">2</span><span class="p">)</span>
+<span class="n">utils</span><span class="o">.</span><span class="n">plot_w</span><span class="p">(</span>
+    <span class="n">u0_4dvar_deep</span><span class="p">,</span>
+    <span class="n">v0_4dvar_deep</span><span class="p">,</span>
+    <span class="n">normalization</span><span class="o">=</span><span class="n">normalization</span><span class="p">,</span>
+    <span class="n">quiver</span><span class="o">=</span><span class="n">quiver</span><span class="p">,</span>
+    <span class="n">q_alpha</span><span class="o">=</span><span class="n">q_alpha</span><span class="p">,</span>
+    <span class="n">q_scale</span><span class="o">=</span><span class="n">q_scale</span><span class="p">,</span>
+    <span class="n">title</span><span class="o">=</span><span class="s2">&quot;Deep prior 4D-Var&quot;</span><span class="p">,</span>
+<span class="p">)</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">title</span><span class="p">(</span><span class="s2">&quot;Deep prior 4D-Var&quot;</span><span class="p">,</span> <span class="n">fontsize</span><span class="o">=</span><span class="mi">20</span><span class="p">)</span>
+
+<span class="n">plt</span><span class="o">.</span><span class="n">subplot</span><span class="p">(</span><span class="mi">1</span><span class="p">,</span> <span class="mi">4</span><span class="p">,</span> <span class="mi">3</span><span class="p">)</span>
+<span class="n">utils</span><span class="o">.</span><span class="n">plot_w</span><span class="p">(</span>
+    <span class="n">u0_4dvar_reg</span><span class="p">,</span>
+    <span class="n">v0_4dvar_reg</span><span class="p">,</span>
+    <span class="n">normalization</span><span class="o">=</span><span class="n">normalization</span><span class="p">,</span>
+    <span class="n">quiver</span><span class="o">=</span><span class="n">quiver</span><span class="p">,</span>
+    <span class="n">q_alpha</span><span class="o">=</span><span class="n">q_alpha</span><span class="p">,</span>
+    <span class="n">q_scale</span><span class="o">=</span><span class="n">q_scale</span><span class="p">,</span>
+    <span class="n">title</span><span class="o">=</span><span class="s2">&quot;4D-Var + Thikhonov&quot;</span><span class="p">,</span>
+<span class="p">)</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">title</span><span class="p">(</span><span class="s1">&#39;&quot;Thikhonov&quot; 4D-Var &#39;</span><span class="p">,</span> <span class="n">fontsize</span><span class="o">=</span><span class="mi">20</span><span class="p">)</span>
+
+<span class="n">plt</span><span class="o">.</span><span class="n">subplot</span><span class="p">(</span><span class="mi">1</span><span class="p">,</span> <span class="mi">4</span><span class="p">,</span> <span class="mi">4</span><span class="p">)</span>
+<span class="n">utils</span><span class="o">.</span><span class="n">plot_w</span><span class="p">(</span>
+    <span class="n">u0_truth</span><span class="p">,</span>
+    <span class="n">v0_truth</span><span class="p">,</span>
+    <span class="n">normalization</span><span class="o">=</span><span class="n">normalization</span><span class="p">,</span>
+    <span class="n">quiver</span><span class="o">=</span><span class="n">quiver</span><span class="p">,</span>
+    <span class="n">q_alpha</span><span class="o">=</span><span class="n">q_alpha</span><span class="p">,</span>
+    <span class="n">q_scale</span><span class="o">=</span><span class="n">q_scale</span><span class="p">,</span>
+    <span class="n">title</span><span class="o">=</span><span class="s2">&quot;&quot;</span><span class="p">,</span>
+<span class="p">)</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">title</span><span class="p">(</span><span class="s2">&quot;Ground truth&quot;</span><span class="p">,</span> <span class="n">fontsize</span><span class="o">=</span><span class="mi">20</span><span class="p">)</span>
+
+<span class="n">plt</span><span class="o">.</span><span class="n">show</span><span class="p">()</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<img alt="../../../_images/notebook_20_01.png" src="../../../_images/notebook_20_01.png" />
+</div>
+</div>
+</div>
+<div class="section" id="metrics-figure-5">
+<h3>Metrics (Figure 5)<a class="headerlink" href="#metrics-figure-5" title="Permalink to this headline">¶</a></h3>
+<p>The following plots compare the different algorithms with respect to the five metrics as mentioned in the paper:</p>
+<ul class="simple">
+<li><p>Endpoint error</p></li>
+<li><p>Angular error</p></li>
+<li><p>Smoothness statistics</p></li>
+</ul>
+<div class="cell tag_hide-input docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">bins</span> <span class="o">=</span> <span class="mi">10</span>
+<span class="n">figextra</span> <span class="o">=</span> <span class="n">plt</span><span class="o">.</span><span class="n">figure</span><span class="p">(</span><span class="n">figsize</span><span class="o">=</span><span class="p">(</span><span class="mi">20</span><span class="p">,</span> <span class="mi">5</span><span class="p">))</span>
+
+<span class="n">titles</span> <span class="o">=</span> <span class="p">[</span><span class="s2">&quot;Endpoint error&quot;</span><span class="p">,</span> <span class="s2">&quot;Angular error&quot;</span><span class="p">]</span>
+<span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="mi">0</span><span class="p">,</span> <span class="mi">2</span><span class="p">):</span>
+    <span class="n">plt</span><span class="o">.</span><span class="n">subplot</span><span class="p">(</span><span class="mi">1</span><span class="p">,</span> <span class="mi">2</span><span class="p">,</span> <span class="n">i</span> <span class="o">+</span> <span class="mi">1</span><span class="p">)</span>
+
+    <span class="n">plt</span><span class="o">.</span><span class="n">hist</span><span class="p">(</span>
+        <span class="p">[</span><span class="n">results</span><span class="p">[:,</span> <span class="n">j</span><span class="p">,</span> <span class="n">i</span><span class="p">]</span> <span class="k">for</span> <span class="n">j</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="mi">1</span><span class="p">,</span> <span class="mi">4</span><span class="p">)],</span>
+        <span class="n">bins</span><span class="p">,</span>
+        <span class="n">label</span><span class="o">=</span><span class="p">[</span><span class="s2">&quot;4D-Var&quot;</span><span class="p">,</span> <span class="s1">&#39;&quot;Thikonov&quot; 4D-Var&#39;</span><span class="p">,</span> <span class="s2">&quot;Deep prior 4D-Var&quot;</span><span class="p">],</span>
+    <span class="p">)</span>
+    <span class="k">if</span> <span class="n">i</span> <span class="o">==</span> <span class="mi">1</span><span class="p">:</span>
+        <span class="n">plt</span><span class="o">.</span><span class="n">legend</span><span class="p">(</span><span class="n">loc</span><span class="o">=</span><span class="s2">&quot;upper right&quot;</span><span class="p">)</span>
+    <span class="n">plt</span><span class="o">.</span><span class="n">title</span><span class="p">(</span><span class="n">titles</span><span class="p">[</span><span class="n">i</span> <span class="o">-</span> <span class="mi">1</span><span class="p">],</span> <span class="n">fontsize</span><span class="o">=</span><span class="mi">20</span><span class="p">)</span>
+    <span class="n">plt</span><span class="o">.</span><span class="n">grid</span><span class="p">()</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">show</span><span class="p">()</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<img alt="../../../_images/notebook_22_01.png" src="../../../_images/notebook_22_01.png" />
+</div>
+</div>
+<div class="cell tag_hide-input docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">bins</span> <span class="o">=</span> <span class="mi">15</span>
+<span class="n">fig5</span> <span class="o">=</span> <span class="n">plt</span><span class="o">.</span><span class="n">figure</span><span class="p">(</span><span class="n">figsize</span><span class="o">=</span><span class="p">(</span><span class="mi">20</span><span class="p">,</span> <span class="mi">5</span><span class="p">))</span>
+
+<span class="n">titles</span> <span class="o">=</span> <span class="p">[</span>
+    <span class="sa">r</span><span class="s2">&quot;$\parallel \nabla\mathbf</span><span class="si">{w}</span><span class="s2">_0\parallel_2$&quot;</span><span class="p">,</span>
+    <span class="sa">r</span><span class="s2">&quot;$\parallel \nabla . \mathbf</span><span class="si">{w}</span><span class="s2">_0\parallel_2$&quot;</span><span class="p">,</span>
+    <span class="s2">&quot;$\parallel\Delta \mathbf</span><span class="si">{w}</span><span class="s2">_0\parallel_2$&quot;</span><span class="p">,</span>
+<span class="p">]</span>
+<span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="mi">2</span><span class="p">,</span> <span class="n">results</span><span class="o">.</span><span class="n">shape</span><span class="p">[</span><span class="mi">2</span><span class="p">]):</span>
+    <span class="n">plt</span><span class="o">.</span><span class="n">subplot</span><span class="p">(</span><span class="mi">1</span><span class="p">,</span> <span class="mi">3</span><span class="p">,</span> <span class="n">i</span> <span class="o">-</span> <span class="mi">1</span><span class="p">)</span>
+
+    <span class="n">plt</span><span class="o">.</span><span class="n">hist</span><span class="p">(</span>
+        <span class="p">[</span><span class="n">results</span><span class="p">[:,</span> <span class="n">j</span><span class="p">,</span> <span class="n">i</span><span class="p">]</span> <span class="k">for</span> <span class="n">j</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="mi">4</span><span class="p">)],</span>
+        <span class="n">bins</span><span class="p">,</span>
+        <span class="n">label</span><span class="o">=</span><span class="p">[</span><span class="s2">&quot;Ground truth&quot;</span><span class="p">,</span> <span class="s2">&quot;4D-Var&quot;</span><span class="p">,</span> <span class="s1">&#39;&quot;Thikonov&quot; 4D-Var&#39;</span><span class="p">,</span> <span class="s2">&quot;Deep prior 4D-Var&quot;</span><span class="p">],</span>
+    <span class="p">)</span>
+    <span class="k">if</span> <span class="n">i</span> <span class="o">==</span> <span class="mi">4</span><span class="p">:</span>
+        <span class="n">plt</span><span class="o">.</span><span class="n">legend</span><span class="p">(</span><span class="n">loc</span><span class="o">=</span><span class="s2">&quot;upper right&quot;</span><span class="p">)</span>
+    <span class="n">plt</span><span class="o">.</span><span class="n">title</span><span class="p">(</span><span class="n">titles</span><span class="p">[</span><span class="n">i</span> <span class="o">-</span> <span class="mi">2</span><span class="p">],</span> <span class="n">fontsize</span><span class="o">=</span><span class="mi">20</span><span class="p">)</span>
+    <span class="n">plt</span><span class="o">.</span><span class="n">grid</span><span class="p">()</span>
+
+<span class="n">plt</span><span class="o">.</span><span class="n">show</span><span class="p">()</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<img alt="../../../_images/notebook_23_0.png" src="../../../_images/notebook_23_0.png" />
+</div>
+</div>
+<p>The following table is a direct comparison between the metrics. They are within the limits of the error rates as mentioned in <a class="reference external" href="https://static.cambridge.org/binary/version/id/urn:cambridge.org:id:binary:20230110163855547-0883:S2634460222000310:S2634460222000310_tab1.png">Table 1</a>.</p>
+<div class="cell tag_hide-input docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">table_format</span> <span class="o">=</span> <span class="s2">&quot;grid&quot;</span>
+<span class="n">table</span> <span class="o">=</span> <span class="p">[</span>
+    <span class="p">[</span><span class="s2">&quot;Metrics&quot;</span><span class="p">,</span> <span class="s2">&quot;Ground truth&quot;</span><span class="p">,</span> <span class="s2">&quot;4D-Var&quot;</span><span class="p">,</span> <span class="s2">&quot;&#39;Thikonov&#39; 4D-Var&quot;</span><span class="p">,</span> <span class="s2">&quot;Deep prior 4D-Var&quot;</span><span class="p">],</span>
+    <span class="p">[</span>
+        <span class="s2">&quot;EPE&quot;</span><span class="p">,</span>
+        <span class="n">results</span><span class="o">.</span><span class="n">mean</span><span class="p">(</span><span class="n">axis</span><span class="o">=</span><span class="mi">0</span><span class="p">)[</span><span class="mi">0</span><span class="p">,</span> <span class="mi">0</span><span class="p">],</span>
+        <span class="n">results</span><span class="o">.</span><span class="n">mean</span><span class="p">(</span><span class="n">axis</span><span class="o">=</span><span class="mi">0</span><span class="p">)[</span><span class="mi">1</span><span class="p">,</span> <span class="mi">0</span><span class="p">],</span>
+        <span class="n">results</span><span class="o">.</span><span class="n">mean</span><span class="p">(</span><span class="n">axis</span><span class="o">=</span><span class="mi">0</span><span class="p">)[</span><span class="mi">2</span><span class="p">,</span> <span class="mi">0</span><span class="p">],</span>
+        <span class="n">results</span><span class="o">.</span><span class="n">mean</span><span class="p">(</span><span class="n">axis</span><span class="o">=</span><span class="mi">0</span><span class="p">)[</span><span class="mi">3</span><span class="p">,</span> <span class="mi">0</span><span class="p">],</span>
+    <span class="p">],</span>
+    <span class="p">[</span>
+        <span class="s2">&quot;Angular error&quot;</span><span class="p">,</span>
+        <span class="n">results</span><span class="o">.</span><span class="n">mean</span><span class="p">(</span><span class="n">axis</span><span class="o">=</span><span class="mi">0</span><span class="p">)[</span><span class="mi">0</span><span class="p">,</span> <span class="mi">1</span><span class="p">],</span>
+        <span class="n">results</span><span class="o">.</span><span class="n">mean</span><span class="p">(</span><span class="n">axis</span><span class="o">=</span><span class="mi">0</span><span class="p">)[</span><span class="mi">1</span><span class="p">,</span> <span class="mi">1</span><span class="p">],</span>
+        <span class="n">results</span><span class="o">.</span><span class="n">mean</span><span class="p">(</span><span class="n">axis</span><span class="o">=</span><span class="mi">0</span><span class="p">)[</span><span class="mi">2</span><span class="p">,</span> <span class="mi">1</span><span class="p">],</span>
+        <span class="n">results</span><span class="o">.</span><span class="n">mean</span><span class="p">(</span><span class="n">axis</span><span class="o">=</span><span class="mi">0</span><span class="p">)[</span><span class="mi">3</span><span class="p">,</span> <span class="mi">1</span><span class="p">],</span>
+    <span class="p">],</span>
+    <span class="p">[</span>
+        <span class="s2">&quot;||grad||&quot;</span><span class="p">,</span>
+        <span class="n">results</span><span class="o">.</span><span class="n">mean</span><span class="p">(</span><span class="n">axis</span><span class="o">=</span><span class="mi">0</span><span class="p">)[</span><span class="mi">0</span><span class="p">,</span> <span class="mi">2</span><span class="p">],</span>
+        <span class="n">results</span><span class="o">.</span><span class="n">mean</span><span class="p">(</span><span class="n">axis</span><span class="o">=</span><span class="mi">0</span><span class="p">)[</span><span class="mi">1</span><span class="p">,</span> <span class="mi">2</span><span class="p">],</span>
+        <span class="n">results</span><span class="o">.</span><span class="n">mean</span><span class="p">(</span><span class="n">axis</span><span class="o">=</span><span class="mi">0</span><span class="p">)[</span><span class="mi">2</span><span class="p">,</span> <span class="mi">2</span><span class="p">],</span>
+        <span class="n">results</span><span class="o">.</span><span class="n">mean</span><span class="p">(</span><span class="n">axis</span><span class="o">=</span><span class="mi">0</span><span class="p">)[</span><span class="mi">3</span><span class="p">,</span> <span class="mi">2</span><span class="p">],</span>
+    <span class="p">],</span>
+    <span class="p">[</span>
+        <span class="s2">&quot;||div||&quot;</span><span class="p">,</span>
+        <span class="n">results</span><span class="o">.</span><span class="n">mean</span><span class="p">(</span><span class="n">axis</span><span class="o">=</span><span class="mi">0</span><span class="p">)[</span><span class="mi">0</span><span class="p">,</span> <span class="mi">3</span><span class="p">],</span>
+        <span class="n">results</span><span class="o">.</span><span class="n">mean</span><span class="p">(</span><span class="n">axis</span><span class="o">=</span><span class="mi">0</span><span class="p">)[</span><span class="mi">1</span><span class="p">,</span> <span class="mi">3</span><span class="p">],</span>
+        <span class="n">results</span><span class="o">.</span><span class="n">mean</span><span class="p">(</span><span class="n">axis</span><span class="o">=</span><span class="mi">0</span><span class="p">)[</span><span class="mi">2</span><span class="p">,</span> <span class="mi">3</span><span class="p">],</span>
+        <span class="n">results</span><span class="o">.</span><span class="n">mean</span><span class="p">(</span><span class="n">axis</span><span class="o">=</span><span class="mi">0</span><span class="p">)[</span><span class="mi">3</span><span class="p">,</span> <span class="mi">3</span><span class="p">],</span>
+    <span class="p">],</span>
+    <span class="p">[</span>
+        <span class="s2">&quot;||lap||&quot;</span><span class="p">,</span>
+        <span class="n">results</span><span class="o">.</span><span class="n">mean</span><span class="p">(</span><span class="n">axis</span><span class="o">=</span><span class="mi">0</span><span class="p">)[</span><span class="mi">0</span><span class="p">,</span> <span class="mi">4</span><span class="p">],</span>
+        <span class="n">results</span><span class="o">.</span><span class="n">mean</span><span class="p">(</span><span class="n">axis</span><span class="o">=</span><span class="mi">0</span><span class="p">)[</span><span class="mi">1</span><span class="p">,</span> <span class="mi">4</span><span class="p">],</span>
+        <span class="n">results</span><span class="o">.</span><span class="n">mean</span><span class="p">(</span><span class="n">axis</span><span class="o">=</span><span class="mi">0</span><span class="p">)[</span><span class="mi">2</span><span class="p">,</span> <span class="mi">4</span><span class="p">],</span>
+        <span class="n">results</span><span class="o">.</span><span class="n">mean</span><span class="p">(</span><span class="n">axis</span><span class="o">=</span><span class="mi">0</span><span class="p">)[</span><span class="mi">3</span><span class="p">,</span> <span class="mi">4</span><span class="p">],</span>
+    <span class="p">],</span>
+<span class="p">]</span>
+
+
+<span class="n">formatted_table</span> <span class="o">=</span> <span class="n">tabulate</span><span class="o">.</span><span class="n">tabulate</span><span class="p">(</span><span class="n">table</span><span class="p">,</span> <span class="n">headers</span><span class="o">=</span><span class="s2">&quot;firstrow&quot;</span><span class="p">,</span> <span class="n">tablefmt</span><span class="o">=</span><span class="n">table_format</span><span class="p">)</span>
+
+<span class="nb">print</span><span class="p">(</span><span class="n">formatted_table</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>+---------------+----------------+------------+---------------------+---------------------+
+| Metrics       |   Ground truth |     4D-Var |   &#39;Thikonov&#39; 4D-Var |   Deep prior 4D-Var |
++===============+================+============+=====================+=====================+
+| EPE           |     0          |  0.0417896 |            0.015174 |           0.0443217 |
++---------------+----------------+------------+---------------------+---------------------+
+| Angular error |     0.00542219 | 28.3352    |            9.68662  |          27.0093    |
++---------------+----------------+------------+---------------------+---------------------+
+| ||grad||      |     1.64585    |  6.05524   |            1.97998  |           1.92632   |
++---------------+----------------+------------+---------------------+---------------------+
+| ||div||       |     1.60069    |  5.25963   |            1.79939  |           1.62848   |
++---------------+----------------+------------+---------------------+---------------------+
+| ||lap||       |     0.687973   |  9.76577   |            1.95572  |           1.01602   |
++---------------+----------------+------------+---------------------+---------------------+
+</pre></div>
+</div>
+</div>
+</div>
+</div>
+</div>
+<div class="section" id="challenges-and-improvements">
+<h2>Challenges and improvements<a class="headerlink" href="#challenges-and-improvements" title="Permalink to this headline">¶</a></h2>
+<ul class="simple">
+<li><p>While most cloud-based notebook servers come with pre-installed packages, it will be helpful to include an environment file in the codebase to aid local runs.</p></li>
+<li><p>The codebase is modularized and easy to understand but a brief outline in the Readme file would be useful.</p></li>
+</ul>
+</div>
+<div class="section" id="summary">
+<h2>Summary<a class="headerlink" href="#summary" title="Permalink to this headline">¶</a></h2>
+<ul class="simple">
+<li><p>The results in the paper “Deep prior in variational assimilation to estimate an ocean circulation without explicit regularization” can be correctly reproduced with the help of the materials provided with the paper.</p></li>
+<li><p>This paper encourages the use of deep learning techniques in traditional inverse problems which are a basis for many geoscience modelling experiments.</p></li>
+<li><p>PyTorch is used for running the assimilation models and NumPy is used to store the results.</p></li>
+<li><p>Matplotlib is used for all visualizations.</p></li>
+<li><p>Possible improvements include add an environment file and a comprehensive README file to support the modelling codebase.</p></li>
+</ul>
+</div>
+<div class="section" id="citing-this-notebook">
+<h2>Citing this Notebook<a class="headerlink" href="#citing-this-notebook" title="Permalink to this headline">¶</a></h2>
+<p>Please see <a class="reference external" href="https://github.com/eds-book-gallery/39d9c177-11da-41b2-9b64-63f4c1c834b3/blob/main/CITATION.cff">CITATION.cff</a> for the full citation information. The citation file can be exported to APA or BibTex formats (learn more <a class="reference external" href="https://docs.github.com/en/repositories/managing-your-repositorys-settings-and-features/customizing-your-repository/about-citation-files">here</a>).</p>
+</div>
+<div class="section" id="additional-information">
+<h2>Additional information<a class="headerlink" href="#additional-information" title="Permalink to this headline">¶</a></h2>
+<p><strong>Dataset</strong>: All data are generated at runtime.</p>
+<p><strong>License</strong>: The code in this notebook is licensed under the MIT License. The Environmental Data Science book is licensed under the Creative Commons by Attribution 4.0 license. See further details <a class="reference external" href="https://github.com/alan-turing-institute/environmental-ds-book/blob/master/LICENSE.md">here</a>.</p>
+<p><strong>Contact</strong>: If you have any suggestion or report an issue with this notebook, feel free to <a class="reference external" href="https://github.com/alan-turing-institute/environmental-ds-book/issues/new/choose">create an issue</a> or send a direct message to <a class="reference external" href="mailto:environmental&#46;ds&#46;book&#37;&#52;&#48;gmail&#46;com">environmental<span>&#46;</span>ds<span>&#46;</span>book<span>&#64;</span>gmail<span>&#46;</span>com</a>.</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="kn">from</span> <span class="nn">datetime</span> <span class="kn">import</span> <span class="n">date</span>
+
+<span class="nb">print</span><span class="p">(</span><span class="s1">&#39;Notebook repository version: v1.0.0&#39;</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s1">&#39;Last tested: </span><span class="si">{</span><span class="n">date</span><span class="o">.</span><span class="n">today</span><span class="p">()</span><span class="si">}</span><span class="s1">&#39;</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Notebook repository version: v1.0.0
+Last tested: 2023-09-13
+</pre></div>
+</div>
+</div>
+</div>
+</div>
+</div>
+
+    <script type="text/x-thebe-config">
+    {
+        requestKernel: true,
+        binderOptions: {
+            repo: "binder-examples/jupyter-stacks-datascience",
+            ref: "master",
+        },
+        codeMirrorConfig: {
+            theme: "abcdef",
+            mode: "python"
+        },
+        kernelOptions: {
+            kernelName: "python3",
+            path: "./notebooks/gallery/39d9c177-11da-41b2-9b64-63f4c1c834b3"
+        },
+        predefinedOutput: true
+    }
+    </script>
+    <script>kernelName = 'python3'</script>
+
+              </div>
+              
+            
+                <!-- Previous / next buttons -->
+<div class='prev-next-area'> 
+    <a class='left-prev' id="prev-link" href="../../gallery.html" title="previous page">
+        <i class="fas fa-angle-left"></i>
+        <div class="prev-next-info">
+            <p class="prev-next-subtitle">previous</p>
+            <p class="prev-next-title">Gallery</p>
+        </div>
+    </a>
+    <a class='right-next' id="next-link" href="../93463cac-471a-469d-ad52-0514fd9b67f2/notebook.html" title="next page">
+    <div class="prev-next-info">
+        <p class="prev-next-subtitle">next</p>
+        <p class="prev-next-title">Deep learning and variational inversion to quantify and attribute climate change (CIRC23)</p>
+    </div>
+    <i class="fas fa-angle-right"></i>
+    </a>
+</div>
+            
+        </div>
+    </div>
+    <footer class="footer">
+  <p>
+    
+      By EDS book Community. This site is powered by <a href="https://www.netlify.com/">Netlify</a>.<br/>
+    
+        &copy; Copyright 2021.<br/>
+  </p>
+</footer>
+</main>
+
+
+      </div>
+    </div>
+  
+  <script src="../../../_static/js/index.be7d3bbb2ef33a8344ce.js"></script>
+
+  </body>
+</html>
