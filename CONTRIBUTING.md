@@ -201,7 +201,7 @@ You can build and host the book website locally. The steps are:
 
 ## Representing _EDS book_
 
-We would LOVE people to give talks about the project or represent _The Turing Way_ in other ways!
+We would LOVE people to give talks about the project or represent _EDS book_ in other ways!
 We have created a [promotion pack](https://github.com/alan-turing-institute/environmental-ds-book/tree/master/communications/promotion-pack) for you to reuse.
 You will find useful details about the project, a list of frequently asked questions, slide decks, and contact details.
 
