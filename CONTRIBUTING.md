@@ -8,7 +8,7 @@ We want to ensure that every user and contributor feels welcome, included and su
 We hope that the information provided in this document will make it as easy as possible for you to get involved.
 
 We welcome all contributions to this project via GitHub issues and pull requests.
-Please follow these guidelines to make sure your contributions can be easily integrated into the projects.
+Please follow these guidelines to make sure your contributions can be easily integrated into the project.
 As you start contributing to _EDS book_, don't forget that your ideas are more important than perfect pull requests. :green_heart:
 
 If you have any questions that aren't discussed below, please let us know through one of the many ways to [get in touch](#get-in-touch).
@@ -97,8 +97,8 @@ There are 5 issues templates to choose from.:
 1. :bug: Bug Report ([preview here](https://github.com/alan-turing-institute/environmental-ds-book/issues/new?assignees=&labels=bug&projects=&template=bug-report.md&title=%5BBUG%5D)): With this template, create an issue report that can help others repair something that is currently broken.
 2. :black_nib: Documentation Improvement ([preview here](https://github.com/alan-turing-institute/environmental-ds-book/issues/new?assignees=&labels=documentation&projects=&template=documentation-request.md&title=%5BDOC%5D)): This issue is to help us improve the documentation in the book or notebook repositories hosted in the [eds-book-gallery](https://github.com/eds-book-gallery) organisation. Alternatively you can just open a pull request with the suggested improvement.
 3. :green_book: Notebook Idea ([preview here](https://github.com/alan-turing-institute/environmental-ds-book/issues/new?assignees=&labels=documentation&projects=&template=documentation-request.md&title=%5BDOC%5D)): Use this template for submitting a notebook idea. You can find further info of the scope of notebooks ideas within the [Publishing guidelines](book/publishing/guidelines.md).
-4. :mag: PRE-REVIEW ([preview here](https://github.com/alan-turing-institute/environmental-ds-book/issues/new?assignees=&labels=prereview&projects=&template=prereview-template.md&title=%5BPRE+REVIEW%5D)): Editors-in-chiefs use this template for open a [PRE-REVIEW issue](book/publishing/guidelines/guidelines-eic.md#pre-review).
-5. :eyes: REVIEW ([preview here](https://github.com/alan-turing-institute/environmental-ds-book/issues/new?assignees=&labels=review&projects=&template=review-template.md&title=%5BREVIEW%5D)): Editors-in-chiefs use this template for open a [REVIEW issue](book/publishing/guidelines/guidelines-eic.md#review).
+4. :mag: PRE-REVIEW ([preview here](https://github.com/alan-turing-institute/environmental-ds-book/issues/new?assignees=&labels=prereview&projects=&template=prereview-template.md&title=%5BPRE+REVIEW%5D)): Editors-in-chiefs use this template to open a [PRE-REVIEW issue](book/publishing/guidelines/guidelines-eic.md#pre-review).
+5. :eyes: REVIEW ([preview here](https://github.com/alan-turing-institute/environmental-ds-book/issues/new?assignees=&labels=review&projects=&template=review-template.md&title=%5BREVIEW%5D)): Editors-in-chiefs use this template to open a [REVIEW issue](book/publishing/guidelines/guidelines-eic.md#review).
 
 ## Making a change with a pull request
 
