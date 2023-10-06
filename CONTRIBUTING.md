@@ -8,7 +8,7 @@ We want to ensure that every user and contributor feels welcome, included and su
 We hope that the information provided in this document will make it as easy as possible for you to get involved.
 
 We welcome all contributions to this project via GitHub issues and pull requests.
-Please follow these guidelines to make sure your contributions can be easily integrated into the projects.
+Please follow these guidelines to make sure your contributions can be easily integrated into the project.
 As you start contributing to _EDS book_, don't forget that your ideas are more important than perfect pull requests. :green_heart:
 
 If you have any questions that aren't discussed below, please let us know through one of the many ways to [get in touch](#get-in-touch).
