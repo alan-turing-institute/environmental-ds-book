@@ -130,7 +130,10 @@
       "avatar_url": "https://avatars.githubusercontent.com/u/8168508?v=4",
       "profile": "http://www.mn.uio.no/geo/english/people/adm/annefou/",
       "contributions": [
-        "ideas"
+        "ideas",
+        "infra",
+        "maintenance",
+        "review"
       ]
     },
     {
@@ -160,6 +163,235 @@
         "content",
         "blog",
         "code"
+      ]
+    },
+    {
+      "login": "NHomer-Edi",
+      "name": "NHomer-Edi",
+      "avatar_url": "https://avatars.githubusercontent.com/u/73164641?v=4",
+      "profile": "https://github.com/NHomer-Edi",
+      "contributions": [
+        "content",
+        "review"
+      ]
+    },
+    {
+      "login": "edwardchalstrey1",
+      "name": "Ed Chalstrey",
+      "avatar_url": "https://avatars.githubusercontent.com/u/5486164?v=4",
+      "profile": "http://edchalstrey.com/",
+      "contributions": [
+        "ideas"
+      ]
+    },
+    {
+      "login": "nbarlowATI",
+      "name": "nbarlowATI",
+      "avatar_url": "https://avatars.githubusercontent.com/u/33832774?v=4",
+      "profile": "https://github.com/nbarlowATI",
+      "contributions": [
+        "review"
+      ]
+    },
+    {
+      "login": "aedebus",
+      "name": "Amandine Debus",
+      "avatar_url": "https://avatars.githubusercontent.com/u/92375762?v=4",
+      "profile": "https://github.com/aedebus",
+      "contributions": [
+        "review"
+      ]
+    },
+    {
+      "login": "jamesdamillington",
+      "name": "James Millington",
+      "avatar_url": "https://avatars.githubusercontent.com/u/5046372?v=4",
+      "profile": "https://landscapemodelling.net",
+      "contributions": [
+        "content",
+        "blog",
+        "code"
+      ]
+    },
+    {
+      "login": "malvikasharan",
+      "name": "Malvika Sharan",
+      "avatar_url": "https://avatars.githubusercontent.com/u/5370471?v=4",
+      "profile": "http://malvikasharan.github.io/",
+      "contributions": [
+        "ideas"
+      ]
+    },
+    {
+      "login": "EstherPlomp",
+      "name": "Esther Plomp",
+      "avatar_url": "https://avatars.githubusercontent.com/u/46314469?v=4",
+      "profile": "https://github.com/EstherPlomp",
+      "contributions": [
+        "review",
+        "ideas"
+      ]
+    },
+    {
+      "login": "aleesteele",
+      "name": "Anne Lee Steele",
+      "avatar_url": "https://avatars.githubusercontent.com/u/18509789?v=4",
+      "profile": "http://www.aleesteele.com",
+      "contributions": [
+        "ideas"
+      ]
+    },
+    {
+      "login": "ViktorDomazetoski",
+      "name": "Viktor Domazetoski",
+      "avatar_url": "https://avatars.githubusercontent.com/u/101590116?v=4",
+      "profile": "https://github.com/ViktorDomazetoski",
+      "contributions": [
+        "bug",
+        "blog",
+        "code"
+      ]
+    },
+    {
+      "login": "garimamalhotra",
+      "name": "garimamalhotra",
+      "avatar_url": "https://avatars.githubusercontent.com/u/7003802?v=4",
+      "profile": "https://github.com/garimamalhotra",
+      "contributions": [
+        "blog",
+        "code"
+      ]
+    },
+    {
+      "login": "jedpe",
+      "name": "Jorge Eduardo Peña Velasco",
+      "avatar_url": "https://avatars.githubusercontent.com/u/17885931?v=4",
+      "profile": "https://github.com/jedpe",
+      "contributions": [
+        "blog",
+        "code"
+      ]
+    },
+    {
+      "login": "dapivei",
+      "name": "Daniela Pinto Veizaga",
+      "avatar_url": "https://avatars.githubusercontent.com/u/30577740?v=4",
+      "profile": "https://gitlab.com/dapivei",
+      "contributions": [
+        "blog",
+        "code"
+      ]
+    },
+    {
+      "login": "oscarbau",
+      "name": "oscarbau",
+      "avatar_url": "https://avatars.githubusercontent.com/u/41731874?v=4",
+      "profile": "https://github.com/oscarbau",
+      "contributions": [
+        "review"
+      ]
+    },
+    {
+      "login": "RachelFurner",
+      "name": "RachelFurner",
+      "avatar_url": "https://avatars.githubusercontent.com/u/47982456?v=4",
+      "profile": "https://github.com/RachelFurner",
+      "contributions": [
+        "review"
+      ]
+    },
+    {
+      "login": "ricardobarroslourenco",
+      "name": "Ricardo Barros Lourenço",
+      "avatar_url": "https://avatars.githubusercontent.com/u/7102375?v=4",
+      "profile": "http://about.me/ricardobarroslourenco",
+      "contributions": [
+        "review"
+      ]
+    },
+    {
+      "login": "ancazugo",
+      "name": "Andrés Camilo Zúñiga-González",
+      "avatar_url": "https://avatars.githubusercontent.com/u/33363093?v=4",
+      "profile": "https://ancazugo.github.io",
+      "contributions": [
+        "blog",
+        "code"
+      ]
+    },
+    {
+      "login": "SkirOwen",
+      "name": "Owen Allemang",
+      "avatar_url": "https://avatars.githubusercontent.com/u/8680744?v=4",
+      "profile": "https://github.com/SkirOwen",
+      "contributions": [
+        "blog",
+        "code"
+      ]
+    },
+    {
+      "login": "asthanameghna",
+      "name": "Meghna Asthana",
+      "avatar_url": "https://avatars.githubusercontent.com/u/34877328?v=4",
+      "profile": "https://github.com/asthanameghna",
+      "contributions": [
+        "review"
+      ]
+    },
+    {
+      "login": "dbhatedin",
+      "name": "Devanjan Bhattacharya",
+      "avatar_url": "https://avatars.githubusercontent.com/u/66441551?v=4",
+      "profile": "https://sites.google.com/site/bhattacharyadevanjan/home",
+      "contributions": [
+        "review"
+      ]
+    },
+    {
+      "login": "Mukulikaa",
+      "name": "Mukulika",
+      "avatar_url": "https://avatars.githubusercontent.com/u/60316606?v=4",
+      "profile": "https://mukulikapahari.medium.com",
+      "contributions": [
+        "blog",
+        "code"
+      ]
+    },
+    {
+      "login": "Rutika-16",
+      "name": "RUTIKA",
+      "avatar_url": "https://avatars.githubusercontent.com/u/121792213?v=4",
+      "profile": "https://github.com/Rutika-16",
+      "contributions": [
+        "blog",
+        "code"
+      ]
+    },
+    {
+      "login": "tinaok",
+      "name": "Tina Odaka",
+      "avatar_url": "https://avatars.githubusercontent.com/u/46813815?v=4",
+      "profile": "https://github.com/tinaok",
+      "contributions": [
+        "review"
+      ]
+    },
+    {
+      "login": "crlna16",
+      "name": "Caroline Arnold",
+      "avatar_url": "https://avatars.githubusercontent.com/u/87019747?v=4",
+      "profile": "https://github.com/crlna16",
+      "contributions": [
+        "review"
+      ]
+    },
+    {
+      "login": "polpel",
+      "name": "Paolo Pelucchi",
+      "avatar_url": "https://avatars.githubusercontent.com/u/56694450?v=4",
+      "profile": "https://github.com/polpel",
+      "contributions": [
+        "review"
       ]
     }
   ],
