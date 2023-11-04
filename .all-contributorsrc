@@ -157,7 +157,9 @@
       "avatar_url": "https://avatars.githubusercontent.com/u/51698422?v=4",
       "profile": "https://github.com/timo0thy",
       "contributions": [
-        "content"
+        "content",
+        "blog",
+        "code"
       ]
     }
   ],
@@ -167,5 +169,7 @@
   "repoType": "github",
   "repoHost": "https://github.com",
   "skipCi": true,
-  "contributorsSortAlphabetically": true
+  "contributorsSortAlphabetically": true,
+  "commitType": "docs",
+  "commitConvention": "angular"
 }
