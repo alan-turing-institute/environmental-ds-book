@@ -57,7 +57,7 @@ There are many ways to get in touch with _EDS book_ team!
 
 ### Receiving Updates
 
-- [@eds_book](https://twitter.com/eds_book) on Twitter and [fosstodon.org/@EDSbook](https://fosstodon.org/@EDSbook) in Mastodon
+- [@eds_book](https://twitter.com/eds_book) on Twitter and [fosstodon.org/@eds_book](https://fosstodon.org/@eds_book) in Mastodon
     - Follow us for regular updates
 
 ### Coworking and Real-Time Collaboration
