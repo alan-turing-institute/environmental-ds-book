@@ -1,780 +1,511 @@
 
+
 <!DOCTYPE html>
 
-<html lang="en">
+
+<html lang="en" data-content_root="" >
+
   <head>
     <meta charset="utf-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="generator" content="Docutils 0.18.1: http://docutils.sourceforge.net/" />
+
     <title>Learning the underlying physics of a simulation model of the ocean’s temperature (CIRC23) &#8212; Environmental Data Science Book</title>
-    
-  <link href="../../../_static/css/theme.css" rel="stylesheet">
-  <link href="../../../_static/css/index.ff1ffe594081f20da1ef19478df9384b.css" rel="stylesheet">
+  
+  
+  
+  <script data-cfasync="false">
+    document.documentElement.dataset.mode = localStorage.getItem("mode") || "";
+    document.documentElement.dataset.theme = localStorage.getItem("theme") || "light";
+  </script>
+  
+  <!-- Loaded before other Sphinx assets -->
+  <link href="../../../_static/styles/theme.css?digest=8d27b9dea8ad943066ae" rel="stylesheet" />
+<link href="../../../_static/styles/bootstrap.css?digest=8d27b9dea8ad943066ae" rel="stylesheet" />
+<link href="../../../_static/styles/pydata-sphinx-theme.css?digest=8d27b9dea8ad943066ae" rel="stylesheet" />
 
-    
-  <link rel="stylesheet"
-    href="../../../_static/vendor/fontawesome/5.13.0/css/all.min.css">
-  <link rel="preload" as="font" type="font/woff2" crossorigin
-    href="../../../_static/vendor/fontawesome/5.13.0/webfonts/fa-solid-900.woff2">
-  <link rel="preload" as="font" type="font/woff2" crossorigin
-    href="../../../_static/vendor/fontawesome/5.13.0/webfonts/fa-brands-400.woff2">
+  
+  <link href="../../../_static/vendor/fontawesome/6.5.1/css/all.min.css?digest=8d27b9dea8ad943066ae" rel="stylesheet" />
+  <link rel="preload" as="font" type="font/woff2" crossorigin href="../../../_static/vendor/fontawesome/6.5.1/webfonts/fa-solid-900.woff2" />
+<link rel="preload" as="font" type="font/woff2" crossorigin href="../../../_static/vendor/fontawesome/6.5.1/webfonts/fa-brands-400.woff2" />
+<link rel="preload" as="font" type="font/woff2" crossorigin href="../../../_static/vendor/fontawesome/6.5.1/webfonts/fa-regular-400.woff2" />
 
-    
-      
-
-    
     <link rel="stylesheet" type="text/css" href="../../../_static/pygments.css" />
-    <link rel="stylesheet" type="text/css" href="../../../_static/sphinx-book-theme.css?digest=c3fdc42140077d1ad13ad2f1588a4309" />
+    <link rel="stylesheet" href="../../../_static/styles/sphinx-book-theme.css?digest=14f4ca6b54d191a8c7657f6c759bf11a5fb86285" type="text/css" />
     <link rel="stylesheet" type="text/css" href="../../../_static/togglebutton.css" />
     <link rel="stylesheet" type="text/css" href="../../../_static/copybutton.css" />
-    <link rel="stylesheet" type="text/css" href="../../../_static/mystnb.css" />
+    <link rel="stylesheet" type="text/css" href="../../../_static/mystnb.4510f1fc1dee50b3e5859aac5469c37c29e427902b24a333a5f9fcb2f0b3ac41.css" />
     <link rel="stylesheet" type="text/css" href="../../../_static/sphinx-thebe.css" />
-    <link rel="stylesheet" type="text/css" href="../../../_static/panels-main.c949a650a448cc0ae9fd3441c0e17fb0.css" />
-    <link rel="stylesheet" type="text/css" href="../../../_static/panels-variables.06eb56fa6e07937060861dad626602ad.css" />
-    <link rel="stylesheet" type="text/css" href="../../../_static/design-style.1e8bd061cd6da7fc9cf755528e8ffc24.min.css" />
-    
-  <link rel="preload" as="script" href="../../../_static/js/index.be7d3bbb2ef33a8344ce.js">
+    <link rel="stylesheet" type="text/css" href="../../../_static/design-style.4045f2051d55cab465a707391d5b2007.min.css" />
+  
+  <!-- Pre-loaded scripts that we'll load fully later -->
+  <link rel="preload" as="script" href="../../../_static/scripts/bootstrap.js?digest=8d27b9dea8ad943066ae" />
+<link rel="preload" as="script" href="../../../_static/scripts/pydata-sphinx-theme.js?digest=8d27b9dea8ad943066ae" />
+  <script src="../../../_static/vendor/fontawesome/6.5.1/js/all.min.js?digest=8d27b9dea8ad943066ae"></script>
 
     <script data-url_root="../../../" id="documentation_options" src="../../../_static/documentation_options.js"></script>
     <script src="../../../_static/jquery.js"></script>
     <script src="../../../_static/underscore.js"></script>
+    <script src="../../../_static/_sphinx_javascript_frameworks_compat.js"></script>
     <script src="../../../_static/doctools.js"></script>
     <script src="../../../_static/clipboard.min.js"></script>
     <script src="../../../_static/copybutton.js"></script>
+    <script src="../../../_static/scripts/sphinx-book-theme.js?digest=5a5c038af52cf7bc1a1ec88eea08e6366ee68824"></script>
     <script>let toggleHintShow = 'Click to show';</script>
     <script>let toggleHintHide = 'Click to hide';</script>
     <script>let toggleOpenOnPrint = 'true';</script>
     <script src="../../../_static/togglebutton.js"></script>
-    <script>var togglebuttonSelector = '.toggle, .admonition.dropdown, .tag_hide_input div.cell_input, .tag_hide-input div.cell_input, .tag_hide_output div.cell_output, .tag_hide-output div.cell_output, .tag_hide_cell.cell, .tag_hide-cell.cell';</script>
-    <script src="../../../_static/sphinx-book-theme.d59cb220de22ca1c485ebbdc042f0030.js"></script>
+    <script>var togglebuttonSelector = '.toggle, .admonition.dropdown';</script>
     <script src="../../../_static/design-tabs.js"></script>
+    <script async="async" src="https://www.googletagmanager.com/gtag/js?id=G-3E20PWD938"></script>
+    <script>
+                window.dataLayer = window.dataLayer || [];
+                function gtag(){ dataLayer.push(arguments); }
+                gtag('js', new Date());
+                gtag('config', 'G-3E20PWD938');
+            </script>
     <script>const THEBE_JS_URL = "https://unpkg.com/thebe@0.8.2/lib/index.js"
 const thebe_selector = ".thebe,.cell"
 const thebe_selector_input = "pre"
 const thebe_selector_output = ".output, .cell_output"
 </script>
     <script async="async" src="../../../_static/sphinx-thebe.js"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/require.js/2.3.4/require.min.js"></script>
-    <script src="https://unpkg.com/@jupyter-widgets/html-manager@^0.20.1/dist/embed-amd.js"></script>
     <script>window.MathJax = {"options": {"processHtmlClass": "tex2jax_process|mathjax_process|math|output_area"}}</script>
     <script defer="defer" src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+    <script>DOCUMENTATION_OPTIONS.pagename = 'notebooks/gallery/3286b92f-4fae-4cc6-a29e-e408bc844542/notebook';</script>
     <link rel="index" title="Index" href="../../../genindex.html" />
     <link rel="search" title="Search" href="../../../search.html" />
     <link rel="next" title="Exploring Land Cover Data (Impact Observatory)" href="../b128b282-dee7-44a7-bc21-f1fd21452a83/notebook.html" />
     <link rel="prev" title="Deep learning and variational inversion to quantify and attribute climate change (CIRC23)" href="../93463cac-471a-469d-ad52-0514fd9b67f2/notebook.html" />
-    <meta name="viewport" content="width=device-width, initial-scale=1" />
-    <meta name="docsearch:language" content="en">
-    
-
-    <!-- Google Analytics -->
-    
-<script async="" src="https://www.googletagmanager.com/gtag/js?id=G-3E20PWD938"></script>
-<script>
-                    window.dataLayer = window.dataLayer || [];
-                    function gtag(){ dataLayer.push(arguments); }
-                    gtag('js', new Date());
-                    gtag('config', 'G-3E20PWD938');
-                </script>
-
+  <meta name="viewport" content="width=device-width, initial-scale=1"/>
+  <meta name="docsearch:language" content="en"/>
   </head>
-  <body data-spy="scroll" data-target="#bd-toc-nav" data-offset="80">
-    
-    <div class="container-fluid" id="banner"></div>
+  
+  
+  <body data-bs-spy="scroll" data-bs-target=".bd-toc-nav" data-offset="180" data-bs-root-margin="0px 0px -60%" data-default-mode="">
 
-    
+  
+  
+  <a id="pst-skip-link" class="skip-link" href="#main-content">Skip to main content</a>
+  
+  <div id="pst-scroll-pixel-helper"></div>
+  
+  <button type="button" class="btn rounded-pill" id="pst-back-to-top">
+    <i class="fa-solid fa-arrow-up"></i>
+    Back to top
+  </button>
 
-    <div class="container-xl">
-      <div class="row">
-          
-<div class="col-12 col-md-3 bd-sidebar site-navigation show" id="site-navigation">
-    
-        <div class="navbar-brand-box">
-    <a class="navbar-brand text-wrap" href="../../../index.html">
+  
+  <input type="checkbox"
+          class="sidebar-toggle"
+          name="__primary"
+          id="__primary"/>
+  <label class="overlay overlay-primary" for="__primary"></label>
+  
+  <input type="checkbox"
+          class="sidebar-toggle"
+          name="__secondary"
+          id="__secondary"/>
+  <label class="overlay overlay-secondary" for="__secondary"></label>
+  
+  <div class="search-button__wrapper">
+    <div class="search-button__overlay"></div>
+    <div class="search-button__search-container">
+<form class="bd-search d-flex align-items-center"
+      action="../../../search.html"
+      method="get">
+  <i class="fa-solid fa-magnifying-glass"></i>
+  <input type="search"
+         class="form-control"
+         name="q"
+         id="search-input"
+         placeholder="Search this book..."
+         aria-label="Search this book..."
+         autocomplete="off"
+         autocorrect="off"
+         autocapitalize="off"
+         spellcheck="false"/>
+  <span class="search-button__kbd-shortcut"><kbd class="kbd-shortcut__modifier">Ctrl</kbd>+<kbd>K</kbd></span>
+</form></div>
+  </div>
+  
+    <header class="bd-header navbar navbar-expand-lg bd-navbar">
+    </header>
+  
+
+  <div class="bd-container">
+    <div class="bd-container__inner bd-page-width">
       
-        <!-- `logo` is deprecated in Sphinx 4.0, so remove this when we stop supporting 3 -->
+      
+      
+      <div class="bd-sidebar-primary bd-sidebar">
         
+
+  
+  <div class="sidebar-header-items sidebar-primary__section">
+    
+    
+    
+    
+  </div>
+  
+    <div class="sidebar-primary-items__start sidebar-primary__section">
+        <div class="sidebar-primary-item">
+
+  
+
+<a class="navbar-brand logo" href="../../../welcome.html">
+  
+  
+  
+  
+  
+    
+    
       
-      
-      <img src="../../../_static/logo.png" class="logo" alt="logo">
-      
-      
-      <h1 class="site-logo" id="site-title">Environmental Data Science Book</h1>
-      
-    </a>
-</div><form class="bd-search d-flex align-items-center" action="../../../search.html" method="get">
-  <i class="icon fas fa-search"></i>
-  <input type="search" class="form-control" name="q" id="search-input" placeholder="Search this book..." aria-label="Search this book..." autocomplete="off" >
-</form><nav class="bd-links" id="bd-docs-nav" aria-label="Main">
-    <div class="bd-toc-item active">
-        <ul class="nav bd-sidenav">
- <li class="toctree-l1">
-  <a class="reference internal" href="../../../welcome.html">
-   Welcome
-  </a>
- </li>
-</ul>
-<p aria-level="2" class="caption" role="heading">
- <span class="caption-text">
-  Preamble
- </span>
-</p>
+    
+    
+    <img src="../../../_static/logo.png" class="logo__image only-light" alt="Environmental Data Science Book - Home"/>
+    <script>document.write(`<img src="../../../_static/logo.png" class="logo__image only-dark" alt="Environmental Data Science Book - Home"/>`);</script>
+  
+  
+</a></div>
+        <div class="sidebar-primary-item"><nav class="bd-links" id="bd-docs-nav" aria-label="Main">
+    <div class="bd-toc-item navbar-nav active">
+        
+        <ul class="nav bd-sidenav bd-sidenav__home-link">
+            <li class="toctree-l1">
+                <a class="reference internal" href="../../../welcome.html">
+                    Welcome
+                </a>
+            </li>
+        </ul>
+        <p aria-level="2" class="caption" role="heading"><span class="caption-text">Preamble</span></p>
 <ul class="nav bd-sidenav">
- <li class="toctree-l1">
-  <a class="reference internal" href="../../../preamble/about.html">
-   About EDS book
-  </a>
- </li>
- <li class="toctree-l1">
-  <a class="reference internal" href="../../../preamble/attribution.html">
-   Citation and Reuse
-  </a>
- </li>
- <li class="toctree-l1">
-  <a class="reference internal" href="../../../preamble/contribute.html">
-   Contribute
-  </a>
- </li>
+<li class="toctree-l1"><a class="reference internal" href="../../../preamble/about.html">About EDS book</a></li>
+
+<li class="toctree-l1"><a class="reference internal" href="../../../preamble/attribution.html">Citation and Reuse</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../preamble/contribute.html">Contribute</a></li>
+
 </ul>
-<p aria-level="2" class="caption" role="heading">
- <span class="caption-text">
-  Notebooks
- </span>
-</p>
+<p aria-level="2" class="caption" role="heading"><span class="caption-text">Notebooks</span></p>
 <ul class="current nav bd-sidenav">
- <li class="toctree-l1 has-children">
-  <a class="reference internal" href="../../about.html">
-   Our Notebooks
-  </a>
-  <input class="toctree-checkbox" id="toctree-checkbox-1" name="toctree-checkbox-1" type="checkbox"/>
-  <label for="toctree-checkbox-1">
-   <i class="fas fa-chevron-down">
-   </i>
-  </label>
-  <ul>
-   <li class="toctree-l2">
-    <a class="reference internal" href="../../about/aims-and-scope.html">
-     Aims and Scope
-    </a>
-   </li>
-   <li class="toctree-l2">
-    <a class="reference internal" href="../../about/review-benefits.html">
-     Benefits of Reviewing Notebooks
-    </a>
-   </li>
-   <li class="toctree-l2">
-    <a class="reference internal" href="../../about/notebooks-technologies.html">
-     Technologies
-    </a>
-   </li>
-  </ul>
- </li>
- <li class="toctree-l1 current active has-children">
-  <a class="reference internal" href="../../gallery.html">
-   Gallery
-  </a>
-  <input checked="" class="toctree-checkbox" id="toctree-checkbox-2" name="toctree-checkbox-2" type="checkbox"/>
-  <label for="toctree-checkbox-2">
-   <i class="fas fa-chevron-down">
-   </i>
-  </label>
-  <ul class="current">
-   <li class="toctree-l2">
-    <a class="reference internal" href="../39d9c177-11da-41b2-9b64-63f4c1c834b3/notebook.html">
-     Variational data assimilation with deep prior (CIRC23)
-    </a>
-   </li>
-   <li class="toctree-l2">
-    <a class="reference internal" href="../93463cac-471a-469d-ad52-0514fd9b67f2/notebook.html">
-     Deep learning and variational inversion for climate science (CIRC23)
-    </a>
-   </li>
-   <li class="toctree-l2 current active">
-    <a class="current reference internal" href="#">
-     Underlying physics of the ocean's temperature (CIRC23)
-    </a>
-   </li>
-   <li class="toctree-l2">
-    <a class="reference internal" href="../b128b282-dee7-44a7-bc21-f1fd21452a83/notebook.html">
-     Land Cover Data (Impact Observatory)
-    </a>
-   </li>
-   <li class="toctree-l2">
-    <a class="reference internal" href="../435f534c-e49b-43c3-9bd6-3393100bef3f/notebook.html">
-     Cosmos-UK Soil Moisture (UKCEH)
-    </a>
-   </li>
-   <li class="toctree-l2">
-    <a class="reference internal" href="../ea34568e-d86e-4720-be2f-3f826f66a26c/notebook.html">
-     Rainfall NCEP/NCAR (NOAA)
-    </a>
-   </li>
-   <li class="toctree-l2">
-    <a class="reference internal" href="../ac327c3a-5264-40a2-8c6e-1e8d7c4b37ef/notebook.html">
-     Sea ice forecasting (IceNet)
-    </a>
-   </li>
-   <li class="toctree-l2">
-    <a class="reference internal" href="../94486a7f-e046-461f-bbb9-334ec7b57040/notebook.html">
-     Tree crown (DetectreeRGB)
-    </a>
-   </li>
-   <li class="toctree-l2">
-    <a class="reference internal" href="../bc30df18-fce2-42fa-aade-1ce5b7f3ca3c/notebook.html">
-     SEVIRI Level 1.5 (EUMESAT)
-    </a>
-   </li>
-   <li class="toctree-l2">
-    <a class="reference internal" href="../15d986da-2d7c-44fb-af71-700494485def/notebook.html">
-     Tree crown (DeepForest)
-    </a>
-   </li>
-   <li class="toctree-l2">
-    <a class="reference internal" href="../a2875cdc-ba6a-49dc-aab7-cdf7c4fc0fa8/notebook.html">
-     MOD021KM and FIRMS (NASA)
-    </a>
-   </li>
-   <li class="toctree-l2">
-    <a class="reference internal" href="../1b8921af-e77f-4ccf-ae38-4813cdceba0f/notebook.html">
-     UKV high-resolution (Met Office)
-    </a>
-   </li>
-   <li class="toctree-l2">
-    <a class="reference internal" href="../b34facfa-cea8-48f5-89f6-f11ce00812a9/notebook.html">
-     Detecting floating objects (ESA Phi-Lab)
-    </a>
-   </li>
-  </ul>
- </li>
- <li class="toctree-l1">
-  <a class="reference internal" href="../../how-to.html">
-   Usage
-  </a>
- </li>
+<li class="toctree-l1 has-children"><a class="reference internal" href="../../about.html">Our Notebooks</a><input class="toctree-checkbox" id="toctree-checkbox-1" name="toctree-checkbox-1" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-1"><i class="fa-solid fa-chevron-down"></i></label><ul>
+<li class="toctree-l2"><a class="reference internal" href="../../about/aims-and-scope.html">Aims and Scope</a></li>
+
+<li class="toctree-l2"><a class="reference internal" href="../../about/review-benefits.html">Benefits of Reviewing Notebooks</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../about/notebooks-technologies.html">Technologies</a></li>
 </ul>
-<p aria-level="2" class="caption" role="heading">
- <span class="caption-text">
-  Publishing
- </span>
-</p>
-<ul class="nav bd-sidenav">
- <li class="toctree-l1 has-children">
-  <a class="reference internal" href="../../../publishing/guidelines.html">
-   Our Guidelines
-  </a>
-  <input class="toctree-checkbox" id="toctree-checkbox-3" name="toctree-checkbox-3" type="checkbox"/>
-  <label for="toctree-checkbox-3">
-   <i class="fas fa-chevron-down">
-   </i>
-  </label>
-  <ul>
-   <li class="toctree-l2">
-    <a class="reference internal" href="../../../publishing/guidelines/guidelines-authors.html">
-     Guide for Authors
-    </a>
-   </li>
-   <li class="toctree-l2">
-    <a class="reference internal" href="../../../publishing/guidelines/guidelines-reviewers.html">
-     Guide for Reviewers
-    </a>
-   </li>
-   <li class="toctree-l2">
-    <a class="reference internal" href="../../../publishing/guidelines/guidelines-editors.html">
-     Guide for Editors
-    </a>
-   </li>
-   <li class="toctree-l2">
-    <a class="reference internal" href="../../../publishing/guidelines/guidelines-eic.html">
-     Guide for Editor in Chief
-    </a>
-   </li>
-   <li class="toctree-l2">
-    <a class="reference internal" href="../../../publishing/guidelines/guidelines-community.html">
-     Guide for Community
-    </a>
-   </li>
-  </ul>
- </li>
- <li class="toctree-l1">
-  <a class="reference internal" href="../../../publishing/faq.html">
-   FAQ
-  </a>
- </li>
+</li>
+<li class="toctree-l1 current active has-children"><a class="reference internal" href="../../gallery.html">Gallery</a><input checked="" class="toctree-checkbox" id="toctree-checkbox-2" name="toctree-checkbox-2" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-2"><i class="fa-solid fa-chevron-down"></i></label><ul class="current">
+<li class="toctree-l2"><a class="reference internal" href="../39d9c177-11da-41b2-9b64-63f4c1c834b3/notebook.html">Variational data assimilation with deep prior (CIRC23)</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../93463cac-471a-469d-ad52-0514fd9b67f2/notebook.html">Deep learning and variational inversion for climate science (CIRC23)</a></li>
+<li class="toctree-l2 current active"><a class="current reference internal" href="#">Underlying physics of the ocean's temperature (CIRC23)</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../b128b282-dee7-44a7-bc21-f1fd21452a83/notebook.html">Land Cover Data (Impact Observatory)</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../435f534c-e49b-43c3-9bd6-3393100bef3f/notebook.html">Cosmos-UK Soil Moisture (UKCEH)</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../ea34568e-d86e-4720-be2f-3f826f66a26c/notebook.html">Rainfall NCEP/NCAR (NOAA)</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../ac327c3a-5264-40a2-8c6e-1e8d7c4b37ef/notebook.html">Sea ice forecasting (IceNet)</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../94486a7f-e046-461f-bbb9-334ec7b57040/notebook.html">Tree crown (DetectreeRGB)</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../bc30df18-fce2-42fa-aade-1ce5b7f3ca3c/notebook.html">SEVIRI Level 1.5 (EUMESAT)</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../15d986da-2d7c-44fb-af71-700494485def/notebook.html">Tree crown (DeepForest)</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../a2875cdc-ba6a-49dc-aab7-cdf7c4fc0fa8/notebook.html">MOD021KM and FIRMS (NASA)</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../1b8921af-e77f-4ccf-ae38-4813cdceba0f/notebook.html">UKV high-resolution (Met Office)</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../b34facfa-cea8-48f5-89f6-f11ce00812a9/notebook.html">Detecting floating objects (ESA Phi-Lab)</a></li>
 </ul>
-<p aria-level="2" class="caption" role="heading">
- <span class="caption-text">
-  Community
- </span>
-</p>
-<ul class="nav bd-sidenav">
- <li class="toctree-l1">
-  <a class="reference internal" href="../../../community/about.html">
-   Our Community
-  </a>
- </li>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../../how-to.html">Usage</a></li>
 </ul>
-<p aria-level="2" class="caption" role="heading">
- <span class="caption-text">
-  Afterword
- </span>
-</p>
+<p aria-level="2" class="caption" role="heading"><span class="caption-text">Publishing</span></p>
 <ul class="nav bd-sidenav">
- <li class="toctree-l1">
-  <a class="reference internal" href="../../../afterword/bibliography.html">
-   Bibliography
-  </a>
- </li>
+<li class="toctree-l1 has-children"><a class="reference internal" href="../../../publishing/guidelines.html">Our Guidelines</a><input class="toctree-checkbox" id="toctree-checkbox-3" name="toctree-checkbox-3" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-3"><i class="fa-solid fa-chevron-down"></i></label><ul>
+<li class="toctree-l2"><a class="reference internal" href="../../../publishing/guidelines/guidelines-authors.html">Guide for Authors</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../publishing/guidelines/guidelines-reviewers.html">Guide for Reviewers</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../publishing/guidelines/guidelines-editors.html">Guide for Editors</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../publishing/guidelines/guidelines-eic.html">Guide for Editor in Chief</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../publishing/guidelines/guidelines-community.html">Guide for Community</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../../../publishing/faq.html">FAQ</a></li>
+</ul>
+<p aria-level="2" class="caption" role="heading"><span class="caption-text">Community</span></p>
+<ul class="nav bd-sidenav">
+<li class="toctree-l1"><a class="reference internal" href="../../../community/about.html">Our Community</a></li>
+
+</ul>
+<p aria-level="2" class="caption" role="heading"><span class="caption-text">Afterword</span></p>
+<ul class="nav bd-sidenav">
+<li class="toctree-l1"><a class="reference internal" href="../../../afterword/bibliography.html">Bibliography</a></li>
 </ul>
 
     </div>
-</nav> <!-- To handle the deprecated key -->
-
-<div class="navbar_extra_footer">
-  Powered by <a href="https://jupyterbook.org">Jupyter Book</a>
-</div>
-
-</div>
-
-
-          
+</nav></div>
+    </div>
+  
+  
+  <div class="sidebar-primary-items__end sidebar-primary__section">
+  </div>
+  
+  <div id="rtd-footer-container"></div>
 
 
-          
-<main class="col py-md-3 pl-md-4 bd-content overflow-auto" role="main">
-    
-    <div class="topbar container-xl fixed-top">
-    <div class="topbar-contents row">
-        <div class="col-12 col-md-3 bd-topbar-whitespace site-navigation show"></div>
-        <div class="col pl-md-4 topbar-main">
-            
-            <button id="navbar-toggler" class="navbar-toggler ml-0" type="button" data-toggle="collapse"
-                data-toggle="tooltip" data-placement="bottom" data-target=".site-navigation" aria-controls="navbar-menu"
-                aria-expanded="true" aria-label="Toggle navigation" aria-controls="site-navigation"
-                title="Toggle navigation" data-toggle="tooltip" data-placement="left">
-                <i class="fas fa-bars"></i>
-                <i class="fas fa-arrow-left"></i>
-                <i class="fas fa-arrow-up"></i>
-            </button>
-            
-            
-<div class="dropdown-buttons-trigger">
-    <button id="dropdown-buttons-trigger" class="btn btn-secondary topbarbtn" aria-label="Download this page"><i
-            class="fas fa-download"></i></button>
-
-    <div class="dropdown-buttons">
-        <!-- ipynb file if we had a myst markdown file -->
+      </div>
+      
+      <main id="main-content" class="bd-main">
         
-        <!-- Download raw file -->
-        <a class="dropdown-buttons" href="../../../_sources/notebooks/gallery/3286b92f-4fae-4cc6-a29e-e408bc844542/notebook.ipynb"><button type="button"
-                class="btn btn-secondary topbarbtn" title="Download source file" data-toggle="tooltip"
-                data-placement="left">.ipynb</button></a>
-        <!-- Download PDF via print -->
-        <button type="button" id="download-print" class="btn btn-secondary topbarbtn" title="Print to PDF"
-                onclick="printPdf(this)" data-toggle="tooltip" data-placement="left">.pdf</button>
+        
+
+<div class="sbt-scroll-pixel-helper"></div>
+
+          <div class="bd-content">
+            <div class="bd-article-container">
+              
+              <div class="bd-header-article">
+<div class="header-article-items header-article__inner">
+  
+    <div class="header-article-items__start">
+      
+        <div class="header-article-item"><label class="sidebar-toggle primary-toggle btn btn-sm" for="__primary" title="Toggle primary sidebar" data-bs-placement="bottom" data-bs-toggle="tooltip">
+  <span class="fa-solid fa-bars"></span>
+</label></div>
+      
     </div>
+  
+  
+    <div class="header-article-items__end">
+      
+        <div class="header-article-item">
+
+<div class="article-header-buttons">
+
+
+
+
+
+<div class="dropdown dropdown-source-buttons">
+  <button class="btn dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false" aria-label="Source repositories">
+    <i class="fab fa-github"></i>
+  </button>
+  <ul class="dropdown-menu">
+      
+      
+      
+      <li><a href="https://github.com/alan-turing-institute/environmental-ds-book" target="_blank"
+   class="btn btn-sm btn-source-repository-button dropdown-item"
+   title="Source repository"
+   data-bs-placement="left" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fab fa-github"></i>
+  </span>
+<span class="btn__text-container">Repository</span>
+</a>
+</li>
+      
+      
+      
+      
+      <li><a href="https://github.com/alan-turing-institute/environmental-ds-book/edit/master/book/notebooks/gallery/3286b92f-4fae-4cc6-a29e-e408bc844542/notebook.ipynb" target="_blank"
+   class="btn btn-sm btn-source-edit-button dropdown-item"
+   title="Suggest edit"
+   data-bs-placement="left" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fas fa-pencil-alt"></i>
+  </span>
+<span class="btn__text-container">Suggest edit</span>
+</a>
+</li>
+      
+      
+      
+      
+      <li><a href="https://github.com/alan-turing-institute/environmental-ds-book/issues/new?title=Issue%20on%20page%20%2Fnotebooks/gallery/3286b92f-4fae-4cc6-a29e-e408bc844542/notebook.html&body=Your%20issue%20content%20here." target="_blank"
+   class="btn btn-sm btn-source-issues-button dropdown-item"
+   title="Open an issue"
+   data-bs-placement="left" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fas fa-lightbulb"></i>
+  </span>
+<span class="btn__text-container">Open issue</span>
+</a>
+</li>
+      
+  </ul>
 </div>
 
-            <!-- Source interaction buttons -->
 
-<div class="dropdown-buttons-trigger">
-    <button id="dropdown-buttons-trigger" class="btn btn-secondary topbarbtn"
-        aria-label="Connect with source repository"><i class="fab fa-github"></i></button>
-    <div class="dropdown-buttons sourcebuttons">
-        <a class="repository-button"
-            href="https://github.com/alan-turing-institute/environmental-ds-book"><button type="button" class="btn btn-secondary topbarbtn"
-                data-toggle="tooltip" data-placement="left" title="Source repository"><i
-                    class="fab fa-github"></i>repository</button></a>
-        <a class="issues-button"
-            href="https://github.com/alan-turing-institute/environmental-ds-book/issues/new?title=Issue%20on%20page%20%2Fnotebooks/gallery/3286b92f-4fae-4cc6-a29e-e408bc844542/notebook.html&body=Your%20issue%20content%20here."><button
-                type="button" class="btn btn-secondary topbarbtn" data-toggle="tooltip" data-placement="left"
-                title="Open an issue"><i class="fas fa-lightbulb"></i>open issue</button></a>
-        <a class="edit-button" href="https://github.com/alan-turing-institute/environmental-ds-book/edit/master/book/notebooks/gallery/3286b92f-4fae-4cc6-a29e-e408bc844542/notebook.ipynb"><button
-                type="button" class="btn btn-secondary topbarbtn" data-toggle="tooltip" data-placement="left"
-                title="Edit this page"><i class="fas fa-pencil-alt"></i>suggest edit</button></a>
-    </div>
+
+
+
+
+<div class="dropdown dropdown-download-buttons">
+  <button class="btn dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false" aria-label="Download this page">
+    <i class="fas fa-download"></i>
+  </button>
+  <ul class="dropdown-menu">
+      
+      
+      
+      <li><a href="../../../_sources/notebooks/gallery/3286b92f-4fae-4cc6-a29e-e408bc844542/notebook.ipynb" target="_blank"
+   class="btn btn-sm btn-download-source-button dropdown-item"
+   title="Download source file"
+   data-bs-placement="left" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fas fa-file"></i>
+  </span>
+<span class="btn__text-container">.ipynb</span>
+</a>
+</li>
+      
+      
+      
+      
+      <li>
+<button onclick="window.print()"
+  class="btn btn-sm btn-download-pdf-button dropdown-item"
+  title="Print to PDF"
+  data-bs-placement="left" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fas fa-file-pdf"></i>
+  </span>
+<span class="btn__text-container">.pdf</span>
+</button>
+</li>
+      
+  </ul>
 </div>
 
-            <!-- Full screen (wrap in <a> to have style consistency -->
 
-<a class="full-screen-button"><button type="button" class="btn btn-secondary topbarbtn" data-toggle="tooltip"
-        data-placement="bottom" onclick="toggleFullScreen()" aria-label="Fullscreen mode"
-        title="Fullscreen mode"><i
-            class="fas fa-expand"></i></button></a>
 
-            <!-- Launch buttons -->
 
-        </div>
+<button onclick="toggleFullScreen()"
+  class="btn btn-sm btn-fullscreen-button"
+  title="Fullscreen mode"
+  data-bs-placement="bottom" data-bs-toggle="tooltip"
+>
+  
 
-        <!-- Table of contents -->
-        <div class="d-none d-md-block col-md-2 bd-toc show noprint">
+<span class="btn__icon-container">
+  <i class="fas fa-expand"></i>
+  </span>
+
+</button>
+
+
+
+<script>
+document.write(`
+  <button class="btn btn-sm navbar-btn theme-switch-button" title="light/dark" aria-label="light/dark" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <span class="theme-switch nav-link" data-mode="light"><i class="fa-solid fa-sun fa-lg"></i></span>
+    <span class="theme-switch nav-link" data-mode="dark"><i class="fa-solid fa-moon fa-lg"></i></span>
+    <span class="theme-switch nav-link" data-mode="auto"><i class="fa-solid fa-circle-half-stroke fa-lg"></i></span>
+  </button>
+`);
+</script>
+
+
+<script>
+document.write(`
+  <button class="btn btn-sm navbar-btn search-button search-button__button" title="Search" aria-label="Search" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <i class="fa-solid fa-magnifying-glass fa-lg"></i>
+  </button>
+`);
+</script>
+<label class="sidebar-toggle secondary-toggle btn btn-sm" for="__secondary"title="Toggle secondary sidebar" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <span class="fa-solid fa-list"></span>
+</label>
+</div></div>
+      
+    </div>
+  
+</div>
+</div>
+              
+              
+
+<div id="jb-print-docs-body" class="onlyprint">
+    <h1>Learning the underlying physics of a simulation model of the ocean’s temperature (CIRC23)</h1>
+    <!-- Table of contents -->
+    <div id="print-main-content">
+        <div id="jb-print-toc">
             
-            <div class="tocsection onthispage pt-5 pb-3">
-                <i class="fas fa-list"></i> Contents
+            <div>
+                <h2> Contents </h2>
             </div>
-            <nav id="bd-toc-nav" aria-label="Page">
+            <nav aria-label="Page">
                 <ul class="visible nav section-nav flex-column">
- <li class="toc-h2 nav-item toc-entry">
-  <a class="reference internal nav-link" href="#context">
-   Context
-  </a>
-  <ul class="nav section-nav flex-column">
-   <li class="toc-h3 nav-item toc-entry">
-    <a class="reference internal nav-link" href="#purpose">
-     Purpose
-    </a>
-   </li>
-   <li class="toc-h3 nav-item toc-entry">
-    <a class="reference internal nav-link" href="#description">
-     Description
-    </a>
-   </li>
-   <li class="toc-h3 nav-item toc-entry">
-    <a class="reference internal nav-link" href="#highlights">
-     Highlights
-    </a>
-   </li>
-   <li class="toc-h3 nav-item toc-entry">
-    <a class="reference internal nav-link" href="#contributions">
-     Contributions
-    </a>
-    <ul class="nav section-nav flex-column">
-     <li class="toc-h4 nav-item toc-entry">
-      <a class="reference internal nav-link" href="#notebook">
-       Notebook
-      </a>
-     </li>
-     <li class="toc-h4 nav-item toc-entry">
-      <a class="reference internal nav-link" href="#modelling-codebase">
-       Modelling codebase
-      </a>
-     </li>
-     <li class="toc-h4 nav-item toc-entry">
-      <a class="reference internal nav-link" href="#modelling-publications">
-       Modelling publications
-      </a>
-     </li>
-    </ul>
-   </li>
-   <li class="toc-h3 nav-item toc-entry">
-    <a class="reference internal nav-link" href="#data">
-     Data
-    </a>
-   </li>
-   <li class="toc-h3 nav-item toc-entry">
-    <a class="reference internal nav-link" href="#source-code">
-     Source code
-    </a>
-   </li>
-  </ul>
- </li>
- <li class="toc-h2 nav-item toc-entry">
-  <a class="reference internal nav-link" href="#load-libraries">
-   Load libraries
-  </a>
- </li>
- <li class="toc-h2 nav-item toc-entry">
-  <a class="reference internal nav-link" href="#dataset">
-   Dataset
-  </a>
- </li>
- <li class="toc-h2 nav-item toc-entry">
-  <a class="reference internal nav-link" href="#download-input-material">
-   Download input material
-  </a>
- </li>
- <li class="toc-h2 nav-item toc-entry">
-  <a class="reference internal nav-link" href="#reproduce-paper">
-   Reproduce paper
-  </a>
-  <ul class="nav section-nav flex-column">
-   <li class="toc-h3 nav-item toc-entry">
-    <a class="reference internal nav-link" href="#ocean-dynamics-figure-1">
-     Ocean dynamics (Figure 1)
-    </a>
-   </li>
-  </ul>
- </li>
- <li class="toc-h2 nav-item toc-entry">
-  <a class="reference internal nav-link" href="#model-training">
-   Model training
-  </a>
-  <ul class="nav section-nav flex-column">
-   <li class="toc-h3 nav-item toc-entry">
-    <a class="reference internal nav-link" href="#linear-regression-a-toy-example">
-     Linear regression (A toy example)
-    </a>
-    <ul class="nav section-nav flex-column">
-     <li class="toc-h4 nav-item toc-entry">
-      <a class="reference internal nav-link" href="#model-fit-example">
-       Model fit example
-      </a>
-     </li>
-    </ul>
-   </li>
-   <li class="toc-h3 nav-item toc-entry">
-    <a class="reference internal nav-link" href="#performance-of-the-regressor">
-     Performance of the regressor
-    </a>
-    <ul class="nav section-nav flex-column">
-     <li class="toc-h4 nav-item toc-entry">
-      <a class="reference internal nav-link" href="#scatter-plot-for-the-control-regressor-figure-2-different-from-above">
-       Scatter plot for the control regressor (Figure 2) - Different from above
-      </a>
-     </li>
-     <li class="toc-h4 nav-item toc-entry">
-      <a class="reference internal nav-link" href="#spatial-patterns-of-errors-figure-3">
-       Spatial patterns of errors (Figure 3)
-      </a>
-     </li>
-    </ul>
-   </li>
-   <li class="toc-h3 nav-item toc-entry">
-    <a class="reference internal nav-link" href="#sensitivity-analysis">
-     Sensitivity analysis
-    </a>
-    <ul class="nav section-nav flex-column">
-     <li class="toc-h4 nav-item toc-entry">
-      <a class="reference internal nav-link" href="#coefficient-analysis-figure-4">
-       Coefficient analysis (Figure 4)
-      </a>
-     </li>
-     <li class="toc-h4 nav-item toc-entry">
-      <a class="reference internal nav-link" href="#witholding-experiments">
-       Witholding experiments
-      </a>
-      <ul class="nav section-nav flex-column">
-       <li class="toc-h5 nav-item toc-entry">
-        <a class="reference internal nav-link" href="#withholding-multiplicative-terms-figure-5-importance-of-non-linearity">
-         Withholding multiplicative terms: Figure 5; Importance of Non-Linearity
-        </a>
-       </li>
-       <li class="toc-h5 nav-item toc-entry">
-        <a class="reference internal nav-link" href="#withholding-3d-structure-figure-6-impact-of-vertical-structure">
-         Withholding 3D structure: Figure 6; Impact of vertical structure
-        </a>
-       </li>
-       <li class="toc-h5 nav-item toc-entry">
-        <a class="reference internal nav-link" href="#withholding-currents-figure-7-impact-of-currents">
-         Withholding currents: Figure 7; Impact of currents
-        </a>
-       </li>
-      </ul>
-     </li>
-    </ul>
-   </li>
-  </ul>
- </li>
- <li class="toc-h2 nav-item toc-entry">
-  <a class="reference internal nav-link" href="#summary">
-   Summary
-  </a>
- </li>
- <li class="toc-h2 nav-item toc-entry">
-  <a class="reference internal nav-link" href="#citing-this-notebook">
-   Citing this Notebook
-  </a>
- </li>
- <li class="toc-h2 nav-item toc-entry">
-  <a class="reference internal nav-link" href="#additional-information">
-   Additional information
-  </a>
- </li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#context">Context</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#purpose">Purpose</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#description">Description</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#highlights">Highlights</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#contributions">Contributions</a><ul class="nav section-nav flex-column">
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#notebook">Notebook</a></li>
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#modelling-codebase">Modelling codebase</a></li>
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#modelling-publications">Modelling publications</a></li>
 </ul>
-
+</li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#data">Data</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#source-code">Source code</a></li>
+</ul>
+</li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#load-libraries">Load libraries</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#dataset">Dataset</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#download-input-material">Download input material</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#reproduce-paper">Reproduce paper</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#ocean-dynamics-figure-1">Ocean dynamics (Figure 1)</a></li>
+</ul>
+</li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#model-training">Model training</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#linear-regression-a-toy-example">Linear regression (A toy example)</a><ul class="nav section-nav flex-column">
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#model-fit-example">Model fit example</a></li>
+</ul>
+</li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#performance-of-the-regressor">Performance of the regressor</a><ul class="nav section-nav flex-column">
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#scatter-plot-for-the-control-regressor-figure-2-different-from-above">Scatter plot for the control regressor (Figure 2) - Different from above</a></li>
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#spatial-patterns-of-errors-figure-3">Spatial patterns of errors (Figure 3)</a></li>
+</ul>
+</li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#sensitivity-analysis">Sensitivity analysis</a><ul class="nav section-nav flex-column">
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#coefficient-analysis-figure-4">Coefficient analysis (Figure 4)</a></li>
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#witholding-experiments">Witholding experiments</a><ul class="nav section-nav flex-column">
+<li class="toc-h5 nav-item toc-entry"><a class="reference internal nav-link" href="#withholding-multiplicative-terms-figure-5-importance-of-non-linearity">Withholding multiplicative terms: Figure 5; Importance of Non-Linearity</a></li>
+<li class="toc-h5 nav-item toc-entry"><a class="reference internal nav-link" href="#withholding-3d-structure-figure-6-impact-of-vertical-structure">Withholding 3D structure: Figure 6; Impact of vertical structure</a></li>
+<li class="toc-h5 nav-item toc-entry"><a class="reference internal nav-link" href="#withholding-currents-figure-7-impact-of-currents">Withholding currents: Figure 7; Impact of currents</a></li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#summary">Summary</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#citing-this-notebook">Citing this Notebook</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#additional-information">Additional information</a></li>
+</ul>
             </nav>
         </div>
     </div>
 </div>
-    <div id="main-content" class="row">
-        <div class="col-12 col-md-9 pl-md-3 pr-md-0">
-            <!-- Table of contents that is only displayed when printing the page -->
-            <div id="jb-print-docs-body" class="onlyprint">
-                <h1>Learning the underlying physics of a simulation model of the ocean’s temperature (CIRC23)</h1>
-                <!-- Table of contents -->
-                <div id="print-main-content">
-                    <div id="jb-print-toc">
-                        
-                        <div>
-                            <h2> Contents </h2>
-                        </div>
-                        <nav aria-label="Page">
-                            <ul class="visible nav section-nav flex-column">
- <li class="toc-h2 nav-item toc-entry">
-  <a class="reference internal nav-link" href="#context">
-   Context
-  </a>
-  <ul class="nav section-nav flex-column">
-   <li class="toc-h3 nav-item toc-entry">
-    <a class="reference internal nav-link" href="#purpose">
-     Purpose
-    </a>
-   </li>
-   <li class="toc-h3 nav-item toc-entry">
-    <a class="reference internal nav-link" href="#description">
-     Description
-    </a>
-   </li>
-   <li class="toc-h3 nav-item toc-entry">
-    <a class="reference internal nav-link" href="#highlights">
-     Highlights
-    </a>
-   </li>
-   <li class="toc-h3 nav-item toc-entry">
-    <a class="reference internal nav-link" href="#contributions">
-     Contributions
-    </a>
-    <ul class="nav section-nav flex-column">
-     <li class="toc-h4 nav-item toc-entry">
-      <a class="reference internal nav-link" href="#notebook">
-       Notebook
-      </a>
-     </li>
-     <li class="toc-h4 nav-item toc-entry">
-      <a class="reference internal nav-link" href="#modelling-codebase">
-       Modelling codebase
-      </a>
-     </li>
-     <li class="toc-h4 nav-item toc-entry">
-      <a class="reference internal nav-link" href="#modelling-publications">
-       Modelling publications
-      </a>
-     </li>
-    </ul>
-   </li>
-   <li class="toc-h3 nav-item toc-entry">
-    <a class="reference internal nav-link" href="#data">
-     Data
-    </a>
-   </li>
-   <li class="toc-h3 nav-item toc-entry">
-    <a class="reference internal nav-link" href="#source-code">
-     Source code
-    </a>
-   </li>
-  </ul>
- </li>
- <li class="toc-h2 nav-item toc-entry">
-  <a class="reference internal nav-link" href="#load-libraries">
-   Load libraries
-  </a>
- </li>
- <li class="toc-h2 nav-item toc-entry">
-  <a class="reference internal nav-link" href="#dataset">
-   Dataset
-  </a>
- </li>
- <li class="toc-h2 nav-item toc-entry">
-  <a class="reference internal nav-link" href="#download-input-material">
-   Download input material
-  </a>
- </li>
- <li class="toc-h2 nav-item toc-entry">
-  <a class="reference internal nav-link" href="#reproduce-paper">
-   Reproduce paper
-  </a>
-  <ul class="nav section-nav flex-column">
-   <li class="toc-h3 nav-item toc-entry">
-    <a class="reference internal nav-link" href="#ocean-dynamics-figure-1">
-     Ocean dynamics (Figure 1)
-    </a>
-   </li>
-  </ul>
- </li>
- <li class="toc-h2 nav-item toc-entry">
-  <a class="reference internal nav-link" href="#model-training">
-   Model training
-  </a>
-  <ul class="nav section-nav flex-column">
-   <li class="toc-h3 nav-item toc-entry">
-    <a class="reference internal nav-link" href="#linear-regression-a-toy-example">
-     Linear regression (A toy example)
-    </a>
-    <ul class="nav section-nav flex-column">
-     <li class="toc-h4 nav-item toc-entry">
-      <a class="reference internal nav-link" href="#model-fit-example">
-       Model fit example
-      </a>
-     </li>
-    </ul>
-   </li>
-   <li class="toc-h3 nav-item toc-entry">
-    <a class="reference internal nav-link" href="#performance-of-the-regressor">
-     Performance of the regressor
-    </a>
-    <ul class="nav section-nav flex-column">
-     <li class="toc-h4 nav-item toc-entry">
-      <a class="reference internal nav-link" href="#scatter-plot-for-the-control-regressor-figure-2-different-from-above">
-       Scatter plot for the control regressor (Figure 2) - Different from above
-      </a>
-     </li>
-     <li class="toc-h4 nav-item toc-entry">
-      <a class="reference internal nav-link" href="#spatial-patterns-of-errors-figure-3">
-       Spatial patterns of errors (Figure 3)
-      </a>
-     </li>
-    </ul>
-   </li>
-   <li class="toc-h3 nav-item toc-entry">
-    <a class="reference internal nav-link" href="#sensitivity-analysis">
-     Sensitivity analysis
-    </a>
-    <ul class="nav section-nav flex-column">
-     <li class="toc-h4 nav-item toc-entry">
-      <a class="reference internal nav-link" href="#coefficient-analysis-figure-4">
-       Coefficient analysis (Figure 4)
-      </a>
-     </li>
-     <li class="toc-h4 nav-item toc-entry">
-      <a class="reference internal nav-link" href="#witholding-experiments">
-       Witholding experiments
-      </a>
-      <ul class="nav section-nav flex-column">
-       <li class="toc-h5 nav-item toc-entry">
-        <a class="reference internal nav-link" href="#withholding-multiplicative-terms-figure-5-importance-of-non-linearity">
-         Withholding multiplicative terms: Figure 5; Importance of Non-Linearity
-        </a>
-       </li>
-       <li class="toc-h5 nav-item toc-entry">
-        <a class="reference internal nav-link" href="#withholding-3d-structure-figure-6-impact-of-vertical-structure">
-         Withholding 3D structure: Figure 6; Impact of vertical structure
-        </a>
-       </li>
-       <li class="toc-h5 nav-item toc-entry">
-        <a class="reference internal nav-link" href="#withholding-currents-figure-7-impact-of-currents">
-         Withholding currents: Figure 7; Impact of currents
-        </a>
-       </li>
-      </ul>
-     </li>
-    </ul>
-   </li>
-  </ul>
- </li>
- <li class="toc-h2 nav-item toc-entry">
-  <a class="reference internal nav-link" href="#summary">
-   Summary
-  </a>
- </li>
- <li class="toc-h2 nav-item toc-entry">
-  <a class="reference internal nav-link" href="#citing-this-notebook">
-   Citing this Notebook
-  </a>
- </li>
- <li class="toc-h2 nav-item toc-entry">
-  <a class="reference internal nav-link" href="#additional-information">
-   Additional information
-  </a>
- </li>
-</ul>
 
-                        </nav>
-                    </div>
-                </div>
-            </div>
-            
-              <div>
+              
                 
-  <div class="tex2jax_ignore mathjax_ignore section" id="learning-the-underlying-physics-of-a-simulation-model-of-the-ocean-s-temperature-circ23">
-<h1>Learning the underlying physics of a simulation model of the ocean’s temperature (CIRC23)<a class="headerlink" href="#learning-the-underlying-physics-of-a-simulation-model-of-the-ocean-s-temperature-circ23" title="Permalink to this headline">¶</a></h1>
-<p><svg version="1.1" width="16" height="16" class="octicon octicon-tag" viewBox="0 0 16 16" aria-hidden="true"><path fill-rule="evenodd" d="M2.5 7.775V2.75a.25.25 0 01.25-.25h5.025a.25.25 0 01.177.073l6.25 6.25a.25.25 0 010 .354l-5.025 5.025a.25.25 0 01-.354 0l-6.25-6.25a.25.25 0 01-.073-.177zm-1.5 0V2.75C1 1.784 1.784 1 2.75 1h5.025c.464 0 .91.184 1.238.513l6.25 6.25a1.75 1.75 0 010 2.474l-5.026 5.026a1.75 1.75 0 01-2.474 0l-6.25-6.25A1.75 1.75 0 011 7.775zM6 5a1 1 0 100 2 1 1 0 000-2z"></path></svg>
+<div id="searchbox"></div>
+                <article class="bd-article">
+                  
+  <section class="tex2jax_ignore mathjax_ignore" id="learning-the-underlying-physics-of-a-simulation-model-of-the-ocean-s-temperature-circ23">
+<h1>Learning the underlying physics of a simulation model of the ocean’s temperature (CIRC23)<a class="headerlink" href="#learning-the-underlying-physics-of-a-simulation-model-of-the-ocean-s-temperature-circ23" title="Permalink to this heading">#</a></h1>
+<p><a href="#id1"><span class="problematic" id="id2">tag</span></a>
 <span class="sd-sphinx-override sd-badge sd-bg-primary sd-bg-text-primary">Ocean</span>
 <span class="sd-sphinx-override sd-badge sd-bg-secondary sd-bg-text-secondary">Modelling</span>
 <span class="sd-sphinx-override sd-badge sd-bg-warning sd-bg-text-warning">Special Issue</span>
@@ -807,23 +538,23 @@ const thebe_selector_output = ".output, .cell_output"
     <a href="https://zenodo.org/badge/latestdoi/636822482">
         <img alt="doi" src="https://zenodo.org/badge/636822482.svg">
     </a>
-</p><div class="section" id="context">
-<h2>Context<a class="headerlink" href="#context" title="Permalink to this headline">¶</a></h2>
+</p><section id="context">
+<h2>Context<a class="headerlink" href="#context" title="Permalink to this heading">#</a></h2>
 <p>Can data-driven models for weather and climate predictions learn the underlying physics of the system against which they are trained? Or are they simply capable of identifying statistical patterns without any clear link to the underlying physics? Furner et al. (2022) run a sensitivity analysis of a regression-based ocean temperature model, trained against simulations from a 3D ocean model setup, demostrating that regression models are capable of learning much of the physics of the underlying system.</p>
 <p><img alt="Ocean Temperature" src="https://www.commondreams.org/media-library/ocean-surface-temperatures.jpg?id=33699188&amp;width=1200&amp;height=400&amp;quality=90&amp;coordinates=0%2C667%2C0%2C667" /></p>
 <p><center>
 Source: Image generated by the NASA and taken from Common Dreams.
 </center></p>
-<div class="section" id="purpose">
-<h3>Purpose<a class="headerlink" href="#purpose" title="Permalink to this headline">¶</a></h3>
+<section id="purpose">
+<h3>Purpose<a class="headerlink" href="#purpose" title="Permalink to this heading">#</a></h3>
 <p>This notebook aims to complement the science and methodological development embedded within the original paper, using an open infrastructure that allows users to combine interactive code with text and graphical objects, translating research outputs into findable, accessible, interoperable and reusable outputs and code.</p>
-</div>
-<div class="section" id="description">
-<h3>Description<a class="headerlink" href="#description" title="Permalink to this headline">¶</a></h3>
+</section>
+<section id="description">
+<h3>Description<a class="headerlink" href="#description" title="Permalink to this heading">#</a></h3>
 <p>The notebook demonstrates the inputs, the training of the regression model of ocean temperature and its sensitivity analysis.</p>
-</div>
-<div class="section" id="highlights">
-<h3>Highlights<a class="headerlink" href="#highlights" title="Permalink to this headline">¶</a></h3>
+</section>
+<section id="highlights">
+<h3>Highlights<a class="headerlink" href="#highlights" title="Permalink to this heading">#</a></h3>
 <ul class="simple">
 <li><p>Load the necessary libraries and dependencies to run this notebook, i.e., numpy, xarray, etc.</p></li>
 <li><p>Fetch the original dataset used for training the regression models.</p></li>
@@ -835,11 +566,11 @@ Source: Image generated by the NASA and taken from Common Dreams.
 <li><p>Summarize our findings.</p></li>
 <li><p>Provide contact information.</p></li>
 </ul>
-</div>
-<div class="section" id="contributions">
-<h3>Contributions<a class="headerlink" href="#contributions" title="Permalink to this headline">¶</a></h3>
-<div class="section" id="notebook">
-<h4>Notebook<a class="headerlink" href="#notebook" title="Permalink to this headline">¶</a></h4>
+</section>
+<section id="contributions">
+<h3>Contributions<a class="headerlink" href="#contributions" title="Permalink to this heading">#</a></h3>
+<section id="notebook">
+<h4>Notebook<a class="headerlink" href="#notebook" title="Permalink to this heading">#</a></h4>
 <ul class="simple">
 <li><p>Garima Malhotra (author), University of Colorado Boulder, <a class="reference external" href="https://github.com/garimamalhotra">&#64;garimamalhotra</a></p></li>
 <li><p>Daniela Pinto Veizaga (author), University of California, Berkeley, <a class="reference external" href="https://github.com/dapivei">&#64;dapivei</a></p></li>
@@ -848,115 +579,120 @@ Source: Image generated by the NASA and taken from Common Dreams.
 <li><p>Oscar Bautista (reviewer), World Food Programme, <a class="reference external" href="https://github.com/oscarbau">&#64;oscarbau</a></p></li>
 <li><p>Ricardo Barros Lourenço (reviewer), McMaster University, <a class="reference external" href="https://github.com/ricardobarroslourenco">&#64;ricardobarroslourenco</a></p></li>
 </ul>
-</div>
-<div class="section" id="modelling-codebase">
-<h4>Modelling codebase<a class="headerlink" href="#modelling-codebase" title="Permalink to this headline">¶</a></h4>
+</section>
+<section id="modelling-codebase">
+<h4>Modelling codebase<a class="headerlink" href="#modelling-codebase" title="Permalink to this heading">#</a></h4>
 <ul class="simple">
 <li><p>Rachel Furner (author), University of Cambridge, <a class="reference external" href="https://github.com/RachelFurner">&#64;RachelFurner</a></p></li>
 <li><p>Garima Malhotra (contributor), University of Colorado Boulder, <a class="reference external" href="https://github.com/garimamalhotra">&#64;garimamalhotra</a></p></li>
 <li><p>Daniela Pinto Veizaga (contributor), University of California, Berkeley, <a class="reference external" href="https://github.com/dapivei">&#64;dapivei</a></p></li>
 <li><p>Jorge Eduardo Peña Velasco (contributor), Claremont McKenna College, <a class="reference external" href="https://github.com/jedpe">&#64;jedpe</a></p></li>
 </ul>
-</div>
-<div class="section" id="modelling-publications">
-<h4>Modelling publications<a class="headerlink" href="#modelling-publications" title="Permalink to this headline">¶</a></h4>
-<div class="docutils container" id="id1">
+</section>
+<section id="modelling-publications">
+<h4>Modelling publications<a class="headerlink" href="#modelling-publications" title="Permalink to this heading">#</a></h4>
+<div class="docutils container" id="id3">
 <ul class="simple">
-<li id="id25"><p>Rachel Furner, Peter Haynes, Dave Munday, Brooks Paige, Daniel C. Jones, and Emily Shuckburgh. A sensitivity analysis of a regression model of ocean temperature. <em>Environmental Data Science</em>, 1:e11, 2022. <a class="reference external" href="https://doi.org/10.1017/eds.2022.10">doi:10.1017/eds.2022.10</a>.</p></li>
+<li id="id27"><p>Rachel Furner, Peter Haynes, Dave Munday, Brooks Paige, Daniel C. Jones, and Emily Shuckburgh. A sensitivity analysis of a regression model of ocean temperature. <em>Environmental Data Science</em>, 1:e11, 2022. <a class="reference external" href="https://doi.org/10.1017/eds.2022.10">doi:10.1017/eds.2022.10</a>.</p></li>
 </ul>
 </div>
-</div>
-</div>
-<div class="section" id="data">
-<h3>Data<a class="headerlink" href="#data" title="Permalink to this headline">¶</a></h3>
+</section>
+</section>
+<section id="data">
+<h3>Data<a class="headerlink" href="#data" title="Permalink to this heading">#</a></h3>
 <ul class="simple">
 <li><p>Furner, Rachel. (2021). MITgcm Dataset for paper: Sensitivity analysis of a data-driven model of ocean temperature (v1.1) [Data set]. Zenodo. <a class="reference external" href="https://doi.org/10.5281/zenodo.7919172">https://doi.org/10.5281/zenodo.7919172</a></p></li>
 <li><p>Malhotra, Garima, Pinto-Veizaga, Daniela, &amp; Pena, Jorge. (2023). Reproducible Challenge - Team 3 - Sensitivity analysis- Models. <a class="reference external" href="https://doi.org/10.5281/zenodo.7954232">https://doi.org/10.5281/zenodo.7954232</a></p></li>
 </ul>
 <div class="alert alert-block alert-info"> <b>Note: </b> We provide the input feature arrays truncated to first 15000 points for large arrays (in trunc_io_arrays/-> data/interim/) because of space limitation. These are provided only for the withholding experiments that are required to run this notebook. For input arrays of other witholding experiments, please contact the authors. These can be provided if the users are interested in understanding the sensitivity of the regressor for other withholding experiments (not shown in this notebook). </div>
-</div>
-<div class="section" id="source-code">
-<h3>Source code<a class="headerlink" href="#source-code" title="Permalink to this headline">¶</a></h3>
+</section>
+<section id="source-code">
+<h3>Source code<a class="headerlink" href="#source-code" title="Permalink to this heading">#</a></h3>
 <p>The authors of the notebook acknowledge the original creator for providing public code available at <a class="reference external" href="https://github.com/RachelFurner/RegressionModelOceanTemp">Regression Model OceanTemp</a>. An updated and enhaced version of the code is available at <a class="reference external" href="https://github.com/eds-book-gallery/repro-challenge-team-3">Reproducibility of “A sensitivity analysis of a regression model of ocean temperature”</a>.</p>
 <div class="alert alert-block alert-info"> <b>Note: </b> Significant parts from source code were adapted or written from scratch for this notebook and the reproducible challenge. </div>
 <div class="dropdown admonition">
 <p class="admonition-title">Project Resources</p>
 <p><em>The submitted notebook was implemented and tested within a <a class="reference external" href="https://github.com/pangeo-data/pangeo-eosc">cloud computing infrastructure, kindly provided by the European Open Science Cloud (EOSC)</a>. The following lines thoroughly described the characteristics of this environment.</em></p>
-<table class="colwidths-auto table">
+<table class="table">
 <thead>
-<tr class="row-odd"><th class="text-align:left head"><p></p></th>
-<th class="text-align:right head"><p></p></th>
+<tr class="row-odd"><th class="head text-left"><p></p></th>
+<th class="head text-right"><p></p></th>
 </tr>
 </thead>
 <tbody>
-<tr class="row-even"><td class="text-align:left"><p><strong>Operating System</strong></p></td>
-<td class="text-align:right"><p>Ubuntu 22.04.1</p></td>
+<tr class="row-even"><td class="text-left"><p><strong>Operating System</strong></p></td>
+<td class="text-right"><p>Ubuntu 22.04.1</p></td>
 </tr>
-<tr class="row-odd"><td class="text-align:left"><p><strong>Architecture</strong></p></td>
-<td class="text-align:right"><p>x86_64</p></td>
+<tr class="row-odd"><td class="text-left"><p><strong>Architecture</strong></p></td>
+<td class="text-right"><p>x86_64</p></td>
 </tr>
-<tr class="row-even"><td class="text-align:left"><p>CPU op-mode(s)</p></td>
-<td class="text-align:right"><p>32-bit, 64-bit</p></td>
+<tr class="row-even"><td class="text-left"><p>CPU op-mode(s)</p></td>
+<td class="text-right"><p>32-bit, 64-bit</p></td>
 </tr>
-<tr class="row-odd"><td class="text-align:left"><p>Address sizes</p></td>
-<td class="text-align:right"><p>48 bits physical, 48 bits virtual</p></td>
+<tr class="row-odd"><td class="text-left"><p>Address sizes</p></td>
+<td class="text-right"><p>48 bits physical, 48 bits virtual</p></td>
 </tr>
-<tr class="row-even"><td class="text-align:left"><p>Byte Order</p></td>
-<td class="text-align:right"><p>Little Endian</p></td>
+<tr class="row-even"><td class="text-left"><p>Byte Order</p></td>
+<td class="text-right"><p>Little Endian</p></td>
 </tr>
-<tr class="row-odd"><td class="text-align:left"><p><strong>CPU(s)</strong></p></td>
-<td class="text-align:right"><p>128</p></td>
+<tr class="row-odd"><td class="text-left"><p><strong>CPU(s)</strong></p></td>
+<td class="text-right"><p>128</p></td>
 </tr>
-<tr class="row-even"><td class="text-align:left"><p>On-line CPU(s) list</p></td>
-<td class="text-align:right"><p>0-127</p></td>
+<tr class="row-even"><td class="text-left"><p>On-line CPU(s) list</p></td>
+<td class="text-right"><p>0-127</p></td>
 </tr>
-<tr class="row-odd"><td class="text-align:left"><p><strong>Vendor ID</strong></p></td>
-<td class="text-align:right"><p>AuthenticAMD</p></td>
+<tr class="row-odd"><td class="text-left"><p><strong>Vendor ID</strong></p></td>
+<td class="text-right"><p>AuthenticAMD</p></td>
 </tr>
-<tr class="row-even"><td class="text-align:left"><p>Model name</p></td>
-<td class="text-align:right"><p>AMD EPYC 7543 32-Core Processor</p></td>
+<tr class="row-even"><td class="text-left"><p>Model name</p></td>
+<td class="text-right"><p>AMD EPYC 7543 32-Core Processor</p></td>
 </tr>
-<tr class="row-odd"><td class="text-align:left"><p>CPU family</p></td>
-<td class="text-align:right"><p>25</p></td>
+<tr class="row-odd"><td class="text-left"><p>CPU family</p></td>
+<td class="text-right"><p>25</p></td>
 </tr>
-<tr class="row-even"><td class="text-align:left"><p>Model</p></td>
-<td class="text-align:right"><p>1</p></td>
+<tr class="row-even"><td class="text-left"><p>Model</p></td>
+<td class="text-right"><p>1</p></td>
 </tr>
-<tr class="row-odd"><td class="text-align:left"><p>Thread(s) per core</p></td>
-<td class="text-align:right"><p>2</p></td>
+<tr class="row-odd"><td class="text-left"><p>Thread(s) per core</p></td>
+<td class="text-right"><p>2</p></td>
 </tr>
-<tr class="row-even"><td class="text-align:left"><p>Core(s) per socket</p></td>
-<td class="text-align:right"><p>32</p></td>
+<tr class="row-even"><td class="text-left"><p>Core(s) per socket</p></td>
+<td class="text-right"><p>32</p></td>
 </tr>
-<tr class="row-odd"><td class="text-align:left"><p>Socket(s)</p></td>
-<td class="text-align:right"><p>2</p></td>
+<tr class="row-odd"><td class="text-left"><p>Socket(s)</p></td>
+<td class="text-right"><p>2</p></td>
 </tr>
-<tr class="row-even"><td class="text-align:left"><p>Stepping</p></td>
-<td class="text-align:right"><p>1</p></td>
+<tr class="row-even"><td class="text-left"><p>Stepping</p></td>
+<td class="text-right"><p>1</p></td>
 </tr>
-<tr class="row-odd"><td class="text-align:left"><p>Frequency boost</p></td>
-<td class="text-align:right"><p>enabled</p></td>
+<tr class="row-odd"><td class="text-left"><p>Frequency boost</p></td>
+<td class="text-right"><p>enabled</p></td>
 </tr>
-<tr class="row-even"><td class="text-align:left"><p>CPU max MHz</p></td>
-<td class="text-align:right"><p>2800.0000</p></td>
+<tr class="row-even"><td class="text-left"><p>CPU max MHz</p></td>
+<td class="text-right"><p>2800.0000</p></td>
 </tr>
-<tr class="row-odd"><td class="text-align:left"><p>CPU min MHz</p></td>
-<td class="text-align:right"><p>1500.0000</p></td>
+<tr class="row-odd"><td class="text-left"><p>CPU min MHz</p></td>
+<td class="text-right"><p>1500.0000</p></td>
 </tr>
-<tr class="row-even"><td class="text-align:left"><p>BogoMIPS</p></td>
-<td class="text-align:right"><p>5589.72</p></td>
+<tr class="row-even"><td class="text-left"><p>BogoMIPS</p></td>
+<td class="text-right"><p>5589.72</p></td>
 </tr>
-<tr class="row-odd"><td class="text-align:left"><p>Flags</p></td>
-<td class="text-align:right"><p>fpu vme de pse</p></td>
+<tr class="row-odd"><td class="text-left"><p>Flags</p></td>
+<td class="text-right"><p>fpu vme de pse</p></td>
 </tr>
 </tbody>
 </table>
 </div>
-</div>
-</div>
-<div class="section" id="load-libraries">
-<h2>Load libraries<a class="headerlink" href="#load-libraries" title="Permalink to this headline">¶</a></h2>
+</section>
+</section>
+<section id="load-libraries">
+<h2>Load libraries<a class="headerlink" href="#load-libraries" title="Permalink to this heading">#</a></h2>
 <div class="cell tag_hide-input docutils container">
+<details class="hide above-input">
+<summary aria-label="Toggle hidden content">
+<span class="collapsed">Show code cell source</span>
+<span class="expanded">Hide code cell source</span>
+</summary>
 <div class="cell_input docutils container">
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># System imports</span>
 <span class="kn">import</span> <span class="nn">sys</span>
@@ -985,10 +721,11 @@ Source: Image generated by the NASA and taken from Common Dreams.
 </pre></div>
 </div>
 </div>
+</details>
 </div>
-</div>
-<div class="section" id="dataset">
-<h2>Dataset<a class="headerlink" href="#dataset" title="Permalink to this headline">¶</a></h2>
+</section>
+<section id="dataset">
+<h2>Dataset<a class="headerlink" href="#dataset" title="Permalink to this heading">#</a></h2>
 <p>The training and validation data derive from running the Massachusetts Institute of Technology general circulation model (<a class="reference external" href="https://zenodo.org/record/4672260#.ZFgb_S-B2pY">MITgcm</a>) —a physically based model capable of simulating the ocean or the atmosphere dynamics due to isomorphisms in the governing equations. This research project relies on a simple 2° sector configuration that captures the fundamental dynamics of the ocean, including a realistic overturning circulation. This configuration features a single ocean basin, with:</p>
 <ul class="simple">
 <li><p>limited topography</p></li>
@@ -1002,9 +739,9 @@ Source: Image generated by the NASA and taken from Common Dreams.
 <li><p>78 cells in the latitudinal direction</p></li>
 </ul>
 <p>The simulator has a 12-hr time step, with fields output daily. We focus on daily-mean outputs.</p>
-</div>
-<div class="section" id="download-input-material">
-<h2>Download input material<a class="headerlink" href="#download-input-material" title="Permalink to this headline">¶</a></h2>
+</section>
+<section id="download-input-material">
+<h2>Download input material<a class="headerlink" href="#download-input-material" title="Permalink to this heading">#</a></h2>
 <div class="alert alert-warning">
 <p><strong>Note:</strong>
 The submitted notebook (located at <code class="docutils literal notranslate"><span class="pre">notebooks/notebook_submitted.ipynb</span></code>) downloads input datasets and saved models from Zenodo repositories. This notebook version skips the download step by fetching input files directly from a cloud storage kindly provided by the <a class="reference external" href="https://github.com/pangeo-data/pangeo-eosc">European Open Science Cloud (EOSC)</a>.</p>
@@ -1019,11 +756,11 @@ The submitted notebook (located at <code class="docutils literal notranslate"><s
 !bash &quot;infrastructure/downloader_experiments.sh&quot; &gt; &quot;../outputs/logs/download_experiments.txt&quot;
 </pre></div>
 </div>
-</div>
-<div class="section" id="reproduce-paper">
-<h2>Reproduce paper<a class="headerlink" href="#reproduce-paper" title="Permalink to this headline">¶</a></h2>
-<div class="section" id="ocean-dynamics-figure-1">
-<h3>Ocean dynamics (Figure 1)<a class="headerlink" href="#ocean-dynamics-figure-1" title="Permalink to this headline">¶</a></h3>
+</section>
+<section id="reproduce-paper">
+<h2>Reproduce paper<a class="headerlink" href="#reproduce-paper" title="Permalink to this heading">#</a></h2>
+<section id="ocean-dynamics-figure-1">
+<h3>Ocean dynamics (Figure 1)<a class="headerlink" href="#ocean-dynamics-figure-1" title="Permalink to this heading">#</a></h3>
 <p>The paper uses a  2° sector configuration to simulate ocean dynamics. This configuration features a single ocean basin, with limited topography, simplified coastlines, and constant idealized forcing. This has been used in a number of idealized simulations of Southern Ocean processes and their impacts on the global circulation. This configuration, while relatively simple, captures the fundamental dynamics of the ocean, including a realistic overturning circulation.</p>
 <p>In the following script, we load the MITGCM DATASET and visualize the configuration used to simulate the ocean dynamics. Focusing particuarly on:</p>
 <ol style="list-style-type: lower-alpha">
@@ -1069,18 +806,18 @@ Shape of dataset: (2, 42, 78, 11)
 Temperature (°C) at 25 m below the surface for one particular day.
 </pre></div>
 </div>
-<img alt="../../../_images/notebook_7_1.png" src="../../../_images/notebook_7_1.png" />
-<img alt="../../../_images/notebook_7_2.png" src="../../../_images/notebook_7_2.png" />
+<img alt="../../../_images/2abf905522e0496aa10c0aaf3b609553153854058ac59da1c3f64f6bd48c4b3f.png" src="../../../_images/2abf905522e0496aa10c0aaf3b609553153854058ac59da1c3f64f6bd48c4b3f.png" />
+<img alt="../../../_images/8e62fba5fd858b5a79f52b8aa1ee1938e1d75c755b9e8b7cb2220d6b36a3da56.png" src="../../../_images/8e62fba5fd858b5a79f52b8aa1ee1938e1d75c755b9e8b7cb2220d6b36a3da56.png" />
 <div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Change in temperature between over 1 day at 25 m below the surface.
 </pre></div>
 </div>
-<img alt="../../../_images/notebook_7_4.png" src="../../../_images/notebook_7_4.png" />
-<img alt="../../../_images/notebook_7_5.png" src="../../../_images/notebook_7_5.png" />
+<img alt="../../../_images/9946a84ef1ef03b4eee814b49602a27b3b31d457f8fc01bf79fbced2ee628a0c.png" src="../../../_images/9946a84ef1ef03b4eee814b49602a27b3b31d457f8fc01bf79fbced2ee628a0c.png" />
+<img alt="../../../_images/fe2c808b2b6a95f0ca47b9584c3267642d89a011706481e4607ccbf68090b00c.png" src="../../../_images/fe2c808b2b6a95f0ca47b9584c3267642d89a011706481e4607ccbf68090b00c.png" />
 <div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Standard deviation in temperature at 25 m below the surface.
 </pre></div>
 </div>
-<img alt="../../../_images/notebook_7_7.png" src="../../../_images/notebook_7_7.png" />
-<img alt="../../../_images/notebook_7_8.png" src="../../../_images/notebook_7_8.png" />
+<img alt="../../../_images/6b50819532195f8935947d9c5f207be012d95bc52a2e8913c83a6b888cc2da9d.png" src="../../../_images/6b50819532195f8935947d9c5f207be012d95bc52a2e8913c83a6b888cc2da9d.png" />
+<img alt="../../../_images/1bb3b0a01b98613ead903ce1cd2a5fa23cb028a6b01cf78d195186fce5458c39.png" src="../../../_images/1bb3b0a01b98613ead903ce1cd2a5fa23cb028a6b01cf78d195186fce5458c39.png" />
 <div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>================================================
 
  25 M BELOW THE SURFACE &amp; AT at 13° E FOR ONE PARTICULAR DAY 
@@ -1090,15 +827,15 @@ Temperature (°C) at 25 m below the surface for one particular day.
 Temperature (°C) at 25 m below the surface &amp; at 13° E for one particular day.
 </pre></div>
 </div>
-<img alt="../../../_images/notebook_7_10.png" src="../../../_images/notebook_7_10.png" />
+<img alt="../../../_images/9d4855781acb0a236bc39c28a7aba7bbfbd6c7ec341e5eeac6435f7d43de3a83.png" src="../../../_images/9d4855781acb0a236bc39c28a7aba7bbfbd6c7ec341e5eeac6435f7d43de3a83.png" />
 <div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Change in temperature between over 1 day in temperature at 25 m below the surface &amp; at 13° E.
 </pre></div>
 </div>
-<img alt="../../../_images/notebook_7_12.png" src="../../../_images/notebook_7_12.png" />
+<img alt="../../../_images/fea0d519adc4f81be260025971a944cf0d4848b34bd7e66acb6498a8106264d3.png" src="../../../_images/fea0d519adc4f81be260025971a944cf0d4848b34bd7e66acb6498a8106264d3.png" />
 <div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Standard deviation in temperature at 25 m below the surface &amp; at 13° E.
 </pre></div>
 </div>
-<img alt="../../../_images/notebook_7_14.png" src="../../../_images/notebook_7_14.png" />
+<img alt="../../../_images/fcd5b7587b9433702146bdd1d6b787a6deb8194d9f27944a8c77b8f89d4b704a.png" src="../../../_images/fcd5b7587b9433702146bdd1d6b787a6deb8194d9f27944a8c77b8f89d4b704a.png" />
 <div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>================================================
 
   TIME SERIES AT 57° N, 17° E, and −25 m 
@@ -1106,7 +843,7 @@ Temperature (°C) at 25 m below the surface &amp; at 13° E for one particular d
 ================================================
 </pre></div>
 </div>
-<img alt="../../../_images/notebook_7_16.png" src="../../../_images/notebook_7_16.png" />
+<img alt="../../../_images/17757c07511c5fa404e84af0d7ff928639c9c73bf55f15d2f2109ea04e729fc9.png" src="../../../_images/17757c07511c5fa404e84af0d7ff928639c9c73bf55f15d2f2109ea04e729fc9.png" />
 <div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>================================================
 
   TIME SERIES AT 55° S, 9° E, and −25 m 
@@ -1114,7 +851,7 @@ Temperature (°C) at 25 m below the surface &amp; at 13° E for one particular d
 ================================================
 </pre></div>
 </div>
-<img alt="../../../_images/notebook_7_18.png" src="../../../_images/notebook_7_18.png" />
+<img alt="../../../_images/20f0bea716f5fb43a728744cb6dfcf12922c634bfb62289bd446f9f04588ad71.png" src="../../../_images/20f0bea716f5fb43a728744cb6dfcf12922c634bfb62289bd446f9f04588ad71.png" />
 </div>
 </div>
 <p>Notice that the domain:</p>
@@ -1125,13 +862,13 @@ N to  40°𝑆 (see Figure 1a). Below this, in the southernmost 20°, the simula
 <li><p>has flat-bottom bathymetry of 5,000 m over most of the domain, with a 2° region of 2,500-m depth at the southernmost 20° of the eastern edge (i.e., the spit of land forming the eastern boundary continues to the southern boundary as a 2,500-m high subsurface ridge).</p></li>
 </ul>
 <p>Importantly, note from the figures presented, that the depth axis is scaled to give each GCM grid cell equal spacing. The simulator shows a realistic temperature distribution with warm surface water near the equator, and cooler water near the poles and in the deep ocean. Temperature changes are largest in the very north of the domain and throughout the southern region. Though changes per day are small, they accumulate over time to give cycles of around 0.2° in some regions of the domain.</p>
-</div>
-</div>
-<div class="section" id="model-training">
-<h2>Model training<a class="headerlink" href="#model-training" title="Permalink to this headline">¶</a></h2>
+</section>
+</section>
+<section id="model-training">
+<h2>Model training<a class="headerlink" href="#model-training" title="Permalink to this heading">#</a></h2>
 <p>Model training is performed for the purely linear regression model (only linear terms) and the nolinear regression model (linear and multiplicative terms). Run parameters for the control and withholding experiments were set through the <code class="docutils literal notranslate"><span class="pre">run_vars</span></code> variable in the script <code class="docutils literal notranslate"><span class="pre">src/pipelines/TrainLinearRegressionModel.py</span></code>.</p>
-<div class="section" id="linear-regression-a-toy-example">
-<h3>Linear regression (A toy example)<a class="headerlink" href="#linear-regression-a-toy-example" title="Permalink to this headline">¶</a></h3>
+<section id="linear-regression-a-toy-example">
+<h3>Linear regression (A toy example)<a class="headerlink" href="#linear-regression-a-toy-example" title="Permalink to this heading">#</a></h3>
 <p>For illustrative purposes, in the following section we showcase how to set parameters for a linear regression model that takes as input all the relevant variables, that is,:</p>
 <blockquote>
 <div><p>Temperature, salinity, U (East–West) and V (North–South) current components, density, U, V, and W (vertical) components of the Gent-McWilliams (GM) bolus velocities, sea surface height (SSH), latitude, longitude, and depth. The GM bolus velocities are a parameterization of the velocities resulting from ocean eddies and are used in the GM scheme to calculate the advective effects of eddy action on tracers.</p>
@@ -1225,8 +962,8 @@ Shape for orig_temp and clim_temp, tr&amp;val
 </div>
 </div>
 </div>
-<div class="section" id="model-fit-example">
-<h4>Model fit example<a class="headerlink" href="#model-fit-example" title="Permalink to this headline">¶</a></h4>
+<section id="model-fit-example">
+<h4>Model fit example<a class="headerlink" href="#model-fit-example" title="Permalink to this heading">#</a></h4>
 <p>After splitting our dataset into the corresponding subsamples (training, validation and testing), we proceed to train the model setting the following  hyperparameter:</p>
 <ul class="simple">
 <li><p><span class="math notranslate nohighlight">\(\alpha = 0.001\)</span></p></li>
@@ -1348,12 +1085,12 @@ Shape for orig_temp and clim_temp, tr&amp;val
 </table>
 </div></div></div>
 </div>
-</div>
-</div>
-<div class="section" id="performance-of-the-regressor">
-<h3>Performance of the regressor<a class="headerlink" href="#performance-of-the-regressor" title="Permalink to this headline">¶</a></h3>
-<div class="section" id="scatter-plot-for-the-control-regressor-figure-2-different-from-above">
-<h4>Scatter plot for the control regressor (Figure 2) - Different from above<a class="headerlink" href="#scatter-plot-for-the-control-regressor-figure-2-different-from-above" title="Permalink to this headline">¶</a></h4>
+</section>
+</section>
+<section id="performance-of-the-regressor">
+<h3>Performance of the regressor<a class="headerlink" href="#performance-of-the-regressor" title="Permalink to this heading">#</a></h3>
+<section id="scatter-plot-for-the-control-regressor-figure-2-different-from-above">
+<h4>Scatter plot for the control regressor (Figure 2) - Different from above<a class="headerlink" href="#scatter-plot-for-the-control-regressor-figure-2-different-from-above" title="Permalink to this heading">#</a></h4>
 <p>We update the dictionary <code class="docutils literal notranslate"><span class="pre">run_vars</span></code>, such that <code class="docutils literal notranslate"><span class="pre">poly_degree</span></code> is set to <code class="docutils literal notranslate"><span class="pre">2</span></code> – This helps us in defining the model so that it has second-order pairwise polynomial terms, in order to capture a limited amount of nonlinear behavior through interaction between terms. This means that as well as the above inputs, we have multiplicative pairs of features</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
@@ -1402,9 +1139,9 @@ Some models were trained using large input datasets which will not work in the m
 </pre></div>
 </div>
 <p>The model captures the central part of the distribution well. While the majority of the temperature change is dominated by small near-zero changes, capturing these is key to producing a good forecast system. To a lesser extent, the regressor also captures the tails of the distribution, where temperature changes are larger, although the underprediction is more significant here. However, it is noteworthy that the model still shows some skill for these points, given that the model used is very simple and there are a relatively limited number of training samples in the tails.</p>
-</div>
-<div class="section" id="spatial-patterns-of-errors-figure-3">
-<h4>Spatial patterns of errors (Figure 3)<a class="headerlink" href="#spatial-patterns-of-errors-figure-3" title="Permalink to this headline">¶</a></h4>
+</section>
+<section id="spatial-patterns-of-errors-figure-3">
+<h4>Spatial patterns of errors (Figure 3)<a class="headerlink" href="#spatial-patterns-of-errors-figure-3" title="Permalink to this heading">#</a></h4>
 <p>To understand how the regressor performs spatially, temporally averaged absolute errors are plotted.
 These averaged errors are shown in Figure 3. Note that the regressor is only applied away from boundary and land points (in its current form, it cannot deal with spatial locations that are not surrounded on all sides by ocean points); hence, points close to land are not included in these plots. The script below performs the following steps:</p>
 <ol style="list-style-type: lower-alpha">
@@ -1417,17 +1154,17 @@ These averaged errors are shown in Figure 3. Note that the regressor is only app
 </div>
 </div>
 <div class="cell_output docutils container">
-<img alt="../../../_images/notebook_18_0.png" src="../../../_images/notebook_18_0.png" />
-<img alt="../../../_images/notebook_18_11.png" src="../../../_images/notebook_18_11.png" />
+<img alt="../../../_images/fa805687dc281f0f9ae743c2dc643285a39206840e468773b2a13bf9fe965c3a.png" src="../../../_images/fa805687dc281f0f9ae743c2dc643285a39206840e468773b2a13bf9fe965c3a.png" />
+<img alt="../../../_images/f5e2aad5789a58ab69337a0753a07f719a779f4a5beaf4330977f9b9ed9b0461.png" src="../../../_images/f5e2aad5789a58ab69337a0753a07f719a779f4a5beaf4330977f9b9ed9b0461.png" />
 </div>
 </div>
 <p>The regressor shows the largest errors are located in the north of the domain and in the Southern Ocean. We see that the errors in the north of the domain are co-located with regions of high vertical advective temperature fluxes, and regions of high convective fluxes. These results imply the regression model struggles to fully capture the vertical processes, and the associated heat flux, in the north of the domain. The high errors in the Southern Ocean are again co-located with regions of high vertical diffusive fluxes, this time both explicit and implicit, and vertical advection.  Throughout the ocean interior where temperature changes and the fluxes associated with these are small, errors are also small as would be expected.</p>
-</div>
-</div>
-<div class="section" id="sensitivity-analysis">
-<h3>Sensitivity analysis<a class="headerlink" href="#sensitivity-analysis" title="Permalink to this headline">¶</a></h3>
-<div class="section" id="coefficient-analysis-figure-4">
-<h4>Coefficient analysis (Figure 4)<a class="headerlink" href="#coefficient-analysis-figure-4" title="Permalink to this headline">¶</a></h4>
+</section>
+</section>
+<section id="sensitivity-analysis">
+<h3>Sensitivity analysis<a class="headerlink" href="#sensitivity-analysis" title="Permalink to this heading">#</a></h3>
+<section id="coefficient-analysis-figure-4">
+<h4>Coefficient analysis (Figure 4)<a class="headerlink" href="#coefficient-analysis-figure-4" title="Permalink to this heading">#</a></h4>
 <p>Figure 4a shows coefficients averaged over all input locations for each variable type (i.e., for most variables, there are 27 inputs, corresponding to the 27 neighboring cells; we average over these to give a single value for each variable (temperature, salinity, etc.) and for each polynomial combination of variables).</p>
 <p>Figure 4b shows the coefficients related to polynomial interactions of temperature with temperature. These are the raw coefficients, without any averaging applied.</p>
 <div class="cell docutils container">
@@ -1443,8 +1180,8 @@ raw_coeffs.shape
 (1, 26106)
 </pre></div>
 </div>
-<img alt="../../../_images/notebook_21_1.png" src="../../../_images/notebook_21_1.png" />
-<img alt="../../../_images/notebook_21_2.png" src="../../../_images/notebook_21_2.png" />
+<img alt="../../../_images/5fa480374f5f54a516e2455e6719dd5c2ba56e3ee2a3e4fb28210c6af238a8ec.png" src="../../../_images/5fa480374f5f54a516e2455e6719dd5c2ba56e3ee2a3e4fb28210c6af238a8ec.png" />
+<img alt="../../../_images/ffc8904bae2552a4b28aadf068808a4194f74e6f7d7c4b2b520759425a807fba.png" src="../../../_images/ffc8904bae2552a4b28aadf068808a4194f74e6f7d7c4b2b520759425a807fba.png" />
 </div>
 </div>
 <p>High-weighted inputs (those with a large magnitude coefficient) are variables which are heavily used in the predictions and therefore considered important for the predictive skill. From the above figures we infer:</p>
@@ -1453,12 +1190,12 @@ raw_coeffs.shape
 <li>From Figure 4a: The location information is low weighted, particularly when interacting with other variables. This indicates that the regressor is not basing its predictions predominantly on the location of points, but on the physical variables themselves.</li>
 <li>From Figure 4b: Multiplicative interaction between temperatures at the grid point we are predicting for and the temperature at all surrounding points is very highly weighted. This fits well with our physical expectation of the system—as diffusive and advective fluxes of temperature are dominated by local gradients in temperature.</li>
 </ol>
-</div>
-<div class="section" id="witholding-experiments">
-<h4>Witholding experiments<a class="headerlink" href="#witholding-experiments" title="Permalink to this headline">¶</a></h4>
+</section>
+<section id="witholding-experiments">
+<h4>Witholding experiments<a class="headerlink" href="#witholding-experiments" title="Permalink to this heading">#</a></h4>
 <p>In this section, we run a series of withholding experiments. For each of the variables described with the exception of temperature, we train a new regressor leaving out that one variable group, for example, we train a new regressor with all the existing inputs except for salinity at all surrounding points and any multiplicative terms including salinity.</p>
-<div class="section" id="withholding-multiplicative-terms-figure-5-importance-of-non-linearity">
-<h5>Withholding multiplicative terms: Figure 5; Importance of Non-Linearity<a class="headerlink" href="#withholding-multiplicative-terms-figure-5-importance-of-non-linearity" title="Permalink to this headline">¶</a></h5>
+<section id="withholding-multiplicative-terms-figure-5-importance-of-non-linearity">
+<h5>Withholding multiplicative terms: Figure 5; Importance of Non-Linearity<a class="headerlink" href="#withholding-multiplicative-terms-figure-5-importance-of-non-linearity" title="Permalink to this heading">#</a></h5>
 <p>We update the dictionary <code class="docutils literal notranslate"><span class="pre">run_vars</span></code>, such that <code class="docutils literal notranslate"><span class="pre">poly_degree</span></code> is set to <code class="docutils literal notranslate"><span class="pre">1</span></code> – This helps us in evaluating the performance of the purely linear model, that is, the model trained without any multiplicative terms.</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
@@ -1521,13 +1258,13 @@ raw_coeffs.shape
 ================================================
 </pre></div>
 </div>
-<img alt="../../../_images/notebook_25_1.png" src="../../../_images/notebook_25_1.png" />
+<img alt="../../../_images/433ca716621931896c70461295d051c495076887fc01927b37868a1f42e77538.png" src="../../../_images/433ca716621931896c70461295d051c495076887fc01927b37868a1f42e77538.png" />
 </div>
 </div>
 <p>We see that, without multiplicative terms, the model can capture the mean behavior of the system (zero change in temperature) but is unable to capture any of the variability. This mean behavior alone does not provide useful forecasts, as can be seen from the statistics for this experiment. Nonlinearity is shown to be critical to modeling the variability of temperature change.</p>
-</div>
-<div class="section" id="withholding-3d-structure-figure-6-impact-of-vertical-structure">
-<h5>Withholding 3D structure: Figure 6; Impact of vertical structure<a class="headerlink" href="#withholding-3d-structure-figure-6-impact-of-vertical-structure" title="Permalink to this headline">¶</a></h5>
+</section>
+<section id="withholding-3d-structure-figure-6-impact-of-vertical-structure">
+<h5>Withholding 3D structure: Figure 6; Impact of vertical structure<a class="headerlink" href="#withholding-3d-structure-figure-6-impact-of-vertical-structure" title="Permalink to this heading">#</a></h5>
 <p>To assess how information about the vertical structure of the ocean impacts predictions, we look at spatially averaged errors from the model trained with only a 2D neighborhood of inputs, along with the difference in error between this and the control regressor from previous Section.</p>
 <p>We update the dictionary <code class="docutils literal notranslate"><span class="pre">run_vars</span></code>, such that <code class="docutils literal notranslate"><span class="pre">dimension</span></code> is set to <code class="docutils literal notranslate"><span class="pre">2</span></code>.</p>
 <div class="cell docutils container">
@@ -1586,7 +1323,7 @@ raw_coeffs.shape
 ================================================
 </pre></div>
 </div>
-<img alt="../../../_images/notebook_29_1.png" src="../../../_images/notebook_29_1.png" />
+<img alt="../../../_images/525164e929a65f6aa94e0f803beb3dfe53665b1d39d4157507d228fab100ed0b.png" src="../../../_images/525164e929a65f6aa94e0f803beb3dfe53665b1d39d4157507d228fab100ed0b.png" />
 <div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span> ================================================
 
  Plotting the difference between this and the control run, with areas shaded in red indicating where the error has increased as a consequence of withholding information about the vertical structure, and blue indicating areas where the predictions are improved. 
@@ -1594,13 +1331,13 @@ raw_coeffs.shape
 ================================================
 </pre></div>
 </div>
-<img alt="../../../_images/notebook_29_3.png" src="../../../_images/notebook_29_3.png" />
+<img alt="../../../_images/4adf47ece7726c5aa00ad45880ace3d524f099ee578a520481a9d63647a66d1c.png" src="../../../_images/4adf47ece7726c5aa00ad45880ace3d524f099ee578a520481a9d63647a66d1c.png" />
 </div>
 </div>
 <p>Interestingly, this regressor shows some regions (the deep water in the south of the domain) where the errors are notably improved in a regressor using only 2D information. In this work, we have developed a regressor which learns one equation to be applied across all grid boxes in the domain. We optimize for best performance averaged over all relevant grid cells, but this does not enforce the best possible performance over each individual grid point/region, and so some of the resultant models will favor certain types of dynamics more than others. Given this, it is not unexpected that the new equations discovered for the withholding experiments (which again optimize for best performance averaged over the entire domain interior) may outperform the control in some locations, despite being poorer overall. Here, we see that the control model is able to perform well across the domain, and optimizes for good performance overall, rather than the much more varied performance seen in the withholding experiments. It seems that as the model which withholds vertical information is not capable of performing well in many regions of the domain, a solution is found which highly optimizes performance in other regions to minimize error overall.</p>
-</div>
-<div class="section" id="withholding-currents-figure-7-impact-of-currents">
-<h5>Withholding currents: Figure 7; Impact of currents<a class="headerlink" href="#withholding-currents-figure-7-impact-of-currents" title="Permalink to this headline">¶</a></h5>
+</section>
+<section id="withholding-currents-figure-7-impact-of-currents">
+<h5>Withholding currents: Figure 7; Impact of currents<a class="headerlink" href="#withholding-currents-figure-7-impact-of-currents" title="Permalink to this heading">#</a></h5>
 <p>We update the dictionary <code class="docutils literal notranslate"><span class="pre">run_vars</span></code>, such that <code class="docutils literal notranslate"><span class="pre">current</span></code> is set to <code class="docutils literal notranslate"><span class="pre">False</span></code> – This helps us in evaluating the impact of currents on the performance of the model.</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
@@ -1658,7 +1395,7 @@ raw_coeffs.shape
 ================================================
 </pre></div>
 </div>
-<img alt="../../../_images/notebook_33_1.png" src="../../../_images/notebook_33_1.png" />
+<img alt="../../../_images/47ac52b24e452670bcd4cdd74d4c5b023bc291edbace2629faaf26f066244654.png" src="../../../_images/47ac52b24e452670bcd4cdd74d4c5b023bc291edbace2629faaf26f066244654.png" />
 <div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span> ================================================
 
  Plotting the difference between this and the control run, with areas shaded in red indicating where the error has increased as a consequence of withholding information about the vertical structure, and blue indicating areas where the predictions are improved. 
@@ -1666,16 +1403,16 @@ raw_coeffs.shape
 ================================================
 </pre></div>
 </div>
-<img alt="../../../_images/notebook_33_3.png" src="../../../_images/notebook_33_3.png" />
+<img alt="../../../_images/9eae34595ec03b355891bb0672ce9d3f1471630f454f99ad0b2f82c0ebbcc5e8.png" src="../../../_images/9eae34595ec03b355891bb0672ce9d3f1471630f454f99ad0b2f82c0ebbcc5e8.png" />
 </div>
 </div>
 <p>The horizontal (U and V) components of the currents directly drive horizontal advection of temperature. They are also indirectly related to horizontal diffusion, as this is increased in regions of high currents and steep gradients. As such, we would expect that suppressing information about the horizontal currents would cause increases in error in regions where horizontal advection and horizontal diffusion is high. However, again, we note that this region of increased error is one where many processes are present, and the increased errors seen also coincide, to a lesser extent, with regions of high vertical processes (advection, diffusion, and convection), which is less in line with our physical understanding. Here, errors appear more closely matched to the horizontal processes, and so a reasonable interpretation is that the model here is behaving as expected.</p>
-</div>
-</div>
-</div>
-</div>
-<div class="section" id="summary">
-<h2>Summary<a class="headerlink" href="#summary" title="Permalink to this headline">¶</a></h2>
+</section>
+</section>
+</section>
+</section>
+<section id="summary">
+<h2>Summary<a class="headerlink" href="#summary" title="Permalink to this heading">#</a></h2>
 <ul class="simple">
 <li><p>There has been much recent interest in developing data-driven models for weather and climate predictions. However, there are open questions regarding their generalizability and robustness, highlighting a need to better understand how they make their predictions. In particular, it is important to understand whether data-driven models learn the underlying physics of the system against which they are trained, or simply identify statistical patterns without any clear link to the underlying physics.</p></li>
 <li><p>In this notebook, we run a sensitivity analysis of a regression-based model of ocean temperature, trained against simulations from a 3D ocean model setup in a very simple configuration.</p></li>
@@ -1684,13 +1421,13 @@ raw_coeffs.shape
 <li><p>We see that information about the vertical profile of the water column reduces errors in regions of convective activity, and information about the currents reduces errors in regions dominated by advective processes.</p></li>
 <li><p>Our results demonstrate that even a simple regression model is capable of learning much of the physics of the system being modeled. We expect that a similar sensitivity analysis could be usefully applied to more complex ocean configurations.</p></li>
 </ul>
-</div>
-<div class="section" id="citing-this-notebook">
-<h2>Citing this Notebook<a class="headerlink" href="#citing-this-notebook" title="Permalink to this headline">¶</a></h2>
+</section>
+<section id="citing-this-notebook">
+<h2>Citing this Notebook<a class="headerlink" href="#citing-this-notebook" title="Permalink to this heading">#</a></h2>
 <p>Please see <a class="reference external" href="https://github.com/eds-book-gallery/3286b92f-4fae-4cc6-a29e-e408bc844542/blob/main/CITATION.cff">CITATION.cff</a> for the full citation information. The citation file can be exported to APA or BibTex formats (learn more <a class="reference external" href="https://docs.github.com/en/repositories/managing-your-repositorys-settings-and-features/customizing-your-repository/about-citation-files">here</a>).</p>
-</div>
-<div class="section" id="additional-information">
-<h2>Additional information<a class="headerlink" href="#additional-information" title="Permalink to this headline">¶</a></h2>
+</section>
+<section id="additional-information">
+<h2>Additional information<a class="headerlink" href="#additional-information" title="Permalink to this heading">#</a></h2>
 <p><strong>Dataset</strong>: Malhotra, Garima, Pinto-Veizaga, Daniela, &amp; Pena, Jorge. (2023). Reproducible Challenge - Team 3 - Sensitivity analysis- Models. <a class="reference external" href="https://doi.org/10.5281/zenodo.7954232">https://doi.org/10.5281/zenodo.7954232</a> - Version 1</p>
 <p>Furner, Rachel. (2021). MITgcm Dataset for paper: Sensitivity analysis of a data-driven model of ocean temperature (v1.1) [Data set]. Zenodo. <a class="reference external" href="https://doi.org/10.5281/zenodo.7919172">https://doi.org/10.5281/zenodo.7919172</a> - Version 1.1</p>
 <p><strong>License</strong>: The code in this notebook is licensed under the MIT License. The Environmental Data Science book is licensed under the Creative Commons by Attribution 4.0 license. See further details <a class="reference external" href="https://github.com/alan-turing-institute/environmental-ds-book/blob/master/LICENSE.md">here</a>.</p>
@@ -1703,8 +1440,8 @@ Last tested: 2023-09-04
 </div>
 </div>
 </div>
-</div>
-</div>
+</section>
+</section>
 
     <script type="text/x-thebe-config">
     {
@@ -1718,7 +1455,7 @@ Last tested: 2023-09-04
             mode: "python"
         },
         kernelOptions: {
-            kernelName: "python3",
+            name: "python3",
             path: "./notebooks/gallery/3286b92f-4fae-4cc6-a29e-e408bc844542"
         },
         predefinedOutput: true
@@ -1726,44 +1463,148 @@ Last tested: 2023-09-04
     </script>
     <script>kernelName = 'python3'</script>
 
-              </div>
+                </article>
               
-            
-                <!-- Previous / next buttons -->
-<div class='prev-next-area'> 
-    <a class='left-prev' id="prev-link" href="../93463cac-471a-469d-ad52-0514fd9b67f2/notebook.html" title="previous page">
-        <i class="fas fa-angle-left"></i>
-        <div class="prev-next-info">
-            <p class="prev-next-subtitle">previous</p>
-            <p class="prev-next-title">Deep learning and variational inversion to quantify and attribute climate change (CIRC23)</p>
-        </div>
+
+              
+              
+              
+              
+                <footer class="prev-next-footer">
+                  
+<div class="prev-next-area">
+    <a class="left-prev"
+       href="../93463cac-471a-469d-ad52-0514fd9b67f2/notebook.html"
+       title="previous page">
+      <i class="fa-solid fa-angle-left"></i>
+      <div class="prev-next-info">
+        <p class="prev-next-subtitle">previous</p>
+        <p class="prev-next-title">Deep learning and variational inversion to quantify and attribute climate change (CIRC23)</p>
+      </div>
     </a>
-    <a class='right-next' id="next-link" href="../b128b282-dee7-44a7-bc21-f1fd21452a83/notebook.html" title="next page">
-    <div class="prev-next-info">
+    <a class="right-next"
+       href="../b128b282-dee7-44a7-bc21-f1fd21452a83/notebook.html"
+       title="next page">
+      <div class="prev-next-info">
         <p class="prev-next-subtitle">next</p>
         <p class="prev-next-title">Exploring Land Cover Data (Impact Observatory)</p>
-    </div>
-    <i class="fas fa-angle-right"></i>
+      </div>
+      <i class="fa-solid fa-angle-right"></i>
     </a>
 </div>
+                </footer>
+              
+            </div>
             
-        </div>
-    </div>
-    <footer class="footer">
-  <p>
-    
-      By EDS book Community. This site is powered by <a href="https://www.netlify.com/">Netlify</a>.<br/>
-    
-        &copy; Copyright 2021.<br/>
-  </p>
-</footer>
-</main>
+            
+              
+                <div class="bd-sidebar-secondary bd-toc"><div class="sidebar-secondary-items sidebar-secondary__inner">
 
 
-      </div>
-    </div>
+  <div class="sidebar-secondary-item">
+  <div class="page-toc tocsection onthispage">
+    <i class="fa-solid fa-list"></i> Contents
+  </div>
+  <nav class="bd-toc-nav page-toc">
+    <ul class="visible nav section-nav flex-column">
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#context">Context</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#purpose">Purpose</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#description">Description</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#highlights">Highlights</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#contributions">Contributions</a><ul class="nav section-nav flex-column">
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#notebook">Notebook</a></li>
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#modelling-codebase">Modelling codebase</a></li>
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#modelling-publications">Modelling publications</a></li>
+</ul>
+</li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#data">Data</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#source-code">Source code</a></li>
+</ul>
+</li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#load-libraries">Load libraries</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#dataset">Dataset</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#download-input-material">Download input material</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#reproduce-paper">Reproduce paper</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#ocean-dynamics-figure-1">Ocean dynamics (Figure 1)</a></li>
+</ul>
+</li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#model-training">Model training</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#linear-regression-a-toy-example">Linear regression (A toy example)</a><ul class="nav section-nav flex-column">
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#model-fit-example">Model fit example</a></li>
+</ul>
+</li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#performance-of-the-regressor">Performance of the regressor</a><ul class="nav section-nav flex-column">
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#scatter-plot-for-the-control-regressor-figure-2-different-from-above">Scatter plot for the control regressor (Figure 2) - Different from above</a></li>
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#spatial-patterns-of-errors-figure-3">Spatial patterns of errors (Figure 3)</a></li>
+</ul>
+</li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#sensitivity-analysis">Sensitivity analysis</a><ul class="nav section-nav flex-column">
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#coefficient-analysis-figure-4">Coefficient analysis (Figure 4)</a></li>
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#witholding-experiments">Witholding experiments</a><ul class="nav section-nav flex-column">
+<li class="toc-h5 nav-item toc-entry"><a class="reference internal nav-link" href="#withholding-multiplicative-terms-figure-5-importance-of-non-linearity">Withholding multiplicative terms: Figure 5; Importance of Non-Linearity</a></li>
+<li class="toc-h5 nav-item toc-entry"><a class="reference internal nav-link" href="#withholding-3d-structure-figure-6-impact-of-vertical-structure">Withholding 3D structure: Figure 6; Impact of vertical structure</a></li>
+<li class="toc-h5 nav-item toc-entry"><a class="reference internal nav-link" href="#withholding-currents-figure-7-impact-of-currents">Withholding currents: Figure 7; Impact of currents</a></li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#summary">Summary</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#citing-this-notebook">Citing this Notebook</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#additional-information">Additional information</a></li>
+</ul>
+  </nav></div>
+
+</div></div>
+              
+            
+          </div>
+          <footer class="bd-footer-content">
+            
+<div class="bd-footer-content__inner container">
   
-  <script src="../../../_static/js/index.be7d3bbb2ef33a8344ce.js"></script>
+  <div class="footer-item">
+    
+<p class="component-author">
+By EDS book Community. This site is powered by <a href="https://www.netlify.com/">Netlify</a>.
+</p>
 
+  </div>
+  
+  <div class="footer-item">
+    
+
+  <p class="copyright">
+    
+      © Copyright 2021.
+      <br/>
+    
+  </p>
+
+  </div>
+  
+  <div class="footer-item">
+    
+  </div>
+  
+  <div class="footer-item">
+    
+  </div>
+  
+</div>
+          </footer>
+        
+
+      </main>
+    </div>
+  </div>
+  
+  <!-- Scripts loaded after <body> so the DOM is not blocked -->
+  <script src="../../../_static/scripts/bootstrap.js?digest=8d27b9dea8ad943066ae"></script>
+<script src="../../../_static/scripts/pydata-sphinx-theme.js?digest=8d27b9dea8ad943066ae"></script>
+
+  <footer class="bd-footer">
+  </footer>
   </body>
 </html>

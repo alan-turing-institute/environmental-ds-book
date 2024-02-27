@@ -1,816 +1,511 @@
 
+
 <!DOCTYPE html>
 
-<html lang="en">
+
+<html lang="en" data-content_root="" >
+
   <head>
     <meta charset="utf-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="generator" content="Docutils 0.18.1: http://docutils.sourceforge.net/" />
+
     <title>Tree crown delineation using detectreeRGB &#8212; Environmental Data Science Book</title>
-    
-  <link href="../../../_static/css/theme.css" rel="stylesheet">
-  <link href="../../../_static/css/index.ff1ffe594081f20da1ef19478df9384b.css" rel="stylesheet">
+  
+  
+  
+  <script data-cfasync="false">
+    document.documentElement.dataset.mode = localStorage.getItem("mode") || "";
+    document.documentElement.dataset.theme = localStorage.getItem("theme") || "light";
+  </script>
+  
+  <!-- Loaded before other Sphinx assets -->
+  <link href="../../../_static/styles/theme.css?digest=8d27b9dea8ad943066ae" rel="stylesheet" />
+<link href="../../../_static/styles/bootstrap.css?digest=8d27b9dea8ad943066ae" rel="stylesheet" />
+<link href="../../../_static/styles/pydata-sphinx-theme.css?digest=8d27b9dea8ad943066ae" rel="stylesheet" />
 
-    
-  <link rel="stylesheet"
-    href="../../../_static/vendor/fontawesome/5.13.0/css/all.min.css">
-  <link rel="preload" as="font" type="font/woff2" crossorigin
-    href="../../../_static/vendor/fontawesome/5.13.0/webfonts/fa-solid-900.woff2">
-  <link rel="preload" as="font" type="font/woff2" crossorigin
-    href="../../../_static/vendor/fontawesome/5.13.0/webfonts/fa-brands-400.woff2">
+  
+  <link href="../../../_static/vendor/fontawesome/6.5.1/css/all.min.css?digest=8d27b9dea8ad943066ae" rel="stylesheet" />
+  <link rel="preload" as="font" type="font/woff2" crossorigin href="../../../_static/vendor/fontawesome/6.5.1/webfonts/fa-solid-900.woff2" />
+<link rel="preload" as="font" type="font/woff2" crossorigin href="../../../_static/vendor/fontawesome/6.5.1/webfonts/fa-brands-400.woff2" />
+<link rel="preload" as="font" type="font/woff2" crossorigin href="../../../_static/vendor/fontawesome/6.5.1/webfonts/fa-regular-400.woff2" />
 
-    
-      
-
-    
     <link rel="stylesheet" type="text/css" href="../../../_static/pygments.css" />
-    <link rel="stylesheet" type="text/css" href="../../../_static/sphinx-book-theme.css?digest=c3fdc42140077d1ad13ad2f1588a4309" />
+    <link rel="stylesheet" href="../../../_static/styles/sphinx-book-theme.css?digest=14f4ca6b54d191a8c7657f6c759bf11a5fb86285" type="text/css" />
     <link rel="stylesheet" type="text/css" href="../../../_static/togglebutton.css" />
     <link rel="stylesheet" type="text/css" href="../../../_static/copybutton.css" />
-    <link rel="stylesheet" type="text/css" href="../../../_static/mystnb.css" />
+    <link rel="stylesheet" type="text/css" href="../../../_static/mystnb.4510f1fc1dee50b3e5859aac5469c37c29e427902b24a333a5f9fcb2f0b3ac41.css" />
     <link rel="stylesheet" type="text/css" href="../../../_static/sphinx-thebe.css" />
-    <link rel="stylesheet" type="text/css" href="../../../_static/panels-main.c949a650a448cc0ae9fd3441c0e17fb0.css" />
-    <link rel="stylesheet" type="text/css" href="../../../_static/panels-variables.06eb56fa6e07937060861dad626602ad.css" />
-    <link rel="stylesheet" type="text/css" href="../../../_static/design-style.1e8bd061cd6da7fc9cf755528e8ffc24.min.css" />
-    
-  <link rel="preload" as="script" href="../../../_static/js/index.be7d3bbb2ef33a8344ce.js">
+    <link rel="stylesheet" type="text/css" href="../../../_static/design-style.4045f2051d55cab465a707391d5b2007.min.css" />
+  
+  <!-- Pre-loaded scripts that we'll load fully later -->
+  <link rel="preload" as="script" href="../../../_static/scripts/bootstrap.js?digest=8d27b9dea8ad943066ae" />
+<link rel="preload" as="script" href="../../../_static/scripts/pydata-sphinx-theme.js?digest=8d27b9dea8ad943066ae" />
+  <script src="../../../_static/vendor/fontawesome/6.5.1/js/all.min.js?digest=8d27b9dea8ad943066ae"></script>
 
     <script data-url_root="../../../" id="documentation_options" src="../../../_static/documentation_options.js"></script>
     <script src="../../../_static/jquery.js"></script>
     <script src="../../../_static/underscore.js"></script>
+    <script src="../../../_static/_sphinx_javascript_frameworks_compat.js"></script>
     <script src="../../../_static/doctools.js"></script>
     <script src="../../../_static/clipboard.min.js"></script>
     <script src="../../../_static/copybutton.js"></script>
+    <script src="../../../_static/scripts/sphinx-book-theme.js?digest=5a5c038af52cf7bc1a1ec88eea08e6366ee68824"></script>
     <script>let toggleHintShow = 'Click to show';</script>
     <script>let toggleHintHide = 'Click to hide';</script>
     <script>let toggleOpenOnPrint = 'true';</script>
     <script src="../../../_static/togglebutton.js"></script>
-    <script>var togglebuttonSelector = '.toggle, .admonition.dropdown, .tag_hide_input div.cell_input, .tag_hide-input div.cell_input, .tag_hide_output div.cell_output, .tag_hide-output div.cell_output, .tag_hide_cell.cell, .tag_hide-cell.cell';</script>
-    <script src="../../../_static/sphinx-book-theme.d59cb220de22ca1c485ebbdc042f0030.js"></script>
+    <script>var togglebuttonSelector = '.toggle, .admonition.dropdown';</script>
     <script src="../../../_static/design-tabs.js"></script>
+    <script async="async" src="https://www.googletagmanager.com/gtag/js?id=G-3E20PWD938"></script>
+    <script>
+                window.dataLayer = window.dataLayer || [];
+                function gtag(){ dataLayer.push(arguments); }
+                gtag('js', new Date());
+                gtag('config', 'G-3E20PWD938');
+            </script>
     <script>const THEBE_JS_URL = "https://unpkg.com/thebe@0.8.2/lib/index.js"
 const thebe_selector = ".thebe,.cell"
 const thebe_selector_input = "pre"
 const thebe_selector_output = ".output, .cell_output"
 </script>
     <script async="async" src="../../../_static/sphinx-thebe.js"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/require.js/2.3.4/require.min.js"></script>
-    <script src="https://unpkg.com/@jupyter-widgets/html-manager@^0.20.1/dist/embed-amd.js"></script>
+    <script type="application/vnd.jupyter.widget-state+json">{"state": {"20a6f9258fed44e2b0fae65bdf5dee70": {"model_module": "@jupyter-widgets/controls", "model_module_version": "2.0.0", "model_name": "HTMLModel", "state": {"_dom_classes": [], "_model_module": "@jupyter-widgets/controls", "_model_module_version": "2.0.0", "_model_name": "HTMLModel", "_view_count": null, "_view_module": "@jupyter-widgets/controls", "_view_module_version": "2.0.0", "_view_name": "HTMLView", "description": "", "description_allow_html": false, "layout": "IPY_MODEL_3702b9730340426e82f183cc4a560731", "placeholder": "\u200b", "style": "IPY_MODEL_7b2c092789334fcaa9a7724f6c8d8914", "tabbable": null, "tooltip": null, "value": " 28.0M/28.0M [01:47&lt;00:00, 261kB/s]"}}, "20c94fbd82e1423d8f29dbae980b450c": {"model_module": "@jupyter-widgets/base", "model_module_version": "2.0.0", "model_name": "LayoutModel", "state": {"_model_module": "@jupyter-widgets/base", "_model_module_version": "2.0.0", "_model_name": "LayoutModel", "_view_count": null, "_view_module": "@jupyter-widgets/base", "_view_module_version": "2.0.0", "_view_name": "LayoutView", "align_content": null, "align_items": null, "align_self": null, "border_bottom": null, "border_left": null, "border_right": null, "border_top": null, "bottom": null, "display": null, "flex": null, "flex_flow": null, "grid_area": null, "grid_auto_columns": null, "grid_auto_flow": null, "grid_auto_rows": null, "grid_column": null, "grid_gap": null, "grid_row": null, "grid_template_areas": null, "grid_template_columns": null, "grid_template_rows": null, "height": null, "justify_content": null, "justify_items": null, "left": null, "margin": null, "max_height": null, "max_width": null, "min_height": null, "min_width": null, "object_fit": null, "object_position": null, "order": null, "overflow": null, "padding": null, "right": null, "top": null, "visibility": null, "width": null}}, "3702b9730340426e82f183cc4a560731": {"model_module": "@jupyter-widgets/base", "model_module_version": "2.0.0", "model_name": "LayoutModel", "state": {"_model_module": "@jupyter-widgets/base", "_model_module_version": "2.0.0", "_model_name": "LayoutModel", "_view_count": null, "_view_module": "@jupyter-widgets/base", "_view_module_version": "2.0.0", "_view_name": "LayoutView", "align_content": null, "align_items": null, "align_self": null, "border_bottom": null, "border_left": null, "border_right": null, "border_top": null, "bottom": null, "display": null, "flex": null, "flex_flow": null, "grid_area": null, "grid_auto_columns": null, "grid_auto_flow": null, "grid_auto_rows": null, "grid_column": null, "grid_gap": null, "grid_row": null, "grid_template_areas": null, "grid_template_columns": null, "grid_template_rows": null, "height": null, "justify_content": null, "justify_items": null, "left": null, "margin": null, "max_height": null, "max_width": null, "min_height": null, "min_width": null, "object_fit": null, "object_position": null, "order": null, "overflow": null, "padding": null, "right": null, "top": null, "visibility": null, "width": null}}, "6c66e79472da4cff8b64eed491f28912": {"model_module": "@jupyter-widgets/controls", "model_module_version": "2.0.0", "model_name": "FloatProgressModel", "state": {"_dom_classes": [], "_model_module": "@jupyter-widgets/controls", "_model_module_version": "2.0.0", "_model_name": "FloatProgressModel", "_view_count": null, "_view_module": "@jupyter-widgets/controls", "_view_module_version": "2.0.0", "_view_name": "ProgressView", "bar_style": "success", "description": "", "description_allow_html": false, "layout": "IPY_MODEL_20c94fbd82e1423d8f29dbae980b450c", "max": 27995001.0, "min": 0.0, "orientation": "horizontal", "style": "IPY_MODEL_d910915cab5a44c3b2676067858de8b0", "tabbable": null, "tooltip": null, "value": 27995001.0}}, "6f222c2818164f829073d5867695e6b1": {"model_module": "@jupyter-widgets/base", "model_module_version": "2.0.0", "model_name": "LayoutModel", "state": {"_model_module": "@jupyter-widgets/base", "_model_module_version": "2.0.0", "_model_name": "LayoutModel", "_view_count": null, "_view_module": "@jupyter-widgets/base", "_view_module_version": "2.0.0", "_view_name": "LayoutView", "align_content": null, "align_items": null, "align_self": null, "border_bottom": null, "border_left": null, "border_right": null, "border_top": null, "bottom": null, "display": null, "flex": null, "flex_flow": null, "grid_area": null, "grid_auto_columns": null, "grid_auto_flow": null, "grid_auto_rows": null, "grid_column": null, "grid_gap": null, "grid_row": null, "grid_template_areas": null, "grid_template_columns": null, "grid_template_rows": null, "height": null, "justify_content": null, "justify_items": null, "left": null, "margin": null, "max_height": null, "max_width": null, "min_height": null, "min_width": null, "object_fit": null, "object_position": null, "order": null, "overflow": null, "padding": null, "right": null, "top": null, "visibility": null, "width": null}}, "7b2c092789334fcaa9a7724f6c8d8914": {"model_module": "@jupyter-widgets/controls", "model_module_version": "2.0.0", "model_name": "HTMLStyleModel", "state": {"_model_module": "@jupyter-widgets/controls", "_model_module_version": "2.0.0", "_model_name": "HTMLStyleModel", "_view_count": null, "_view_module": "@jupyter-widgets/base", "_view_module_version": "2.0.0", "_view_name": "StyleView", "background": null, "description_width": "", "font_size": null, "text_color": null}}, "8aa00f73b42f4ac9b59f5fe9fb895a47": {"model_module": "@jupyter-widgets/controls", "model_module_version": "2.0.0", "model_name": "HTMLStyleModel", "state": {"_model_module": "@jupyter-widgets/controls", "_model_module_version": "2.0.0", "_model_name": "HTMLStyleModel", "_view_count": null, "_view_module": "@jupyter-widgets/base", "_view_module_version": "2.0.0", "_view_name": "StyleView", "background": null, "description_width": "", "font_size": null, "text_color": null}}, "a9054414c4bb4eb3b1e0eba37629f934": {"model_module": "@jupyter-widgets/base", "model_module_version": "2.0.0", "model_name": "LayoutModel", "state": {"_model_module": "@jupyter-widgets/base", "_model_module_version": "2.0.0", "_model_name": "LayoutModel", "_view_count": null, "_view_module": "@jupyter-widgets/base", "_view_module_version": "2.0.0", "_view_name": "LayoutView", "align_content": null, "align_items": null, "align_self": null, "border_bottom": null, "border_left": null, "border_right": null, "border_top": null, "bottom": null, "display": null, "flex": null, "flex_flow": null, "grid_area": null, "grid_auto_columns": null, "grid_auto_flow": null, "grid_auto_rows": null, "grid_column": null, "grid_gap": null, "grid_row": null, "grid_template_areas": null, "grid_template_columns": null, "grid_template_rows": null, "height": null, "justify_content": null, "justify_items": null, "left": null, "margin": null, "max_height": null, "max_width": null, "min_height": null, "min_width": null, "object_fit": null, "object_position": null, "order": null, "overflow": null, "padding": null, "right": null, "top": null, "visibility": null, "width": null}}, "abcfa31cd14f4afba92e5b4acf8d1d43": {"model_module": "@jupyter-widgets/controls", "model_module_version": "2.0.0", "model_name": "HBoxModel", "state": {"_dom_classes": [], "_model_module": "@jupyter-widgets/controls", "_model_module_version": "2.0.0", "_model_name": "HBoxModel", "_view_count": null, "_view_module": "@jupyter-widgets/controls", "_view_module_version": "2.0.0", "_view_name": "HBoxView", "box_style": "", "children": ["IPY_MODEL_b354e9696fbd4bdb9f510f93cb3651b0", "IPY_MODEL_6c66e79472da4cff8b64eed491f28912", "IPY_MODEL_20a6f9258fed44e2b0fae65bdf5dee70"], "layout": "IPY_MODEL_a9054414c4bb4eb3b1e0eba37629f934", "tabbable": null, "tooltip": null}}, "b354e9696fbd4bdb9f510f93cb3651b0": {"model_module": "@jupyter-widgets/controls", "model_module_version": "2.0.0", "model_name": "HTMLModel", "state": {"_dom_classes": [], "_model_module": "@jupyter-widgets/controls", "_model_module_version": "2.0.0", "_model_name": "HTMLModel", "_view_count": null, "_view_module": "@jupyter-widgets/controls", "_view_module_version": "2.0.0", "_view_name": "HTMLView", "description": "", "description_allow_html": false, "layout": "IPY_MODEL_6f222c2818164f829073d5867695e6b1", "placeholder": "\u200b", "style": "IPY_MODEL_8aa00f73b42f4ac9b59f5fe9fb895a47", "tabbable": null, "tooltip": null, "value": "100%"}}, "d910915cab5a44c3b2676067858de8b0": {"model_module": "@jupyter-widgets/controls", "model_module_version": "2.0.0", "model_name": "ProgressStyleModel", "state": {"_model_module": "@jupyter-widgets/controls", "_model_module_version": "2.0.0", "_model_name": "ProgressStyleModel", "_view_count": null, "_view_module": "@jupyter-widgets/base", "_view_module_version": "2.0.0", "_view_name": "StyleView", "bar_color": null, "description_width": ""}}}, "version_major": 2, "version_minor": 0}</script>
+    <script crossorigin="anonymous" integrity="sha256-Ae2Vz/4ePdIu6ZyI/5ZGsYnb+m0JlOmKPjt6XZ9JJkA=" src="https://cdnjs.cloudflare.com/ajax/libs/require.js/2.3.4/require.min.js"></script>
+    <script crossorigin="anonymous" data-jupyter-widgets-cdn="https://cdn.jsdelivr.net/npm/" src="https://cdn.jsdelivr.net/npm/@jupyter-widgets/html-manager@1.0.6/dist/embed-amd.js"></script>
+    <script>DOCUMENTATION_OPTIONS.pagename = 'notebooks/gallery/94486a7f-e046-461f-bbb9-334ec7b57040/notebook';</script>
     <link rel="index" title="Index" href="../../../genindex.html" />
     <link rel="search" title="Search" href="../../../search.html" />
     <link rel="next" title="SEVIRI Level 1.5" href="../bc30df18-fce2-42fa-aade-1ce5b7f3ca3c/notebook.html" />
     <link rel="prev" title="Sea ice forecasting using IceNet" href="../ac327c3a-5264-40a2-8c6e-1e8d7c4b37ef/notebook.html" />
-    <meta name="viewport" content="width=device-width, initial-scale=1" />
-    <meta name="docsearch:language" content="en">
-    
-
-    <!-- Google Analytics -->
-    
-<script async="" src="https://www.googletagmanager.com/gtag/js?id=G-3E20PWD938"></script>
-<script>
-                    window.dataLayer = window.dataLayer || [];
-                    function gtag(){ dataLayer.push(arguments); }
-                    gtag('js', new Date());
-                    gtag('config', 'G-3E20PWD938');
-                </script>
-
+  <meta name="viewport" content="width=device-width, initial-scale=1"/>
+  <meta name="docsearch:language" content="en"/>
   </head>
-  <body data-spy="scroll" data-target="#bd-toc-nav" data-offset="80">
-    
-    <div class="container-fluid" id="banner"></div>
+  
+  
+  <body data-bs-spy="scroll" data-bs-target=".bd-toc-nav" data-offset="180" data-bs-root-margin="0px 0px -60%" data-default-mode="">
 
-    
+  
+  
+  <a id="pst-skip-link" class="skip-link" href="#main-content">Skip to main content</a>
+  
+  <div id="pst-scroll-pixel-helper"></div>
+  
+  <button type="button" class="btn rounded-pill" id="pst-back-to-top">
+    <i class="fa-solid fa-arrow-up"></i>
+    Back to top
+  </button>
 
-    <div class="container-xl">
-      <div class="row">
-          
-<div class="col-12 col-md-3 bd-sidebar site-navigation show" id="site-navigation">
-    
-        <div class="navbar-brand-box">
-    <a class="navbar-brand text-wrap" href="../../../index.html">
+  
+  <input type="checkbox"
+          class="sidebar-toggle"
+          name="__primary"
+          id="__primary"/>
+  <label class="overlay overlay-primary" for="__primary"></label>
+  
+  <input type="checkbox"
+          class="sidebar-toggle"
+          name="__secondary"
+          id="__secondary"/>
+  <label class="overlay overlay-secondary" for="__secondary"></label>
+  
+  <div class="search-button__wrapper">
+    <div class="search-button__overlay"></div>
+    <div class="search-button__search-container">
+<form class="bd-search d-flex align-items-center"
+      action="../../../search.html"
+      method="get">
+  <i class="fa-solid fa-magnifying-glass"></i>
+  <input type="search"
+         class="form-control"
+         name="q"
+         id="search-input"
+         placeholder="Search this book..."
+         aria-label="Search this book..."
+         autocomplete="off"
+         autocorrect="off"
+         autocapitalize="off"
+         spellcheck="false"/>
+  <span class="search-button__kbd-shortcut"><kbd class="kbd-shortcut__modifier">Ctrl</kbd>+<kbd>K</kbd></span>
+</form></div>
+  </div>
+  
+    <header class="bd-header navbar navbar-expand-lg bd-navbar">
+    </header>
+  
+
+  <div class="bd-container">
+    <div class="bd-container__inner bd-page-width">
       
-        <!-- `logo` is deprecated in Sphinx 4.0, so remove this when we stop supporting 3 -->
+      
+      
+      <div class="bd-sidebar-primary bd-sidebar">
         
+
+  
+  <div class="sidebar-header-items sidebar-primary__section">
+    
+    
+    
+    
+  </div>
+  
+    <div class="sidebar-primary-items__start sidebar-primary__section">
+        <div class="sidebar-primary-item">
+
+  
+
+<a class="navbar-brand logo" href="../../../welcome.html">
+  
+  
+  
+  
+  
+    
+    
       
-      
-      <img src="../../../_static/logo.png" class="logo" alt="logo">
-      
-      
-      <h1 class="site-logo" id="site-title">Environmental Data Science Book</h1>
-      
-    </a>
-</div><form class="bd-search d-flex align-items-center" action="../../../search.html" method="get">
-  <i class="icon fas fa-search"></i>
-  <input type="search" class="form-control" name="q" id="search-input" placeholder="Search this book..." aria-label="Search this book..." autocomplete="off" >
-</form><nav class="bd-links" id="bd-docs-nav" aria-label="Main">
-    <div class="bd-toc-item active">
-        <ul class="nav bd-sidenav">
- <li class="toctree-l1">
-  <a class="reference internal" href="../../../welcome.html">
-   Welcome
-  </a>
- </li>
-</ul>
-<p aria-level="2" class="caption" role="heading">
- <span class="caption-text">
-  Preamble
- </span>
-</p>
+    
+    
+    <img src="../../../_static/logo.png" class="logo__image only-light" alt="Environmental Data Science Book - Home"/>
+    <script>document.write(`<img src="../../../_static/logo.png" class="logo__image only-dark" alt="Environmental Data Science Book - Home"/>`);</script>
+  
+  
+</a></div>
+        <div class="sidebar-primary-item"><nav class="bd-links" id="bd-docs-nav" aria-label="Main">
+    <div class="bd-toc-item navbar-nav active">
+        
+        <ul class="nav bd-sidenav bd-sidenav__home-link">
+            <li class="toctree-l1">
+                <a class="reference internal" href="../../../welcome.html">
+                    Welcome
+                </a>
+            </li>
+        </ul>
+        <p aria-level="2" class="caption" role="heading"><span class="caption-text">Preamble</span></p>
 <ul class="nav bd-sidenav">
- <li class="toctree-l1">
-  <a class="reference internal" href="../../../preamble/about.html">
-   About EDS book
-  </a>
- </li>
- <li class="toctree-l1">
-  <a class="reference internal" href="../../../preamble/attribution.html">
-   Citation and Reuse
-  </a>
- </li>
- <li class="toctree-l1">
-  <a class="reference internal" href="../../../preamble/contribute.html">
-   Contribute
-  </a>
- </li>
+<li class="toctree-l1"><a class="reference internal" href="../../../preamble/about.html">About EDS book</a></li>
+
+<li class="toctree-l1"><a class="reference internal" href="../../../preamble/attribution.html">Citation and Reuse</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../preamble/contribute.html">Contribute</a></li>
+
 </ul>
-<p aria-level="2" class="caption" role="heading">
- <span class="caption-text">
-  Notebooks
- </span>
-</p>
+<p aria-level="2" class="caption" role="heading"><span class="caption-text">Notebooks</span></p>
 <ul class="current nav bd-sidenav">
- <li class="toctree-l1 has-children">
-  <a class="reference internal" href="../../about.html">
-   Our Notebooks
-  </a>
-  <input class="toctree-checkbox" id="toctree-checkbox-1" name="toctree-checkbox-1" type="checkbox"/>
-  <label for="toctree-checkbox-1">
-   <i class="fas fa-chevron-down">
-   </i>
-  </label>
-  <ul>
-   <li class="toctree-l2">
-    <a class="reference internal" href="../../about/aims-and-scope.html">
-     Aims and Scope
-    </a>
-   </li>
-   <li class="toctree-l2">
-    <a class="reference internal" href="../../about/review-benefits.html">
-     Benefits of Reviewing Notebooks
-    </a>
-   </li>
-   <li class="toctree-l2">
-    <a class="reference internal" href="../../about/notebooks-technologies.html">
-     Technologies
-    </a>
-   </li>
-  </ul>
- </li>
- <li class="toctree-l1 current active has-children">
-  <a class="reference internal" href="../../gallery.html">
-   Gallery
-  </a>
-  <input checked="" class="toctree-checkbox" id="toctree-checkbox-2" name="toctree-checkbox-2" type="checkbox"/>
-  <label for="toctree-checkbox-2">
-   <i class="fas fa-chevron-down">
-   </i>
-  </label>
-  <ul class="current">
-   <li class="toctree-l2">
-    <a class="reference internal" href="../39d9c177-11da-41b2-9b64-63f4c1c834b3/notebook.html">
-     Variational data assimilation with deep prior (CIRC23)
-    </a>
-   </li>
-   <li class="toctree-l2">
-    <a class="reference internal" href="../93463cac-471a-469d-ad52-0514fd9b67f2/notebook.html">
-     Deep learning and variational inversion for climate science (CIRC23)
-    </a>
-   </li>
-   <li class="toctree-l2">
-    <a class="reference internal" href="../3286b92f-4fae-4cc6-a29e-e408bc844542/notebook.html">
-     Underlying physics of the ocean's temperature (CIRC23)
-    </a>
-   </li>
-   <li class="toctree-l2">
-    <a class="reference internal" href="../b128b282-dee7-44a7-bc21-f1fd21452a83/notebook.html">
-     Land Cover Data (Impact Observatory)
-    </a>
-   </li>
-   <li class="toctree-l2">
-    <a class="reference internal" href="../435f534c-e49b-43c3-9bd6-3393100bef3f/notebook.html">
-     Cosmos-UK Soil Moisture (UKCEH)
-    </a>
-   </li>
-   <li class="toctree-l2">
-    <a class="reference internal" href="../ea34568e-d86e-4720-be2f-3f826f66a26c/notebook.html">
-     Rainfall NCEP/NCAR (NOAA)
-    </a>
-   </li>
-   <li class="toctree-l2">
-    <a class="reference internal" href="../ac327c3a-5264-40a2-8c6e-1e8d7c4b37ef/notebook.html">
-     Sea ice forecasting (IceNet)
-    </a>
-   </li>
-   <li class="toctree-l2 current active">
-    <a class="current reference internal" href="#">
-     Tree crown (DetectreeRGB)
-    </a>
-   </li>
-   <li class="toctree-l2">
-    <a class="reference internal" href="../bc30df18-fce2-42fa-aade-1ce5b7f3ca3c/notebook.html">
-     SEVIRI Level 1.5 (EUMESAT)
-    </a>
-   </li>
-   <li class="toctree-l2">
-    <a class="reference internal" href="../15d986da-2d7c-44fb-af71-700494485def/notebook.html">
-     Tree crown (DeepForest)
-    </a>
-   </li>
-   <li class="toctree-l2">
-    <a class="reference internal" href="../a2875cdc-ba6a-49dc-aab7-cdf7c4fc0fa8/notebook.html">
-     MOD021KM and FIRMS (NASA)
-    </a>
-   </li>
-   <li class="toctree-l2">
-    <a class="reference internal" href="../1b8921af-e77f-4ccf-ae38-4813cdceba0f/notebook.html">
-     UKV high-resolution (Met Office)
-    </a>
-   </li>
-   <li class="toctree-l2">
-    <a class="reference internal" href="../b34facfa-cea8-48f5-89f6-f11ce00812a9/notebook.html">
-     Detecting floating objects (ESA Phi-Lab)
-    </a>
-   </li>
-  </ul>
- </li>
- <li class="toctree-l1">
-  <a class="reference internal" href="../../how-to.html">
-   Usage
-  </a>
- </li>
+<li class="toctree-l1 has-children"><a class="reference internal" href="../../about.html">Our Notebooks</a><input class="toctree-checkbox" id="toctree-checkbox-1" name="toctree-checkbox-1" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-1"><i class="fa-solid fa-chevron-down"></i></label><ul>
+<li class="toctree-l2"><a class="reference internal" href="../../about/aims-and-scope.html">Aims and Scope</a></li>
+
+<li class="toctree-l2"><a class="reference internal" href="../../about/review-benefits.html">Benefits of Reviewing Notebooks</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../about/notebooks-technologies.html">Technologies</a></li>
 </ul>
-<p aria-level="2" class="caption" role="heading">
- <span class="caption-text">
-  Publishing
- </span>
-</p>
-<ul class="nav bd-sidenav">
- <li class="toctree-l1 has-children">
-  <a class="reference internal" href="../../../publishing/guidelines.html">
-   Our Guidelines
-  </a>
-  <input class="toctree-checkbox" id="toctree-checkbox-3" name="toctree-checkbox-3" type="checkbox"/>
-  <label for="toctree-checkbox-3">
-   <i class="fas fa-chevron-down">
-   </i>
-  </label>
-  <ul>
-   <li class="toctree-l2">
-    <a class="reference internal" href="../../../publishing/guidelines/guidelines-authors.html">
-     Guide for Authors
-    </a>
-   </li>
-   <li class="toctree-l2">
-    <a class="reference internal" href="../../../publishing/guidelines/guidelines-reviewers.html">
-     Guide for Reviewers
-    </a>
-   </li>
-   <li class="toctree-l2">
-    <a class="reference internal" href="../../../publishing/guidelines/guidelines-editors.html">
-     Guide for Editors
-    </a>
-   </li>
-   <li class="toctree-l2">
-    <a class="reference internal" href="../../../publishing/guidelines/guidelines-eic.html">
-     Guide for Editor in Chief
-    </a>
-   </li>
-   <li class="toctree-l2">
-    <a class="reference internal" href="../../../publishing/guidelines/guidelines-community.html">
-     Guide for Community
-    </a>
-   </li>
-  </ul>
- </li>
- <li class="toctree-l1">
-  <a class="reference internal" href="../../../publishing/faq.html">
-   FAQ
-  </a>
- </li>
+</li>
+<li class="toctree-l1 current active has-children"><a class="reference internal" href="../../gallery.html">Gallery</a><input checked="" class="toctree-checkbox" id="toctree-checkbox-2" name="toctree-checkbox-2" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-2"><i class="fa-solid fa-chevron-down"></i></label><ul class="current">
+<li class="toctree-l2"><a class="reference internal" href="../39d9c177-11da-41b2-9b64-63f4c1c834b3/notebook.html">Variational data assimilation with deep prior (CIRC23)</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../93463cac-471a-469d-ad52-0514fd9b67f2/notebook.html">Deep learning and variational inversion for climate science (CIRC23)</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../3286b92f-4fae-4cc6-a29e-e408bc844542/notebook.html">Underlying physics of the ocean's temperature (CIRC23)</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../b128b282-dee7-44a7-bc21-f1fd21452a83/notebook.html">Land Cover Data (Impact Observatory)</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../435f534c-e49b-43c3-9bd6-3393100bef3f/notebook.html">Cosmos-UK Soil Moisture (UKCEH)</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../ea34568e-d86e-4720-be2f-3f826f66a26c/notebook.html">Rainfall NCEP/NCAR (NOAA)</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../ac327c3a-5264-40a2-8c6e-1e8d7c4b37ef/notebook.html">Sea ice forecasting (IceNet)</a></li>
+<li class="toctree-l2 current active"><a class="current reference internal" href="#">Tree crown (DetectreeRGB)</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../bc30df18-fce2-42fa-aade-1ce5b7f3ca3c/notebook.html">SEVIRI Level 1.5 (EUMESAT)</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../15d986da-2d7c-44fb-af71-700494485def/notebook.html">Tree crown (DeepForest)</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../a2875cdc-ba6a-49dc-aab7-cdf7c4fc0fa8/notebook.html">MOD021KM and FIRMS (NASA)</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../1b8921af-e77f-4ccf-ae38-4813cdceba0f/notebook.html">UKV high-resolution (Met Office)</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../b34facfa-cea8-48f5-89f6-f11ce00812a9/notebook.html">Detecting floating objects (ESA Phi-Lab)</a></li>
 </ul>
-<p aria-level="2" class="caption" role="heading">
- <span class="caption-text">
-  Community
- </span>
-</p>
-<ul class="nav bd-sidenav">
- <li class="toctree-l1">
-  <a class="reference internal" href="../../../community/about.html">
-   Our Community
-  </a>
- </li>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../../how-to.html">Usage</a></li>
 </ul>
-<p aria-level="2" class="caption" role="heading">
- <span class="caption-text">
-  Afterword
- </span>
-</p>
+<p aria-level="2" class="caption" role="heading"><span class="caption-text">Publishing</span></p>
 <ul class="nav bd-sidenav">
- <li class="toctree-l1">
-  <a class="reference internal" href="../../../afterword/bibliography.html">
-   Bibliography
-  </a>
- </li>
+<li class="toctree-l1 has-children"><a class="reference internal" href="../../../publishing/guidelines.html">Our Guidelines</a><input class="toctree-checkbox" id="toctree-checkbox-3" name="toctree-checkbox-3" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-3"><i class="fa-solid fa-chevron-down"></i></label><ul>
+<li class="toctree-l2"><a class="reference internal" href="../../../publishing/guidelines/guidelines-authors.html">Guide for Authors</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../publishing/guidelines/guidelines-reviewers.html">Guide for Reviewers</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../publishing/guidelines/guidelines-editors.html">Guide for Editors</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../publishing/guidelines/guidelines-eic.html">Guide for Editor in Chief</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../publishing/guidelines/guidelines-community.html">Guide for Community</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../../../publishing/faq.html">FAQ</a></li>
+</ul>
+<p aria-level="2" class="caption" role="heading"><span class="caption-text">Community</span></p>
+<ul class="nav bd-sidenav">
+<li class="toctree-l1"><a class="reference internal" href="../../../community/about.html">Our Community</a></li>
+
+</ul>
+<p aria-level="2" class="caption" role="heading"><span class="caption-text">Afterword</span></p>
+<ul class="nav bd-sidenav">
+<li class="toctree-l1"><a class="reference internal" href="../../../afterword/bibliography.html">Bibliography</a></li>
 </ul>
 
     </div>
-</nav> <!-- To handle the deprecated key -->
-
-<div class="navbar_extra_footer">
-  Powered by <a href="https://jupyterbook.org">Jupyter Book</a>
-</div>
-
-</div>
-
-
-          
+</nav></div>
+    </div>
+  
+  
+  <div class="sidebar-primary-items__end sidebar-primary__section">
+  </div>
+  
+  <div id="rtd-footer-container"></div>
 
 
-          
-<main class="col py-md-3 pl-md-4 bd-content overflow-auto" role="main">
-    
-    <div class="topbar container-xl fixed-top">
-    <div class="topbar-contents row">
-        <div class="col-12 col-md-3 bd-topbar-whitespace site-navigation show"></div>
-        <div class="col pl-md-4 topbar-main">
-            
-            <button id="navbar-toggler" class="navbar-toggler ml-0" type="button" data-toggle="collapse"
-                data-toggle="tooltip" data-placement="bottom" data-target=".site-navigation" aria-controls="navbar-menu"
-                aria-expanded="true" aria-label="Toggle navigation" aria-controls="site-navigation"
-                title="Toggle navigation" data-toggle="tooltip" data-placement="left">
-                <i class="fas fa-bars"></i>
-                <i class="fas fa-arrow-left"></i>
-                <i class="fas fa-arrow-up"></i>
-            </button>
-            
-            
-<div class="dropdown-buttons-trigger">
-    <button id="dropdown-buttons-trigger" class="btn btn-secondary topbarbtn" aria-label="Download this page"><i
-            class="fas fa-download"></i></button>
-
-    <div class="dropdown-buttons">
-        <!-- ipynb file if we had a myst markdown file -->
+      </div>
+      
+      <main id="main-content" class="bd-main">
         
-        <!-- Download raw file -->
-        <a class="dropdown-buttons" href="../../../_sources/notebooks/gallery/94486a7f-e046-461f-bbb9-334ec7b57040/notebook.ipynb"><button type="button"
-                class="btn btn-secondary topbarbtn" title="Download source file" data-toggle="tooltip"
-                data-placement="left">.ipynb</button></a>
-        <!-- Download PDF via print -->
-        <button type="button" id="download-print" class="btn btn-secondary topbarbtn" title="Print to PDF"
-                onclick="printPdf(this)" data-toggle="tooltip" data-placement="left">.pdf</button>
+        
+
+<div class="sbt-scroll-pixel-helper"></div>
+
+          <div class="bd-content">
+            <div class="bd-article-container">
+              
+              <div class="bd-header-article">
+<div class="header-article-items header-article__inner">
+  
+    <div class="header-article-items__start">
+      
+        <div class="header-article-item"><label class="sidebar-toggle primary-toggle btn btn-sm" for="__primary" title="Toggle primary sidebar" data-bs-placement="bottom" data-bs-toggle="tooltip">
+  <span class="fa-solid fa-bars"></span>
+</label></div>
+      
     </div>
+  
+  
+    <div class="header-article-items__end">
+      
+        <div class="header-article-item">
+
+<div class="article-header-buttons">
+
+
+
+
+
+<div class="dropdown dropdown-source-buttons">
+  <button class="btn dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false" aria-label="Source repositories">
+    <i class="fab fa-github"></i>
+  </button>
+  <ul class="dropdown-menu">
+      
+      
+      
+      <li><a href="https://github.com/alan-turing-institute/environmental-ds-book" target="_blank"
+   class="btn btn-sm btn-source-repository-button dropdown-item"
+   title="Source repository"
+   data-bs-placement="left" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fab fa-github"></i>
+  </span>
+<span class="btn__text-container">Repository</span>
+</a>
+</li>
+      
+      
+      
+      
+      <li><a href="https://github.com/alan-turing-institute/environmental-ds-book/edit/master/book/notebooks/gallery/94486a7f-e046-461f-bbb9-334ec7b57040/notebook.ipynb" target="_blank"
+   class="btn btn-sm btn-source-edit-button dropdown-item"
+   title="Suggest edit"
+   data-bs-placement="left" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fas fa-pencil-alt"></i>
+  </span>
+<span class="btn__text-container">Suggest edit</span>
+</a>
+</li>
+      
+      
+      
+      
+      <li><a href="https://github.com/alan-turing-institute/environmental-ds-book/issues/new?title=Issue%20on%20page%20%2Fnotebooks/gallery/94486a7f-e046-461f-bbb9-334ec7b57040/notebook.html&body=Your%20issue%20content%20here." target="_blank"
+   class="btn btn-sm btn-source-issues-button dropdown-item"
+   title="Open an issue"
+   data-bs-placement="left" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fas fa-lightbulb"></i>
+  </span>
+<span class="btn__text-container">Open issue</span>
+</a>
+</li>
+      
+  </ul>
 </div>
 
-            <!-- Source interaction buttons -->
 
-<div class="dropdown-buttons-trigger">
-    <button id="dropdown-buttons-trigger" class="btn btn-secondary topbarbtn"
-        aria-label="Connect with source repository"><i class="fab fa-github"></i></button>
-    <div class="dropdown-buttons sourcebuttons">
-        <a class="repository-button"
-            href="https://github.com/alan-turing-institute/environmental-ds-book"><button type="button" class="btn btn-secondary topbarbtn"
-                data-toggle="tooltip" data-placement="left" title="Source repository"><i
-                    class="fab fa-github"></i>repository</button></a>
-        <a class="issues-button"
-            href="https://github.com/alan-turing-institute/environmental-ds-book/issues/new?title=Issue%20on%20page%20%2Fnotebooks/gallery/94486a7f-e046-461f-bbb9-334ec7b57040/notebook.html&body=Your%20issue%20content%20here."><button
-                type="button" class="btn btn-secondary topbarbtn" data-toggle="tooltip" data-placement="left"
-                title="Open an issue"><i class="fas fa-lightbulb"></i>open issue</button></a>
-        <a class="edit-button" href="https://github.com/alan-turing-institute/environmental-ds-book/edit/master/book/notebooks/gallery/94486a7f-e046-461f-bbb9-334ec7b57040/notebook.ipynb"><button
-                type="button" class="btn btn-secondary topbarbtn" data-toggle="tooltip" data-placement="left"
-                title="Edit this page"><i class="fas fa-pencil-alt"></i>suggest edit</button></a>
-    </div>
+
+
+
+
+<div class="dropdown dropdown-download-buttons">
+  <button class="btn dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false" aria-label="Download this page">
+    <i class="fas fa-download"></i>
+  </button>
+  <ul class="dropdown-menu">
+      
+      
+      
+      <li><a href="../../../_sources/notebooks/gallery/94486a7f-e046-461f-bbb9-334ec7b57040/notebook.ipynb" target="_blank"
+   class="btn btn-sm btn-download-source-button dropdown-item"
+   title="Download source file"
+   data-bs-placement="left" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fas fa-file"></i>
+  </span>
+<span class="btn__text-container">.ipynb</span>
+</a>
+</li>
+      
+      
+      
+      
+      <li>
+<button onclick="window.print()"
+  class="btn btn-sm btn-download-pdf-button dropdown-item"
+  title="Print to PDF"
+  data-bs-placement="left" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fas fa-file-pdf"></i>
+  </span>
+<span class="btn__text-container">.pdf</span>
+</button>
+</li>
+      
+  </ul>
 </div>
 
-            <!-- Full screen (wrap in <a> to have style consistency -->
 
-<a class="full-screen-button"><button type="button" class="btn btn-secondary topbarbtn" data-toggle="tooltip"
-        data-placement="bottom" onclick="toggleFullScreen()" aria-label="Fullscreen mode"
-        title="Fullscreen mode"><i
-            class="fas fa-expand"></i></button></a>
 
-            <!-- Launch buttons -->
 
-        </div>
+<button onclick="toggleFullScreen()"
+  class="btn btn-sm btn-fullscreen-button"
+  title="Fullscreen mode"
+  data-bs-placement="bottom" data-bs-toggle="tooltip"
+>
+  
 
-        <!-- Table of contents -->
-        <div class="d-none d-md-block col-md-2 bd-toc show noprint">
+<span class="btn__icon-container">
+  <i class="fas fa-expand"></i>
+  </span>
+
+</button>
+
+
+
+<script>
+document.write(`
+  <button class="btn btn-sm navbar-btn theme-switch-button" title="light/dark" aria-label="light/dark" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <span class="theme-switch nav-link" data-mode="light"><i class="fa-solid fa-sun fa-lg"></i></span>
+    <span class="theme-switch nav-link" data-mode="dark"><i class="fa-solid fa-moon fa-lg"></i></span>
+    <span class="theme-switch nav-link" data-mode="auto"><i class="fa-solid fa-circle-half-stroke fa-lg"></i></span>
+  </button>
+`);
+</script>
+
+
+<script>
+document.write(`
+  <button class="btn btn-sm navbar-btn search-button search-button__button" title="Search" aria-label="Search" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <i class="fa-solid fa-magnifying-glass fa-lg"></i>
+  </button>
+`);
+</script>
+<label class="sidebar-toggle secondary-toggle btn btn-sm" for="__secondary"title="Toggle secondary sidebar" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <span class="fa-solid fa-list"></span>
+</label>
+</div></div>
+      
+    </div>
+  
+</div>
+</div>
+              
+              
+
+<div id="jb-print-docs-body" class="onlyprint">
+    <h1>Tree crown delineation using detectreeRGB</h1>
+    <!-- Table of contents -->
+    <div id="print-main-content">
+        <div id="jb-print-toc">
             
-            <div class="tocsection onthispage pt-5 pb-3">
-                <i class="fas fa-list"></i> Contents
+            <div>
+                <h2> Contents </h2>
             </div>
-            <nav id="bd-toc-nav" aria-label="Page">
+            <nav aria-label="Page">
                 <ul class="visible nav section-nav flex-column">
- <li class="toc-h2 nav-item toc-entry">
-  <a class="reference internal nav-link" href="#context">
-   Context
-  </a>
-  <ul class="nav section-nav flex-column">
-   <li class="toc-h3 nav-item toc-entry">
-    <a class="reference internal nav-link" href="#purpose">
-     Purpose
-    </a>
-   </li>
-   <li class="toc-h3 nav-item toc-entry">
-    <a class="reference internal nav-link" href="#modelling-approach">
-     Modelling approach
-    </a>
-   </li>
-   <li class="toc-h3 nav-item toc-entry">
-    <a class="reference internal nav-link" href="#highlights">
-     Highlights
-    </a>
-   </li>
-   <li class="toc-h3 nav-item toc-entry">
-    <a class="reference internal nav-link" href="#contributions">
-     Contributions
-    </a>
-    <ul class="nav section-nav flex-column">
-     <li class="toc-h4 nav-item toc-entry">
-      <a class="reference internal nav-link" href="#notebook">
-       Notebook
-      </a>
-     </li>
-     <li class="toc-h4 nav-item toc-entry">
-      <a class="reference internal nav-link" href="#modelling-codebase">
-       Modelling codebase
-      </a>
-     </li>
-     <li class="toc-h4 nav-item toc-entry">
-      <a class="reference internal nav-link" href="#modelling-funding">
-       Modelling funding
-      </a>
-     </li>
-    </ul>
-   </li>
-  </ul>
- </li>
- <li class="toc-h2 nav-item toc-entry">
-  <a class="reference internal nav-link" href="#load-libraries">
-   Load libraries
-  </a>
- </li>
- <li class="toc-h2 nav-item toc-entry">
-  <a class="reference internal nav-link" href="#set-folder-structure">
-   Set folder structure
-  </a>
- </li>
- <li class="toc-h2 nav-item toc-entry">
-  <a class="reference internal nav-link" href="#load-and-prepare-input-image">
-   Load and prepare input image
-  </a>
-  <ul class="nav section-nav flex-column">
-   <li class="toc-h3 nav-item toc-entry">
-    <a class="reference internal nav-link" href="#fetch-a-geotiff-file-of-aerial-forest-imagery-using-intake">
-     Fetch a GeoTIFF file of aerial forest imagery using
-     <code class="docutils literal notranslate">
-      <span class="pre">
-       intake
-      </span>
-     </code>
-    </a>
-   </li>
-   <li class="toc-h3 nav-item toc-entry">
-    <a class="reference internal nav-link" href="#inspect-the-aerial-image">
-     Inspect the aerial image
-    </a>
-   </li>
-   <li class="toc-h3 nav-item toc-entry">
-    <a class="reference internal nav-link" href="#save-the-rgb-bands-of-the-geotiff-file-as-a-png">
-     Save the RGB bands of the GeoTIFF file as a PNG
-    </a>
-   </li>
-   <li class="toc-h3 nav-item toc-entry">
-    <a class="reference internal nav-link" href="#read-in-and-display-the-png-file">
-     Read in and display the PNG file
-    </a>
-   </li>
-  </ul>
- </li>
- <li class="toc-h2 nav-item toc-entry">
-  <a class="reference internal nav-link" href="#modelling">
-   Modelling
-  </a>
-  <ul class="nav section-nav flex-column">
-   <li class="toc-h3 nav-item toc-entry">
-    <a class="reference internal nav-link" href="#download-the-pretrained-model">
-     Download the pretrained model
-    </a>
-   </li>
-   <li class="toc-h3 nav-item toc-entry">
-    <a class="reference internal nav-link" href="#settings-of-detectron2-config">
-     Settings of
-     <code class="docutils literal notranslate">
-      <span class="pre">
-       detectron2
-      </span>
-     </code>
-     config
-    </a>
-   </li>
-  </ul>
- </li>
- <li class="toc-h2 nav-item toc-entry">
-  <a class="reference internal nav-link" href="#outputs">
-   Outputs
-  </a>
-  <ul class="nav section-nav flex-column">
-   <li class="toc-h3 nav-item toc-entry">
-    <a class="reference internal nav-link" href="#showing-the-predictions-from-detectreergb">
-     Showing the predictions from
-     <code class="docutils literal notranslate">
-      <span class="pre">
-       detectreeRGB
-      </span>
-     </code>
-    </a>
-   </li>
-   <li class="toc-h3 nav-item toc-entry">
-    <a class="reference internal nav-link" href="#convert-predictions-into-geospatial-files">
-     Convert predictions into geospatial files
-    </a>
-    <ul class="nav section-nav flex-column">
-     <li class="toc-h4 nav-item toc-entry">
-      <a class="reference internal nav-link" href="#to-geotiff">
-       To GeoTIFF
-      </a>
-     </li>
-     <li class="toc-h4 nav-item toc-entry">
-      <a class="reference internal nav-link" href="#to-shapefile">
-       To shapefile
-      </a>
-     </li>
-    </ul>
-   </li>
-  </ul>
- </li>
- <li class="toc-h2 nav-item toc-entry">
-  <a class="reference internal nav-link" href="#interactive-map-to-visualise-the-exported-files">
-   Interactive map to visualise the exported files
-  </a>
-  <ul class="nav section-nav flex-column">
-   <li class="toc-h3 nav-item toc-entry">
-    <a class="reference internal nav-link" href="#plot-tree-crown-delineation-predictions-and-scores">
-     Plot tree crown delineation predictions and scores
-    </a>
-   </li>
-   <li class="toc-h3 nav-item toc-entry">
-    <a class="reference internal nav-link" href="#plot-the-exported-geotiff-file">
-     Plot the exported GeoTIFF file
-    </a>
-   </li>
-   <li class="toc-h3 nav-item toc-entry">
-    <a class="reference internal nav-link" href="#overlay-the-prediction-labels-and-image">
-     Overlay the prediction labels and image
-    </a>
-   </li>
-   <li class="toc-h3 nav-item toc-entry">
-    <a class="reference internal nav-link" href="#save-plot">
-     Save plot
-    </a>
-   </li>
-  </ul>
- </li>
- <li class="toc-h2 nav-item toc-entry">
-  <a class="reference internal nav-link" href="#summary">
-   Summary
-  </a>
- </li>
- <li class="toc-h2 nav-item toc-entry">
-  <a class="reference internal nav-link" href="#citing-this-notebook">
-   Citing this Notebook
-  </a>
- </li>
- <li class="toc-h2 nav-item toc-entry">
-  <a class="reference internal nav-link" href="#additional-information">
-   Additional information
-  </a>
- </li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#context">Context</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#purpose">Purpose</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#modelling-approach">Modelling approach</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#highlights">Highlights</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#contributions">Contributions</a><ul class="nav section-nav flex-column">
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#notebook">Notebook</a></li>
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#modelling-codebase">Modelling codebase</a></li>
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#modelling-funding">Modelling funding</a></li>
 </ul>
-
+</li>
+</ul>
+</li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#load-libraries">Load libraries</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#set-folder-structure">Set folder structure</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#load-and-prepare-input-image">Load and prepare input image</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#fetch-a-geotiff-file-of-aerial-forest-imagery-using-intake">Fetch a GeoTIFF file of aerial forest imagery using <code class="docutils literal notranslate"><span class="pre">intake</span></code></a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#inspect-the-aerial-image">Inspect the aerial image</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#save-the-rgb-bands-of-the-geotiff-file-as-a-png">Save the RGB bands of the GeoTIFF file as a PNG</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#read-in-and-display-the-png-file">Read in and display the PNG file</a></li>
+</ul>
+</li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#modelling">Modelling</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#download-the-pretrained-model">Download the pretrained model</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#settings-of-detectron2-config">Settings of <code class="docutils literal notranslate"><span class="pre">detectron2</span></code> config</a></li>
+</ul>
+</li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#outputs">Outputs</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#showing-the-predictions-from-detectreergb">Showing the predictions from <code class="docutils literal notranslate"><span class="pre">detectreeRGB</span></code></a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#convert-predictions-into-geospatial-files">Convert predictions into geospatial files</a><ul class="nav section-nav flex-column">
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#to-geotiff">To GeoTIFF</a></li>
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#to-shapefile">To shapefile</a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#interactive-map-to-visualise-the-exported-files">Interactive map to visualise the exported files</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#plot-tree-crown-delineation-predictions-and-scores">Plot tree crown delineation predictions and scores</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#plot-the-exported-geotiff-file">Plot the exported GeoTIFF file</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#overlay-the-prediction-labels-and-image">Overlay the prediction labels and image</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#save-plot">Save plot</a></li>
+</ul>
+</li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#summary">Summary</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#citing-this-notebook">Citing this Notebook</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#additional-information">Additional information</a></li>
+</ul>
             </nav>
         </div>
     </div>
 </div>
-    <div id="main-content" class="row">
-        <div class="col-12 col-md-9 pl-md-3 pr-md-0">
-            <!-- Table of contents that is only displayed when printing the page -->
-            <div id="jb-print-docs-body" class="onlyprint">
-                <h1>Tree crown delineation using detectreeRGB</h1>
-                <!-- Table of contents -->
-                <div id="print-main-content">
-                    <div id="jb-print-toc">
-                        
-                        <div>
-                            <h2> Contents </h2>
-                        </div>
-                        <nav aria-label="Page">
-                            <ul class="visible nav section-nav flex-column">
- <li class="toc-h2 nav-item toc-entry">
-  <a class="reference internal nav-link" href="#context">
-   Context
-  </a>
-  <ul class="nav section-nav flex-column">
-   <li class="toc-h3 nav-item toc-entry">
-    <a class="reference internal nav-link" href="#purpose">
-     Purpose
-    </a>
-   </li>
-   <li class="toc-h3 nav-item toc-entry">
-    <a class="reference internal nav-link" href="#modelling-approach">
-     Modelling approach
-    </a>
-   </li>
-   <li class="toc-h3 nav-item toc-entry">
-    <a class="reference internal nav-link" href="#highlights">
-     Highlights
-    </a>
-   </li>
-   <li class="toc-h3 nav-item toc-entry">
-    <a class="reference internal nav-link" href="#contributions">
-     Contributions
-    </a>
-    <ul class="nav section-nav flex-column">
-     <li class="toc-h4 nav-item toc-entry">
-      <a class="reference internal nav-link" href="#notebook">
-       Notebook
-      </a>
-     </li>
-     <li class="toc-h4 nav-item toc-entry">
-      <a class="reference internal nav-link" href="#modelling-codebase">
-       Modelling codebase
-      </a>
-     </li>
-     <li class="toc-h4 nav-item toc-entry">
-      <a class="reference internal nav-link" href="#modelling-funding">
-       Modelling funding
-      </a>
-     </li>
-    </ul>
-   </li>
-  </ul>
- </li>
- <li class="toc-h2 nav-item toc-entry">
-  <a class="reference internal nav-link" href="#load-libraries">
-   Load libraries
-  </a>
- </li>
- <li class="toc-h2 nav-item toc-entry">
-  <a class="reference internal nav-link" href="#set-folder-structure">
-   Set folder structure
-  </a>
- </li>
- <li class="toc-h2 nav-item toc-entry">
-  <a class="reference internal nav-link" href="#load-and-prepare-input-image">
-   Load and prepare input image
-  </a>
-  <ul class="nav section-nav flex-column">
-   <li class="toc-h3 nav-item toc-entry">
-    <a class="reference internal nav-link" href="#fetch-a-geotiff-file-of-aerial-forest-imagery-using-intake">
-     Fetch a GeoTIFF file of aerial forest imagery using
-     <code class="docutils literal notranslate">
-      <span class="pre">
-       intake
-      </span>
-     </code>
-    </a>
-   </li>
-   <li class="toc-h3 nav-item toc-entry">
-    <a class="reference internal nav-link" href="#inspect-the-aerial-image">
-     Inspect the aerial image
-    </a>
-   </li>
-   <li class="toc-h3 nav-item toc-entry">
-    <a class="reference internal nav-link" href="#save-the-rgb-bands-of-the-geotiff-file-as-a-png">
-     Save the RGB bands of the GeoTIFF file as a PNG
-    </a>
-   </li>
-   <li class="toc-h3 nav-item toc-entry">
-    <a class="reference internal nav-link" href="#read-in-and-display-the-png-file">
-     Read in and display the PNG file
-    </a>
-   </li>
-  </ul>
- </li>
- <li class="toc-h2 nav-item toc-entry">
-  <a class="reference internal nav-link" href="#modelling">
-   Modelling
-  </a>
-  <ul class="nav section-nav flex-column">
-   <li class="toc-h3 nav-item toc-entry">
-    <a class="reference internal nav-link" href="#download-the-pretrained-model">
-     Download the pretrained model
-    </a>
-   </li>
-   <li class="toc-h3 nav-item toc-entry">
-    <a class="reference internal nav-link" href="#settings-of-detectron2-config">
-     Settings of
-     <code class="docutils literal notranslate">
-      <span class="pre">
-       detectron2
-      </span>
-     </code>
-     config
-    </a>
-   </li>
-  </ul>
- </li>
- <li class="toc-h2 nav-item toc-entry">
-  <a class="reference internal nav-link" href="#outputs">
-   Outputs
-  </a>
-  <ul class="nav section-nav flex-column">
-   <li class="toc-h3 nav-item toc-entry">
-    <a class="reference internal nav-link" href="#showing-the-predictions-from-detectreergb">
-     Showing the predictions from
-     <code class="docutils literal notranslate">
-      <span class="pre">
-       detectreeRGB
-      </span>
-     </code>
-    </a>
-   </li>
-   <li class="toc-h3 nav-item toc-entry">
-    <a class="reference internal nav-link" href="#convert-predictions-into-geospatial-files">
-     Convert predictions into geospatial files
-    </a>
-    <ul class="nav section-nav flex-column">
-     <li class="toc-h4 nav-item toc-entry">
-      <a class="reference internal nav-link" href="#to-geotiff">
-       To GeoTIFF
-      </a>
-     </li>
-     <li class="toc-h4 nav-item toc-entry">
-      <a class="reference internal nav-link" href="#to-shapefile">
-       To shapefile
-      </a>
-     </li>
-    </ul>
-   </li>
-  </ul>
- </li>
- <li class="toc-h2 nav-item toc-entry">
-  <a class="reference internal nav-link" href="#interactive-map-to-visualise-the-exported-files">
-   Interactive map to visualise the exported files
-  </a>
-  <ul class="nav section-nav flex-column">
-   <li class="toc-h3 nav-item toc-entry">
-    <a class="reference internal nav-link" href="#plot-tree-crown-delineation-predictions-and-scores">
-     Plot tree crown delineation predictions and scores
-    </a>
-   </li>
-   <li class="toc-h3 nav-item toc-entry">
-    <a class="reference internal nav-link" href="#plot-the-exported-geotiff-file">
-     Plot the exported GeoTIFF file
-    </a>
-   </li>
-   <li class="toc-h3 nav-item toc-entry">
-    <a class="reference internal nav-link" href="#overlay-the-prediction-labels-and-image">
-     Overlay the prediction labels and image
-    </a>
-   </li>
-   <li class="toc-h3 nav-item toc-entry">
-    <a class="reference internal nav-link" href="#save-plot">
-     Save plot
-    </a>
-   </li>
-  </ul>
- </li>
- <li class="toc-h2 nav-item toc-entry">
-  <a class="reference internal nav-link" href="#summary">
-   Summary
-  </a>
- </li>
- <li class="toc-h2 nav-item toc-entry">
-  <a class="reference internal nav-link" href="#citing-this-notebook">
-   Citing this Notebook
-  </a>
- </li>
- <li class="toc-h2 nav-item toc-entry">
-  <a class="reference internal nav-link" href="#additional-information">
-   Additional information
-  </a>
- </li>
-</ul>
 
-                        </nav>
-                    </div>
-                </div>
-            </div>
-            
-              <div>
+              
                 
-  <div class="tex2jax_ignore mathjax_ignore section" id="tree-crown-delineation-using-detectreergb">
-<h1>Tree crown delineation using detectreeRGB<a class="headerlink" href="#tree-crown-delineation-using-detectreergb" title="Permalink to this headline">¶</a></h1>
-<p><svg version="1.1" width="16" height="16" class="octicon octicon-tag" viewBox="0 0 16 16" aria-hidden="true"><path fill-rule="evenodd" d="M2.5 7.775V2.75a.25.25 0 01.25-.25h5.025a.25.25 0 01.177.073l6.25 6.25a.25.25 0 010 .354l-5.025 5.025a.25.25 0 01-.354 0l-6.25-6.25a.25.25 0 01-.073-.177zm-1.5 0V2.75C1 1.784 1.784 1 2.75 1h5.025c.464 0 .91.184 1.238.513l6.25 6.25a1.75 1.75 0 010 2.474l-5.026 5.026a1.75 1.75 0 01-2.474 0l-6.25-6.25A1.75 1.75 0 011 7.775zM6 5a1 1 0 100 2 1 1 0 000-2z"></path></svg>
+<div id="searchbox"></div>
+                <article class="bd-article">
+                  
+  <section class="tex2jax_ignore mathjax_ignore" id="tree-crown-delineation-using-detectreergb">
+<h1>Tree crown delineation using detectreeRGB<a class="headerlink" href="#tree-crown-delineation-using-detectreergb" title="Permalink to this heading">#</a></h1>
+<p><a href="#id1"><span class="problematic" id="id2">tag</span></a>
 <span class="sd-sphinx-override sd-badge sd-bg-primary sd-bg-text-primary">Forest</span>
 <span class="sd-sphinx-override sd-badge sd-bg-secondary sd-bg-text-secondary">Modelling</span>
 <span class="sd-sphinx-override sd-badge sd-bg-warning sd-bg-text-warning">Standard</span>
@@ -844,56 +539,61 @@ const thebe_selector_output = ".output, .cell_output"
         <img alt="doi" src="https://zenodo.org/badge/493595755.svg">
     </a>
 </p>
-<div class="section" id="context">
-<h2>Context<a class="headerlink" href="#context" title="Permalink to this headline">¶</a></h2>
-<div class="section" id="purpose">
-<h3>Purpose<a class="headerlink" href="#purpose" title="Permalink to this headline">¶</a></h3>
+<section id="context">
+<h2>Context<a class="headerlink" href="#context" title="Permalink to this heading">#</a></h2>
+<section id="purpose">
+<h3>Purpose<a class="headerlink" href="#purpose" title="Permalink to this heading">#</a></h3>
 <p>Accurately delineating trees using <code class="docutils literal notranslate"><span class="pre">detectron2</span></code>, a library that provides state-of-the-art deep learning detection and segmentation algorithms.</p>
-</div>
-<div class="section" id="modelling-approach">
-<h3>Modelling approach<a class="headerlink" href="#modelling-approach" title="Permalink to this headline">¶</a></h3>
+</section>
+<section id="modelling-approach">
+<h3>Modelling approach<a class="headerlink" href="#modelling-approach" title="Permalink to this heading">#</a></h3>
 <p>An established deep learning model, <strong>Mask R-CNN</strong> was deployed from <code class="docutils literal notranslate"><span class="pre">detectron2</span></code> library to delineate tree crowns accurately. A pre-trained model, named <code class="docutils literal notranslate"><span class="pre">detectreeRGB</span></code>, is provided to predict the location and extent of tree crowns from a top-down RGB image, captured by drone, aircraft or satellite. <code class="docutils literal notranslate"><span class="pre">detectreeRGB</span></code> was implemented in <code class="docutils literal notranslate"><span class="pre">python</span></code> 3.8 using <code class="docutils literal notranslate"><span class="pre">pytorch</span></code> v1.7.1 and <code class="docutils literal notranslate"><span class="pre">detectron2</span></code> v0.5. Further details can be found in the <a class="reference external" href="https://github.com/shmh40/detectreeRGB">repository documentation</a>.</p>
-</div>
-<div class="section" id="highlights">
-<h3>Highlights<a class="headerlink" href="#highlights" title="Permalink to this headline">¶</a></h3>
+</section>
+<section id="highlights">
+<h3>Highlights<a class="headerlink" href="#highlights" title="Permalink to this heading">#</a></h3>
 <ul class="simple">
 <li><p><a class="reference external" href="https://github.com/shmh40/detectreeRGB">detectreeRGB</a> advances the state-of-the-art in tree identification from RGB images by delineating exactly the extent of the tree crown.</p></li>
 <li><p>We demonstrate how to apply the pretrained model to a sample image fetched from a Zenodo repository.</p></li>
 <li><p>Our pre-trained model was developed using aircraft images of tropical forests in Malaysia.</p></li>
 <li><p>The model can be further trained using the user’s own images.</p></li>
 </ul>
-</div>
-<div class="section" id="contributions">
-<h3>Contributions<a class="headerlink" href="#contributions" title="Permalink to this headline">¶</a></h3>
-<div class="section" id="notebook">
-<h4>Notebook<a class="headerlink" href="#notebook" title="Permalink to this headline">¶</a></h4>
+</section>
+<section id="contributions">
+<h3>Contributions<a class="headerlink" href="#contributions" title="Permalink to this heading">#</a></h3>
+<section id="notebook">
+<h4>Notebook<a class="headerlink" href="#notebook" title="Permalink to this heading">#</a></h4>
 <ul class="simple">
 <li><p>Sebastian H. M. Hickman (author), University of Cambridge, <a class="reference external" href="https://github.com/shmh40">&#64;shmh40</a></p></li>
 <li><p>Alejandro Coca-Castro (reviewer), The Alan Turing Institute, <a class="reference external" href="https://github.com/acocac">&#64;acocac</a></p></li>
 </ul>
-</div>
-<div class="section" id="modelling-codebase">
-<h4>Modelling codebase<a class="headerlink" href="#modelling-codebase" title="Permalink to this headline">¶</a></h4>
+</section>
+<section id="modelling-codebase">
+<h4>Modelling codebase<a class="headerlink" href="#modelling-codebase" title="Permalink to this heading">#</a></h4>
 <ul class="simple">
 <li><p>Sebastian H. M. Hickman (author), University of Cambridge <a class="reference external" href="https://github.com/shmh40">&#64;shmh40</a></p></li>
 <li><p>James G. C. Ball (contributor), University of Cambridge <a class="reference external" href="https://github.com/PatBall1">&#64;PatBall1</a></p></li>
 <li><p>David A. Coomes (contributor), University of Cambridge</p></li>
 <li><p>Toby Jackson (contributor), University of Cambridge</p></li>
 </ul>
-</div>
-<div class="section" id="modelling-funding">
-<h4>Modelling funding<a class="headerlink" href="#modelling-funding" title="Permalink to this headline">¶</a></h4>
+</section>
+<section id="modelling-funding">
+<h4>Modelling funding<a class="headerlink" href="#modelling-funding" title="Permalink to this heading">#</a></h4>
 <p>The project was supported by the UKRI Centre for Doctoral Training in Application of Artificial Intelligence to the study of Environmental Risks (<a class="reference external" href="https://ai4er-cdt.esc.cam.ac.uk/">AI4ER</a>) (EP/S022961/1).</p>
 <div class="admonition note">
 <p class="admonition-title">Note</p>
 <p>The authors acknowledge the authors of the <a class="reference external" href="https://github.com/facebookresearch/detectron2">Detectron2</a> package which provides the Mask R-CNN architecture.</p>
 </div>
-</div>
-</div>
-</div>
-<div class="section" id="load-libraries">
-<h2>Load libraries<a class="headerlink" href="#load-libraries" title="Permalink to this headline">¶</a></h2>
+</section>
+</section>
+</section>
+<section id="load-libraries">
+<h2>Load libraries<a class="headerlink" href="#load-libraries" title="Permalink to this heading">#</a></h2>
 <div class="cell tag_hide-input docutils container">
+<details class="hide above-input">
+<summary aria-label="Toggle hidden content">
+<span class="collapsed">Show code cell source</span>
+<span class="expanded">Hide code cell source</span>
+</summary>
 <div class="cell_input docutils container">
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">cv2</span>
 <span class="kn">from</span> <span class="nn">PIL</span> <span class="kn">import</span> <span class="n">Image</span>
@@ -939,6 +639,7 @@ const thebe_selector_output = ".output, .cell_output"
 </pre></div>
 </div>
 </div>
+</details>
 <div class="cell_output docutils container">
 <script type="application/javascript">(function(root) {
   function now() {
@@ -1998,9 +1699,9 @@ if (window.Jupyter !== undefined) {
 }
 </style></div></div>
 </div>
-</div>
-<div class="section" id="set-folder-structure">
-<h2>Set folder structure<a class="headerlink" href="#set-folder-structure" title="Permalink to this headline">¶</a></h2>
+</section>
+<section id="set-folder-structure">
+<h2>Set folder structure<a class="headerlink" href="#set-folder-structure" title="Permalink to this heading">#</a></h2>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># Define the project main folder</span>
@@ -2026,11 +1727,11 @@ if (window.Jupyter !== undefined) {
 </div>
 </div>
 </div>
-</div>
-<div class="section" id="load-and-prepare-input-image">
-<h2>Load and prepare input image<a class="headerlink" href="#load-and-prepare-input-image" title="Permalink to this headline">¶</a></h2>
-<div class="section" id="fetch-a-geotiff-file-of-aerial-forest-imagery-using-intake">
-<h3>Fetch a GeoTIFF file of aerial forest imagery using <code class="docutils literal notranslate"><span class="pre">intake</span></code><a class="headerlink" href="#fetch-a-geotiff-file-of-aerial-forest-imagery-using-intake" title="Permalink to this headline">¶</a></h3>
+</section>
+<section id="load-and-prepare-input-image">
+<h2>Load and prepare input image<a class="headerlink" href="#load-and-prepare-input-image" title="Permalink to this heading">#</a></h2>
+<section id="fetch-a-geotiff-file-of-aerial-forest-imagery-using-intake">
+<h3>Fetch a GeoTIFF file of aerial forest imagery using <code class="docutils literal notranslate"><span class="pre">intake</span></code><a class="headerlink" href="#fetch-a-geotiff-file-of-aerial-forest-imagery-using-intake" title="Permalink to this heading">#</a></h3>
 <p>Let’s fetch a sample aerial image from a <a class="reference external" href="https://zenodo.org/record/5494629#.YWQQetnMKjA">Zenodo repository</a>.</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
@@ -2073,9 +1774,7 @@ if (window.Jupyter !== undefined) {
 <div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>will download https://zenodo.org/api/files/271e78b4-b605-4731-a127-bd097e639bf8/Sep_2014_RGB_602500_646600.tif to /home/jovyan/notebook/input/tiff/Sep_2014_RGB_602500_646600.tif
 </pre></div>
 </div>
-<script type="application/vnd.jupyter.widget-view+json">
-{"model_id": "abcfa31cd14f4afba92e5b4acf8d1d43", "version_major": 2, "version_minor": 0}
-</script></div>
+<script type="application/vnd.jupyter.widget-view+json">{"model_id": "abcfa31cd14f4afba92e5b4acf8d1d43", "version_major": 2, "version_minor": 0}</script></div>
 </div>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
@@ -2084,9 +1783,9 @@ if (window.Jupyter !== undefined) {
 </div>
 </div>
 </div>
-</div>
-<div class="section" id="inspect-the-aerial-image">
-<h3>Inspect the aerial image<a class="headerlink" href="#inspect-the-aerial-image" title="Permalink to this headline">¶</a></h3>
+</section>
+<section id="inspect-the-aerial-image">
+<h3>Inspect the aerial image<a class="headerlink" href="#inspect-the-aerial-image" title="Permalink to this heading">#</a></h3>
 <p>Let’s investigate the <code class="docutils literal notranslate"><span class="pre">data-array</span></code>, what is the shape? Bounds? Bands? CRS?</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
@@ -2137,9 +1836,9 @@ Attributes:
 </div>
 </div>
 </div>
-</div>
-<div class="section" id="save-the-rgb-bands-of-the-geotiff-file-as-a-png">
-<h3>Save the RGB bands of the GeoTIFF file as a PNG<a class="headerlink" href="#save-the-rgb-bands-of-the-geotiff-file-as-a-png" title="Permalink to this headline">¶</a></h3>
+</section>
+<section id="save-the-rgb-bands-of-the-geotiff-file-as-a-png">
+<h3>Save the RGB bands of the GeoTIFF file as a PNG<a class="headerlink" href="#save-the-rgb-bands-of-the-geotiff-file-as-a-png" title="Permalink to this heading">#</a></h3>
 <p><strong>Mask R-CNN</strong> requires images in <code class="docutils literal notranslate"><span class="pre">png</span></code> format. Let’s export the RGB bands to a <code class="docutils literal notranslate"><span class="pre">png</span></code> file.</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
@@ -2168,10 +1867,15 @@ Attributes:
 </div>
 </div>
 </div>
-</div>
-<div class="section" id="read-in-and-display-the-png-file">
-<h3>Read in and display the PNG file<a class="headerlink" href="#read-in-and-display-the-png-file" title="Permalink to this headline">¶</a></h3>
+</section>
+<section id="read-in-and-display-the-png-file">
+<h3>Read in and display the PNG file<a class="headerlink" href="#read-in-and-display-the-png-file" title="Permalink to this heading">#</a></h3>
 <div class="cell tag_hide-input docutils container">
+<details class="hide above-input">
+<summary aria-label="Toggle hidden content">
+<span class="collapsed">Show code cell source</span>
+<span class="expanded">Hide code cell source</span>
+</summary>
 <div class="cell_input docutils container">
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">im</span> <span class="o">=</span> <span class="n">cv2</span><span class="o">.</span><span class="n">imread</span><span class="p">(</span><span class="n">filepath</span><span class="p">)</span>
 <span class="n">plot_input</span> <span class="o">=</span> <span class="n">plt</span><span class="o">.</span><span class="n">figure</span><span class="p">(</span><span class="n">figsize</span><span class="o">=</span><span class="p">(</span><span class="mi">15</span><span class="p">,</span><span class="mi">15</span><span class="p">))</span>
@@ -2182,16 +1886,17 @@ Attributes:
 </pre></div>
 </div>
 </div>
+</details>
 <div class="cell_output docutils container">
-<img alt="../../../_images/notebook_17_0.png" src="../../../_images/notebook_17_0.png" />
+<img alt="../../../_images/f378396ba3c003db4117efa3d2d9526fc85aa6aee35b104fcaddb6dede2de62b.png" src="../../../_images/f378396ba3c003db4117efa3d2d9526fc85aa6aee35b104fcaddb6dede2de62b.png" />
 </div>
 </div>
-</div>
-</div>
-<div class="section" id="modelling">
-<h2>Modelling<a class="headerlink" href="#modelling" title="Permalink to this headline">¶</a></h2>
-<div class="section" id="download-the-pretrained-model">
-<h3>Download the pretrained model<a class="headerlink" href="#download-the-pretrained-model" title="Permalink to this headline">¶</a></h3>
+</section>
+</section>
+<section id="modelling">
+<h2>Modelling<a class="headerlink" href="#modelling" title="Permalink to this heading">#</a></h2>
+<section id="download-the-pretrained-model">
+<h3>Download the pretrained model<a class="headerlink" href="#download-the-pretrained-model" title="Permalink to this heading">#</a></h3>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># define the URL to retrieve the model</span>
@@ -2209,9 +1914,9 @@ Attributes:
 </div>
 </div>
 </div>
-</div>
-<div class="section" id="settings-of-detectron2-config">
-<h3>Settings of <code class="docutils literal notranslate"><span class="pre">detectron2</span></code> config<a class="headerlink" href="#settings-of-detectron2-config" title="Permalink to this headline">¶</a></h3>
+</section>
+<section id="settings-of-detectron2-config">
+<h3>Settings of <code class="docutils literal notranslate"><span class="pre">detectron2</span></code> config<a class="headerlink" href="#settings-of-detectron2-config" title="Permalink to this heading">#</a></h3>
 <p>The following lines allow configuring the main settings for predictions and load them into a <code class="docutils literal notranslate"><span class="pre">DefaultPredictor</span></code> object.</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
@@ -2239,13 +1944,18 @@ Attributes:
 </div>
 </div>
 </div>
-</div>
-</div>
-<div class="section" id="outputs">
-<h2>Outputs<a class="headerlink" href="#outputs" title="Permalink to this headline">¶</a></h2>
-<div class="section" id="showing-the-predictions-from-detectreergb">
-<h3>Showing the predictions from <code class="docutils literal notranslate"><span class="pre">detectreeRGB</span></code><a class="headerlink" href="#showing-the-predictions-from-detectreergb" title="Permalink to this headline">¶</a></h3>
+</section>
+</section>
+<section id="outputs">
+<h2>Outputs<a class="headerlink" href="#outputs" title="Permalink to this heading">#</a></h2>
+<section id="showing-the-predictions-from-detectreergb">
+<h3>Showing the predictions from <code class="docutils literal notranslate"><span class="pre">detectreeRGB</span></code><a class="headerlink" href="#showing-the-predictions-from-detectreergb" title="Permalink to this heading">#</a></h3>
 <div class="cell tag_hide-input docutils container">
+<details class="hide above-input">
+<summary aria-label="Toggle hidden content">
+<span class="collapsed">Show code cell source</span>
+<span class="expanded">Hide code cell source</span>
+</summary>
 <div class="cell_input docutils container">
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">outputs</span> <span class="o">=</span> <span class="n">predictor</span><span class="p">(</span><span class="n">im</span><span class="p">)</span>
 <span class="n">v</span> <span class="o">=</span> <span class="n">Visualizer</span><span class="p">(</span><span class="n">im</span><span class="p">[:,</span> <span class="p">:,</span> <span class="p">::</span><span class="o">-</span><span class="mi">1</span><span class="p">],</span> <span class="n">scale</span><span class="o">=</span><span class="mf">1.5</span><span class="p">,</span> <span class="n">instance_mode</span><span class="o">=</span><span class="n">ColorMode</span><span class="o">.</span><span class="n">IMAGE_BW</span><span class="p">)</span>   <span class="c1"># remove the colors of unsegmented pixels</span>
@@ -2260,15 +1970,16 @@ Attributes:
 </pre></div>
 </div>
 </div>
+</details>
 <div class="cell_output docutils container">
-<img alt="../../../_images/notebook_23_01.png" src="../../../_images/notebook_23_01.png" />
+<img alt="../../../_images/aed8951b2e8f91537916c7fd365768eb8f643b6396984e3b132cda0072684287.png" src="../../../_images/aed8951b2e8f91537916c7fd365768eb8f643b6396984e3b132cda0072684287.png" />
 </div>
 </div>
-</div>
-<div class="section" id="convert-predictions-into-geospatial-files">
-<h3>Convert predictions into geospatial files<a class="headerlink" href="#convert-predictions-into-geospatial-files" title="Permalink to this headline">¶</a></h3>
-<div class="section" id="to-geotiff">
-<h4>To GeoTIFF<a class="headerlink" href="#to-geotiff" title="Permalink to this headline">¶</a></h4>
+</section>
+<section id="convert-predictions-into-geospatial-files">
+<h3>Convert predictions into geospatial files<a class="headerlink" href="#convert-predictions-into-geospatial-files" title="Permalink to this heading">#</a></h3>
+<section id="to-geotiff">
+<h4>To GeoTIFF<a class="headerlink" href="#to-geotiff" title="Permalink to this heading">#</a></h4>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">mask_array</span> <span class="o">=</span> <span class="n">outputs</span><span class="p">[</span><span class="s1">&#39;instances&#39;</span><span class="p">]</span><span class="o">.</span><span class="n">pred_masks</span><span class="o">.</span><span class="n">cpu</span><span class="p">()</span><span class="o">.</span><span class="n">numpy</span><span class="p">()</span>
@@ -2302,9 +2013,9 @@ Attributes:
 </div>
 </div>
 </div>
-</div>
-<div class="section" id="to-shapefile">
-<h4>To shapefile<a class="headerlink" href="#to-shapefile" title="Permalink to this headline">¶</a></h4>
+</section>
+<section id="to-shapefile">
+<h4>To shapefile<a class="headerlink" href="#to-shapefile" title="Permalink to this heading">#</a></h4>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># Read input band with Rasterio</span>
@@ -2349,14 +2060,19 @@ Attributes:
 </div>
 </div>
 </div>
-</div>
-</div>
-</div>
-<div class="section" id="interactive-map-to-visualise-the-exported-files">
-<h2>Interactive map to visualise the exported files<a class="headerlink" href="#interactive-map-to-visualise-the-exported-files" title="Permalink to this headline">¶</a></h2>
-<div class="section" id="plot-tree-crown-delineation-predictions-and-scores">
-<h3>Plot tree crown delineation predictions and scores<a class="headerlink" href="#plot-tree-crown-delineation-predictions-and-scores" title="Permalink to this headline">¶</a></h3>
+</section>
+</section>
+</section>
+<section id="interactive-map-to-visualise-the-exported-files">
+<h2>Interactive map to visualise the exported files<a class="headerlink" href="#interactive-map-to-visualise-the-exported-files" title="Permalink to this heading">#</a></h2>
+<section id="plot-tree-crown-delineation-predictions-and-scores">
+<h3>Plot tree crown delineation predictions and scores<a class="headerlink" href="#plot-tree-crown-delineation-predictions-and-scores" title="Permalink to this heading">#</a></h3>
 <div class="cell tag_hide-input docutils container">
+<details class="hide above-input">
+<summary aria-label="Toggle hidden content">
+<span class="collapsed">Show code cell source</span>
+<span class="expanded">Hide code cell source</span>
+</summary>
 <div class="cell_input docutils container">
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># load and plot polygons</span>
 <span class="n">in_shp</span> <span class="o">=</span> <span class="n">glob</span><span class="o">.</span><span class="n">glob</span><span class="p">(</span><span class="n">config</span><span class="p">[</span><span class="s1">&#39;out_shapefile&#39;</span><span class="p">]</span> <span class="o">+</span> <span class="s1">&#39;/*.shp&#39;</span><span class="p">)</span>
@@ -2368,6 +2084,7 @@ Attributes:
 </pre></div>
 </div>
 </div>
+</details>
 <div class="cell_output docutils container">
 <div class="output text_html"><div id='p1005'>
   <div id="a8f69bc4-1215-4f5b-b8f1-fe93a61028e0" data-root-id="p1005" style="display: contents;"></div>
@@ -2436,10 +2153,15 @@ Attributes:
   }
 })(window);</script></div></div>
 </div>
-</div>
-<div class="section" id="plot-the-exported-geotiff-file">
-<h3>Plot the exported GeoTIFF file<a class="headerlink" href="#plot-the-exported-geotiff-file" title="Permalink to this headline">¶</a></h3>
+</section>
+<section id="plot-the-exported-geotiff-file">
+<h3>Plot the exported GeoTIFF file<a class="headerlink" href="#plot-the-exported-geotiff-file" title="Permalink to this heading">#</a></h3>
 <div class="cell tag_hide-input docutils container">
+<details class="hide above-input">
+<summary aria-label="Toggle hidden content">
+<span class="collapsed">Show code cell source</span>
+<span class="expanded">Hide code cell source</span>
+</summary>
 <div class="cell_input docutils container">
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># load and plot RGB image</span>
 <span class="n">r</span> <span class="o">=</span> <span class="n">tc_rgb</span><span class="o">.</span><span class="n">sel</span><span class="p">(</span><span class="n">band</span><span class="o">=</span><span class="p">[</span><span class="mi">1</span><span class="p">,</span><span class="mi">2</span><span class="p">,</span><span class="mi">3</span><span class="p">])</span>
@@ -2456,18 +2178,25 @@ Attributes:
 </pre></div>
 </div>
 </div>
+</details>
 </div>
-</div>
-<div class="section" id="overlay-the-prediction-labels-and-image">
-<h3>Overlay the prediction labels and image<a class="headerlink" href="#overlay-the-prediction-labels-and-image" title="Permalink to this headline">¶</a></h3>
+</section>
+<section id="overlay-the-prediction-labels-and-image">
+<h3>Overlay the prediction labels and image<a class="headerlink" href="#overlay-the-prediction-labels-and-image" title="Permalink to this heading">#</a></h3>
 <p>Note we have some artifacts in the RGB image due to the transformations using the normalization procedure.</p>
 <div class="cell tag_hide-input docutils container">
+<details class="hide above-input">
+<summary aria-label="Toggle hidden content">
+<span class="collapsed">Show code cell source</span>
+<span class="expanded">Hide code cell source</span>
+</summary>
 <div class="cell_input docutils container">
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">plot_predictions_interactive</span> <span class="o">=</span> <span class="n">plot_rgb</span> <span class="o">*</span> <span class="n">plot_vector</span>
 <span class="n">plot_predictions_interactive</span>
 </pre></div>
 </div>
 </div>
+</details>
 <div class="cell_output docutils container">
 <div class="output stderr highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>OMP: Info #276: omp_set_nested routine deprecated, please use omp_set_max_active_levels instead.
 </pre></div>
@@ -2539,9 +2268,9 @@ Attributes:
   }
 })(window);</script></div></div>
 </div>
-</div>
-<div class="section" id="save-plot">
-<h3>Save plot<a class="headerlink" href="#save-plot" title="Permalink to this headline">¶</a></h3>
+</section>
+<section id="save-plot">
+<h3>Save plot<a class="headerlink" href="#save-plot" title="Permalink to this heading">#</a></h3>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">hvplot</span><span class="o">.</span><span class="n">save</span><span class="p">(</span><span class="n">plot_predictions_interactive</span><span class="p">,</span> <span class="n">notebook_folder</span> <span class="o">+</span> <span class="s1">&#39;/interactive_predictions.html&#39;</span><span class="p">)</span>
@@ -2549,10 +2278,10 @@ Attributes:
 </div>
 </div>
 </div>
-</div>
-</div>
-<div class="section" id="summary">
-<h2>Summary<a class="headerlink" href="#summary" title="Permalink to this headline">¶</a></h2>
+</section>
+</section>
+<section id="summary">
+<h2>Summary<a class="headerlink" href="#summary" title="Permalink to this heading">#</a></h2>
 <p>We have read in a raster, chosen a tile and made predictions on it. These predictions can then be transformed to shapefiles and examined in GIS software!</p>
 <ul class="simple">
 <li><p>We made the predictions on the <code class="docutils literal notranslate"><span class="pre">png</span></code> using a pretrained <strong>Mask R-CNN</strong> model, <code class="docutils literal notranslate"><span class="pre">detectreeRGB</span></code>.</p></li>
@@ -2560,13 +2289,13 @@ Attributes:
 <li><p>We then extracted our predictions, added the geospatial location back in, and exported them as shapefiles including the confidence score assigned to each prediction by the model.</p></li>
 <li><p>Visualised the predictions on an interactive map!</p></li>
 </ul>
-</div>
-<div class="section" id="citing-this-notebook">
-<h2>Citing this Notebook<a class="headerlink" href="#citing-this-notebook" title="Permalink to this headline">¶</a></h2>
+</section>
+<section id="citing-this-notebook">
+<h2>Citing this Notebook<a class="headerlink" href="#citing-this-notebook" title="Permalink to this heading">#</a></h2>
 <p>Please see <a class="reference external" href="https://github.com/eds-book-gallery/94486a7f-e046-461f-bbb9-334ec7b57040/blob/main/CITATION.cff">CITATION.cff</a> for the full citation information. The citation file can be exported to APA or BibTex formats (learn more <a class="reference external" href="https://docs.github.com/en/repositories/managing-your-repositorys-settings-and-features/customizing-your-repository/about-citation-files">here</a>).</p>
-</div>
-<div class="section" id="additional-information">
-<h2>Additional information<a class="headerlink" href="#additional-information" title="Permalink to this headline">¶</a></h2>
+</section>
+<section id="additional-information">
+<h2>Additional information<a class="headerlink" href="#additional-information" title="Permalink to this heading">#</a></h2>
 <p><strong>Codebase</strong>: version 1.0.0 with commit <mark><a class="reference external" href="https://github.com/shmh40/detectreeRGB/compare/main...dev">16a5a1c</a></mark></p>
 <p><strong>License</strong>: The code in this notebook is licensed under the MIT License. The Environmental Data Science book is licensed under the Creative Commons by Attribution 4.0 license. See further details <a class="reference external" href="https://github.com/alan-turing-institute/environmental-ds-book/blob/master/LICENSE.md">here</a>.</p>
 <p><strong>Contact</strong>: If you have any suggestion or report an issue with this notebook, feel free to <a class="reference external" href="https://github.com/alan-turing-institute/environmental-ds-book/issues/new/choose">create an issue</a> or send a direct message to <a class="reference external" href="mailto:environmental&#46;ds&#46;book&#37;&#52;&#48;gmail&#46;com">environmental<span>&#46;</span>ds<span>&#46;</span>book<span>&#64;</span>gmail<span>&#46;</span>com</a>.</p>
@@ -2578,14 +2307,8 @@ Last tested: 2023-09-03
 </div>
 </div>
 </div>
-</div>
-</div>
-
-
-<script type="application/vnd.jupyter.widget-state+json">
-{"state": {"20a6f9258fed44e2b0fae65bdf5dee70": {"model_module": "@jupyter-widgets/controls", "model_module_version": "2.0.0", "model_name": "HTMLModel", "state": {"_dom_classes": [], "_model_module": "@jupyter-widgets/controls", "_model_module_version": "2.0.0", "_model_name": "HTMLModel", "_view_count": null, "_view_module": "@jupyter-widgets/controls", "_view_module_version": "2.0.0", "_view_name": "HTMLView", "description": "", "description_allow_html": false, "layout": "IPY_MODEL_3702b9730340426e82f183cc4a560731", "placeholder": "\u200b", "style": "IPY_MODEL_7b2c092789334fcaa9a7724f6c8d8914", "tabbable": null, "tooltip": null, "value": " 28.0M/28.0M [01:47&lt;00:00, 261kB/s]"}}, "20c94fbd82e1423d8f29dbae980b450c": {"model_module": "@jupyter-widgets/base", "model_module_version": "2.0.0", "model_name": "LayoutModel", "state": {"_model_module": "@jupyter-widgets/base", "_model_module_version": "2.0.0", "_model_name": "LayoutModel", "_view_count": null, "_view_module": "@jupyter-widgets/base", "_view_module_version": "2.0.0", "_view_name": "LayoutView", "align_content": null, "align_items": null, "align_self": null, "border_bottom": null, "border_left": null, "border_right": null, "border_top": null, "bottom": null, "display": null, "flex": null, "flex_flow": null, "grid_area": null, "grid_auto_columns": null, "grid_auto_flow": null, "grid_auto_rows": null, "grid_column": null, "grid_gap": null, "grid_row": null, "grid_template_areas": null, "grid_template_columns": null, "grid_template_rows": null, "height": null, "justify_content": null, "justify_items": null, "left": null, "margin": null, "max_height": null, "max_width": null, "min_height": null, "min_width": null, "object_fit": null, "object_position": null, "order": null, "overflow": null, "padding": null, "right": null, "top": null, "visibility": null, "width": null}}, "3702b9730340426e82f183cc4a560731": {"model_module": "@jupyter-widgets/base", "model_module_version": "2.0.0", "model_name": "LayoutModel", "state": {"_model_module": "@jupyter-widgets/base", "_model_module_version": "2.0.0", "_model_name": "LayoutModel", "_view_count": null, "_view_module": "@jupyter-widgets/base", "_view_module_version": "2.0.0", "_view_name": "LayoutView", "align_content": null, "align_items": null, "align_self": null, "border_bottom": null, "border_left": null, "border_right": null, "border_top": null, "bottom": null, "display": null, "flex": null, "flex_flow": null, "grid_area": null, "grid_auto_columns": null, "grid_auto_flow": null, "grid_auto_rows": null, "grid_column": null, "grid_gap": null, "grid_row": null, "grid_template_areas": null, "grid_template_columns": null, "grid_template_rows": null, "height": null, "justify_content": null, "justify_items": null, "left": null, "margin": null, "max_height": null, "max_width": null, "min_height": null, "min_width": null, "object_fit": null, "object_position": null, "order": null, "overflow": null, "padding": null, "right": null, "top": null, "visibility": null, "width": null}}, "6c66e79472da4cff8b64eed491f28912": {"model_module": "@jupyter-widgets/controls", "model_module_version": "2.0.0", "model_name": "FloatProgressModel", "state": {"_dom_classes": [], "_model_module": "@jupyter-widgets/controls", "_model_module_version": "2.0.0", "_model_name": "FloatProgressModel", "_view_count": null, "_view_module": "@jupyter-widgets/controls", "_view_module_version": "2.0.0", "_view_name": "ProgressView", "bar_style": "success", "description": "", "description_allow_html": false, "layout": "IPY_MODEL_20c94fbd82e1423d8f29dbae980b450c", "max": 27995001.0, "min": 0.0, "orientation": "horizontal", "style": "IPY_MODEL_d910915cab5a44c3b2676067858de8b0", "tabbable": null, "tooltip": null, "value": 27995001.0}}, "6f222c2818164f829073d5867695e6b1": {"model_module": "@jupyter-widgets/base", "model_module_version": "2.0.0", "model_name": "LayoutModel", "state": {"_model_module": "@jupyter-widgets/base", "_model_module_version": "2.0.0", "_model_name": "LayoutModel", "_view_count": null, "_view_module": "@jupyter-widgets/base", "_view_module_version": "2.0.0", "_view_name": "LayoutView", "align_content": null, "align_items": null, "align_self": null, "border_bottom": null, "border_left": null, "border_right": null, "border_top": null, "bottom": null, "display": null, "flex": null, "flex_flow": null, "grid_area": null, "grid_auto_columns": null, "grid_auto_flow": null, "grid_auto_rows": null, "grid_column": null, "grid_gap": null, "grid_row": null, "grid_template_areas": null, "grid_template_columns": null, "grid_template_rows": null, "height": null, "justify_content": null, "justify_items": null, "left": null, "margin": null, "max_height": null, "max_width": null, "min_height": null, "min_width": null, "object_fit": null, "object_position": null, "order": null, "overflow": null, "padding": null, "right": null, "top": null, "visibility": null, "width": null}}, "7b2c092789334fcaa9a7724f6c8d8914": {"model_module": "@jupyter-widgets/controls", "model_module_version": "2.0.0", "model_name": "HTMLStyleModel", "state": {"_model_module": "@jupyter-widgets/controls", "_model_module_version": "2.0.0", "_model_name": "HTMLStyleModel", "_view_count": null, "_view_module": "@jupyter-widgets/base", "_view_module_version": "2.0.0", "_view_name": "StyleView", "background": null, "description_width": "", "font_size": null, "text_color": null}}, "8aa00f73b42f4ac9b59f5fe9fb895a47": {"model_module": "@jupyter-widgets/controls", "model_module_version": "2.0.0", "model_name": "HTMLStyleModel", "state": {"_model_module": "@jupyter-widgets/controls", "_model_module_version": "2.0.0", "_model_name": "HTMLStyleModel", "_view_count": null, "_view_module": "@jupyter-widgets/base", "_view_module_version": "2.0.0", "_view_name": "StyleView", "background": null, "description_width": "", "font_size": null, "text_color": null}}, "a9054414c4bb4eb3b1e0eba37629f934": {"model_module": "@jupyter-widgets/base", "model_module_version": "2.0.0", "model_name": "LayoutModel", "state": {"_model_module": "@jupyter-widgets/base", "_model_module_version": "2.0.0", "_model_name": "LayoutModel", "_view_count": null, "_view_module": "@jupyter-widgets/base", "_view_module_version": "2.0.0", "_view_name": "LayoutView", "align_content": null, "align_items": null, "align_self": null, "border_bottom": null, "border_left": null, "border_right": null, "border_top": null, "bottom": null, "display": null, "flex": null, "flex_flow": null, "grid_area": null, "grid_auto_columns": null, "grid_auto_flow": null, "grid_auto_rows": null, "grid_column": null, "grid_gap": null, "grid_row": null, "grid_template_areas": null, "grid_template_columns": null, "grid_template_rows": null, "height": null, "justify_content": null, "justify_items": null, "left": null, "margin": null, "max_height": null, "max_width": null, "min_height": null, "min_width": null, "object_fit": null, "object_position": null, "order": null, "overflow": null, "padding": null, "right": null, "top": null, "visibility": null, "width": null}}, "abcfa31cd14f4afba92e5b4acf8d1d43": {"model_module": "@jupyter-widgets/controls", "model_module_version": "2.0.0", "model_name": "HBoxModel", "state": {"_dom_classes": [], "_model_module": "@jupyter-widgets/controls", "_model_module_version": "2.0.0", "_model_name": "HBoxModel", "_view_count": null, "_view_module": "@jupyter-widgets/controls", "_view_module_version": "2.0.0", "_view_name": "HBoxView", "box_style": "", "children": ["IPY_MODEL_b354e9696fbd4bdb9f510f93cb3651b0", "IPY_MODEL_6c66e79472da4cff8b64eed491f28912", "IPY_MODEL_20a6f9258fed44e2b0fae65bdf5dee70"], "layout": "IPY_MODEL_a9054414c4bb4eb3b1e0eba37629f934", "tabbable": null, "tooltip": null}}, "b354e9696fbd4bdb9f510f93cb3651b0": {"model_module": "@jupyter-widgets/controls", "model_module_version": "2.0.0", "model_name": "HTMLModel", "state": {"_dom_classes": [], "_model_module": "@jupyter-widgets/controls", "_model_module_version": "2.0.0", "_model_name": "HTMLModel", "_view_count": null, "_view_module": "@jupyter-widgets/controls", "_view_module_version": "2.0.0", "_view_name": "HTMLView", "description": "", "description_allow_html": false, "layout": "IPY_MODEL_6f222c2818164f829073d5867695e6b1", "placeholder": "\u200b", "style": "IPY_MODEL_8aa00f73b42f4ac9b59f5fe9fb895a47", "tabbable": null, "tooltip": null, "value": "100%"}}, "d910915cab5a44c3b2676067858de8b0": {"model_module": "@jupyter-widgets/controls", "model_module_version": "2.0.0", "model_name": "ProgressStyleModel", "state": {"_model_module": "@jupyter-widgets/controls", "_model_module_version": "2.0.0", "_model_name": "ProgressStyleModel", "_view_count": null, "_view_module": "@jupyter-widgets/base", "_view_module_version": "2.0.0", "_view_name": "StyleView", "bar_color": null, "description_width": ""}}}, "version_major": 2, "version_minor": 0}
-</script>
-
+</section>
+</section>
 
     <script type="text/x-thebe-config">
     {
@@ -2599,7 +2322,7 @@ Last tested: 2023-09-03
             mode: "python"
         },
         kernelOptions: {
-            kernelName: "python3",
+            name: "python3",
             path: "./notebooks/gallery/94486a7f-e046-461f-bbb9-334ec7b57040"
         },
         predefinedOutput: true
@@ -2607,44 +2330,147 @@ Last tested: 2023-09-03
     </script>
     <script>kernelName = 'python3'</script>
 
-              </div>
+                </article>
               
-            
-                <!-- Previous / next buttons -->
-<div class='prev-next-area'> 
-    <a class='left-prev' id="prev-link" href="../ac327c3a-5264-40a2-8c6e-1e8d7c4b37ef/notebook.html" title="previous page">
-        <i class="fas fa-angle-left"></i>
-        <div class="prev-next-info">
-            <p class="prev-next-subtitle">previous</p>
-            <p class="prev-next-title">Sea ice forecasting using IceNet</p>
-        </div>
+
+              
+              
+              
+              
+                <footer class="prev-next-footer">
+                  
+<div class="prev-next-area">
+    <a class="left-prev"
+       href="../ac327c3a-5264-40a2-8c6e-1e8d7c4b37ef/notebook.html"
+       title="previous page">
+      <i class="fa-solid fa-angle-left"></i>
+      <div class="prev-next-info">
+        <p class="prev-next-subtitle">previous</p>
+        <p class="prev-next-title">Sea ice forecasting using IceNet</p>
+      </div>
     </a>
-    <a class='right-next' id="next-link" href="../bc30df18-fce2-42fa-aade-1ce5b7f3ca3c/notebook.html" title="next page">
-    <div class="prev-next-info">
+    <a class="right-next"
+       href="../bc30df18-fce2-42fa-aade-1ce5b7f3ca3c/notebook.html"
+       title="next page">
+      <div class="prev-next-info">
         <p class="prev-next-subtitle">next</p>
         <p class="prev-next-title">SEVIRI Level 1.5</p>
-    </div>
-    <i class="fas fa-angle-right"></i>
+      </div>
+      <i class="fa-solid fa-angle-right"></i>
     </a>
 </div>
+                </footer>
+              
+            </div>
             
-        </div>
-    </div>
-    <footer class="footer">
-  <p>
-    
-      By EDS book Community. This site is powered by <a href="https://www.netlify.com/">Netlify</a>.<br/>
-    
-        &copy; Copyright 2021.<br/>
-  </p>
-</footer>
-</main>
+            
+              
+                <div class="bd-sidebar-secondary bd-toc"><div class="sidebar-secondary-items sidebar-secondary__inner">
 
 
-      </div>
-    </div>
+  <div class="sidebar-secondary-item">
+  <div class="page-toc tocsection onthispage">
+    <i class="fa-solid fa-list"></i> Contents
+  </div>
+  <nav class="bd-toc-nav page-toc">
+    <ul class="visible nav section-nav flex-column">
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#context">Context</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#purpose">Purpose</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#modelling-approach">Modelling approach</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#highlights">Highlights</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#contributions">Contributions</a><ul class="nav section-nav flex-column">
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#notebook">Notebook</a></li>
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#modelling-codebase">Modelling codebase</a></li>
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#modelling-funding">Modelling funding</a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#load-libraries">Load libraries</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#set-folder-structure">Set folder structure</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#load-and-prepare-input-image">Load and prepare input image</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#fetch-a-geotiff-file-of-aerial-forest-imagery-using-intake">Fetch a GeoTIFF file of aerial forest imagery using <code class="docutils literal notranslate"><span class="pre">intake</span></code></a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#inspect-the-aerial-image">Inspect the aerial image</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#save-the-rgb-bands-of-the-geotiff-file-as-a-png">Save the RGB bands of the GeoTIFF file as a PNG</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#read-in-and-display-the-png-file">Read in and display the PNG file</a></li>
+</ul>
+</li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#modelling">Modelling</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#download-the-pretrained-model">Download the pretrained model</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#settings-of-detectron2-config">Settings of <code class="docutils literal notranslate"><span class="pre">detectron2</span></code> config</a></li>
+</ul>
+</li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#outputs">Outputs</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#showing-the-predictions-from-detectreergb">Showing the predictions from <code class="docutils literal notranslate"><span class="pre">detectreeRGB</span></code></a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#convert-predictions-into-geospatial-files">Convert predictions into geospatial files</a><ul class="nav section-nav flex-column">
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#to-geotiff">To GeoTIFF</a></li>
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#to-shapefile">To shapefile</a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#interactive-map-to-visualise-the-exported-files">Interactive map to visualise the exported files</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#plot-tree-crown-delineation-predictions-and-scores">Plot tree crown delineation predictions and scores</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#plot-the-exported-geotiff-file">Plot the exported GeoTIFF file</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#overlay-the-prediction-labels-and-image">Overlay the prediction labels and image</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#save-plot">Save plot</a></li>
+</ul>
+</li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#summary">Summary</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#citing-this-notebook">Citing this Notebook</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#additional-information">Additional information</a></li>
+</ul>
+  </nav></div>
+
+</div></div>
+              
+            
+          </div>
+          <footer class="bd-footer-content">
+            
+<div class="bd-footer-content__inner container">
   
-  <script src="../../../_static/js/index.be7d3bbb2ef33a8344ce.js"></script>
+  <div class="footer-item">
+    
+<p class="component-author">
+By EDS book Community. This site is powered by <a href="https://www.netlify.com/">Netlify</a>.
+</p>
 
+  </div>
+  
+  <div class="footer-item">
+    
+
+  <p class="copyright">
+    
+      © Copyright 2021.
+      <br/>
+    
+  </p>
+
+  </div>
+  
+  <div class="footer-item">
+    
+  </div>
+  
+  <div class="footer-item">
+    
+  </div>
+  
+</div>
+          </footer>
+        
+
+      </main>
+    </div>
+  </div>
+  
+  <!-- Scripts loaded after <body> so the DOM is not blocked -->
+  <script src="../../../_static/scripts/bootstrap.js?digest=8d27b9dea8ad943066ae"></script>
+<script src="../../../_static/scripts/pydata-sphinx-theme.js?digest=8d27b9dea8ad943066ae"></script>
+
+  <footer class="bd-footer">
+  </footer>
   </body>
 </html>

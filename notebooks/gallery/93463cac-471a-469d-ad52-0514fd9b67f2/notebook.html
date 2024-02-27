@@ -1,736 +1,500 @@
 
+
 <!DOCTYPE html>
 
-<html lang="en">
+
+<html lang="en" data-content_root="" >
+
   <head>
     <meta charset="utf-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="generator" content="Docutils 0.18.1: http://docutils.sourceforge.net/" />
+
     <title>Deep learning and variational inversion to quantify and attribute climate change (CIRC23) &#8212; Environmental Data Science Book</title>
-    
-  <link href="../../../_static/css/theme.css" rel="stylesheet">
-  <link href="../../../_static/css/index.ff1ffe594081f20da1ef19478df9384b.css" rel="stylesheet">
+  
+  
+  
+  <script data-cfasync="false">
+    document.documentElement.dataset.mode = localStorage.getItem("mode") || "";
+    document.documentElement.dataset.theme = localStorage.getItem("theme") || "light";
+  </script>
+  
+  <!-- Loaded before other Sphinx assets -->
+  <link href="../../../_static/styles/theme.css?digest=8d27b9dea8ad943066ae" rel="stylesheet" />
+<link href="../../../_static/styles/bootstrap.css?digest=8d27b9dea8ad943066ae" rel="stylesheet" />
+<link href="../../../_static/styles/pydata-sphinx-theme.css?digest=8d27b9dea8ad943066ae" rel="stylesheet" />
 
-    
-  <link rel="stylesheet"
-    href="../../../_static/vendor/fontawesome/5.13.0/css/all.min.css">
-  <link rel="preload" as="font" type="font/woff2" crossorigin
-    href="../../../_static/vendor/fontawesome/5.13.0/webfonts/fa-solid-900.woff2">
-  <link rel="preload" as="font" type="font/woff2" crossorigin
-    href="../../../_static/vendor/fontawesome/5.13.0/webfonts/fa-brands-400.woff2">
+  
+  <link href="../../../_static/vendor/fontawesome/6.5.1/css/all.min.css?digest=8d27b9dea8ad943066ae" rel="stylesheet" />
+  <link rel="preload" as="font" type="font/woff2" crossorigin href="../../../_static/vendor/fontawesome/6.5.1/webfonts/fa-solid-900.woff2" />
+<link rel="preload" as="font" type="font/woff2" crossorigin href="../../../_static/vendor/fontawesome/6.5.1/webfonts/fa-brands-400.woff2" />
+<link rel="preload" as="font" type="font/woff2" crossorigin href="../../../_static/vendor/fontawesome/6.5.1/webfonts/fa-regular-400.woff2" />
 
-    
-      
-
-    
     <link rel="stylesheet" type="text/css" href="../../../_static/pygments.css" />
-    <link rel="stylesheet" type="text/css" href="../../../_static/sphinx-book-theme.css?digest=c3fdc42140077d1ad13ad2f1588a4309" />
+    <link rel="stylesheet" href="../../../_static/styles/sphinx-book-theme.css?digest=14f4ca6b54d191a8c7657f6c759bf11a5fb86285" type="text/css" />
     <link rel="stylesheet" type="text/css" href="../../../_static/togglebutton.css" />
     <link rel="stylesheet" type="text/css" href="../../../_static/copybutton.css" />
-    <link rel="stylesheet" type="text/css" href="../../../_static/mystnb.css" />
+    <link rel="stylesheet" type="text/css" href="../../../_static/mystnb.4510f1fc1dee50b3e5859aac5469c37c29e427902b24a333a5f9fcb2f0b3ac41.css" />
     <link rel="stylesheet" type="text/css" href="../../../_static/sphinx-thebe.css" />
-    <link rel="stylesheet" type="text/css" href="../../../_static/panels-main.c949a650a448cc0ae9fd3441c0e17fb0.css" />
-    <link rel="stylesheet" type="text/css" href="../../../_static/panels-variables.06eb56fa6e07937060861dad626602ad.css" />
-    <link rel="stylesheet" type="text/css" href="../../../_static/design-style.1e8bd061cd6da7fc9cf755528e8ffc24.min.css" />
-    
-  <link rel="preload" as="script" href="../../../_static/js/index.be7d3bbb2ef33a8344ce.js">
+    <link rel="stylesheet" type="text/css" href="../../../_static/design-style.4045f2051d55cab465a707391d5b2007.min.css" />
+  
+  <!-- Pre-loaded scripts that we'll load fully later -->
+  <link rel="preload" as="script" href="../../../_static/scripts/bootstrap.js?digest=8d27b9dea8ad943066ae" />
+<link rel="preload" as="script" href="../../../_static/scripts/pydata-sphinx-theme.js?digest=8d27b9dea8ad943066ae" />
+  <script src="../../../_static/vendor/fontawesome/6.5.1/js/all.min.js?digest=8d27b9dea8ad943066ae"></script>
 
     <script data-url_root="../../../" id="documentation_options" src="../../../_static/documentation_options.js"></script>
     <script src="../../../_static/jquery.js"></script>
     <script src="../../../_static/underscore.js"></script>
+    <script src="../../../_static/_sphinx_javascript_frameworks_compat.js"></script>
     <script src="../../../_static/doctools.js"></script>
     <script src="../../../_static/clipboard.min.js"></script>
     <script src="../../../_static/copybutton.js"></script>
+    <script src="../../../_static/scripts/sphinx-book-theme.js?digest=5a5c038af52cf7bc1a1ec88eea08e6366ee68824"></script>
     <script>let toggleHintShow = 'Click to show';</script>
     <script>let toggleHintHide = 'Click to hide';</script>
     <script>let toggleOpenOnPrint = 'true';</script>
     <script src="../../../_static/togglebutton.js"></script>
-    <script>var togglebuttonSelector = '.toggle, .admonition.dropdown, .tag_hide_input div.cell_input, .tag_hide-input div.cell_input, .tag_hide_output div.cell_output, .tag_hide-output div.cell_output, .tag_hide_cell.cell, .tag_hide-cell.cell';</script>
-    <script src="../../../_static/sphinx-book-theme.d59cb220de22ca1c485ebbdc042f0030.js"></script>
+    <script>var togglebuttonSelector = '.toggle, .admonition.dropdown';</script>
     <script src="../../../_static/design-tabs.js"></script>
+    <script async="async" src="https://www.googletagmanager.com/gtag/js?id=G-3E20PWD938"></script>
+    <script>
+                window.dataLayer = window.dataLayer || [];
+                function gtag(){ dataLayer.push(arguments); }
+                gtag('js', new Date());
+                gtag('config', 'G-3E20PWD938');
+            </script>
     <script>const THEBE_JS_URL = "https://unpkg.com/thebe@0.8.2/lib/index.js"
 const thebe_selector = ".thebe,.cell"
 const thebe_selector_input = "pre"
 const thebe_selector_output = ".output, .cell_output"
 </script>
     <script async="async" src="../../../_static/sphinx-thebe.js"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/require.js/2.3.4/require.min.js"></script>
-    <script src="https://unpkg.com/@jupyter-widgets/html-manager@^0.20.1/dist/embed-amd.js"></script>
+    <script>DOCUMENTATION_OPTIONS.pagename = 'notebooks/gallery/93463cac-471a-469d-ad52-0514fd9b67f2/notebook';</script>
     <link rel="index" title="Index" href="../../../genindex.html" />
     <link rel="search" title="Search" href="../../../search.html" />
     <link rel="next" title="Learning the underlying physics of a simulation model of the ocean’s temperature (CIRC23)" href="../3286b92f-4fae-4cc6-a29e-e408bc844542/notebook.html" />
     <link rel="prev" title="Variational data assimilation with deep prior (CIRC23)" href="../39d9c177-11da-41b2-9b64-63f4c1c834b3/notebook.html" />
-    <meta name="viewport" content="width=device-width, initial-scale=1" />
-    <meta name="docsearch:language" content="en">
-    
-
-    <!-- Google Analytics -->
-    
-<script async="" src="https://www.googletagmanager.com/gtag/js?id=G-3E20PWD938"></script>
-<script>
-                    window.dataLayer = window.dataLayer || [];
-                    function gtag(){ dataLayer.push(arguments); }
-                    gtag('js', new Date());
-                    gtag('config', 'G-3E20PWD938');
-                </script>
-
+  <meta name="viewport" content="width=device-width, initial-scale=1"/>
+  <meta name="docsearch:language" content="en"/>
   </head>
-  <body data-spy="scroll" data-target="#bd-toc-nav" data-offset="80">
-    
-    <div class="container-fluid" id="banner"></div>
+  
+  
+  <body data-bs-spy="scroll" data-bs-target=".bd-toc-nav" data-offset="180" data-bs-root-margin="0px 0px -60%" data-default-mode="">
 
-    
+  
+  
+  <a id="pst-skip-link" class="skip-link" href="#main-content">Skip to main content</a>
+  
+  <div id="pst-scroll-pixel-helper"></div>
+  
+  <button type="button" class="btn rounded-pill" id="pst-back-to-top">
+    <i class="fa-solid fa-arrow-up"></i>
+    Back to top
+  </button>
 
-    <div class="container-xl">
-      <div class="row">
-          
-<div class="col-12 col-md-3 bd-sidebar site-navigation show" id="site-navigation">
-    
-        <div class="navbar-brand-box">
-    <a class="navbar-brand text-wrap" href="../../../index.html">
+  
+  <input type="checkbox"
+          class="sidebar-toggle"
+          name="__primary"
+          id="__primary"/>
+  <label class="overlay overlay-primary" for="__primary"></label>
+  
+  <input type="checkbox"
+          class="sidebar-toggle"
+          name="__secondary"
+          id="__secondary"/>
+  <label class="overlay overlay-secondary" for="__secondary"></label>
+  
+  <div class="search-button__wrapper">
+    <div class="search-button__overlay"></div>
+    <div class="search-button__search-container">
+<form class="bd-search d-flex align-items-center"
+      action="../../../search.html"
+      method="get">
+  <i class="fa-solid fa-magnifying-glass"></i>
+  <input type="search"
+         class="form-control"
+         name="q"
+         id="search-input"
+         placeholder="Search this book..."
+         aria-label="Search this book..."
+         autocomplete="off"
+         autocorrect="off"
+         autocapitalize="off"
+         spellcheck="false"/>
+  <span class="search-button__kbd-shortcut"><kbd class="kbd-shortcut__modifier">Ctrl</kbd>+<kbd>K</kbd></span>
+</form></div>
+  </div>
+  
+    <header class="bd-header navbar navbar-expand-lg bd-navbar">
+    </header>
+  
+
+  <div class="bd-container">
+    <div class="bd-container__inner bd-page-width">
       
-        <!-- `logo` is deprecated in Sphinx 4.0, so remove this when we stop supporting 3 -->
+      
+      
+      <div class="bd-sidebar-primary bd-sidebar">
         
+
+  
+  <div class="sidebar-header-items sidebar-primary__section">
+    
+    
+    
+    
+  </div>
+  
+    <div class="sidebar-primary-items__start sidebar-primary__section">
+        <div class="sidebar-primary-item">
+
+  
+
+<a class="navbar-brand logo" href="../../../welcome.html">
+  
+  
+  
+  
+  
+    
+    
       
-      
-      <img src="../../../_static/logo.png" class="logo" alt="logo">
-      
-      
-      <h1 class="site-logo" id="site-title">Environmental Data Science Book</h1>
-      
-    </a>
-</div><form class="bd-search d-flex align-items-center" action="../../../search.html" method="get">
-  <i class="icon fas fa-search"></i>
-  <input type="search" class="form-control" name="q" id="search-input" placeholder="Search this book..." aria-label="Search this book..." autocomplete="off" >
-</form><nav class="bd-links" id="bd-docs-nav" aria-label="Main">
-    <div class="bd-toc-item active">
-        <ul class="nav bd-sidenav">
- <li class="toctree-l1">
-  <a class="reference internal" href="../../../welcome.html">
-   Welcome
-  </a>
- </li>
-</ul>
-<p aria-level="2" class="caption" role="heading">
- <span class="caption-text">
-  Preamble
- </span>
-</p>
+    
+    
+    <img src="../../../_static/logo.png" class="logo__image only-light" alt="Environmental Data Science Book - Home"/>
+    <script>document.write(`<img src="../../../_static/logo.png" class="logo__image only-dark" alt="Environmental Data Science Book - Home"/>`);</script>
+  
+  
+</a></div>
+        <div class="sidebar-primary-item"><nav class="bd-links" id="bd-docs-nav" aria-label="Main">
+    <div class="bd-toc-item navbar-nav active">
+        
+        <ul class="nav bd-sidenav bd-sidenav__home-link">
+            <li class="toctree-l1">
+                <a class="reference internal" href="../../../welcome.html">
+                    Welcome
+                </a>
+            </li>
+        </ul>
+        <p aria-level="2" class="caption" role="heading"><span class="caption-text">Preamble</span></p>
 <ul class="nav bd-sidenav">
- <li class="toctree-l1">
-  <a class="reference internal" href="../../../preamble/about.html">
-   About EDS book
-  </a>
- </li>
- <li class="toctree-l1">
-  <a class="reference internal" href="../../../preamble/attribution.html">
-   Citation and Reuse
-  </a>
- </li>
- <li class="toctree-l1">
-  <a class="reference internal" href="../../../preamble/contribute.html">
-   Contribute
-  </a>
- </li>
+<li class="toctree-l1"><a class="reference internal" href="../../../preamble/about.html">About EDS book</a></li>
+
+<li class="toctree-l1"><a class="reference internal" href="../../../preamble/attribution.html">Citation and Reuse</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../preamble/contribute.html">Contribute</a></li>
+
 </ul>
-<p aria-level="2" class="caption" role="heading">
- <span class="caption-text">
-  Notebooks
- </span>
-</p>
+<p aria-level="2" class="caption" role="heading"><span class="caption-text">Notebooks</span></p>
 <ul class="current nav bd-sidenav">
- <li class="toctree-l1 has-children">
-  <a class="reference internal" href="../../about.html">
-   Our Notebooks
-  </a>
-  <input class="toctree-checkbox" id="toctree-checkbox-1" name="toctree-checkbox-1" type="checkbox"/>
-  <label for="toctree-checkbox-1">
-   <i class="fas fa-chevron-down">
-   </i>
-  </label>
-  <ul>
-   <li class="toctree-l2">
-    <a class="reference internal" href="../../about/aims-and-scope.html">
-     Aims and Scope
-    </a>
-   </li>
-   <li class="toctree-l2">
-    <a class="reference internal" href="../../about/review-benefits.html">
-     Benefits of Reviewing Notebooks
-    </a>
-   </li>
-   <li class="toctree-l2">
-    <a class="reference internal" href="../../about/notebooks-technologies.html">
-     Technologies
-    </a>
-   </li>
-  </ul>
- </li>
- <li class="toctree-l1 current active has-children">
-  <a class="reference internal" href="../../gallery.html">
-   Gallery
-  </a>
-  <input checked="" class="toctree-checkbox" id="toctree-checkbox-2" name="toctree-checkbox-2" type="checkbox"/>
-  <label for="toctree-checkbox-2">
-   <i class="fas fa-chevron-down">
-   </i>
-  </label>
-  <ul class="current">
-   <li class="toctree-l2">
-    <a class="reference internal" href="../39d9c177-11da-41b2-9b64-63f4c1c834b3/notebook.html">
-     Variational data assimilation with deep prior (CIRC23)
-    </a>
-   </li>
-   <li class="toctree-l2 current active">
-    <a class="current reference internal" href="#">
-     Deep learning and variational inversion for climate science (CIRC23)
-    </a>
-   </li>
-   <li class="toctree-l2">
-    <a class="reference internal" href="../3286b92f-4fae-4cc6-a29e-e408bc844542/notebook.html">
-     Underlying physics of the ocean's temperature (CIRC23)
-    </a>
-   </li>
-   <li class="toctree-l2">
-    <a class="reference internal" href="../b128b282-dee7-44a7-bc21-f1fd21452a83/notebook.html">
-     Land Cover Data (Impact Observatory)
-    </a>
-   </li>
-   <li class="toctree-l2">
-    <a class="reference internal" href="../435f534c-e49b-43c3-9bd6-3393100bef3f/notebook.html">
-     Cosmos-UK Soil Moisture (UKCEH)
-    </a>
-   </li>
-   <li class="toctree-l2">
-    <a class="reference internal" href="../ea34568e-d86e-4720-be2f-3f826f66a26c/notebook.html">
-     Rainfall NCEP/NCAR (NOAA)
-    </a>
-   </li>
-   <li class="toctree-l2">
-    <a class="reference internal" href="../ac327c3a-5264-40a2-8c6e-1e8d7c4b37ef/notebook.html">
-     Sea ice forecasting (IceNet)
-    </a>
-   </li>
-   <li class="toctree-l2">
-    <a class="reference internal" href="../94486a7f-e046-461f-bbb9-334ec7b57040/notebook.html">
-     Tree crown (DetectreeRGB)
-    </a>
-   </li>
-   <li class="toctree-l2">
-    <a class="reference internal" href="../bc30df18-fce2-42fa-aade-1ce5b7f3ca3c/notebook.html">
-     SEVIRI Level 1.5 (EUMESAT)
-    </a>
-   </li>
-   <li class="toctree-l2">
-    <a class="reference internal" href="../15d986da-2d7c-44fb-af71-700494485def/notebook.html">
-     Tree crown (DeepForest)
-    </a>
-   </li>
-   <li class="toctree-l2">
-    <a class="reference internal" href="../a2875cdc-ba6a-49dc-aab7-cdf7c4fc0fa8/notebook.html">
-     MOD021KM and FIRMS (NASA)
-    </a>
-   </li>
-   <li class="toctree-l2">
-    <a class="reference internal" href="../1b8921af-e77f-4ccf-ae38-4813cdceba0f/notebook.html">
-     UKV high-resolution (Met Office)
-    </a>
-   </li>
-   <li class="toctree-l2">
-    <a class="reference internal" href="../b34facfa-cea8-48f5-89f6-f11ce00812a9/notebook.html">
-     Detecting floating objects (ESA Phi-Lab)
-    </a>
-   </li>
-  </ul>
- </li>
- <li class="toctree-l1">
-  <a class="reference internal" href="../../how-to.html">
-   Usage
-  </a>
- </li>
+<li class="toctree-l1 has-children"><a class="reference internal" href="../../about.html">Our Notebooks</a><input class="toctree-checkbox" id="toctree-checkbox-1" name="toctree-checkbox-1" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-1"><i class="fa-solid fa-chevron-down"></i></label><ul>
+<li class="toctree-l2"><a class="reference internal" href="../../about/aims-and-scope.html">Aims and Scope</a></li>
+
+<li class="toctree-l2"><a class="reference internal" href="../../about/review-benefits.html">Benefits of Reviewing Notebooks</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../about/notebooks-technologies.html">Technologies</a></li>
 </ul>
-<p aria-level="2" class="caption" role="heading">
- <span class="caption-text">
-  Publishing
- </span>
-</p>
-<ul class="nav bd-sidenav">
- <li class="toctree-l1 has-children">
-  <a class="reference internal" href="../../../publishing/guidelines.html">
-   Our Guidelines
-  </a>
-  <input class="toctree-checkbox" id="toctree-checkbox-3" name="toctree-checkbox-3" type="checkbox"/>
-  <label for="toctree-checkbox-3">
-   <i class="fas fa-chevron-down">
-   </i>
-  </label>
-  <ul>
-   <li class="toctree-l2">
-    <a class="reference internal" href="../../../publishing/guidelines/guidelines-authors.html">
-     Guide for Authors
-    </a>
-   </li>
-   <li class="toctree-l2">
-    <a class="reference internal" href="../../../publishing/guidelines/guidelines-reviewers.html">
-     Guide for Reviewers
-    </a>
-   </li>
-   <li class="toctree-l2">
-    <a class="reference internal" href="../../../publishing/guidelines/guidelines-editors.html">
-     Guide for Editors
-    </a>
-   </li>
-   <li class="toctree-l2">
-    <a class="reference internal" href="../../../publishing/guidelines/guidelines-eic.html">
-     Guide for Editor in Chief
-    </a>
-   </li>
-   <li class="toctree-l2">
-    <a class="reference internal" href="../../../publishing/guidelines/guidelines-community.html">
-     Guide for Community
-    </a>
-   </li>
-  </ul>
- </li>
- <li class="toctree-l1">
-  <a class="reference internal" href="../../../publishing/faq.html">
-   FAQ
-  </a>
- </li>
+</li>
+<li class="toctree-l1 current active has-children"><a class="reference internal" href="../../gallery.html">Gallery</a><input checked="" class="toctree-checkbox" id="toctree-checkbox-2" name="toctree-checkbox-2" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-2"><i class="fa-solid fa-chevron-down"></i></label><ul class="current">
+<li class="toctree-l2"><a class="reference internal" href="../39d9c177-11da-41b2-9b64-63f4c1c834b3/notebook.html">Variational data assimilation with deep prior (CIRC23)</a></li>
+<li class="toctree-l2 current active"><a class="current reference internal" href="#">Deep learning and variational inversion for climate science (CIRC23)</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../3286b92f-4fae-4cc6-a29e-e408bc844542/notebook.html">Underlying physics of the ocean's temperature (CIRC23)</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../b128b282-dee7-44a7-bc21-f1fd21452a83/notebook.html">Land Cover Data (Impact Observatory)</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../435f534c-e49b-43c3-9bd6-3393100bef3f/notebook.html">Cosmos-UK Soil Moisture (UKCEH)</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../ea34568e-d86e-4720-be2f-3f826f66a26c/notebook.html">Rainfall NCEP/NCAR (NOAA)</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../ac327c3a-5264-40a2-8c6e-1e8d7c4b37ef/notebook.html">Sea ice forecasting (IceNet)</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../94486a7f-e046-461f-bbb9-334ec7b57040/notebook.html">Tree crown (DetectreeRGB)</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../bc30df18-fce2-42fa-aade-1ce5b7f3ca3c/notebook.html">SEVIRI Level 1.5 (EUMESAT)</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../15d986da-2d7c-44fb-af71-700494485def/notebook.html">Tree crown (DeepForest)</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../a2875cdc-ba6a-49dc-aab7-cdf7c4fc0fa8/notebook.html">MOD021KM and FIRMS (NASA)</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../1b8921af-e77f-4ccf-ae38-4813cdceba0f/notebook.html">UKV high-resolution (Met Office)</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../b34facfa-cea8-48f5-89f6-f11ce00812a9/notebook.html">Detecting floating objects (ESA Phi-Lab)</a></li>
 </ul>
-<p aria-level="2" class="caption" role="heading">
- <span class="caption-text">
-  Community
- </span>
-</p>
-<ul class="nav bd-sidenav">
- <li class="toctree-l1">
-  <a class="reference internal" href="../../../community/about.html">
-   Our Community
-  </a>
- </li>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../../how-to.html">Usage</a></li>
 </ul>
-<p aria-level="2" class="caption" role="heading">
- <span class="caption-text">
-  Afterword
- </span>
-</p>
+<p aria-level="2" class="caption" role="heading"><span class="caption-text">Publishing</span></p>
 <ul class="nav bd-sidenav">
- <li class="toctree-l1">
-  <a class="reference internal" href="../../../afterword/bibliography.html">
-   Bibliography
-  </a>
- </li>
+<li class="toctree-l1 has-children"><a class="reference internal" href="../../../publishing/guidelines.html">Our Guidelines</a><input class="toctree-checkbox" id="toctree-checkbox-3" name="toctree-checkbox-3" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-3"><i class="fa-solid fa-chevron-down"></i></label><ul>
+<li class="toctree-l2"><a class="reference internal" href="../../../publishing/guidelines/guidelines-authors.html">Guide for Authors</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../publishing/guidelines/guidelines-reviewers.html">Guide for Reviewers</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../publishing/guidelines/guidelines-editors.html">Guide for Editors</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../publishing/guidelines/guidelines-eic.html">Guide for Editor in Chief</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../publishing/guidelines/guidelines-community.html">Guide for Community</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../../../publishing/faq.html">FAQ</a></li>
+</ul>
+<p aria-level="2" class="caption" role="heading"><span class="caption-text">Community</span></p>
+<ul class="nav bd-sidenav">
+<li class="toctree-l1"><a class="reference internal" href="../../../community/about.html">Our Community</a></li>
+
+</ul>
+<p aria-level="2" class="caption" role="heading"><span class="caption-text">Afterword</span></p>
+<ul class="nav bd-sidenav">
+<li class="toctree-l1"><a class="reference internal" href="../../../afterword/bibliography.html">Bibliography</a></li>
 </ul>
 
     </div>
-</nav> <!-- To handle the deprecated key -->
-
-<div class="navbar_extra_footer">
-  Powered by <a href="https://jupyterbook.org">Jupyter Book</a>
-</div>
-
-</div>
-
-
-          
+</nav></div>
+    </div>
+  
+  
+  <div class="sidebar-primary-items__end sidebar-primary__section">
+  </div>
+  
+  <div id="rtd-footer-container"></div>
 
 
-          
-<main class="col py-md-3 pl-md-4 bd-content overflow-auto" role="main">
-    
-    <div class="topbar container-xl fixed-top">
-    <div class="topbar-contents row">
-        <div class="col-12 col-md-3 bd-topbar-whitespace site-navigation show"></div>
-        <div class="col pl-md-4 topbar-main">
-            
-            <button id="navbar-toggler" class="navbar-toggler ml-0" type="button" data-toggle="collapse"
-                data-toggle="tooltip" data-placement="bottom" data-target=".site-navigation" aria-controls="navbar-menu"
-                aria-expanded="true" aria-label="Toggle navigation" aria-controls="site-navigation"
-                title="Toggle navigation" data-toggle="tooltip" data-placement="left">
-                <i class="fas fa-bars"></i>
-                <i class="fas fa-arrow-left"></i>
-                <i class="fas fa-arrow-up"></i>
-            </button>
-            
-            
-<div class="dropdown-buttons-trigger">
-    <button id="dropdown-buttons-trigger" class="btn btn-secondary topbarbtn" aria-label="Download this page"><i
-            class="fas fa-download"></i></button>
-
-    <div class="dropdown-buttons">
-        <!-- ipynb file if we had a myst markdown file -->
+      </div>
+      
+      <main id="main-content" class="bd-main">
         
-        <!-- Download raw file -->
-        <a class="dropdown-buttons" href="../../../_sources/notebooks/gallery/93463cac-471a-469d-ad52-0514fd9b67f2/notebook.ipynb"><button type="button"
-                class="btn btn-secondary topbarbtn" title="Download source file" data-toggle="tooltip"
-                data-placement="left">.ipynb</button></a>
-        <!-- Download PDF via print -->
-        <button type="button" id="download-print" class="btn btn-secondary topbarbtn" title="Print to PDF"
-                onclick="printPdf(this)" data-toggle="tooltip" data-placement="left">.pdf</button>
+        
+
+<div class="sbt-scroll-pixel-helper"></div>
+
+          <div class="bd-content">
+            <div class="bd-article-container">
+              
+              <div class="bd-header-article">
+<div class="header-article-items header-article__inner">
+  
+    <div class="header-article-items__start">
+      
+        <div class="header-article-item"><label class="sidebar-toggle primary-toggle btn btn-sm" for="__primary" title="Toggle primary sidebar" data-bs-placement="bottom" data-bs-toggle="tooltip">
+  <span class="fa-solid fa-bars"></span>
+</label></div>
+      
     </div>
+  
+  
+    <div class="header-article-items__end">
+      
+        <div class="header-article-item">
+
+<div class="article-header-buttons">
+
+
+
+
+
+<div class="dropdown dropdown-source-buttons">
+  <button class="btn dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false" aria-label="Source repositories">
+    <i class="fab fa-github"></i>
+  </button>
+  <ul class="dropdown-menu">
+      
+      
+      
+      <li><a href="https://github.com/alan-turing-institute/environmental-ds-book" target="_blank"
+   class="btn btn-sm btn-source-repository-button dropdown-item"
+   title="Source repository"
+   data-bs-placement="left" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fab fa-github"></i>
+  </span>
+<span class="btn__text-container">Repository</span>
+</a>
+</li>
+      
+      
+      
+      
+      <li><a href="https://github.com/alan-turing-institute/environmental-ds-book/edit/master/book/notebooks/gallery/93463cac-471a-469d-ad52-0514fd9b67f2/notebook.ipynb" target="_blank"
+   class="btn btn-sm btn-source-edit-button dropdown-item"
+   title="Suggest edit"
+   data-bs-placement="left" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fas fa-pencil-alt"></i>
+  </span>
+<span class="btn__text-container">Suggest edit</span>
+</a>
+</li>
+      
+      
+      
+      
+      <li><a href="https://github.com/alan-turing-institute/environmental-ds-book/issues/new?title=Issue%20on%20page%20%2Fnotebooks/gallery/93463cac-471a-469d-ad52-0514fd9b67f2/notebook.html&body=Your%20issue%20content%20here." target="_blank"
+   class="btn btn-sm btn-source-issues-button dropdown-item"
+   title="Open an issue"
+   data-bs-placement="left" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fas fa-lightbulb"></i>
+  </span>
+<span class="btn__text-container">Open issue</span>
+</a>
+</li>
+      
+  </ul>
 </div>
 
-            <!-- Source interaction buttons -->
 
-<div class="dropdown-buttons-trigger">
-    <button id="dropdown-buttons-trigger" class="btn btn-secondary topbarbtn"
-        aria-label="Connect with source repository"><i class="fab fa-github"></i></button>
-    <div class="dropdown-buttons sourcebuttons">
-        <a class="repository-button"
-            href="https://github.com/alan-turing-institute/environmental-ds-book"><button type="button" class="btn btn-secondary topbarbtn"
-                data-toggle="tooltip" data-placement="left" title="Source repository"><i
-                    class="fab fa-github"></i>repository</button></a>
-        <a class="issues-button"
-            href="https://github.com/alan-turing-institute/environmental-ds-book/issues/new?title=Issue%20on%20page%20%2Fnotebooks/gallery/93463cac-471a-469d-ad52-0514fd9b67f2/notebook.html&body=Your%20issue%20content%20here."><button
-                type="button" class="btn btn-secondary topbarbtn" data-toggle="tooltip" data-placement="left"
-                title="Open an issue"><i class="fas fa-lightbulb"></i>open issue</button></a>
-        <a class="edit-button" href="https://github.com/alan-turing-institute/environmental-ds-book/edit/master/book/notebooks/gallery/93463cac-471a-469d-ad52-0514fd9b67f2/notebook.ipynb"><button
-                type="button" class="btn btn-secondary topbarbtn" data-toggle="tooltip" data-placement="left"
-                title="Edit this page"><i class="fas fa-pencil-alt"></i>suggest edit</button></a>
-    </div>
+
+
+
+
+<div class="dropdown dropdown-download-buttons">
+  <button class="btn dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false" aria-label="Download this page">
+    <i class="fas fa-download"></i>
+  </button>
+  <ul class="dropdown-menu">
+      
+      
+      
+      <li><a href="../../../_sources/notebooks/gallery/93463cac-471a-469d-ad52-0514fd9b67f2/notebook.ipynb" target="_blank"
+   class="btn btn-sm btn-download-source-button dropdown-item"
+   title="Download source file"
+   data-bs-placement="left" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fas fa-file"></i>
+  </span>
+<span class="btn__text-container">.ipynb</span>
+</a>
+</li>
+      
+      
+      
+      
+      <li>
+<button onclick="window.print()"
+  class="btn btn-sm btn-download-pdf-button dropdown-item"
+  title="Print to PDF"
+  data-bs-placement="left" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fas fa-file-pdf"></i>
+  </span>
+<span class="btn__text-container">.pdf</span>
+</button>
+</li>
+      
+  </ul>
 </div>
 
-            <!-- Full screen (wrap in <a> to have style consistency -->
 
-<a class="full-screen-button"><button type="button" class="btn btn-secondary topbarbtn" data-toggle="tooltip"
-        data-placement="bottom" onclick="toggleFullScreen()" aria-label="Fullscreen mode"
-        title="Fullscreen mode"><i
-            class="fas fa-expand"></i></button></a>
 
-            <!-- Launch buttons -->
 
-        </div>
+<button onclick="toggleFullScreen()"
+  class="btn btn-sm btn-fullscreen-button"
+  title="Fullscreen mode"
+  data-bs-placement="bottom" data-bs-toggle="tooltip"
+>
+  
 
-        <!-- Table of contents -->
-        <div class="d-none d-md-block col-md-2 bd-toc show noprint">
+<span class="btn__icon-container">
+  <i class="fas fa-expand"></i>
+  </span>
+
+</button>
+
+
+
+<script>
+document.write(`
+  <button class="btn btn-sm navbar-btn theme-switch-button" title="light/dark" aria-label="light/dark" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <span class="theme-switch nav-link" data-mode="light"><i class="fa-solid fa-sun fa-lg"></i></span>
+    <span class="theme-switch nav-link" data-mode="dark"><i class="fa-solid fa-moon fa-lg"></i></span>
+    <span class="theme-switch nav-link" data-mode="auto"><i class="fa-solid fa-circle-half-stroke fa-lg"></i></span>
+  </button>
+`);
+</script>
+
+
+<script>
+document.write(`
+  <button class="btn btn-sm navbar-btn search-button search-button__button" title="Search" aria-label="Search" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <i class="fa-solid fa-magnifying-glass fa-lg"></i>
+  </button>
+`);
+</script>
+<label class="sidebar-toggle secondary-toggle btn btn-sm" for="__secondary"title="Toggle secondary sidebar" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <span class="fa-solid fa-list"></span>
+</label>
+</div></div>
+      
+    </div>
+  
+</div>
+</div>
+              
+              
+
+<div id="jb-print-docs-body" class="onlyprint">
+    <h1>Deep learning and variational inversion to quantify and attribute climate change (CIRC23)</h1>
+    <!-- Table of contents -->
+    <div id="print-main-content">
+        <div id="jb-print-toc">
             
-            <div class="tocsection onthispage pt-5 pb-3">
-                <i class="fas fa-list"></i> Contents
+            <div>
+                <h2> Contents </h2>
             </div>
-            <nav id="bd-toc-nav" aria-label="Page">
+            <nav aria-label="Page">
                 <ul class="visible nav section-nav flex-column">
- <li class="toc-h2 nav-item toc-entry">
-  <a class="reference internal nav-link" href="#context">
-   Context
-  </a>
-  <ul class="nav section-nav flex-column">
-   <li class="toc-h3 nav-item toc-entry">
-    <a class="reference internal nav-link" href="#purpose">
-     Purpose
-    </a>
-   </li>
-   <li class="toc-h3 nav-item toc-entry">
-    <a class="reference internal nav-link" href="#description">
-     Description
-    </a>
-   </li>
-   <li class="toc-h3 nav-item toc-entry">
-    <a class="reference internal nav-link" href="#highlights">
-     Highlights
-    </a>
-   </li>
-   <li class="toc-h3 nav-item toc-entry">
-    <a class="reference internal nav-link" href="#abbreviations">
-     Abbreviations
-    </a>
-   </li>
-   <li class="toc-h3 nav-item toc-entry">
-    <a class="reference internal nav-link" href="#contributions">
-     Contributions
-    </a>
-    <ul class="nav section-nav flex-column">
-     <li class="toc-h4 nav-item toc-entry">
-      <a class="reference internal nav-link" href="#notebook">
-       Notebook
-      </a>
-     </li>
-     <li class="toc-h4 nav-item toc-entry">
-      <a class="reference internal nav-link" href="#modelling-codebase">
-       Modelling codebase
-      </a>
-     </li>
-     <li class="toc-h4 nav-item toc-entry">
-      <a class="reference internal nav-link" href="#modelling-publications">
-       Modelling publications
-      </a>
-     </li>
-     <li class="toc-h4 nav-item toc-entry">
-      <a class="reference internal nav-link" href="#dataset-documentation">
-       Dataset documentation
-      </a>
-     </li>
-    </ul>
-   </li>
-   <li class="toc-h3 nav-item toc-entry">
-    <a class="reference internal nav-link" href="#source-code">
-     Source code
-    </a>
-   </li>
-  </ul>
- </li>
- <li class="toc-h2 nav-item toc-entry">
-  <a class="reference internal nav-link" href="#load-libraries">
-   Load libraries
-  </a>
- </li>
- <li class="toc-h2 nav-item toc-entry">
-  <a class="reference internal nav-link" href="#settings">
-   Settings
-  </a>
-  <ul class="nav section-nav flex-column">
-   <li class="toc-h3 nav-item toc-entry">
-    <a class="reference internal nav-link" href="#variables">
-     Variables
-    </a>
-   </li>
-   <li class="toc-h3 nav-item toc-entry">
-    <a class="reference internal nav-link" href="#classes">
-     Classes
-    </a>
-   </li>
-   <li class="toc-h3 nav-item toc-entry">
-    <a class="reference internal nav-link" href="#functions">
-     Functions
-    </a>
-   </li>
-  </ul>
- </li>
- <li class="toc-h2 nav-item toc-entry">
-  <a class="reference internal nav-link" href="#pipeline">
-   Pipeline
-  </a>
-  <ul class="nav section-nav flex-column">
-   <li class="toc-h3 nav-item toc-entry">
-    <a class="reference internal nav-link" href="#fetch-data">
-     Fetch data
-    </a>
-   </li>
-   <li class="toc-h3 nav-item toc-entry">
-    <a class="reference internal nav-link" href="#load-data">
-     Load data
-    </a>
-   </li>
-  </ul>
- </li>
- <li class="toc-h2 nav-item toc-entry">
-  <a class="reference internal nav-link" href="#cnn">
-   CNN
-  </a>
-  <ul class="nav section-nav flex-column">
-   <li class="toc-h3 nav-item toc-entry">
-    <a class="reference internal nav-link" href="#model-training">
-     Model training
-    </a>
-   </li>
-   <li class="toc-h3 nav-item toc-entry">
-    <a class="reference internal nav-link" href="#model-performance">
-     Model performance
-    </a>
-   </li>
-  </ul>
- </li>
- <li class="toc-h2 nav-item toc-entry">
-  <a class="reference internal nav-link" href="#inverse-model">
-   Inverse model
-  </a>
- </li>
- <li class="toc-h2 nav-item toc-entry">
-  <a class="reference internal nav-link" href="#limitations">
-   Limitations
-  </a>
- </li>
- <li class="toc-h2 nav-item toc-entry">
-  <a class="reference internal nav-link" href="#summary">
-   Summary
-  </a>
- </li>
- <li class="toc-h2 nav-item toc-entry">
-  <a class="reference internal nav-link" href="#citing-this-notebook">
-   Citing this Notebook
-  </a>
- </li>
- <li class="toc-h2 nav-item toc-entry">
-  <a class="reference internal nav-link" href="#additional-information">
-   Additional information
-  </a>
- </li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#context">Context</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#purpose">Purpose</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#description">Description</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#highlights">Highlights</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#abbreviations">Abbreviations</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#contributions">Contributions</a><ul class="nav section-nav flex-column">
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#notebook">Notebook</a></li>
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#modelling-codebase">Modelling codebase</a></li>
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#modelling-publications">Modelling publications</a></li>
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#dataset-documentation">Dataset documentation</a></li>
 </ul>
-
+</li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#source-code">Source code</a></li>
+</ul>
+</li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#load-libraries">Load libraries</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#settings">Settings</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#variables">Variables</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#classes">Classes</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#functions">Functions</a></li>
+</ul>
+</li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#pipeline">Pipeline</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#fetch-data">Fetch data</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#load-data">Load data</a></li>
+</ul>
+</li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#cnn">CNN</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#model-training">Model training</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#model-performance">Model performance</a></li>
+</ul>
+</li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#inverse-model">Inverse model</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#limitations">Limitations</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#summary">Summary</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#citing-this-notebook">Citing this Notebook</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#additional-information">Additional information</a></li>
+</ul>
             </nav>
         </div>
     </div>
 </div>
-    <div id="main-content" class="row">
-        <div class="col-12 col-md-9 pl-md-3 pr-md-0">
-            <!-- Table of contents that is only displayed when printing the page -->
-            <div id="jb-print-docs-body" class="onlyprint">
-                <h1>Deep learning and variational inversion to quantify and attribute climate change (CIRC23)</h1>
-                <!-- Table of contents -->
-                <div id="print-main-content">
-                    <div id="jb-print-toc">
-                        
-                        <div>
-                            <h2> Contents </h2>
-                        </div>
-                        <nav aria-label="Page">
-                            <ul class="visible nav section-nav flex-column">
- <li class="toc-h2 nav-item toc-entry">
-  <a class="reference internal nav-link" href="#context">
-   Context
-  </a>
-  <ul class="nav section-nav flex-column">
-   <li class="toc-h3 nav-item toc-entry">
-    <a class="reference internal nav-link" href="#purpose">
-     Purpose
-    </a>
-   </li>
-   <li class="toc-h3 nav-item toc-entry">
-    <a class="reference internal nav-link" href="#description">
-     Description
-    </a>
-   </li>
-   <li class="toc-h3 nav-item toc-entry">
-    <a class="reference internal nav-link" href="#highlights">
-     Highlights
-    </a>
-   </li>
-   <li class="toc-h3 nav-item toc-entry">
-    <a class="reference internal nav-link" href="#abbreviations">
-     Abbreviations
-    </a>
-   </li>
-   <li class="toc-h3 nav-item toc-entry">
-    <a class="reference internal nav-link" href="#contributions">
-     Contributions
-    </a>
-    <ul class="nav section-nav flex-column">
-     <li class="toc-h4 nav-item toc-entry">
-      <a class="reference internal nav-link" href="#notebook">
-       Notebook
-      </a>
-     </li>
-     <li class="toc-h4 nav-item toc-entry">
-      <a class="reference internal nav-link" href="#modelling-codebase">
-       Modelling codebase
-      </a>
-     </li>
-     <li class="toc-h4 nav-item toc-entry">
-      <a class="reference internal nav-link" href="#modelling-publications">
-       Modelling publications
-      </a>
-     </li>
-     <li class="toc-h4 nav-item toc-entry">
-      <a class="reference internal nav-link" href="#dataset-documentation">
-       Dataset documentation
-      </a>
-     </li>
-    </ul>
-   </li>
-   <li class="toc-h3 nav-item toc-entry">
-    <a class="reference internal nav-link" href="#source-code">
-     Source code
-    </a>
-   </li>
-  </ul>
- </li>
- <li class="toc-h2 nav-item toc-entry">
-  <a class="reference internal nav-link" href="#load-libraries">
-   Load libraries
-  </a>
- </li>
- <li class="toc-h2 nav-item toc-entry">
-  <a class="reference internal nav-link" href="#settings">
-   Settings
-  </a>
-  <ul class="nav section-nav flex-column">
-   <li class="toc-h3 nav-item toc-entry">
-    <a class="reference internal nav-link" href="#variables">
-     Variables
-    </a>
-   </li>
-   <li class="toc-h3 nav-item toc-entry">
-    <a class="reference internal nav-link" href="#classes">
-     Classes
-    </a>
-   </li>
-   <li class="toc-h3 nav-item toc-entry">
-    <a class="reference internal nav-link" href="#functions">
-     Functions
-    </a>
-   </li>
-  </ul>
- </li>
- <li class="toc-h2 nav-item toc-entry">
-  <a class="reference internal nav-link" href="#pipeline">
-   Pipeline
-  </a>
-  <ul class="nav section-nav flex-column">
-   <li class="toc-h3 nav-item toc-entry">
-    <a class="reference internal nav-link" href="#fetch-data">
-     Fetch data
-    </a>
-   </li>
-   <li class="toc-h3 nav-item toc-entry">
-    <a class="reference internal nav-link" href="#load-data">
-     Load data
-    </a>
-   </li>
-  </ul>
- </li>
- <li class="toc-h2 nav-item toc-entry">
-  <a class="reference internal nav-link" href="#cnn">
-   CNN
-  </a>
-  <ul class="nav section-nav flex-column">
-   <li class="toc-h3 nav-item toc-entry">
-    <a class="reference internal nav-link" href="#model-training">
-     Model training
-    </a>
-   </li>
-   <li class="toc-h3 nav-item toc-entry">
-    <a class="reference internal nav-link" href="#model-performance">
-     Model performance
-    </a>
-   </li>
-  </ul>
- </li>
- <li class="toc-h2 nav-item toc-entry">
-  <a class="reference internal nav-link" href="#inverse-model">
-   Inverse model
-  </a>
- </li>
- <li class="toc-h2 nav-item toc-entry">
-  <a class="reference internal nav-link" href="#limitations">
-   Limitations
-  </a>
- </li>
- <li class="toc-h2 nav-item toc-entry">
-  <a class="reference internal nav-link" href="#summary">
-   Summary
-  </a>
- </li>
- <li class="toc-h2 nav-item toc-entry">
-  <a class="reference internal nav-link" href="#citing-this-notebook">
-   Citing this Notebook
-  </a>
- </li>
- <li class="toc-h2 nav-item toc-entry">
-  <a class="reference internal nav-link" href="#additional-information">
-   Additional information
-  </a>
- </li>
-</ul>
 
-                        </nav>
-                    </div>
-                </div>
-            </div>
-            
-              <div>
+              
                 
-  <div class="tex2jax_ignore mathjax_ignore section" id="deep-learning-and-variational-inversion-to-quantify-and-attribute-climate-change-circ23">
-<h1>Deep learning and variational inversion to quantify and attribute climate change (CIRC23)<a class="headerlink" href="#deep-learning-and-variational-inversion-to-quantify-and-attribute-climate-change-circ23" title="Permalink to this headline">¶</a></h1>
-<p><svg version="1.1" width="16" height="16" class="octicon octicon-tag" viewBox="0 0 16 16" aria-hidden="true"><path fill-rule="evenodd" d="M2.5 7.775V2.75a.25.25 0 01.25-.25h5.025a.25.25 0 01.177.073l6.25 6.25a.25.25 0 010 .354l-5.025 5.025a.25.25 0 01-.354 0l-6.25-6.25a.25.25 0 01-.073-.177zm-1.5 0V2.75C1 1.784 1.784 1 2.75 1h5.025c.464 0 .91.184 1.238.513l6.25 6.25a1.75 1.75 0 010 2.474l-5.026 5.026a1.75 1.75 0 01-2.474 0l-6.25-6.25A1.75 1.75 0 011 7.775zM6 5a1 1 0 100 2 1 1 0 000-2z"></path></svg>
+<div id="searchbox"></div>
+                <article class="bd-article">
+                  
+  <section class="tex2jax_ignore mathjax_ignore" id="deep-learning-and-variational-inversion-to-quantify-and-attribute-climate-change-circ23">
+<h1>Deep learning and variational inversion to quantify and attribute climate change (CIRC23)<a class="headerlink" href="#deep-learning-and-variational-inversion-to-quantify-and-attribute-climate-change-circ23" title="Permalink to this heading">#</a></h1>
+<p><a href="#id1"><span class="problematic" id="id2">tag</span></a>
 <span class="sd-sphinx-override sd-badge sd-bg-primary sd-bg-text-primary">General</span>
 <span class="sd-sphinx-override sd-badge sd-bg-secondary sd-bg-text-secondary">Modelling</span>
 <span class="sd-sphinx-override sd-badge sd-bg-warning sd-bg-text-warning">Special Issue</span>
@@ -763,14 +527,14 @@ const thebe_selector_output = ".output, .cell_output"
     <a href="https://zenodo.org/badge/latestdoi/638641256">
         <img alt="doi" src="https://zenodo.org/badge/638641256.svg">
     </a>
-</p><div class="section" id="context">
-<h2>Context<a class="headerlink" href="#context" title="Permalink to this headline">¶</a></h2>
-<div class="section" id="purpose">
-<h3>Purpose<a class="headerlink" href="#purpose" title="Permalink to this headline">¶</a></h3>
+</p><section id="context">
+<h2>Context<a class="headerlink" href="#context" title="Permalink to this heading">#</a></h2>
+<section id="purpose">
+<h3>Purpose<a class="headerlink" href="#purpose" title="Permalink to this heading">#</a></h3>
 <p>The purpose of the notebook is to explore the process and demonstrate the power of using a climate simulation and observation data with a convolutional neural network in the detection of climate change and a variational inversion approach to attribute forcings to changes in global mean surface temperatures from 1900 to 2014.</p>
-</div>
-<div class="section" id="description">
-<h3>Description<a class="headerlink" href="#description" title="Permalink to this headline">¶</a></h3>
+</section>
+<section id="description">
+<h3>Description<a class="headerlink" href="#description" title="Permalink to this heading">#</a></h3>
 <p>The modelling pipeline consists of the following three procedures: data acquisition &amp; preprocessing, climate change detection and climate change attribution.</p>
 <ul class="simple">
 <li><p>Observations (OBS) of the 2 m air temperature over the continents from HadCRUT4 (Morice et al., 2012) blended with sea surface temperature from HadISST412 (Rayner et al., 2003). The outputs of ocean-atmosphere general circulation models from the Coupled Model Intercomparison Project 6 (CMIP6) (Eyring et al., 2016) are also acquired and divided into several categories based on used forcings: single-forcing simulations utilizing greenhouse gas concentration (GHG), single-forcing simulations utilizing anthropogenic aerosols (AER), single-forcing simulations utilizing natural forcings such as volcanic aerosols and solar variations (NAT), and historical simulations using all the external forcings (HIST). The data is converted into an annual mean and is spatially averaged over the globe to obtain the global mean surface temperature (GMST). Then the mean temperatures of the pre-industrial time period (1850-1900) are removed from the period of interest (1900-2014) to obtain the temperature anomalies.</p></li>
@@ -778,17 +542,17 @@ const thebe_selector_output = ".output, .cell_output"
 <li><p>The trained CNN is then used to obtain the variational inversion using the backpropagation algorithm. In this case, OBS time series are used and linked to the single-forcing models (GHG, AER, NAT).</p></li>
 </ul>
 <p>The model was implemented in Python 3.10 using PyTorch v1.13.0. Further details can be found in the Environmental Data Science paper <a class="reference external" href="https://doi.org/10.1017/eds.2022.17">“Detection and attribution of climate change: A deep learning and variational approach”</a>.</p>
-</div>
-<div class="section" id="highlights">
-<h3>Highlights<a class="headerlink" href="#highlights" title="Permalink to this headline">¶</a></h3>
+</section>
+<section id="highlights">
+<h3>Highlights<a class="headerlink" href="#highlights" title="Permalink to this heading">#</a></h3>
 <ul class="simple">
 <li><p>Acquire, pre-process and visualize the observation and climate simulation data.</p></li>
 <li><p>Train a CNN model to predict the historical simulation time series (HIST) given the three single-forcing model simulations (GHG, AER, NAT).</p></li>
 <li><p>Use the trained CNN model combined with a variational approach to estimate the three forcings given observation (OBS) data.</p></li>
 </ul>
-</div>
-<div class="section" id="abbreviations">
-<h3>Abbreviations<a class="headerlink" href="#abbreviations" title="Permalink to this headline">¶</a></h3>
+</section>
+<section id="abbreviations">
+<h3>Abbreviations<a class="headerlink" href="#abbreviations" title="Permalink to this heading">#</a></h3>
 <ul class="simple">
 <li><p>OBS - observations</p></li>
 <li><p>AER - single forcing simulations utilizing anthropogenic aerosols</p></li>
@@ -800,11 +564,11 @@ const thebe_selector_output = ".output, .cell_output"
 <li><p>CNN - Convolutional Neural Network</p></li>
 <li><p>MSE - Mean Squared Error</p></li>
 </ul>
-</div>
-<div class="section" id="contributions">
-<h3>Contributions<a class="headerlink" href="#contributions" title="Permalink to this headline">¶</a></h3>
-<div class="section" id="notebook">
-<h4>Notebook<a class="headerlink" href="#notebook" title="Permalink to this headline">¶</a></h4>
+</section>
+<section id="contributions">
+<h3>Contributions<a class="headerlink" href="#contributions" title="Permalink to this heading">#</a></h3>
+<section id="notebook">
+<h4>Notebook<a class="headerlink" href="#notebook" title="Permalink to this heading">#</a></h4>
 <ul class="simple">
 <li><p>Viktor Domazetoski (author), University of Göttingen, <a class="reference external" href="https://github.com/ViktorDomazetoski">&#64;ViktorDomazetoski</a></p></li>
 <li><p>Andrés Zúñiga-González (author), University of Cambridge, <a class="reference external" href="https://github.com/ancazugo">&#64;ancazugo</a></p></li>
@@ -813,44 +577,49 @@ const thebe_selector_output = ".output, .cell_output"
 <li><p>Nick Homer (reviewer), The University of Edinburgh, <a class="reference external" href="https://github.com/NHomer-Edi">&#64; NHomer-Edi</a></p></li>
 <li><p>Devanjan Bhattacharya (reviewer), The University of Edinburgh, <a class="reference external" href="https://github.com/dbhatedin">&#64;dbhatedin</a></p></li>
 </ul>
-</div>
-<div class="section" id="modelling-codebase">
-<h4>Modelling codebase<a class="headerlink" href="#modelling-codebase" title="Permalink to this headline">¶</a></h4>
+</section>
+<section id="modelling-codebase">
+<h4>Modelling codebase<a class="headerlink" href="#modelling-codebase" title="Permalink to this heading">#</a></h4>
 <ul class="simple">
 <li><p>Constantin Bône (author), UMR LOCEAN, Sorbonne Université, UMR ISIR, Sorbonne Université</p></li>
 <li><p>Guillaume Gastineau (author), UMR LOCEAN, Sorbonne Université</p></li>
 <li><p>Sylvie Thiria (author), UMR LOCEAN, Sorbonne Université</p></li>
 <li><p>Patrick Gallinari (author), UMR ISIR, Sorbonne Université, Criteo AI Lab</p></li>
 </ul>
-</div>
-<div class="section" id="modelling-publications">
-<h4>Modelling publications<a class="headerlink" href="#modelling-publications" title="Permalink to this headline">¶</a></h4>
-<div class="docutils container" id="id1">
+</section>
+<section id="modelling-publications">
+<h4>Modelling publications<a class="headerlink" href="#modelling-publications" title="Permalink to this heading">#</a></h4>
+<div class="docutils container" id="id3">
 <ul class="simple">
-<li id="id26"><p>Constantin Bône, Guillaume Gastineau, Sylvie Thiria, and Patrick Gallinari. Detection and attribution of climate change: a deep learning and variational approach. <em>Environmental Data Science</em>, 1:e27, 2022. <a class="reference external" href="https://doi.org/10.1017/eds.2022.17">doi:10.1017/eds.2022.17</a>.</p></li>
+<li id="id28"><p>Constantin Bône, Guillaume Gastineau, Sylvie Thiria, and Patrick Gallinari. Detection and attribution of climate change: a deep learning and variational approach. <em>Environmental Data Science</em>, 1:e27, 2022. <a class="reference external" href="https://doi.org/10.1017/eds.2022.17">doi:10.1017/eds.2022.17</a>.</p></li>
 </ul>
 </div>
-</div>
-<div class="section" id="dataset-documentation">
-<h4>Dataset documentation<a class="headerlink" href="#dataset-documentation" title="Permalink to this headline">¶</a></h4>
-<div class="docutils container" id="id32">
+</section>
+<section id="dataset-documentation">
+<h4>Dataset documentation<a class="headerlink" href="#dataset-documentation" title="Permalink to this heading">#</a></h4>
+<div class="docutils container" id="id34">
 <ul class="simple">
-<li id="id58"><p>V. Eyring, S. Bony, G. A. Meehl, C. A. Senior, B. Stevens, R. J. Stouffer, and K. E. Taylor. Overview of the coupled model intercomparison project phase 6 (cmip6) experimental design and organization. <em>Geoscientific Model Development</em>, 9(5):1937–1958, 2016. URL: <a class="reference external" href="https://gmd.copernicus.org/articles/9/1937/2016/">https://gmd.copernicus.org/articles/9/1937/2016/</a>, <a class="reference external" href="https://doi.org/10.5194/gmd-9-1937-2016">doi:10.5194/gmd-9-1937-2016</a>.</p></li>
-<li id="id59"><p>Colin P. Morice, John J. Kennedy, Nick A. Rayner, and Phil D. Jones. Quantifying uncertainties in global and regional temperature change using an ensemble of observational estimates: the hadcrut4 data set. <em>Journal of Geophysical Research: Atmospheres</em>, 2012. URL: <a class="reference external" href="https://agupubs.onlinelibrary.wiley.com/doi/abs/10.1029/2011JD017187">https://agupubs.onlinelibrary.wiley.com/doi/abs/10.1029/2011JD017187</a>, <a class="reference external" href="https://arxiv.org/abs/https://agupubs.onlinelibrary.wiley.com/doi/pdf/10.1029/2011JD017187">arXiv:https://agupubs.onlinelibrary.wiley.com/doi/pdf/10.1029/2011JD017187</a>, <a class="reference external" href="https://doi.org/https://doi.org/10.1029/2011JD017187">doi:https://doi.org/10.1029/2011JD017187</a>.</p></li>
-<li id="id60"><p>N. A. Rayner, D. E. Parker, E. B. Horton, C. K. Folland, L. V. Alexander, D. P. Rowell, E. C. Kent, and A. Kaplan. Global analyses of sea surface temperature, sea ice, and night marine air temperature since the late nineteenth century. <em>Journal of Geophysical Research: Atmospheres</em>, 2003. URL: <a class="reference external" href="https://agupubs.onlinelibrary.wiley.com/doi/abs/10.1029/2002JD002670">https://agupubs.onlinelibrary.wiley.com/doi/abs/10.1029/2002JD002670</a>, <a class="reference external" href="https://arxiv.org/abs/https://agupubs.onlinelibrary.wiley.com/doi/pdf/10.1029/2002JD002670">arXiv:https://agupubs.onlinelibrary.wiley.com/doi/pdf/10.1029/2002JD002670</a>, <a class="reference external" href="https://doi.org/https://doi.org/10.1029/2002JD002670">doi:https://doi.org/10.1029/2002JD002670</a>.</p></li>
-<li id="id61"><p>Mark Richardson, Kevin Cowtan, and Richard J Millar. Global temperature definition affects achievement of long-term climate goals. <em>Environmental Research Letters</em>, 13(5):054004, apr 2018. URL: <a class="reference external" href="https://dx.doi.org/10.1088/1748-9326/aab305">https://dx.doi.org/10.1088/1748-9326/aab305</a>, <a class="reference external" href="https://doi.org/10.1088/1748-9326/aab305">doi:10.1088/1748-9326/aab305</a>.</p></li>
+<li id="id60"><p>V. Eyring, S. Bony, G. A. Meehl, C. A. Senior, B. Stevens, R. J. Stouffer, and K. E. Taylor. Overview of the coupled model intercomparison project phase 6 (cmip6) experimental design and organization. <em>Geoscientific Model Development</em>, 9(5):1937–1958, 2016. URL: <a class="reference external" href="https://gmd.copernicus.org/articles/9/1937/2016/">https://gmd.copernicus.org/articles/9/1937/2016/</a>, <a class="reference external" href="https://doi.org/10.5194/gmd-9-1937-2016">doi:10.5194/gmd-9-1937-2016</a>.</p></li>
+<li id="id61"><p>Colin P. Morice, John J. Kennedy, Nick A. Rayner, and Phil D. Jones. Quantifying uncertainties in global and regional temperature change using an ensemble of observational estimates: the hadcrut4 data set. <em>Journal of Geophysical Research: Atmospheres</em>, 2012. URL: <a class="reference external" href="https://agupubs.onlinelibrary.wiley.com/doi/abs/10.1029/2011JD017187">https://agupubs.onlinelibrary.wiley.com/doi/abs/10.1029/2011JD017187</a>, <a class="reference external" href="https://arxiv.org/abs/https://agupubs.onlinelibrary.wiley.com/doi/pdf/10.1029/2011JD017187">arXiv:https://agupubs.onlinelibrary.wiley.com/doi/pdf/10.1029/2011JD017187</a>, <a class="reference external" href="https://doi.org/https://doi.org/10.1029/2011JD017187">doi:https://doi.org/10.1029/2011JD017187</a>.</p></li>
+<li id="id62"><p>N. A. Rayner, D. E. Parker, E. B. Horton, C. K. Folland, L. V. Alexander, D. P. Rowell, E. C. Kent, and A. Kaplan. Global analyses of sea surface temperature, sea ice, and night marine air temperature since the late nineteenth century. <em>Journal of Geophysical Research: Atmospheres</em>, 2003. URL: <a class="reference external" href="https://agupubs.onlinelibrary.wiley.com/doi/abs/10.1029/2002JD002670">https://agupubs.onlinelibrary.wiley.com/doi/abs/10.1029/2002JD002670</a>, <a class="reference external" href="https://arxiv.org/abs/https://agupubs.onlinelibrary.wiley.com/doi/pdf/10.1029/2002JD002670">arXiv:https://agupubs.onlinelibrary.wiley.com/doi/pdf/10.1029/2002JD002670</a>, <a class="reference external" href="https://doi.org/https://doi.org/10.1029/2002JD002670">doi:https://doi.org/10.1029/2002JD002670</a>.</p></li>
+<li id="id63"><p>Mark Richardson, Kevin Cowtan, and Richard J Millar. Global temperature definition affects achievement of long-term climate goals. <em>Environmental Research Letters</em>, 13(5):054004, apr 2018. URL: <a class="reference external" href="https://dx.doi.org/10.1088/1748-9326/aab305">https://dx.doi.org/10.1088/1748-9326/aab305</a>, <a class="reference external" href="https://doi.org/10.1088/1748-9326/aab305">doi:10.1088/1748-9326/aab305</a>.</p></li>
 </ul>
 </div>
-</div>
-</div>
-<div class="section" id="source-code">
-<h3>Source code<a class="headerlink" href="#source-code" title="Permalink to this headline">¶</a></h3>
-<p>The notebook contributors acknowledge the authors of the paper for providing a reproducible and public code available at <a class="reference external" href="https://gitlab.com/ConstantinBone/detection-and-attribution-of-climate-change-a-deep-learning-and-variational-approach">https://gitlab.com/ConstantinBone/detection-and-attribution-of-climate-change-a-deep-learning-and-variational-approach</a>. The source code of the paper was adapted to this notebook.</p>
-</div>
-</div>
-<div class="section" id="load-libraries">
-<h2>Load libraries<a class="headerlink" href="#load-libraries" title="Permalink to this headline">¶</a></h2>
+</section>
+</section>
+<section id="source-code">
+<h3>Source code<a class="headerlink" href="#source-code" title="Permalink to this heading">#</a></h3>
+<p>The notebook contributors acknowledge the authors of the paper for providing a reproducible and public code available at <a class="gitlab reference external" href="https://gitlab.com/ConstantinBone/detection-and-attribution-of-climate-change-a-deep-learning-and-variational-approach">ConstantinBone/detection-and-attribution-of-climate-change-a-deep-learning-and-variational-approach</a>. The source code of the paper was adapted to this notebook.</p>
+</section>
+</section>
+<section id="load-libraries">
+<h2>Load libraries<a class="headerlink" href="#load-libraries" title="Permalink to this heading">#</a></h2>
 <div class="cell tag_hide-input docutils container">
+<details class="hide above-input">
+<summary aria-label="Toggle hidden content">
+<span class="collapsed">Show code cell source</span>
+<span class="expanded">Hide code cell source</span>
+</summary>
 <div class="cell_input docutils container">
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="sd">&quot;&quot;&quot;Math &amp; Data Libraries&quot;&quot;&quot;</span>
 <span class="kn">import</span> <span class="nn">os</span>
@@ -891,12 +660,13 @@ const thebe_selector_output = ".output, .cell_output"
 </pre></div>
 </div>
 </div>
+</details>
 </div>
-</div>
-<div class="section" id="settings">
-<h2>Settings<a class="headerlink" href="#settings" title="Permalink to this headline">¶</a></h2>
-<div class="section" id="variables">
-<h3>Variables<a class="headerlink" href="#variables" title="Permalink to this headline">¶</a></h3>
+</section>
+<section id="settings">
+<h2>Settings<a class="headerlink" href="#settings" title="Permalink to this heading">#</a></h2>
+<section id="variables">
+<h3>Variables<a class="headerlink" href="#variables" title="Permalink to this heading">#</a></h3>
 <p>We start definining model settings in a dictionary of dictionaries. It contains the number of simulations per forcing per model, and the long name.</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
@@ -1005,11 +775,16 @@ const thebe_selector_output = ".output, .cell_output"
 </div>
 </div>
 </div>
-</div>
-<div class="section" id="classes">
-<h3>Classes<a class="headerlink" href="#classes" title="Permalink to this headline">¶</a></h3>
+</section>
+<section id="classes">
+<h3>Classes<a class="headerlink" href="#classes" title="Permalink to this heading">#</a></h3>
 <p>We use <code class="docutils literal notranslate"><span class="pre">torch.nn</span></code> and <code class="docutils literal notranslate"><span class="pre">torch.utils.data</span></code> modules to define linear (baseline) and CNN models, and datasets, respectively.</p>
 <div class="cell tag_hide-input docutils container">
+<details class="hide above-input">
+<summary aria-label="Toggle hidden content">
+<span class="collapsed">Show code cell source</span>
+<span class="expanded">Hide code cell source</span>
+</summary>
 <div class="cell_input docutils container">
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="k">class</span> <span class="nc">CNN_Model</span><span class="p">(</span><span class="n">nn</span><span class="o">.</span><span class="n">Module</span><span class="p">):</span>
 <span class="w">    </span><span class="sd">&quot;&quot;&quot;</span>
@@ -1265,12 +1040,18 @@ const thebe_selector_output = ".output, .cell_output"
 </pre></div>
 </div>
 </div>
+</details>
 </div>
-</div>
-<div class="section" id="functions">
-<h3>Functions<a class="headerlink" href="#functions" title="Permalink to this headline">¶</a></h3>
+</section>
+<section id="functions">
+<h3>Functions<a class="headerlink" href="#functions" title="Permalink to this heading">#</a></h3>
 <p>We also define some utils functions to load models/simulations, train models and compute spatial calculations.</p>
 <div class="cell tag_hide-input docutils container">
+<details class="hide above-input">
+<summary aria-label="Toggle hidden content">
+<span class="collapsed">Show code cell source</span>
+<span class="expanded">Hide code cell source</span>
+</summary>
 <div class="cell_input docutils container">
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="k">def</span> <span class="nf">calculate_spatial_mean</span><span class="p">(</span><span class="n">data</span><span class="p">):</span>
 <span class="w">    </span><span class="sd">&quot;&quot;&quot;</span>
@@ -1827,16 +1608,17 @@ const thebe_selector_output = ".output, .cell_output"
 </pre></div>
 </div>
 </div>
+</details>
 </div>
-</div>
-</div>
-<div class="section" id="pipeline">
-<h2>Pipeline<a class="headerlink" href="#pipeline" title="Permalink to this headline">¶</a></h2>
-<div class="section" id="fetch-data">
-<h3>Fetch data<a class="headerlink" href="#fetch-data" title="Permalink to this headline">¶</a></h3>
-<p>The data can be found in a compressed file data_pre_ind_2 at <a class="reference external" href="https://gitlab.com/ConstantinBone/detection-and-attribution-of-climate-change-a-deep-learning-and-variational-approach">https://gitlab.com/ConstantinBone/detection-and-attribution-of-climate-change-a-deep-learning-and-variational-approach</a>. We use <code class="docutils literal notranslate"><span class="pre">pooch</span></code> to fetch and unzip them directly from the GitLab repository.</p>
+</section>
+</section>
+<section id="pipeline">
+<h2>Pipeline<a class="headerlink" href="#pipeline" title="Permalink to this heading">#</a></h2>
+<section id="fetch-data">
+<h3>Fetch data<a class="headerlink" href="#fetch-data" title="Permalink to this heading">#</a></h3>
+<p>The data can be found in a compressed file data_pre_ind_2 at <a class="gitlab reference external" href="https://gitlab.com/ConstantinBone/detection-and-attribution-of-climate-change-a-deep-learning-and-variational-approach">ConstantinBone/detection-and-attribution-of-climate-change-a-deep-learning-and-variational-approach</a>. We use <code class="docutils literal notranslate"><span class="pre">pooch</span></code> to fetch and unzip them directly from the GitLab repository.</p>
 <div class="cell tag_hide-output docutils container">
-<div class="cell_input docutils container">
+<div class="cell_input above-output-prompt docutils container">
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">pooch</span><span class="o">.</span><span class="n">retrieve</span><span class="p">(</span>
     <span class="n">url</span><span class="o">=</span><span class="s2">&quot;https://gitlab.com/ConstantinBone/detection-and-attribution-of-climate-change-a-deep-learning-and-variational-approach/-/raw/main/data_pre_ind_2.zip&quot;</span><span class="p">,</span>
     <span class="n">known_hash</span><span class="o">=</span><span class="kc">None</span><span class="p">,</span>
@@ -1847,6 +1629,11 @@ const thebe_selector_output = ".output, .cell_output"
 </pre></div>
 </div>
 </div>
+<details class="hide below-input">
+<summary aria-label="Toggle hidden content">
+<span class="collapsed">Show code cell output</span>
+<span class="expanded">Hide code cell output</span>
+</summary>
 <div class="cell_output docutils container">
 <div class="output stderr highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Downloading data from &#39;https://gitlab.com/ConstantinBone/detection-and-attribution-of-climate-change-a-deep-learning-and-variational-approach/-/raw/main/data_pre_ind_2.zip&#39; to file &#39;/home/jovyan/0a6cabc0997ee6e6c798a5a8eeb76710-data_pre_ind_2.zip&#39;.
 100%|███████████████████████████████████████| 799M/799M [00:00&lt;00:00, 1.03TB/s]
@@ -2432,10 +2219,11 @@ Unzipping contents of &#39;/home/jovyan/0a6cabc0997ee6e6c798a5a8eeb76710-data_pr
 </pre></div>
 </div>
 </div>
+</details>
 </div>
-</div>
-<div class="section" id="load-data">
-<h3>Load data<a class="headerlink" href="#load-data" title="Permalink to this headline">¶</a></h3>
+</section>
+<section id="load-data">
+<h3>Load data<a class="headerlink" href="#load-data" title="Permalink to this heading">#</a></h3>
 <p>We first start by acquiring the annual OBS data of the 2 m air temperature over the continents from HadCRUT4 blended with sea surface temperature from HadISST4. The data is spatially averaged over the globe and only the time span of interest (1900 - 2014) is acquired. To make OBS and HIST comparable, OBS is corrected of its blending effects using a 1.06 multiplier coefficient (Richardson et al., 2018). Finally, the OBS data is normalized to a maximum of 1 by dividing the series with the OBS maximum.</p>
 <p>We then get the simulation data for all forcings (GHG, AER, NAT, HIST) of all 12 climate models. The simulation data is spatially averaged over the globe to create an annual mean from which the pre-industrial average is subtracted. The simulations are then also max-normalized by dividing with the historical maximum.</p>
 <div class="cell docutils container">
@@ -2549,6 +2337,11 @@ Unzipping contents of &#39;/home/jovyan/0a6cabc0997ee6e6c798a5a8eeb76710-data_pr
 </div>
 </div>
 <div class="cell tag_hide-input docutils container">
+<details class="hide above-input">
+<summary aria-label="Toggle hidden content">
+<span class="collapsed">Show code cell source</span>
+<span class="expanded">Hide code cell source</span>
+</summary>
 <div class="cell_input docutils container">
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">table1_models_fig</span> <span class="o">=</span> <span class="n">plt</span><span class="o">.</span><span class="n">figure</span><span class="p">(</span><span class="n">figsize</span><span class="o">=</span><span class="p">(</span><span class="mi">8</span><span class="p">,</span> <span class="mf">0.16</span><span class="p">))</span>
 
@@ -2573,12 +2366,18 @@ Unzipping contents of &#39;/home/jovyan/0a6cabc0997ee6e6c798a5a8eeb76710-data_pr
 </pre></div>
 </div>
 </div>
+</details>
 <div class="cell_output docutils container">
-<img alt="../../../_images/notebook_18_02.png" src="../../../_images/notebook_18_02.png" />
+<img alt="../../../_images/1785b6784eca18714dec45183bc115cc211813058dba4fe6ba2e610c31bf36b6.png" src="../../../_images/1785b6784eca18714dec45183bc115cc211813058dba4fe6ba2e610c31bf36b6.png" />
 </div>
 </div>
 <p>To visualize the intra-specific and inter-specific variation of the simulations for the 12 climate models, we plot the three single-forcing simulations: GHG (orange), AER (yellow), NAT (blue) and the historical simulation using all external forcings: HIST (olive) for each model. The mean value of the simulations per forcing are shown with a solid line, while the shaded color represents one standard deviation off the mean. The observation data: OBS is also shown with a black dotted line.</p>
 <div class="cell tag_hide-input docutils container">
+<details class="hide above-input">
+<summary aria-label="Toggle hidden content">
+<span class="collapsed">Show code cell source</span>
+<span class="expanded">Hide code cell source</span>
+</summary>
 <div class="cell_input docutils container">
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">fig1_models</span><span class="p">,</span> <span class="n">ax</span> <span class="o">=</span> <span class="n">plt</span><span class="o">.</span><span class="n">subplots</span><span class="p">(</span><span class="n">figsize</span><span class="o">=</span><span class="p">(</span><span class="mi">16</span><span class="p">,</span> <span class="mi">10</span><span class="p">),</span> <span class="n">ncols</span><span class="o">=</span><span class="mi">4</span><span class="p">,</span> <span class="n">nrows</span><span class="o">=</span><span class="mi">3</span><span class="p">)</span>
 <span class="n">plt</span><span class="o">.</span><span class="n">suptitle</span><span class="p">(</span><span class="s2">&quot;Visualization of the simulations of the 12 models&quot;</span><span class="p">,</span> <span class="n">fontsize</span><span class="o">=</span><span class="mi">20</span><span class="p">)</span>
@@ -2638,12 +2437,18 @@ Unzipping contents of &#39;/home/jovyan/0a6cabc0997ee6e6c798a5a8eeb76710-data_pr
 </pre></div>
 </div>
 </div>
+</details>
 <div class="cell_output docutils container">
-<img alt="../../../_images/notebook_20_02.png" src="../../../_images/notebook_20_02.png" />
+<img alt="../../../_images/e644d9b661b02d8d30be7e33d4c2253276a902efff288edac36c4f54dca152be.png" src="../../../_images/e644d9b661b02d8d30be7e33d4c2253276a902efff288edac36c4f54dca152be.png" />
 </div>
 </div>
 <p>The following figure shows the variation of the forcings across all 12 climate models. The same color code as the previous figure is used.</p>
 <div class="cell tag_hide-input docutils container">
+<details class="hide above-input">
+<summary aria-label="Toggle hidden content">
+<span class="collapsed">Show code cell source</span>
+<span class="expanded">Hide code cell source</span>
+</summary>
 <div class="cell_input docutils container">
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">fig_models_mean</span><span class="p">,</span> <span class="n">ax</span> <span class="o">=</span> <span class="n">plt</span><span class="o">.</span><span class="n">subplots</span><span class="p">(</span><span class="n">figsize</span><span class="o">=</span><span class="p">(</span><span class="mi">8</span><span class="p">,</span> <span class="mi">5</span><span class="p">),</span> <span class="n">ncols</span><span class="o">=</span><span class="mi">1</span><span class="p">,</span> <span class="n">nrows</span><span class="o">=</span><span class="mi">1</span><span class="p">)</span>
 <span class="n">plt</span><span class="o">.</span><span class="n">suptitle</span><span class="p">(</span>
@@ -2691,16 +2496,17 @@ Unzipping contents of &#39;/home/jovyan/0a6cabc0997ee6e6c798a5a8eeb76710-data_pr
 </pre></div>
 </div>
 </div>
+</details>
 <div class="cell_output docutils container">
-<img alt="../../../_images/notebook_22_02.png" src="../../../_images/notebook_22_02.png" />
+<img alt="../../../_images/84e6e5c16826334a245600ea45cf07343ddb106bbe5848a1a73986f7793575b7.png" src="../../../_images/84e6e5c16826334a245600ea45cf07343ddb106bbe5848a1a73986f7793575b7.png" />
 </div>
 </div>
-</div>
-</div>
-<div class="section" id="cnn">
-<h2>CNN<a class="headerlink" href="#cnn" title="Permalink to this headline">¶</a></h2>
-<div class="section" id="model-training">
-<h3>Model training<a class="headerlink" href="#model-training" title="Permalink to this headline">¶</a></h3>
+</section>
+</section>
+<section id="cnn">
+<h2>CNN<a class="headerlink" href="#cnn" title="Permalink to this heading">#</a></h2>
+<section id="model-training">
+<h3>Model training<a class="headerlink" href="#model-training" title="Permalink to this heading">#</a></h3>
 <div class="alert alert-warning">
 <p><strong>Note:</strong>
 If relevant, you can train CNN models in your available local/remote machine by converting below Python markdown cells to code. The current version load pretrained models in <code class="docutils literal notranslate"><span class="pre">.pkl</span></code> format available in <code class="docutils literal notranslate"><span class="pre">outputs/models</span></code>.</p>
@@ -2724,9 +2530,9 @@ If relevant, you can train CNN models in your available local/remote machine by 
 <span class="n">pickle</span><span class="o">.</span><span class="n">dump</span><span class="p">(</span><span class="n">model_linear</span><span class="p">,</span> <span class="nb">open</span><span class="p">(</span><span class="s1">&#39;Models/Linear_model.pkl&#39;</span><span class="p">,</span> <span class="s1">&#39;wb&#39;</span><span class="p">))</span>
 </pre></div>
 </div>
-</div>
-<div class="section" id="model-performance">
-<h3>Model performance<a class="headerlink" href="#model-performance" title="Permalink to this headline">¶</a></h3>
+</section>
+<section id="model-performance">
+<h3>Model performance<a class="headerlink" href="#model-performance" title="Permalink to this heading">#</a></h3>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1">## Load models</span>
@@ -2740,6 +2546,11 @@ If relevant, you can train CNN models in your available local/remote machine by 
 </div>
 </div>
 <div class="cell tag_hide-input docutils container">
+<details class="hide above-input">
+<summary aria-label="Toggle hidden content">
+<span class="collapsed">Show code cell source</span>
+<span class="expanded">Hide code cell source</span>
+</summary>
 <div class="cell_input docutils container">
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">skip_first_epochs</span> <span class="o">=</span> <span class="mi">5</span>
 
@@ -2786,14 +2597,15 @@ If relevant, you can train CNN models in your available local/remote machine by 
 </pre></div>
 </div>
 </div>
+</details>
 <div class="cell_output docutils container">
-<img alt="../../../_images/notebook_26_01.png" src="../../../_images/notebook_26_01.png" />
+<img alt="../../../_images/f8047f9840174c46e9ccdd41d8fb858d2e8f41de5509c80eb30eea496ea812bc.png" src="../../../_images/f8047f9840174c46e9ccdd41d8fb858d2e8f41de5509c80eb30eea496ea812bc.png" />
 </div>
 </div>
-</div>
-</div>
-<div class="section" id="inverse-model">
-<h2>Inverse model<a class="headerlink" href="#inverse-model" title="Permalink to this headline">¶</a></h2>
+</section>
+</section>
+<section id="inverse-model">
+<h2>Inverse model<a class="headerlink" href="#inverse-model" title="Permalink to this heading">#</a></h2>
 <div class="alert alert-warning">
 <p><strong>Note:</strong>
 This step benefits from GPU’s processing power. We suggest to run the <code class="docutils literal notranslate"><span class="pre">get_inverse_model_estimates</span></code> in your available local/remote machine (e.g. Colab) by converting below Python markdown cell to code. The current version load results in <code class="docutils literal notranslate"><span class="pre">.npy</span></code> format available in <code class="docutils literal notranslate"><span class="pre">outputs/results</span></code>.</p>
@@ -2812,6 +2624,11 @@ This step benefits from GPU’s processing power. We suggest to run the <code cl
 </div>
 <p>Now we visualize the variational inverse model estimates for each model compared to the climate model simulations. We plot the three single-forcing simulations: GHG (orange), AER (yellow), NAT (blue) for the inverse estimates (dashed line) and the original climate model simulations (solid line). The color shades show one standard deviation across the inversion (dashed area) and the simulations. The observation data: OBS is also shown with a black dotted line.</p>
 <div class="cell tag_hide-input docutils container">
+<details class="hide above-input">
+<summary aria-label="Toggle hidden content">
+<span class="collapsed">Show code cell source</span>
+<span class="expanded">Hide code cell source</span>
+</summary>
 <div class="cell_input docutils container">
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">fig_inverse_models</span><span class="p">,</span> <span class="n">ax</span> <span class="o">=</span> <span class="n">plt</span><span class="o">.</span><span class="n">subplots</span><span class="p">(</span><span class="n">figsize</span><span class="o">=</span><span class="p">(</span><span class="mi">16</span><span class="p">,</span> <span class="mi">10</span><span class="p">),</span> <span class="n">ncols</span><span class="o">=</span><span class="mi">4</span><span class="p">,</span> <span class="n">nrows</span><span class="o">=</span><span class="mi">3</span><span class="p">)</span>
 <span class="n">plt</span><span class="o">.</span><span class="n">suptitle</span><span class="p">(</span>
@@ -2902,12 +2719,18 @@ This step benefits from GPU’s processing power. We suggest to run the <code cl
 </pre></div>
 </div>
 </div>
+</details>
 <div class="cell_output docutils container">
-<img alt="../../../_images/notebook_31_0.png" src="../../../_images/notebook_31_0.png" />
+<img alt="../../../_images/5778dccf16da2f7327330675efe59185f59b6be8d7bbc5145f275dd949c6b139.png" src="../../../_images/5778dccf16da2f7327330675efe59185f59b6be8d7bbc5145f275dd949c6b139.png" />
 </div>
 </div>
 <p>The following figure visualizes the same figure by taking all models into account. The same color as the previous figure is used.</p>
 <div class="cell tag_hide-input docutils container">
+<details class="hide above-input">
+<summary aria-label="Toggle hidden content">
+<span class="collapsed">Show code cell source</span>
+<span class="expanded">Hide code cell source</span>
+</summary>
 <div class="cell_input docutils container">
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">fig_inverse_models_mean</span><span class="p">,</span> <span class="n">ax</span> <span class="o">=</span> <span class="n">plt</span><span class="o">.</span><span class="n">subplots</span><span class="p">(</span><span class="n">figsize</span><span class="o">=</span><span class="p">(</span><span class="mi">8</span><span class="p">,</span> <span class="mi">5</span><span class="p">),</span> <span class="n">ncols</span><span class="o">=</span><span class="mi">1</span><span class="p">,</span> <span class="n">nrows</span><span class="o">=</span><span class="mi">1</span><span class="p">)</span>
 <span class="n">plt</span><span class="o">.</span><span class="n">suptitle</span><span class="p">(</span>
@@ -2993,12 +2816,18 @@ This step benefits from GPU’s processing power. We suggest to run the <code cl
 </pre></div>
 </div>
 </div>
+</details>
 <div class="cell_output docutils container">
-<img alt="../../../_images/notebook_33_0.png" src="../../../_images/notebook_33_0.png" />
+<img alt="../../../_images/6a5c526575cd6a648cbe21fe23cc9f3404ff42c253b13461b0f33ee8156ec3cd.png" src="../../../_images/6a5c526575cd6a648cbe21fe23cc9f3404ff42c253b13461b0f33ee8156ec3cd.png" />
 </div>
 </div>
 <p>Finally, we visualize the mean and standard deviation of the variational inverse model estimates over time, and further show the results for two years, in this case 1993 and 2014 for greenhouse gases (orange), anthropogenic aerosols (yellow) and natural forcings (blue).</p>
 <div class="cell tag_hide-input docutils container">
+<details class="hide above-input">
+<summary aria-label="Toggle hidden content">
+<span class="collapsed">Show code cell source</span>
+<span class="expanded">Hide code cell source</span>
+</summary>
 <div class="cell_input docutils container">
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">fig2_inverse_estimates</span><span class="p">,</span> <span class="n">ax</span> <span class="o">=</span> <span class="n">plt</span><span class="o">.</span><span class="n">subplots</span><span class="p">(</span>
     <span class="n">figsize</span><span class="o">=</span><span class="p">(</span><span class="mf">12.4</span><span class="p">,</span> <span class="mf">4.8</span><span class="p">),</span> <span class="n">ncols</span><span class="o">=</span><span class="mi">3</span><span class="p">,</span> <span class="n">nrows</span><span class="o">=</span><span class="mi">1</span><span class="p">,</span> <span class="n">gridspec_kw</span><span class="o">=</span><span class="p">{</span><span class="s2">&quot;width_ratios&quot;</span><span class="p">:</span> <span class="p">[</span><span class="mi">3</span><span class="p">,</span> <span class="mi">1</span><span class="p">,</span> <span class="mi">1</span><span class="p">]}</span>
@@ -3078,14 +2907,15 @@ This step benefits from GPU’s processing power. We suggest to run the <code cl
 </pre></div>
 </div>
 </div>
+</details>
 <div class="cell_output docutils container">
-<img alt="../../../_images/notebook_35_0.png" src="../../../_images/notebook_35_0.png" />
+<img alt="../../../_images/bc13013a7325dd25aae33534bcf90793c36f718c45ba3732fb1dda59b7bdeb04.png" src="../../../_images/bc13013a7325dd25aae33534bcf90793c36f718c45ba3732fb1dda59b7bdeb04.png" />
 </div>
 </div>
 <p>As we can see in the left panel of the image, the results are comparable to the original simulations, however, with a slightly increased standard deviation. The right panel illustrates the distribution of the results from the inversions in 1993 and 2014, showing a clear delineation between the effect of GHG compared to AER and NAT forcings. Furthermore, this results obtained in this run of the notebook slighly differ from the ones in the original paper. This could be due to multiple reasons, such as the stochasticity involved in training the models or slight differences in the pipeline compared to the original paper.</p>
-</div>
-<div class="section" id="limitations">
-<h2>Limitations<a class="headerlink" href="#limitations" title="Permalink to this headline">¶</a></h2>
+</section>
+<section id="limitations">
+<h2>Limitations<a class="headerlink" href="#limitations" title="Permalink to this heading">#</a></h2>
 <ul class="simple">
 <li><p>Data uncertainty: The analysis relies on the the accuracy and quality of the data which is used to train the models. However, especially when using the climate simulation data (GHG, AER, NAT, HIST), we rely on the use of climate models which inherently carry uncertainties due to simplified representations of complex climate processes, thus can bias the changes to specific forcings.</p></li>
 <li><p>Spatiotemporal resolution: The analysis provides GMST attribution on a global scale, but it may not capture regional variations adequately. Regional climate responses and localized forcings might not be fully accounted for, limiting the ability to attribute changes at finer spatial scales. However, this is something the authors of the paper discuss they will research in future work.</p></li>
@@ -3093,23 +2923,23 @@ This step benefits from GPU’s processing power. We suggest to run the <code cl
 <li><p>Future projection uncertainty: The analysis focuses on historical data up to 2014, and the attribution results may not fully reflect potential changes beyond that period. Projecting the attribution results into the future introduces additional uncertainties related to emission scenarios and climate model projections.</p></li>
 <li><p>Sensitivity to methodology: The results of the analysis may be sensitive to the specific methodology chosen, including the design of the variational inversion approach and the choice of climate models used. Alternative methodologies could yield different attribution outcomes.</p></li>
 </ul>
-</div>
-<div class="section" id="summary">
-<h2>Summary<a class="headerlink" href="#summary" title="Permalink to this headline">¶</a></h2>
+</section>
+<section id="summary">
+<h2>Summary<a class="headerlink" href="#summary" title="Permalink to this heading">#</a></h2>
 <ul class="simple">
 <li><p>The climate change attribution problem is a very important issue that pertains to understanding the exact causes behind climate change. However, most approaches tackling this problem have relied on the classical forcing additivity assumption which precludes any non-linear combinations that are ubiquitous in nature.</p></li>
 <li><p>In this notebook, we utilize a CNN architecture to escape this constraint and estimate the historical global mean surface temperature using single forcing simulations (greenhouse gases, anthropogenic aerosols and natural forcings) from ocean-atmosphere general circulation models from the Coupled Model Intercomparison Project 6 (CMIP6).</p></li>
 <li><p>The results show that the CNN performs better and obtains a lower mean square error compared to a simpler linear model trained on the same data.</p></li>
 <li><p>The trained CNN is then used with a variational inversion approach to estimate the single forcings when given observation data from HadCRUT4 and HAdISST412. The estimated inversions of the single forcings show high similarity to the original data and provide coherent results with larger confidence intervals.</p></li>
 </ul>
-</div>
-<div class="section" id="citing-this-notebook">
-<h2>Citing this Notebook<a class="headerlink" href="#citing-this-notebook" title="Permalink to this headline">¶</a></h2>
+</section>
+<section id="citing-this-notebook">
+<h2>Citing this Notebook<a class="headerlink" href="#citing-this-notebook" title="Permalink to this heading">#</a></h2>
 <p>Please see <a class="reference external" href="https://github.com/eds-book-gallery/93463cac-471a-469d-ad52-0514fd9b67f2/blob/main/CITATION.cff">CITATION.cff</a> for the full citation information. The citation file can be exported to APA or BibTex formats (learn more <a class="reference external" href="https://docs.github.com/en/repositories/managing-your-repositorys-settings-and-features/customizing-your-repository/about-citation-files">here</a>).</p>
-</div>
-<div class="section" id="additional-information">
-<h2>Additional information<a class="headerlink" href="#additional-information" title="Permalink to this headline">¶</a></h2>
-<p><strong>Dataset</strong>: Bône, Constantin. (2023).  Detection and attribution of climate change a Deep Learning and Variational approach. <a class="reference external" href="https://gitlab.com/ConstantinBone/detection-and-attribution-of-climate-change-a-deep-learning-and-variational-approach/-/blob/main/data_pre_ind_2.zip">https://gitlab.com/ConstantinBone/detection-and-attribution-of-climate-change-a-deep-learning-and-variational-approach/-/blob/main/data_pre_ind_2.zip</a> - Commit 8dff0335be7dbf07e56c7a99bef6b12453360012</p>
+</section>
+<section id="additional-information">
+<h2>Additional information<a class="headerlink" href="#additional-information" title="Permalink to this heading">#</a></h2>
+<p><strong>Dataset</strong>: Bône, Constantin. (2023).  Detection and attribution of climate change a Deep Learning and Variational approach. <a class="gitlab reference external" href="https://gitlab.com/ConstantinBone/detection-and-attribution-of-climate-change-a-deep-learning-and-variational-approach/-/blob/main/data_pre_ind_2.zip">ConstantinBone/detection-and-attribution-of-climate-change-a-deep-learning-and-variational-approach/-/blob/main/data_pre_ind_2.zip</a> - Commit 8dff0335be7dbf07e56c7a99bef6b12453360012</p>
 <p><strong>License</strong>: The code in this notebook is licensed under the MIT License. The Environmental Data Science book is licensed under the Creative Commons by Attribution 4.0 license. See further details <a class="reference external" href="https://github.com/alan-turing-institute/environmental-ds-book/blob/master/LICENSE.md">here</a>.</p>
 <p><strong>Contact</strong>: If you have any suggestion or report an issue with this notebook, feel free to <a class="reference external" href="https://github.com/alan-turing-institute/environmental-ds-book/issues/new/choose">create an issue</a> or or send a direct message to <a class="reference external" href="mailto:environmental&#46;ds&#46;book&#37;&#52;&#48;gmail&#46;com">environmental<span>&#46;</span>ds<span>&#46;</span>book<span>&#64;</span>gmail<span>&#46;</span>com</a>.</p>
 <div class="cell tag_remove-input docutils container">
@@ -3120,8 +2950,8 @@ Last tested: 2023-09-09
 </div>
 </div>
 </div>
-</div>
-</div>
+</section>
+</section>
 
     <script type="text/x-thebe-config">
     {
@@ -3135,7 +2965,7 @@ Last tested: 2023-09-09
             mode: "python"
         },
         kernelOptions: {
-            kernelName: "python3",
+            name: "python3",
             path: "./notebooks/gallery/93463cac-471a-469d-ad52-0514fd9b67f2"
         },
         predefinedOutput: true
@@ -3143,44 +2973,139 @@ Last tested: 2023-09-09
     </script>
     <script>kernelName = 'python3'</script>
 
-              </div>
+                </article>
               
-            
-                <!-- Previous / next buttons -->
-<div class='prev-next-area'> 
-    <a class='left-prev' id="prev-link" href="../39d9c177-11da-41b2-9b64-63f4c1c834b3/notebook.html" title="previous page">
-        <i class="fas fa-angle-left"></i>
-        <div class="prev-next-info">
-            <p class="prev-next-subtitle">previous</p>
-            <p class="prev-next-title">Variational data assimilation with deep prior (CIRC23)</p>
-        </div>
+
+              
+              
+              
+              
+                <footer class="prev-next-footer">
+                  
+<div class="prev-next-area">
+    <a class="left-prev"
+       href="../39d9c177-11da-41b2-9b64-63f4c1c834b3/notebook.html"
+       title="previous page">
+      <i class="fa-solid fa-angle-left"></i>
+      <div class="prev-next-info">
+        <p class="prev-next-subtitle">previous</p>
+        <p class="prev-next-title">Variational data assimilation with deep prior (CIRC23)</p>
+      </div>
     </a>
-    <a class='right-next' id="next-link" href="../3286b92f-4fae-4cc6-a29e-e408bc844542/notebook.html" title="next page">
-    <div class="prev-next-info">
+    <a class="right-next"
+       href="../3286b92f-4fae-4cc6-a29e-e408bc844542/notebook.html"
+       title="next page">
+      <div class="prev-next-info">
         <p class="prev-next-subtitle">next</p>
         <p class="prev-next-title">Learning the underlying physics of a simulation model of the ocean’s temperature (CIRC23)</p>
-    </div>
-    <i class="fas fa-angle-right"></i>
+      </div>
+      <i class="fa-solid fa-angle-right"></i>
     </a>
 </div>
+                </footer>
+              
+            </div>
             
-        </div>
-    </div>
-    <footer class="footer">
-  <p>
-    
-      By EDS book Community. This site is powered by <a href="https://www.netlify.com/">Netlify</a>.<br/>
-    
-        &copy; Copyright 2021.<br/>
-  </p>
-</footer>
-</main>
+            
+              
+                <div class="bd-sidebar-secondary bd-toc"><div class="sidebar-secondary-items sidebar-secondary__inner">
 
 
-      </div>
-    </div>
+  <div class="sidebar-secondary-item">
+  <div class="page-toc tocsection onthispage">
+    <i class="fa-solid fa-list"></i> Contents
+  </div>
+  <nav class="bd-toc-nav page-toc">
+    <ul class="visible nav section-nav flex-column">
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#context">Context</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#purpose">Purpose</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#description">Description</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#highlights">Highlights</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#abbreviations">Abbreviations</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#contributions">Contributions</a><ul class="nav section-nav flex-column">
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#notebook">Notebook</a></li>
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#modelling-codebase">Modelling codebase</a></li>
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#modelling-publications">Modelling publications</a></li>
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#dataset-documentation">Dataset documentation</a></li>
+</ul>
+</li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#source-code">Source code</a></li>
+</ul>
+</li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#load-libraries">Load libraries</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#settings">Settings</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#variables">Variables</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#classes">Classes</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#functions">Functions</a></li>
+</ul>
+</li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#pipeline">Pipeline</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#fetch-data">Fetch data</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#load-data">Load data</a></li>
+</ul>
+</li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#cnn">CNN</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#model-training">Model training</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#model-performance">Model performance</a></li>
+</ul>
+</li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#inverse-model">Inverse model</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#limitations">Limitations</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#summary">Summary</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#citing-this-notebook">Citing this Notebook</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#additional-information">Additional information</a></li>
+</ul>
+  </nav></div>
+
+</div></div>
+              
+            
+          </div>
+          <footer class="bd-footer-content">
+            
+<div class="bd-footer-content__inner container">
   
-  <script src="../../../_static/js/index.be7d3bbb2ef33a8344ce.js"></script>
+  <div class="footer-item">
+    
+<p class="component-author">
+By EDS book Community. This site is powered by <a href="https://www.netlify.com/">Netlify</a>.
+</p>
 
+  </div>
+  
+  <div class="footer-item">
+    
+
+  <p class="copyright">
+    
+      © Copyright 2021.
+      <br/>
+    
+  </p>
+
+  </div>
+  
+  <div class="footer-item">
+    
+  </div>
+  
+  <div class="footer-item">
+    
+  </div>
+  
+</div>
+          </footer>
+        
+
+      </main>
+    </div>
+  </div>
+  
+  <!-- Scripts loaded after <body> so the DOM is not blocked -->
+  <script src="../../../_static/scripts/bootstrap.js?digest=8d27b9dea8ad943066ae"></script>
+<script src="../../../_static/scripts/pydata-sphinx-theme.js?digest=8d27b9dea8ad943066ae"></script>
+
+  <footer class="bd-footer">
+  </footer>
   </body>
 </html>

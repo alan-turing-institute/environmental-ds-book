@@ -1,672 +1,488 @@
 
+
 <!DOCTYPE html>
 
-<html lang="en">
+
+<html lang="en" data-content_root="" >
+
   <head>
     <meta charset="utf-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="generator" content="Docutils 0.18.1: http://docutils.sourceforge.net/" />
+
     <title>Tree crown detection using DeepForest &#8212; Environmental Data Science Book</title>
-    
-  <link href="../../../_static/css/theme.css" rel="stylesheet">
-  <link href="../../../_static/css/index.ff1ffe594081f20da1ef19478df9384b.css" rel="stylesheet">
+  
+  
+  
+  <script data-cfasync="false">
+    document.documentElement.dataset.mode = localStorage.getItem("mode") || "";
+    document.documentElement.dataset.theme = localStorage.getItem("theme") || "light";
+  </script>
+  
+  <!-- Loaded before other Sphinx assets -->
+  <link href="../../../_static/styles/theme.css?digest=8d27b9dea8ad943066ae" rel="stylesheet" />
+<link href="../../../_static/styles/bootstrap.css?digest=8d27b9dea8ad943066ae" rel="stylesheet" />
+<link href="../../../_static/styles/pydata-sphinx-theme.css?digest=8d27b9dea8ad943066ae" rel="stylesheet" />
 
-    
-  <link rel="stylesheet"
-    href="../../../_static/vendor/fontawesome/5.13.0/css/all.min.css">
-  <link rel="preload" as="font" type="font/woff2" crossorigin
-    href="../../../_static/vendor/fontawesome/5.13.0/webfonts/fa-solid-900.woff2">
-  <link rel="preload" as="font" type="font/woff2" crossorigin
-    href="../../../_static/vendor/fontawesome/5.13.0/webfonts/fa-brands-400.woff2">
+  
+  <link href="../../../_static/vendor/fontawesome/6.5.1/css/all.min.css?digest=8d27b9dea8ad943066ae" rel="stylesheet" />
+  <link rel="preload" as="font" type="font/woff2" crossorigin href="../../../_static/vendor/fontawesome/6.5.1/webfonts/fa-solid-900.woff2" />
+<link rel="preload" as="font" type="font/woff2" crossorigin href="../../../_static/vendor/fontawesome/6.5.1/webfonts/fa-brands-400.woff2" />
+<link rel="preload" as="font" type="font/woff2" crossorigin href="../../../_static/vendor/fontawesome/6.5.1/webfonts/fa-regular-400.woff2" />
 
-    
-      
-
-    
     <link rel="stylesheet" type="text/css" href="../../../_static/pygments.css" />
-    <link rel="stylesheet" type="text/css" href="../../../_static/sphinx-book-theme.css?digest=c3fdc42140077d1ad13ad2f1588a4309" />
+    <link rel="stylesheet" href="../../../_static/styles/sphinx-book-theme.css?digest=14f4ca6b54d191a8c7657f6c759bf11a5fb86285" type="text/css" />
     <link rel="stylesheet" type="text/css" href="../../../_static/togglebutton.css" />
     <link rel="stylesheet" type="text/css" href="../../../_static/copybutton.css" />
-    <link rel="stylesheet" type="text/css" href="../../../_static/mystnb.css" />
+    <link rel="stylesheet" type="text/css" href="../../../_static/mystnb.4510f1fc1dee50b3e5859aac5469c37c29e427902b24a333a5f9fcb2f0b3ac41.css" />
     <link rel="stylesheet" type="text/css" href="../../../_static/sphinx-thebe.css" />
-    <link rel="stylesheet" type="text/css" href="../../../_static/panels-main.c949a650a448cc0ae9fd3441c0e17fb0.css" />
-    <link rel="stylesheet" type="text/css" href="../../../_static/panels-variables.06eb56fa6e07937060861dad626602ad.css" />
-    <link rel="stylesheet" type="text/css" href="../../../_static/design-style.1e8bd061cd6da7fc9cf755528e8ffc24.min.css" />
-    
-  <link rel="preload" as="script" href="../../../_static/js/index.be7d3bbb2ef33a8344ce.js">
+    <link rel="stylesheet" type="text/css" href="../../../_static/design-style.4045f2051d55cab465a707391d5b2007.min.css" />
+  
+  <!-- Pre-loaded scripts that we'll load fully later -->
+  <link rel="preload" as="script" href="../../../_static/scripts/bootstrap.js?digest=8d27b9dea8ad943066ae" />
+<link rel="preload" as="script" href="../../../_static/scripts/pydata-sphinx-theme.js?digest=8d27b9dea8ad943066ae" />
+  <script src="../../../_static/vendor/fontawesome/6.5.1/js/all.min.js?digest=8d27b9dea8ad943066ae"></script>
 
     <script data-url_root="../../../" id="documentation_options" src="../../../_static/documentation_options.js"></script>
     <script src="../../../_static/jquery.js"></script>
     <script src="../../../_static/underscore.js"></script>
+    <script src="../../../_static/_sphinx_javascript_frameworks_compat.js"></script>
     <script src="../../../_static/doctools.js"></script>
     <script src="../../../_static/clipboard.min.js"></script>
     <script src="../../../_static/copybutton.js"></script>
+    <script src="../../../_static/scripts/sphinx-book-theme.js?digest=5a5c038af52cf7bc1a1ec88eea08e6366ee68824"></script>
     <script>let toggleHintShow = 'Click to show';</script>
     <script>let toggleHintHide = 'Click to hide';</script>
     <script>let toggleOpenOnPrint = 'true';</script>
     <script src="../../../_static/togglebutton.js"></script>
-    <script>var togglebuttonSelector = '.toggle, .admonition.dropdown, .tag_hide_input div.cell_input, .tag_hide-input div.cell_input, .tag_hide_output div.cell_output, .tag_hide-output div.cell_output, .tag_hide_cell.cell, .tag_hide-cell.cell';</script>
-    <script src="../../../_static/sphinx-book-theme.d59cb220de22ca1c485ebbdc042f0030.js"></script>
+    <script>var togglebuttonSelector = '.toggle, .admonition.dropdown';</script>
     <script src="../../../_static/design-tabs.js"></script>
+    <script async="async" src="https://www.googletagmanager.com/gtag/js?id=G-3E20PWD938"></script>
+    <script>
+                window.dataLayer = window.dataLayer || [];
+                function gtag(){ dataLayer.push(arguments); }
+                gtag('js', new Date());
+                gtag('config', 'G-3E20PWD938');
+            </script>
     <script>const THEBE_JS_URL = "https://unpkg.com/thebe@0.8.2/lib/index.js"
 const thebe_selector = ".thebe,.cell"
 const thebe_selector_input = "pre"
 const thebe_selector_output = ".output, .cell_output"
 </script>
     <script async="async" src="../../../_static/sphinx-thebe.js"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/require.js/2.3.4/require.min.js"></script>
-    <script src="https://unpkg.com/@jupyter-widgets/html-manager@^0.20.1/dist/embed-amd.js"></script>
+    <script>DOCUMENTATION_OPTIONS.pagename = 'notebooks/gallery/15d986da-2d7c-44fb-af71-700494485def/notebook';</script>
     <link rel="index" title="Index" href="../../../genindex.html" />
     <link rel="search" title="Search" href="../../../search.html" />
     <link rel="next" title="MODIS MOD021KM and FIRMS" href="../a2875cdc-ba6a-49dc-aab7-cdf7c4fc0fa8/notebook.html" />
     <link rel="prev" title="SEVIRI Level 1.5" href="../bc30df18-fce2-42fa-aade-1ce5b7f3ca3c/notebook.html" />
-    <meta name="viewport" content="width=device-width, initial-scale=1" />
-    <meta name="docsearch:language" content="en">
-    
-
-    <!-- Google Analytics -->
-    
-<script async="" src="https://www.googletagmanager.com/gtag/js?id=G-3E20PWD938"></script>
-<script>
-                    window.dataLayer = window.dataLayer || [];
-                    function gtag(){ dataLayer.push(arguments); }
-                    gtag('js', new Date());
-                    gtag('config', 'G-3E20PWD938');
-                </script>
-
+  <meta name="viewport" content="width=device-width, initial-scale=1"/>
+  <meta name="docsearch:language" content="en"/>
   </head>
-  <body data-spy="scroll" data-target="#bd-toc-nav" data-offset="80">
-    
-    <div class="container-fluid" id="banner"></div>
+  
+  
+  <body data-bs-spy="scroll" data-bs-target=".bd-toc-nav" data-offset="180" data-bs-root-margin="0px 0px -60%" data-default-mode="">
 
-    
+  
+  
+  <a id="pst-skip-link" class="skip-link" href="#main-content">Skip to main content</a>
+  
+  <div id="pst-scroll-pixel-helper"></div>
+  
+  <button type="button" class="btn rounded-pill" id="pst-back-to-top">
+    <i class="fa-solid fa-arrow-up"></i>
+    Back to top
+  </button>
 
-    <div class="container-xl">
-      <div class="row">
-          
-<div class="col-12 col-md-3 bd-sidebar site-navigation show" id="site-navigation">
-    
-        <div class="navbar-brand-box">
-    <a class="navbar-brand text-wrap" href="../../../index.html">
+  
+  <input type="checkbox"
+          class="sidebar-toggle"
+          name="__primary"
+          id="__primary"/>
+  <label class="overlay overlay-primary" for="__primary"></label>
+  
+  <input type="checkbox"
+          class="sidebar-toggle"
+          name="__secondary"
+          id="__secondary"/>
+  <label class="overlay overlay-secondary" for="__secondary"></label>
+  
+  <div class="search-button__wrapper">
+    <div class="search-button__overlay"></div>
+    <div class="search-button__search-container">
+<form class="bd-search d-flex align-items-center"
+      action="../../../search.html"
+      method="get">
+  <i class="fa-solid fa-magnifying-glass"></i>
+  <input type="search"
+         class="form-control"
+         name="q"
+         id="search-input"
+         placeholder="Search this book..."
+         aria-label="Search this book..."
+         autocomplete="off"
+         autocorrect="off"
+         autocapitalize="off"
+         spellcheck="false"/>
+  <span class="search-button__kbd-shortcut"><kbd class="kbd-shortcut__modifier">Ctrl</kbd>+<kbd>K</kbd></span>
+</form></div>
+  </div>
+  
+    <header class="bd-header navbar navbar-expand-lg bd-navbar">
+    </header>
+  
+
+  <div class="bd-container">
+    <div class="bd-container__inner bd-page-width">
       
-        <!-- `logo` is deprecated in Sphinx 4.0, so remove this when we stop supporting 3 -->
+      
+      
+      <div class="bd-sidebar-primary bd-sidebar">
         
+
+  
+  <div class="sidebar-header-items sidebar-primary__section">
+    
+    
+    
+    
+  </div>
+  
+    <div class="sidebar-primary-items__start sidebar-primary__section">
+        <div class="sidebar-primary-item">
+
+  
+
+<a class="navbar-brand logo" href="../../../welcome.html">
+  
+  
+  
+  
+  
+    
+    
       
-      
-      <img src="../../../_static/logo.png" class="logo" alt="logo">
-      
-      
-      <h1 class="site-logo" id="site-title">Environmental Data Science Book</h1>
-      
-    </a>
-</div><form class="bd-search d-flex align-items-center" action="../../../search.html" method="get">
-  <i class="icon fas fa-search"></i>
-  <input type="search" class="form-control" name="q" id="search-input" placeholder="Search this book..." aria-label="Search this book..." autocomplete="off" >
-</form><nav class="bd-links" id="bd-docs-nav" aria-label="Main">
-    <div class="bd-toc-item active">
-        <ul class="nav bd-sidenav">
- <li class="toctree-l1">
-  <a class="reference internal" href="../../../welcome.html">
-   Welcome
-  </a>
- </li>
-</ul>
-<p aria-level="2" class="caption" role="heading">
- <span class="caption-text">
-  Preamble
- </span>
-</p>
+    
+    
+    <img src="../../../_static/logo.png" class="logo__image only-light" alt="Environmental Data Science Book - Home"/>
+    <script>document.write(`<img src="../../../_static/logo.png" class="logo__image only-dark" alt="Environmental Data Science Book - Home"/>`);</script>
+  
+  
+</a></div>
+        <div class="sidebar-primary-item"><nav class="bd-links" id="bd-docs-nav" aria-label="Main">
+    <div class="bd-toc-item navbar-nav active">
+        
+        <ul class="nav bd-sidenav bd-sidenav__home-link">
+            <li class="toctree-l1">
+                <a class="reference internal" href="../../../welcome.html">
+                    Welcome
+                </a>
+            </li>
+        </ul>
+        <p aria-level="2" class="caption" role="heading"><span class="caption-text">Preamble</span></p>
 <ul class="nav bd-sidenav">
- <li class="toctree-l1">
-  <a class="reference internal" href="../../../preamble/about.html">
-   About EDS book
-  </a>
- </li>
- <li class="toctree-l1">
-  <a class="reference internal" href="../../../preamble/attribution.html">
-   Citation and Reuse
-  </a>
- </li>
- <li class="toctree-l1">
-  <a class="reference internal" href="../../../preamble/contribute.html">
-   Contribute
-  </a>
- </li>
+<li class="toctree-l1"><a class="reference internal" href="../../../preamble/about.html">About EDS book</a></li>
+
+<li class="toctree-l1"><a class="reference internal" href="../../../preamble/attribution.html">Citation and Reuse</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../preamble/contribute.html">Contribute</a></li>
+
 </ul>
-<p aria-level="2" class="caption" role="heading">
- <span class="caption-text">
-  Notebooks
- </span>
-</p>
+<p aria-level="2" class="caption" role="heading"><span class="caption-text">Notebooks</span></p>
 <ul class="current nav bd-sidenav">
- <li class="toctree-l1 has-children">
-  <a class="reference internal" href="../../about.html">
-   Our Notebooks
-  </a>
-  <input class="toctree-checkbox" id="toctree-checkbox-1" name="toctree-checkbox-1" type="checkbox"/>
-  <label for="toctree-checkbox-1">
-   <i class="fas fa-chevron-down">
-   </i>
-  </label>
-  <ul>
-   <li class="toctree-l2">
-    <a class="reference internal" href="../../about/aims-and-scope.html">
-     Aims and Scope
-    </a>
-   </li>
-   <li class="toctree-l2">
-    <a class="reference internal" href="../../about/review-benefits.html">
-     Benefits of Reviewing Notebooks
-    </a>
-   </li>
-   <li class="toctree-l2">
-    <a class="reference internal" href="../../about/notebooks-technologies.html">
-     Technologies
-    </a>
-   </li>
-  </ul>
- </li>
- <li class="toctree-l1 current active has-children">
-  <a class="reference internal" href="../../gallery.html">
-   Gallery
-  </a>
-  <input checked="" class="toctree-checkbox" id="toctree-checkbox-2" name="toctree-checkbox-2" type="checkbox"/>
-  <label for="toctree-checkbox-2">
-   <i class="fas fa-chevron-down">
-   </i>
-  </label>
-  <ul class="current">
-   <li class="toctree-l2">
-    <a class="reference internal" href="../39d9c177-11da-41b2-9b64-63f4c1c834b3/notebook.html">
-     Variational data assimilation with deep prior (CIRC23)
-    </a>
-   </li>
-   <li class="toctree-l2">
-    <a class="reference internal" href="../93463cac-471a-469d-ad52-0514fd9b67f2/notebook.html">
-     Deep learning and variational inversion for climate science (CIRC23)
-    </a>
-   </li>
-   <li class="toctree-l2">
-    <a class="reference internal" href="../3286b92f-4fae-4cc6-a29e-e408bc844542/notebook.html">
-     Underlying physics of the ocean's temperature (CIRC23)
-    </a>
-   </li>
-   <li class="toctree-l2">
-    <a class="reference internal" href="../b128b282-dee7-44a7-bc21-f1fd21452a83/notebook.html">
-     Land Cover Data (Impact Observatory)
-    </a>
-   </li>
-   <li class="toctree-l2">
-    <a class="reference internal" href="../435f534c-e49b-43c3-9bd6-3393100bef3f/notebook.html">
-     Cosmos-UK Soil Moisture (UKCEH)
-    </a>
-   </li>
-   <li class="toctree-l2">
-    <a class="reference internal" href="../ea34568e-d86e-4720-be2f-3f826f66a26c/notebook.html">
-     Rainfall NCEP/NCAR (NOAA)
-    </a>
-   </li>
-   <li class="toctree-l2">
-    <a class="reference internal" href="../ac327c3a-5264-40a2-8c6e-1e8d7c4b37ef/notebook.html">
-     Sea ice forecasting (IceNet)
-    </a>
-   </li>
-   <li class="toctree-l2">
-    <a class="reference internal" href="../94486a7f-e046-461f-bbb9-334ec7b57040/notebook.html">
-     Tree crown (DetectreeRGB)
-    </a>
-   </li>
-   <li class="toctree-l2">
-    <a class="reference internal" href="../bc30df18-fce2-42fa-aade-1ce5b7f3ca3c/notebook.html">
-     SEVIRI Level 1.5 (EUMESAT)
-    </a>
-   </li>
-   <li class="toctree-l2 current active">
-    <a class="current reference internal" href="#">
-     Tree crown (DeepForest)
-    </a>
-   </li>
-   <li class="toctree-l2">
-    <a class="reference internal" href="../a2875cdc-ba6a-49dc-aab7-cdf7c4fc0fa8/notebook.html">
-     MOD021KM and FIRMS (NASA)
-    </a>
-   </li>
-   <li class="toctree-l2">
-    <a class="reference internal" href="../1b8921af-e77f-4ccf-ae38-4813cdceba0f/notebook.html">
-     UKV high-resolution (Met Office)
-    </a>
-   </li>
-   <li class="toctree-l2">
-    <a class="reference internal" href="../b34facfa-cea8-48f5-89f6-f11ce00812a9/notebook.html">
-     Detecting floating objects (ESA Phi-Lab)
-    </a>
-   </li>
-  </ul>
- </li>
- <li class="toctree-l1">
-  <a class="reference internal" href="../../how-to.html">
-   Usage
-  </a>
- </li>
+<li class="toctree-l1 has-children"><a class="reference internal" href="../../about.html">Our Notebooks</a><input class="toctree-checkbox" id="toctree-checkbox-1" name="toctree-checkbox-1" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-1"><i class="fa-solid fa-chevron-down"></i></label><ul>
+<li class="toctree-l2"><a class="reference internal" href="../../about/aims-and-scope.html">Aims and Scope</a></li>
+
+<li class="toctree-l2"><a class="reference internal" href="../../about/review-benefits.html">Benefits of Reviewing Notebooks</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../about/notebooks-technologies.html">Technologies</a></li>
 </ul>
-<p aria-level="2" class="caption" role="heading">
- <span class="caption-text">
-  Publishing
- </span>
-</p>
-<ul class="nav bd-sidenav">
- <li class="toctree-l1 has-children">
-  <a class="reference internal" href="../../../publishing/guidelines.html">
-   Our Guidelines
-  </a>
-  <input class="toctree-checkbox" id="toctree-checkbox-3" name="toctree-checkbox-3" type="checkbox"/>
-  <label for="toctree-checkbox-3">
-   <i class="fas fa-chevron-down">
-   </i>
-  </label>
-  <ul>
-   <li class="toctree-l2">
-    <a class="reference internal" href="../../../publishing/guidelines/guidelines-authors.html">
-     Guide for Authors
-    </a>
-   </li>
-   <li class="toctree-l2">
-    <a class="reference internal" href="../../../publishing/guidelines/guidelines-reviewers.html">
-     Guide for Reviewers
-    </a>
-   </li>
-   <li class="toctree-l2">
-    <a class="reference internal" href="../../../publishing/guidelines/guidelines-editors.html">
-     Guide for Editors
-    </a>
-   </li>
-   <li class="toctree-l2">
-    <a class="reference internal" href="../../../publishing/guidelines/guidelines-eic.html">
-     Guide for Editor in Chief
-    </a>
-   </li>
-   <li class="toctree-l2">
-    <a class="reference internal" href="../../../publishing/guidelines/guidelines-community.html">
-     Guide for Community
-    </a>
-   </li>
-  </ul>
- </li>
- <li class="toctree-l1">
-  <a class="reference internal" href="../../../publishing/faq.html">
-   FAQ
-  </a>
- </li>
+</li>
+<li class="toctree-l1 current active has-children"><a class="reference internal" href="../../gallery.html">Gallery</a><input checked="" class="toctree-checkbox" id="toctree-checkbox-2" name="toctree-checkbox-2" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-2"><i class="fa-solid fa-chevron-down"></i></label><ul class="current">
+<li class="toctree-l2"><a class="reference internal" href="../39d9c177-11da-41b2-9b64-63f4c1c834b3/notebook.html">Variational data assimilation with deep prior (CIRC23)</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../93463cac-471a-469d-ad52-0514fd9b67f2/notebook.html">Deep learning and variational inversion for climate science (CIRC23)</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../3286b92f-4fae-4cc6-a29e-e408bc844542/notebook.html">Underlying physics of the ocean's temperature (CIRC23)</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../b128b282-dee7-44a7-bc21-f1fd21452a83/notebook.html">Land Cover Data (Impact Observatory)</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../435f534c-e49b-43c3-9bd6-3393100bef3f/notebook.html">Cosmos-UK Soil Moisture (UKCEH)</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../ea34568e-d86e-4720-be2f-3f826f66a26c/notebook.html">Rainfall NCEP/NCAR (NOAA)</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../ac327c3a-5264-40a2-8c6e-1e8d7c4b37ef/notebook.html">Sea ice forecasting (IceNet)</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../94486a7f-e046-461f-bbb9-334ec7b57040/notebook.html">Tree crown (DetectreeRGB)</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../bc30df18-fce2-42fa-aade-1ce5b7f3ca3c/notebook.html">SEVIRI Level 1.5 (EUMESAT)</a></li>
+<li class="toctree-l2 current active"><a class="current reference internal" href="#">Tree crown (DeepForest)</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../a2875cdc-ba6a-49dc-aab7-cdf7c4fc0fa8/notebook.html">MOD021KM and FIRMS (NASA)</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../1b8921af-e77f-4ccf-ae38-4813cdceba0f/notebook.html">UKV high-resolution (Met Office)</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../b34facfa-cea8-48f5-89f6-f11ce00812a9/notebook.html">Detecting floating objects (ESA Phi-Lab)</a></li>
 </ul>
-<p aria-level="2" class="caption" role="heading">
- <span class="caption-text">
-  Community
- </span>
-</p>
-<ul class="nav bd-sidenav">
- <li class="toctree-l1">
-  <a class="reference internal" href="../../../community/about.html">
-   Our Community
-  </a>
- </li>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../../how-to.html">Usage</a></li>
 </ul>
-<p aria-level="2" class="caption" role="heading">
- <span class="caption-text">
-  Afterword
- </span>
-</p>
+<p aria-level="2" class="caption" role="heading"><span class="caption-text">Publishing</span></p>
 <ul class="nav bd-sidenav">
- <li class="toctree-l1">
-  <a class="reference internal" href="../../../afterword/bibliography.html">
-   Bibliography
-  </a>
- </li>
+<li class="toctree-l1 has-children"><a class="reference internal" href="../../../publishing/guidelines.html">Our Guidelines</a><input class="toctree-checkbox" id="toctree-checkbox-3" name="toctree-checkbox-3" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-3"><i class="fa-solid fa-chevron-down"></i></label><ul>
+<li class="toctree-l2"><a class="reference internal" href="../../../publishing/guidelines/guidelines-authors.html">Guide for Authors</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../publishing/guidelines/guidelines-reviewers.html">Guide for Reviewers</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../publishing/guidelines/guidelines-editors.html">Guide for Editors</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../publishing/guidelines/guidelines-eic.html">Guide for Editor in Chief</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../publishing/guidelines/guidelines-community.html">Guide for Community</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../../../publishing/faq.html">FAQ</a></li>
+</ul>
+<p aria-level="2" class="caption" role="heading"><span class="caption-text">Community</span></p>
+<ul class="nav bd-sidenav">
+<li class="toctree-l1"><a class="reference internal" href="../../../community/about.html">Our Community</a></li>
+
+</ul>
+<p aria-level="2" class="caption" role="heading"><span class="caption-text">Afterword</span></p>
+<ul class="nav bd-sidenav">
+<li class="toctree-l1"><a class="reference internal" href="../../../afterword/bibliography.html">Bibliography</a></li>
 </ul>
 
     </div>
-</nav> <!-- To handle the deprecated key -->
-
-<div class="navbar_extra_footer">
-  Powered by <a href="https://jupyterbook.org">Jupyter Book</a>
-</div>
-
-</div>
-
-
-          
+</nav></div>
+    </div>
+  
+  
+  <div class="sidebar-primary-items__end sidebar-primary__section">
+  </div>
+  
+  <div id="rtd-footer-container"></div>
 
 
-          
-<main class="col py-md-3 pl-md-4 bd-content overflow-auto" role="main">
-    
-    <div class="topbar container-xl fixed-top">
-    <div class="topbar-contents row">
-        <div class="col-12 col-md-3 bd-topbar-whitespace site-navigation show"></div>
-        <div class="col pl-md-4 topbar-main">
-            
-            <button id="navbar-toggler" class="navbar-toggler ml-0" type="button" data-toggle="collapse"
-                data-toggle="tooltip" data-placement="bottom" data-target=".site-navigation" aria-controls="navbar-menu"
-                aria-expanded="true" aria-label="Toggle navigation" aria-controls="site-navigation"
-                title="Toggle navigation" data-toggle="tooltip" data-placement="left">
-                <i class="fas fa-bars"></i>
-                <i class="fas fa-arrow-left"></i>
-                <i class="fas fa-arrow-up"></i>
-            </button>
-            
-            
-<div class="dropdown-buttons-trigger">
-    <button id="dropdown-buttons-trigger" class="btn btn-secondary topbarbtn" aria-label="Download this page"><i
-            class="fas fa-download"></i></button>
-
-    <div class="dropdown-buttons">
-        <!-- ipynb file if we had a myst markdown file -->
+      </div>
+      
+      <main id="main-content" class="bd-main">
         
-        <!-- Download raw file -->
-        <a class="dropdown-buttons" href="../../../_sources/notebooks/gallery/15d986da-2d7c-44fb-af71-700494485def/notebook.ipynb"><button type="button"
-                class="btn btn-secondary topbarbtn" title="Download source file" data-toggle="tooltip"
-                data-placement="left">.ipynb</button></a>
-        <!-- Download PDF via print -->
-        <button type="button" id="download-print" class="btn btn-secondary topbarbtn" title="Print to PDF"
-                onclick="printPdf(this)" data-toggle="tooltip" data-placement="left">.pdf</button>
+        
+
+<div class="sbt-scroll-pixel-helper"></div>
+
+          <div class="bd-content">
+            <div class="bd-article-container">
+              
+              <div class="bd-header-article">
+<div class="header-article-items header-article__inner">
+  
+    <div class="header-article-items__start">
+      
+        <div class="header-article-item"><label class="sidebar-toggle primary-toggle btn btn-sm" for="__primary" title="Toggle primary sidebar" data-bs-placement="bottom" data-bs-toggle="tooltip">
+  <span class="fa-solid fa-bars"></span>
+</label></div>
+      
     </div>
-</div>
+  
+  
+    <div class="header-article-items__end">
+      
+        <div class="header-article-item">
 
-            <!-- Source interaction buttons -->
+<div class="article-header-buttons">
 
-<div class="dropdown-buttons-trigger">
-    <button id="dropdown-buttons-trigger" class="btn btn-secondary topbarbtn"
-        aria-label="Connect with source repository"><i class="fab fa-github"></i></button>
-    <div class="dropdown-buttons sourcebuttons">
-        <a class="repository-button"
-            href="https://github.com/alan-turing-institute/environmental-ds-book"><button type="button" class="btn btn-secondary topbarbtn"
-                data-toggle="tooltip" data-placement="left" title="Source repository"><i
-                    class="fab fa-github"></i>repository</button></a>
-        <a class="issues-button"
-            href="https://github.com/alan-turing-institute/environmental-ds-book/issues/new?title=Issue%20on%20page%20%2Fnotebooks/gallery/15d986da-2d7c-44fb-af71-700494485def/notebook.html&body=Your%20issue%20content%20here."><button
-                type="button" class="btn btn-secondary topbarbtn" data-toggle="tooltip" data-placement="left"
-                title="Open an issue"><i class="fas fa-lightbulb"></i>open issue</button></a>
-        <a class="edit-button" href="https://github.com/alan-turing-institute/environmental-ds-book/edit/master/book/notebooks/gallery/15d986da-2d7c-44fb-af71-700494485def/notebook.ipynb"><button
-                type="button" class="btn btn-secondary topbarbtn" data-toggle="tooltip" data-placement="left"
-                title="Edit this page"><i class="fas fa-pencil-alt"></i>suggest edit</button></a>
-    </div>
-</div>
 
-            <!-- Full screen (wrap in <a> to have style consistency -->
 
-<a class="full-screen-button"><button type="button" class="btn btn-secondary topbarbtn" data-toggle="tooltip"
-        data-placement="bottom" onclick="toggleFullScreen()" aria-label="Fullscreen mode"
-        title="Fullscreen mode"><i
-            class="fas fa-expand"></i></button></a>
 
-            <!-- Launch buttons -->
 
-        </div>
+<div class="dropdown dropdown-source-buttons">
+  <button class="btn dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false" aria-label="Source repositories">
+    <i class="fab fa-github"></i>
+  </button>
+  <ul class="dropdown-menu">
+      
+      
+      
+      <li><a href="https://github.com/alan-turing-institute/environmental-ds-book" target="_blank"
+   class="btn btn-sm btn-source-repository-button dropdown-item"
+   title="Source repository"
+   data-bs-placement="left" data-bs-toggle="tooltip"
+>
+  
 
-        <!-- Table of contents -->
-        <div class="d-none d-md-block col-md-2 bd-toc show noprint">
-            
-            <div class="tocsection onthispage pt-5 pb-3">
-                <i class="fas fa-list"></i> Contents
-            </div>
-            <nav id="bd-toc-nav" aria-label="Page">
-                <ul class="visible nav section-nav flex-column">
- <li class="toc-h2 nav-item toc-entry">
-  <a class="reference internal nav-link" href="#context">
-   Context
-  </a>
-  <ul class="nav section-nav flex-column">
-   <li class="toc-h3 nav-item toc-entry">
-    <a class="reference internal nav-link" href="#purpose">
-     Purpose
-    </a>
-   </li>
-   <li class="toc-h3 nav-item toc-entry">
-    <a class="reference internal nav-link" href="#modelling-approach">
-     Modelling approach
-    </a>
-   </li>
-   <li class="toc-h3 nav-item toc-entry">
-    <a class="reference internal nav-link" href="#highlights">
-     Highlights
-    </a>
-   </li>
-   <li class="toc-h3 nav-item toc-entry">
-    <a class="reference internal nav-link" href="#contributions">
-     Contributions
-    </a>
-    <ul class="nav section-nav flex-column">
-     <li class="toc-h4 nav-item toc-entry">
-      <a class="reference internal nav-link" href="#notebook">
-       Notebook
-      </a>
-     </li>
-     <li class="toc-h4 nav-item toc-entry">
-      <a class="reference internal nav-link" href="#modelling-codebase">
-       Modelling codebase
-      </a>
-     </li>
-     <li class="toc-h4 nav-item toc-entry">
-      <a class="reference internal nav-link" href="#modelling-publications">
-       Modelling publications
-      </a>
-     </li>
-    </ul>
-   </li>
+<span class="btn__icon-container">
+  <i class="fab fa-github"></i>
+  </span>
+<span class="btn__text-container">Repository</span>
+</a>
+</li>
+      
+      
+      
+      
+      <li><a href="https://github.com/alan-turing-institute/environmental-ds-book/edit/master/book/notebooks/gallery/15d986da-2d7c-44fb-af71-700494485def/notebook.ipynb" target="_blank"
+   class="btn btn-sm btn-source-edit-button dropdown-item"
+   title="Suggest edit"
+   data-bs-placement="left" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fas fa-pencil-alt"></i>
+  </span>
+<span class="btn__text-container">Suggest edit</span>
+</a>
+</li>
+      
+      
+      
+      
+      <li><a href="https://github.com/alan-turing-institute/environmental-ds-book/issues/new?title=Issue%20on%20page%20%2Fnotebooks/gallery/15d986da-2d7c-44fb-af71-700494485def/notebook.html&body=Your%20issue%20content%20here." target="_blank"
+   class="btn btn-sm btn-source-issues-button dropdown-item"
+   title="Open an issue"
+   data-bs-placement="left" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fas fa-lightbulb"></i>
+  </span>
+<span class="btn__text-container">Open issue</span>
+</a>
+</li>
+      
   </ul>
- </li>
- <li class="toc-h2 nav-item toc-entry">
-  <a class="reference internal nav-link" href="#install-and-load-libraries">
-   Install and load libraries
-  </a>
- </li>
- <li class="toc-h2 nav-item toc-entry">
-  <a class="reference internal nav-link" href="#set-project-structure">
-   Set project structure
-  </a>
- </li>
- <li class="toc-h2 nav-item toc-entry">
-  <a class="reference internal nav-link" href="#fetch-a-rgb-image-from-zenodo">
-   Fetch a RGB image from Zenodo
-  </a>
- </li>
- <li class="toc-h2 nav-item toc-entry">
-  <a class="reference internal nav-link" href="#load-sample-image">
-   Load sample image
-  </a>
- </li>
- <li class="toc-h2 nav-item toc-entry">
-  <a class="reference internal nav-link" href="#load-and-prepare-labels">
-   Load and prepare labels
-  </a>
- </li>
- <li class="toc-h2 nav-item toc-entry">
-  <a class="reference internal nav-link" href="#visualise-image-and-labels">
-   Visualise image and labels
-  </a>
- </li>
- <li class="toc-h2 nav-item toc-entry">
-  <a class="reference internal nav-link" href="#load-deepforest-pretrained-model">
-   Load
-   <em>
-    DeepForest
-   </em>
-   pretrained model
-  </a>
- </li>
- <li class="toc-h2 nav-item toc-entry">
-  <a class="reference internal nav-link" href="#comparison-full-image-prediction-and-reference-labels">
-   Comparison full image prediction and reference labels
-  </a>
- </li>
- <li class="toc-h2 nav-item toc-entry">
-  <a class="reference internal nav-link" href="#tile-based-prediction">
-   Tile-based prediction
-  </a>
- </li>
- <li class="toc-h2 nav-item toc-entry">
-  <a class="reference internal nav-link" href="#interactive-plots">
-   Interactive plots
-  </a>
- </li>
- <li class="toc-h2 nav-item toc-entry">
-  <a class="reference internal nav-link" href="#summary">
-   Summary
-  </a>
- </li>
- <li class="toc-h2 nav-item toc-entry">
-  <a class="reference internal nav-link" href="#citing-this-notebook">
-   Citing this Notebook
-  </a>
- </li>
- <li class="toc-h2 nav-item toc-entry">
-  <a class="reference internal nav-link" href="#additional-information">
-   Additional information
-  </a>
- </li>
-</ul>
+</div>
 
+
+
+
+
+
+<div class="dropdown dropdown-download-buttons">
+  <button class="btn dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false" aria-label="Download this page">
+    <i class="fas fa-download"></i>
+  </button>
+  <ul class="dropdown-menu">
+      
+      
+      
+      <li><a href="../../../_sources/notebooks/gallery/15d986da-2d7c-44fb-af71-700494485def/notebook.ipynb" target="_blank"
+   class="btn btn-sm btn-download-source-button dropdown-item"
+   title="Download source file"
+   data-bs-placement="left" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fas fa-file"></i>
+  </span>
+<span class="btn__text-container">.ipynb</span>
+</a>
+</li>
+      
+      
+      
+      
+      <li>
+<button onclick="window.print()"
+  class="btn btn-sm btn-download-pdf-button dropdown-item"
+  title="Print to PDF"
+  data-bs-placement="left" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fas fa-file-pdf"></i>
+  </span>
+<span class="btn__text-container">.pdf</span>
+</button>
+</li>
+      
+  </ul>
+</div>
+
+
+
+
+<button onclick="toggleFullScreen()"
+  class="btn btn-sm btn-fullscreen-button"
+  title="Fullscreen mode"
+  data-bs-placement="bottom" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fas fa-expand"></i>
+  </span>
+
+</button>
+
+
+
+<script>
+document.write(`
+  <button class="btn btn-sm navbar-btn theme-switch-button" title="light/dark" aria-label="light/dark" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <span class="theme-switch nav-link" data-mode="light"><i class="fa-solid fa-sun fa-lg"></i></span>
+    <span class="theme-switch nav-link" data-mode="dark"><i class="fa-solid fa-moon fa-lg"></i></span>
+    <span class="theme-switch nav-link" data-mode="auto"><i class="fa-solid fa-circle-half-stroke fa-lg"></i></span>
+  </button>
+`);
+</script>
+
+
+<script>
+document.write(`
+  <button class="btn btn-sm navbar-btn search-button search-button__button" title="Search" aria-label="Search" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <i class="fa-solid fa-magnifying-glass fa-lg"></i>
+  </button>
+`);
+</script>
+<label class="sidebar-toggle secondary-toggle btn btn-sm" for="__secondary"title="Toggle secondary sidebar" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <span class="fa-solid fa-list"></span>
+</label>
+</div></div>
+      
+    </div>
+  
+</div>
+</div>
+              
+              
+
+<div id="jb-print-docs-body" class="onlyprint">
+    <h1>Tree crown detection using DeepForest</h1>
+    <!-- Table of contents -->
+    <div id="print-main-content">
+        <div id="jb-print-toc">
+            
+            <div>
+                <h2> Contents </h2>
+            </div>
+            <nav aria-label="Page">
+                <ul class="visible nav section-nav flex-column">
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#context">Context</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#purpose">Purpose</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#modelling-approach">Modelling approach</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#highlights">Highlights</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#contributions">Contributions</a><ul class="nav section-nav flex-column">
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#notebook">Notebook</a></li>
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#modelling-codebase">Modelling codebase</a></li>
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#modelling-publications">Modelling publications</a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#install-and-load-libraries">Install and load libraries</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#set-project-structure">Set project structure</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#fetch-a-rgb-image-from-zenodo">Fetch a RGB image from Zenodo</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#load-sample-image">Load sample image</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#load-and-prepare-labels">Load and prepare labels</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#visualise-image-and-labels">Visualise image and labels</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#load-deepforest-pretrained-model">Load <em>DeepForest</em> pretrained model</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#comparison-full-image-prediction-and-reference-labels">Comparison full image prediction and reference labels</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#tile-based-prediction">Tile-based prediction</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#interactive-plots">Interactive plots</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#summary">Summary</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#citing-this-notebook">Citing this Notebook</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#additional-information">Additional information</a></li>
+</ul>
             </nav>
         </div>
     </div>
 </div>
-    <div id="main-content" class="row">
-        <div class="col-12 col-md-9 pl-md-3 pr-md-0">
-            <!-- Table of contents that is only displayed when printing the page -->
-            <div id="jb-print-docs-body" class="onlyprint">
-                <h1>Tree crown detection using DeepForest</h1>
-                <!-- Table of contents -->
-                <div id="print-main-content">
-                    <div id="jb-print-toc">
-                        
-                        <div>
-                            <h2> Contents </h2>
-                        </div>
-                        <nav aria-label="Page">
-                            <ul class="visible nav section-nav flex-column">
- <li class="toc-h2 nav-item toc-entry">
-  <a class="reference internal nav-link" href="#context">
-   Context
-  </a>
-  <ul class="nav section-nav flex-column">
-   <li class="toc-h3 nav-item toc-entry">
-    <a class="reference internal nav-link" href="#purpose">
-     Purpose
-    </a>
-   </li>
-   <li class="toc-h3 nav-item toc-entry">
-    <a class="reference internal nav-link" href="#modelling-approach">
-     Modelling approach
-    </a>
-   </li>
-   <li class="toc-h3 nav-item toc-entry">
-    <a class="reference internal nav-link" href="#highlights">
-     Highlights
-    </a>
-   </li>
-   <li class="toc-h3 nav-item toc-entry">
-    <a class="reference internal nav-link" href="#contributions">
-     Contributions
-    </a>
-    <ul class="nav section-nav flex-column">
-     <li class="toc-h4 nav-item toc-entry">
-      <a class="reference internal nav-link" href="#notebook">
-       Notebook
-      </a>
-     </li>
-     <li class="toc-h4 nav-item toc-entry">
-      <a class="reference internal nav-link" href="#modelling-codebase">
-       Modelling codebase
-      </a>
-     </li>
-     <li class="toc-h4 nav-item toc-entry">
-      <a class="reference internal nav-link" href="#modelling-publications">
-       Modelling publications
-      </a>
-     </li>
-    </ul>
-   </li>
-  </ul>
- </li>
- <li class="toc-h2 nav-item toc-entry">
-  <a class="reference internal nav-link" href="#install-and-load-libraries">
-   Install and load libraries
-  </a>
- </li>
- <li class="toc-h2 nav-item toc-entry">
-  <a class="reference internal nav-link" href="#set-project-structure">
-   Set project structure
-  </a>
- </li>
- <li class="toc-h2 nav-item toc-entry">
-  <a class="reference internal nav-link" href="#fetch-a-rgb-image-from-zenodo">
-   Fetch a RGB image from Zenodo
-  </a>
- </li>
- <li class="toc-h2 nav-item toc-entry">
-  <a class="reference internal nav-link" href="#load-sample-image">
-   Load sample image
-  </a>
- </li>
- <li class="toc-h2 nav-item toc-entry">
-  <a class="reference internal nav-link" href="#load-and-prepare-labels">
-   Load and prepare labels
-  </a>
- </li>
- <li class="toc-h2 nav-item toc-entry">
-  <a class="reference internal nav-link" href="#visualise-image-and-labels">
-   Visualise image and labels
-  </a>
- </li>
- <li class="toc-h2 nav-item toc-entry">
-  <a class="reference internal nav-link" href="#load-deepforest-pretrained-model">
-   Load
-   <em>
-    DeepForest
-   </em>
-   pretrained model
-  </a>
- </li>
- <li class="toc-h2 nav-item toc-entry">
-  <a class="reference internal nav-link" href="#comparison-full-image-prediction-and-reference-labels">
-   Comparison full image prediction and reference labels
-  </a>
- </li>
- <li class="toc-h2 nav-item toc-entry">
-  <a class="reference internal nav-link" href="#tile-based-prediction">
-   Tile-based prediction
-  </a>
- </li>
- <li class="toc-h2 nav-item toc-entry">
-  <a class="reference internal nav-link" href="#interactive-plots">
-   Interactive plots
-  </a>
- </li>
- <li class="toc-h2 nav-item toc-entry">
-  <a class="reference internal nav-link" href="#summary">
-   Summary
-  </a>
- </li>
- <li class="toc-h2 nav-item toc-entry">
-  <a class="reference internal nav-link" href="#citing-this-notebook">
-   Citing this Notebook
-  </a>
- </li>
- <li class="toc-h2 nav-item toc-entry">
-  <a class="reference internal nav-link" href="#additional-information">
-   Additional information
-  </a>
- </li>
-</ul>
 
-                        </nav>
-                    </div>
-                </div>
-            </div>
-            
-              <div>
+              
                 
-  <div class="tex2jax_ignore mathjax_ignore section" id="tree-crown-detection-using-deepforest">
-<h1>Tree crown detection using DeepForest<a class="headerlink" href="#tree-crown-detection-using-deepforest" title="Permalink to this headline">¶</a></h1>
-<p><svg version="1.1" width="16" height="16" class="octicon octicon-tag" viewBox="0 0 16 16" aria-hidden="true"><path fill-rule="evenodd" d="M2.5 7.775V2.75a.25.25 0 01.25-.25h5.025a.25.25 0 01.177.073l6.25 6.25a.25.25 0 010 .354l-5.025 5.025a.25.25 0 01-.354 0l-6.25-6.25a.25.25 0 01-.073-.177zm-1.5 0V2.75C1 1.784 1.784 1 2.75 1h5.025c.464 0 .91.184 1.238.513l6.25 6.25a1.75 1.75 0 010 2.474l-5.026 5.026a1.75 1.75 0 01-2.474 0l-6.25-6.25A1.75 1.75 0 011 7.775zM6 5a1 1 0 100 2 1 1 0 000-2z"></path></svg>
+<div id="searchbox"></div>
+                <article class="bd-article">
+                  
+  <section class="tex2jax_ignore mathjax_ignore" id="tree-crown-detection-using-deepforest">
+<h1>Tree crown detection using DeepForest<a class="headerlink" href="#tree-crown-detection-using-deepforest" title="Permalink to this heading">#</a></h1>
+<p><a href="#id1"><span class="problematic" id="id2">tag</span></a>
 <span class="sd-sphinx-override sd-badge sd-bg-primary sd-bg-text-primary">Forest</span>
 <span class="sd-sphinx-override sd-badge sd-bg-secondary sd-bg-text-secondary">Modelling</span>
 <span class="sd-sphinx-override sd-badge sd-bg-warning sd-bg-text-warning">Standard</span>
@@ -700,62 +516,67 @@ const thebe_selector_output = ".output, .cell_output"
         <img alt="doi" src="https://zenodo.org/badge/493442887.svg">
     </a>
 </p>
-<div class="section" id="context">
-<h2>Context<a class="headerlink" href="#context" title="Permalink to this headline">¶</a></h2>
-<div class="section" id="purpose">
-<h3>Purpose<a class="headerlink" href="#purpose" title="Permalink to this headline">¶</a></h3>
+<section id="context">
+<h2>Context<a class="headerlink" href="#context" title="Permalink to this heading">#</a></h2>
+<section id="purpose">
+<h3>Purpose<a class="headerlink" href="#purpose" title="Permalink to this heading">#</a></h3>
 <p>Detect tree crown using a state-of-art Deep Learning model for object detection.</p>
-</div>
-<div class="section" id="modelling-approach">
-<h3>Modelling approach<a class="headerlink" href="#modelling-approach" title="Permalink to this headline">¶</a></h3>
+</section>
+<section id="modelling-approach">
+<h3>Modelling approach<a class="headerlink" href="#modelling-approach" title="Permalink to this heading">#</a></h3>
 <p>A prebuilt Deep Learning model, named <em>DeepForest</em>, is used to predict individual tree crowns from an airborne RGB image. <em>DeepForest</em> was trained on data from the National Ecological Observatory Network (NEON). <em>DeepForest</em> was implemented in Python 3.7 using initally Tensorflow v1.14 but later moved to Pytorch. Further details can be found in the <a class="reference external" href="https://deepforest.readthedocs.io/en/latest/">package documentation</a>.</p>
-</div>
-<div class="section" id="highlights">
-<h3>Highlights<a class="headerlink" href="#highlights" title="Permalink to this headline">¶</a></h3>
+</section>
+<section id="highlights">
+<h3>Highlights<a class="headerlink" href="#highlights" title="Permalink to this heading">#</a></h3>
 <ul class="simple">
 <li><p>Fetch a NEON sample image from a Zenodo repository.</p></li>
 <li><p>Retrieve and plot the reference annotations (bounding boxes) for the target image.</p></li>
 <li><p>Load and use a pretrained <em>DeepForest</em> model to generate full-image or tile-wise prediction.</p></li>
 <li><p>Indicate the pros and cons of full-image and tile-wise prediction.</p></li>
 </ul>
-</div>
-<div class="section" id="contributions">
-<h3>Contributions<a class="headerlink" href="#contributions" title="Permalink to this headline">¶</a></h3>
-<div class="section" id="notebook">
-<h4>Notebook<a class="headerlink" href="#notebook" title="Permalink to this headline">¶</a></h4>
+</section>
+<section id="contributions">
+<h3>Contributions<a class="headerlink" href="#contributions" title="Permalink to this heading">#</a></h3>
+<section id="notebook">
+<h4>Notebook<a class="headerlink" href="#notebook" title="Permalink to this heading">#</a></h4>
 <ul class="simple">
 <li><p>Alejandro Coca-Castro (author), The Alan Turing Institute, <a class="reference external" href="https://github.com/acocac">&#64;acocac</a></p></li>
 <li><p>Matt Allen (reviewer), Department of Geography - University of Cambridge, <a class="reference external" href="https://github.com/mja2106">&#64;mja2106</a></p></li>
 </ul>
-</div>
-<div class="section" id="modelling-codebase">
-<h4>Modelling codebase<a class="headerlink" href="#modelling-codebase" title="Permalink to this headline">¶</a></h4>
+</section>
+<section id="modelling-codebase">
+<h4>Modelling codebase<a class="headerlink" href="#modelling-codebase" title="Permalink to this heading">#</a></h4>
 <ul class="simple">
 <li><p>Ben Weinstein (maintainer &amp; developer), University of Florida, <a class="reference external" href="https://github.com/bw4sz">&#64;bw4sz</a></p></li>
 <li><p>Henry Senyondo (support maintainer), University of Florida, <a class="reference external" href="https://github.com/henrykironde">&#64;henrykironde</a></p></li>
 <li><p>Ethan White (PI and author), University of Florida, <a class="reference external" href="https://github.com/ethanwhite">&#64;weecology</a></p></li>
 <li><p>Other contributors are listed in the <a class="reference external" href="https://github.com/weecology/DeepForest/graphs/contributors">GitHub repo</a></p></li>
 </ul>
-</div>
-<div class="section" id="modelling-publications">
-<h4>Modelling publications<a class="headerlink" href="#modelling-publications" title="Permalink to this headline">¶</a></h4>
-<div class="docutils container" id="id1">
+</section>
+<section id="modelling-publications">
+<h4>Modelling publications<a class="headerlink" href="#modelling-publications" title="Permalink to this heading">#</a></h4>
+<div class="docutils container" id="id3">
 <ul class="simple">
-<li id="id8"><p>Ben G Weinstein, Sergio Marconi, Mélaine Aubry-Kientz, Gregoire Vincent, Henry Senyondo, and Ethan P White. Deepforest: a python package for rgb deep learning tree crown delineation. <em>Methods in Ecology and Evolution</em>, 11:1743–1751, 2020. URL: <a class="reference external" href="https://besjournals.onlinelibrary.wiley.com/doi/abs/10.1111/2041-210X.13472">https://besjournals.onlinelibrary.wiley.com/doi/abs/10.1111/2041-210X.13472</a>, <a class="reference external" href="https://doi.org/https://doi.org/10.1111/2041-210X.13472">doi:https://doi.org/10.1111/2041-210X.13472</a>.</p></li>
-<li id="id10"><p>Ben G Weinstein, Sergio Marconi, Stephanie Bohlman, Alina Zare, and Ethan White. Individual tree-crown detection in rgb imagery using semi-supervised deep learning neural networks. <em>Remote Sensing</em>, 2019. URL: <a class="reference external" href="https://www.mdpi.com/2072-4292/11/11/1309">https://www.mdpi.com/2072-4292/11/11/1309</a>, <a class="reference external" href="https://doi.org/10.3390/rs11111309">doi:10.3390/rs11111309</a>.</p></li>
-<li id="id9"><p>Ben G Weinstein, Sergio Marconi, Stephanie A Bohlman, Alina Zare, and Ethan P White. Cross-site learning in deep learning rgb tree crown detection. <em>Ecological Informatics</em>, 56:101061, 2020. URL: <a class="reference external" href="https://www.sciencedirect.com/science/article/pii/S157495412030011X">https://www.sciencedirect.com/science/article/pii/S157495412030011X</a>, <a class="reference external" href="https://doi.org/https://doi.org/10.1016/j.ecoinf.2020.101061">doi:https://doi.org/10.1016/j.ecoinf.2020.101061</a>.</p></li>
+<li id="id10"><p>Ben G Weinstein, Sergio Marconi, Mélaine Aubry-Kientz, Gregoire Vincent, Henry Senyondo, and Ethan P White. Deepforest: a python package for rgb deep learning tree crown delineation. <em>Methods in Ecology and Evolution</em>, 11:1743–1751, 2020. URL: <a class="reference external" href="https://besjournals.onlinelibrary.wiley.com/doi/abs/10.1111/2041-210X.13472">https://besjournals.onlinelibrary.wiley.com/doi/abs/10.1111/2041-210X.13472</a>, <a class="reference external" href="https://doi.org/https://doi.org/10.1111/2041-210X.13472">doi:https://doi.org/10.1111/2041-210X.13472</a>.</p></li>
+<li id="id12"><p>Ben G Weinstein, Sergio Marconi, Stephanie Bohlman, Alina Zare, and Ethan White. Individual tree-crown detection in rgb imagery using semi-supervised deep learning neural networks. <em>Remote Sensing</em>, 2019. URL: <a class="reference external" href="https://www.mdpi.com/2072-4292/11/11/1309">https://www.mdpi.com/2072-4292/11/11/1309</a>, <a class="reference external" href="https://doi.org/10.3390/rs11111309">doi:10.3390/rs11111309</a>.</p></li>
+<li id="id11"><p>Ben G Weinstein, Sergio Marconi, Stephanie A Bohlman, Alina Zare, and Ethan P White. Cross-site learning in deep learning rgb tree crown detection. <em>Ecological Informatics</em>, 56:101061, 2020. URL: <a class="reference external" href="https://www.sciencedirect.com/science/article/pii/S157495412030011X">https://www.sciencedirect.com/science/article/pii/S157495412030011X</a>, <a class="reference external" href="https://doi.org/https://doi.org/10.1016/j.ecoinf.2020.101061">doi:https://doi.org/10.1016/j.ecoinf.2020.101061</a>.</p></li>
 </ul>
 </div>
 <div class="admonition note">
 <p class="admonition-title">Note</p>
 <p>The author acknowledges <a class="reference external" href="https://deepforest.readthedocs.io/en/latest/">DeepForest</a> contributors. Some code snippets were extracted from DeepForest <a class="reference external" href="https://github.com/weecology/DeepForest">GitHub public repository</a>.</p>
 </div>
-</div>
-</div>
-</div>
-<div class="section" id="install-and-load-libraries">
-<h2>Install and load libraries<a class="headerlink" href="#install-and-load-libraries" title="Permalink to this headline">¶</a></h2>
+</section>
+</section>
+</section>
+<section id="install-and-load-libraries">
+<h2>Install and load libraries<a class="headerlink" href="#install-and-load-libraries" title="Permalink to this heading">#</a></h2>
 <div class="cell tag_hide-input docutils container">
+<details class="hide above-input">
+<summary aria-label="Toggle hidden content">
+<span class="collapsed">Show code cell source</span>
+<span class="expanded">Hide code cell source</span>
+</summary>
 <div class="cell_input docutils container">
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="o">!</span>pip<span class="w"> </span>-q<span class="w"> </span>install<span class="w"> </span><span class="nv">torchvision</span><span class="o">==</span><span class="m">0</span>.10.0
 <span class="o">!</span>pip<span class="w"> </span>-q<span class="w"> </span>install<span class="w"> </span><span class="nv">torch</span><span class="o">==</span><span class="m">1</span>.9.0
@@ -764,6 +585,7 @@ const thebe_selector_output = ".output, .cell_output"
 </pre></div>
 </div>
 </div>
+</details>
 <div class="cell_output docutils container">
 <div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span><span class=" -Color -Color-Yellow">WARNING: The directory &#39;/home/jovyan/.cache/pip&#39; or its parent directory is not owned or is not writable by the current user. The cache has been disabled. Check the permissions and owner of that directory. If executing pip with sudo, you should use sudo&#39;s -H flag.</span>
 <span class=" -Color -Color-Yellow">WARNING: Running pip as the &#39;root&#39; user can result in broken permissions and conflicting behaviour with the system package manager. It is recommended to use a virtual environment instead: https://pip.pypa.io/warnings/venv</span>
@@ -779,6 +601,11 @@ const thebe_selector_output = ".output, .cell_output"
 </div>
 </div>
 <div class="cell tag_hide-input docutils container">
+<details class="hide above-input">
+<summary aria-label="Toggle hidden content">
+<span class="collapsed">Show code cell source</span>
+<span class="expanded">Hide code cell source</span>
+</summary>
 <div class="cell_input docutils container">
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">glob</span>
 <span class="kn">import</span> <span class="nn">os</span>
@@ -812,6 +639,7 @@ const thebe_selector_output = ".output, .cell_output"
 </pre></div>
 </div>
 </div>
+</details>
 <div class="cell_output docutils container">
 <script type="application/javascript">(function(root) {
   function now() {
@@ -1871,9 +1699,9 @@ if (window.Jupyter !== undefined) {
 }
 </style></div></div>
 </div>
-</div>
-<div class="section" id="set-project-structure">
-<h2>Set project structure<a class="headerlink" href="#set-project-structure" title="Permalink to this headline">¶</a></h2>
+</section>
+<section id="set-project-structure">
+<h2>Set project structure<a class="headerlink" href="#set-project-structure" title="Permalink to this heading">#</a></h2>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">notebook_folder</span> <span class="o">=</span> <span class="s1">&#39;./notebook&#39;</span>
@@ -1883,9 +1711,9 @@ if (window.Jupyter !== undefined) {
 </div>
 </div>
 </div>
-</div>
-<div class="section" id="fetch-a-rgb-image-from-zenodo">
-<h2>Fetch a RGB image from Zenodo<a class="headerlink" href="#fetch-a-rgb-image-from-zenodo" title="Permalink to this headline">¶</a></h2>
+</section>
+<section id="fetch-a-rgb-image-from-zenodo">
+<h2>Fetch a RGB image from Zenodo<a class="headerlink" href="#fetch-a-rgb-image-from-zenodo" title="Permalink to this heading">#</a></h2>
 <p>Fetch a sample image from a publicly accessible location.</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
@@ -1933,9 +1761,9 @@ if (window.Jupyter !== undefined) {
 </div>
 </div>
 </div>
-</div>
-<div class="section" id="load-sample-image">
-<h2>Load sample image<a class="headerlink" href="#load-sample-image" title="Permalink to this headline">¶</a></h2>
+</section>
+<section id="load-sample-image">
+<h2>Load sample image<a class="headerlink" href="#load-sample-image" title="Permalink to this heading">#</a></h2>
 <p>Here we use <code class="docutils literal notranslate"><span class="pre">intake</span></code> to load the image through <code class="docutils literal notranslate"><span class="pre">dask</span></code>.</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
@@ -2325,13 +2153,13 @@ Coordinates:
                     </tr>
                 </thead>
                 <tbody>
-
+                    
                     <tr>
                         <th> Bytes </th>
                         <td> 7.62 MiB </td>
                         <td> 7.62 MiB </td>
                     </tr>
-
+                    
                     <tr>
                         <th> Shape </th>
                         <td> (1864, 1429, 3) </td>
@@ -2399,9 +2227,9 @@ Coordinates:
        1419, 1420, 1421, 1422, 1423, 1424, 1425, 1426, 1427, 1428],
       dtype=&#x27;int64&#x27;, name=&#x27;x&#x27;, length=1429))</pre></div></li><li class='xr-var-item'><div class='xr-index-name'><div>channel</div></div><div class='xr-index-preview'>PandasIndex</div><div></div><input id='index-ef36fa00-c613-4585-970b-247c8e8db655' class='xr-index-data-in' type='checkbox'/><label for='index-ef36fa00-c613-4585-970b-247c8e8db655' title='Show/Hide index repr'><svg class='icon xr-icon-database'><use xlink:href='#icon-database'></use></svg></label><div class='xr-index-data'><pre>PandasIndex(Index([0, 1, 2], dtype=&#x27;int64&#x27;, name=&#x27;channel&#x27;))</pre></div></li></ul></div></li><li class='xr-section-item'><input id='section-8bddb524-ce50-4605-bcf2-14c106b50a2e' class='xr-section-summary-in' type='checkbox' disabled ><label for='section-8bddb524-ce50-4605-bcf2-14c106b50a2e' class='xr-section-summary'  title='Expand/collapse section'>Attributes: <span>(0)</span></label><div class='xr-section-inline-details'></div><div class='xr-section-details'><dl class='xr-attrs'></dl></div></li></ul></div></div></div></div>
 </div>
-</div>
-<div class="section" id="load-and-prepare-labels">
-<h2>Load and prepare labels<a class="headerlink" href="#load-and-prepare-labels" title="Permalink to this headline">¶</a></h2>
+</section>
+<section id="load-and-prepare-labels">
+<h2>Load and prepare labels<a class="headerlink" href="#load-and-prepare-labels" title="Permalink to this heading">#</a></h2>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># functions to load xml and extract bounding boxes</span>
@@ -2441,9 +2269,9 @@ Coordinates:
 </div>
 </div>
 </div>
-</div>
-<div class="section" id="visualise-image-and-labels">
-<h2>Visualise image and labels<a class="headerlink" href="#visualise-image-and-labels" title="Permalink to this headline">¶</a></h2>
+</section>
+<section id="visualise-image-and-labels">
+<h2>Visualise image and labels<a class="headerlink" href="#visualise-image-and-labels" title="Permalink to this heading">#</a></h2>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># function to plot images</span>
@@ -2481,6 +2309,11 @@ Coordinates:
 </div>
 </div>
 <div class="cell tag_hide-input docutils container">
+<details class="hide above-input">
+<summary aria-label="Toggle hidden content">
+<span class="collapsed">Show code cell source</span>
+<span class="expanded">Hide code cell source</span>
+</summary>
 <div class="cell_input docutils container">
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="k">for</span> <span class="n">row</span> <span class="ow">in</span> <span class="n">target_bbox</span><span class="p">:</span>
     <span class="n">cv2</span><span class="o">.</span><span class="n">rectangle</span><span class="p">(</span><span class="n">image2</span><span class="p">,</span> <span class="p">(</span><span class="nb">int</span><span class="p">(</span><span class="n">row</span><span class="p">[</span><span class="s2">&quot;xmin&quot;</span><span class="p">]),</span> <span class="nb">int</span><span class="p">(</span><span class="n">row</span><span class="p">[</span><span class="s2">&quot;ymin&quot;</span><span class="p">])),</span> <span class="p">(</span><span class="nb">int</span><span class="p">(</span><span class="n">row</span><span class="p">[</span><span class="s2">&quot;xmax&quot;</span><span class="p">]),</span> <span class="nb">int</span><span class="p">(</span><span class="n">row</span><span class="p">[</span><span class="s2">&quot;ymax&quot;</span><span class="p">])),</span> <span class="p">(</span><span class="mi">0</span><span class="p">,</span><span class="mi">255</span><span class="p">,</span><span class="mi">255</span><span class="p">),</span> <span class="n">thickness</span><span class="o">=</span><span class="mi">2</span><span class="p">,</span> <span class="n">lineType</span><span class="o">=</span><span class="n">cv2</span><span class="o">.</span><span class="n">LINE_AA</span><span class="p">)</span>
@@ -2492,13 +2325,14 @@ Coordinates:
 </pre></div>
 </div>
 </div>
+</details>
 <div class="cell_output docutils container">
-<img alt="../../../_images/notebook_20_0.png" src="../../../_images/notebook_20_0.png" />
+<img alt="../../../_images/f40684d70e7d194c909864fbd0ab2d8d7816af5486af9fa3f9d919a59763fe75.png" src="../../../_images/f40684d70e7d194c909864fbd0ab2d8d7816af5486af9fa3f9d919a59763fe75.png" />
 </div>
 </div>
-</div>
-<div class="section" id="load-deepforest-pretrained-model">
-<h2>Load <em>DeepForest</em> pretrained model<a class="headerlink" href="#load-deepforest-pretrained-model" title="Permalink to this headline">¶</a></h2>
+</section>
+<section id="load-deepforest-pretrained-model">
+<h2>Load <em>DeepForest</em> pretrained model<a class="headerlink" href="#load-deepforest-pretrained-model" title="Permalink to this heading">#</a></h2>
 <p>Now we’re going to load and use a pretrained model from the <code class="docutils literal notranslate"><span class="pre">deepforest</span></code> package.</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
@@ -2550,6 +2384,11 @@ Loading pre-built model: https://github.com/weecology/DeepForest/releases/tag/1.
 </div>
 </div>
 <div class="cell tag_hide-input docutils container">
+<details class="hide above-input">
+<summary aria-label="Toggle hidden content">
+<span class="collapsed">Show code cell source</span>
+<span class="expanded">Hide code cell source</span>
+</summary>
 <div class="cell_input docutils container">
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">image3</span> <span class="o">=</span> <span class="n">image</span><span class="o">.</span><span class="n">values</span><span class="o">.</span><span class="n">copy</span><span class="p">()</span> 
 
@@ -2563,15 +2402,21 @@ Loading pre-built model: https://github.com/weecology/DeepForest/releases/tag/1.
 </pre></div>
 </div>
 </div>
+</details>
 <div class="cell_output docutils container">
-<img alt="../../../_images/notebook_24_0.png" src="../../../_images/notebook_24_0.png" />
+<img alt="../../../_images/c08782e50da56c5e214770a5950c2309d8658fc5b2a9bca4a6571d877015a17e.png" src="../../../_images/c08782e50da56c5e214770a5950c2309d8658fc5b2a9bca4a6571d877015a17e.png" />
 </div>
 </div>
-</div>
-<div class="section" id="comparison-full-image-prediction-and-reference-labels">
-<h2>Comparison full image prediction and reference labels<a class="headerlink" href="#comparison-full-image-prediction-and-reference-labels" title="Permalink to this headline">¶</a></h2>
+</section>
+<section id="comparison-full-image-prediction-and-reference-labels">
+<h2>Comparison full image prediction and reference labels<a class="headerlink" href="#comparison-full-image-prediction-and-reference-labels" title="Permalink to this heading">#</a></h2>
 <p>Let’s compare the labels and predictions over the tested image.</p>
 <div class="cell tag_hide-input docutils container">
+<details class="hide above-input">
+<summary aria-label="Toggle hidden content">
+<span class="collapsed">Show code cell source</span>
+<span class="expanded">Hide code cell source</span>
+</summary>
 <div class="cell_input docutils container">
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">plot_referandfullimage</span> <span class="o">=</span> <span class="n">plt</span><span class="o">.</span><span class="n">figure</span><span class="p">(</span><span class="n">figsize</span><span class="o">=</span><span class="p">(</span><span class="mi">15</span><span class="p">,</span><span class="mi">15</span><span class="p">))</span>
 <span class="n">ax1</span> <span class="o">=</span> <span class="n">plt</span><span class="o">.</span><span class="n">subplot</span><span class="p">(</span><span class="mi">1</span><span class="p">,</span> <span class="mi">2</span><span class="p">,</span> <span class="mi">1</span><span class="p">),</span> <span class="n">cv2_imshow</span><span class="p">(</span><span class="n">np</span><span class="o">.</span><span class="n">flip</span><span class="p">(</span><span class="n">image2</span><span class="p">,</span><span class="mi">2</span><span class="p">))</span>
@@ -2582,8 +2427,9 @@ Loading pre-built model: https://github.com/weecology/DeepForest/releases/tag/1.
 </pre></div>
 </div>
 </div>
+</details>
 <div class="cell_output docutils container">
-<img alt="../../../_images/notebook_26_0.png" src="../../../_images/notebook_26_0.png" />
+<img alt="../../../_images/0e0d628340711e6e6589e4621c2b0dd90369d709e633adf35e0b1d64fb3b9711.png" src="../../../_images/0e0d628340711e6e6589e4621c2b0dd90369d709e633adf35e0b1d64fb3b9711.png" />
 </div>
 </div>
 <p><strong>Interpretation:</strong></p>
@@ -2591,9 +2437,9 @@ Loading pre-built model: https://github.com/weecology/DeepForest/releases/tag/1.
 <li><p>It seems the pretrained model doesn’t perform well with the tested image.</p></li>
 <li><p>The low performance might be explained due to the pretrained model used 10 cm resolution images.</p></li>
 </ul>
-</div>
-<div class="section" id="tile-based-prediction">
-<h2>Tile-based prediction<a class="headerlink" href="#tile-based-prediction" title="Permalink to this headline">¶</a></h2>
+</section>
+<section id="tile-based-prediction">
+<h2>Tile-based prediction<a class="headerlink" href="#tile-based-prediction" title="Permalink to this heading">#</a></h2>
 <p>To optimise the predictions, the DeepForest can be run <a class="reference external" href="https://deepforest.readthedocs.io/en/latest/better.html">tile-wise</a>.</p>
 <p>The following cells show how to define the optimal window i.e. tile size.</p>
 <div class="cell docutils container">
@@ -2613,6 +2459,11 @@ Loading pre-built model: https://github.com/weecology/DeepForest/releases/tag/1.
 </div>
 </div>
 <div class="cell tag_hide-input docutils container">
+<details class="hide above-input">
+<summary aria-label="Toggle hidden content">
+<span class="collapsed">Show code cell source</span>
+<span class="expanded">Hide code cell source</span>
+</summary>
 <div class="cell_input docutils container">
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1">#Loop through a few sample windows, crop and predict</span>
 <span class="n">plot_tilewindows</span><span class="p">,</span> <span class="n">axes</span><span class="p">,</span> <span class="o">=</span> <span class="n">plt</span><span class="o">.</span><span class="n">subplots</span><span class="p">(</span><span class="n">nrows</span><span class="o">=</span><span class="mi">2</span><span class="p">,</span><span class="n">ncols</span><span class="o">=</span><span class="mi">2</span><span class="p">,</span> <span class="n">figsize</span><span class="o">=</span><span class="p">(</span><span class="mi">15</span><span class="p">,</span><span class="mi">15</span><span class="p">))</span>
@@ -2628,12 +2479,18 @@ Loading pre-built model: https://github.com/weecology/DeepForest/releases/tag/1.
 </pre></div>
 </div>
 </div>
+</details>
 <div class="cell_output docutils container">
-<img alt="../../../_images/notebook_29_0.png" src="../../../_images/notebook_29_0.png" />
+<img alt="../../../_images/4d7b07d1ee945983d81bc843f14c81f1cea5026adf6c59c3aae3049ae81acccd.png" src="../../../_images/4d7b07d1ee945983d81bc843f14c81f1cea5026adf6c59c3aae3049ae81acccd.png" />
 </div>
 </div>
 <p>Once a suitable tile size is defined, we can run in a batch using the <code class="docutils literal notranslate"><span class="pre">predict_tile</span></code> function:</p>
 <div class="cell tag_hide-input docutils container">
+<details class="hide above-input">
+<summary aria-label="Toggle hidden content">
+<span class="collapsed">Show code cell source</span>
+<span class="expanded">Hide code cell source</span>
+</summary>
 <div class="cell_input docutils container">
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">tile</span> <span class="o">=</span> <span class="n">model</span><span class="o">.</span><span class="n">predict_tile</span><span class="p">(</span><span class="n">image</span><span class="o">=</span><span class="n">image</span><span class="o">.</span><span class="n">values</span><span class="p">,</span><span class="n">return_plot</span><span class="o">=</span><span class="kc">False</span><span class="p">,</span><span class="n">patch_overlap</span><span class="o">=</span><span class="mi">0</span><span class="p">,</span><span class="n">iou_threshold</span><span class="o">=</span><span class="mf">0.05</span><span class="p">,</span><span class="n">patch_size</span><span class="o">=</span><span class="mi">400</span><span class="p">)</span>
 
@@ -2652,11 +2509,12 @@ Loading pre-built model: https://github.com/weecology/DeepForest/releases/tag/1.
 </pre></div>
 </div>
 </div>
+</details>
 <div class="cell_output docutils container">
 <div class="output stderr highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>100%|██████████| 20/20 [00:25&lt;00:00,  1.27s/it]
 </pre></div>
 </div>
-<img alt="../../../_images/notebook_31_1.png" src="../../../_images/notebook_31_1.png" />
+<img alt="../../../_images/40cd54d48f16c0d853bacff656cd5f1187067b31a9c4fb46d4d8f5e2de43672c.png" src="../../../_images/40cd54d48f16c0d853bacff656cd5f1187067b31a9c4fb46d4d8f5e2de43672c.png" />
 </div>
 </div>
 <p><strong>Interpretation</strong></p>
@@ -2664,11 +2522,16 @@ Loading pre-built model: https://github.com/weecology/DeepForest/releases/tag/1.
 <li><p>The tile-based prediction provides more reasonable results than predicting over the whole image.</p></li>
 <li><p>While the prediction looks closer to the reference labels, there seem to be some tiles edges artefacts. This will require further investigation i.e. inspecting the <code class="docutils literal notranslate"><span class="pre">deepforest</span></code> tile-wise prediction function to understand how predictions from different tiles are combined after the model has made them.</p></li>
 </ul>
-</div>
-<div class="section" id="interactive-plots">
-<h2>Interactive plots<a class="headerlink" href="#interactive-plots" title="Permalink to this headline">¶</a></h2>
+</section>
+<section id="interactive-plots">
+<h2>Interactive plots<a class="headerlink" href="#interactive-plots" title="Permalink to this heading">#</a></h2>
 <p>The plot below summarises above static plots by interactively comparing bounding boxes and scores of full-image and tile-wise predictions. To zoom-in  the reference NEON RGB image with its original resolution change <code class="docutils literal notranslate"><span class="pre">rasterize=True</span></code> to <code class="docutils literal notranslate"><span class="pre">rasterize=False</span></code>.</p>
 <div class="cell tag_hide-input docutils container">
+<details class="hide above-input">
+<summary aria-label="Toggle hidden content">
+<span class="collapsed">Show code cell source</span>
+<span class="expanded">Hide code cell source</span>
+</summary>
 <div class="cell_input docutils container">
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1">## function to convert bbox in dictionary to geopandas</span>
 <span class="k">def</span> <span class="nf">bbox_to_geopandas</span><span class="p">(</span><span class="n">bbox_df</span><span class="p">):</span>
@@ -2704,6 +2567,7 @@ Loading pre-built model: https://github.com/weecology/DeepForest/releases/tag/1.
 </pre></div>
 </div>
 </div>
+</details>
 <div class="cell_output docutils container">
 <div class="output text_html"><div id='p1005'>
   <div id="d727152b-ce38-4716-830e-fad092eec59f" data-root-id="p1005" style="display: contents;"></div>
@@ -2772,9 +2636,9 @@ Loading pre-built model: https://github.com/weecology/DeepForest/releases/tag/1.
   }
 })(window);</script></div></div>
 </div>
-</div>
-<div class="section" id="summary">
-<h2>Summary<a class="headerlink" href="#summary" title="Permalink to this headline">¶</a></h2>
+</section>
+<section id="summary">
+<h2>Summary<a class="headerlink" href="#summary" title="Permalink to this heading">#</a></h2>
 <p>This notebook has demonstrated the use of:</p>
 <ul class="simple">
 <li><p><code class="docutils literal notranslate"><span class="pre">pooch</span></code> and <code class="docutils literal notranslate"><span class="pre">intake</span></code> package to fetch data from a Zenodo repository containing training data files of the <a class="reference external" href="https://zenodo.org/record/3459803#.YhI54xPP30o">NeonTreeEvaluation Benchmark</a>.</p></li>
@@ -2783,13 +2647,13 @@ Loading pre-built model: https://github.com/weecology/DeepForest/releases/tag/1.
 <li><p><code class="docutils literal notranslate"><span class="pre">cv2</span></code> to generate static plots comparing reference against bounding boxes and scores of two prediction strategies, full-image and tile-wise predictions.</p></li>
 <li><p><code class="docutils literal notranslate"><span class="pre">hvplot</span></code> and <code class="docutils literal notranslate"><span class="pre">panel</span></code> to interactively compare both prediction strategies against reference labels.</p></li>
 </ul>
-</div>
-<div class="section" id="citing-this-notebook">
-<h2>Citing this Notebook<a class="headerlink" href="#citing-this-notebook" title="Permalink to this headline">¶</a></h2>
+</section>
+<section id="citing-this-notebook">
+<h2>Citing this Notebook<a class="headerlink" href="#citing-this-notebook" title="Permalink to this heading">#</a></h2>
 <p>Please see <a class="reference external" href="https://github.com/eds-book-gallery/15d986da-2d7c-44fb-af71-700494485def/blob/main/CITATION.cff">CITATION.cff</a> for the full citation information. The citation file can be exported to APA or BibTex formats (learn more <a class="reference external" href="https://docs.github.com/en/repositories/managing-your-repositorys-settings-and-features/customizing-your-repository/about-citation-files">here</a>).</p>
-</div>
-<div class="section" id="additional-information">
-<h2>Additional information<a class="headerlink" href="#additional-information" title="Permalink to this headline">¶</a></h2>
+</section>
+<section id="additional-information">
+<h2>Additional information<a class="headerlink" href="#additional-information" title="Permalink to this heading">#</a></h2>
 <p><strong>License</strong>: The code in this notebook is licensed under the MIT License. The Environmental Data Science book is licensed under the Creative Commons by Attribution 4.0 license. See further details <a class="reference external" href="https://github.com/alan-turing-institute/environmental-ds-book/blob/master/LICENSE.md">here</a>.</p>
 <p><strong>Contact</strong>: If you have any suggestion or report an issue with this notebook, feel free to <a class="reference external" href="https://github.com/alan-turing-institute/environmental-ds-book/issues/new/choose">create an issue</a> or send a direct message to <a class="reference external" href="mailto:environmental&#46;ds&#46;book&#37;&#52;&#48;gmail&#46;com">environmental<span>&#46;</span>ds<span>&#46;</span>book<span>&#64;</span>gmail<span>&#46;</span>com</a>.</p>
 <div class="cell docutils container">
@@ -2808,8 +2672,8 @@ Last tested: 2023-09-02
 </div>
 </div>
 </div>
-</div>
-</div>
+</section>
+</section>
 
     <script type="text/x-thebe-config">
     {
@@ -2823,7 +2687,7 @@ Last tested: 2023-09-02
             mode: "python"
         },
         kernelOptions: {
-            kernelName: "python3",
+            name: "python3",
             path: "./notebooks/gallery/15d986da-2d7c-44fb-af71-700494485def"
         },
         predefinedOutput: true
@@ -2831,44 +2695,127 @@ Last tested: 2023-09-02
     </script>
     <script>kernelName = 'python3'</script>
 
-              </div>
+                </article>
               
-            
-                <!-- Previous / next buttons -->
-<div class='prev-next-area'> 
-    <a class='left-prev' id="prev-link" href="../bc30df18-fce2-42fa-aade-1ce5b7f3ca3c/notebook.html" title="previous page">
-        <i class="fas fa-angle-left"></i>
-        <div class="prev-next-info">
-            <p class="prev-next-subtitle">previous</p>
-            <p class="prev-next-title">SEVIRI Level 1.5</p>
-        </div>
+
+              
+              
+              
+              
+                <footer class="prev-next-footer">
+                  
+<div class="prev-next-area">
+    <a class="left-prev"
+       href="../bc30df18-fce2-42fa-aade-1ce5b7f3ca3c/notebook.html"
+       title="previous page">
+      <i class="fa-solid fa-angle-left"></i>
+      <div class="prev-next-info">
+        <p class="prev-next-subtitle">previous</p>
+        <p class="prev-next-title">SEVIRI Level 1.5</p>
+      </div>
     </a>
-    <a class='right-next' id="next-link" href="../a2875cdc-ba6a-49dc-aab7-cdf7c4fc0fa8/notebook.html" title="next page">
-    <div class="prev-next-info">
+    <a class="right-next"
+       href="../a2875cdc-ba6a-49dc-aab7-cdf7c4fc0fa8/notebook.html"
+       title="next page">
+      <div class="prev-next-info">
         <p class="prev-next-subtitle">next</p>
         <p class="prev-next-title">MODIS MOD021KM and FIRMS</p>
-    </div>
-    <i class="fas fa-angle-right"></i>
+      </div>
+      <i class="fa-solid fa-angle-right"></i>
     </a>
 </div>
+                </footer>
+              
+            </div>
             
-        </div>
-    </div>
-    <footer class="footer">
-  <p>
-    
-      By EDS book Community. This site is powered by <a href="https://www.netlify.com/">Netlify</a>.<br/>
-    
-        &copy; Copyright 2021.<br/>
-  </p>
-</footer>
-</main>
+            
+              
+                <div class="bd-sidebar-secondary bd-toc"><div class="sidebar-secondary-items sidebar-secondary__inner">
 
 
-      </div>
-    </div>
+  <div class="sidebar-secondary-item">
+  <div class="page-toc tocsection onthispage">
+    <i class="fa-solid fa-list"></i> Contents
+  </div>
+  <nav class="bd-toc-nav page-toc">
+    <ul class="visible nav section-nav flex-column">
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#context">Context</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#purpose">Purpose</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#modelling-approach">Modelling approach</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#highlights">Highlights</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#contributions">Contributions</a><ul class="nav section-nav flex-column">
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#notebook">Notebook</a></li>
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#modelling-codebase">Modelling codebase</a></li>
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#modelling-publications">Modelling publications</a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#install-and-load-libraries">Install and load libraries</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#set-project-structure">Set project structure</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#fetch-a-rgb-image-from-zenodo">Fetch a RGB image from Zenodo</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#load-sample-image">Load sample image</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#load-and-prepare-labels">Load and prepare labels</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#visualise-image-and-labels">Visualise image and labels</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#load-deepforest-pretrained-model">Load <em>DeepForest</em> pretrained model</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#comparison-full-image-prediction-and-reference-labels">Comparison full image prediction and reference labels</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#tile-based-prediction">Tile-based prediction</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#interactive-plots">Interactive plots</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#summary">Summary</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#citing-this-notebook">Citing this Notebook</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#additional-information">Additional information</a></li>
+</ul>
+  </nav></div>
+
+</div></div>
+              
+            
+          </div>
+          <footer class="bd-footer-content">
+            
+<div class="bd-footer-content__inner container">
   
-  <script src="../../../_static/js/index.be7d3bbb2ef33a8344ce.js"></script>
+  <div class="footer-item">
+    
+<p class="component-author">
+By EDS book Community. This site is powered by <a href="https://www.netlify.com/">Netlify</a>.
+</p>
 
+  </div>
+  
+  <div class="footer-item">
+    
+
+  <p class="copyright">
+    
+      © Copyright 2021.
+      <br/>
+    
+  </p>
+
+  </div>
+  
+  <div class="footer-item">
+    
+  </div>
+  
+  <div class="footer-item">
+    
+  </div>
+  
+</div>
+          </footer>
+        
+
+      </main>
+    </div>
+  </div>
+  
+  <!-- Scripts loaded after <body> so the DOM is not blocked -->
+  <script src="../../../_static/scripts/bootstrap.js?digest=8d27b9dea8ad943066ae"></script>
+<script src="../../../_static/scripts/pydata-sphinx-theme.js?digest=8d27b9dea8ad943066ae"></script>
+
+  <footer class="bd-footer">
+  </footer>
   </body>
 </html>
