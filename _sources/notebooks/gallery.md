@@ -19,7 +19,7 @@
 {bdg-info}`Python`
 ^^^
 
-<img src="https://github.com/eds-book-gallery/39d9c177-11da-41b2-9b64-63f4c1c834b3/assets/13321552/22a8817b-27ed-4dac-af7a-580dbce2e607?raw=True"/>
+<img src="https://github.com/eds-book-gallery/39d9c177-11da-41b2-9b64-63f4c1c834b3/blob/main/images/thumbnail.png?raw=True"/>
 
 +++
 Pahari *et al.* (2023)
@@ -55,7 +55,7 @@ Pahari *et al.* (2023)
 {bdg-info}`Python`
 ^^^
 
-<img src="https://github.com/eds-book-gallery/93463cac-471a-469d-ad52-0514fd9b67f2/assets/13321552/6171eaf3-80c4-4041-8743-4af368a9c95e?raw=True"/>
+<img src="https://github.com/eds-book-gallery/93463cac-471a-469d-ad52-0514fd9b67f2/blob/main/images/thumbnail.png?raw=True"/>
 
 +++
 Domazetoski *et al.* (2023)
@@ -91,7 +91,7 @@ Domazetoski *et al.* (2023)
 {bdg-info}`Python`
 ^^^
 
-<img src="https://github.com/eds-book-gallery/3286b92f-4fae-4cc6-a29e-e408bc844542/assets/13321552/dca087c1-27ad-40df-b9ae-32749fd55ae8?raw=True"/>
+<img src="https://github.com/eds-book-gallery/3286b92f-4fae-4cc6-a29e-e408bc844542/blob/main/images/thumbnail.png?raw=True"/>
 
 +++
 Malhotra *et al.* (2023)
@@ -127,7 +127,7 @@ Malhotra *et al.* (2023)
 {bdg-info}`Python`
 ^^^
 
-<img src="https://user-images.githubusercontent.com/13321552/222927496-511cc8b4-5665-4229-8900-2774f76c5231.png?raw=True"/>
+<img src="https://github.com/eds-book-gallery/b128b282-dee7-44a7-bc21-f1fd21452a83/blob/main/images/thumbnail.png?raw=True"/>
 
 +++
 Millington (2022)
@@ -163,7 +163,7 @@ Millington (2022)
 {bdg-info}`Python`
 ^^^
 
-<img src="https://user-images.githubusercontent.com/13321552/222993373-fbc3f906-cf5f-491b-a9ce-9daf151d1f12.png?raw=True"/>
+<img src="https://github.com/eds-book-gallery/435f534c-e49b-43c3-9bd6-3393100bef3f/blob/main/images/thumbnail.png?raw=True"/>
 
 +++
 Coca-Castro (2022)
@@ -199,7 +199,7 @@ Coca-Castro (2022)
 {bdg-info}`Python`
 ^^^
 
-<img src="https://user-images.githubusercontent.com/13321552/222993151-0944cd52-df0e-4b58-afb0-525c3bc00d6e.png?raw=True"/>
+<img src="https://github.com/eds-book-gallery/ea34568e-d86e-4720-be2f-3f826f66a26c/blob/main/images/thumbnail.png?raw=True"/>
 
 +++
 Lam *et al.* (2022)
@@ -235,7 +235,7 @@ Lam *et al.* (2022)
 {bdg-info}`Python`
 ^^^
 
-<img src="https://user-images.githubusercontent.com/13321552/222992432-ce985964-a191-481a-b830-1438c77c8461.png?raw=True"/>
+<img src="https://github.com/eds-book-gallery/ac327c3a-5264-40a2-8c6e-1e8d7c4b37ef/blob/main/images/thumbnail.png?raw=True"/>
 
 +++
 Coca-Castro (2022)
@@ -271,7 +271,7 @@ Coca-Castro (2022)
 {bdg-info}`Python`
 ^^^
 
-<img src="https://user-images.githubusercontent.com/13321552/222992138-d1665903-856f-4506-a3e0-37b7f04e4fe2.png?raw=True"/>
+<img src="https://github.com/eds-book-gallery/94486a7f-e046-461f-bbb9-334ec7b57040/blob/main/images/thumbnail.png?raw=True"/>
 
 +++
 Hickman (2022)
@@ -307,7 +307,7 @@ Hickman (2022)
 {bdg-info}`Python`
 ^^^
 
-<img src="https://user-images.githubusercontent.com/13321552/222991747-5ed76ae4-ce3e-49b5-9a22-cc9d25f10c7b.png?raw=True"/>
+<img src="https://github.com/eds-book-gallery/bc30df18-fce2-42fa-aade-1ce5b7f3ca3c/blob/main/images/thumbnail.png?raw=True"/>
 
 +++
 Jackson (2022)
@@ -343,7 +343,7 @@ Jackson (2022)
 {bdg-info}`Python`
 ^^^
 
-<img src="https://user-images.githubusercontent.com/13321552/222991560-185835b7-0801-41b1-9325-3015662995c4.png?raw=True"/>
+<img src="https://github.com/eds-book-gallery/15d986da-2d7c-44fb-af71-700494485def/blob/main/images/thumbnail.png?raw=True"/>
 
 +++
 Coca-Castro (2022)
@@ -379,7 +379,7 @@ Coca-Castro (2022)
 {bdg-info}`Python`
 ^^^
 
-<img src="https://user-images.githubusercontent.com/13321552/222991049-8829f885-537b-42c0-b736-a5fca55a0f0a.png?raw=True"/>
+<img src="https://github.com/eds-book-gallery/a2875cdc-ba6a-49dc-aab7-cdf7c4fc0fa8/blob/main/images/thumbnail.png?raw=True"/>
 
 +++
 Jackson (2022)
@@ -415,7 +415,7 @@ Jackson (2022)
 {bdg-info}`Python`
 ^^^
 
-<img src="https://user-images.githubusercontent.com/13321552/222989938-74cca2e2-5414-422d-b3c9-8d033e374978.png?raw=True"/>
+<img src="https://github.com/eds-book-gallery/1b8921af-e77f-4ccf-ae38-4813cdceba0f/blob/main/images/thumbnail.png?raw=True"/>
 
 +++
 Adams (2022)
@@ -451,7 +451,7 @@ Adams (2022)
 {bdg-info}`Python`
 ^^^
 
-<img src="https://user-images.githubusercontent.com/13321552/222989704-98abb3ad-0074-47c1-b826-8ccc8c69af5e.png?raw=True"/>
+<img src="https://github.com/eds-book-gallery/b34facfa-cea8-48f5-89f6-f11ce00812a9/blob/main/images/thumbnail.png?raw=True"/>
 
 +++
 Mifdal *et al.* (2022)
