@@ -1,4 +1,4 @@
 [build]
   base = "book"
-  command = "python -m pip install --upgrade pip && pip install -r ./book/requirements.txt && jupyter-book build ."
+  command = "python -m pip install --upgrade pip && pip install -r book/requirements.txt && jupyter-book build ."
   publish = "_build/html"
