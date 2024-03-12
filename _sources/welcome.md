@@ -46,7 +46,7 @@ Visit our {ref}`Gallery <nb-gallery>` to access and navigate our community-led p
 {bdg-info}`Python`
 ^^^
 
-<img src="https://user-images.githubusercontent.com/13321552/222927496-511cc8b4-5665-4229-8900-2774f76c5231.png?raw=True"/>
+<img src="https://github.com/eds-book-gallery/b128b282-dee7-44a7-bc21-f1fd21452a83/blob/main/images/thumbnail.png?raw=True"/>
 
 +++
 Millington (2022)
@@ -82,7 +82,7 @@ Millington (2022)
 {bdg-info}`Python`
 ^^^
 
-<img src="https://user-images.githubusercontent.com/13321552/222992432-ce985964-a191-481a-b830-1438c77c8461.png?raw=True"/>
+<img src="https://github.com/eds-book-gallery/ac327c3a-5264-40a2-8c6e-1e8d7c4b37ef/blob/main/images/thumbnail.png?raw=True"/>
 
 +++
 Coca-Castro (2022)
@@ -118,7 +118,7 @@ Coca-Castro (2022)
 {bdg-info}`Python`
 ^^^
 
-<img src="https://user-images.githubusercontent.com/13321552/222989704-98abb3ad-0074-47c1-b826-8ccc8c69af5e.png?raw=True"/>
+<img src="https://github.com/eds-book-gallery/b34facfa-cea8-48f5-89f6-f11ce00812a9/blob/main/images/thumbnail.png?raw=True"/>
 
 +++
 Mifdal *et al.* (2022)
