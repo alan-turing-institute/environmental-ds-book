@@ -1,4 +1,5 @@
 jupyter-book==0.15.1
 ghp-import
-sphinx_togglebutton
-sphinx_design
+sphinx==5.0.2
+sphinx_togglebutton==0.3.2
+sphinx_design==0.3.0
