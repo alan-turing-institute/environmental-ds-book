@@ -3,6 +3,7 @@ channels:
   - conda-forge
 dependencies:
   - python=3.8
+  - nbclient=0.7
   - pip
   - pip:
         - jupyter-book==0.15.1
