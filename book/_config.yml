@@ -52,9 +52,6 @@ html:
   use_repository_button: true
   use_edit_page_button: true  # Whether to add an "Suggest edit" button to pages. If `true`, repository information in repository: must be filled in
   google_analytics_id: "G-3E20PWD938"
-  analytics:
-    plausible_analytics_domain: edsbook.org
-    plausible_analytics_url: https://plausible.io/js/script.js
 
 repository:
   url: https://github.com/alan-turing-institute/environmental-ds-book # Online location of your book
@@ -67,3 +64,4 @@ sphinx:
   extra_extensions          : ['sphinxcontrib.bibtex','sphinx_togglebutton','sphinx_design'] # A list of extra extensions to load by Sphinx.
   config                    :  # key-value pairs to directly over-ride the Sphinx configuration
     language                : en
+    html_js_files: [ ['https://plausible.io/js/script.js', {'defer': 'defer', 'data-domain': 'edsbook.org'}] ]
