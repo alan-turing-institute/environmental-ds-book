@@ -10,20 +10,20 @@ rohub.login(username=config.username, password=config.password)
 
 # metadata
 metadata_contribution = {
-    'environment': 'ocean',
+    'environment': 'polar',
     'topic': 'modelling',
-    'reponame': '39d9c177-11da-41b2-9b64-63f4c1c834b3',
-    'title': "Variational data assimilation with deep prior (CIRC23)",
-    'inputs': {'input1':{'name':'Codebase of the reproduced paper',
-                         'url':'https://github.com/ArFiloche/Deepprior4DVar_CI22'},
+    'reponame': '67a1e320-7c47-4ea9-8df8-e868326bc90b',
+    'title': "Sea ice forecasting using the IceNet library",
+    'inputs': {'input1':{'name':'Codebase of the IceNet library',
+                         'url':'https://github.com/icenet-ai/icenet/'},
                },
-    'outputs': {'content': 'figures, models and results',
-               'url': "https://doi.org/10.5281/zenodo.8338556"},
+    'outputs': {'content': 'results',
+               'url': "https://doi.org/10.5281/zenodo.12612126"},
     'author_GHuser': 'eds-book-gallery',
-    'references':{'ref1':{'name':'Deep prior in variational assimilation to estimate an ocean circulation without explicit regularization',
-                          'url':"http://doi.org/10.1017/eds.2022.31"}},
-    'sketch': {'title':'Image showing an example of the estimated motion fields with various algorithms',
-               'path':'_temp/rohub/39d9c177-11da-41b2-9b64-63f4c1c834b3/plot.png'}
+    'references':{'ref1':{'name':'Seasonal Arctic sea ice forecasting with probabilistic deep learning',
+                          'url':"https://doi.org/10.1038/s41467-021-25257-4"}},
+    'sketch': {'title':'Image showing an example of the forecasted sea ice',
+               'path':'_temp/rohub/67a1e320-7c47-4ea9-8df8-e868326bc90b/plot.png'}
 }
 
 title_nb = metadata_contribution['title']
@@ -48,40 +48,34 @@ ro = rohub.ros_create(title=ro_title, research_areas=ro_research_areas, descript
 # edition
 authors=[
         {"agent_type": "user",
-         "display_name": "Mukulika Pahari",
-         "name": "Mukulika Pahari",
-         "email": "mukulikapahari@gmail.com",
-         "orcid_id": None,
-         "affiliation": "University of Mumbai"},
+         "display_name": "Bryn Noel Ubald",
+         "name": "Bryn Noel Ubald",
+         "email": "bryald@bas.ac.uk",
+         "orcid_id": "0000-0002-0206-7140",
+         "affiliation": "British Antarctic Survey"},
         {"agent_type": "user",
-         "display_name": "Rutika Bhoir",
-         "name": "Rutika Bhoir",
-         "email": "rutikabhoir1316@gmail.com",
-         "orcid_id": None,
-         "affiliation": "University of Mumbai"},
+         "display_name": "James Byrne",
+         "name": "James Byrne",
+         "email": "jambyr@bas.ac.uk",
+         "orcid_id": "0000-0003-3731-2377",
+         "affiliation": "British Antarctic Survey"},
         ]
 
 ro.set_authors(agents=authors)
 
 reviewers=[
     {"agent_type": "user",
-     "display_name": "Tina Odaka",
-     "name": "Tina Odaka",
-     "email": "tina.odaka@ifremer.fr",
-     "orcid_id": "0000-0002-1500-0156",
-     "affiliation": "Ifremer"},
+     "display_name": "Wei Ji",
+     "name": "Wei Ji",
+     "email": "weiji@developmentseed.org",
+     "orcid_id": "0000-0003-2354-1988",
+     "affiliation": "Development Seed"},
     {"agent_type": "user",
-     "display_name": "Caroline Arnold",
-     "name": "Caroline Arnold",
-     "email": "arnold@dkrz.de",
-     "orcid_id": "0000-0002-9458-1517",
-     "affiliation": "German Climate Computing Center"},
-    {"agent_type": "user",
-     "display_name": "Paolo Pelucchi",
-     "name": "Paolo Pelucchi",
-     "email": "paolo.pelucchi@uv.es",
-     "orcid_id": None,
-     "affiliation": "Universitat de València"},
+     "display_name": "William Gregory",
+     "name": "William Gregory",
+     "email": "wg4031@princeton.edu",
+     "orcid_id": "0000-0001-8176-1642",
+     "affiliation": "Princeton University"},
         ]
 
 ro.set_contributors(agents=reviewers)
