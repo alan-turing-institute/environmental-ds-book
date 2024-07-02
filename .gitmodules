@@ -50,7 +50,3 @@
 	path = book/notebooks/gallery/39d9c177-11da-41b2-9b64-63f4c1c834b3
 	url = https://github.com/eds-book-gallery/39d9c177-11da-41b2-9b64-63f4c1c834b3.git
 	branch = render
-[submodule "book/notebooks/gallery/67a1e320-7c47-4ea9-8df8-e868326bc90b"]
-	path = book/notebooks/gallery/67a1e320-7c47-4ea9-8df8-e868326bc90b
-	url = https://github.com/eds-book-gallery/67a1e320-7c47-4ea9-8df8-e868326bc90b.git
-	branch = postprint
