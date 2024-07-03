@@ -1,7 +1,7 @@
 <img src="book/figures/logo/logo.png" width="180" align="Right" /></a>
 
 <!-- ALL-CONTRIBUTORS-BADGE:START - Do not remove or modify this section -->
-[![All Contributors](https://img.shields.io/badge/all_contributors-42-orange.svg?style=flat-square)](#contributors-)
+[![All Contributors](https://img.shields.io/badge/all_contributors-43-orange.svg?style=flat-square)](#contributors-)
 <!-- ALL-CONTRIBUTORS-BADGE:END -->
 
 # The Environmental Data Science book
@@ -70,12 +70,15 @@ We welcome and recognize all contributions. You can see a list of current contri
       <td align="center" valign="top" width="14.28%"><a href="https://github.com/ViktorDomazetoski"><img src="https://avatars.githubusercontent.com/u/101590116?v=4?s=100" width="100px;" alt="Viktor Domazetoski"/><br /><sub><b>Viktor Domazetoski</b></sub></a><br /><a href="https://github.com/alan-turing-institute/environmental-ds-book/issues?q=author%3AViktorDomazetoski" title="Bug reports">🐛</a> <a href="#blog-ViktorDomazetoski" title="Blogposts">📝</a> <a href="https://github.com/alan-turing-institute/environmental-ds-book/commits?author=ViktorDomazetoski" title="Code">💻</a></td>
     </tr>
     <tr>
+      <td align="center" valign="top" width="14.28%"><a href="https://weiji14.xyz"><img src="https://avatars.githubusercontent.com/u/23487320?v=4?s=100" width="100px;" alt="Wei Ji"/><br /><sub><b>Wei Ji</b></sub></a><br /><a href="https://github.com/alan-turing-institute/environmental-ds-book/pulls?q=is%3Apr+reviewed-by%3Aweiji14" title="Reviewed Pull Requests">👀</a></td>
       <td align="center" valign="top" width="14.28%"><a href="https://github.com/garimamalhotra"><img src="https://avatars.githubusercontent.com/u/7003802?v=4?s=100" width="100px;" alt="garimamalhotra"/><br /><sub><b>garimamalhotra</b></sub></a><br /><a href="#blog-garimamalhotra" title="Blogposts">📝</a> <a href="https://github.com/alan-turing-institute/environmental-ds-book/commits?author=garimamalhotra" title="Code">💻</a></td>
       <td align="center" valign="top" width="14.28%"><a href="https://github.com/jmifdal"><img src="https://avatars.githubusercontent.com/u/15648611?v=4?s=100" width="100px;" alt="jmifdal"/><br /><sub><b>jmifdal</b></sub></a><br /><a href="#blog-jmifdal" title="Blogposts">📝</a> <a href="https://github.com/alan-turing-institute/environmental-ds-book/commits?author=jmifdal" title="Code">💻</a></td>
       <td align="center" valign="top" width="14.28%"><a href="https://github.com/nbarlowATI"><img src="https://avatars.githubusercontent.com/u/33832774?v=4?s=100" width="100px;" alt="nbarlowATI"/><br /><sub><b>nbarlowATI</b></sub></a><br /><a href="https://github.com/alan-turing-institute/environmental-ds-book/pulls?q=is%3Apr+reviewed-by%3AnbarlowATI" title="Reviewed Pull Requests">👀</a></td>
       <td align="center" valign="top" width="14.28%"><a href="https://github.com/oscarbau"><img src="https://avatars.githubusercontent.com/u/41731874?v=4?s=100" width="100px;" alt="oscarbau"/><br /><sub><b>oscarbau</b></sub></a><br /><a href="https://github.com/alan-turing-institute/environmental-ds-book/pulls?q=is%3Apr+reviewed-by%3Aoscarbau" title="Reviewed Pull Requests">👀</a></td>
       <td align="center" valign="top" width="14.28%"><a href="https://github.com/shmh40"><img src="https://avatars.githubusercontent.com/u/56727418?v=4?s=100" width="100px;" alt="shmh40"/><br /><sub><b>shmh40</b></sub></a><br /><a href="#blog-shmh40" title="Blogposts">📝</a> <a href="https://github.com/alan-turing-institute/environmental-ds-book/commits?author=shmh40" title="Code">💻</a></td>
       <td align="center" valign="top" width="14.28%"><a href="https://github.com/svadams"><img src="https://avatars.githubusercontent.com/u/8512966?v=4?s=100" width="100px;" alt="svadams"/><br /><sub><b>svadams</b></sub></a><br /><a href="#blog-svadams" title="Blogposts">📝</a> <a href="https://github.com/alan-turing-institute/environmental-ds-book/commits?author=svadams" title="Code">💻</a></td>
+    </tr>
+    <tr>
       <td align="center" valign="top" width="14.28%"><a href="https://github.com/timo0thy"><img src="https://avatars.githubusercontent.com/u/51698422?v=4?s=100" width="100px;" alt="timo0thy"/><br /><sub><b>timo0thy</b></sub></a><br /><a href="#content-timo0thy" title="Content">🖋</a> <a href="#blog-timo0thy" title="Blogposts">📝</a> <a href="https://github.com/alan-turing-institute/environmental-ds-book/commits?author=timo0thy" title="Code">💻</a></td>
     </tr>
   </tbody>
