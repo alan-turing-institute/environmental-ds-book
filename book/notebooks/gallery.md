@@ -19,7 +19,7 @@
 {bdg-info}`Python`
 ^^^
 
-<img src="https://github.com/eds-book-gallery/67a1e320-7c47-4ea9-8df8-e868326bc90b/blob/postprint/images/thumbnail.png?raw=True"/>
+<img src="https://github.com/eds-book-gallery/67a1e320-7c47-4ea9-8df8-e868326bc90b/blob/main/images/thumbnail.png?raw=True"/>
 
 +++
 Byrne & Ubald (2024)
@@ -136,7 +136,7 @@ Malhotra *et al.* (2023)
     <a href="https://github.com/eds-book-gallery/3286b92f-4fae-4cc6-a29e-e408bc844542/blob/main/LICENSE">
         <img alt="license" src="https://img.shields.io/badge/license-MIT-yellow.svg">
     </a>
-    <a href="http://mybinder.org/v2/gh/eds-book-gallery/3286b92f-4fae-4cc6-a29e-e408bc844542/postprint?labpath=notebook.ipynb">
+    <a href="http://mybinder.org/v2/gh/eds-book-gallery/3286b92f-4fae-4cc6-a29e-e408bc844542/main?labpath=notebook.ipynb">
         <img alt="binder" src="https://mybinder.org/badge_logo.svg">
     </a>
     <a href="https://github.com/eds-book-gallery/3286b92f-4fae-4cc6-a29e-e408bc844542/actions/workflows/render.yaml">
