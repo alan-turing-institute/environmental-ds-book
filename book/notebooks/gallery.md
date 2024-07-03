@@ -2,7 +2,7 @@
 # Gallery
 
 :::::{container}
-::::{grid} 1 3 3 3
+::::{grid} 1 3 3 3 3
 :gutter: 2
 
 ::::{grid-item-card} Sea ice forecasting <br> (IceNet Library)
