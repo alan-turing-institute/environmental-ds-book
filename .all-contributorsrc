@@ -423,6 +423,15 @@
       "contributions": [
         "review"
       ]
+    },
+    {
+      "login": "William-gregory",
+      "name": "Will Gregory",
+      "avatar_url": "https://avatars.githubusercontent.com/u/37665577?v=4",
+      "profile": "https://github.com/William-gregory",
+      "contributions": [
+        "review"
+      ]
     }
   ],
   "contributorsPerLine": 7,
