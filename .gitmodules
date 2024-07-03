@@ -53,4 +53,4 @@
 [submodule "book/notebooks/gallery/67a1e320-7c47-4ea9-8df8-e868326bc90b"]
 	path = book/notebooks/gallery/67a1e320-7c47-4ea9-8df8-e868326bc90b
 	url = https://github.com/eds-book-gallery/67a1e320-7c47-4ea9-8df8-e868326bc90b.git
-	branch = preview
+	branch = render
