@@ -5,7 +5,7 @@
 ::::{grid} 1 3 3 3
 :gutter: 2
 
-::::{grid-item-card} Sea ice forecasting <br> (IceNet Library)
+:::{grid-item-card} Daily sea ice forecasting <br> (IceNet library)
 :margin: 3 0 0 0
 :link: ./gallery/67a1e320-7c47-4ea9-8df8-e868326bc90b/notebook.html
 :link-type: url
@@ -257,7 +257,7 @@ Lam *et al.* (2022)
 </p>
 :::
 
-:::{grid-item-card} Sea ice forecasting <br> (IceNet)
+:::{grid-item-card} Monthly sea ice forecasting <br> (IceNet)
 :margin: 3 0 0 0
 :link: ./gallery/ac327c3a-5264-40a2-8c6e-1e8d7c4b37ef/notebook.html
 :link-type: url
