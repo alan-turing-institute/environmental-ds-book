@@ -24,7 +24,7 @@ parts:
     title: Gallery
     sections:
       - file: notebooks/gallery/67a1e320-7c47-4ea9-8df8-e868326bc90b/notebook
-        title: Sea ice forecasting (IceNet Library)
+        title: Daily Sea ice forecasting (IceNet)
       - file: notebooks/gallery/39d9c177-11da-41b2-9b64-63f4c1c834b3/notebook
         title: Variational data assimilation with deep prior (CIRC23)
       - file: notebooks/gallery/93463cac-471a-469d-ad52-0514fd9b67f2/notebook
@@ -38,7 +38,7 @@ parts:
       - file: notebooks/gallery/ea34568e-d86e-4720-be2f-3f826f66a26c/notebook
         title: Rainfall NCEP/NCAR (NOAA)
       - file: notebooks/gallery/ac327c3a-5264-40a2-8c6e-1e8d7c4b37ef/notebook
-        title: Sea ice forecasting (IceNet)
+        title: Monthly Sea ice forecasting (IceNet)
       - file: notebooks/gallery/94486a7f-e046-461f-bbb9-334ec7b57040/notebook
         title: Tree crown (DetectreeRGB)
       - file: notebooks/gallery/bc30df18-fce2-42fa-aade-1ce5b7f3ca3c/notebook
