@@ -30,12 +30,7 @@ Before moving to PRE-REVIEW, EiC open a new issue `Preparation` in the notebook 
 ```
 
 ## Pre-review
-EiC open a PRE-REVIEW issue containing all relevant information of the notebook including a link to the notebook idea issue.
-
-Copy and paste the markdown below in the issue:
-
-```{include} ../../templates/editor-in-chief/eic-prereview-template.md
-```
+EiC open a [PRE-REVIEW issue](https://github.com/alan-turing-institute/environmental-ds-book/issues/new?assignees=&labels=prereview&projects=&template=prereview-template.md&title=%5BPRE+REVIEW%5D) containing all relevant information of the notebook including a link to the notebook idea issue.
 
 EiC assign an editor to moderate the review and find reviewers.
 
@@ -47,11 +42,7 @@ After the editor acceptance, EiC will update the heading at the top of the issue
 Once reviewers agreed on the revision, EiC open a REVIEW issue.
 
 ## Review
-The REVIEW issue aims to be a space where editor will moderate timings and conversation between authors and reviewers.
-EiC open it and replace the default first comment the markdown template below:
-
-```{include} ../../templates/editor-in-chief/eic-review-template.md
-```
+The [REVIEW issue](https://github.com/alan-turing-institute/environmental-ds-book/issues/new?assignees=&labels=review&projects=&template=review-template.md&title=%5BREVIEW%5D) aims to be a space where editor will moderate timings and conversation between authors and reviewers.
 
 To facilitate the discussion, EiC creates a new branch `review` to add reviewers info (name, affiliation, GitHub handle) in the contribution section of the notebook. 
 Then EiC commit and push changes to create a PR in the notebook repository. 

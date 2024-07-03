@@ -5,6 +5,42 @@
 ::::{grid} 1 3 3 3
 :gutter: 2
 
+:::{grid-item-card} Daily sea ice forecasting <br> (IceNet library)
+:margin: 3 0 0 0
+:link: ./gallery/67a1e320-7c47-4ea9-8df8-e868326bc90b/notebook.html
+:link-type: url
+:text-align: center
+:shadow: md
+
+{bdg-primary}`Polar`
+{bdg-secondary}`Modelling`
+<br>
+{bdg-warning}`Standard`
+{bdg-info}`Python`
+^^^
+
+<img src="https://github.com/eds-book-gallery/67a1e320-7c47-4ea9-8df8-e868326bc90b/blob/main/images/thumbnail.png?raw=True"/>
+
++++
+Byrne & Ubald (2024)
+
+<p align="center">
+    <a href="https://github.com/eds-book-gallery/67a1e320-7c47-4ea9-8df8-e868326bc90b/blob/main/LICENSE">
+        <img alt="license" src="https://img.shields.io/badge/license-MIT-yellow.svg">
+    </a>
+    <a href="http://mybinder.org/v2/gh/eds-book-gallery/67a1e320-7c47-4ea9-8df8-e868326bc90b/main?labpath=notebook.ipynb">
+        <img alt="binder" src="https://mybinder.org/badge_logo.svg">
+    </a>
+    <a href="https://github.com/eds-book-gallery/67a1e320-7c47-4ea9-8df8-e868326bc90b/actions/workflows/render.yaml">
+        <img alt="render" src="https://github.com/eds-book-gallery/67a1e320-7c47-4ea9-8df8-e868326bc90b/actions/workflows/render.yaml/badge.svg">
+    </a>
+    <a href="https://zenodo.org/badge/latestdoi/777128102">
+        <img alt="doi" src="https://zenodo.org/badge/777128102.svg">
+    </a>
+    <br/>
+</p>
+:::
+
 :::{grid-item-card} Variational data assimilation with deep prior (CIRC23)
 :margin: 3 0 0 0
 :link: ./gallery/39d9c177-11da-41b2-9b64-63f4c1c834b3/notebook.html
@@ -100,7 +136,7 @@ Malhotra *et al.* (2023)
     <a href="https://github.com/eds-book-gallery/3286b92f-4fae-4cc6-a29e-e408bc844542/blob/main/LICENSE">
         <img alt="license" src="https://img.shields.io/badge/license-MIT-yellow.svg">
     </a>
-    <a href="http://mybinder.org/v2/gh/eds-book-gallery/3286b92f-4fae-4cc6-a29e-e408bc844542/postprint?labpath=notebook.ipynb">
+    <a href="http://mybinder.org/v2/gh/eds-book-gallery/3286b92f-4fae-4cc6-a29e-e408bc844542/main?labpath=notebook.ipynb">
         <img alt="binder" src="https://mybinder.org/badge_logo.svg">
     </a>
     <a href="https://github.com/eds-book-gallery/3286b92f-4fae-4cc6-a29e-e408bc844542/actions/workflows/render.yaml">
@@ -221,7 +257,7 @@ Lam *et al.* (2022)
 </p>
 :::
 
-:::{grid-item-card} Sea ice forecasting <br> (IceNet)
+:::{grid-item-card} Monthly sea ice forecasting <br> (IceNet)
 :margin: 3 0 0 0
 :link: ./gallery/ac327c3a-5264-40a2-8c6e-1e8d7c4b37ef/notebook.html
 :link-type: url
