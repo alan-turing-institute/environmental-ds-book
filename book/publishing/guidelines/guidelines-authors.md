@@ -69,7 +69,8 @@ Each reviewer is guided by a checklist which facilitate to evaluate the notebook
 Reviewers are encouraged to make detailed comments directly to the notebook repo.
 To facilitate the conversation, EiC opens a `review` PR in the notebook repository where authors and reviewers carry out a detailed discussion through ReviewNB, a third-party plugin in GitHub for displaying and commenting Jupyter Notebooks (see further details [here](../about/notebooks-technologies.md)).
 Authors should implement relevant changes in the notebook repository hosted in their personal GitHub account, and submit changes to the `review` branch created by EiC (for example, see [here](https://github.com/eds-book-gallery/67a1e320-7c47-4ea9-8df8-e868326bc90b/pull/6) a PR submitted from the author of the IceNet Python API notebook).
-EiC will merge changes into the `review` PR and ask reviewers to re-evaluate the notebook.
+EiC will merge changes into the `review` PR.
+The editor should ask reviewers to re-evaluate the notebook.
 
 Once reviewers recommend the notebook for publication, the editor pings EiC to start the post-print stage.
 
