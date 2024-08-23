@@ -20,9 +20,9 @@ In this step, we suggest providing feedback to the notebook idea.
 EiC validate how reproducible is the notebook and its feasibility for the reviewing stage. 
 This process is aided by the Binder badge in a PR in the corresponding author's notebook repository.
 
-After validating a minimal working version, EiC transfer the notebook repository to the [Environmental Data Science book organisation](https://github.com/eds-book-gallery). 
+After validating a minimal working version, EiC fork the notebook repository to the [Environmental Data Science book organisation](https://github.com/eds-book-gallery). 
 
-The notebook in the transferred repository should generate the same outputs as the initial repository hosted in the GitHub account of the corresponding author. 
+The forked notebook should generate the same outputs as the initial repository hosted in the GitHub account of the corresponding author. 
 
 Before moving to PRE-REVIEW, EiC open a new issue `Preparation` in the notebook repository and complete the checklist below: 
 
@@ -44,9 +44,11 @@ Once reviewers agreed on the revision, EiC open a REVIEW issue.
 ## Review
 The [REVIEW issue](https://github.com/alan-turing-institute/environmental-ds-book/issues/new?assignees=&labels=review&projects=&template=review-template.md&title=%5BREVIEW%5D) aims to be a space where editor will moderate timings and conversation between authors and reviewers.
 
-To facilitate the discussion, EiC creates a new branch `review` to add reviewers info (name, affiliation, GitHub handle) in the contribution section of the notebook. 
+To facilitate the discussion, EiC creates a new branch `review` with a custom message at the first markdown cell indicating "Authors and Reviewers. This is the notebook version for review. We will remove this markdown cell after the peer-review." 
 Then EiC commit and push changes to create a PR in the notebook repository. 
 The PR will trigger ReviewNB, a third-party plugin in GitHub for displaying and commenting Jupyter Notebooks (see further details [here](../about/notebooks-technologies.md)).
+EiC should reminder the authors to implement changes in their personal repository and not in the forked repository. The authors should open a PR to the forked repository to update the notebook version for review.
+EiC merges the PR in the `review` branch and suggest to the editor to ask the reviewers to re-evaluate the notebook.
 
 Once reviewers recommend the notebook for publication, EiC will be notified by the editor to start the post-print stage.
 
