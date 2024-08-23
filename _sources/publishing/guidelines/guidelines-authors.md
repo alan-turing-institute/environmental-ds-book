@@ -46,8 +46,7 @@ Some general guidelines are:
 When the minimal working version of the notebook is ready, authors should tag EiC in the PR with the latest Binder badge.
 EiC will check how reproducible is the notebook and its feasibility for the reviewing stage. 
 
-After EiC's approval of the draft version of the notebook, authors transfer the notebook repository to the [eds-book-gallery](https://github.com/eds-book-gallery) organisation. 
-Please see [here](https://docs.github.com/en/enterprise-server@3.4/repositories/creating-and-managing-repositories/transferring-a-repository) how to transfer repositories according to the official GitHub documentation. 
+After EiC's approval of the draft version of the notebook, the EiC will fork the notebook repository to the [eds-book-gallery](https://github.com/eds-book-gallery) organisation. 
 
 EiC will assist you to prepare the notebook repository for the review process.
 
@@ -68,7 +67,10 @@ Please contact the editor directly or in the REVIEW issue thread to inform possi
 Authors should address reviewers suggestions according to their relevance.
 Each reviewer is guided by a checklist which facilitate to evaluate the notebook.
 Reviewers are encouraged to make detailed comments directly to the notebook repo.
-To facilitate this, EiC opens a PR in the notebook repository where authors and reviewers carry out a detailed discussion through ReviewNB, a third-party plugin in GitHub for displaying and commenting Jupyter Notebooks (see further details [here](../about/notebooks-technologies.md)).
+To facilitate the conversation, EiC opens a `review` PR in the notebook repository where authors and reviewers carry out a detailed discussion through ReviewNB, a third-party plugin in GitHub for displaying and commenting Jupyter Notebooks (see further details [here](../about/notebooks-technologies.md)).
+Authors should implement relevant changes in the notebook repository hosted in their personal GitHub account, and submit changes to the `review` branch created by EiC (for example, see [here](https://github.com/eds-book-gallery/67a1e320-7c47-4ea9-8df8-e868326bc90b/pull/6) a PR submitted from the author of the IceNet Python API notebook).
+EiC will merge changes into the `review` PR.
+The editor should ask reviewers to re-evaluate the notebook.
 
 Once reviewers recommend the notebook for publication, the editor pings EiC to start the post-print stage.
 

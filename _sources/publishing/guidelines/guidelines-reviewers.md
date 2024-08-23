@@ -42,5 +42,7 @@ Additional comments are welcome on the same issue or directly to the notebook re
 If reviewers do the latter, they will find a PR in the notebook repository where authors and reviewers carry out the discussion through ReviewNB, a third-party plugin in GitHub for displaying and commenting Jupyter Notebooks (see further details [here](../about/notebooks-technologies.md)).
 Reviewers can open issues in the notebook repo too and link the URL of the notebook REVIEW issue thread.
 This facilitates centralizing comments.
+All changes implemented by authors will be available in the `review` PR. 
+The editor will ask reviewers to re-evaluate the notebook after the authors' changes.
 
 Authors should respond within 2 weeks with their changes to the notebook in response to reviewers comments.

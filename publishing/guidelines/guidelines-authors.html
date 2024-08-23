@@ -521,8 +521,7 @@ Within each PR, a comment will be added containing “Test this PR on Binder” 
 </ul>
 <p>When the minimal working version of the notebook is ready, authors should tag EiC in the PR with the latest Binder badge.
 EiC will check how reproducible is the notebook and its feasibility for the reviewing stage.</p>
-<p>After EiC’s approval of the draft version of the notebook, authors transfer the notebook repository to the <a class="reference external" href="https://github.com/eds-book-gallery">eds-book-gallery</a> organisation.
-Please see <a class="reference external" href="https://docs.github.com/en/enterprise-server&#64;3.4/repositories/creating-and-managing-repositories/transferring-a-repository">here</a> how to transfer repositories according to the official GitHub documentation.</p>
+<p>After EiC’s approval of the draft version of the notebook, the EiC will fork the notebook repository to the <a class="reference external" href="https://github.com/eds-book-gallery">eds-book-gallery</a> organisation.</p>
 <p>EiC will assist you to prepare the notebook repository for the review process.</p>
 </section>
 </section>
@@ -544,7 +543,10 @@ Please contact the editor directly or in the REVIEW issue thread to inform possi
 <p>Authors should address reviewers suggestions according to their relevance.
 Each reviewer is guided by a checklist which facilitate to evaluate the notebook.
 Reviewers are encouraged to make detailed comments directly to the notebook repo.
-To facilitate this, EiC opens a PR in the notebook repository where authors and reviewers carry out a detailed discussion through ReviewNB, a third-party plugin in GitHub for displaying and commenting Jupyter Notebooks (see further details <span class="xref myst">here</span>).</p>
+To facilitate the conversation, EiC opens a <code class="docutils literal notranslate"><span class="pre">review</span></code> PR in the notebook repository where authors and reviewers carry out a detailed discussion through ReviewNB, a third-party plugin in GitHub for displaying and commenting Jupyter Notebooks (see further details <span class="xref myst">here</span>).
+Authors should implement relevant changes in the notebook repository hosted in their personal GitHub account, and submit changes to the <code class="docutils literal notranslate"><span class="pre">review</span></code> branch created by EiC (for example, see <a class="reference external" href="https://github.com/eds-book-gallery/67a1e320-7c47-4ea9-8df8-e868326bc90b/pull/6">here</a> a PR submitted from the author of the IceNet Python API notebook).
+EiC will merge changes into the <code class="docutils literal notranslate"><span class="pre">review</span></code> PR.
+The editor should ask reviewers to re-evaluate the notebook.</p>
 <p>Once reviewers recommend the notebook for publication, the editor pings EiC to start the post-print stage.</p>
 </section>
 <section id="post-print">
