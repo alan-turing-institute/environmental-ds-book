@@ -25,17 +25,17 @@
 Appel (2024)
 
 <p align="center">
-    <a href="https://github.com/eds-book-gallery/67a1e320-7c47-4ea9-8df8-e868326bc90b/blob/main/LICENSE">
+    <a href="https://github.com/eds-book-gallery/95199651-9e81-4cae-a3a7-66398a9a5f62/blob/main/LICENSE">
         <img alt="License" src="https://img.shields.io/badge/License-MIT-yellow.svg">
     </a>
-    <a href="http://mybinder.org/v2/gh/eds-book-gallery/67a1e320-7c47-4ea9-8df8-e868326bc90b/main?labpath=notebook.ipynb">
+    <a href="http://mybinder.org/v2/gh/eds-book-gallery/95199651-9e81-4cae-a3a7-66398a9a5f62/main?labpath=notebook.ipynb">
         <img alt="binder" src="https://mybinder.org/badge_logo.svg">
     </a>
-    <a href="https://github.com/eds-book-gallery/67a1e320-7c47-4ea9-8df8-e868326bc90b/actions/workflows/render.yaml">
-        <img alt="render" src="https://github.com/eds-book-gallery/ac327c3a-5264-40a2-8c6e-1e8d7c4b37ef/actions/workflows/render.yaml/badge.svg">
+    <a href="https://github.com/eds-book-gallery/95199651-9e81-4cae-a3a7-66398a9a5f62/actions/workflows/render.yaml">
+        <img alt="render" src="https://github.com/eds-book-gallery/95199651-9e81-4cae-a3a7-66398a9a5f62/actions/workflows/render.yaml/badge.svg">
     </a>
-    <a href="https://zenodo.org/badge/latestdoi/777128102">
-        <img alt="doi" src="https://zenodo.org/badge/777128102.svg">
+    <a href="https://zenodo.org/badge/latestdoi/880931043">
+        <img alt="doi" src="https://zenodo.org/badge/880931043.svg">
     </a>
     <br/>
 </p>
