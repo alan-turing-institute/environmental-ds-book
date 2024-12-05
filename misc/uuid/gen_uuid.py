@@ -205,6 +205,7 @@ existing_uuid = ['39d9c177-11da-41b2-9b64-63f4c1c834b3', '93463cac-471a-469d-ad5
                  'ac327c3a-5264-40a2-8c6e-1e8d7c4b37ef', '94486a7f-e046-461f-bbb9-334ec7b57040',
                  'bc30df18-fce2-42fa-aade-1ce5b7f3ca3c', '15d986da-2d7c-44fb-af71-700494485def',
                  'a2875cdc-ba6a-49dc-aab7-cdf7c4fc0fa8', '1b8921af-e77f-4ccf-ae38-4813cdceba0f',
-                 'b34facfa-cea8-48f5-89f6-f11ce00812a9', '93463cac-471a-469d-ad52-0514fd9b67f2']
+                 'b34facfa-cea8-48f5-89f6-f11ce00812a9', '93463cac-471a-469d-ad52-0514fd9b67f2',
+                 '67a1e320-7c47-4ea9-8df8-e868326bc90b', '95199651-9e81-4cae-a3a7-66398a9a5f62']
 
 gen_new_uuid_edsbook()

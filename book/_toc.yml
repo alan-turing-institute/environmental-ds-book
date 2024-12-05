@@ -23,6 +23,8 @@ parts:
   - file: notebooks/gallery
     title: Gallery
     sections:
+      - file: notebooks/gallery/95199651-9e81-4cae-a3a7-66398a9a5f62/notebook
+        title: Livestock detection (DeepForest)
       - file: notebooks/gallery/67a1e320-7c47-4ea9-8df8-e868326bc90b/notebook
         title: Daily sea ice forecasting (IceNet)
       - file: notebooks/gallery/39d9c177-11da-41b2-9b64-63f4c1c834b3/notebook
