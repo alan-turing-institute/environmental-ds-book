@@ -442,6 +442,15 @@
         "blog",
         "code"
       ]
+    },
+    {
+      "login": "ethanwhite",
+      "name": "Ethan White",
+      "avatar_url": "https://avatars.githubusercontent.com/u/744427?v=4",
+      "profile": "https://www.weecology.org/",
+      "contributions": [
+        "review"
+      ]
     }
   ],
   "contributorsPerLine": 7,
