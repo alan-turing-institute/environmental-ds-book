@@ -21,7 +21,7 @@ All proposed changes and conversations should be conducted within a *REVIEW* iss
 * **Post-print**: after reviewers and editor confirm their recommendation to accept the notebook for publication, EiC will share proofs (the draft of the final formatting) hosted as a Pull Request in the main repo of the EDS book.
 EiC ask authors to proof-read the notebook and indicate any remaining typos, badly formed citations, awkward wording, etc.
 
-* **Publication**: EiC disseminate the publication through the official communication channels of the EDS book community e.g. [Mastodon](https://fosstodon.org/@eds_book). 
+* **Publication**: EiC disseminate the publication through the official communication channels of the EDS book community e.g. [Bluesky](https://bsky.app/profile/eds-book.bsky.social), [Mastodon](https://fosstodon.org/@eds_book) and [LinkedIn](https://www.linkedin.com/groups/13116833/) 
 Authors and reviewers are welcome to use same or alternative communication channels of their preference.
 
 * **Post-publication**: Anyone from the EDS book community or registered in GitHub complying our [code of conduct](https://raw.githubusercontent.com/alan-turing-institute/environmental-ds-book/master/CODE_OF_CONDUCT.md) is welcome to suggest improvements and/or clarifications in the published notebook. 
