@@ -80,7 +80,7 @@ EiC will lead publishing asking authors to proof-read the notebook and indicate 
 ## Publication
 While EiC will announce the notebook in the EDS book social accounts, authors should promote the published notebook in their communication channels.
 
-Some authors have promoted EDS notebooks in LinkedIn, Twitter, etc. 
+Some authors have promoted EDS notebooks in LinkedIn, etc. 
 Others have added them to their online CV and/or personal website.
 
 ## Post-publication
