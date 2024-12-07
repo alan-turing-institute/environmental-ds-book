@@ -3,7 +3,7 @@ message: "To reference the latest version of The Environmental Data Science Book
 authors:
   - name: "The Environmental Data Science book Community"
 title: "Environmental Data Science book: A computational notebook community for open environmental data science."
-version: v0.3.4
+version: v0.3.5
 identifiers:
   - description: The concept DOI for the collection containing all versions of the Citation File Format.
     type: doi
