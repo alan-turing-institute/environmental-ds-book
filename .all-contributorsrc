@@ -432,6 +432,34 @@
       "contributions": [
         "review"
       ]
+    },
+    {
+      "login": "camappel",
+      "name": "Cam Appel",
+      "avatar_url": "https://avatars.githubusercontent.com/u/16980052?v=4",
+      "profile": "http://www.appel.co.uk",
+      "contributions": [
+        "blog",
+        "code"
+      ]
+    },
+    {
+      "login": "ethanwhite",
+      "name": "Ethan White",
+      "avatar_url": "https://avatars.githubusercontent.com/u/744427?v=4",
+      "profile": "https://www.weecology.org/",
+      "contributions": [
+        "review"
+      ]
+    },
+    {
+      "login": "louisavz",
+      "name": "louisavz",
+      "avatar_url": "https://avatars.githubusercontent.com/u/63079440?v=4",
+      "profile": "https://github.com/louisavz",
+      "contributions": [
+        "review"
+      ]
     }
   ],
   "contributorsPerLine": 7,

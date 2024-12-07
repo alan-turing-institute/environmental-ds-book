@@ -10,27 +10,27 @@ rohub.login(username=config.username, password=config.password)
 
 # metadata
 metadata_contribution = {
-    'environment': 'polar',
+    'environment': 'farming',
     'topic': 'modelling',
-    'reponame': '67a1e320-7c47-4ea9-8df8-e868326bc90b',
-    'title': "Sea ice forecasting using the IceNet library",
-    'inputs': {'input1':{'name':'Codebase of the IceNet library',
-                         'url':'https://github.com/icenet-ai/icenet/'},
+    'reponame': '95199651-9e81-4cae-a3a7-66398a9a5f62',
+    'title': "Livestock detection using DeepForest",
+    'inputs': {'input1':{'name':'Input dataset for the fine-tuned model',
+                         'url':'https://doi.org/10.7910/DVN/N7GJYU'},
                },
     'outputs': {'content': 'results',
-               'url': "https://doi.org/10.5281/zenodo.12612126"},
+               'url': "https://doi.org/10.5281/zenodo.14279111"},
     'author_GHuser': 'eds-book-gallery',
-    'references':{'ref1':{'name':'Seasonal Arctic sea ice forecasting with probabilistic deep learning',
-                          'url':"https://doi.org/10.1038/s41467-021-25257-4"}},
-    'sketch': {'title':'Image showing an example of the forecasted sea ice',
-               'path':'_temp/rohub/67a1e320-7c47-4ea9-8df8-e868326bc90b/plot.png'}
+    'references':{'ref1':{'name':'Deepforest: a python package for rgb deep learning tree crown delineation',
+                          'url':"https://doi.org/https://doi.org/10.1111/2041-210X.13472"}},
+    'sketch': {'title':'Image showing an example of the finetuned model predictions to detect livestock',
+               'path':'_temp/rohub/95199651-9e81-4cae-a3a7-66398a9a5f62/plot.png'}
 }
 
 title_nb = metadata_contribution['title']
 
 metadata_rohub = {
     'title': f'{title_nb} (Jupyter Notebook) published in the Environmental Data Science book',
-    'research_areas': ['Environmental research', 'Oceanography', 'Deep learning'],
+    'research_areas': ['Environmental research', 'Agriculture', 'Deep learning'],
     'description': f'The research object refers to the {title_nb} notebook published in the Environmental Data Science book.',
     'ros_type': 'Executable Research Object',
     'ros_template': 'Executable Research Object folders structure',
@@ -48,34 +48,27 @@ ro = rohub.ros_create(title=ro_title, research_areas=ro_research_areas, descript
 # edition
 authors=[
         {"agent_type": "user",
-         "display_name": "Bryn Noel Ubald",
-         "name": "Bryn Noel Ubald",
-         "email": "bryald@bas.ac.uk",
-         "orcid_id": "0000-0002-0206-7140",
-         "affiliation": "British Antarctic Survey"},
-        {"agent_type": "user",
-         "display_name": "James Byrne",
-         "name": "James Byrne",
-         "email": "jambyr@bas.ac.uk",
-         "orcid_id": "0000-0003-3731-2377",
-         "affiliation": "British Antarctic Survey"},
+         "display_name": "Cameron Appel",
+         "name": "Cameron Appel",
+         "email": "c.appel@qmul.ac.uk",
+         "affiliation": "Queen Mary University London"},
         ]
 
 ro.set_authors(agents=authors)
 
 reviewers=[
     {"agent_type": "user",
-     "display_name": "Wei Ji",
-     "name": "Wei Ji",
-     "email": "weiji@developmentseed.org",
-     "orcid_id": "0000-0003-2354-1988",
-     "affiliation": "Development Seed"},
+     "display_name": "Ethan P. White",
+     "name": "Ethan P. White",
+     "email": "ethanwhite@ufl.edu",
+     "orcid_id": "0000-0001-6728-7745",
+     "affiliation": "University of Florida"},
     {"agent_type": "user",
-     "display_name": "William Gregory",
-     "name": "William Gregory",
-     "email": "wg4031@princeton.edu",
-     "orcid_id": "0000-0001-8176-1642",
-     "affiliation": "Princeton University"},
+     "display_name": "Louisa Van Zeeland",
+     "name": "Louisa Van Zeeland",
+     "email": "lvanzeeland@turing.ac.uk",
+     "orcid_id": "0009-0005-0392-4377",
+     "affiliation": "The Alan Turing Institute"},
         ]
 
 ro.set_contributors(agents=reviewers)
