@@ -54,6 +54,8 @@ project:
     
 site:
   template: book-theme
+  options:
+      folders: true
   # options:
   #   favicon: favicon.ico
   #   logo: site_logo.png
