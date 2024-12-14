@@ -13,3 +13,5 @@
 .idea
 
 _temp/
+# Jupyter Book (via myst) build outputs
+_build
