@@ -26,6 +26,9 @@ jobs:
       name: github-pages
       url: ${{ steps.deployment.outputs.page_url }}
     runs-on: ubuntu-latest
+    defaults:
+      run:
+        working-directory: ./book
     steps:
       - uses: actions/checkout@v4
       - name: Setup Pages
@@ -36,7 +39,7 @@ jobs:
       - name: Install MyST Markdown
         run: npm install -g mystmd
       - name: Build HTML Assets
-        run: myst build book --html
+        run: myst build --html
       - name: Upload artifact
         uses: actions/upload-pages-artifact@v3
         with:
