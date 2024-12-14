@@ -15,7 +15,7 @@ project:
       path: src/gallery.py
   toc:
     - file: book/welcome.md
-    - title: Preamble
+    - title: About
       children:
         - file: book/preamble/about.md
           title: Our Book
