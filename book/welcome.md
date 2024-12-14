@@ -1,3 +1,8 @@
+---
+site:
+  hide_toc: true
+---
+
 # Welcome 
 
 _Environmental Data Science book or EDS book_ is a **living**, **open** and **community-driven** online resource to showcase and support the publication of data, research and open-source tools for collaborative, reproducible and transparent Environmental Data Science.
