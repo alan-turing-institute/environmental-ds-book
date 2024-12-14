@@ -10,6 +10,9 @@ project:
   # authors: []
   github: https://github.com/eds-book/eds-book.github.io
   # To autogenerate a Table of Contents, run "jupyter book init --write-toc"
+  plugins:
+    - type: executable
+      path: src/gallery.py
   toc:
     - file: book/welcome.md
     - title: Preamble
@@ -31,6 +34,7 @@ project:
               title: Benefits of Reviewing Notebooks
             - file: book/notebooks/about/notebooks-technologies.md
               title: Technologies
+        - file: book/notebooks/gallery.md
     - title: Publishing
       children:
         - file: book/publishing/guidelines.md
