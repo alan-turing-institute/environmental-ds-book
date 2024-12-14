@@ -52,14 +52,17 @@ project:
               title: Guide for Community
         - file: book/publishing/faq.md
           title: FAQ
-    - title: Afterword
+    - title: Community
       children:
-        - file: book/afterword/bibliography.md
+        - file: book/community/about.md
     
 site:
   template: book-theme
   options:
       folders: true
+      favicon: https://raw.githubusercontent.com/eds-book/edsbook-config/main/favicon.ico
+      logo: https://raw.githubusercontent.com/eds-book/edsbook-config/main/edsbook_logo-black.png
+      logo_dark: https://raw.githubusercontent.com/eds-book/edsbook-config/main/edsbook_logo-black.png
   nav:
     - title: About
       url: /book/preamble/about
