@@ -20,10 +20,10 @@ LAYOUT_STYLE = {
 DEFAULT_STYLE = {"background": "#4E66F6", **LAYOUT_STYLE}
 
 styles = {
-    "domains": {"background": "#7A77B4", **LAYOUT_STYLE},
-    "type": {"background": "#B83BC0", **LAYOUT_STYLE},
-    "issue": {"background": "#B83BC0", **LAYOUT_STYLE},
-    "language": {"background": "#B83BC0", **LAYOUT_STYLE},
+    "domains": {"background": "#579aca", **LAYOUT_STYLE},
+    "type": {"background": "#8045e5", **LAYOUT_STYLE},
+    "issue": {"background": "#e4640d", **LAYOUT_STYLE},
+    "language": {"background": "#276be9", **LAYOUT_STYLE},
 }
 
 
