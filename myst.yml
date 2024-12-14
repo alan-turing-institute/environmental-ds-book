@@ -68,6 +68,10 @@ site:
       url: /book/preamble/about
     - title: Notebooks
       url: /book/notebooks/about
-  # options:
-  #   favicon: favicon.ico
-  #   logo: site_logo.png
+    - title: Publishing
+      url: /book/publishing/guidelines
+    - title: Community
+      url: /book/community/about
+  actions:
+    - title: Home
+      url: /book/welcome
