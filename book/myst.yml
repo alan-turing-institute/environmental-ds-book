@@ -12,49 +12,49 @@ project:
   # To autogenerate a Table of Contents, run "jupyter book init --write-toc"
   plugins:
     - type: executable
-      path: src/gallery.py
+      path: ../src/gallery.py
   toc:
-    - file: book/welcome.md
+    - file: welcome.md
     - title: About
       children:
-        - file: book/preamble/about.md
+        - file: preamble/about.md
           title: Our Book
-        - file: book/preamble/attribution.md
+        - file: preamble/attribution.md
           title: Citation and Reuse
-        - file: book/preamble/contribute.md
+        - file: preamble/contribute.md
           title: Contribute
     - title: Notebooks
       children:
-        - file: book/notebooks/about.md
+        - file: notebooks/about.md
           title: Our Notebooks
           children:
-            - file: book/notebooks/about/aims-and-scope.md
+            - file: notebooks/about/aims-and-scope.md
               title: Aims & Scope
-            - file: book/notebooks/about/review-benefits.md
+            - file: notebooks/about/review-benefits.md
               title: Benefits of Reviewing Notebooks
-            - file: book/notebooks/about/notebooks-technologies.md
+            - file: notebooks/about/notebooks-technologies.md
               title: Technologies
-        - file: book/notebooks/gallery.md
+        - file: notebooks/gallery.md
     - title: Publishing
       children:
-        - file: book/publishing/guidelines.md
+        - file: publishing/guidelines.md
           title: Our Guidelines
           children:
-            - file: book/publishing/guidelines/guidelines-authors.md
+            - file: publishing/guidelines/guidelines-authors.md
               title: Guide for Authors
-            - file: book/publishing/guidelines/guidelines-reviewers.md
+            - file: publishing/guidelines/guidelines-reviewers.md
               title: Guide for Reviewers
-            - file: book/publishing/guidelines/guidelines-editors.md
+            - file: publishing/guidelines/guidelines-editors.md
               title: Guide for Editors
-            - file: book/publishing/guidelines/guidelines-eic.md
+            - file: publishing/guidelines/guidelines-eic.md
               title: Guide for Editor in Chief
-            - file: book/publishing/guidelines/guidelines-community.md
+            - file: publishing/guidelines/guidelines-community.md
               title: Guide for Community
-        - file: book/publishing/faq.md
+        - file: publishing/faq.md
           title: FAQ
     - title: Community
       children:
-        - file: book/community/about.md
+        - file: community/about.md
     
 site:
   template: book-theme
@@ -65,13 +65,13 @@ site:
       logo_dark: https://raw.githubusercontent.com/eds-book/edsbook-config/main/edsbook_logo-black.png
   nav:
     - title: About
-      url: /book/preamble/about
+      url: /preamble/about
     - title: Notebooks
-      url: /book/notebooks/about
+      url: /notebooks/about
     - title: Publishing
-      url: /book/publishing/guidelines
+      url: /publishing/guidelines
     - title: Community
-      url: /book/community/about
+      url: /community/about
   actions:
     - title: Home
-      url: /book/welcome
+      url: /welcome
