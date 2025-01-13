@@ -45,7 +45,7 @@ def render_notebook(name: str):
 
         # Load JB data
         config = fetch_yaml(config_url)
-        title = config["project"]["title"]
+        title = config["project"]["subtitle"]
 
         # Fetch gallery metadata
         gallery_url = f"{raw_base_url}/_gallery_info.yml"
@@ -118,14 +118,14 @@ edsbookGalleryDirective = {
     "name": "edsbook-notebooks",
     "doc": "An example directive for embedding a EDS Book notebook gallery.",
 }
-edsbooGalleryTransform = {
+edsbookGalleryTransform = {
     "stage": "document",
 }
 
 PLUGIN_SPEC = {
     "name": "EDS Book Gallery",
     "directives": [edsbookGalleryDirective],
-    "transforms": [edsbooGalleryTransform],
+    "transforms": [edsbookGalleryTransform],
 }
 
 
