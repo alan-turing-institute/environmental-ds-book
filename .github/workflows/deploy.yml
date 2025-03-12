@@ -39,7 +39,7 @@ jobs:
         run: myst build --html
         working-directory: ./book
       - name: Upload artifact
-        uses: actions/upload-pages-artifact@v1
+        uses: actions/upload-pages-artifact@v3
         with:
           path: './book/_build/html'
       - name: Deploy to GitHub Pages
