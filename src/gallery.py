@@ -45,7 +45,7 @@ def render_notebook(name: str):
 
         # Load JB data
         config = fetch_yaml(config_url)
-        title = config["project"]["subtitle"]
+        title = config["project"]["short_title"]
 
         # Fetch gallery metadata
         gallery_url = f"{raw_base_url}/_gallery_info.yml"
