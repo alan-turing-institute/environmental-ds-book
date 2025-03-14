@@ -62,7 +62,7 @@ site:
       folders: true
       favicon: https://raw.githubusercontent.com/eds-book/edsbook-config/main/favicon.ico
       logo: https://raw.githubusercontent.com/eds-book/edsbook-config/main/edsbook_logo-black.png
-      logo_dark: https://raw.githubusercontent.com/eds-book/edsbook-config/main/edsbook_logo-black.png
+      logo_dark: https://raw.githubusercontent.com/eds-book/edsbook-config/main/edsbook_logo-white.png
   nav:
     - title: About
       url: /preamble/about
