@@ -89,7 +89,7 @@ def render_notebook(name: str):
 
 
 def render_notebooks(pool):
-    with open("../src/notebook_gallery_mini.txt") as f:
+    with open("../src/notebook_gallery.txt") as f:
         body = f.read()
 
     return [c for c in pool.map(render_notebook, body.splitlines()) if c is not None]
