@@ -63,7 +63,7 @@ def render_notebook(name: str):
             "type": "card",
             "url": book_url,
             "children": [
-                {"type": "cardTitle", "children": [text(title)]},
+                {"type": "cardTitle", "children": [text(title, style={"textAlign": "center"})]},
                 div(
                     [
                         div(
