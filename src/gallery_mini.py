@@ -92,7 +92,9 @@ def render_notebooks(pool):
     with open("../src/notebook_gallery.txt") as f:
         body = f.read()
 
-    return [c for c in pool.map(render_notebook, body.splitlines()) if c is not None]
+    nbs_sample = random.sample(body.splitlines(), 3)
+
+    return [c for c in pool.map(render_notebook, nbs_sample) if c is not None]
 
 
 def run_directive(name, data):
