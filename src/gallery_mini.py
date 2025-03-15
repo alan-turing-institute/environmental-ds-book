@@ -15,6 +15,7 @@ LAYOUT_STYLE = {
     "color": "white",
     "padding": 5,
     "margin": 5,
+    "textAlign": "center",
 }
 
 DEFAULT_STYLE = {"background": "#4E66F6", **LAYOUT_STYLE}
