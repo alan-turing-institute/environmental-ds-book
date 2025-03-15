@@ -36,4 +36,4 @@ Visit our {ref}`Gallery <nb-gallery>` to access and navigate our community-led p
 ::: {edsbook-notebooks-mini}
 :::
 
-The resource and executable notebooks are free under a [CC-BY licence and OSI-approved MIT license, respectively](https://github.com/alan-turing-institute/environmental-ds-book/blob/master/LICENSE.md).
+The resource and executable notebooks are free under a [CC-BY license](https://github.com/alan-turing-institute/environmental-ds-book/blob/main/LICENSE) and [OSI-approved MIT license](https://github.com/alan-turing-institute/environmental-ds-book/blob/main/LICENSE-CODE), respectively.
