@@ -1,4 +1,5 @@
 ---
+title: Welcome
 site:
   hide_outline: true
   hide_toc: true
