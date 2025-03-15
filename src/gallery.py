@@ -65,20 +65,25 @@ def render_notebook(name: str):
                 {"type": "cardTitle", "children": [text(title)]},
                 div(
                     [
-                        image(image_url),
                         div(
                             [
-                                span(
-                                    [text(item)],
-                                    style=styles.get(name, DEFAULT_STYLE),
-                                )
-                                for name, items in tags.items()
-                                if items is not None
-                                for item in items
-                            ]
-                        ),
-                    ],
-                ),
+                                image(image_url),
+                                div(
+                                    [
+                                        span(
+                                            [text(item)],
+                                            style=styles.get(name, DEFAULT_STYLE),
+                                        )
+                                        for name, items in tags.items()
+                                        if items is not None
+                                        for item in items
+                                    ]
+                                ),
+                            ],
+                            style={"textAlign": "center"},
+                        )
+                    ]
+                )
             ],
         }
     except Exception as err:
