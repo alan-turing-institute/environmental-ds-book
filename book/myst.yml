@@ -16,7 +16,7 @@ project:
     - type: executable
       path: ../src/gallery_mini.py
   toc:
-    - file: welcome.md
+    - file: index.md
     - title: About
       children:
         - file: preamble/about.md
