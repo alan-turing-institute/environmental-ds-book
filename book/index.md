@@ -1,4 +1,5 @@
 ---
+title: Welcome to EDS book
 site:
   hide_outline: true
   hide_toc: true
