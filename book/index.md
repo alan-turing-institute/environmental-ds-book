@@ -5,19 +5,20 @@ site:
   hide_title_block: true
 ---
 
++++ {"kind": "split-image"}
+
+## Environmental Data Science Book
+
+:::{image} figures/welcome.jpg
+:caption: Illustration by Scriberia as part of _The Turing Way_ book dash in November 2021. Zenodo. [http://doi.org/10.5281/zenodo.5706310](http://doi.org/10.5281/zenodo.5706310)
+:alt: Diverse group of researchers analysing multiple enviromental systems and communicating results through a book with a happy face accesed by readers/users who can start new ideas.
+:::
+
+A **living**, **open** and **community-driven** online resource to showcase and support the publication of data, research and open-source tools for collaborative, reproducible and transparent Environmental Data Science.
+
 +++ { "kind": "justified"}
 
-## Welcome 
-
-_Environmental Data Science book or EDS book_ is a **living**, **open** and **community-driven** online resource to showcase and support the publication of data, research and open-source tools for collaborative, reproducible and transparent Environmental Data Science.
-
-```{figure} figures/welcome.jpg
----
-name: welcome-image
-alt: Diverse group of researchers analysing multiple enviromental systems and communicating results through a book with a happy face accesed by readers/users who can start new ideas.
----
-Illustration by Scriberia as part of _The Turing Way_ book dash in November 2021. Zenodo. [http://doi.org/10.5281/zenodo.5706310](http://doi.org/10.5281/zenodo.5706310)
-```
+## What is EDS book?
 
 _EDS book_ is:
 
@@ -32,9 +33,11 @@ We target to make sense of:
 * innovative research in Environmental Data Science 
 * open-source tools for Environmental Data Science
 
++++ { "kind": "justified"}
+
 ## Gallery
 
-We have a *gallery* with a diversity of EDS book notebooks, all them following FAIR principles for research software (FAIR4RS){cite}`Barker2022-FAIR4RS`. 
+We have a *gallery* with a diversity of EDS book notebooks, all them following FAIR principles for research software (FAIR4RS) {cite}`Barker2022-FAIR4RS`. 
 Visit our {ref}`Gallery <nb-gallery>` to access and navigate our community-led published notebooks.
 
 ::: {edsbook-notebooks-mini}
