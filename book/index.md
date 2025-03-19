@@ -11,7 +11,6 @@ site:
 ## Environmental Data Science Book
 
 :::{image} figures/welcome.jpg
-:caption: Illustration by Scriberia as part of _The Turing Way_ book dash in November 2021. Zenodo. [http://doi.org/10.5281/zenodo.5706310](http://doi.org/10.5281/zenodo.5706310)
 :alt: Diverse group of researchers analysing multiple enviromental systems and communicating results through a book with a happy face accesed by readers/users who can start new ideas.
 :::
 
