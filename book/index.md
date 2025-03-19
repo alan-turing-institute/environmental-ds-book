@@ -8,7 +8,7 @@ site:
 
 +++ {"kind": "split-image"}
 
-## Environmental Data Science Book
+### Environmental Data Science Book
 
 :::{image} figures/welcome.jpg
 :alt: Diverse group of researchers analysing multiple enviromental systems and communicating results through a book with a happy face accesed by readers/users who can start new ideas.
@@ -18,7 +18,7 @@ A **living**, **open** and **community-driven** online resource to showcase and 
 
 +++ { "kind": "justified"}
 
-## What is EDS book?
+### What is EDS book?
 
 _EDS book_ is:
 
@@ -35,7 +35,7 @@ We target to make sense of:
 
 +++ { "kind": "justified"}
 
-## Gallery
+### Gallery
 
 We have a *gallery* with a diversity of EDS book notebooks, all them following FAIR principles for research software (FAIR4RS) {cite}`Barker2022-FAIR4RS`. 
 Visit our {ref}`Gallery <nb-gallery>` to access and navigate our community-led published notebooks.
