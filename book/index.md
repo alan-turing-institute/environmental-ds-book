@@ -10,14 +10,15 @@ site:
 
 ## Environmental Data Science Book
 
-:::{image} figures/welcome.jpg
-:caption: Illustration by Scriberia as part of _The Turing Way_ book dash in November 2021. Zenodo. [http://doi.org/10.5281/zenodo.5706310](http://doi.org/10.5281/zenodo.5706310)
+:::{figure} figures/welcome.jpg
 :alt: Diverse group of researchers analysing multiple enviromental systems and communicating results through a book with a happy face accesed by readers/users who can start new ideas.
+
+Illustration by Scriberia as part of _The Turing Way_ book dash in November 2021. Zenodo. [http://doi.org/10.5281/zenodo.5706310](http://doi.org/10.5281/zenodo.5706310)
 :::
 
-A **living**, **open** and **community-driven** online resource to showcase and support the publication of data, research and open-source tools for collaborative, reproducible and transparent Environmental Data Science.
+A **living**, **open** and **community-driven** online _resource_ to showcase and support the publication of data, research and open-source tools for collaborative, reproducible and transparent Environmental Data Science.
 
-+++ { "kind": "justified"}
++++ {"kind": "justified"}
 
 ## What is EDS book?
 
@@ -34,7 +35,7 @@ We target to make sense of:
 * innovative research in Environmental Data Science 
 * open-source tools for Environmental Data Science
 
-+++ { "kind": "justified"}
++++ {"kind": "justified"}
 
 ## Gallery
 
