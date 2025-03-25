@@ -51,9 +51,7 @@ def render_notebook(name: str):
         title = config["project"]["short_title"]
 
         # Fetch gallery metadata
-        gallery_url = f"{raw_base_url}/_gallery_info.yml"
-        gallery_data = fetch_yaml(gallery_url)
-        image_name = gallery_data["thumbnail"]
+        image_name = config["project"]["thumbnail"]
         image_url = f"{raw_base_url}/{image_name}"
 
         # Build tags
