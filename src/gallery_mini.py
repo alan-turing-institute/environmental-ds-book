@@ -23,10 +23,10 @@ LAYOUT_STYLE = {
 DEFAULT_STYLE = {"background": "#4E66F6", **LAYOUT_STYLE}
 
 styles = {
-    "domains": {"background": "#579aca", **LAYOUT_STYLE},
-    "type": {"background": "#8045e5", **LAYOUT_STYLE},
-    "issue": {"background": "#e4640d", **LAYOUT_STYLE},
-    "language": {"background": "#276be9", **LAYOUT_STYLE},
+    0: {"background": "#579aca", **LAYOUT_STYLE},
+    1: {"background": "#8045e5", **LAYOUT_STYLE},
+    2: {"background": "#e4640d", **LAYOUT_STYLE},
+    3: {"background": "#276be9", **LAYOUT_STYLE},
 }
 
 
@@ -55,7 +55,10 @@ def render_notebook(name: str):
         image_url = f"{raw_base_url}/{image_name}"
 
         # Build tags
-        tags = gallery_data["tags"]
+        tags = config["project"]["keywords"]
+
+        # Build abstract
+        abstract = config["project"]["abstract"]
 
         return {
             "type": "card",
