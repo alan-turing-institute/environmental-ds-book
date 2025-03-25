@@ -69,20 +69,28 @@ def render_notebook(name: str):
                     [
                         div(
                             [
-                                image(image_url),
+                                image(image_url, style={"flex": "1", "marginRight": "10px", "maxWidth": "50%", "height": "auto"}),  # Image on the left
                                 div(
                                     [
-                                        span(
-                                            [text(item)],
-                                            style=styles.get(name, DEFAULT_STYLE),
-                                        )
-                                        for name, items in tags.items()
-                                        if items is not None
-                                        for item in items
-                                    ]
-                                ),
+                                        div(
+                                            [text(abstract)],
+                                            style={"marginTop": "10px"}  # Adjust the margin as needed
+                                        ),
+                                        div(
+                                            [
+                                                span(
+                                                    [text(item)],
+                                                    style=styles.get(name, DEFAULT_STYLE),
+                                                )
+                                                for name, item in enumerate(tags)
+                                                if item is not None
+                                            ]
+                                        ),
+                                    ],
+                                    style={"flex": "2"}  # Content on the right
+                                )
                             ],
-                            style={"textAlign": "center"},
+                            style={"display": "flex", "textAlign": "center"}
                         )
                     ]
                 )
@@ -119,7 +127,7 @@ def run_transform(name, data):
         # Mutate our notebook nodes in-place
         for node in notebook_nodes:
             node.clear()
-            node.update(grid([1, 1, 2, 3], children))
+            node.update(grid([1, 1, 1, 1], children))
             node["children"] = children
 
     return data
