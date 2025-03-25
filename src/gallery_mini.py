@@ -69,7 +69,7 @@ def render_notebook(name: str):
                     [
                         div(
                             [
-                                image(image_url, style={"flex": "1", "marginRight": "10px", "maxWidth": "50%", "height": "auto"}),  # Image on the left
+                                image(image_url, style={"flex": "1", "marginRight": "10px"}),  # Image on the left
                                 div(
                                     [
                                         div(
