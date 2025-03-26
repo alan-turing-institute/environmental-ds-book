@@ -10,10 +10,15 @@ em {
   height: 1px; /* Set the desired height */
 }
 
+.abstract-text {
+  font-size: 5px;
+}
+
 .abstract-container {
   display: flex;
   padding: 1px;
   background-color: #735e90;
+  font-size: 5px;
 }
 
 .span-container {
@@ -21,3 +26,4 @@ em {
   padding: 1px;
   background-color: #1b5e20;/* Add your desired styles here */
 }
+

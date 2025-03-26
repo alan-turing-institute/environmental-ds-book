@@ -75,7 +75,7 @@ def render_notebook(name: str):
                         ),
                         div(
                             [
-                                text(abstract),
+                                text(abstract, className="abstract-text"),
                             ],
                             className="abstract-container"
                         ),
