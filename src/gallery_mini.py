@@ -69,29 +69,27 @@ def render_notebook(name: str):
                     [
                         div(
                             [
-                                image(image_url),  # Image on the left
-                                div(
-                                    [
-                                        div(
-                                            [text(abstract)],
-                                            style={"marginTop": "10px"}  # Adjust the margin as needed
-                                        ),
-                                        div(
-                                            [
-                                                span(
-                                                    [text(item)],
-                                                    style=styles.get(name, DEFAULT_STYLE),
-                                                )
-                                                for name, item in enumerate(tags)
-                                                if item is not None
-                                            ]
-                                        ),
-                                    ],
-                                    style={"flex": "2"}  # Content on the right
-                                )
+                                image(image_url),
                             ],
-                            style={"display": "flex", "textAlign": "center"}
-                        )
+                            className="image-container"
+                        ),
+                        div(
+                            [
+                                text(abstract),
+                            ],
+                            className="abstract-container"
+                        ),
+                        div(
+                            [
+                                span(
+                                    [text(item)],
+                                    style=styles.get(name, DEFAULT_STYLE),
+                                )
+                                for name, item in enumerate(tags)
+                                if item is not None
+                            ],
+                            className="span-container"
+                        ),
                     ]
                 )
             ],

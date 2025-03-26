@@ -1,3 +1,23 @@
 em {
     background: rgb(13, 242, 70);
   }
+
+.image-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 1px; /* Set the desired width */
+  height: 1px; /* Set the desired height */
+}
+
+.abstract-container {
+  display: flex;
+  padding: 1px;
+  background-color: #735e90;
+}
+
+.span-container {
+  display: flex;
+  padding: 1px;
+  background-color: #1b5e20;/* Add your desired styles here */
+}
