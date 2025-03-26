@@ -1,4 +1,3 @@
-.image-style {
-  flex: 1;
-  margin-right: 10px;
-}
+em {
+    background: rgb(13, 242, 70);
+  }
