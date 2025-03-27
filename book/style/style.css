@@ -10,6 +10,10 @@ em {
   height: 1px; /* Set the desired height */
 }
 
+.image-class {
+  width: 50px; /* Set the desired width */
+}
+
 .abstract-text {
   font-size: 5px;
 }

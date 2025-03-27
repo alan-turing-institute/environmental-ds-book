@@ -69,7 +69,7 @@ def render_notebook(name: str):
                     [
                         div(
                             [
-                                image(image_url),
+                                image(image_url, className="image-class"),
                             ],
                             className="image-container"
                         ),
