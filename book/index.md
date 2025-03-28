@@ -20,8 +20,6 @@ A **living**, **open** and **community-driven** online resource to showcase and 
 
 ## What is EDS book?
 
-This is _emphasized_. This is not emphasized.
-
 _EDS book_ is:
 
 * a digital resource
