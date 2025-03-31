@@ -1,6 +1,6 @@
 (pb-about)=
 
-# About EDS book notebooks
+# Context
 With the great diversity in open data, software and computational resources, environmental data science research and applications have accelerated rapidly. 
 This presents a timely opportunity for advancing the cyberinfrastructure for showcasing these emerging developments. 
 Building upon existing open science communities such as the [Turing Way](https://the-turing-way.netlify.app/) and [Pangeo](https://pangeo.io), EDS book aims at educating and leveraging good scientific software and data management practises among environmental scientists through peer-reviewed findable, accessible, interoperable and reusable (FAIR) computational notebooks. 
