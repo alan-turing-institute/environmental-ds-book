@@ -1,5 +1,6 @@
 (nb-gallery)=
-# Notebooks Gallery
+
+# Gallery
 
 ::: {edsbook-notebooks}
 :::
