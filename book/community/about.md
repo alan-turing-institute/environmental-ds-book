@@ -1,6 +1,6 @@
 (cm-about)=
 
-# Our Community
+# Community
 
 Inspired by [_The Turing Way_ community coworking calls](https://the-turing-way.netlify.app/community-handbook/coworking.html), the EDS book community had some virtual meetings between 2021 and 2022 with the following two group-oriented formats:
 * Community (6 in total): focused on onboarding new members, support and celebrate members achievements or contributions to open environmental data science.
