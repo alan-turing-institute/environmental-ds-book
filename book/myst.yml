@@ -63,7 +63,7 @@ site:
     - title: Publishing
       url: /publishing/guidelines
     - title: Gallery
-      url: /notebooks/gallery
+      url: /gallery/gallery
     - title: Community
       url: /community/about
   actions:
