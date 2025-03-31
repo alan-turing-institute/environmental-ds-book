@@ -11,7 +11,6 @@ site:
 ## Environmental Data Science Book
 
 :::{image} figures/welcome.jpg
-:class: img-landpage
 :alt: Diverse group of researchers analysing multiple enviromental systems and communicating results through a book with a happy face accesed by readers/users who can start new ideas.
 :::
 
