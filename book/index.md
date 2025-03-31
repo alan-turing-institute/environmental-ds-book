@@ -14,7 +14,7 @@ site:
 :alt: Diverse group of researchers analysing multiple environmental systems and communicating results through a book with a happy face accessed by readers/users who can start new ideas.
 :::
 
-A **living**, **open** and **community-driven** online resource to showcase and support the publication of data, research and open-source tools for collaborative, reproducible and transparent Environmental Data Science.
+A **living**, **open** and **community-driven** online resource for collaborative, reproducible and transparent Environmental Data Science.
 
 +++ { "kind": "justified"}
 
