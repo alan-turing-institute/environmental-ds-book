@@ -14,7 +14,7 @@ site:
 :alt: Diverse group of researchers analysing multiple environmental systems and communicating results through a book with a happy face accessed by readers/users who can start new ideas.
 :::
 
-* A digital resource[^license]
+* A digital resource
 * A community
 * A global collaboration
 
@@ -32,7 +32,7 @@ Here you will find:
 Contributions are welcome, and they are greatly appreciated! 
 Every little bit helps, and credit will always be given. 
 
-You can contribute as an [authors](#pb-guidelines-authors), [editor](#pb-guidelines-editors), [editor-in-chief](#pb-guidelines-eic), [reviewer](#pb-guidelines-reviewers), or simply a [community](#pb-guidelines-community) member.
+You can contribute[^license] as an [authors](#pb-guidelines-authors), [editor](#pb-guidelines-editors), [editor-in-chief](#pb-guidelines-eic), [reviewer](#pb-guidelines-reviewers), or simply a [community](#pb-guidelines-community) member.
 
 Read our contribution guidelines here.
 
