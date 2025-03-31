@@ -71,11 +71,11 @@ Here’s what some of our contributors say:
 There was a learning curve but it helped me gain exposure to different technologies along with other people's work in Environmental Science. 
 I hope to make far reaching impact through this work”_ 
 > 
-> -- Timothy Lam, Author of Rainfall NCEP/NCAR (NOAA)
+> -- Timothy Lam, Author
 
 > _"Contributing to the EDS book has been an extremely valuable and enjoyable experience for me, giving me an insight into how open-source software development and code/book authorship can work within a more traditional scientific peer-review framework. 
 Gaining this hands-on experience whilst learning about interesting environmental science applications has been one of the highlights of my PhD studies."_ 
 > 
-> -- Nick Homer, Contributor and Reviewer of XXX
+> -- Nick Homer, Reviewer
 
 [^license]: The resource and executable notebooks are free under a [CC-BY license](https://github.com/alan-turing-institute/environmental-ds-book/blob/main/LICENSE) and [OSI-approved MIT license](https://github.com/alan-turing-institute/environmental-ds-book/blob/main/LICENSE-CODE), respectively.
