@@ -14,17 +14,9 @@ site:
 :alt: Diverse group of researchers analysing multiple environmental systems and communicating results through a book with a happy face accessed by readers/users who can start new ideas.
 :::
 
-A **living**, **open** and **community-driven** online resource for collaborative, reproducible and transparent Environmental Data Science.
-
-+++ { "kind": "justified"}
-
-## What is EDS Book?
-
-_EDS book_ is:
-
-* a digital resource[^license]
-* a community
-* a global collaboration
+* A digital resource[^license]
+* A community
+* A global collaboration
 
 Here you will find:
 
