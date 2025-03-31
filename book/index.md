@@ -26,12 +26,11 @@ _EDS book_ is:
 * a community
 * a global collaboration
 
-We target to make sense of:
+Here you will find:
 
-* environmental systems
-* environmental data and sensors
-* innovative research in Environmental Data Science 
-* open-source tools for Environmental Data Science
+* Research about environmental data and sensors
+* Innovative research in Environmental Data Science 
+* Open-source tools for Environmental Data Science
 
 +++ { "kind": "justified"}
 
