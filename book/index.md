@@ -11,7 +11,7 @@ site:
 ## {abbr}`EDS (Environmental Data Science)` Book
 
 :::{image} figures/welcome.jpg
-:alt: Diverse group of researchers analysing multiple enviromental systems and communicating results through a book with a happy face accesed by readers/users who can start new ideas.
+:alt: Diverse group of researchers analysing multiple environmental systems and communicating results through a book with a happy face accessed by readers/users who can start new ideas.
 :::
 
 A **living**, **open** and **community-driven** online resource to showcase and support the publication of data, research and open-source tools for collaborative, reproducible and transparent Environmental Data Science.
