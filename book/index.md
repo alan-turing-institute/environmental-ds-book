@@ -61,4 +61,31 @@ Visit our [Gallery](#nb-gallery) to access and navigate our community-led publis
 ::: {edsbook-notebooks-mini}
 :::
 
-The resource and executable notebooks are free under a [CC-BY license](https://github.com/alan-turing-institute/environmental-ds-book/blob/main/LICENSE) and [OSI-approved MIT license](https://github.com/alan-turing-institute/environmental-ds-book/blob/main/LICENSE-CODE), respectively.
++++ { "kind": "justified"}
+
+## Our contributors
+
+We value the participation of every member of our community and want to ensure that every contributor has an enjoyable, learning and fulfilling experience. 
+
+```{figure} figures/contributors.gif
+---
+name: contributors-table-video
+alt: Video showing screen capture of contributors table, smiling faces and emojis representing the types of contributions in a table.
+---
+```
+
+Here’s what some of our contributors say:
+
+> _“I had a great experience working on an EDS notebook. 
+There was a learning curve but it helped me gain exposure to different technologies along with other people's work in Environmental Science. 
+I hope to make far reaching impact through this work”_ 
+> 
+> -- Timothy Lam, Author of Rainfall NCEP/NCAR (NOAA)
+
+> _"Contributing to the EDS book has been an extremely valuable and enjoyable experience for me, giving me an insight into how open-source software development and code/book authorship can work within a more traditional scientific peer-review framework. 
+Gaining this hands-on experience whilst learning about interesting environmental science applications has been one of the highlights of my PhD studies."_ 
+> 
+> -- Nick Homer, Contributor and Reviewer of XXX
+
+
+[^license]: The resource and executable notebooks are free under a [CC-BY license](https://github.com/alan-turing-institute/environmental-ds-book/blob/main/LICENSE) and [OSI-approved MIT license](https://github.com/alan-turing-institute/environmental-ds-book/blob/main/LICENSE-CODE), respectively.
