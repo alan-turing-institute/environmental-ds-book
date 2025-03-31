@@ -18,7 +18,7 @@ A **living**, **open** and **community-driven** online resource for collaborativ
 
 +++ { "kind": "justified"}
 
-## What is EDS book?
+## What is EDS Book?
 
 _EDS book_ is:
 
