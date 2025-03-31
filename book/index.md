@@ -40,7 +40,6 @@ Read our contribution guidelines here.
 Here’s some useful information to get you started:
 * [Technologies used in EDS Book](#nb-about-technologies)
 * [Publication process](#pb-guidelines)
-* [How to use EDS book](#nb-how-to)
 * [Join our community for updates](#cm-about)
 
 +++ { "kind": "justified"}
