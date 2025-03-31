@@ -1,4 +1,5 @@
-(nb-how-to)=
+(nb-how-to-use)=
+
 # How to use EDS book notebooks
 
 While we provide a rendered version of the interactive material, in some cases the outputs of the code may be hidden by default. 
