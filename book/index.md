@@ -8,7 +8,7 @@ site:
 
 +++ {"kind": "split-image"}
 
-## {abbr}`EDS (Environmental Data Science)` Book
+# {abbr}`EDS (Environmental Data Science)` Book
 
 :::{image} figures/welcome.jpg
 :alt: Diverse group of researchers analysing multiple environmental systems and communicating results through a book with a happy face accessed by readers/users who can start new ideas.
@@ -26,9 +26,9 @@ Here you will find:
 
 +++ { "kind": "justified"}
 
-## Want to be a part of EDS Book?
+# Want to be a part of EDS Book?
 
-### Contributions
+## Contributions
 Contributions are welcome, and they are greatly appreciated! 
 Every little bit helps, and credit will always be given. 
 
@@ -45,7 +45,7 @@ Here’s some useful information to get you started:
 
 +++ { "kind": "justified"}
 
-## Our notebooks
+# Our notebooks
 
 We have a *gallery* with a diversity of EDS Book notebooks, all them following FAIR principles for research software (FAIR4RS) {cite}`Barker2022-FAIR4RS`. 
 Visit our [Gallery](#nb-gallery) to access and navigate our community-led published notebooks.
@@ -55,7 +55,7 @@ Visit our [Gallery](#nb-gallery) to access and navigate our community-led publis
 
 +++ { "kind": "justified"}
 
-## Our contributors
+# Our contributors
 
 We value the participation of every member of our community and want to ensure that every contributor has an enjoyable, learning and fulfilling experience. 
 
@@ -78,6 +78,5 @@ I hope to make far reaching impact through this work”_
 Gaining this hands-on experience whilst learning about interesting environmental science applications has been one of the highlights of my PhD studies."_ 
 > 
 > -- Nick Homer, Contributor and Reviewer of XXX
-
 
 [^license]: The resource and executable notebooks are free under a [CC-BY license](https://github.com/alan-turing-institute/environmental-ds-book/blob/main/LICENSE) and [OSI-approved MIT license](https://github.com/alan-turing-institute/environmental-ds-book/blob/main/LICENSE-CODE), respectively.
