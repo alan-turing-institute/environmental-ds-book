@@ -8,7 +8,7 @@ site:
 
 +++ {"kind": "split-image"}
 
-## Environmental Data Science Book
+### Environmental Data Science Book
 
 :::{image} figures/welcome.jpg
 :alt: Diverse group of researchers analysing multiple enviromental systems and communicating results through a book with a happy face accesed by readers/users who can start new ideas.
