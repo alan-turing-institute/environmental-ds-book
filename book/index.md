@@ -51,8 +51,12 @@ Here’s some useful information to get you started:
 * [How to use EDS book](#nb-how-to)
 * [Join our community for updates](#cm-about)
 
-We have a *gallery* with a diversity of EDS book notebooks, all them following FAIR principles for research software (FAIR4RS) {cite}`Barker2022-FAIR4RS`. 
-Visit our {ref}`Gallery <nb-gallery>` to access and navigate our community-led published notebooks.
++++ { "kind": "justified"}
+
+## Our notebooks
+
+We have a *gallery* with a diversity of EDS Book notebooks, all them following FAIR principles for research software (FAIR4RS) {cite}`Barker2022-FAIR4RS`. 
+Visit our [Gallery](#nb-gallery) to access and navigate our community-led published notebooks.
 
 ::: {edsbook-notebooks-mini}
 :::
