@@ -22,7 +22,7 @@ A **living**, **open** and **community-driven** online resource for collaborativ
 
 _EDS book_ is:
 
-* a digital resource
+* a digital resource[^license]
 * a community
 * a global collaboration
 
