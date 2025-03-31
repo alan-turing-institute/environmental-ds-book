@@ -34,7 +34,22 @@ Here you will find:
 
 +++ { "kind": "justified"}
 
-## Gallery
+## Want to be a part of EDS Book?
+
+### Contributions
+Contributions are welcome, and they are greatly appreciated! 
+Every little bit helps, and credit will always be given. 
+
+You can contribute as an [authors](#pb-guidelines-authors), [editor](#pb-guidelines-editors), [editor-in-chief](#pb-guidelines-eic), [reviewer](#pb-guidelines-reviewers), or simply a [community](#pb-guidelines-community) member.
+
+Read our contribution guidelines here.
+
+## Getting Started
+Here’s some useful information to get you started:
+* [Technologies used in EDS Book](#nb-about-technologies)
+* [Publication process](#pb-guidelines)
+* [How to use EDS book](#nb-how-to)
+* [Join our community for updates](#cm-about)
 
 We have a *gallery* with a diversity of EDS book notebooks, all them following FAIR principles for research software (FAIR4RS) {cite}`Barker2022-FAIR4RS`. 
 Visit our {ref}`Gallery <nb-gallery>` to access and navigate our community-led published notebooks.
