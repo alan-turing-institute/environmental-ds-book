@@ -19,24 +19,14 @@ project:
     - file: index.md
     - title: About
       children:
-        - file: preamble/about.md
-          title: Our Book
-        - file: preamble/attribution.md
-          title: Citation and Reuse
-        - file: preamble/contribute.md
-          title: Contribute
-    - title: Notebooks
-      children:
         - file: notebooks/about.md
-          title: Our Notebooks
-          children:
-            - file: notebooks/about/aims-and-scope.md
-              title: Aims & Scope
-            - file: notebooks/about/review-benefits.md
-              title: Benefits of Reviewing Notebooks
-            - file: notebooks/about/notebooks-technologies.md
-              title: Technologies
-        - file: notebooks/gallery.md
+          title: Context
+        - file: notebooks/about/aims-and-scope.md
+          title: Aims & Scope
+        - file: notebooks/about/review-benefits.md
+          title: Benefits of Reviewing Notebooks
+        - file: notebooks/about/notebooks-technologies.md
+          title: Technologies
     - title: Publishing
       children:
         - file: publishing/guidelines.md
@@ -54,9 +44,10 @@ project:
               title: Guide for Community
         - file: publishing/faq.md
           title: FAQ
+    - title: Gallery
+      file: gallery/gallery.md
     - title: Community
-      children:
-        - file: community/about.md
+      file: community/about.md
     
 site:
   template: book-theme
@@ -68,11 +59,11 @@ site:
       style: ./style/style.css
   nav:
     - title: About
-      url: /preamble/about
-    - title: Notebooks
       url: /notebooks/about
     - title: Publishing
       url: /publishing/guidelines
+    - title: Gallery
+      url: /notebooks/gallery
     - title: Community
       url: /community/about
   actions:
