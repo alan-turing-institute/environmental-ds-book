@@ -9,13 +9,12 @@ Computation notebooks allow users to combine interactive code with text and grap
 They have become a successful mechanism for sharing the analysis of data and documenting research workflows. 
 Notebooks has been an excellent tool for prototyping and writing examples to showcase a piece of software. 
 
-The EDS book aims to complement the science and methodological development embedded within academic journals using open infrastructure to translate research outputs into FAIR notebooks which benefit from a collaborative and open reviewing process (Figure 2).
+The EDS book aims to complement the science and methodological development embedded within academic journals using open infrastructure to translate research outputs into FAIR notebooks which benefit from a collaborative and open reviewing process ([](#notebook-cycle)).
 
 ```{figure} ../figures/notebook-cycle.jpg
----
-name: notebook-cycle
-alt: The Environmental Data Science project aims to engage the wider scientific research community on information extraction and analysis from environmental sensors using innovative data science.
----
+:label:notebook-cycle
+:alt: The Environmental Data Science project aims to engage the wider scientific research community on information extraction and analysis from environmental sensors using innovative data science.
+
 The EDS Book community supports and connects Environmental scientists and practitioners to communicate their science through customisable interactive notebooks which benefit from a collaborative reviewing process. Illustration by Scriberia as part of _The Turing Way_ book dash in November 2022. Zenodo. [http://doi.org/10.5281/zenodo.7587336](http://doi.org/10.5281/zenodo.7587336)
 ```
 
