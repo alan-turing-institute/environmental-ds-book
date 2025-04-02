@@ -14,9 +14,9 @@ site:
 :alt: Diverse group of researchers analysing multiple environmental systems and communicating results through a book with a happy face accessed by readers/users who can start new ideas.
 :::
 
-* A _living_ digital resource
-* A _community_ focused on open environmental data science 
-* A _global_ collaboration
+* A digital resource
+* A community
+* A global collaboration
 
 Here you will find:
 
