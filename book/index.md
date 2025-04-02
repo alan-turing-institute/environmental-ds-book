@@ -38,9 +38,21 @@ Read our [Contributor's Guide](https://github.com/eds-book/eds-book.github.io/bl
 
 ## Getting Started
 Here’s some useful information to get you started:
-* [Technologies used in EDS Book](#nb-about-technologies)
-* [Publication process](#pb-guidelines)
-* [Join our community for updates](#cm-about)
+
+::::{grid}
+:::{grid-item-card}
+:link: notebooks/about/technologies.md
+Scope and technologies of our notebooks 🧰
+:::
+:::{grid-item-card}
+:link: publishing/guidelines.md
+Learn our publication process 📚
+:::
+:::{grid-item-card}
+:link: community/about.md
+Join our community for updates 📬
+:::
+::::
 
 +++ { "kind": "justified"}
 
