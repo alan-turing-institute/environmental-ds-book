@@ -30,7 +30,7 @@ project:
     - title: Publishing
       children:
         - file: publishing/guidelines.md
-          title: Our Guidelines
+          title: Guidelines
           children:
             - file: publishing/guidelines/guidelines-authors.md
               title: Guide for Authors
