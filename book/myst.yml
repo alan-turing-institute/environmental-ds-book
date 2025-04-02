@@ -21,11 +21,11 @@ project:
       children:
         - file: notebooks/about.md
           title: Context
-        - file: notebooks/about/aims-and-scope.md
+        - file: notebooks/aims-and-scope.md
           title: Aims & Scope
-        - file: notebooks/about/review-benefits.md
+        - file: notebooks/review-benefits.md
           title: Benefits of Reviewing Notebooks
-        - file: notebooks/about/technologies.md
+        - file: notebooks/technologies.md
           title: Technologies
     - title: Publishing
       children:
