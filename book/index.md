@@ -20,7 +20,7 @@ site:
 
 Here you will find:
 
-* Reproducible pipelines to analyse environmental data and sensors
+* Reproducible pipelines to analyse environmental data
 * Innovative research in Environmental Data Science 
 * Open-source tools for modelling environmental data
 
