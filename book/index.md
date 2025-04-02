@@ -32,7 +32,7 @@ Here you will find:
 Contributions are welcome, and they are greatly appreciated! 
 Every little bit helps, and credit will always be given. 
 
-You can contribute[^license] as an [authors](#pb-guidelines-authors), [editor](#pb-guidelines-editors), [editor-in-chief](#pb-guidelines-eic), [reviewer](#pb-guidelines-reviewers), or simply a [community](#pb-guidelines-community) member.
+For our notebooks, you can contribute[^license] as an [authors](#pb-guidelines-authors), [editor](#pb-guidelines-editors), [editor-in-chief](#pb-guidelines-eic), [reviewer](#pb-guidelines-reviewers), or simply a [community](#pb-guidelines-community) member.
 
 Read our contribution guidelines here.
 
@@ -78,4 +78,4 @@ Gaining this hands-on experience whilst learning about interesting environmental
 > 
 > -- Nick Homer, Reviewer
 
-[^license]: The resource and executable notebooks are free under a [CC-BY license](https://github.com/alan-turing-institute/environmental-ds-book/blob/main/LICENSE) and [OSI-approved MIT license](https://github.com/alan-turing-institute/environmental-ds-book/blob/main/LICENSE-CODE), respectively.
+[^license]: EDS Book notebooks are free under an [OSI-approved MIT license](https://github.com/alan-turing-institute/environmental-ds-book/blob/main/LICENSE-CODE).
