@@ -1,6 +1,6 @@
 (pb-guidelines)=
 
-# Guidelines for EDS book notebooks
+# Guidelines
 This section introduces the publication process, roles and themes in EDS book computational notebooks.
 
 ## Publication process

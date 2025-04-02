@@ -1,6 +1,6 @@
 (pb-faq)=
 
-# FAQ of EDS book notebooks
+# FAQ
 
 ## Conflict of interest
 The definition of a conflict of Interest in peer review is a circumstance that makes you “unable to make an impartial scientific judgement or evaluation” (PNAS Conflict of Interest Policy). 
