@@ -19,7 +19,7 @@ project:
     - file: index.md
     - title: About
       children:
-        - file: notebooks/about.md
+        - file: notebooks/context.md
           title: Context
         - file: notebooks/aims-and-scope.md
           title: Aims & Scope
@@ -47,7 +47,7 @@ project:
     - title: Gallery
       file: gallery/gallery.md
     - title: Community
-      file: community/about.md
+      file: community/context.md
     
 site:
   template: book-theme
