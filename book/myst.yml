@@ -25,7 +25,7 @@ project:
           title: Aims & Scope
         - file: notebooks/about/review-benefits.md
           title: Benefits of Reviewing Notebooks
-        - file: notebooks/about/notebooks-technologies.md
+        - file: notebooks/about/technologies.md
           title: Technologies
     - title: Publishing
       children:
