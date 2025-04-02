@@ -20,9 +20,9 @@ site:
 
 Here you will find:
 
-* Research about environmental data and sensors
+* Reproducible pipelines to analyse environmental data and sensors
 * Innovative research in Environmental Data Science 
-* Open-source tools for Environmental Data Science
+* Open-source tools for modelling environmental data
 
 +++ { "kind": "justified"}
 
