@@ -65,6 +65,8 @@ site:
           url: /guidelines-community
     - title: Community
       url: /community
+    - title: Cite
+      url: /cite
   actions:
     - title: Home
       url: /index
