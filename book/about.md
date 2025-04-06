@@ -6,7 +6,7 @@ With the great diversity in open data, software and computational resources, env
 This presents a timely opportunity for advancing the cyberinfrastructure for showcasing these emerging developments. 
 EDS book aims to complement the science and methodological development embedded within academic journals using open infrastructure to translate research outputs into FAIR notebooks which benefit from a collaborative and open reviewing process ([](#notebook-cycle)).
 
-```{figure} ../figures/notebook-cycle.jpg
+```{figure} images/notebook-cycle.jpg
 :label:notebook-cycle
 :alt: The Environmental Data Science project aims to engage the wider scientific research community on information extraction and analysis from environmental sensors using innovative data science.
 

@@ -144,7 +144,7 @@ The all-contributors bot usage is described [here](https://allcontributors.org/d
 You can see a list of current contributors [here](https://github.com/alan-turing-institute/environmental-ds-book/blob/master/contributors.md). 
 
 # Code of Conduct
-Please note that EDS book open-source repository and community are aligned with a [Contributor Code of Conduct](./../../CODE_OF_CONDUCT.md). 
+Please note that EDS book open-source repository and community are aligned with a [Contributor Code of Conduct](../CODE_OF_CONDUCT.md). 
 By contributing to EDS book you agree to abide by its terms.
 
 ### Attribution 
