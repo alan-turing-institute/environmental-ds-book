@@ -50,13 +50,18 @@ site:
       url: /gallery/gallery
     - title: Contribute
       url: /contribute/contribute
-    - title: "Guidelines"
+    - title: Guidelines
       children:
-      - url: /publishing/guidelines-authors
-      - url: /publishing/guidelines-reviewers
-      - url: /publishing/guidelines-editors
-      - url: /publishing/guidelines-eic
-      - url: /publishing/guidelines-community
+        - title: Guide for Authors
+          url: /publishing/guidelines-authors
+        - title: Guide for Reviewers
+          url: /publishing/guidelines-reviewers
+        - title: Guide for Editors
+          url: /publishing/guidelines-editors
+        - title: Guide for Editor in Chief
+          url: /publishing/guidelines-eic
+        - title: Guide for Community
+          url: /publishing/guidelines-community
     - title: Community
       url: /community/community
   actions:
