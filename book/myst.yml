@@ -17,24 +17,25 @@ project:
       path: ../src/gallery_mini.py
   toc:
     - file: index.md
-    - file: about/about.md
-    - file: gallery/gallery.md
-    - file: contribute/contribute.md
+    - file: about.md
+    - file: gallery.md
+    - file: contribute.md
     - title: Guidelines
       children:
-        - file: publishing/guidelines-authors.md
+        - file: guidelines-authors.md
           title: Guide for Authors
-        - file: publishing/guidelines-reviewers.md
+        - file: guidelines-reviewers.md
           title: Guide for Reviewers
-        - file: publishing/guidelines-editors.md
+        - file: guidelines-editors.md
           title: Guide for Editors
-        - file: publishing/guidelines-eic.md
+        - file: guidelines-eic.md
           title: Guide for Editor in Chief
-        - file: publishing/guidelines-community.md
+        - file: guidelines-community.md
           title: Guide for Community
     - title: Community
-      file: community/community.md
-    
+      file: community.md
+    - file: cite.md
+
 site:
   template: book-theme
   options:
@@ -42,28 +43,28 @@ site:
       favicon: https://raw.githubusercontent.com/eds-book/edsbook-config/main/favicon.ico
       logo: https://raw.githubusercontent.com/eds-book/edsbook-config/main/edsbook_logo-black.png
       logo_dark: https://raw.githubusercontent.com/eds-book/edsbook-config/main/edsbook_logo-white.png
-      style: ./style/style.css
+      style: ./public/style.css
   nav:
     - title: About
-      url: /about/about
+      url: /about
     - title: Gallery
-      url: /gallery/gallery
+      url: /gallery
     - title: Contribute
-      url: /contribute/contribute
+      url: /contribute
     - title: Guidelines
       children:
         - title: Guide for Authors
-          url: /publishing/guidelines-authors
+          url: /guidelines-authors
         - title: Guide for Reviewers
-          url: /publishing/guidelines-reviewers
+          url: /guidelines-reviewers
         - title: Guide for Editors
-          url: /publishing/guidelines-editors
+          url: /guidelines-editors
         - title: Guide for Editor in Chief
-          url: /publishing/guidelines-eic
+          url: /guidelines-eic
         - title: Guide for Community
-          url: /publishing/guidelines-community
+          url: /guidelines-community
     - title: Community
-      url: /community/community
+      url: /community
   actions:
     - title: Home
-      url: /welcome
+      url: /index
