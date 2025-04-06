@@ -17,37 +17,23 @@ project:
       path: ../src/gallery_mini.py
   toc:
     - file: index.md
-    - title: About
+    - file: about/about.md
+    - file: gallery/gallery.md
+    - file: contributing/contributing.md
+    - title: Guidelines
       children:
-        - file: notebooks/context.md
-          title: Context
-        - file: notebooks/aims-and-scope.md
-          title: Aims & Scope
-        - file: notebooks/review-benefits.md
-          title: Benefits of Reviewing Notebooks
-        - file: notebooks/technologies.md
-          title: Technologies
-    - title: Publishing
-      children:
-        - file: publishing/guidelines.md
-          title: Guidelines
-          children:
-            - file: publishing/guidelines/guidelines-authors.md
-              title: Guide for Authors
-            - file: publishing/guidelines/guidelines-reviewers.md
-              title: Guide for Reviewers
-            - file: publishing/guidelines/guidelines-editors.md
-              title: Guide for Editors
-            - file: publishing/guidelines/guidelines-eic.md
-              title: Guide for Editor in Chief
-            - file: publishing/guidelines/guidelines-community.md
-              title: Guide for Community
-        - file: publishing/faq.md
-          title: FAQ
-    - title: Gallery
-      file: gallery/gallery.md
+        - file: publishing/guidelines-authors.md
+          title: Guide for Authors
+        - file: publishing/guidelines-reviewers.md
+          title: Guide for Reviewers
+        - file: publishing/guidelines-editors.md
+          title: Guide for Editors
+        - file: publishing/guidelines-eic.md
+          title: Guide for Editor in Chief
+        - file: publishing/guidelines-community.md
+          title: Guide for Community
     - title: Community
-      file: community/context.md
+      file: community/community.md
     
 site:
   template: book-theme
@@ -59,13 +45,20 @@ site:
       style: ./style/style.css
   nav:
     - title: About
-      url: /notebooks/about
-    - title: Publishing
-      url: /publishing/guidelines
+      url: /about/about
     - title: Gallery
       url: /gallery/gallery
+    - title: Contributing
+      url: /contributing/contributing
+    - title: Guidelines
+      children:
+      - url: /publishing/guidelines-authors
+      - url: /publishing/guidelines-reviewers
+      - url: /publishing/guidelines-editors
+      - url: /publishing/guidelines-eic
+      - url: /publishing/guidelines-community
     - title: Community
-      url: /community/about
+      url: /community/community
   actions:
     - title: Home
       url: /welcome
