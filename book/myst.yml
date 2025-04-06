@@ -19,7 +19,7 @@ project:
     - file: index.md
     - file: about/about.md
     - file: gallery/gallery.md
-    - file: contributing/contributing.md
+    - file: contribute/contribute.md
     - title: Guidelines
       children:
         - file: publishing/guidelines-authors.md
@@ -48,9 +48,9 @@ site:
       url: /about/about
     - title: Gallery
       url: /gallery/gallery
-    - title: Contributing
-      url: /contributing/contributing
-    - title: Guidelines
+    - title: Contribute
+      url: /contribute/contribute
+    - title: "Guidelines"
       children:
       - url: /publishing/guidelines-authors
       - url: /publishing/guidelines-reviewers
