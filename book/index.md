@@ -49,7 +49,7 @@ Read our scope and technologies 🪄
 Learn our publication process 📚
 :::
 :::{grid-item-card}
-:link: community/about.md
+:link: community.md
 Join our community for updates 📬
 :::
 ::::
