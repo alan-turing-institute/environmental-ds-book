@@ -19,7 +19,7 @@ Notebooks has been an excellent tool for prototyping and writing examples to sho
 
 # Vision
 
-To showcase and support the publication of data, research and open-source tools using Data Science and AI for characterizing, monitoring and/or modeling a wide diversity of environmental systems.
+Environmental scientists work collaboratively to demonstrate and communicate their science through FAIR executable notebooks and have gained significant skills to publish in notebook-based scholarly publication systems.
 
 # Mision
 
