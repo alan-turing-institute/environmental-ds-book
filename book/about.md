@@ -21,7 +21,7 @@ Notebooks has been an excellent tool for prototyping and writing examples to sho
 
 Environmental scientists work collaboratively to demonstrate and communicate their science through FAIR executable notebooks and have gained significant skills to publish in notebook-based scholarly publication systems.
 
-# Mision
+# Mission
 
 Educate and leverage good scientific software and data management practices among environmental scientists through peer-reviewed findable, accessible, interoperable and reusable (FAIR) executable notebooks.
 
