@@ -41,8 +41,8 @@ Here’s some useful information to get you started:
 
 ::::{grid}
 :::{grid-item-card}
-:link: notebooks/context.md
-Scope and technologies 🪄
+:link: about.md
+Read our scope and technologies 🪄
 :::
 :::{grid-item-card}
 :link: publishing/guidelines.md
