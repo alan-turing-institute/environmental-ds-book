@@ -45,8 +45,8 @@ Here’s some useful information to get you started:
 Read our scope and technologies 🪄
 :::
 :::{grid-item-card}
-:link: contribute.md#publication-process
-Learn our publication process 📚
+:link: contribute.md
+Learn how to contribute ✨
 :::
 :::{grid-item-card}
 :link: community.md
