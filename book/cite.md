@@ -14,11 +14,4 @@ We suggest citing individual executable notebooks by linking directly to their z
 
 [![Cite this using DOI](https://zenodo.org/badge/493600192.svg)](https://zenodo.org/badge/latestdoi/493600192)
 
-This is _emphasized_.
-
-+++ {"class": "text-gradient"}
-This is _emphasized_. This is not emphasized.
-
-+++
-
 > Mifdal, J., Carmo, R., & This EDS book notebook contributors. (2024). Detecting floating objects using deep learning and Sentinel-2 imagery (Jupyter Notebook) published in the Environmental Data Science book (v1.1.2). Zenodo. https://doi.org/10.5281/zenodo.10808251
