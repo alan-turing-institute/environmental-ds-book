@@ -42,7 +42,7 @@ Here’s some useful information to get you started:
 ::::{grid}
 :::{grid-item-card}
 :link: about.md
-Read our scope and technologies 🪄
+Read our scope and technologies 🎯
 :::
 :::{grid-item-card}
 :link: contribute.md
