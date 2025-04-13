@@ -1,9 +1,5 @@
 /* Custom styles for edsbook.org */
 
-em {
-    background: rgb(13, 242, 70);
-  }
-
 .image-container {
   display: flex;
   justify-content: center;
