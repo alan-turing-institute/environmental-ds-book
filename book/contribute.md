@@ -66,6 +66,14 @@ Notebook submissions to EDS book must:
 * Notebook submissions should make a clear contribution to Environmental Data Science using available open-source software. 
 * Authors wishing to make a pre-submission enquiry should open an issue on the EDS Book repository.
 
+### Themes
+EDS notebooks are categorized under four proposed topics or themes:
+
+* **Exploration**: highlights a particular environmental sensor with visualization and interpretation of the corresponding layers of information.
+* **Preprocessing**: refers to all procedures to clean and prepare environmental data for analysis. The notebook should highlight differences between the raw and preprocessed data.
+* **Modelling**: comprises models to analyse a given environmental system. 
+* **Post-processing**: refers to post-process routines to fine tune and/or adjust modelling outputs.
+
 ### Publication process
 The main steps when submitting and publishing EDS book notebooks are:
 
