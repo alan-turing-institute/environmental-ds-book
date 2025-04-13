@@ -80,8 +80,8 @@ alt: Video showing screen capture of contributors table, smiling faces and emoji
 Here’s what some of our contributors say:
 
 > _“I had a great experience working on an EDS notebook. 
-There was a learning curve but it helped me gain exposure to different technologies along with other people's work in Environmental Science. 
-I hope to make far reaching impact through this work”_ 
+There was a learning curve, but it helped me gain exposure to different technologies along with other people's work in Environmental Science. 
+I hope to make far-reaching impact through this work”_ 
 > 
 > -- Timothy Lam, Author
 
