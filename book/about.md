@@ -40,7 +40,7 @@ EDS book notebooks support FAIR principles for research software (FAIR4RS){cite}
 - **F: Software, and its associated metadata, is easy for both humans and machines to find**: 
    - All notebooks are hosted as separate repositories in [EDS Book Gallery GitHub organisation](https://github.com/eds-book-gallery). 
    - Rendered versions of notebooks are indexed and centralized into a Jupyter Book hosted as [a repository in the Alan Turing Institute GitHub organisation](https://github.com/alan-turing-institute/environmental-ds-book/). 
-   - The same platform allows handling notebooks versions and assign distinct identifiers. 
+   - GitHub allows handling notebooks versioning and discoverability through its integration with Zenodo.
 - **A: Software, and its metadata, is retrievable via standardised protocols**: 
   - Notebooks repositories can be retrieved from Git Clone from GitHub.
   - RoHub packages EDS book notebooks with their metadata using [Research Object Crate (RO-Crate)](https://www.researchobject.org/ro-crate/). 
