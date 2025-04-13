@@ -2,8 +2,7 @@
 
 # About
 
-With the great diversity in open data, software and computational resources, environmental data science research and applications have accelerated rapidly. 
-This presents a timely opportunity for advancing the cyberinfrastructure for showcasing these emerging developments. 
+Notebooks has been an excellent tool for prototyping and writing examples to showcase a piece of software.
 EDS book aims to complement the science and methodological development embedded within academic journals using open infrastructure to translate research outputs into FAIR notebooks which benefit from a collaborative and open reviewing process ([](#notebook-cycle)).
 
 ```{figure} images/notebook-cycle.jpg
@@ -12,10 +11,6 @@ EDS book aims to complement the science and methodological development embedded 
 
 The EDS Book community supports and connects Environmental scientists and practitioners to communicate their science through customisable interactive notebooks which benefit from a collaborative reviewing process. Illustration by Scriberia as part of _The Turing Way_ book dash in November 2022. Zenodo. [http://doi.org/10.5281/zenodo.7587336](http://doi.org/10.5281/zenodo.7587336)
 ```
-
-Computation notebooks allow users to combine interactive code with text and graphical objects. 
-They have become a successful mechanism for sharing the analysis of data and documenting research workflows. 
-Notebooks has been an excellent tool for prototyping and writing examples to showcase a piece of software.
 
 # Vision
 
