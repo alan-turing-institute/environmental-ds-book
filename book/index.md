@@ -46,7 +46,7 @@ Read our scope and technologies 🎯
 :::
 :::{grid-item-card}
 :link: contribute.md
-Learn how to contribute ✨
+Learn how to contribute 🌟
 :::
 :::{grid-item-card}
 :link: community.md
