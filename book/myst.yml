@@ -8,6 +8,8 @@ project:
   license:
     code: MIT
     content: CC-BY-4.0
+  abbreviations:
+    FAIR: Findability, Accessibility, Interoperability, and Reusability
   # description:
   # keywords: []
   # authors: []
