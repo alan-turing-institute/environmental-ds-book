@@ -2,8 +2,8 @@
 
 # About
 
-Notebooks has been an excellent tool for prototyping and writing examples to showcase a piece of software.
-EDS book aims to complement the science and methodological development embedded within academic journals using open infrastructure to translate research outputs into FAIR notebooks which benefit from a collaborative and open reviewing process ([](#notebook-cycle)).
+Notebooks has been an excellent tool for prototyping and writing examples to showcase computational analyses {cite}`10.1371/journal.pcbi.1007007`.
+EDS book complements the science and methodological development of academic journals by translating research outputs into FAIR notebooks using open infrastructure and open review ([](#notebook-cycle)).
 
 ```{figure} images/notebook-cycle.jpg
 :label:notebook-cycle
