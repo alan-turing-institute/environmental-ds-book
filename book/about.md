@@ -42,8 +42,7 @@ EDS book notebooks support FAIR principles for research software (FAIR4RS){cite}
    - Rendered versions of notebooks are indexed and centralized into a Jupyter Book hosted as [a repository in the Alan Turing Institute GitHub organisation](https://github.com/alan-turing-institute/environmental-ds-book/). 
    - GitHub allows handling notebooks versioning and discoverability through its integration with Zenodo.
 - **A: Software, and its metadata, is retrievable via standardised protocols**: 
-  - Notebooks repositories can be retrieved from Git Clone from GitHub.
-  - RoHub packages EDS book notebooks with their metadata using [Research Object Crate (RO-Crate)](https://www.researchobject.org/ro-crate/). 
+  - Notebooks repositories can be retrieved through git clone.
 - **I: Software interoperates with other software by exchanging data and/or metadata, and/or through interaction via application programming interfaces (APIs), described through standards**: 
   - The Jupyter ecosystem facilitates exchanging data and/or metadata of all published notebooks.  through standardised protocols, including a [RESTful web service  architecture implemented in Jupyter notebook](https://github.com/jupyter/jupyter/wiki/Jupyter-Notebook-Server-API).
   - Notebooks repositories have a dedicated folder to provide lock environments which pin dependencies according to three main operating systems: Windows, Linux and MacOS. 
