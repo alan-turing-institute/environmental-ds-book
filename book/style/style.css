@@ -1,6 +1,8 @@
-/*em {*/
-/*    background: rgb(13, 242, 70);*/
-/*  }*/
+/* Custom styles for edsbook.org */
+
+em {
+    background: rgb(13, 242, 70);
+  }
 
 .image-container {
   display: flex;
@@ -31,3 +33,8 @@
   background-color: #1b5e20;/* Add your desired styles here */
 }
 
+.text-gradient em {
+  background: -webkit-linear-gradient(#eee, #333);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}

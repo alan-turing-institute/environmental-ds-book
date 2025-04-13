@@ -14,6 +14,8 @@ We suggest citing individual executable notebooks by linking directly to their z
 
 [![Cite this using DOI](https://zenodo.org/badge/493600192.svg)](https://zenodo.org/badge/latestdoi/493600192)
 
+This is _emphasized_.
+
 +++ {"class": "text-gradient"}
 This is _emphasized_. This is not emphasized.
 
