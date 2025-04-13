@@ -5,6 +5,9 @@ version: 1
 project:
   id: 5045e1d4-2bbc-4dca-bde5-447c5c23801d
   title: Welcome
+  license:
+    code: MIT
+    content: CC-BY-4.0
   # description:
   # keywords: []
   # authors: []
@@ -70,3 +73,4 @@ site:
   actions:
     - title: Home
       url: /index
+
