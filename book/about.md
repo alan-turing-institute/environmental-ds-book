@@ -34,7 +34,6 @@ While the scientific community is broad, we think the target audience of this bo
 
 EDS book notebooks contributes to open, collaborative and transparent Environmental science. 
 A shared goal among our community-driven notebooks is to increase awareness and demonstrate open-source software developments and open data suited to Environmental science. 
-Building upon recent efforts by [EarthCube Peer-Reviewed Jupyter Notebooks initiative](https://www.earthcube.org/notebooks), EDS book notebooks advance in providing standards and guidelines for evaluating notebooks and their quality. 
 
 EDS book notebooks support FAIR principles for research software (FAIR4RS){cite}`Barker2022-FAIR4RS` as describe below:
 
