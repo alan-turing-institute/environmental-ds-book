@@ -2,21 +2,26 @@
 
 # Contribute
 
-Contributions are welcome, and they are greatly appreciated! Every little bit helps, and credit will always be given.
+Contributions are welcome, and they are greatly appreciated! 
+Every little bit helps, and credit will always be given.
+
+This section provides a high-level guide to contributing to EDS book via the [core repository](#core-repository) and/or [notebook submissions](#notebooks).
+We encourage you to read through the following sections to learn more about how you can contribute.
+If you find that you have questions that are not discussed below, please let us know through one of the many ways to get in touch.
 
 ## Core repository
 
+### Structure
 The public GitHub repository has the following structure:
 
 ```
-| The Environmental Data Science Book
+| Environmental Data Science Book
 | ├── **/.github**
 | │   ├── ISSUE_template
 | │   ├── workflows
 | │   └── ...
 | ├── **/book**
-| │   ├── _toc.yml
-| │   ├── _config.yml
+| │   ├── myst.yml
 | │   └── ...
 | ├── CODE_OF_CONDUCT.md
 | ├── CONTRIBUTING.md
@@ -24,29 +29,38 @@ The public GitHub repository has the following structure:
 ```
 
 The `.github folder` refers to GitHub related deployment files and templates of issues/pull requests usually curated by the repository maintainers or developers. 
-The `book folder` holds the website content and other relevant files (table of content and configuration files).  
+The `book folder` holds the website content and other relevant files (e.g. configuration files).
 
-For the book content, the following contributions are accepted:
-* **Narrative content**: include plain text, citations, equations, figures, special content blocks and more.
-* **Executable content**: consists of computational material in a given programming language e.g. python.
+The `myst.yml` configuration file dictates the `project` and `site` configurations. 
+For instance, the `project` part declares the table of content i.e. sections found in the ``book`` folder. 
+The current version of the book consists of six key sections:
 
-:::{seealso}
-Please visit the corresponding Jupyter Book guidelines for [`narrative`](https://jupyterbook.org/content/index.html#write-narrative-content) and [`executable`]('https://jupyterbook.org/execute/index.html#write-executable-content) content. 
+* **About**: describes the mission, vision, the target audience and motivations.
+* **Gallery**: contains all published notebooks listed within a gridded gallery.
+* **Contribute**: provides a high-level guide to contributing to EDS book.
+* **Guidelines**: contains guidelines to publish notebooks in EDS book.
+* **Community**: compiles community-related resources such as activities in various open science communities and shared notes of EDS book co-working meetings.
+* **Cite**: indicates how to cite the core EDS book repository and published notebooks.
+
+### Who can contribute
+We describe two defined roles for contributing to the core repository:
+
+::::{grid} 1 2 2 2
+:::{card}
+:header: Maintainers/Developers
+Provide support with keeping the existing source code updated by keeping track of new contributions and/or update versions of the Jupyter book.
 :::
 
-The `_toc.yml` file sets the main sections of EDS book. 
-It is a simple configuration file specifying a table of content from all the executable and narrative content found in the ``book`` folder (and in subfolders). 
-The current version of the book consists of five key sections:
-
-* **About**: contains narrative content i.e. plain markdown files describing the aims of the book, the target audience, attribution and how to contribute.
-* **Gallery**: contains all published executable content listed within a gridded gallery or with individual links.
-* **Contributing**: contains all published executable content listed within a gridded gallery or with individual links.
-* **Publishing**: provides an introduction of open review, its relevance to computational notebooks and guidelines to publish in EDS book.
-* **Community**: compiles community-related resources such as activities in various open science communities and shared notes of EDS book co-working meetings.
-* **Afterword**: describes miscellaneous material such as bibliography.
+:::{card}
+:header: Readers/Users
+Read/share content, occasionally raise errors such as typos and bugs and fix them.
+:::
+::::
 
 ## Notebooks
+
 ### Scope
+
 We consider submissions from all areas of environmental science. This includes (but it is not restricted to):
 * introducing relevant environmental datasets irrespective of their modality (image, labels, points, shapes, surface text).
 * describing the outputs of a machine learning/computer vision model suited to our understanding of Planet Earth.
@@ -98,39 +112,65 @@ Authors and reviewers are welcome to use same or alternative communication chann
 * **Post-publication**: Anyone from the EDS book community or registered in GitHub complying our [code of conduct](https://raw.githubusercontent.com/alan-turing-institute/environmental-ds-book/master/CODE_OF_CONDUCT.md) is welcome to suggest improvements and/or clarifications in the published notebook. 
 Where relevant, EiC will notify authors about proposed changes and their acceptance. If the authors consider suggestions as a substantial contribution, EiC will acknowledge it by adding the contributor's name to the citation of the notebook. 
 
-## Who can contribute
-Inspired by [the Turing Way Guide for Collaboration](https://github.com/alan-turing-institute/the-turing-way/blob/main/book/website/collaboration/collaboration.md), EDS book has the following defined community roles: 
+### Who can contribute
+The publishing process of EDS book notebooks is open to all members of the community. We list below the main roles and their responsibilities:
 
-* **Maintainers**: to provide support with keeping the existing source code updated by keeping track of new contributions and/or update versions of the Jupyter book.
+::::{grid} 1 2 2 2
 
-* **Authors**: prepare, implement and report changes of the submitted notebook. 
-View guidelines for authors
+:::{card}
+:url: ./guidelines-authors.md
+:header: Authors
+:footer: View guidelines for authors »
 
-* **Reviewers**: provide feedback for improving the proposed plain and executable content of the notebook.
-View guidelines for reviewers
+Prepare, implement and report changes of the submitted notebook.
+:::
 
-* **Editors-in-Chief**: validate the notebook idea, make suggestions to improve it, prepare the notebook for its revision, assign editors, lead publishing and moderate post-publication.
-View guidelines for EiC
+:::{card}
+:url: ./guidelines-reviewers.md
+:header: Reviewers
+:footer: View guidelines for reviewers »
 
-* **Editors**: find reviewers, moderate the conversation between reviewers and authors. 
-View guidelines for editors
+Provide feedback for improving the proposed plain and executable content of the notebook.
+:::
 
-* **Community**: propose, explore and/or make constructive comments of the notebook at the idea stage (optional) or after publication. 
-View guidelines for community
+:::{card}
+:url: ./guidelines-eic.md
+:header: Editors-in-Chief
+:footer: View guidelines for EiC »
 
-* **Readers/Users**: to read/share content, occasionally raise errors such as typos and bugs and fix them.
+Validate the notebook idea, make suggestions to improve it, prepare the notebook for its revision, assign editors, lead publishing and moderate post-publication.
+:::
 
-The table below indicates the key roles within the publication of EDS book notebooks according to the steps mentioned above. 
+:::{card}
+:url: ./guidelines-editors.md
+:header: Editors
+:footer: View guidelines for editors »
+
+Find reviewers, moderate the conversation between reviewers and authors. 
+:::
+::::
+
+:::{card}
+:url: ./guidelines-community.md
+:header: Community
+:footer: View guidelines for community »
+
+Propose, explore and/or make constructive comments of the notebook at the idea stage (optional) or after publication. 
+:::
+
+
+
+The table below indicates the key roles within the publication of EDS book notebooks according to the publication steps mentioned above. 
 Mandatory and optional participation are illustrated by ✅ and ⭕ icons, respectively.
 
-| Stage                   |      Where in GitHub      | Authors | Reviewers | Editors-in-Chief | Editors | Community | 
-|:------------------------|:-------------------------:|:-------:|:---------:|:----------------:|:-------:|:---------:|
-| Notebook idea           |    EDS repo (*issues*)    |    ✅    |           |        ✅         |         |     ⭕     |
-| Preparation             |    EDS repo (*issues*)    |    ✅    |           |        ✅         |         |           |
-| Prereview and Review    |    EDS repo (*issues*)    |    ✅    |     ✅     |        ✅         |    ✅    |           |
-| Post-print              | EDS repo (*pull request*) |    ✅    |     ⭕     |        ✅         |         |           |
-| Publication             | EDS repo (*main branch*)  |   ⭕ ️   |           |        ✅         |         |           |
-| Post-publication        | Notebook repo (*issues*)  |   ⭕ ️   |           |        ✅         |         |     ✅     |
+| Stage                   |        Where in GitHub         | Authors | Reviewers | Editors-in-Chief | Editors | Community | 
+|:------------------------|:------------------------------:|:-------:|:---------:|:----------------:|:-------:|:---------:|
+| Notebook idea           |      EDS repo (*issues*)       |    ✅    |           |        ✅         |         |     ⭕     |
+| Preparation             |      EDS repo (*issues*)       |    ✅    |           |        ✅         |         |           |
+| Prereview and Review    |      EDS repo (*issues*)       |    ✅    |     ✅     |        ✅         |    ✅    |           |
+| Post-print              | Notebook repo (*pull request*) |    ✅    |     ⭕     |        ✅         |         |           |
+| Publication             | Notebook repo (*main branch*)  |   ⭕ ️   |           |        ✅         |         |           |
+| Post-publication        |    Notebook repo (*issues*)    |   ⭕ ️   |           |        ✅         |         |     ✅     |
 
 ### Conflict of interest
 The definition of a conflict of Interest in peer review is a circumstance that makes you “unable to make an impartial scientific judgement or evaluation” (PNAS Conflict of Interest Policy). 
@@ -151,9 +191,15 @@ _EDS book_ follows the [all-contributors](https://allcontributors.org) specifica
 The all-contributors bot usage is described [here](https://allcontributors.org/docs/en/bot/usage).
 You can see a list of current contributors [here](https://github.com/alan-turing-institute/environmental-ds-book/blob/master/contributors.md). 
 
-# Code of Conduct
+## Need Help?
+If you’re stuck or need assistance:
+
+* Reach out via email to environmental.ds.book@gmail.com for personalised assistance.
+* Consider attending our coworking sessions (See [community](./community.md) for more details).
+
+## Code of Conduct
 Please note that EDS book open-source repository and community are aligned with a [Contributor Code of Conduct](../CODE_OF_CONDUCT.md). 
 By contributing to EDS book you agree to abide by its terms.
 
-### Attribution 
+## Attribution 
 Some material in this section and derived guidelines have been adapted from [Neurolibre](https://docs.neurolibre.org/en/latest/REVIEWER.html), the [Journal of Open Source Education](https://openjournals.readthedocs.io/en/jose/index.html) and [pyOpenSci](https://www.pyopensci.org/software-peer-review/index.html) reviewing guidelines, released under CC BY 3.0, CC BY 4.0 and CC BY-SA 4.0, respectively.
