@@ -2,14 +2,14 @@
 
 # About
 
-Notebooks has been an excellent tool for prototyping and writing examples to showcase computational analyses {cite}`10.1371/journal.pcbi.1007007`.
+Notebooks has been an excellent tool for prototyping and writing examples to showcase computational analyses [@Rule2019].
 EDS book complements the science and methodological development of academic journals by translating research outputs into FAIR notebooks using open infrastructure and open review ([](#notebook-cycle)).
 
 ```{figure} images/notebook-cycle.jpg
 :label:notebook-cycle
 :alt: The Environmental Data Science project aims to engage the wider scientific research community on information extraction and analysis from environmental sensors using innovative data science.
 
-The EDS Book community supports and connects environmental scientists and practitioners to communicate their science through customisable interactive notebooks which benefit from a collaborative reviewing process. Illustration by Scriberia as part of _The Turing Way_ book dash in November 2022. Zenodo. [http://doi.org/10.5281/zenodo.7587336](http://doi.org/10.5281/zenodo.7587336)
+The EDS Book community supports and connects environmental scientists and practitioners to communicate their science through customisable interactive notebooks which benefit from a collaborative reviewing process. Illustration by Scriberia as part of _The Turing Way_ book dash in November 2022. Zenodo. [http://doi.org/10.5281/zenodo.7587336](http://doi.org/10.5281/zenodo.7587336).
 ```
 
 # Vision
@@ -37,7 +37,7 @@ For more information on who can contribute, please see [the contributors section
 EDS book notebooks contributes to open, collaborative and transparent Environmental science. 
 A shared goal among our community-driven notebooks is to increase awareness and demonstrate open-source software developments and open data suited to Environmental science. 
 
-EDS book notebooks support FAIR principles for research software (FAIR4RS){cite}`Barker2022-FAIR4RS` as describe below:
+EDS book notebooks support FAIR principles for research software (FAIR4RS) [@Barker2022-FAIR4RS] as describe below:
 
 - **F - Findable. Software, and its associated metadata, is easy for both humans and machines to find**: 
    - All notebooks are hosted as separate repositories in [the EDS Book GitHub organisation](https://github.com/eds-book).
@@ -85,7 +85,7 @@ For more about ReviewNB, see in https://blog.reviewnb.com/.
 
 ## RoHub
 
-RoHub is a Research Object management platform {cite}`rohub-2018` that enables researchers to collaboratively manage, share and preserve their research work (data, software, workflows, models, presentations, videos, articles, etc.). 
+RoHub [@rohub-2018] is a Research Object management platform that enables researchers to collaboratively manage, share and preserve their research work (data, software, workflows, models, presentations, videos, articles, etc.). 
 RoHub implements the full RO model and paradigm: resources associated to a particular research work are aggregated into a single FAIR digital object, and metadata relevant for understanding and interpreting the content is represented as semantic metadata that are user and machine-readable.
 All EDS book notebooks are findable in RoHub.
 RoHub allows tracking all research life cycle and derivative work of EDS book notebooks.
