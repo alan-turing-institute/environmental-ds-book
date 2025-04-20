@@ -49,7 +49,7 @@ We describe two defined roles for contributing to the core repository:
 ::::{grid} 1 2 2 2
 :::{card}
 :header: Maintainers/Developers
-Provide support with keeping the existing source code updated by keeping track of new contributions and/or update versions of the Jupyter book.
+Keep the source code updated, track new contributions and/or implement features.
 :::
 
 :::{card}
