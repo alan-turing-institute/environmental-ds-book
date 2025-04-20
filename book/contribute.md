@@ -140,7 +140,7 @@ Provide feedback for improving the proposed plain and executable content of the 
 :header: Editors-in-Chief
 :footer: View guidelines for EiC »
 
-Validate the notebook idea, make suggestions to improve it, prepare the notebook for its revision, assign editors, lead publishing and moderate post-publication.
+Validate the notebook idea, prepare the notebook for its revision, assign editors, lead publishing and post-publication.
 :::
 
 :::{card}
