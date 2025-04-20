@@ -5,10 +5,11 @@
 Contributions are welcome, and they are greatly appreciated! 
 Every little bit helps, and credit will always be given.
 
-This section provides a high-level guide to contributing to EDS book via the [core repository](#core-repository) and/or [notebook submissions](#notebooks).
+This section provides a high-level guide to contributing to EDS book via the [core repository](#contribute-repository) and/or [notebook submissions](#contribute-notebooks).
 We encourage you to read through the following sections to learn more about how you can contribute.
 If you find that you have questions that are not discussed below, please let us know through one of the many ways to get in touch.
 
+(contribute-repository)=
 ## Core repository
 
 ### Structure
@@ -57,6 +58,7 @@ Read/share content, occasionally raise errors such as typos and bugs and fix the
 :::
 ::::
 
+(contribute-notebooks)=
 ## Notebooks
 
 ### Scope
