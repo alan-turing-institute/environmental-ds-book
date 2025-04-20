@@ -40,7 +40,7 @@ The current version of the book consists of six key sections:
 * **Gallery**: contains all published notebooks listed within a gridded gallery.
 * **Contribute**: provides a high-level guide to contributing to EDS book.
 * **Guidelines**: contains guidelines to publish notebooks in EDS book.
-* **Community**: compiles community-related resources such as activities in various open science communities and shared notes of EDS book co-working meetings.
+* **Community**: compiles community-related resources such as communication/support channels and a list of open research communities where EDS book members have contributed.
 * **Cite**: indicates how to cite the core EDS book repository and published notebooks.
 
 ### Who can contribute
