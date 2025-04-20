@@ -32,7 +32,7 @@ The public GitHub repository has the following structure:
 The `.github folder` refers to GitHub related deployment files and templates of issues/pull requests usually curated by the repository maintainers or developers. 
 The `book folder` holds the website content and other relevant files (e.g. configuration files).
 
-The `myst.yml` configuration file dictates the `project` and `site` configurations. 
+The `myst.yml` file dictates the `project` and `site` configurations. 
 For instance, the `project` part declares the table of content i.e. sections found in the ``book`` folder. 
 The current version of the book consists of six key sections:
 
