@@ -26,7 +26,7 @@ The forked notebook should generate the same outputs as the initial repository h
 
 Before moving to PRE-REVIEW, EiC open a new issue `Preparation` in the notebook repository and complete the checklist below: 
 
-```{include} ../../templates/editor-in-chief/eic-preparation-checklist.md
+```{include} templates/editor-in-chief/eic-preparation-checklist.md
 ```
 
 ## Pre-review

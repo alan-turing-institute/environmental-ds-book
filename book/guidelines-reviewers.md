@@ -32,7 +32,7 @@ Please contact the editor directly or in the REVIEW issue thread to inform possi
 
 To review a notebook, we provide a review template (see below) with a checklist.
 
-```{include} ../../templates/reviewers/reviewers-review-checklist.md
+```{include} templates/reviewers/reviewers-review-checklist.md
 ```
 
 The checklist will be available per reviewer within the first comment of the notebook REVIEW issue created by EiC.

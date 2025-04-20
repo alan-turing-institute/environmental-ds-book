@@ -30,7 +30,7 @@ If the editor feels particularly unsure of the submission, a third reviewer can 
 
 If you wish, you can use the email template below to invite reviewers.
 
-```{include} ../../templates/editor/editor-review-invitation.md
+```{include} templates/editor/editor-review-invitation.md
 ```
 
 Once reviewers have been found, the editor will update the heading at the top of the issue with [REVIEWER1 GITHUB HANDLE], [REVIEWER2 GITHUB HANDLE] after **Reviewer:** section.
