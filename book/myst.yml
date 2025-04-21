@@ -9,6 +9,7 @@ project:
     code: MIT
     content: CC-BY-4.0
   abbreviations:
+    CoC: Code of Conduct
     EiC: Editor-in-Chief
     FAIR: Findable, Accessible, Interoperable and Reusable
     NBI: Notebook Idea
