@@ -9,7 +9,7 @@ EDS book complements the science and methodological development of academic jour
 :label:notebook-cycle
 :alt: The Environmental Data Science project aims to engage the wider scientific research community on information extraction and analysis from environmental sensors using innovative data science.
 
-The EDS Book community supports and connects environmental scientists and practitioners to communicate their science through customisable interactive notebooks which benefit from a collaborative reviewing process. Illustration by Scriberia as part of _The Turing Way_ book dash in November 2022. Zenodo. [http://doi.org/10.5281/zenodo.7587336](http://doi.org/10.5281/zenodo.7587336).
+The EDS book community supports and connects environmental scientists and practitioners to communicate their science through customisable interactive notebooks which benefit from a collaborative reviewing process. Illustration by Scriberia as part of _The Turing Way_ book dash in November 2022. Zenodo. [http://doi.org/10.5281/zenodo.7587336](http://doi.org/10.5281/zenodo.7587336).
 ```
 
 # Vision
@@ -40,9 +40,9 @@ A shared goal among our community-driven notebooks is to increase awareness and 
 EDS book notebooks support FAIR principles for research software (FAIR4RS) [@Barker2022-FAIR4RS] as describe below:
 
 - **F - Findable. Software, and its associated metadata, is easy for both humans and machines to find**: 
-   - All notebooks are hosted as separate repositories in [the EDS Book GitHub organisation](https://github.com/eds-book).
+   - All notebooks are hosted as separate repositories in [the EDS book GitHub organisation](https://github.com/eds-book).
    - Rendered versions of notebooks are indexed and centralized into a [core repository](https://github.com/alan-turing-institute/environmental-ds-book/) hosted at the Alan Turing Institute GitHub organisation. 
-   - Notebooks metadata is accessible through [ROHub](https://reliance.rohub.org/), a Research Object management platform that enables researchers to collaboratively manage, share and preserve their research work (read further in [the technologies sections of EDS book notebooks](#about-technologies)). 
+   - Notebooks metadata is accessible through [ROHub](https://reliance.rohub.org/), a Research Object management platform that enables researchers to collaboratively manage, share and preserve their research work (read further in [the technologies sections of EDS book](#about-technologies)). 
 - **A - Accessible. Software, and its metadata, is retrievable via standardised protocols**: 
   - Notebooks repositories can be retrieved from git clone.
   - RoHub curates EDS book notebooks with their metadata using [Research Object Crate (RO-Crate)](https://www.researchobject.org/ro-crate/). 
