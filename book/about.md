@@ -42,7 +42,7 @@ EDS book notebooks support FAIR principles for research software (FAIR4RS) [@Bar
 - **F - Findable. Software, and its associated metadata, is easy for both humans and machines to find**: 
    - All notebooks are hosted as separate repositories in [the EDS book GitHub organisation](https://github.com/eds-book).
    - Rendered versions of notebooks are indexed and centralized into a [core repository](https://github.com/alan-turing-institute/environmental-ds-book/) hosted at the Alan Turing Institute GitHub organisation. 
-   - Notebooks metadata is accessible through [ROHub](https://reliance.rohub.org/), a Research Object management platform that enables researchers to collaboratively manage, share and preserve their research work (read further in [the technologies sections of EDS book](#about-technologies)). 
+   - Notebooks metadata is accessible through [ROHub](https://reliance.rohub.org/), a Research Object management platform that enables researchers to collaboratively manage, share and preserve their research work (read further in [the technologies section](#about-technologies)). 
 - **A - Accessible. Software, and its metadata, is retrievable via standardised protocols**: 
   - Notebooks repositories can be retrieved from git clone.
   - RoHub curates EDS book notebooks with their metadata using [Research Object Crate (RO-Crate)](https://www.researchobject.org/ro-crate/). 
