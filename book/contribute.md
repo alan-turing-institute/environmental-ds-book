@@ -98,7 +98,7 @@ Editors-in-Chief (EiC) validates the proposed notebook with a general feedback i
 
 * **Preparation**: authors prepare a first working (and reproducible) version of the notebook with a notification to EiC. The notebook repository should be hosted in a personal GitHub account.
 EiC verify the notebook runs in Binder and confirms its feasibility. 
-After the Binder checkpoint, EiC transfer the notebook repository from the personal GitHub account to the [eds-book-gallery](https://github.com/eds-book-gallery) organisation. 
+After the Binder checkpoint, EiC transfer the notebook repository from the personal GitHub account to the [eds-book](https://github.com/eds-book) organisation. 
 
 * **Pre-review and review**: EiC open a *PRE-REVIEW* issue to assign an editor. 
 The assigned editor should find 2 reviewers to start the review process. 
