@@ -189,7 +189,7 @@ We recognise all kinds of contributions, from fixing small errors, to developing
 
 _EDS book_ follows the [all-contributors](https://allcontributors.org) specifications.
 The all-contributors bot usage is described [here](https://allcontributors.org/docs/en/bot/usage).
-You can see a list of current contributors [here](https://github.com/alan-turing-institute/environmental-ds-book/blob/master/contributors.md). 
+You can see a list of contributors [here](https://github.com/alan-turing-institute/environmental-ds-book?tab=readme-ov-file#contributors). 
 
 (contribute-help)=
 ## Need Help?
