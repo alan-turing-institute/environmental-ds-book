@@ -7,7 +7,7 @@ Every little bit helps, and credit will always be given.
 
 This section provides a high-level guide to contributing to EDS book via the [core repository](#contribute-repository) and/or [notebook submissions](#contribute-notebooks).
 We encourage you to read through the following sections to learn more about how you can contribute.
-If you find that you have questions that are not discussed below, please let us know through one of the many ways to get in touch.
+If you find that you have questions that are not discussed below, please let us know through one of the many ways to [get in touch]((#contribute-help).
 
 (contribute-repository)=
 ## Core repository
@@ -160,8 +160,6 @@ Find reviewers, moderate the conversation between reviewers and authors.
 Propose, explore and/or make constructive comments of the notebook at the idea stage (optional) or after publication. 
 :::
 
-
-
 The table below indicates the key roles within the publication of EDS book notebooks according to the publication steps mentioned above. 
 Mandatory and optional participation are illustrated by ✅ and ⭕ icons, respectively.
 
@@ -193,6 +191,7 @@ _EDS book_ follows the [all-contributors](https://allcontributors.org) specifica
 The all-contributors bot usage is described [here](https://allcontributors.org/docs/en/bot/usage).
 You can see a list of current contributors [here](https://github.com/alan-turing-institute/environmental-ds-book/blob/master/contributors.md). 
 
+(contribute-help)=
 ## Need Help?
 If you’re stuck or need assistance:
 
