@@ -63,7 +63,7 @@ Since the official launch of EDS book in December 2021, the community has succes
 This section indicates the main technologies for EDS book and published notebooks.
 
 ## MyST
-{abbr}`MyST (Markedly Structured Text)` is an open-source, community-driven markup language project building upon [CommonMark](https://commonmark.org/) (a standard form of Markdown) with special syntax extensions [](doi:10.25080/NKVC9349).
+{abbr}`MyST (Markedly Structured Text)` is an open-source, community-driven markup language project building upon [CommonMark](https://commonmark.org/) (a standard form of Markdown) with special syntax extensions [@Cockett_2024].
 In 2022, the [Executable Books project](https://executablebooks.org), which hosts Jupyter Book and MyST, started work on the `mystmd` command line interface (CLI), which was initially developed  as the Curvenote CLI, and later transferred to the ExecutableBooks project.
 In June 2024, MyST Markdown officially became part of Project Jupyters.
 For EDS book, [Jupyter Book](https://next.jupyterbook.org), a distribution of the MyST Document Engine, is used to render the content of the book and notebooks.
