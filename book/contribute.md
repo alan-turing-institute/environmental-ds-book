@@ -16,7 +16,7 @@ If you find that you have questions that are not discussed below, please let us 
 The public GitHub repository has the following structure:
 
 ```
-| Environmental Data Science Book
+| Environmental Data Science book
 | ├── **/.github**
 | │   ├── ISSUE_template
 | │   ├── workflows
@@ -163,14 +163,14 @@ Propose, explore and/or make constructive comments of the notebook at the idea s
 The table below indicates the key roles within the publication of EDS book notebooks according to the publication steps mentioned above. 
 Mandatory and optional participation are illustrated by ✅ and ⭕ icons, respectively.
 
-| Stage                   |        Where in GitHub         | Authors | Reviewers | Editors-in-Chief | Editors | Community | 
-|:------------------------|:------------------------------:|:-------:|:---------:|:----------------:|:-------:|:---------:|
-| Notebook idea           |      EDS repo (*issues*)       |    ✅    |           |        ✅         |         |     ⭕     |
-| Preparation             |      EDS repo (*issues*)       |    ✅    |           |        ✅         |         |           |
-| Prereview and Review    |      EDS repo (*issues*)       |    ✅    |     ✅     |        ✅         |    ✅    |           |
-| Post-print              | Notebook repo (*pull request*) |    ✅    |     ⭕     |        ✅         |         |           |
-| Publication             | Notebook repo (*main branch*)  |   ⭕ ️   |           |        ✅         |         |           |
-| Post-publication        |    Notebook repo (*issues*)    |   ⭕ ️   |           |        ✅         |         |     ✅     |
+| Stage                |        Where in GitHub         | Authors | Reviewers | Editors-in-Chief | Editors | Community | 
+|:---------------------|:------------------------------:|:-------:|:---------:|:----------------:|:-------:|:---------:|
+| Notebook idea        |      EDS repo (*issues*)       |    ✅    |           |        ✅         |         |     ⭕     |
+| Preparation          | Notebook repo (*pull request*) |    ✅    |           |        ✅         |         |           |
+| Prereview and Review |      EDS repo (*issues*)       |    ✅    |     ✅     |        ✅         |    ✅    |           |
+| Post-print           | Notebook repo (*pull request*) |    ✅    |     ⭕     |        ✅         |         |           |
+| Publication          | Notebook repo (*main branch*)  |   ⭕ ️   |           |        ✅         |         |           |
+| Post-publication     |    Notebook repo (*issues*)    |   ⭕ ️   |           |        ✅         |         |     ✅     |
 
 ### Conflict of interest
 The definition of a conflict of Interest in peer review is a circumstance that makes you “unable to make an impartial scientific judgement or evaluation” (PNAS Conflict of Interest Policy). 
