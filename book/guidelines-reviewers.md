@@ -21,7 +21,7 @@ An editor will confirm reviewers interest to review the notebook by tagging them
 The PRE-REVIEW contains some relevant information of the notebook including a link to the notebook idea issue. 
 
 ## Review
-After confirming reviewers availability, Editors-in-Chief (EiC) opens a REVIEW issue to moderate a high-level discussion between notebook authors and reviewers. 
+After confirming reviewers availability, Editor-in-Chief (EiC) opens a REVIEW issue to moderate a high-level discussion between notebook authors and reviewers. 
 
 ```{important}
 Reviewers will be asked to conduct the review within **2 weeks** of accepting the invitation by the assigned editor. 

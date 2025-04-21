@@ -94,7 +94,7 @@ EDS notebooks are categorized under four proposed topics or themes:
 The main steps when submitting and publishing EDS book notebooks are:
 
 * **Notebook idea**: authors open a [notebook idea issue](https://github.com/alan-turing-institute/environmental-ds-book/issues/new/choose) in the main EDS book repository. 
-Editors-in-Chief (EiC) validates the proposed notebook with a general feedback including potential datasets/methods/tools to be considered.
+Editor-in-Chief (EiC) validates the proposed notebook with a general feedback including potential datasets/methods/tools to be considered.
 
 * **Preparation**: authors prepare a first working (and reproducible) version of the notebook with a notification to EiC. The notebook repository should be hosted in a personal GitHub account.
 EiC verify the notebook runs in Binder and confirms its feasibility. 
@@ -137,7 +137,7 @@ Provide feedback for improving the proposed plain and executable content of the 
 
 :::{card}
 :url: ./guidelines-eic.md
-:header: Editors-in-Chief
+:header: Editor-in-Chief
 :footer: View guidelines for EiC »
 
 Validate the notebook idea, prepare the notebook for its revision, assign editors, lead publishing and post-publication.
@@ -163,14 +163,14 @@ Propose, explore and/or make constructive comments of the notebook at the idea s
 The table below indicates the key roles within the publication of EDS book notebooks according to the publication steps mentioned above. 
 Mandatory and optional participation are illustrated by ✅ and ⭕ icons, respectively.
 
-| Stage                |        Where in GitHub         | Authors | Reviewers | Editors-in-Chief | Editors | Community | 
-|:---------------------|:------------------------------:|:-------:|:---------:|:----------------:|:-------:|:---------:|
-| Notebook idea        |      EDS repo (*issues*)       |    ✅    |           |        ✅         |         |     ⭕     |
-| Preparation          | Notebook repo (*pull request*) |    ✅    |           |        ✅         |         |           |
-| Prereview and Review |      EDS repo (*issues*)       |    ✅    |     ✅     |        ✅         |    ✅    |           |
-| Post-print           | Notebook repo (*pull request*) |    ✅    |     ⭕     |        ✅         |         |           |
-| Publication          | Notebook repo (*main branch*)  |   ⭕ ️   |           |        ✅         |         |           |
-| Post-publication     |    Notebook repo (*issues*)    |   ⭕ ️   |           |        ✅         |         |     ✅     |
+| Stage                |        Where in GitHub         | Authors | Reviewers | Editor-in-Chief | Editors | Community | 
+|:---------------------|:------------------------------:|:-------:|:---------:|:---------------:|:-------:|:---------:|
+| Notebook idea        |      EDS repo (*issues*)       |    ✅    |           |        ✅        |         |     ⭕     |
+| Preparation          | Notebook repo (*pull request*) |    ✅    |           |        ✅        |         |           |
+| Prereview and Review |      EDS repo (*issues*)       |    ✅    |     ✅     |        ✅        |    ✅    |           |
+| Post-print           | Notebook repo (*pull request*) |    ✅    |     ⭕     |        ✅        |         |           |
+| Publication          | Notebook repo (*main branch*)  |   ⭕ ️   |           |        ✅        |         |           |
+| Post-publication     |    Notebook repo (*issues*)    |   ⭕ ️   |           |        ✅        |         |     ✅     |
 
 ### Conflict of interest
 The definition of a conflict of Interest in peer review is a circumstance that makes you “unable to make an impartial scientific judgement or evaluation” (PNAS Conflict of Interest Policy). 
