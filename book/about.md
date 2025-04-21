@@ -9,7 +9,7 @@ EDS book complements the science and methodological development of academic jour
 :label:notebook-cycle
 :alt: The Environmental Data Science project aims to engage the wider scientific research community on information extraction and analysis from environmental sensors using innovative data science.
 
-The EDS book community supports and connects environmental scientists and practitioners to communicate their science through customisable interactive notebooks which benefit from a collaborative reviewing process. Illustration by Scriberia as part of _The Turing Way_ book dash in November 2022. Zenodo. [http://doi.org/10.5281/zenodo.7587336](http://doi.org/10.5281/zenodo.7587336).
+The EDS book community supports and connects environmental scientists and practitioners to communicate their science through customisable interactive notebooks which benefit from a collaborative reviewing process. Illustration by Scriberia as part of _The Turing Way_ book dash in November 2022 [@ttw-scriberia_illustrations].
 ```
 
 # Vision
