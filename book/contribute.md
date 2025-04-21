@@ -6,8 +6,16 @@ Contributions are welcome, and they are greatly appreciated!
 Every little bit helps, and credit will always be given.
 
 This section provides a high-level guide to contributing to EDS book via the [core repository](#contribute-repository) and/or [notebook submissions](#contribute-notebooks).
-We encourage you to read through the following sections to learn more about how you can contribute.
-If you find that you have questions that are not discussed below, please let us know through one of the many ways to [get in touch]((#contribute-help).
+We encourage you to read through the following sections to learn more about how you can contribute under open review principles ([](#open-review)).
+
+```{figure} images/open-peer-review.jpg
+:label: open-review
+:alt: Scriberia illustration showcasing some features of the Open Peer Review process. The figure has a title Open Peer Review with a three layer cake. The top layer of the cake has three individuals (authors) looking at a document with a subtitle Supporting Quality. The mid layer has five individuals, one of them in a wheelchair, looking at the top floor. Three of the individuals have a comment icon with an eye symbol referring to transparency. The bottom layer has seven individuals, five of them with the eye comment icon, representing that they are reviewing the 'cake', or paper. The left side of the cake has an individual with the subtitle recognition. The right side has a paper with some annotations of the review process with the subtitle content and process.
+
+EDS book follows open review principles where identities, participation, interactions are publicly available and acknowledged. Illustration by Scriberia as part of _The Turing Way_ book dash in May 2023 [@ttw-scriberia_illustrations].
+```
+
+If you find that you have questions that are not discussed below, please let us know through one of the many ways to [get in touch](#contribute-help).
 
 (contribute-repository)=
 ## Core repository
