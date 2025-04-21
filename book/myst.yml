@@ -13,6 +13,7 @@ project:
     EiC: Editor-in-Chief
     FAIR: Findable, Accessible, Interoperable and Reusable
     NBI: Notebook Idea
+    PR: Pull Request
   # description:
   # keywords: []
   # authors: []
