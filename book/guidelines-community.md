@@ -23,7 +23,7 @@ Please refer to the section of Notebook Idea in the [guidelines for authors](#pb
 
 ## Post-publication
 We encourage post-publication feedback from anyone interested in published notebooks in EDS book.
-You can report bugs and derivative work in the notebook repository hosted by the [eds-book-gallery organisation](https://github.com/eds-book-gallery) (see for instance a [PR](https://github.com/eds-book-gallery/forest-modelling-treecrown_deepforest/pull/1) in the DeepForest notebook). 
+You can report bugs and derivative work in the notebook repository hosted by the [eds-book organisation](https://github.com/eds-book) (see for instance a [PR](https://github.com/eds-book-gallery/forest-modelling-treecrown_deepforest/pull/1) in the DeepForest notebook). 
 
 Editors-in-Chief will contact notebook authors when changes are considerably relevant for either narrative or interactive contents.
 If the authors consider suggestions as a substantial contribution, EiC will acknowledge it by adding the contributor's name to the citation of the notebook.

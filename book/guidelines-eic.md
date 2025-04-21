@@ -20,7 +20,7 @@ In this step, we suggest providing feedback to the notebook idea.
 EiC validate how reproducible is the notebook and its feasibility for the reviewing stage. 
 This process is aided by the Binder badge in a PR in the corresponding author's notebook repository.
 
-After validating a minimal working version, EiC fork the notebook repository to the [Environmental Data Science book organisation](https://github.com/eds-book-gallery). 
+After validating a minimal working version, EiC fork the notebook repository to the [Environmental Data Science book organisation](https://github.com/eds-book). 
 
 The forked notebook should generate the same outputs as the initial repository hosted in the GitHub account of the corresponding author. 
 

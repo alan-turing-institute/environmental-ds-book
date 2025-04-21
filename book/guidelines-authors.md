@@ -26,9 +26,9 @@ Submitting a NBI is as simple as:
 
 ## Preparation
 After validating the notebook idea, a first draft of the notebook should be created by using a notebook repository template according to the target programming language:
-* [Python](https://github.com/eds-book-gallery/template_python)
-* [R](https://github.com/eds-book-gallery/template_r)
-* [Julia](https://github.com/eds-book-gallery/template_julia)
+* [Python](https://github.com/eds-book/template_python)
+* [R](https://github.com/eds-book/template_r)
+* [Julia](https://github.com/eds-book/template_julia)
 
 The repository templates are adapted from [2i2c hub-user-image-template](https://github.com/2i2c-org/hub-user-image-template). 
 The corresponding author should open a Pull Request to start editing the notebook and dependencies files. 
@@ -46,7 +46,7 @@ Some general guidelines are:
 When the minimal working version of the notebook is ready, authors should tag EiC in the PR with the latest Binder badge.
 EiC will check how reproducible is the notebook and its feasibility for the reviewing stage. 
 
-After EiC's approval of the draft version of the notebook, the EiC will fork the notebook repository to the [eds-book-gallery](https://github.com/eds-book-gallery) organisation. 
+After EiC's approval of the draft version of the notebook, the EiC will fork the notebook repository to the [eds-book](https://github.com/eds-book) organisation. 
 
 EiC will assist you to prepare the notebook repository for the review process.
 
@@ -68,7 +68,7 @@ Authors should address reviewers suggestions according to their relevance.
 Each reviewer is guided by a checklist which facilitate to evaluate the notebook.
 Reviewers are encouraged to make detailed comments directly to the notebook repo.
 To facilitate the conversation, EiC opens a `review` PR in the notebook repository where authors and reviewers carry out a detailed discussion through ReviewNB, a third-party plugin in GitHub for displaying and commenting Jupyter Notebooks (see further details [here](../about/notebooks-technologies.md)).
-Authors should implement relevant changes in the notebook repository hosted in their personal GitHub account, and submit changes to the `review` branch created by EiC (for example, see [here](https://github.com/eds-book-gallery/67a1e320-7c47-4ea9-8df8-e868326bc90b/pull/6) a PR submitted from the author of the IceNet Python API notebook).
+Authors should implement relevant changes in the notebook repository hosted in their personal GitHub account, and submit changes to the `review` branch created by EiC (for example, see [here](https://github.com/eds-book/67a1e320-7c47-4ea9-8df8-e868326bc90b/pull/6) a PR submitted from the author of the IceNet Python API notebook).
 EiC will merge changes into the `review` PR.
 The editor should ask reviewers to re-evaluate the notebook.
 
