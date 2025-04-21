@@ -16,7 +16,7 @@ Our review process aims to be open, collaborative, transparent and inclusive.
 ## Notebook Idea
 In this step, we suggest providing feedback to the notebook idea.
 
-## Notebook Repository
+## Preparation
 EiC validate how reproducible is the notebook and its feasibility for the reviewing stage. 
 This process is aided by the Binder badge in a PR in the corresponding author's notebook repository.
 

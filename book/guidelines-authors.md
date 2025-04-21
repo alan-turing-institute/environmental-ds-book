@@ -24,7 +24,7 @@ Submitting a NBI is as simple as:
 * Wait for Editors-in-Chief (EiC) and/or community (optional) to provide feedback.
 * Once you get a minimal and satisfactory feedback, we encourage to start preparing the notebook repository.
 
-### Notebook Repository
+## Preparation
 After validating the notebook idea, a first draft of the notebook should be created by using a notebook repository template according to the target programming language:
 * [Python](https://github.com/eds-book-gallery/template_python)
 * [R](https://github.com/eds-book-gallery/template_r)
