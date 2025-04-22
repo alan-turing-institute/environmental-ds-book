@@ -83,12 +83,16 @@ Here’s what some of our contributors say:
 There was a learning curve, but it helped me gain exposure to different technologies along with other people's work in Environmental Science. 
 I hope to make far-reaching impact through this work”_ 
 > 
-> -- Timothy Lam, Author
+> -- Timothy Lam (he/him), Author
 
 > _"Contributing to the EDS book has been an extremely valuable and enjoyable experience for me, giving me an insight into how open-source software development and code/book authorship can work within a more traditional scientific peer-review framework. 
 Gaining this hands-on experience whilst learning about interesting environmental science applications has been one of the highlights of my PhD studies."_ 
 > 
-> -- Nick Homer, Reviewer
+> -- Nick Homer (he/him), Reviewer
+
+> _"I joined the EDS Book community in 2022 while working on the RELIANCE European project, which aimed to support Earth Science researchers and Copernicus users through the European Open Science Cloud (EOSC). At the time, we were heavily using Jupyter Notebooks via EGI’s newly launched EGI Notebooks service. While the platform was powerful, it quickly became clear that there was a need to improve how notebooks were written, shared, and maintained—especially in collaborative and interdisciplinary settings like environmental data science. That’s when I discovered the EDS Book. I was immediately drawn to the community-driven spirit of the initiative. EDS Book didn’t just offer guidance on tools and workflows—it offered a space to discuss and define what good practice looks like in environmental data science, with a strong emphasis on openness, reproducibility, and collaboration. Being part of EDS Book helped me better articulate and promote FAIR and open science practices within my own work and projects. It has also been a valuable space to exchange ideas with peers facing similar challenges. I would encourage anyone working in environmental data science—or teaching it—to support EDS Book. It's more than a book; it’s a growing, living community resource that helps move our field toward more robust, transparent, and impactful science."_ 
+> 
+> -- Anne (she/her), Contributor & Maintainer
 
 # Cite EDS book
 
