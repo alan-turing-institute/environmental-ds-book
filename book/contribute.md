@@ -119,7 +119,7 @@ EiC ask authors to proof-read the notebook and indicate any remaining typos, bad
 * **Publication**: EiC disseminate the publication through the official communication channels of the EDS book community e.g. [Bluesky](https://bsky.app/profile/eds-book.bsky.social), [Mastodon](https://fosstodon.org/@eds_book) and [LinkedIn](https://www.linkedin.com/company/edsbook/). 
 Authors and reviewers are welcome to use same or alternative communication channels of their preference.
 
-* **Post-publication**: Anyone from the EDS book community or registered in GitHub complying our [code of conduct](https://raw.githubusercontent.com/alan-turing-institute/environmental-ds-book/master/CODE_OF_CONDUCT.md) is welcome to suggest improvements and/or clarifications in the published notebook. 
+* **Post-publication**: Anyone from the EDS book community or registered in GitHub complying our [code of conduct](https://raw.githubusercontent.com/alan-turing-institute/environmental-ds-book/main/CODE_OF_CONDUCT.md) is welcome to suggest improvements and/or clarifications in the published notebook. 
 Where relevant, EiC will notify authors about proposed changes and their acceptance. If the authors consider suggestions as a substantial contribution, EiC will acknowledge it by adding the contributor's name to the citation of the notebook. 
 
 ### Who can contribute
