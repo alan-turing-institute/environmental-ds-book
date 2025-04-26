@@ -60,7 +60,8 @@ Since the official launch of EDS book in December 2021, the community has succes
 
 (about-technologies)=
 # Technologies 
-This section indicates the main technologies for EDS book and published notebooks.
+This section indicates the main technologies stack for EDS book and published notebooks. 
+We largely use and contribute to open infrastructure and open-source software to provide a collaborative and reproducible environment for our community.
 
 ## Binder
 The Binder project offers an easy place to share computing environments to everyone. 
