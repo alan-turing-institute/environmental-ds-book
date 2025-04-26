@@ -30,7 +30,7 @@ Before moving to PRE-REVIEW, EiC open a new issue `Preparation` in the notebook 
 ```
 
 ## Pre-review
-EiC open a [PRE-REVIEW issue](https://github.com/alan-turing-institute/environmental-ds-book/issues/new?assignees=&labels=prereview&projects=&template=prereview-template.md&title=%5BPRE+REVIEW%5D) containing all relevant information of the notebook including a link to the notebook idea issue.
+EiC open a PRE-REVIEW issue containing all relevant information of the notebook including a link to the notebook idea issue.
 
 EiC assign an editor to moderate the review and find reviewers.
 
