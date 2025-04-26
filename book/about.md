@@ -76,6 +76,13 @@ Besides the public service, we suggest launching notebooks in the [EGI BinderHub
 
 You can find out more about Project Binder on their About mybinder.org page.
 
+## Netlify
+Netlify is a cloud-based platform that provides hosting and serverless backend services for web applications and static websites.
+EDS book uses Netlify to host the static website of the book, which is built using Jupyter Book and MyST.
+Netlify provides a free tier for open-source projects, which allows EDS book to host the website without any cost.
+
+For more about Netlify, see in https://www.netlify.com/.
+
 ## MyST
 {abbr}`MyST (Markedly Structured Text)` is an open-source, community-driven markup language project building upon [CommonMark](https://commonmark.org/) (a standard form of Markdown) with special syntax extensions [@Cockett_2024].
 In 2022, the [Executable Books project](https://executablebooks.org), which hosts Jupyter Book and MyST, started work on the `mystmd` command line interface (CLI), which was initially developed  as the Curvenote CLI, and later transferred to the ExecutableBooks project.
