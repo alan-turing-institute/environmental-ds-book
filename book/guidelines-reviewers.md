@@ -5,7 +5,7 @@ Welcome to the guide for notebooks reviewers of the EDS book!
 
 Before you begin this process, please be sure to [understand how the publication process works](#contribute-notebooks).
 
-We have a [code of conduct](https://raw.githubusercontent.com/alan-turing-institute/environmental-ds-book/master/CODE_OF_CONDUCT.md) which is mandatory for everyone involved in the review process of our notebooks.
+We have a [code of conduct](https://raw.githubusercontent.com/alan-turing-institute/environmental-ds-book/main/CODE_OF_CONDUCT.md) which is mandatory for everyone involved in the review process of our notebooks.
 
 Below you will find the main steps we suggest to follow to review notebooks submitted to EDS book.
 
