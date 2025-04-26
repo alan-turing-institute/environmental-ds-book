@@ -108,10 +108,10 @@ Editor-in-Chief (EiC) validates the proposed notebook with a general feedback in
 EiC verify the notebook runs in Binder and confirms its feasibility. 
 After the Binder checkpoint, EiC transfer the notebook repository from the personal GitHub account to the [eds-book](https://github.com/eds-book) organisation. 
 
-* **Pre-review and review**: EiC open a *PRE-REVIEW* issue to assign an editor. 
+* **Pre-review and review**: EiC open a *PRE-REVIEW* issue at the [notebooks-reviews](https://github.com/eds-book/notebooks-reviews) repository to assign an editor. 
 The assigned editor should find 2 reviewers to start the review process. 
 Authors and reviewers work together to improve the plain and executable content of the notebook. 
-All proposed changes and conversations should be conducted within a *REVIEW* issue opened at the main EDS book repository. 
+All proposed changes and conversations should be conducted within a *REVIEW* issue opened at [notebooks-reviews](https://github.com/eds-book/notebooks-reviews) repository. 
 
 * **Post-print**: after reviewers and editor confirm their recommendation to accept the notebook for publication, EiC will share proofs (the draft of the final formatting) hosted as a Pull Request in the main repo of the EDS book.
 EiC ask authors to proof-read the notebook and indicate any remaining typos, badly formed citations, awkward wording, etc.
