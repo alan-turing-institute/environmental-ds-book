@@ -62,6 +62,20 @@ Since the official launch of EDS book in December 2021, the community has succes
 # Technologies 
 This section indicates the main technologies for EDS book and published notebooks.
 
+## Binder
+The Binder project offers an easy place to share computing environments to everyone. 
+It allows users to specify custom environments and share them with a single link. 
+Use cases involve workshops, scientific workflows and streamline sharing among teams.
+
+Binder is entirely powered by an open-source infrastructure stack. 
+Its main two tools are BinderHub, which is an open-source tool that deploys the Binder service in the cloud, and repo2docker, which generates reproducible Docker images from a git repository. 
+The Binder team also runs a public BinderHub deployment at mybinder.org as a free public service for the community.
+
+For EDS book notebooks, we use tbe public BinderHub to provide a cloud-based service for users to run notebooks without installing any software on their local machine.
+Besides the public service, we suggest launching notebooks in the [EGI BinderHub](https://replay.notebooks.egi.eu/) deployment, a private BinderHub instance hosted by the [European Grid Infrastructure](https://www.egi.eu/) (EGI) and the [European Open Science Cloud](https://eosc-portal.eu/) (EOSC) initiative.
+
+You can find out more about Project Binder on their About mybinder.org page.
+
 ## MyST
 {abbr}`MyST (Markedly Structured Text)` is an open-source, community-driven markup language project building upon [CommonMark](https://commonmark.org/) (a standard form of Markdown) with special syntax extensions [@Cockett_2024].
 In 2022, the [Executable Books project](https://executablebooks.org), which hosts Jupyter Book and MyST, started work on the `mystmd` command line interface (CLI), which was initially developed  as the Curvenote CLI, and later transferred to the ExecutableBooks project.
@@ -71,7 +85,7 @@ For EDS book, [Jupyter Book](https://next.jupyterbook.org), a distribution of th
 For more about MyST, see in https://mystmd.org/.
 
 ## ReviewNB
-The interaction between authors and reviewers in the notebook repository is facilitated through [ReviewNB](https://www.reviewnb.com/), a third-party plugin in GitHub for displaying and commenting Jupyter Notebooks. 
+The interaction between authors and reviewers in notebook submissions for EDS book is facilitated through [ReviewNB](https://www.reviewnb.com/), a third-party plugin in GitHub for displaying and commenting Jupyter Notebooks. 
 ReviewNB is a GitHub-verified marketplace app that renders all interactive HTML/JavaScript notebook outputs, except bokeh-related widgets. 
 The app allows commenting on rich diffs and it will render even the largest of notebooks without timing out.
 
