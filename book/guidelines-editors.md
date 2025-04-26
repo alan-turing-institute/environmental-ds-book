@@ -25,7 +25,7 @@ If you receive an invite as the editor by EiC, please response within **1 week**
 ### Finding Reviewers
 The editor's job is to identify reviewers (or validate authors' suggestions) who have sufficient expertise in the field of software and/in the domain of the submission. 
 EDS book notebooks have to have a minimum of two reviewers per submission.
-In some cases, the editor also might want to formally add themself as one of the reviewers. 
+In some cases, editors also might want to formally add themselves as one of the reviewers. 
 If the editor feels particularly unsure of the submission, a third reviewer can be recruited. 
 
 If you wish, you can use the email template below to invite reviewers.
