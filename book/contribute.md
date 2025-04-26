@@ -171,14 +171,14 @@ Propose, explore and/or make constructive comments of the notebook at the idea s
 The table below indicates the key roles within the publication of EDS book notebooks according to the publication steps mentioned above. 
 Mandatory and optional participation are illustrated by ✅ and ⭕ icons, respectively.
 
-| Stage                |          Where in GitHub           | Authors | Reviewers | Editor-in-Chief | Editors | Community | 
-|:---------------------|:----------------------------------:|:-------:|:---------:|:---------------:|:-------:|:---------:|
-| Notebook idea        |   notebooks-idea repo (*issues*)   |    ✅    |           |        ✅        |         |     ⭕     |
-| Preparation          |   notebook repo (*pull request*)   |    ✅    |           |        ✅        |         |           |
-| Prereview and Review | notebooks-reviews repo (*issues*)  |    ✅    |     ✅     |        ✅        |    ✅    |           |
-| Post-print           |   EDS book repo (*pull request*)   |    ✅    |     ⭕     |        ✅        |         |           |
-| Publication          |   EDS book repo (*main branch*)    |   ⭕ ️   |           |        ✅        |         |           |
-| Post-publication     |      notebook repo (*issues*)      |   ⭕ ️   |           |        ✅        |         |     ✅     |
+| Stage                | Authors | Reviewers | Editor-in-Chief | Editors | Community | 
+|:---------------------|:-------:|:---------:|:---------------:|:-------:|:---------:|
+| Notebook idea        |    ✅    |           |        ✅        |         |     ⭕     |
+| Preparation          |    ✅    |           |        ✅        |         |           |
+| Prereview and Review |    ✅    |     ✅     |        ✅        |    ✅    |           |
+| Post-print           |    ✅    |     ⭕     |        ✅        |         |           |
+| Publication          |   ⭕ ️   |           |        ✅        |         |           |
+| Post-publication     |   ⭕ ️   |           |        ✅        |         |     ✅     |
 
 ### Conflict of interest
 The definition of a conflict of Interest in peer review is a circumstance that makes you “unable to make an impartial scientific judgement or evaluation” (PNAS Conflict of Interest Policy). 
