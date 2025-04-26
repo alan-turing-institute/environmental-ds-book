@@ -19,7 +19,7 @@ In this step, we provide a transparent discussion space to validate notebooks id
 
 Submitting a NBI is as simple as:
 
-* Open a NBI [issue](https://github.com/alan-turing-institute/environmental-ds-book/issues/new/choose).
+* Open a NBI [issue](https://github.com/eds-book/notebooks-idea/issues/new/choose).
 * Fill the NBI template with some description of the notebook and information about the input data and target theme.
 * Wait for Editor-in-Chief (EiC) and/or community (optional) to provide feedback.
 * Once you get a minimal and satisfactory feedback, we encourage to start preparing the notebook repository.
