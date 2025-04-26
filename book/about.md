@@ -84,6 +84,13 @@ For EDS book, [Jupyter Book](https://next.jupyterbook.org), a distribution of th
 
 For more about MyST, see in https://mystmd.org/.
 
+## Quay.io
+Quay.io is a container registry that allows users to host and share container images.
+It is a service provided by Red Hat and is part of the OpenShift Container Platform.
+Quay.io is used to host the Docker images for the EDS book notebooks, which are built for executing the notebooks in GitHub and Binder.
+
+For more about Quay.io, see in https://quay.io/.
+
 ## ReviewNB
 The interaction between authors and reviewers in notebook submissions for EDS book is facilitated through [ReviewNB](https://www.reviewnb.com/), a third-party plugin in GitHub for displaying and commenting Jupyter Notebooks. 
 ReviewNB is a GitHub-verified marketplace app that renders all interactive HTML/JavaScript notebook outputs, except bokeh-related widgets. 
