@@ -17,7 +17,7 @@ We therefore welcome reviewers from a diversity of background and with varying l
 We encourage reviewers to adhere to the principles of the [Open Science Peer Review Oath](https://doi.org/10.12688/f1000research.5686.2).
 
 ## Pre-review
-An editor will confirm reviewers interest to review the notebook by tagging them into a PRE-REVIEW issue within the main EDS book repository.
+An editor will confirm reviewers interest to review the notebook by tagging them into a PRE-REVIEW issue within the [notebooks-reviews](https://github.com/eds-book/notebooks-reviews) repository.
 The PRE-REVIEW contains some relevant information of the notebook including a link to the notebook idea issue. 
 
 ## Review
