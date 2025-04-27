@@ -98,6 +98,13 @@ EDS notebooks are categorized under four proposed topics or themes:
 * **Modelling**: comprises models to analyse a given environmental system. 
 * **Post-processing**: refers to post-process routines to fine tune and/or adjust modelling outputs.
 
+### Repositories
+EDS book handles the publication process in multiple repositories hosted in the [eds-book](https://github.com/eds-book) organisation. We list below the main repositories and their purpose:
+- `core`: to host the book content and the website.
+- `notebooks-ideas`: to propose and validate early stage ideas of notebooks. 
+- `notebooks-reviews`: to review and discuss notebooks submitted to EDS book.
+- notebooks templates: to provide templates for starting a first draft of a notebook. Available in three different programming languages: Python, R and Julia.
+
 ### Publication process
 The main steps when submitting and publishing EDS book notebooks are:
 
