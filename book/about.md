@@ -72,17 +72,10 @@ Binder is entirely powered by an open-source infrastructure stack.
 Its main two tools are BinderHub, which is an open-source tool that deploys the Binder service in the cloud, and repo2docker, which generates reproducible Docker images from a git repository. 
 The Binder team also runs a public BinderHub deployment at mybinder.org as a free public service for the community.
 
-For EDS book notebooks, we use tbe public BinderHub to provide a cloud-based service for users to run notebooks without installing any software on their local machine.
+For EDS book notebooks, we use the public BinderHub to provide a cloud-based service for users to run notebooks without installing any software on their local machine.
 Besides the public service, we suggest launching notebooks in the [EGI BinderHub](https://replay.notebooks.egi.eu/) deployment, a private BinderHub instance hosted by the [European Grid Infrastructure](https://www.egi.eu/) (EGI) and the [European Open Science Cloud](https://eosc-portal.eu/) (EOSC) initiative.
 
 You can find out more about Project Binder on their About mybinder.org page.
-
-## Netlify
-Netlify is a cloud-based platform that provides hosting and serverless backend services for web applications and static websites.
-EDS book uses Netlify to host the static website of the book, which is built using Jupyter Book and MyST.
-Netlify provides a free tier for open-source projects, which allows EDS book to host the website without any cost.
-
-For more about Netlify, see in https://www.netlify.com/.
 
 ## MyST
 {abbr}`MyST (Markedly Structured Text)` is an open-source, community-driven markup language project building upon [CommonMark](https://commonmark.org/) (a standard form of Markdown) with special syntax extensions [@Cockett_2024].
@@ -91,6 +84,13 @@ In June 2024, MyST Markdown officially became part of Project Jupyters.
 For EDS book, [Jupyter Book](https://next.jupyterbook.org), a distribution of the MyST Document Engine, is used to render the content of the book and notebooks.
 
 For more about MyST, see in https://mystmd.org/.
+
+## Netlify
+Netlify is a cloud-based platform that provides hosting and serverless backend services for web applications and static websites.
+EDS book uses Netlify to host the static website of the book, which is built using Jupyter Book and MyST.
+Netlify provides a free tier for open-source projects, which allows EDS book to host the website without any cost.
+
+For more about Netlify, see in https://www.netlify.com/.
 
 ## Quay.io
 Quay.io is a container registry that allows users to host and share container images.
