@@ -73,7 +73,7 @@ Its main two tools are BinderHub, which is an open-source tool that deploys the 
 The Binder team also runs a public BinderHub deployment at mybinder.org as a free public service for the community.
 
 For EDS book notebooks, we use the public BinderHub to provide a cloud-based service for users to run notebooks without installing any software on their local machine.
-Besides the public service, we suggest launching notebooks in the [EGI BinderHub](https://replay.notebooks.egi.eu/) deployment, a private BinderHub instance hosted by the [European Grid Infrastructure](https://www.egi.eu/) (EGI) and the [European Open Science Cloud](https://eosc-portal.eu/) (EOSC) initiative.
+Besides the public service, we suggest launching notebooks in the [EGI BinderHub](https://replay.notebooks.egi.eu/) deployment, a private BinderHub instance hosted by the [European Grid Infrastructure](https://www.egi.eu/) (EGI) and the [European Open Science Cloud](https://open-science-cloud.ec.europa.eu/) (EOSC) initiative.
 
 You can find out more about Project Binder on their About mybinder.org page.
 
