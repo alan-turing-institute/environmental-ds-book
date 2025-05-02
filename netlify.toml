@@ -1,4 +1,5 @@
 [build]
   base = "book"
   command = "python -m pip install --upgrade pip && pip install -r requirements.txt && jupyter-book build --html"
+  environment = { PYTHON_VERSION = "3.13" }
   publish = "_build/html"
