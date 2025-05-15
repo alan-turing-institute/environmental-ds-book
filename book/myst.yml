@@ -1,7 +1,7 @@
 # See docs at: https://mystmd.org/guide/frontmatter
 version: 1
-#extends:
-#  - https://raw.githubusercontent.com/eds-book/edsbook-config/main/edsbook.yml
+extends:
+  - https://raw.githubusercontent.com/eds-book/edsbook-config/main/edsbook.yml
 project:
   id: 5045e1d4-2bbc-4dca-bde5-447c5c23801d
   title: Welcome
