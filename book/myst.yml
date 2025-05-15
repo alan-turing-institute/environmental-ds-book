@@ -49,9 +49,6 @@ site:
   template: book-theme
   options:
       folders: true
-      favicon: https://raw.githubusercontent.com/eds-book/edsbook-config/main/favicon.ico
-      logo: https://raw.githubusercontent.com/eds-book/edsbook-config/main/edsbook_logo-black.png
-      logo_dark: https://raw.githubusercontent.com/eds-book/edsbook-config/main/edsbook_logo-white.png
       style: style/style.css
   nav:
     - title: About
