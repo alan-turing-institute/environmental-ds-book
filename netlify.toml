@@ -11,26 +11,21 @@
   force = false
 
 [[redirects]]
-  from = "/gallery/67a1e320-7c47-4ea9-8df8-e868326bc90b/*"
-  to = "https://eds-book.github.io/67a1e320-7c47-4ea9-8df8-e868326bc90b/:splat"
+  from = "/gallery/39d9c177-11da-41b2-9b64-63f4c1c834b3/*"
+  to = "https://eds-book.github.io/39d9c177-11da-41b2-9b64-63f4c1c834b3/:splat"
   status = 200
   force = false
 
+
 #[[redirects]]
 #  from = "/build/*"
-#  to = "https://95199651-9e81-4cae-a3a7-66398a9a5f62.netlify.app/:splat"
+#  to = "https://95199651-9e81-4cae-a3a7-66398a9a5f62.netlify.app/build/:splat"
 #  status = 200
 #  force = false
 
 #[[redirects]]
 #  from = "/gallery/95199651-9e81-4cae-a3a7-66398a9a5f62/*"
 #  to = "https://95199651-9e81-4cae-a3a7-66398a9a5f62.netlify.app/:splat"
-#  status = 200
-#  force = false
-#
-#[[redirects]]
-#  from = "/build/*"
-#  to = "https://95199651-9e81-4cae-a3a7-test/:splat"
 #  status = 200
 #  force = false
 #

@@ -44,7 +44,7 @@ def render_notebook(name: str):
             f"https://raw.githubusercontent.com/eds-book/{name}/main"
         )
         config_url = f"{raw_base_url}/myst.yml"
-        book_url = f"https://eds-book.github.io/{name}"
+        book_url = f"https://eds-book.github.io/gallery/{name}"
 
         # Load JB data
         config = fetch_yaml(config_url)
