@@ -4,15 +4,21 @@
   environment = { PYTHON_VERSION = "3.13" }
   publish = "_build/html"
 
-[[redirects]]
-  from = "/build/*"
-  to = "https://95199651-9e81-4cae-a3a7-66398a9a5f62.netlify.app/build/:splat"
-  status = 200
-  force = false
+#[[redirects]]
+#  from = "/build/*"
+#  to = "https://95199651-9e81-4cae-a3a7-66398a9a5f62.netlify.app/build/:splat"
+#  status = 200
+#  force = false
 
 [[redirects]]
   from = "/gallery/95199651-9e81-4cae-a3a7-66398a9a5f62/*"
   to = "https://95199651-9e81-4cae-a3a7-66398a9a5f62.netlify.app/:splat"
+  status = 200
+  force = false
+
+[[redirects]]
+  from = "/build/*"
+  to = "https://95199651-9e81-4cae-a3a7-66398a9a5f62.netlify.app/build/:splat"
   status = 200
   force = false
 
