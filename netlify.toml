@@ -16,11 +16,11 @@
   status = 200
   force = false
 
-[[redirects]]
-  from = "/gallery/95199651-9e81-4cae-a3a7-test/*"
-  to = "https://95199651-9e81-4cae-a3a7-test.netlify.app/:splat"
-  status = 200
-  force = false
+#[[redirects]]
+#  from = "/gallery/95199651-9e81-4cae-a3a7-test/*"
+#  to = "https://95199651-9e81-4cae-a3a7-test.netlify.app/:splat"
+#  status = 200
+#  force = false
 
 #[[redirects]]
 #  from = "/gallery/ea34568e-d86e-4720-be2f-3f826f66a26c/*"
