@@ -104,7 +104,7 @@ def render_notebooks(pool):
     with open("../src/notebook_gallery.txt") as f:
         body = f.read()
 
-    nbs_sample = random.sample(body.splitlines(), 3)
+    nbs_sample = random.sample(body.splitlines(), 2)
 
     return [c for c in pool.map(render_notebook, nbs_sample) if c is not None]
 
