@@ -18,13 +18,13 @@
 
 [[redirects]]
   from = "/build/*"
-  to = "https://95199651-9e81-4cae-a3a7-test.netlify.app/build/:splat"
+  to = "https://39d9c177-11da-41b2-9b64-63f4c1c834b3.netlify.app/build/:splat"
   status = 200
   force = false
 
 [[redirects]]
-  from = "/gallery/95199651-9e81-4cae-a3a7-test/*"
-  to = "https://95199651-9e81-4cae-a3a7-test.netlify.app/:splat"
+  from = "/gallery/39d9c177-11da-41b2-9b64-63f4c1c834b3/*"
+  to = "https://39d9c177-11da-41b2-9b64-63f4c1c834b3.netlify.app/:splat"
   status = 200
   force = false
 
