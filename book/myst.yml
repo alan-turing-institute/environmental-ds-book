@@ -50,9 +50,6 @@ site:
   options:
       folders: true
       style: style/style.css
-      favicon: _static/favicon.ico
-      logo: _static/edsbook_logo-black.png
-      logo_dark: _static/edsbook_logo-white.png
   nav:
     - title: About
       url: /about
