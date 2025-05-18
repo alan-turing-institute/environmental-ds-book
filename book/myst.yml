@@ -28,6 +28,8 @@ project:
     - file: index.md
     - file: about.md
     - file: gallery.md
+      children:
+        - file: 95199651-9e81-4cae-a3a7-66398a9a5f62.md
     - file: contribute.md
     - title: Guidelines
       children:
