@@ -44,6 +44,21 @@ project:
     - title: Community
       file: community.md
     - file: cite.md
+  funding:
+    - statement: This work was supported by the Alan Turing Institute.
+      awards:
+        - id: award-id-000
+          name: EPSRC Grant EP/T001569/1 and EP/W006022/1
+          sources:
+            - name: Wave 1 of The UKRI Strategic Priorities Fund under the EPSRC Grant EP/T001569/1 and EPSRC Grant EP/W006022/1, particularly the “AI for Science” theme within those grants & The Alan Turing Institute
+          investigators:
+            - name: Alejandro Coca-Castro
+        - id: award-id-001
+          name: EPSRC Grant EP/Y028880/1
+          sources:
+            - name: A national UK programme in AI and digital twins to address the biodiversity and climate crisis, particularly the “Foster an open international environmental data science community” workstream led by The Alan Turing Institute.
+          investigators:
+            - name: Alejandro Coca-Castro
 
 site:
   template: book-theme
