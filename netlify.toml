@@ -22,17 +22,17 @@
   status = 200
   force = false
 
-[[redirects]]
-  from = "/gallery/95199651-9e81-4cae-a3a7-66398a9a5f62/*"
-  to = "https://eds-book.github.io/95199651-9e81-4cae-a3a7-66398a9a5f62/:splat"
-  status = 200
-  force = false
-
-[[redirects]]
-  from = "/gallery/39d9c177-11da-41b2-9b64-63f4c1c834b3/*"
-  to = "https://eds-book.github.io/39d9c177-11da-41b2-9b64-63f4c1c834b3/:splat"
-  status = 200
-  force = false
+#[[redirects]]
+#  from = "/gallery/95199651-9e81-4cae-a3a7-66398a9a5f62/*"
+#  to = "https://eds-book.github.io/95199651-9e81-4cae-a3a7-66398a9a5f62/:splat"
+#  status = 200
+#  force = false
+#
+#[[redirects]]
+#  from = "/gallery/39d9c177-11da-41b2-9b64-63f4c1c834b3/*"
+#  to = "https://eds-book.github.io/39d9c177-11da-41b2-9b64-63f4c1c834b3/:splat"
+#  status = 200
+#  force = false
 
 #[[redirects]]
 #  from = "/gallery/ea34568e-d86e-4720-be2f-3f826f66a26c/*"
