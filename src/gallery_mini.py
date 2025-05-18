@@ -44,7 +44,7 @@ def render_notebook(name: str):
             f"https://raw.githubusercontent.com/eds-book/{name}/main"
         )
         config_url = f"{raw_base_url}/myst.yml"
-        book_url = f"https://eds-book.netlify.app/gallery/{name}/notebook"
+        book_url = f"https://eds-book.netlify.app/{name}/notebook"
 
         # Load JB data
         config = fetch_yaml(config_url)
