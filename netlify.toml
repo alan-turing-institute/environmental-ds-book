@@ -22,14 +22,6 @@
   status = 200
   force = false
 
-# notebook redirects
-[[redirects]]
-  from = "https://edsbook.org/notebooks/gallery/95199651-9e81-4cae-a3a7-66398a9a5f62/notebook"
-  to = "https://eds-book.netlify.app/95199651-9e81-4cae-a3a7-66398a9a5f62/notebook"
-  # The default HTTP status code is 301, but you can define a different one.
-  status = 301
-  force = true
-
 #[[redirects]]
 #  from = "/gallery/95199651-9e81-4cae-a3a7-66398a9a5f62/*"
 #  to = "https://eds-book.github.io/95199651-9e81-4cae-a3a7-66398a9a5f62/:splat"
