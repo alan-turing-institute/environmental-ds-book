@@ -66,6 +66,6 @@ site:
     folders: true
     style: style/style.css
     hide_toc: false
-  nav:
+  actions:
   - title: Home
     url: /index
