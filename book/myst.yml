@@ -66,29 +66,3 @@ site:
     folders: true
     style: style/style.css
     hide_toc: false
-  nav:
-  - title: About
-    url: /about
-  - title: Gallery
-    url: /gallery
-  - title: Contribute
-    url: /contribute
-  - title: Guidelines
-    children:
-    - title: Guide for Authors
-      url: /guidelines-authors
-    - title: Guide for Reviewers
-      url: /guidelines-reviewers
-    - title: Guide for Editors
-      url: /guidelines-editors
-    - title: Guide for Editor in Chief
-      url: /guidelines-eic
-    - title: Guide for Community
-      url: /guidelines-community
-  - title: Community
-    url: /community
-  - title: Cite
-    url: /cite
-  actions:
-  - title: Home
-    url: /index
