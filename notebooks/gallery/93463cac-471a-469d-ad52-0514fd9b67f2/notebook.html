@@ -126,6 +126,9 @@ const thebe_selector_output = ".output, .cell_output"
   <div class="pst-async-banner-revealer d-none">
   <aside id="bd-header-version-warning" class="d-none d-print-none" aria-label="Version warning"></aside>
 </div>
+<aside class="bd-header-announcement" aria-label="Announcement">
+  <div class="bd-header-announcement__content">⚠️EDS book is transitioning from Jupyter Book to Jupyter Book 2 between 20-23 June 2025. Please be patient as we work through this process. If you have any questions, please contact us at <a href='mailto:environmental.ds.book@gmail.com</div>
+</aside>
 
   
     <header class="bd-header navbar navbar-expand-lg bd-navbar d-print-none">
@@ -627,28 +630,28 @@ document.write(`
 </summary>
 <div class="cell_input docutils container">
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="sd">&quot;&quot;&quot;Math &amp; Data Libraries&quot;&quot;&quot;</span>
-<span class="kn">import</span> <span class="nn">os</span>
-<span class="kn">import</span> <span class="nn">numpy</span> <span class="k">as</span> <span class="nn">np</span>
-<span class="kn">import</span> <span class="nn">random</span>
-<span class="kn">import</span> <span class="nn">pandas</span> <span class="k">as</span> <span class="nn">pd</span>
-<span class="kn">import</span> <span class="nn">netCDF4</span> <span class="k">as</span> <span class="nn">nc4</span>
-<span class="kn">from</span> <span class="nn">scipy</span> <span class="kn">import</span> <span class="n">signal</span>
-<span class="kn">import</span> <span class="nn">pooch</span>
+<span class="kn">import</span><span class="w"> </span><span class="nn">os</span>
+<span class="kn">import</span><span class="w"> </span><span class="nn">numpy</span><span class="w"> </span><span class="k">as</span><span class="w"> </span><span class="nn">np</span>
+<span class="kn">import</span><span class="w"> </span><span class="nn">random</span>
+<span class="kn">import</span><span class="w"> </span><span class="nn">pandas</span><span class="w"> </span><span class="k">as</span><span class="w"> </span><span class="nn">pd</span>
+<span class="kn">import</span><span class="w"> </span><span class="nn">netCDF4</span><span class="w"> </span><span class="k">as</span><span class="w"> </span><span class="nn">nc4</span>
+<span class="kn">from</span><span class="w"> </span><span class="nn">scipy</span><span class="w"> </span><span class="kn">import</span> <span class="n">signal</span>
+<span class="kn">import</span><span class="w"> </span><span class="nn">pooch</span>
 
 <span class="sd">&quot;&quot;&quot; ML Libraries&quot;&quot;&quot;</span>
-<span class="kn">import</span> <span class="nn">torch</span>
-<span class="kn">import</span> <span class="nn">torch.nn</span> <span class="k">as</span> <span class="nn">nn</span>
-<span class="kn">from</span> <span class="nn">torch.utils.data</span> <span class="kn">import</span> <span class="n">Dataset</span><span class="p">,</span> <span class="n">DataLoader</span>
-<span class="kn">from</span> <span class="nn">torch.autograd</span> <span class="kn">import</span> <span class="n">Variable</span>
-<span class="kn">import</span> <span class="nn">pickle</span>
+<span class="kn">import</span><span class="w"> </span><span class="nn">torch</span>
+<span class="kn">import</span><span class="w"> </span><span class="nn">torch.nn</span><span class="w"> </span><span class="k">as</span><span class="w"> </span><span class="nn">nn</span>
+<span class="kn">from</span><span class="w"> </span><span class="nn">torch.utils.data</span><span class="w"> </span><span class="kn">import</span> <span class="n">Dataset</span><span class="p">,</span> <span class="n">DataLoader</span>
+<span class="kn">from</span><span class="w"> </span><span class="nn">torch.autograd</span><span class="w"> </span><span class="kn">import</span> <span class="n">Variable</span>
+<span class="kn">import</span><span class="w"> </span><span class="nn">pickle</span>
 
 <span class="sd">&quot;&quot;&quot; Miscellaneous Libraries&quot;&quot;&quot;</span>
-<span class="kn">from</span> <span class="nn">tqdm</span> <span class="kn">import</span> <span class="n">tqdm</span>
-<span class="kn">import</span> <span class="nn">warnings</span>
+<span class="kn">from</span><span class="w"> </span><span class="nn">tqdm</span><span class="w"> </span><span class="kn">import</span> <span class="n">tqdm</span>
+<span class="kn">import</span><span class="w"> </span><span class="nn">warnings</span>
 
 <span class="sd">&quot;&quot;&quot;Visualization Libraries&quot;&quot;&quot;</span>
-<span class="kn">import</span> <span class="nn">matplotlib.pyplot</span> <span class="k">as</span> <span class="nn">plt</span>
-<span class="kn">import</span> <span class="nn">seaborn</span> <span class="k">as</span> <span class="nn">sns</span>
+<span class="kn">import</span><span class="w"> </span><span class="nn">matplotlib.pyplot</span><span class="w"> </span><span class="k">as</span><span class="w"> </span><span class="nn">plt</span>
+<span class="kn">import</span><span class="w"> </span><span class="nn">seaborn</span><span class="w"> </span><span class="k">as</span><span class="w"> </span><span class="nn">sns</span>
 
 <span class="n">sns</span><span class="o">.</span><span class="n">set_style</span><span class="p">(</span><span class="s2">&quot;whitegrid&quot;</span><span class="p">,</span> <span class="p">{</span><span class="s2">&quot;grid.color&quot;</span><span class="p">:</span> <span class="s2">&quot;0.5&quot;</span><span class="p">,</span> <span class="s2">&quot;axes.edgecolor&quot;</span><span class="p">:</span> <span class="s2">&quot;0.2&quot;</span><span class="p">})</span>
 <span class="n">color_palette</span> <span class="o">=</span> <span class="p">[</span>
@@ -791,7 +794,7 @@ document.write(`
 <span class="expanded">Hide code cell source</span>
 </summary>
 <div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="k">class</span> <span class="nc">CNN_Model</span><span class="p">(</span><span class="n">nn</span><span class="o">.</span><span class="n">Module</span><span class="p">):</span>
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="k">class</span><span class="w"> </span><span class="nc">CNN_Model</span><span class="p">(</span><span class="n">nn</span><span class="o">.</span><span class="n">Module</span><span class="p">):</span>
 <span class="w">    </span><span class="sd">&quot;&quot;&quot;</span>
 <span class="sd">    A class for a Convolutional Neural Network.</span>
 <span class="sd">    The CNN consists of three convolutional layers, each with a padding of 5</span>
@@ -810,7 +813,7 @@ document.write(`
 <span class="sd">        Defines the computation performed at every call.</span>
 <span class="sd">    &quot;&quot;&quot;</span>
 
-    <span class="k">def</span> <span class="fm">__init__</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">size_channel</span><span class="o">=</span><span class="mi">10</span><span class="p">,</span> <span class="n">bias</span><span class="o">=</span><span class="kc">True</span><span class="p">):</span>
+    <span class="k">def</span><span class="w"> </span><span class="fm">__init__</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">size_channel</span><span class="o">=</span><span class="mi">10</span><span class="p">,</span> <span class="n">bias</span><span class="o">=</span><span class="kc">True</span><span class="p">):</span>
         <span class="nb">super</span><span class="p">(</span><span class="n">CNN_Model</span><span class="p">,</span> <span class="bp">self</span><span class="p">)</span><span class="o">.</span><span class="fm">__init__</span><span class="p">()</span>
         <span class="bp">self</span><span class="o">.</span><span class="n">tanh</span> <span class="o">=</span> <span class="n">nn</span><span class="o">.</span><span class="n">Tanh</span><span class="p">()</span>
         <span class="bp">self</span><span class="o">.</span><span class="n">conv1</span> <span class="o">=</span> <span class="n">nn</span><span class="o">.</span><span class="n">Conv1d</span><span class="p">(</span>
@@ -823,7 +826,7 @@ document.write(`
             <span class="n">size_channel</span><span class="p">,</span> <span class="mi">1</span><span class="p">,</span> <span class="n">kernel_size</span><span class="o">=</span><span class="mi">11</span><span class="p">,</span> <span class="n">bias</span><span class="o">=</span><span class="n">bias</span><span class="p">,</span> <span class="n">padding</span><span class="o">=</span><span class="mi">5</span>
         <span class="p">)</span>  <span class="c1"># The output layer has a size of 1 as the target [hist]</span>
 
-    <span class="k">def</span> <span class="nf">forward</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">x</span><span class="p">):</span>
+    <span class="k">def</span><span class="w"> </span><span class="nf">forward</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">x</span><span class="p">):</span>
 <span class="w">        </span><span class="sd">&quot;&quot;&quot;</span>
 <span class="sd">        Defines the computation performed at every call.</span>
 <span class="sd">        The input goes through 2 convolutional and hyperbolic tangent layers before being</span>
@@ -848,7 +851,7 @@ document.write(`
         <span class="k">return</span> <span class="n">x</span>
 
 
-<span class="k">class</span> <span class="nc">Linear_Model</span><span class="p">(</span><span class="n">nn</span><span class="o">.</span><span class="n">Module</span><span class="p">):</span>
+<span class="k">class</span><span class="w"> </span><span class="nc">Linear_Model</span><span class="p">(</span><span class="n">nn</span><span class="o">.</span><span class="n">Module</span><span class="p">):</span>
 <span class="w">    </span><span class="sd">&quot;&quot;&quot;</span>
 <span class="sd">    A class for a Simple Linear Module used for comparison.</span>
 <span class="sd">    ---</span>
@@ -863,11 +866,11 @@ document.write(`
 <span class="sd">        Defines the computation performed at every call.</span>
 <span class="sd">    &quot;&quot;&quot;</span>
 
-    <span class="k">def</span> <span class="fm">__init__</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">bias</span><span class="o">=</span><span class="kc">False</span><span class="p">):</span>
+    <span class="k">def</span><span class="w"> </span><span class="fm">__init__</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">bias</span><span class="o">=</span><span class="kc">False</span><span class="p">):</span>
         <span class="nb">super</span><span class="p">(</span><span class="n">Linear_Model</span><span class="p">,</span> <span class="bp">self</span><span class="p">)</span><span class="o">.</span><span class="fm">__init__</span><span class="p">()</span>
         <span class="bp">self</span><span class="o">.</span><span class="n">linear</span> <span class="o">=</span> <span class="n">nn</span><span class="o">.</span><span class="n">Linear</span><span class="p">(</span><span class="mi">3</span><span class="p">,</span> <span class="mi">1</span><span class="p">,</span> <span class="n">bias</span><span class="o">=</span><span class="n">bias</span><span class="p">)</span>
 
-    <span class="k">def</span> <span class="nf">forward</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">X</span><span class="p">):</span>
+    <span class="k">def</span><span class="w"> </span><span class="nf">forward</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">X</span><span class="p">):</span>
 <span class="w">        </span><span class="sd">&quot;&quot;&quot;</span>
 <span class="sd">        Defines the computation performed at every call.</span>
 <span class="sd">        The input goes through a linear layer before being transformed to a tensor of shape [batch_size, N_years]</span>
@@ -886,7 +889,7 @@ document.write(`
         <span class="k">return</span> <span class="n">x</span><span class="p">[:,</span> <span class="p">:,</span> <span class="mi">0</span><span class="p">]</span>
 
 
-<span class="k">class</span> <span class="nc">MonDataset</span><span class="p">(</span><span class="n">Dataset</span><span class="p">):</span>
+<span class="k">class</span><span class="w"> </span><span class="nc">MonDataset</span><span class="p">(</span><span class="n">Dataset</span><span class="p">):</span>
 <span class="w">    </span><span class="sd">&quot;&quot;&quot;</span>
 <span class="sd">    A pytorch Dataset class that is used as an input for the CNN DataLoader.</span>
 <span class="sd">    ---</span>
@@ -913,7 +916,7 @@ document.write(`
 <span class="sd">        Fetch a random data sample.</span>
 <span class="sd">    &quot;&quot;&quot;</span>
 
-    <span class="k">def</span> <span class="fm">__init__</span><span class="p">(</span>
+    <span class="k">def</span><span class="w"> </span><span class="fm">__init__</span><span class="p">(</span>
         <span class="bp">self</span><span class="p">,</span> <span class="n">ghg</span><span class="p">,</span> <span class="n">aer</span><span class="p">,</span> <span class="n">nat</span><span class="p">,</span> <span class="n">historical</span><span class="p">,</span> <span class="n">model_of_interest</span><span class="o">=-</span><span class="mi">1</span><span class="p">,</span> <span class="n">dataset_type</span><span class="o">=</span><span class="s2">&quot;train&quot;</span>
     <span class="p">):</span>
         <span class="bp">self</span><span class="o">.</span><span class="n">ghg</span> <span class="o">=</span> <span class="n">ghg</span>
@@ -923,7 +926,7 @@ document.write(`
         <span class="bp">self</span><span class="o">.</span><span class="n">dataset_type</span> <span class="o">=</span> <span class="n">dataset_type</span>
         <span class="bp">self</span><span class="o">.</span><span class="n">model_of_interest</span> <span class="o">=</span> <span class="n">model_of_interest</span>
 
-    <span class="k">def</span> <span class="fm">__len__</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">n_samples</span><span class="o">=</span><span class="mi">50000</span><span class="p">):</span>
+    <span class="k">def</span><span class="w"> </span><span class="fm">__len__</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">n_samples</span><span class="o">=</span><span class="mi">50000</span><span class="p">):</span>
 <span class="w">        </span><span class="sd">&quot;&quot;&quot;</span>
 <span class="sd">        Defines the number of samples returned.</span>
 <span class="sd">        ---</span>
@@ -938,7 +941,7 @@ document.write(`
 <span class="sd">        &quot;&quot;&quot;</span>
         <span class="k">return</span> <span class="n">n_samples</span>
 
-    <span class="k">def</span> <span class="fm">__getitem__</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">idx</span><span class="p">):</span>
+    <span class="k">def</span><span class="w"> </span><span class="fm">__getitem__</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">idx</span><span class="p">):</span>
 <span class="w">        </span><span class="sd">&quot;&quot;&quot;</span>
 <span class="sd">        Fetch a random data sample.</span>
 <span class="sd">        If self.model_of_interest is -1, no models are excluded and in both the train and test sample we randomly choose a model and then randomly choose a simulation for each forcing to add to the dataset.</span>
@@ -986,7 +989,7 @@ document.write(`
         <span class="k">return</span> <span class="n">x</span><span class="p">,</span> <span class="n">y</span><span class="p">,</span> <span class="n">model_idx</span>
 
 
-<span class="k">class</span> <span class="nc">MonDataset_Inverse</span><span class="p">(</span><span class="n">Dataset</span><span class="p">):</span>
+<span class="k">class</span><span class="w"> </span><span class="nc">MonDataset_Inverse</span><span class="p">(</span><span class="n">Dataset</span><span class="p">):</span>
 <span class="w">    </span><span class="sd">&quot;&quot;&quot;</span>
 <span class="sd">    A pytorch Dataset class that is used as an input for the Inverse model DataLoader.</span>
 <span class="sd">    ---</span>
@@ -1007,12 +1010,12 @@ document.write(`
 <span class="sd">        Fetch a random data sample.</span>
 <span class="sd">    &quot;&quot;&quot;</span>
 
-    <span class="k">def</span> <span class="fm">__init__</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">ghg</span><span class="p">,</span> <span class="n">aer</span><span class="p">,</span> <span class="n">nat</span><span class="p">):</span>
+    <span class="k">def</span><span class="w"> </span><span class="fm">__init__</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">ghg</span><span class="p">,</span> <span class="n">aer</span><span class="p">,</span> <span class="n">nat</span><span class="p">):</span>
         <span class="bp">self</span><span class="o">.</span><span class="n">ghg</span> <span class="o">=</span> <span class="n">ghg</span>
         <span class="bp">self</span><span class="o">.</span><span class="n">aer</span> <span class="o">=</span> <span class="n">aer</span>
         <span class="bp">self</span><span class="o">.</span><span class="n">nat</span> <span class="o">=</span> <span class="n">nat</span>
 
-    <span class="k">def</span> <span class="fm">__len__</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">n_samples</span><span class="o">=</span><span class="mi">100</span><span class="p">):</span>
+    <span class="k">def</span><span class="w"> </span><span class="fm">__len__</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">n_samples</span><span class="o">=</span><span class="mi">100</span><span class="p">):</span>
 <span class="w">        </span><span class="sd">&quot;&quot;&quot;</span>
 <span class="sd">        Defines the number of samples returned.</span>
 <span class="sd">        ---</span>
@@ -1027,7 +1030,7 @@ document.write(`
 <span class="sd">        &quot;&quot;&quot;</span>
         <span class="k">return</span> <span class="n">n_samples</span>
 
-    <span class="k">def</span> <span class="fm">__getitem__</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">idx</span><span class="p">):</span>
+    <span class="k">def</span><span class="w"> </span><span class="fm">__getitem__</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">idx</span><span class="p">):</span>
 <span class="w">        </span><span class="sd">&quot;&quot;&quot;</span>
 <span class="sd">        Fetch a random data sample.</span>
 <span class="sd">        ---</span>
@@ -1058,7 +1061,7 @@ document.write(`
 <span class="expanded">Hide code cell source</span>
 </summary>
 <div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="k">def</span> <span class="nf">calculate_spatial_mean</span><span class="p">(</span><span class="n">data</span><span class="p">):</span>
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="k">def</span><span class="w"> </span><span class="nf">calculate_spatial_mean</span><span class="p">(</span><span class="n">data</span><span class="p">):</span>
 <span class="w">    </span><span class="sd">&quot;&quot;&quot;</span>
 <span class="sd">    Calculate the spatially weighted mean over the globe.</span>
 <span class="sd">    ---</span>
@@ -1090,7 +1093,7 @@ document.write(`
     <span class="k">return</span> <span class="n">data_mean</span>
 
 
-<span class="k">def</span> <span class="nf">get_observation_data</span><span class="p">(</span><span class="n">data_dir</span><span class="p">):</span>
+<span class="k">def</span><span class="w"> </span><span class="nf">get_observation_data</span><span class="p">(</span><span class="n">data_dir</span><span class="p">):</span>
 <span class="w">    </span><span class="sd">&quot;&quot;&quot;</span>
 <span class="sd">    Get annual observation (OBS) data of the 2 m air temperature over the continent from HadCRUT4 (Morice et al., 2012)</span>
 <span class="sd">    blended with sea surface temperature from HadISST4 (Rayner et al., 2003) over the time span of interest. The data is spatially averaged</span>
@@ -1105,7 +1108,7 @@ document.write(`
     <span class="k">return</span> <span class="n">calculate_spatial_mean</span><span class="p">(</span><span class="n">obs_temperature_data</span><span class="p">)</span>
 
 
-<span class="k">def</span> <span class="nf">calculate_preindustrial_average</span><span class="p">(</span><span class="n">forcing</span><span class="p">,</span> <span class="n">model_name</span><span class="o">=</span><span class="s2">&quot;IPSL&quot;</span><span class="p">,</span> <span class="n">physics</span><span class="o">=</span><span class="mi">1</span><span class="p">):</span>
+<span class="k">def</span><span class="w"> </span><span class="nf">calculate_preindustrial_average</span><span class="p">(</span><span class="n">forcing</span><span class="p">,</span> <span class="n">model_name</span><span class="o">=</span><span class="s2">&quot;IPSL&quot;</span><span class="p">,</span> <span class="n">physics</span><span class="o">=</span><span class="mi">1</span><span class="p">):</span>
 <span class="w">    </span><span class="sd">&quot;&quot;&quot;</span>
 <span class="sd">    Calculate pre-industrial average between years 1850-1900 for a given forcing and model.</span>
 <span class="sd">    ---</span>
@@ -1188,7 +1191,7 @@ document.write(`
     <span class="k">return</span> <span class="n">preindustrial_average</span>
 
 
-<span class="k">def</span> <span class="nf">get_simulation</span><span class="p">(</span><span class="n">simulation_index</span><span class="p">,</span> <span class="n">forcing</span><span class="p">,</span> <span class="n">model_name</span><span class="o">=</span><span class="s2">&quot;IPSL&quot;</span><span class="p">,</span> <span class="nb">filter</span><span class="o">=</span><span class="kc">False</span><span class="p">):</span>
+<span class="k">def</span><span class="w"> </span><span class="nf">get_simulation</span><span class="p">(</span><span class="n">simulation_index</span><span class="p">,</span> <span class="n">forcing</span><span class="p">,</span> <span class="n">model_name</span><span class="o">=</span><span class="s2">&quot;IPSL&quot;</span><span class="p">,</span> <span class="nb">filter</span><span class="o">=</span><span class="kc">False</span><span class="p">):</span>
 <span class="w">    </span><span class="sd">&quot;&quot;&quot;</span>
 <span class="sd">    Get a simulation for a given forcing and model.</span>
 <span class="sd">    ---</span>
@@ -1239,7 +1242,7 @@ document.write(`
     <span class="k">return</span> <span class="n">simulation</span>
 
 
-<span class="k">def</span> <span class="nf">get_all_simulations</span><span class="p">(</span><span class="n">forcing</span><span class="p">,</span> <span class="n">model_name</span><span class="o">=</span><span class="s2">&quot;IPSL&quot;</span><span class="p">,</span> <span class="nb">filter</span><span class="o">=</span><span class="kc">False</span><span class="p">):</span>
+<span class="k">def</span><span class="w"> </span><span class="nf">get_all_simulations</span><span class="p">(</span><span class="n">forcing</span><span class="p">,</span> <span class="n">model_name</span><span class="o">=</span><span class="s2">&quot;IPSL&quot;</span><span class="p">,</span> <span class="nb">filter</span><span class="o">=</span><span class="kc">False</span><span class="p">):</span>
 <span class="w">    </span><span class="sd">&quot;&quot;&quot;</span>
 <span class="sd">    Get all simulations for a given forcing and model.</span>
 <span class="sd">    ---</span>
@@ -1266,7 +1269,7 @@ document.write(`
     <span class="k">return</span> <span class="n">simulation_data</span>
 
 
-<span class="k">def</span> <span class="nf">get_model_dataset</span><span class="p">(</span><span class="n">model_name</span><span class="o">=</span><span class="s2">&quot;ALL&quot;</span><span class="p">,</span> <span class="n">normalize</span><span class="o">=</span><span class="kc">True</span><span class="p">,</span> <span class="nb">filter</span><span class="o">=</span><span class="kc">False</span><span class="p">):</span>
+<span class="k">def</span><span class="w"> </span><span class="nf">get_model_dataset</span><span class="p">(</span><span class="n">model_name</span><span class="o">=</span><span class="s2">&quot;ALL&quot;</span><span class="p">,</span> <span class="n">normalize</span><span class="o">=</span><span class="kc">True</span><span class="p">,</span> <span class="nb">filter</span><span class="o">=</span><span class="kc">False</span><span class="p">):</span>
 <span class="w">    </span><span class="sd">&quot;&quot;&quot;</span>
 <span class="sd">    Get the entire dataset (all simulations for all forcings) for a climate model or all climate models.</span>
 <span class="sd">    ---</span>
@@ -1369,7 +1372,7 @@ document.write(`
     <span class="k">return</span> <span class="n">ghg</span><span class="p">,</span> <span class="n">aer</span><span class="p">,</span> <span class="n">nat</span><span class="p">,</span> <span class="n">historical</span><span class="p">,</span> <span class="n">np</span><span class="o">.</span><span class="n">array</span><span class="p">(</span><span class="n">maximum_historical_list</span><span class="p">)</span>
 
 
-<span class="k">def</span> <span class="nf">train_models</span><span class="p">(</span>
+<span class="k">def</span><span class="w"> </span><span class="nf">train_models</span><span class="p">(</span>
     <span class="n">train_dataloader</span><span class="p">,</span>
     <span class="n">test_dataloader</span><span class="p">,</span>
     <span class="n">lr</span><span class="o">=</span><span class="mf">0.001</span><span class="p">,</span>
@@ -1500,7 +1503,7 @@ document.write(`
     <span class="p">)</span>
 
 
-<span class="k">def</span> <span class="nf">train_inverse_model</span><span class="p">(</span><span class="n">inputs</span><span class="p">,</span> <span class="n">target</span><span class="p">,</span> <span class="n">model</span><span class="p">,</span> <span class="n">max_iter</span><span class="o">=</span><span class="mi">100000</span><span class="p">,</span> <span class="n">alpha</span><span class="o">=</span><span class="mf">0.005</span><span class="p">):</span>
+<span class="k">def</span><span class="w"> </span><span class="nf">train_inverse_model</span><span class="p">(</span><span class="n">inputs</span><span class="p">,</span> <span class="n">target</span><span class="p">,</span> <span class="n">model</span><span class="p">,</span> <span class="n">max_iter</span><span class="o">=</span><span class="mi">100000</span><span class="p">,</span> <span class="n">alpha</span><span class="o">=</span><span class="mf">0.005</span><span class="p">):</span>
 <span class="w">    </span><span class="sd">&quot;&quot;&quot;</span>
 <span class="sd">    Perform backpropagation of the CNN model to obtain the variational inverse model estimates.</span>
 <span class="sd">    ---</span>
@@ -1551,7 +1554,7 @@ document.write(`
     <span class="k">return</span> <span class="n">X</span><span class="p">,</span> <span class="n">output_estimate</span>
 
 
-<span class="k">def</span> <span class="nf">get_inverse_model_estimates</span><span class="p">(</span>
+<span class="k">def</span><span class="w"> </span><span class="nf">get_inverse_model_estimates</span><span class="p">(</span>
     <span class="n">observation_data</span><span class="p">,</span> <span class="n">model</span><span class="p">,</span> <span class="n">denormalize</span><span class="o">=</span><span class="kc">True</span><span class="p">,</span> <span class="nb">filter</span><span class="o">=</span><span class="kc">False</span>
 <span class="p">):</span>
 <span class="w">    </span><span class="sd">&quot;&quot;&quot;</span>

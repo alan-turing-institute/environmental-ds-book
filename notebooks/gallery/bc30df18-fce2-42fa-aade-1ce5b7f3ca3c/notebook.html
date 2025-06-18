@@ -126,6 +126,9 @@ const thebe_selector_output = ".output, .cell_output"
   <div class="pst-async-banner-revealer d-none">
   <aside id="bd-header-version-warning" class="d-none d-print-none" aria-label="Version warning"></aside>
 </div>
+<aside class="bd-header-announcement" aria-label="Announcement">
+  <div class="bd-header-announcement__content">⚠️EDS book is transitioning from Jupyter Book to Jupyter Book 2 between 20-23 June 2025. Please be patient as we work through this process. If you have any questions, please contact us at <a href='mailto:environmental.ds.book@gmail.com</div>
+</aside>
 
   
     <header class="bd-header navbar navbar-expand-lg bd-navbar d-print-none">
@@ -646,31 +649,31 @@ document.write(`
 <span class="expanded">Hide code cell source</span>
 </summary>
 <div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">pandas</span> <span class="k">as</span> <span class="nn">pd</span>
-<span class="kn">import</span> <span class="nn">numpy</span> <span class="k">as</span> <span class="nn">np</span>
-<span class="kn">import</span> <span class="nn">geopandas</span>
-<span class="kn">import</span> <span class="nn">intake</span>
-<span class="kn">import</span> <span class="nn">fsspec</span><span class="o">,</span> <span class="nn">aiohttp</span>
-<span class="kn">import</span> <span class="nn">hvplot.xarray</span>
-<span class="kn">import</span> <span class="nn">hvplot.pandas</span>
-<span class="kn">import</span> <span class="nn">holoviews</span> <span class="k">as</span> <span class="nn">hv</span>
-<span class="kn">import</span> <span class="nn">panel</span> <span class="k">as</span> <span class="nn">pn</span>
-<span class="kn">import</span> <span class="nn">satpy</span>
-<span class="kn">import</span> <span class="nn">xarray</span> <span class="k">as</span> <span class="nn">xr</span>
-<span class="kn">import</span> <span class="nn">tempfile</span>
-<span class="kn">from</span> <span class="nn">scipy.spatial</span> <span class="kn">import</span> <span class="n">cKDTree</span>
-<span class="kn">from</span> <span class="nn">satpy.writers</span> <span class="kn">import</span> <span class="n">get_enhanced_image</span>
-<span class="kn">from</span> <span class="nn">getpass</span> <span class="kn">import</span> <span class="n">getpass</span>
-<span class="kn">from</span> <span class="nn">pathlib</span> <span class="kn">import</span> <span class="n">Path</span>
-<span class="kn">from</span> <span class="nn">pyresample</span> <span class="kn">import</span> <span class="n">geometry</span>
-<span class="kn">from</span> <span class="nn">pyresample</span> <span class="kn">import</span> <span class="n">create_area_def</span>
-<span class="kn">import</span> <span class="nn">datetime</span>
-<span class="kn">import</span> <span class="nn">urllib.request</span>
-<span class="kn">import</span> <span class="nn">os.path</span>
-<span class="kn">import</span> <span class="nn">requests</span>
-<span class="kn">from</span> <span class="nn">pathlib</span> <span class="kn">import</span> <span class="n">Path</span>
-<span class="kn">from</span> <span class="nn">dotenv</span> <span class="kn">import</span> <span class="n">load_dotenv</span>
-<span class="kn">import</span> <span class="nn">warnings</span>
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span><span class="w"> </span><span class="nn">pandas</span><span class="w"> </span><span class="k">as</span><span class="w"> </span><span class="nn">pd</span>
+<span class="kn">import</span><span class="w"> </span><span class="nn">numpy</span><span class="w"> </span><span class="k">as</span><span class="w"> </span><span class="nn">np</span>
+<span class="kn">import</span><span class="w"> </span><span class="nn">geopandas</span>
+<span class="kn">import</span><span class="w"> </span><span class="nn">intake</span>
+<span class="kn">import</span><span class="w"> </span><span class="nn">fsspec</span><span class="o">,</span><span class="w"> </span><span class="nn">aiohttp</span>
+<span class="kn">import</span><span class="w"> </span><span class="nn">hvplot.xarray</span>
+<span class="kn">import</span><span class="w"> </span><span class="nn">hvplot.pandas</span>
+<span class="kn">import</span><span class="w"> </span><span class="nn">holoviews</span><span class="w"> </span><span class="k">as</span><span class="w"> </span><span class="nn">hv</span>
+<span class="kn">import</span><span class="w"> </span><span class="nn">panel</span><span class="w"> </span><span class="k">as</span><span class="w"> </span><span class="nn">pn</span>
+<span class="kn">import</span><span class="w"> </span><span class="nn">satpy</span>
+<span class="kn">import</span><span class="w"> </span><span class="nn">xarray</span><span class="w"> </span><span class="k">as</span><span class="w"> </span><span class="nn">xr</span>
+<span class="kn">import</span><span class="w"> </span><span class="nn">tempfile</span>
+<span class="kn">from</span><span class="w"> </span><span class="nn">scipy.spatial</span><span class="w"> </span><span class="kn">import</span> <span class="n">cKDTree</span>
+<span class="kn">from</span><span class="w"> </span><span class="nn">satpy.writers</span><span class="w"> </span><span class="kn">import</span> <span class="n">get_enhanced_image</span>
+<span class="kn">from</span><span class="w"> </span><span class="nn">getpass</span><span class="w"> </span><span class="kn">import</span> <span class="n">getpass</span>
+<span class="kn">from</span><span class="w"> </span><span class="nn">pathlib</span><span class="w"> </span><span class="kn">import</span> <span class="n">Path</span>
+<span class="kn">from</span><span class="w"> </span><span class="nn">pyresample</span><span class="w"> </span><span class="kn">import</span> <span class="n">geometry</span>
+<span class="kn">from</span><span class="w"> </span><span class="nn">pyresample</span><span class="w"> </span><span class="kn">import</span> <span class="n">create_area_def</span>
+<span class="kn">import</span><span class="w"> </span><span class="nn">datetime</span>
+<span class="kn">import</span><span class="w"> </span><span class="nn">urllib.request</span>
+<span class="kn">import</span><span class="w"> </span><span class="nn">os.path</span>
+<span class="kn">import</span><span class="w"> </span><span class="nn">requests</span>
+<span class="kn">from</span><span class="w"> </span><span class="nn">pathlib</span><span class="w"> </span><span class="kn">import</span> <span class="n">Path</span>
+<span class="kn">from</span><span class="w"> </span><span class="nn">dotenv</span><span class="w"> </span><span class="kn">import</span> <span class="n">load_dotenv</span>
+<span class="kn">import</span><span class="w"> </span><span class="nn">warnings</span>
 <span class="n">warnings</span><span class="o">.</span><span class="n">filterwarnings</span><span class="p">(</span><span class="n">action</span><span class="o">=</span><span class="s1">&#39;ignore&#39;</span><span class="p">)</span>
 </pre></div>
 </div>
@@ -1365,12 +1368,12 @@ if (window.Jupyter !== undefined) {
 </div>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="kn">from</span> <span class="nn">intake.source.base</span> <span class="kn">import</span> <span class="n">PatternMixin</span>
-<span class="kn">from</span> <span class="nn">intake.source.base</span> <span class="kn">import</span> <span class="n">DataSource</span><span class="p">,</span> <span class="n">Schema</span>
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="kn">from</span><span class="w"> </span><span class="nn">intake.source.base</span><span class="w"> </span><span class="kn">import</span> <span class="n">PatternMixin</span>
+<span class="kn">from</span><span class="w"> </span><span class="nn">intake.source.base</span><span class="w"> </span><span class="kn">import</span> <span class="n">DataSource</span><span class="p">,</span> <span class="n">Schema</span>
 
-<span class="kn">import</span> <span class="nn">glob</span>
+<span class="kn">import</span><span class="w"> </span><span class="nn">glob</span>
 
-<span class="k">class</span> <span class="nc">SatpySource</span><span class="p">(</span><span class="n">DataSource</span><span class="p">,</span> <span class="n">PatternMixin</span><span class="p">):</span>
+<span class="k">class</span><span class="w"> </span><span class="nc">SatpySource</span><span class="p">(</span><span class="n">DataSource</span><span class="p">,</span> <span class="n">PatternMixin</span><span class="p">):</span>
 <span class="w">    </span><span class="sd">&quot;&quot;&quot;Intake driver for data supported by satpy.Scene&quot;&quot;&quot;</span>
     
     <span class="n">container</span> <span class="o">=</span> <span class="s1">&#39;python&#39;</span>
@@ -1378,7 +1381,7 @@ if (window.Jupyter !== undefined) {
     <span class="n">version</span> <span class="o">=</span> <span class="s1">&#39;0.0.1&#39;</span>
     <span class="n">partition_access</span> <span class="o">=</span> <span class="kc">False</span>
 
-    <span class="k">def</span> <span class="fm">__init__</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">urlpath</span><span class="p">,</span> <span class="n">reader</span><span class="o">=</span><span class="kc">None</span><span class="p">,</span> <span class="n">metadata</span><span class="o">=</span><span class="kc">None</span><span class="p">,</span> <span class="n">path_as_pattern</span><span class="o">=</span><span class="kc">True</span><span class="p">):</span>
+    <span class="k">def</span><span class="w"> </span><span class="fm">__init__</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">urlpath</span><span class="p">,</span> <span class="n">reader</span><span class="o">=</span><span class="kc">None</span><span class="p">,</span> <span class="n">metadata</span><span class="o">=</span><span class="kc">None</span><span class="p">,</span> <span class="n">path_as_pattern</span><span class="o">=</span><span class="kc">True</span><span class="p">):</span>
 <span class="w">        </span><span class="sd">&quot;&quot;&quot;</span>
 <span class="sd">        Parameters</span>
 <span class="sd">        ----------</span>
@@ -1402,19 +1405,19 @@ if (window.Jupyter !== undefined) {
         <span class="bp">self</span><span class="o">.</span><span class="n">_reader</span> <span class="o">=</span> <span class="n">reader</span>
         <span class="nb">super</span><span class="p">(</span><span class="n">SatpySource</span><span class="p">,</span> <span class="bp">self</span><span class="p">)</span><span class="o">.</span><span class="fm">__init__</span><span class="p">(</span><span class="n">metadata</span><span class="o">=</span><span class="n">metadata</span><span class="p">)</span>
 
-    <span class="k">def</span> <span class="nf">_load</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+    <span class="k">def</span><span class="w"> </span><span class="nf">_load</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
         <span class="n">files</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">urlpath</span>
         <span class="n">files</span> <span class="o">=</span> <span class="nb">list</span><span class="p">(</span><span class="n">glob</span><span class="o">.</span><span class="n">glob</span><span class="p">(</span><span class="n">files</span><span class="p">))</span>
         <span class="k">return</span> <span class="n">satpy</span><span class="o">.</span><span class="n">Scene</span><span class="p">(</span><span class="n">files</span><span class="p">,</span> <span class="n">reader</span><span class="o">=</span><span class="bp">self</span><span class="o">.</span><span class="n">_reader</span><span class="p">)</span>
     
-    <span class="k">def</span> <span class="nf">_get_schema</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+    <span class="k">def</span><span class="w"> </span><span class="nf">_get_schema</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
         <span class="bp">self</span><span class="o">.</span><span class="n">_schema</span> <span class="o">=</span> <span class="n">Schema</span><span class="p">(</span>
             <span class="n">npartitions</span><span class="o">=</span><span class="mi">1</span><span class="p">,</span>
             <span class="n">extra_metadata</span><span class="o">=</span><span class="p">{}</span>
         <span class="p">)</span>
         <span class="k">return</span> <span class="bp">self</span><span class="o">.</span><span class="n">_schema</span>
 
-    <span class="k">def</span> <span class="nf">read</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+    <span class="k">def</span><span class="w"> </span><span class="nf">read</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
         <span class="bp">self</span><span class="o">.</span><span class="n">_load_metadata</span><span class="p">()</span>
         <span class="k">return</span> <span class="bp">self</span><span class="o">.</span><span class="n">_load</span><span class="p">()</span>
 
@@ -1548,7 +1551,7 @@ Rounding shape to (1334, 1834) and resolution from (3000.0, 3000.0) meters to (2
     <span class="n">STD_BCK</span><span class="o">=</span><span class="mi">10000</span>
 <span class="p">)</span>
 
-<span class="k">def</span> <span class="nf">process_fire_product</span><span class="p">(</span><span class="n">fire_pixels</span><span class="p">):</span>
+<span class="k">def</span><span class="w"> </span><span class="nf">process_fire_product</span><span class="p">(</span><span class="n">fire_pixels</span><span class="p">):</span>
     <span class="c1"># Hack: xarray randomly loads some columns as coordinates, which don&#39;t get converted to a dataframe</span>
     <span class="c1"># Correct here by removing them as coords and renaming them back to their original name</span>
     <span class="n">coords</span> <span class="o">=</span> <span class="nb">list</span><span class="p">(</span><span class="n">fire_pixels</span><span class="o">.</span><span class="n">coords</span><span class="o">.</span><span class="n">keys</span><span class="p">())</span>
@@ -1566,7 +1569,7 @@ Rounding shape to (1334, 1834) and resolution from (3000.0, 3000.0) meters to (2
     <span class="n">fire_pixels</span><span class="o">.</span><span class="n">index</span><span class="o">.</span><span class="n">name</span> <span class="o">=</span> <span class="s1">&#39;index&#39;</span>
     <span class="k">return</span> <span class="n">fire_pixels</span>
 
-<span class="k">def</span> <span class="nf">parse_l2_timestamp</span><span class="p">(</span><span class="n">product_name</span><span class="p">):</span>
+<span class="k">def</span><span class="w"> </span><span class="nf">parse_l2_timestamp</span><span class="p">(</span><span class="n">product_name</span><span class="p">):</span>
 <span class="w">    </span><span class="sd">&quot;&quot;&quot;Parse the timestamp from the SEVIRI L2 product name&quot;&quot;&quot;</span>
     <span class="n">timestamp</span> <span class="o">=</span> <span class="n">product_name</span><span class="o">.</span><span class="n">split</span><span class="p">(</span><span class="s1">&#39;_&#39;</span><span class="p">)[</span><span class="o">-</span><span class="mi">1</span><span class="p">]</span>
     <span class="n">timestamp</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">to_datetime</span><span class="p">(</span><span class="n">timestamp</span><span class="p">,</span> <span class="nb">format</span><span class="o">=</span><span class="s1">&#39;%Y%m</span><span class="si">%d</span><span class="s1">%H%M&#39;</span><span class="p">)</span>

@@ -126,6 +126,9 @@ const thebe_selector_output = ".output, .cell_output"
   <div class="pst-async-banner-revealer d-none">
   <aside id="bd-header-version-warning" class="d-none d-print-none" aria-label="Version warning"></aside>
 </div>
+<aside class="bd-header-announcement" aria-label="Announcement">
+  <div class="bd-header-announcement__content">⚠️EDS book is transitioning from Jupyter Book to Jupyter Book 2 between 20-23 June 2025. Please be patient as we work through this process. If you have any questions, please contact us at <a href='mailto:environmental.ds.book@gmail.com</div>
+</aside>
 
   
     <header class="bd-header navbar navbar-expand-lg bd-navbar d-print-none">
@@ -612,31 +615,31 @@ document.write(`
 <span class="expanded">Hide code cell source</span>
 </summary>
 <div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">glob</span>
-<span class="kn">import</span> <span class="nn">os</span>
-<span class="kn">import</span> <span class="nn">urllib</span>
-<span class="kn">import</span> <span class="nn">numpy</span> <span class="k">as</span> <span class="nn">np</span>
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span><span class="w"> </span><span class="nn">glob</span>
+<span class="kn">import</span><span class="w"> </span><span class="nn">os</span>
+<span class="kn">import</span><span class="w"> </span><span class="nn">urllib</span>
+<span class="kn">import</span><span class="w"> </span><span class="nn">numpy</span><span class="w"> </span><span class="k">as</span><span class="w"> </span><span class="nn">np</span>
 
-<span class="kn">import</span> <span class="nn">intake</span>
-<span class="kn">import</span> <span class="nn">matplotlib.pyplot</span> <span class="k">as</span> <span class="nn">plt</span>
-<span class="kn">import</span> <span class="nn">xmltodict</span>
-<span class="kn">import</span> <span class="nn">cv2</span>
+<span class="kn">import</span><span class="w"> </span><span class="nn">intake</span>
+<span class="kn">import</span><span class="w"> </span><span class="nn">matplotlib.pyplot</span><span class="w"> </span><span class="k">as</span><span class="w"> </span><span class="nn">plt</span>
+<span class="kn">import</span><span class="w"> </span><span class="nn">xmltodict</span>
+<span class="kn">import</span><span class="w"> </span><span class="nn">cv2</span>
 
-<span class="kn">import</span> <span class="nn">torch</span>
+<span class="kn">import</span><span class="w"> </span><span class="nn">torch</span>
 
-<span class="kn">from</span> <span class="nn">shapely.geometry</span> <span class="kn">import</span> <span class="n">box</span>
-<span class="kn">import</span> <span class="nn">pandas</span> <span class="k">as</span> <span class="nn">pd</span>
-<span class="kn">from</span> <span class="nn">geopandas</span> <span class="kn">import</span> <span class="n">GeoDataFrame</span>
-<span class="kn">import</span> <span class="nn">xarray</span> <span class="k">as</span> <span class="nn">xr</span>
-<span class="kn">import</span> <span class="nn">panel</span> <span class="k">as</span> <span class="nn">pn</span>
-<span class="kn">import</span> <span class="nn">holoviews</span> <span class="k">as</span> <span class="nn">hv</span>
-<span class="kn">import</span> <span class="nn">hvplot.pandas</span>
-<span class="kn">import</span> <span class="nn">hvplot.xarray</span>
-<span class="kn">from</span> <span class="nn">skimage.exposure</span> <span class="kn">import</span> <span class="n">equalize_hist</span>
+<span class="kn">from</span><span class="w"> </span><span class="nn">shapely.geometry</span><span class="w"> </span><span class="kn">import</span> <span class="n">box</span>
+<span class="kn">import</span><span class="w"> </span><span class="nn">pandas</span><span class="w"> </span><span class="k">as</span><span class="w"> </span><span class="nn">pd</span>
+<span class="kn">from</span><span class="w"> </span><span class="nn">geopandas</span><span class="w"> </span><span class="kn">import</span> <span class="n">GeoDataFrame</span>
+<span class="kn">import</span><span class="w"> </span><span class="nn">xarray</span><span class="w"> </span><span class="k">as</span><span class="w"> </span><span class="nn">xr</span>
+<span class="kn">import</span><span class="w"> </span><span class="nn">panel</span><span class="w"> </span><span class="k">as</span><span class="w"> </span><span class="nn">pn</span>
+<span class="kn">import</span><span class="w"> </span><span class="nn">holoviews</span><span class="w"> </span><span class="k">as</span><span class="w"> </span><span class="nn">hv</span>
+<span class="kn">import</span><span class="w"> </span><span class="nn">hvplot.pandas</span>
+<span class="kn">import</span><span class="w"> </span><span class="nn">hvplot.xarray</span>
+<span class="kn">from</span><span class="w"> </span><span class="nn">skimage.exposure</span><span class="w"> </span><span class="kn">import</span> <span class="n">equalize_hist</span>
 
-<span class="kn">import</span> <span class="nn">pooch</span>
+<span class="kn">import</span><span class="w"> </span><span class="nn">pooch</span>
 
-<span class="kn">import</span> <span class="nn">warnings</span>
+<span class="kn">import</span><span class="w"> </span><span class="nn">warnings</span>
 <span class="n">warnings</span><span class="o">.</span><span class="n">filterwarnings</span><span class="p">(</span><span class="n">action</span><span class="o">=</span><span class="s1">&#39;ignore&#39;</span><span class="p">)</span>
 
 <span class="n">hv</span><span class="o">.</span><span class="n">extension</span><span class="p">(</span><span class="s1">&#39;bokeh&#39;</span><span class="p">,</span> <span class="n">width</span><span class="o">=</span><span class="mi">100</span><span class="p">)</span>
@@ -2310,7 +2313,7 @@ Coordinates:
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># functions to load xml and extract bounding boxes</span>
 
 <span class="c1"># function to create ordered dictionary of .xml annotation files</span>
-<span class="k">def</span> <span class="nf">loadxml</span><span class="p">(</span><span class="n">imagename</span><span class="p">):</span>
+<span class="k">def</span><span class="w"> </span><span class="nf">loadxml</span><span class="p">(</span><span class="n">imagename</span><span class="p">):</span>
     <span class="n">imagename</span> <span class="o">=</span> <span class="n">imagename</span><span class="o">.</span><span class="n">replace</span><span class="p">(</span><span class="s1">&#39;.tif&#39;</span><span class="p">,</span><span class="s1">&#39;&#39;</span><span class="p">)</span>
     <span class="n">fullurl</span> <span class="o">=</span> <span class="s2">&quot;https://raw.githubusercontent.com/weecology/NeonTreeEvaluation/master/annotations/&quot;</span> <span class="o">+</span> <span class="n">imagename</span> <span class="o">+</span> <span class="s2">&quot;.xml&quot;</span>
     <span class="n">file</span> <span class="o">=</span> <span class="n">urllib</span><span class="o">.</span><span class="n">request</span><span class="o">.</span><span class="n">urlopen</span><span class="p">(</span><span class="n">fullurl</span><span class="p">)</span>
@@ -2320,7 +2323,7 @@ Coordinates:
     <span class="k">return</span> <span class="n">data</span>
 
 <span class="c1"># function to extract bounding boxes</span>
-<span class="k">def</span> <span class="nf">extractbb</span><span class="p">(</span><span class="n">i</span><span class="p">):</span>
+<span class="k">def</span><span class="w"> </span><span class="nf">extractbb</span><span class="p">(</span><span class="n">i</span><span class="p">):</span>
     <span class="n">bb</span> <span class="o">=</span> <span class="p">[</span><span class="n">f</span><span class="p">[</span><span class="s1">&#39;bndbox&#39;</span><span class="p">]</span> <span class="k">for</span> <span class="n">f</span> <span class="ow">in</span> <span class="n">allxml</span><span class="p">[</span><span class="n">i</span><span class="p">][</span><span class="s1">&#39;annotation&#39;</span><span class="p">][</span><span class="s1">&#39;object&#39;</span><span class="p">]]</span>
     <span class="k">return</span> <span class="n">bb</span>
 </pre></div>
@@ -2350,7 +2353,7 @@ Coordinates:
 <div class="cell docutils container">
 <div class="cell_input docutils container">
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># function to plot images</span>
-<span class="k">def</span> <span class="nf">cv2_imshow</span><span class="p">(</span><span class="n">a</span><span class="p">,</span> <span class="o">**</span><span class="n">kwargs</span><span class="p">):</span>
+<span class="k">def</span><span class="w"> </span><span class="nf">cv2_imshow</span><span class="p">(</span><span class="n">a</span><span class="p">,</span> <span class="o">**</span><span class="n">kwargs</span><span class="p">):</span>
     <span class="n">a</span> <span class="o">=</span> <span class="n">a</span><span class="o">.</span><span class="n">clip</span><span class="p">(</span><span class="mi">0</span><span class="p">,</span> <span class="mi">255</span><span class="p">)</span><span class="o">.</span><span class="n">astype</span><span class="p">(</span><span class="s1">&#39;uint8&#39;</span><span class="p">)</span>
     <span class="c1"># cv2 stores colors as BGR; convert to RGB</span>
     <span class="k">if</span> <span class="n">a</span><span class="o">.</span><span class="n">ndim</span> <span class="o">==</span> <span class="mi">3</span><span class="p">:</span>
@@ -2411,7 +2414,7 @@ Coordinates:
 <p>Now we’re going to load and use a pretrained model from the <code class="docutils literal notranslate"><span class="pre">deepforest</span></code> package.</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="kn">from</span> <span class="nn">deepforest</span> <span class="kn">import</span> <span class="n">main</span>
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="kn">from</span><span class="w"> </span><span class="nn">deepforest</span><span class="w"> </span><span class="kn">import</span> <span class="n">main</span>
 
 <span class="c1"># load deep forest model</span>
 <span class="n">model</span> <span class="o">=</span> <span class="n">main</span><span class="o">.</span><span class="n">deepforest</span><span class="p">()</span>
@@ -2519,7 +2522,7 @@ Loading pre-built model: https://github.com/weecology/DeepForest/releases/tag/1.
 <p>The following cells show how to define the optimal window i.e. tile size.</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="kn">from</span> <span class="nn">deepforest</span> <span class="kn">import</span> <span class="n">preprocess</span>
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="kn">from</span><span class="w"> </span><span class="nn">deepforest</span><span class="w"> </span><span class="kn">import</span> <span class="n">preprocess</span>
 
 <span class="c1">#Create windows of 400px</span>
 <span class="n">windows</span> <span class="o">=</span> <span class="n">preprocess</span><span class="o">.</span><span class="n">compute_windows</span><span class="p">(</span><span class="n">image</span><span class="o">.</span><span class="n">values</span><span class="p">,</span> <span class="n">patch_size</span><span class="o">=</span><span class="mi">400</span><span class="p">,</span><span class="n">patch_overlap</span><span class="o">=</span><span class="mi">0</span><span class="p">)</span>
@@ -2609,7 +2612,7 @@ Loading pre-built model: https://github.com/weecology/DeepForest/releases/tag/1.
 </summary>
 <div class="cell_input docutils container">
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1">## function to convert bbox in dictionary to geopandas</span>
-<span class="k">def</span> <span class="nf">bbox_to_geopandas</span><span class="p">(</span><span class="n">bbox_df</span><span class="p">):</span>
+<span class="k">def</span><span class="w"> </span><span class="nf">bbox_to_geopandas</span><span class="p">(</span><span class="n">bbox_df</span><span class="p">):</span>
     <span class="n">geometry</span> <span class="o">=</span> <span class="p">[</span><span class="n">box</span><span class="p">(</span><span class="n">x1</span><span class="p">,</span> <span class="n">y1</span><span class="p">,</span> <span class="n">x2</span><span class="p">,</span> <span class="n">y2</span><span class="p">)</span> <span class="k">for</span> <span class="n">x1</span><span class="p">,</span><span class="n">y1</span><span class="p">,</span><span class="n">x2</span><span class="p">,</span><span class="n">y2</span> <span class="ow">in</span> <span class="nb">zip</span><span class="p">(</span><span class="n">bbox_df</span><span class="o">.</span><span class="n">xmin</span><span class="p">,</span> <span class="n">bbox_df</span><span class="o">.</span><span class="n">ymin</span><span class="p">,</span> <span class="n">bbox_df</span><span class="o">.</span><span class="n">xmax</span><span class="p">,</span> <span class="n">bbox_df</span><span class="o">.</span><span class="n">ymax</span><span class="p">)]</span>
     <span class="n">poly_geo</span> <span class="o">=</span> <span class="n">GeoDataFrame</span><span class="p">(</span><span class="n">bbox_df</span><span class="p">,</span> <span class="n">geometry</span><span class="o">=</span><span class="n">geometry</span><span class="p">)</span>
     <span class="k">return</span> <span class="n">poly_geo</span>
@@ -2732,7 +2735,7 @@ Loading pre-built model: https://github.com/weecology/DeepForest/releases/tag/1.
 <p><strong>Contact</strong>: If you have any suggestion or report an issue with this notebook, feel free to <a class="reference external" href="https://github.com/alan-turing-institute/environmental-ds-book/issues/new/choose">create an issue</a> or send a direct message to <a class="reference external" href="mailto:environmental&#46;ds&#46;book&#37;&#52;&#48;gmail&#46;com">environmental<span>&#46;</span>ds<span>&#46;</span>book<span>&#64;</span>gmail<span>&#46;</span>com</a>.</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="kn">from</span> <span class="nn">datetime</span> <span class="kn">import</span> <span class="n">date</span>
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="kn">from</span><span class="w"> </span><span class="nn">datetime</span><span class="w"> </span><span class="kn">import</span> <span class="n">date</span>
 
 <span class="nb">print</span><span class="p">(</span><span class="s1">&#39;Notebook repository version: v1.0.4&#39;</span><span class="p">)</span>
 <span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s1">&#39;Last tested: </span><span class="si">{</span><span class="n">date</span><span class="o">.</span><span class="n">today</span><span class="p">()</span><span class="si">}</span><span class="s1">&#39;</span><span class="p">)</span>

@@ -128,6 +128,9 @@ const thebe_selector_output = ".output, .cell_output"
   <div class="pst-async-banner-revealer d-none">
   <aside id="bd-header-version-warning" class="d-none d-print-none" aria-label="Version warning"></aside>
 </div>
+<aside class="bd-header-announcement" aria-label="Announcement">
+  <div class="bd-header-announcement__content">⚠️EDS book is transitioning from Jupyter Book to Jupyter Book 2 between 20-23 June 2025. Please be patient as we work through this process. If you have any questions, please contact us at <a href='mailto:environmental.ds.book@gmail.com</div>
+</aside>
 
   
     <header class="bd-header navbar navbar-expand-lg bd-navbar d-print-none">
@@ -601,37 +604,37 @@ document.write(`
 </summary>
 <div class="cell_input docutils container">
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># system</span>
-<span class="kn">import</span> <span class="nn">sys</span>
-<span class="kn">import</span> <span class="nn">os</span>
-<span class="kn">import</span> <span class="nn">shutil</span>
+<span class="kn">import</span><span class="w"> </span><span class="nn">sys</span>
+<span class="kn">import</span><span class="w"> </span><span class="nn">os</span>
+<span class="kn">import</span><span class="w"> </span><span class="nn">shutil</span>
 
 <span class="n">sys</span><span class="o">.</span><span class="n">path</span><span class="o">.</span><span class="n">insert</span><span class="p">(</span><span class="mi">0</span><span class="p">,</span> <span class="n">os</span><span class="o">.</span><span class="n">path</span><span class="o">.</span><span class="n">join</span><span class="p">(</span><span class="n">os</span><span class="o">.</span><span class="n">getcwd</span><span class="p">(),</span> <span class="s2">&quot;Deepprior4DVar_CI22&quot;</span><span class="p">))</span>
 
 <span class="c1"># data</span>
-<span class="kn">import</span> <span class="nn">numpy</span> <span class="k">as</span> <span class="nn">np</span>
-<span class="kn">import</span> <span class="nn">pooch</span>
+<span class="kn">import</span><span class="w"> </span><span class="nn">numpy</span><span class="w"> </span><span class="k">as</span><span class="w"> </span><span class="nn">np</span>
+<span class="kn">import</span><span class="w"> </span><span class="nn">pooch</span>
 
 <span class="n">np</span><span class="o">.</span><span class="n">random</span><span class="o">.</span><span class="n">seed</span><span class="p">(</span><span class="mi">42</span><span class="p">)</span>
 
 <span class="c1"># modelling</span>
-<span class="kn">import</span> <span class="nn">torch</span>
-<span class="kn">import</span> <span class="nn">torch.optim</span> <span class="k">as</span> <span class="nn">optim</span>
+<span class="kn">import</span><span class="w"> </span><span class="nn">torch</span>
+<span class="kn">import</span><span class="w"> </span><span class="nn">torch.optim</span><span class="w"> </span><span class="k">as</span><span class="w"> </span><span class="nn">optim</span>
 
 <span class="n">torch</span><span class="o">.</span><span class="n">manual_seed</span><span class="p">(</span><span class="mi">42</span><span class="p">)</span>
 
 <span class="c1"># custom functions from the Deepprior4DVar_CI22 repo</span>
-<span class="kn">import</span> <span class="nn">dynamics</span>
-<span class="kn">import</span> <span class="nn">utils</span>
-<span class="kn">import</span> <span class="nn">_4DVar</span>
-<span class="kn">import</span> <span class="nn">_DeepPrior4DVar</span>
+<span class="kn">import</span><span class="w"> </span><span class="nn">dynamics</span>
+<span class="kn">import</span><span class="w"> </span><span class="nn">utils</span>
+<span class="kn">import</span><span class="w"> </span><span class="nn">_4DVar</span>
+<span class="kn">import</span><span class="w"> </span><span class="nn">_DeepPrior4DVar</span>
 
 <span class="c1"># plotting and tables</span>
-<span class="kn">import</span> <span class="nn">matplotlib.pyplot</span> <span class="k">as</span> <span class="nn">plt</span>
-<span class="kn">import</span> <span class="nn">tabulate</span>
+<span class="kn">import</span><span class="w"> </span><span class="nn">matplotlib.pyplot</span><span class="w"> </span><span class="k">as</span><span class="w"> </span><span class="nn">plt</span>
+<span class="kn">import</span><span class="w"> </span><span class="nn">tabulate</span>
 
 <span class="c1"># utils</span>
-<span class="kn">import</span> <span class="nn">time</span>
-<span class="kn">import</span> <span class="nn">warnings</span>
+<span class="kn">import</span><span class="w"> </span><span class="nn">time</span>
+<span class="kn">import</span><span class="w"> </span><span class="nn">warnings</span>
 
 <span class="n">warnings</span><span class="o">.</span><span class="n">filterwarnings</span><span class="p">(</span><span class="n">action</span><span class="o">=</span><span class="s2">&quot;ignore&quot;</span><span class="p">)</span>
 </pre></div>
@@ -1283,7 +1286,7 @@ Unzipping contents of &#39;/home/jovyan/90af5dad5f5eb903b224e65353576d9c-data.zi
 <p><strong>Contact</strong>: If you have any suggestion or report an issue with this notebook, feel free to <a class="reference external" href="https://github.com/alan-turing-institute/environmental-ds-book/issues/new/choose">create an issue</a> or send a direct message to <a class="reference external" href="mailto:environmental&#46;ds&#46;book&#37;&#52;&#48;gmail&#46;com">environmental<span>&#46;</span>ds<span>&#46;</span>book<span>&#64;</span>gmail<span>&#46;</span>com</a>.</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="kn">from</span> <span class="nn">datetime</span> <span class="kn">import</span> <span class="n">date</span>
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="kn">from</span><span class="w"> </span><span class="nn">datetime</span><span class="w"> </span><span class="kn">import</span> <span class="n">date</span>
 
 <span class="nb">print</span><span class="p">(</span><span class="s1">&#39;Notebook repository version: v1.0.2&#39;</span><span class="p">)</span>
 <span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s1">&#39;Last tested: </span><span class="si">{</span><span class="n">date</span><span class="o">.</span><span class="n">today</span><span class="p">()</span><span class="si">}</span><span class="s1">&#39;</span><span class="p">)</span>

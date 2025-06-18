@@ -129,6 +129,9 @@ const thebe_selector_output = ".output, .cell_output"
   <div class="pst-async-banner-revealer d-none">
   <aside id="bd-header-version-warning" class="d-none d-print-none" aria-label="Version warning"></aside>
 </div>
+<aside class="bd-header-announcement" aria-label="Announcement">
+  <div class="bd-header-announcement__content">⚠️EDS book is transitioning from Jupyter Book to Jupyter Book 2 between 20-23 June 2025. Please be patient as we work through this process. If you have any questions, please contact us at <a href='mailto:environmental.ds.book@gmail.com</div>
+</aside>
 
   
     <header class="bd-header navbar navbar-expand-lg bd-navbar d-print-none">
@@ -610,30 +613,30 @@ Due to the memory constraints of the Binder environment, some steps of the machi
 <span class="expanded">Hide code cell source</span>
 </summary>
 <div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">os</span>
-<span class="kn">import</span> <span class="nn">glob</span>
-<span class="kn">import</span> <span class="nn">urllib</span>
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span><span class="w"> </span><span class="nn">os</span>
+<span class="kn">import</span><span class="w"> </span><span class="nn">glob</span>
+<span class="kn">import</span><span class="w"> </span><span class="nn">urllib</span>
 
-<span class="kn">import</span> <span class="nn">numpy</span> <span class="k">as</span> <span class="nn">np</span>
-<span class="kn">import</span> <span class="nn">pandas</span> <span class="k">as</span> <span class="nn">pd</span>
+<span class="kn">import</span><span class="w"> </span><span class="nn">numpy</span><span class="w"> </span><span class="k">as</span><span class="w"> </span><span class="nn">np</span>
+<span class="kn">import</span><span class="w"> </span><span class="nn">pandas</span><span class="w"> </span><span class="k">as</span><span class="w"> </span><span class="nn">pd</span>
 
-<span class="kn">import</span> <span class="nn">xmltodict</span>
-<span class="kn">import</span> <span class="nn">cv2</span>
-<span class="kn">import</span> <span class="nn">matplotlib.pyplot</span> <span class="k">as</span> <span class="nn">plt</span>
-<span class="kn">from</span> <span class="nn">PIL</span> <span class="kn">import</span> <span class="n">Image</span>
+<span class="kn">import</span><span class="w"> </span><span class="nn">xmltodict</span>
+<span class="kn">import</span><span class="w"> </span><span class="nn">cv2</span>
+<span class="kn">import</span><span class="w"> </span><span class="nn">matplotlib.pyplot</span><span class="w"> </span><span class="k">as</span><span class="w"> </span><span class="nn">plt</span>
+<span class="kn">from</span><span class="w"> </span><span class="nn">PIL</span><span class="w"> </span><span class="kn">import</span> <span class="n">Image</span>
 
-<span class="kn">from</span> <span class="nn">deepforest</span> <span class="kn">import</span> <span class="n">main</span>
-<span class="kn">from</span> <span class="nn">deepforest.visualize</span> <span class="kn">import</span> <span class="n">plot_predictions</span>
-<span class="kn">from</span> <span class="nn">huggingface_hub</span> <span class="kn">import</span> <span class="n">hf_hub_download</span>
+<span class="kn">from</span><span class="w"> </span><span class="nn">deepforest</span><span class="w"> </span><span class="kn">import</span> <span class="n">main</span>
+<span class="kn">from</span><span class="w"> </span><span class="nn">deepforest.visualize</span><span class="w"> </span><span class="kn">import</span> <span class="n">plot_predictions</span>
+<span class="kn">from</span><span class="w"> </span><span class="nn">huggingface_hub</span><span class="w"> </span><span class="kn">import</span> <span class="n">hf_hub_download</span>
 
-<span class="kn">import</span> <span class="nn">torch</span>
+<span class="kn">import</span><span class="w"> </span><span class="nn">torch</span>
 
-<span class="kn">from</span> <span class="nn">shapely.geometry</span> <span class="kn">import</span> <span class="n">box</span>
-<span class="kn">from</span> <span class="nn">skimage.exposure</span> <span class="kn">import</span> <span class="n">equalize_hist</span>
+<span class="kn">from</span><span class="w"> </span><span class="nn">shapely.geometry</span><span class="w"> </span><span class="kn">import</span> <span class="n">box</span>
+<span class="kn">from</span><span class="w"> </span><span class="nn">skimage.exposure</span><span class="w"> </span><span class="kn">import</span> <span class="n">equalize_hist</span>
 
-<span class="kn">import</span> <span class="nn">pooch</span>
+<span class="kn">import</span><span class="w"> </span><span class="nn">pooch</span>
 
-<span class="kn">import</span> <span class="nn">warnings</span>
+<span class="kn">import</span><span class="w"> </span><span class="nn">warnings</span>
 <span class="n">warnings</span><span class="o">.</span><span class="n">filterwarnings</span><span class="p">(</span><span class="n">action</span><span class="o">=</span><span class="s1">&#39;ignore&#39;</span><span class="p">)</span>
 
 <span class="o">%</span><span class="k">matplotlib</span> inline
@@ -716,7 +719,7 @@ Due to the memory constraints of the Binder environment, this step is omitted fr
 <b>Note:</b> 
 Due to the memory constraints of the Binder environment, this step is omitted from the notebook. To execute locally, run the following code:
 </div>
-<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="kn">from</span> <span class="nn">deepforest</span> <span class="kn">import</span> <span class="n">main</span>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="kn">from</span><span class="w"> </span><span class="nn">deepforest</span><span class="w"> </span><span class="kn">import</span> <span class="n">main</span>
 
 <span class="n">model</span> <span class="o">=</span> <span class="n">main</span><span class="o">.</span><span class="n">deepforest</span><span class="p">()</span>
 <span class="n">model</span><span class="o">.</span><span class="n">load_model</span><span class="p">(</span><span class="n">model_name</span><span class="o">=</span><span class="s2">&quot;weecology/deepforest-livestock&quot;</span><span class="p">,</span> <span class="n">revision</span><span class="o">=</span><span class="s2">&quot;main&quot;</span><span class="p">)</span>
@@ -855,7 +858,7 @@ Due to the memory constraints of the Binder environment, this step is omitted fr
 <b>Note:</b> 
 Since the Binder environment does not provide enough computational resources for training the model, the following code demonstrates how to set up and train the model in a more powerful local or cloud-based environment using PyTorch Lightning.
 </div>
-<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">pytorch_lightning</span> <span class="k">as</span> <span class="nn">pl</span>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span><span class="w"> </span><span class="nn">pytorch_lightning</span><span class="w"> </span><span class="k">as</span><span class="w"> </span><span class="nn">pl</span>
 
 <span class="n">output_dir</span> <span class="o">=</span> <span class="n">os</span><span class="o">.</span><span class="n">path</span><span class="o">.</span><span class="n">join</span><span class="p">(</span><span class="n">notebook_folder</span><span class="p">,</span> <span class="s1">&#39;data&#39;</span><span class="p">)</span>
 
@@ -1188,7 +1191,7 @@ Due to the memory constraints of the Binder environment, this step is omitted fr
 <p><strong>Contact</strong>: If you have any suggestion or report an issue with this notebook, feel free to <a class="reference external" href="https://github.com/alan-turing-institute/environmental-ds-book/issues/new/choose">create an issue</a> or send a direct message to <a class="reference external" href="mailto:environmental&#46;ds&#46;book&#37;&#52;&#48;gmail&#46;com">environmental<span>&#46;</span>ds<span>&#46;</span>book<span>&#64;</span>gmail<span>&#46;</span>com</a>.</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="kn">from</span> <span class="nn">datetime</span> <span class="kn">import</span> <span class="n">date</span>
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="kn">from</span><span class="w"> </span><span class="nn">datetime</span><span class="w"> </span><span class="kn">import</span> <span class="n">date</span>
 
 <span class="nb">print</span><span class="p">(</span><span class="s1">&#39;Notebook repository version: v1.0.2&#39;</span><span class="p">)</span>
 <span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s1">&#39;Last tested: </span><span class="si">{</span><span class="n">date</span><span class="o">.</span><span class="n">today</span><span class="p">()</span><span class="si">}</span><span class="s1">&#39;</span><span class="p">)</span>

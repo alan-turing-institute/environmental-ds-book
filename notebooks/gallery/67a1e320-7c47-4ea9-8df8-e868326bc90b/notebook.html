@@ -126,6 +126,9 @@ const thebe_selector_output = ".output, .cell_output"
   <div class="pst-async-banner-revealer d-none">
   <aside id="bd-header-version-warning" class="d-none d-print-none" aria-label="Version warning"></aside>
 </div>
+<aside class="bd-header-announcement" aria-label="Announcement">
+  <div class="bd-header-announcement__content">⚠️EDS book is transitioning from Jupyter Book to Jupyter Book 2 between 20-23 June 2025. Please be patient as we work through this process. If you have any questions, please contact us at <a href='mailto:environmental.ds.book@gmail.com</div>
+</aside>
 
   
     <header class="bd-header navbar navbar-expand-lg bd-navbar d-print-none">
@@ -737,22 +740,22 @@ OSI SAF Global sea ice concentration climate data record 1978-2020 (v3.0, 2022),
 <span class="expanded">Hide code cell source</span>
 </summary>
 <div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">os</span>
-<span class="kn">import</span> <span class="nn">warnings</span>
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span><span class="w"> </span><span class="nn">os</span>
+<span class="kn">import</span><span class="w"> </span><span class="nn">warnings</span>
 <span class="n">warnings</span><span class="o">.</span><span class="n">filterwarnings</span><span class="p">(</span><span class="n">action</span><span class="o">=</span><span class="s1">&#39;ignore&#39;</span><span class="p">)</span>
 
-<span class="kn">import</span> <span class="nn">numpy</span> <span class="k">as</span> <span class="nn">np</span>
-<span class="kn">import</span> <span class="nn">pandas</span> <span class="k">as</span> <span class="nn">pd</span>
-<span class="kn">import</span> <span class="nn">tensorflow</span> <span class="k">as</span> <span class="nn">tf</span>
+<span class="kn">import</span><span class="w"> </span><span class="nn">numpy</span><span class="w"> </span><span class="k">as</span><span class="w"> </span><span class="nn">np</span>
+<span class="kn">import</span><span class="w"> </span><span class="nn">pandas</span><span class="w"> </span><span class="k">as</span><span class="w"> </span><span class="nn">pd</span>
+<span class="kn">import</span><span class="w"> </span><span class="nn">tensorflow</span><span class="w"> </span><span class="k">as</span><span class="w"> </span><span class="nn">tf</span>
 
 <span class="c1"># We also set the logging level so that we get some feedback from the API</span>
-<span class="kn">import</span> <span class="nn">logging</span>
+<span class="kn">import</span><span class="w"> </span><span class="nn">logging</span>
 <span class="n">logging</span><span class="o">.</span><span class="n">basicConfig</span><span class="p">(</span><span class="n">level</span><span class="o">=</span><span class="n">logging</span><span class="o">.</span><span class="n">INFO</span><span class="p">)</span>
 
 <span class="c1"># Set up logging level</span>
-<span class="kn">import</span> <span class="nn">dask</span>
-<span class="kn">import</span> <span class="nn">distributed</span>
-<span class="kn">import</span> <span class="nn">xarray</span>
+<span class="kn">import</span><span class="w"> </span><span class="nn">dask</span>
+<span class="kn">import</span><span class="w"> </span><span class="nn">distributed</span>
+<span class="kn">import</span><span class="w"> </span><span class="nn">xarray</span>
 <span class="n">logging</span><span class="o">.</span><span class="n">getLogger</span><span class="p">(</span><span class="s1">&#39;icenet&#39;</span><span class="p">)</span><span class="o">.</span><span class="n">setLevel</span><span class="p">(</span><span class="n">logging</span><span class="o">.</span><span class="n">INFO</span><span class="p">)</span>
 <span class="n">logging</span><span class="o">.</span><span class="n">getLogger</span><span class="p">(</span><span class="s1">&#39;dask&#39;</span><span class="p">)</span><span class="o">.</span><span class="n">setLevel</span><span class="p">(</span><span class="n">logging</span><span class="o">.</span><span class="n">ERROR</span><span class="p">)</span>
 <span class="n">logging</span><span class="o">.</span><span class="n">getLogger</span><span class="p">(</span><span class="s1">&#39;distributed&#39;</span><span class="p">)</span><span class="o">.</span><span class="n">setLevel</span><span class="p">(</span><span class="n">logging</span><span class="o">.</span><span class="n">ERROR</span><span class="p">)</span>
@@ -770,8 +773,8 @@ To enable them in other operations, rebuild TensorFlow with the appropriate comp
 <p>The following imports modules from the IceNet library as preparation for the downloaders. Whose instantiation describes the interactions with the upstream APIs/data interfaces used to source various types of data.</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="kn">from</span> <span class="nn">icenet.data.sic.mask</span> <span class="kn">import</span> <span class="n">Masks</span>
-<span class="kn">from</span> <span class="nn">icenet.data.sic.osisaf</span> <span class="kn">import</span> <span class="n">SICDownloader</span>
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="kn">from</span><span class="w"> </span><span class="nn">icenet.data.sic.mask</span><span class="w"> </span><span class="kn">import</span> <span class="n">Masks</span>
+<span class="kn">from</span><span class="w"> </span><span class="nn">icenet.data.sic.osisaf</span><span class="w"> </span><span class="kn">import</span> <span class="n">SICDownloader</span>
 </pre></div>
 </div>
 </div>
@@ -923,8 +926,8 @@ It does not change the workflow or the code, the class will simply skip over the
 </div>
 </details>
 <p>Once configured, the ORAS5Downloader can used as follows:</p>
-<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">pandas</span> <span class="k">as</span> <span class="nn">pd</span>
-<span class="kn">from</span> <span class="nn">icenet.data.interfaces.cmems</span> <span class="kn">import</span> <span class="n">ORAS5Downloader</span>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span><span class="w"> </span><span class="nn">pandas</span><span class="w"> </span><span class="k">as</span><span class="w"> </span><span class="nn">pd</span>
+<span class="kn">from</span><span class="w"> </span><span class="nn">icenet.data.interfaces.cmems</span><span class="w"> </span><span class="kn">import</span> <span class="n">ORAS5Downloader</span>
 
 <span class="nb">vars</span> <span class="o">=</span> <span class="p">[</span><span class="s2">&quot;thetao&quot;</span><span class="p">]</span>
 
@@ -1031,22 +1034,22 @@ It does not change the workflow or the code, the class will simply skip over the
 <p>There are also other downloaders available within IceNet that may also be of interest. These can also be used for training the model, and not just sea ice concentration or climate reanalysis data (ERA5).</p>
 <ol class="arabic">
 <li><p>The <a class="reference external" href="https://pcmdi.llnl.gov/CMIP6/">CMIP6</a> climate simulation data can be downloaded using:</p>
-<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="kn">from</span> <span class="nn">icenet.data.interfaces.esgf</span> <span class="kn">import</span> <span class="n">CMIP6Downloader</span>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="kn">from</span><span class="w"> </span><span class="nn">icenet.data.interfaces.esgf</span><span class="w"> </span><span class="kn">import</span> <span class="n">CMIP6Downloader</span>
 </pre></div>
 </div>
 </li>
 <li><p>In addition to ERA5 for downloading climate reanalysis data (shown above), ocean reanalysis data (<a class="reference external" href="https://www.ecmwf.int/en/forecasts/dataset/ocean-reanalysis-system-5">ORAS5</a>) can be downloaded via:</p>
-<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="kn">from</span> <span class="nn">icenet.data.interfaces.cmems</span> <span class="kn">import</span> <span class="n">ORAS5Downloader</span>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="kn">from</span><span class="w"> </span><span class="nn">icenet.data.interfaces.cmems</span><span class="w"> </span><span class="kn">import</span> <span class="n">ORAS5Downloader</span>
 </pre></div>
 </div>
 </li>
 <li><p>Data from ECMWF High Resolution Forecast (<a class="reference external" href="https://www.ecmwf.int/en/forecasts/datasets/catalogue-ecmwf-real-time-products">HRES</a>) can be downloaded using:</p>
-<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="kn">from</span> <span class="nn">icenet.data.interfaces.mars</span> <span class="kn">import</span> <span class="n">HRESDownloader</span>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="kn">from</span><span class="w"> </span><span class="nn">icenet.data.interfaces.mars</span><span class="w"> </span><span class="kn">import</span> <span class="n">HRESDownloader</span>
 </pre></div>
 </div>
 </li>
 <li><p>Data from ECMWF Long-Range Seasonal Forecast (<a class="reference external" href="https://gmd.copernicus.org/articles/12/1087/2019/">SEAS</a>) can be downloaded using:</p>
-<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="kn">from</span> <span class="nn">icenet.data.interfaces.mars</span> <span class="kn">import</span> <span class="n">SEASDownloader</span>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="kn">from</span><span class="w"> </span><span class="nn">icenet.data.interfaces.mars</span><span class="w"> </span><span class="kn">import</span> <span class="n">SEASDownloader</span>
 </pre></div>
 </div>
 </li>
@@ -1074,9 +1077,9 @@ It does not change the workflow or the code, the class will simply skip over the
 <p>These modules import the Processing modules for the downloaded data.</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="kn">from</span> <span class="nn">icenet.data.processors.era5</span> <span class="kn">import</span> <span class="n">IceNetERA5PreProcessor</span> <span class="c1"># Unused in this demonstrator notebook</span>
-<span class="kn">from</span> <span class="nn">icenet.data.processors.meta</span> <span class="kn">import</span> <span class="n">IceNetMetaPreProcessor</span>
-<span class="kn">from</span> <span class="nn">icenet.data.processors.osi</span> <span class="kn">import</span> <span class="n">IceNetOSIPreProcessor</span>
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="kn">from</span><span class="w"> </span><span class="nn">icenet.data.processors.era5</span><span class="w"> </span><span class="kn">import</span> <span class="n">IceNetERA5PreProcessor</span> <span class="c1"># Unused in this demonstrator notebook</span>
+<span class="kn">from</span><span class="w"> </span><span class="nn">icenet.data.processors.meta</span><span class="w"> </span><span class="kn">import</span> <span class="n">IceNetMetaPreProcessor</span>
+<span class="kn">from</span><span class="w"> </span><span class="nn">icenet.data.processors.osi</span><span class="w"> </span><span class="kn">import</span> <span class="n">IceNetOSIPreProcessor</span>
 </pre></div>
 </div>
 </div>
@@ -1201,8 +1204,8 @@ It does not change the workflow or the code, the class will simply skip over the
 <h3>ERA5 Downloader<a class="headerlink" href="#era5-downloader" title="Permalink to this heading">#</a></h3>
 <p>The downloader implementation of this data in IceNet utilises the CDS API which requires registration and configuration of an API key before downloading. The registration is free, please see <a class="reference external" href="https://cds.climate.copernicus.eu/api-how-to">the official CDS API how-to</a> for more instructions on how to set this up.</p>
 <p>Once the key is configured correctly, you can utilise the <code class="docutils literal notranslate"><span class="pre">ERA5Downloader</span></code> class, for example, to download climate variables and use it for training the model in addition to the sea ice concentration data that is downloaded further below.</p>
-<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">pandas</span> <span class="k">as</span> <span class="nn">pd</span>
-<span class="kn">from</span> <span class="nn">icenet.data.interfaces.cds</span> <span class="kn">import</span> <span class="n">ERA5Downloader</span>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span><span class="w"> </span><span class="nn">pandas</span><span class="w"> </span><span class="k">as</span><span class="w"> </span><span class="nn">pd</span>
+<span class="kn">from</span><span class="w"> </span><span class="nn">icenet.data.interfaces.cds</span><span class="w"> </span><span class="kn">import</span> <span class="n">ERA5Downloader</span>
 
 <span class="n">era5</span> <span class="o">=</span> <span class="n">ERA5Downloader</span><span class="p">(</span>
     <span class="n">var_names</span><span class="o">=</span><span class="p">[</span><span class="s2">&quot;tas&quot;</span><span class="p">,</span> <span class="s2">&quot;zg&quot;</span><span class="p">,</span> <span class="s2">&quot;uas&quot;</span><span class="p">,</span> <span class="s2">&quot;vas&quot;</span><span class="p">],</span>      <span class="c1"># Name of variables to download</span>
@@ -1280,7 +1283,7 @@ It does not change the workflow or the code, the class will simply skip over the
 <p>Now, we can create a dataset configuration for training the network. This can include cached data for the network in the format of a TFRecordDataset compatible set of tfrecords. To achieve this we create the <code class="docutils literal notranslate"><span class="pre">IceNetDataLoader</span></code>, which can both generate <code class="docutils literal notranslate"><span class="pre">IceNetDataSet</span></code> configurations (which easily provide the necessary functionality for training and prediction) as well as individual data samples for direct usage.</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="kn">from</span> <span class="nn">icenet.data.loaders</span> <span class="kn">import</span> <span class="n">IceNetDataLoaderFactory</span>
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="kn">from</span><span class="w"> </span><span class="nn">icenet.data.loaders</span><span class="w"> </span><span class="kn">import</span> <span class="n">IceNetDataLoaderFactory</span>
 
 <span class="n">implementation</span> <span class="o">=</span> <span class="s2">&quot;dask&quot;</span>
 <span class="n">loader_config</span> <span class="o">=</span> <span class="sa">f</span><span class="s2">&quot;loader.</span><span class="si">{</span><span class="n">processed_name</span><span class="si">}</span><span class="s2">.json&quot;</span>
@@ -1450,7 +1453,7 @@ type(sw): &lt;class &#39;numpy.ndarray&#39;&gt;, sw.shape: (432, 432, 3, 1)
 <p>We can load the dataset configuration by creating a <code class="docutils literal notranslate"><span class="pre">IceNetDataSet</span></code> from the <code class="docutils literal notranslate"><span class="pre">dataset_config.api_dataset.json</span></code> file and using the <code class="docutils literal notranslate"><span class="pre">_config</span></code> method.</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="kn">from</span> <span class="nn">icenet.data.dataset</span> <span class="kn">import</span> <span class="n">IceNetDataSet</span>
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="kn">from</span><span class="w"> </span><span class="nn">icenet.data.dataset</span><span class="w"> </span><span class="kn">import</span> <span class="n">IceNetDataSet</span>
 
 <span class="n">dataset_config</span> <span class="o">=</span> <span class="sa">f</span><span class="s2">&quot;dataset_config.</span><span class="si">{</span><span class="n">dataset_name</span><span class="si">}</span><span class="s2">.json&quot;</span>
 <span class="n">dataset</span> <span class="o">=</span> <span class="n">IceNetDataSet</span><span class="p">(</span><span class="n">dataset_config</span><span class="p">,</span> <span class="n">batch_size</span><span class="o">=</span><span class="mi">1</span><span class="p">)</span>
@@ -1526,7 +1529,7 @@ type(sw): &lt;class &#39;numpy.ndarray&#39;&gt;, sw.shape: (432, 432, 3, 1)
 <div class="cell tag_hide-output docutils container">
 <div class="cell_input above-output-prompt docutils container">
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="o">%%time</span>
-<span class="kn">from</span> <span class="nn">icenet.model.train</span> <span class="kn">import</span> <span class="n">train_model</span>
+<span class="kn">from</span><span class="w"> </span><span class="nn">icenet.model.train</span><span class="w"> </span><span class="kn">import</span> <span class="n">train_model</span>
 
 <span class="n">run_name</span> <span class="o">=</span> <span class="s2">&quot;api_test_run&quot;</span>
 <span class="n">seed</span> <span class="o">=</span> <span class="mi">42</span>
@@ -1997,7 +2000,7 @@ Wall time: 12.5 s
 <div class="cell docutils container">
 <div class="cell_input docutils container">
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="o">%%time</span>
-<span class="kn">from</span> <span class="nn">icenet.model.predict</span> <span class="kn">import</span> <span class="n">predict_forecast</span>
+<span class="kn">from</span><span class="w"> </span><span class="nn">icenet.model.predict</span><span class="w"> </span><span class="kn">import</span> <span class="n">predict_forecast</span>
 
 <span class="c1"># Follows the naming convention used by the CLI version</span>
 <span class="n">output_dir</span> <span class="o">=</span> <span class="n">os</span><span class="o">.</span><span class="n">path</span><span class="o">.</span><span class="n">join</span><span class="p">(</span><span class="s2">&quot;.&quot;</span><span class="p">,</span> <span class="s2">&quot;results&quot;</span><span class="p">,</span> <span class="s2">&quot;predict&quot;</span><span class="p">,</span>
@@ -2138,12 +2141,12 @@ To enable them in other operations, rebuild TensorFlow with the appropriate comp
 <p>We are also using the <code class="docutils literal notranslate"><span class="pre">Masks</span></code> class from IceNet to create a land mask region that will mask out the land regions in the forecast plot.</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="kn">from</span> <span class="nn">icenet.plotting.video</span> <span class="kn">import</span> <span class="n">xarray_to_video</span> <span class="k">as</span> <span class="n">xvid</span>
-<span class="kn">from</span> <span class="nn">icenet.data.sic.mask</span> <span class="kn">import</span> <span class="n">Masks</span>
-<span class="kn">from</span> <span class="nn">IPython.display</span> <span class="kn">import</span> <span class="n">HTML</span><span class="p">,</span> <span class="n">display</span>
-<span class="kn">import</span> <span class="nn">xarray</span> <span class="k">as</span> <span class="nn">xr</span><span class="o">,</span> <span class="nn">pandas</span> <span class="k">as</span> <span class="nn">pd</span><span class="o">,</span> <span class="nn">datetime</span> <span class="k">as</span> <span class="nn">dt</span>
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="kn">from</span><span class="w"> </span><span class="nn">icenet.plotting.video</span><span class="w"> </span><span class="kn">import</span> <span class="n">xarray_to_video</span> <span class="k">as</span> <span class="n">xvid</span>
+<span class="kn">from</span><span class="w"> </span><span class="nn">icenet.data.sic.mask</span><span class="w"> </span><span class="kn">import</span> <span class="n">Masks</span>
+<span class="kn">from</span><span class="w"> </span><span class="nn">IPython.display</span><span class="w"> </span><span class="kn">import</span> <span class="n">HTML</span><span class="p">,</span> <span class="n">display</span>
+<span class="kn">import</span><span class="w"> </span><span class="nn">xarray</span><span class="w"> </span><span class="k">as</span><span class="w"> </span><span class="nn">xr</span><span class="o">,</span><span class="w"> </span><span class="nn">pandas</span><span class="w"> </span><span class="k">as</span><span class="w"> </span><span class="nn">pd</span><span class="o">,</span><span class="w"> </span><span class="nn">datetime</span><span class="w"> </span><span class="k">as</span><span class="w"> </span><span class="nn">dt</span>
 
-<span class="k">def</span> <span class="nf">plot_result</span><span class="p">(</span><span class="n">file_path</span><span class="p">):</span>
+<span class="k">def</span><span class="w"> </span><span class="nf">plot_result</span><span class="p">(</span><span class="n">file_path</span><span class="p">):</span>
     <span class="c1"># Load our output prediction file</span>
     <span class="n">ds</span> <span class="o">=</span> <span class="n">xr</span><span class="o">.</span><span class="n">open_dataset</span><span class="p">(</span><span class="n">file_path</span><span class="p">)</span>
 
@@ -8736,7 +8739,7 @@ AABJRU5ErkJggg==\
 <p><strong>Contact</strong>: If you have any suggestion or report an issue with this notebook, feel free to <a class="reference external" href="https://github.com/alan-turing-institute/environmental-ds-book/issues/new/choose">create an issue</a> or send a direct message to <a class="reference external" href="mailto:environmental&#46;ds&#46;book&#37;&#52;&#48;gmail&#46;com">environmental<span>&#46;</span>ds<span>&#46;</span>book<span>&#64;</span>gmail<span>&#46;</span>com</a>.</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">icenet</span>
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span><span class="w"> </span><span class="nn">icenet</span>
 <span class="n">icenet_version</span> <span class="o">=</span> <span class="n">icenet</span><span class="o">.</span><span class="n">__version__</span>
 <span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s1">&#39;IceNet version: </span><span class="si">{</span><span class="n">icenet_version</span><span class="si">}</span><span class="s1">&#39;</span><span class="p">)</span>
 </pre></div>
@@ -8750,7 +8753,7 @@ AABJRU5ErkJggg==\
 </div>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="kn">from</span> <span class="nn">datetime</span> <span class="kn">import</span> <span class="n">date</span>
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="kn">from</span><span class="w"> </span><span class="nn">datetime</span><span class="w"> </span><span class="kn">import</span> <span class="n">date</span>
 
 <span class="nb">print</span><span class="p">(</span><span class="s1">&#39;Notebook repository version: v1.0.1&#39;</span><span class="p">)</span>
 <span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s1">&#39;Last tested: </span><span class="si">{</span><span class="n">date</span><span class="o">.</span><span class="n">today</span><span class="p">()</span><span class="si">}</span><span class="s1">&#39;</span><span class="p">)</span>

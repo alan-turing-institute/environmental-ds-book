@@ -126,6 +126,9 @@ const thebe_selector_output = ".output, .cell_output"
   <div class="pst-async-banner-revealer d-none">
   <aside id="bd-header-version-warning" class="d-none d-print-none" aria-label="Version warning"></aside>
 </div>
+<aside class="bd-header-announcement" aria-label="Announcement">
+  <div class="bd-header-announcement__content">⚠️EDS book is transitioning from Jupyter Book to Jupyter Book 2 between 20-23 June 2025. Please be patient as we work through this process. If you have any questions, please contact us at <a href='mailto:environmental.ds.book@gmail.com</div>
+</aside>
 
   
     <header class="bd-header navbar navbar-expand-lg bd-navbar d-print-none">
@@ -593,24 +596,24 @@ made openly available as part of the Met Office contribution to the COVID 19 mod
 <span class="expanded">Hide code cell source</span>
 </summary>
 <div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">os</span>
-<span class="kn">import</span> <span class="nn">iris</span>
-<span class="kn">import</span> <span class="nn">iris.analysis</span>
-<span class="kn">import</span> <span class="nn">iris.plot</span> <span class="k">as</span> <span class="nn">iplt</span>
-<span class="kn">from</span> <span class="nn">iris.coords</span> <span class="kn">import</span> <span class="n">DimCoord</span>
-<span class="kn">from</span> <span class="nn">iris.coord_systems</span> <span class="kn">import</span> <span class="n">GeogCS</span>
-<span class="kn">from</span> <span class="nn">iris.cube</span> <span class="kn">import</span> <span class="n">Cube</span>
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span><span class="w"> </span><span class="nn">os</span>
+<span class="kn">import</span><span class="w"> </span><span class="nn">iris</span>
+<span class="kn">import</span><span class="w"> </span><span class="nn">iris.analysis</span>
+<span class="kn">import</span><span class="w"> </span><span class="nn">iris.plot</span><span class="w"> </span><span class="k">as</span><span class="w"> </span><span class="nn">iplt</span>
+<span class="kn">from</span><span class="w"> </span><span class="nn">iris.coords</span><span class="w"> </span><span class="kn">import</span> <span class="n">DimCoord</span>
+<span class="kn">from</span><span class="w"> </span><span class="nn">iris.coord_systems</span><span class="w"> </span><span class="kn">import</span> <span class="n">GeogCS</span>
+<span class="kn">from</span><span class="w"> </span><span class="nn">iris.cube</span><span class="w"> </span><span class="kn">import</span> <span class="n">Cube</span>
 
-<span class="kn">from</span> <span class="nn">iris.fileformats.pp</span> <span class="kn">import</span> <span class="n">EARTH_RADIUS</span>
+<span class="kn">from</span><span class="w"> </span><span class="nn">iris.fileformats.pp</span><span class="w"> </span><span class="kn">import</span> <span class="n">EARTH_RADIUS</span>
 
-<span class="kn">import</span> <span class="nn">requests</span>
-<span class="kn">import</span> <span class="nn">urllib.request</span>
-<span class="kn">import</span> <span class="nn">pooch</span>
+<span class="kn">import</span><span class="w"> </span><span class="nn">requests</span>
+<span class="kn">import</span><span class="w"> </span><span class="nn">urllib.request</span>
+<span class="kn">import</span><span class="w"> </span><span class="nn">pooch</span>
 
-<span class="kn">import</span> <span class="nn">numpy</span> <span class="k">as</span> <span class="nn">np</span>
-<span class="kn">import</span> <span class="nn">matplotlib.pyplot</span> <span class="k">as</span> <span class="nn">plt</span>
+<span class="kn">import</span><span class="w"> </span><span class="nn">numpy</span><span class="w"> </span><span class="k">as</span><span class="w"> </span><span class="nn">np</span>
+<span class="kn">import</span><span class="w"> </span><span class="nn">matplotlib.pyplot</span><span class="w"> </span><span class="k">as</span><span class="w"> </span><span class="nn">plt</span>
 
-<span class="kn">import</span> <span class="nn">warnings</span>
+<span class="kn">import</span><span class="w"> </span><span class="nn">warnings</span>
 <span class="n">warnings</span><span class="o">.</span><span class="n">filterwarnings</span><span class="p">(</span><span class="n">action</span><span class="o">=</span><span class="s1">&#39;ignore&#39;</span><span class="p">)</span>
 
 <span class="o">%</span><span class="k">matplotlib</span> inline

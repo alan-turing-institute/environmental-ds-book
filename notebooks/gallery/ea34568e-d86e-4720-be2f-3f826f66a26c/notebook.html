@@ -126,6 +126,9 @@ const thebe_selector_output = ".output, .cell_output"
   <div class="pst-async-banner-revealer d-none">
   <aside id="bd-header-version-warning" class="d-none d-print-none" aria-label="Version warning"></aside>
 </div>
+<aside class="bd-header-announcement" aria-label="Announcement">
+  <div class="bd-header-announcement__content">⚠️EDS book is transitioning from Jupyter Book to Jupyter Book 2 between 20-23 June 2025. Please be patient as we work through this process. If you have any questions, please contact us at <a href='mailto:environmental.ds.book@gmail.com</div>
+</aside>
 
   
     <header class="bd-header navbar navbar-expand-lg bd-navbar d-print-none">
@@ -606,22 +609,22 @@ document.write(`
 <span class="expanded">Hide code cell source</span>
 </summary>
 <div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">os</span>
-<span class="kn">import</span> <span class="nn">iris</span>
-<span class="kn">import</span> <span class="nn">iris.quickplot</span> <span class="k">as</span> <span class="nn">qplt</span>
-<span class="kn">import</span> <span class="nn">iris.coord_categorisation</span> <span class="k">as</span> <span class="nn">coord_cat</span>
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span><span class="w"> </span><span class="nn">os</span>
+<span class="kn">import</span><span class="w"> </span><span class="nn">iris</span>
+<span class="kn">import</span><span class="w"> </span><span class="nn">iris.quickplot</span><span class="w"> </span><span class="k">as</span><span class="w"> </span><span class="nn">qplt</span>
+<span class="kn">import</span><span class="w"> </span><span class="nn">iris.coord_categorisation</span><span class="w"> </span><span class="k">as</span><span class="w"> </span><span class="nn">coord_cat</span>
 
-<span class="kn">import</span> <span class="nn">cf_units</span>
-<span class="kn">import</span> <span class="nn">nc_time_axis</span>
+<span class="kn">import</span><span class="w"> </span><span class="nn">cf_units</span>
+<span class="kn">import</span><span class="w"> </span><span class="nn">nc_time_axis</span>
 
-<span class="kn">import</span> <span class="nn">matplotlib.pyplot</span> <span class="k">as</span> <span class="nn">plt</span>
+<span class="kn">import</span><span class="w"> </span><span class="nn">matplotlib.pyplot</span><span class="w"> </span><span class="k">as</span><span class="w"> </span><span class="nn">plt</span>
 
-<span class="kn">import</span> <span class="nn">urllib.request</span>
+<span class="kn">import</span><span class="w"> </span><span class="nn">urllib.request</span>
 
-<span class="kn">import</span> <span class="nn">holoviews</span> <span class="k">as</span> <span class="nn">hv</span>
-<span class="kn">import</span> <span class="nn">geoviews</span> <span class="k">as</span> <span class="nn">gv</span>
+<span class="kn">import</span><span class="w"> </span><span class="nn">holoviews</span><span class="w"> </span><span class="k">as</span><span class="w"> </span><span class="nn">hv</span>
+<span class="kn">import</span><span class="w"> </span><span class="nn">geoviews</span><span class="w"> </span><span class="k">as</span><span class="w"> </span><span class="nn">gv</span>
 
-<span class="kn">import</span> <span class="nn">warnings</span>
+<span class="kn">import</span><span class="w"> </span><span class="nn">warnings</span>
 <span class="n">warnings</span><span class="o">.</span><span class="n">filterwarnings</span><span class="p">(</span><span class="n">action</span><span class="o">=</span><span class="s1">&#39;ignore&#39;</span><span class="p">)</span>
 
 <span class="o">%</span><span class="k">matplotlib</span> inline
