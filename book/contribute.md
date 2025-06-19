@@ -127,7 +127,7 @@ EiC ask authors to proof-read the notebook and indicate any remaining typos, bad
 * **Publication**: EiC disseminate the publication through the official communication channels of the EDS book community e.g. [Bluesky](https://bsky.app/profile/eds-book.bsky.social), [Mastodon](https://fosstodon.org/@eds_book) and [LinkedIn](https://www.linkedin.com/company/edsbook/). 
 Authors and reviewers are welcome to use same or alternative communication channels of their preference.
 
-* **Post-publication**: Anyone from the EDS book community or registered in GitHub complying to our [code of conduct](https://raw.githubusercontent.com/alan-turing-institute/environmental-ds-book/main/CODE_OF_CONDUCT.md) is welcome to suggest improvements and/or clarifications in the published notebook. 
+* **Post-publication**: Anyone from the EDS book community or registered in GitHub complying to our [code of conduct](https://raw.githubusercontent.com/eds-book/eds-book.github.io/main/CODE_OF_CONDUCT.md) is welcome to suggest improvements and/or clarifications in the published notebook. 
 Where relevant, EiC will notify authors about proposed changes and their acceptance. If the authors consider suggestions as a substantial contribution, EiC will acknowledge it by adding the contributor's name to the citation of the notebook. 
 
 ### Who can contribute
@@ -205,7 +205,7 @@ We recognise all kinds of contributions, from fixing small errors, to developing
 
 _EDS book_ follows the [all-contributors](https://allcontributors.org) specifications.
 The all-contributors bot usage is described [here](https://allcontributors.org/docs/en/bot/usage).
-You can see a list of contributors [here](https://github.com/alan-turing-institute/environmental-ds-book?tab=readme-ov-file#contributors). 
+You can see a list of contributors [here](https://github.com/eds-book/eds-book.github.io?tab=readme-ov-file#contributors). 
 
 (contribute-help)=
 ## Need Help?

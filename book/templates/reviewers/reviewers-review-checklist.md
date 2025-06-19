@@ -13,7 +13,7 @@ Your review is not limited to these topics, as described in the reviewer guide*
 - [ ] As the reviewer I confirm that there are no conflicts of interest for me to review this work (If you are unsure whether you are in conflict, please speak to your editor _before_ starting your review).
 
 ### Code of conduct an peer-review principles
-- [ ] I confirm that I read and will adhere to the Environmental Data Science [code of conduct](https://github.com/alan-turing-institute/environmental-ds-book/blob/master/CODE_OF_CONDUCT.md).
+- [ ] I confirm that I read and will adhere to the Environmental Data Science [code of conduct](https://github.com/eds-book/eds-book.github.io/blob/main/CODE_OF_CONDUCT.md).
 - [ ] I confirm that I read and will adhere to [Open Science Peer Review Oath](https://doi.org/10.12688/f1000research.5686.2) 
 
 ### General checks

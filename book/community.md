@@ -15,8 +15,8 @@ We have a number of communication channels to support the community. You can fin
 ### Async community support channels
 If you're looking for asynchronous support or chat with the EDS book community, there are a lot of options:
 
-* Start a discussion on [EDS book repository](https://github.com/alan-turing-institute/environmental-ds-book/discussions).
-* Open an [issue to report bugs or request features](https://github.com/alan-turing-institute/environmental-ds-book/issues/new/choose).
+* Start a discussion on [EDS book repository](https://github.com/eds-book/eds-book.github.io/discussions).
+* Open an [issue to report bugs or request features](https://github.com/eds-book/eds-book.github.io/issues/new/choose).
 
 ## Open Research Communities
 

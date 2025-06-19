@@ -36,12 +36,12 @@ if post_publication:
     # jupyter notebook
     rese_title=f"Jupyter Notebook of {metadata_contribution['title']}"
 
-    rese_file_url="https://github.com/alan-turing-institute/environmental-ds-book/blob/master/book/ocean/modelling/ocean-modelling-litter-philab.ipynb"
+    rese_file_url="https://github.com/eds-book/eds-book.github.io/blob/main/book/ocean/modelling/ocean-modelling-litter-philab.ipynb"
 
     res_id = results[results.title == rese_title]['identifier'].values[0]
     my_res1=rohub.resource_load(identifier=res_id)
     my_res1.show_metadata()
-    rese_file_url="https://github.com/alan-turing-institute/environmental-ds-book/blob/master/book/ocean/modelling/ocean-modelling-litter-philab.ipynb"
+    rese_file_url="https://github.com/eds-book/eds-book.github.io/blob/main/book/ocean/modelling/ocean-modelling-litter-philab.ipynb"
     my_res1.update_content(input_url=rese_file_url)
 
 ## UPLOAD PUBLICATION
@@ -60,7 +60,7 @@ my_res_ext0=ro.add_external_resource(res_type=rese_res_type, input_url=rese_file
 rese_res_type = "File"
 
 def lock_file(lock_os):
-    rese_file_url=f"https://github.com/{metadata_contribution['author_GHuser']}/{metadata_contribution['filename']}/tree/master/.lock/conda-{lock_os}-64.lock"
+    rese_file_url=f"https://github.com/{metadata_contribution['author_GHuser']}/{metadata_contribution['filename']}/tree/main/.lock/conda-{lock_os}-64.lock"
     rese_title=f"Lock conda file for {lock_os}-64"
     rese_description=f"Lock conda file for {lock_os}-64 OS of the Jupyter notebook hosted by the Environmental Data Science Book"
     ro.add_external_resource(res_type=rese_res_type, input_url=rese_file_url, title=rese_title, description=rese_description, folder='tool')
@@ -70,14 +70,14 @@ def lock_file(lock_os):
 if metadata_contribution['requirements_txt']:
     ###requirements - only if needed
     rese_res_type = "File"
-    rese_file_url = f"https://github.com/{metadata_contribution['author_GHuser']}/{metadata_contribution['filename']}/tree/master/.locks/requirements.txt"
+    rese_file_url = f"https://github.com/{metadata_contribution['author_GHuser']}/{metadata_contribution['filename']}/tree/main/.locks/requirements.txt"
     rese_title = f"Pip requirements for lock conda environments"
     rese_description = f"Pip requirements file containing libraries to install after conda lock"
     ro.add_external_resource(res_type=rese_res_type, input_url=rese_file_url, title=rese_title, description=rese_description, folder='tool')
 
 ###environment.yml
 rese_res_type = "File"
-rese_file_url = f"https://github.com/{metadata_contribution['author_GHuser']}/{metadata_contribution['filename']}/tree/master/.binder/environment.yml"
+rese_file_url = f"https://github.com/{metadata_contribution['author_GHuser']}/{metadata_contribution['filename']}/tree/main/.binder/environment.yml"
 rese_title = f"Conda environment"
 rese_description = f"Conda environment when user want to have the same libraries installed without concerns of package versions"
 ro.add_external_resource(res_type=rese_res_type, input_url=rese_file_url, title=rese_title, description=rese_description, folder='tool')

@@ -5,7 +5,7 @@ Welcome to the guide for notebooks authors of the EDS book!
 
 Before you begin this process, please be sure to [understand how the publication process works](#contribute-notebooks).
 
-We have a [code of conduct](https://raw.githubusercontent.com/alan-turing-institute/environmental-ds-book/main/CODE_OF_CONDUCT.md) which is mandatory for everyone involved in the review process of our notebooks.
+We have a [code of conduct](https://raw.githubusercontent.com/eds-book/eds-book.github.io/main/CODE_OF_CONDUCT.md) which is mandatory for everyone involved in the review process of our notebooks.
 
 Below you will find the main steps we suggest to follow to submit a notebook to EDS book for peer review.
 
@@ -84,6 +84,6 @@ Some authors have promoted EDS notebooks in LinkedIn, etc.
 Others have added them to their online CV and/or personal website.
 
 ## Post-publication
-The EDS book community and other practitioners in GitHub complying our [code of conduct](https://raw.githubusercontent.com/alan-turing-institute/environmental-ds-book/master/CODE_OF_CONDUCT.md) could suggest changes in the notebook. 
+The EDS book community and other practitioners in GitHub complying our [code of conduct](https://raw.githubusercontent.com/eds-book/eds-book.github.io/main/CODE_OF_CONDUCT.md) could suggest changes in the notebook. 
 Where relevant, EiC will notify authors about proposed changes and their acceptance. 
 If the authors consider suggestions as a substantial contribution, EiC will acknowledge it by adding the contributor's name to the citation of the notebook.

@@ -48,10 +48,10 @@ These intentions must be reflected in the contributions that we make to the proj
 
 There are many ways to get in touch with _EDS book_ team!
 
-- GitHub [issues](https://github.com/alan-turing-institute/environmental-ds-book/issues) and [pull requests](https://github.com/alan-turing-institute/environmental-ds-book/pulls)
+- GitHub [issues](https://github.com/eds-book/eds-book.github.io/issues) and [pull requests](https://github.com/eds-book/eds-book.github.io/pulls)
   - Join a discussion, collaborate on an ongoing task and exchange your thoughts with others.
   - Can't find your idea being discussed anywhere?
-    [Open a new issue](https://github.com/alan-turing-institute/environmental-ds-book/issues/new/choose)! (See our [Where to start: issues](#where-to-start-issues) section below.)
+    [Open a new issue](https://github.com/eds-book/eds-book.github.io/issues/new/choose)! (See our [Where to start: issues](#where-to-start-issues) section below.)
   - For structured discussion and sustained engagement with the community members.
 - Contact the maintainers of _EDS book_ project - Alejandro Coca-Castro - by email at [acoca@turing.ac.uk](mailto:acoca@turing.ac.uk) and/or Anne Fouilloux - by email at [annef@simula.no](mailto:annef@simula.no).
 
@@ -62,7 +62,7 @@ There are many ways to get in touch with _EDS book_ team!
 
 ### Coworking and Real-Time Collaboration
 
-- **Bimonthly Collaboration Cafe:** We shared-out recent progress, achievements or events at _The Turing Way_ [Collaboration Cafes](https://the-turing-way.netlify.app/community-handbook/coworking/coworking-collabcafe.html). At least one of core EDS book members (as described in the [Ways of Working document](https://github.com/alan-turing-institute/environmental-ds-book/blob/master/ways_of_working.md)) will be attending the collaboration cafe to onboard or discuss relevant topics within _EDS book_ and _The Turing Way_ communities. Members of both communities are also welcome to join to [#environmental-sustainability](https://theturingway.slack.com/archives/C04RCMAEPUZ)) in _The Turing Way_ Slack, a dedicated channel for discussing broadly relevant topics aligned to Open Research in Environment & Sustainability.
+- **Bimonthly Collaboration Cafe:** We shared-out recent progress, achievements or events at _The Turing Way_ [Collaboration Cafes](https://the-turing-way.netlify.app/community-handbook/coworking/coworking-collabcafe.html). At least one of core EDS book members (as described in the [Ways of Working document](https://github.com/eds-book/eds-book.github.io/blob/main/ways_of_working.md)) will be attending the collaboration cafe to onboard or discuss relevant topics within _EDS book_ and _The Turing Way_ communities. Members of both communities are also welcome to join to [#environmental-sustainability](https://theturingway.slack.com/archives/C04RCMAEPUZ)) in _The Turing Way_ Slack, a dedicated channel for discussing broadly relevant topics aligned to Open Research in Environment & Sustainability.
     - Shared notes with joining links: https://hackmd.io/@turingway/collaboration-cafe.
 - **Monthly Co-working sessions:** Every Second Friday (16:00 - 17:00 London time). This is a synchronous collaborative space to either discuss your ideas or quietly work in an accountable space with _EDS book_ team members. 
     - Shared notes with joining links: https://hackmd.io/@eds-book/coworking-call/.
@@ -91,26 +91,26 @@ Having each sentence on a new line will make no difference to how the text is di
 
 ## Where to start: issues
 
-Before you open a new issue, please check if any of our [open issues](https://github.com/alan-turing-institute/environmental-ds-book/issues) cover your idea already.
-If you open a new issue, please follow our basic guidelines laid out in our [issue templates](https://github.com/alan-turing-institute/environmental-ds-book/issues/new/choose).
+Before you open a new issue, please check if any of our [open issues](https://github.com/eds-book/eds-book.github.io/issues) cover your idea already.
+If you open a new issue, please follow our basic guidelines laid out in our [issue templates](https://github.com/eds-book/eds-book.github.io/issues/new/choose).
 There are 5 issues templates to choose from.:
-1. :bug: Bug Report ([preview here](https://github.com/alan-turing-institute/environmental-ds-book/issues/new?assignees=&labels=bug&projects=&template=bug-report.md&title=%5BBUG%5D)): With this template, create an issue report that can help others repair something that is currently broken.
-2. :black_nib: Documentation Improvement ([preview here](https://github.com/alan-turing-institute/environmental-ds-book/issues/new?assignees=&labels=documentation&projects=&template=documentation-request.md&title=%5BDOC%5D)): This issue is to help us improve the documentation in the book or notebook repositories hosted in the [eds-book](https://github.com/eds-book) organisation. Alternatively you can just open a pull request with the suggested improvement.
-3. :green_book: Notebook Idea ([preview here](https://github.com/alan-turing-institute/environmental-ds-book/issues/new?assignees=&labels=notebook&projects=&template=notebook-request.md&title=%5BNBI%5D)): Use this template for submitting a notebook idea. You can find further info of the scope of notebooks ideas within the [Publishing guidelines](book/publishing/guidelines.md).
-4. :mag: PRE-REVIEW ([preview here](https://github.com/alan-turing-institute/environmental-ds-book/issues/new?assignees=&labels=prereview&projects=&template=prereview-template.md&title=%5BPRE+REVIEW%5D)): Editors-in-chiefs use this template to open a [PRE-REVIEW issue](book/publishing/guidelines/guidelines-eic.md#pre-review).
-5. :eyes: REVIEW ([preview here](https://github.com/alan-turing-institute/environmental-ds-book/issues/new?assignees=&labels=review&projects=&template=review-template.md&title=%5BREVIEW%5D)): Editors-in-chiefs use this template to open a [REVIEW issue](book/publishing/guidelines/guidelines-eic.md#review).
+1. :bug: Bug Report ([preview here](https://github.com/eds-book/eds-book.github.io/issues/new?assignees=&labels=bug&projects=&template=bug-report.md&title=%5BBUG%5D)): With this template, create an issue report that can help others repair something that is currently broken.
+2. :black_nib: Documentation Improvement ([preview here](https://github.com/eds-book/eds-book.github.io/issues/new?assignees=&labels=documentation&projects=&template=documentation-request.md&title=%5BDOC%5D)): This issue is to help us improve the documentation in the book or notebook repositories hosted in the [eds-book](https://github.com/eds-book) organisation. Alternatively you can just open a pull request with the suggested improvement.
+3. :green_book: Notebook Idea ([preview here](https://github.com/eds-book/notebooks-ideas/issues/new?assignees=&labels=notebook&projects=&template=notebook-idea.md&title=%5BNBI%5D)): Use this template for submitting a notebook idea. You can find further info of the scope of notebooks ideas within the [Publishing guidelines](book/publishing/guidelines.md).
+4. :mag: PRE-REVIEW ([preview here](https://github.com/eds-book/notebooks-reviews/issues/new?assignees=&labels=prereview&projects=&template=notebook-prereview.md&title=%5BPRE+REVIEW%5D)): Editors-in-chiefs use this template to open a [PRE-REVIEW issue](book/publishing/guidelines/guidelines-eic.md#pre-review).
+5. :eyes: REVIEW ([preview here](https://github.com/eds-book/notebooks-reviews/issues/new?assignees=&labels=review&projects=&template=notebook-review.md&title=%5BREVIEW%5D)): Editors-in-chiefs use this template to open a [REVIEW issue](book/publishing/guidelines/guidelines-eic.md#review).
 
 ## Making a change with a pull request
 
 We appreciate all contributions to _EDS book_.
 **THANK YOU** for helping us build this useful resource. :seedling:
 
-All project management, conversations and questions related to _EDS book_ project happens here in [_EDS book_ repository](https://github.com/alan-turing-institute/environmental-ds-book).
+All project management, conversations and questions related to _EDS book_ project happens here in [_EDS book_ repository](https://github.com/eds-book/eds-book.github.io).
 This is also where you can contribute directly to writing or editing chapters of [the book](https://edsbook.org)!
 
 The following steps are a guide to help you contribute in a way that will be easy for everyone to review and accept with ease :mortar_board:.
 
-### 1. Comment on an [existing issue](https://github.com/alan-turing-institute/environmental-ds-book/issues) or open a new issue referencing your addition
+### 1. Comment on an [existing issue](https://github.com/eds-book/eds-book.github.io/issues) or open a new issue referencing your addition
 
 This allows other members of _EDS book_ team to confirm that you aren't overlapping with work that's currently underway and that everyone is on the same page with the goal of the work you're going to carry out.
 
@@ -148,7 +148,7 @@ We encourage you to open a pull request as early in your contributing process as
 This allows everyone to see what is currently being worked on.
 It also provides you, the contributor, feedback in real-time from both the community and the continuous integration as you make commits (which will help prevent stuff from breaking).
 
-When you are ready to submit a pull request, you will automatically see the [Pull Request Template](https://github.com/alan-turing-institute/environmental-ds-book/blob/master/.github/pull_request_template.md) contents in the pull request body.
+When you are ready to submit a pull request, you will automatically see the [Pull Request Template](https://github.com/eds-book/eds-book.github.io/blob/main/.github/pull_request_template.md) contents in the pull request body.
 It asks you to:
 
 - Describe the problem you're trying to fix in the pull request, reference any related issue and use fixes/close to automatically close them, if pertinent.
@@ -169,7 +169,7 @@ You can update your [fork][github-fork] of _EDS book_ [repository][eds-book-repo
 You don't need to submit a new pull request when you make a change in response to a review.
 
 You can also submit pull requests to other contributors' branches!
-Do you see an [open pull request](https://github.com/alan-turing-institute/environmental-ds-book/pulls) that you find interesting and want to contribute to?
+Do you see an [open pull request](https://github.com/eds-book/eds-book.github.io/pulls) that you find interesting and want to contribute to?
 Simply make your edits on their files and open a pull request to their branch!
 
 What happens if the continuous integration (CI) fails (for example, if the pull request notifies you that "Some checks were not successful")?
@@ -202,7 +202,7 @@ You can build and host the book website locally. The steps are:
 ## Representing _EDS book_
 
 We would LOVE people to give talks about the project or represent _EDS book_ in other ways!
-We have created a [promotion pack](https://github.com/alan-turing-institute/environmental-ds-book/tree/master/communications/promotion-pack) for you to reuse.
+We have created a [promotion pack](https://github.com/eds-book/eds-book.github.io/tree/main/communications/promotion-pack) for you to reuse.
 You will find useful details about the project, a list of frequently asked questions, slide decks, and contact details.
 
 If you would like to represent the project in your network, please open an issue and ping @acocac, @annefou so that they can do their best to support you.
@@ -224,27 +224,27 @@ To add yourself or someone else as a contributor, comment on the relevant Issue 
 @all-contributors please add <username> for <contributions>
 ```
 
-You can see the [Emoji Key (Contribution Types Reference)](https://allcontributors.org/docs/en/emoji-key) for a list of valid `<contribution>` types and examples of how we've run this command in [this issue](https://github.com/alan-turing-institute/environmental-ds-book/issues/29).
+You can see the [Emoji Key (Contribution Types Reference)](https://allcontributors.org/docs/en/emoji-key) for a list of valid `<contribution>` types and examples of how we've run this command in [this issue](https://github.com/eds-book/eds-book.github.io/issues/29).
 The bot will then create a Pull Request to add the contributor and reply with the pull request details.
 
 **PLEASE NOTE: Only one contributor can be added with the bot at a time!**
 Add each contributor in turn, merge the pull request and delete the branch (`all-contributors/add-<username>`) before adding another one.
 Otherwise, you can end up with dreaded [merge conflicts][github-mergeconflicts].
-Therefore, please check the open pull requests first to make sure there aren't any [open requests from the bot](https://github.com/alan-turing-institute/environmental-ds-book/pulls/app%2Fallcontributors) before adding another.
+Therefore, please check the open pull requests first to make sure there aren't any [open requests from the bot](https://github.com/eds-book/eds-book.github.io/pulls/app%2Fallcontributors) before adding another.
 
 What happens if you accidentally run the bot before the previous run was merged and you got those pesky merge conflicts?
 (Don't feel bad, we have all done it! 🙈)
 Simply close the pull request and delete the branch (`all-contributors/add-<username>`).
 If you are unable to do this for any reason, please let us know by opening an issue, and _EDS book_ team members will be very happy to help!
 
-Finally, don't forget to add yourself to the list of contributors [here](https://github.com/alan-turing-institute/environmental-ds-book/blob/main/contributors.md)!
+Finally, don't forget to add yourself to the list of contributors [here](https://github.com/eds-book/eds-book.github.io/blob/main/contributors.md)!
 
 ---
 
 _These Contributing Guidelines have been adapted from [The Turing Way Contributing Guidelines](https://github.com/the-turing-way/the-turing-way/blob/main/CONTRIBUTING.md) (License: CC BY 4.0) which were originally sourced from [the BIDS Starter Kit](https://github.com/bids-standard/bids-starter-kit)!  (License: CC-BY)_
 
-[eds-book-repo]: https://github.com/alan-turing-institute/environmental-ds-book/
-[eds-book-issues]: https://github.com/alan-turing-institute/environmental-ds-book/issues
+[eds-book-repo]: https://github.com/eds-book/eds-book.github.io/
+[eds-book-issues]: https://github.com/eds-book/eds-book.github.io/issues
 [git]: https://git-scm.com
 [github]: https://github.com
 [github-branches]: https://help.github.com/articles/creating-and-deleting-branches-within-your-repository

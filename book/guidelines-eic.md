@@ -5,7 +5,7 @@ Welcome to the guide for notebooks EiC of the EDS book!
 
 Before you begin this process, please be sure to [understand how the publication process works](#contribute-notebooks).
 
-We have a [code of conduct](https://raw.githubusercontent.com/alan-turing-institute/environmental-ds-book/main/CODE_OF_CONDUCT.md) which is mandatory for everyone involved in the review process of our notebooks.
+We have a [code of conduct](https://raw.githubusercontent.com/eds-book/eds-book.github.io/main/CODE_OF_CONDUCT.md) which is mandatory for everyone involved in the review process of our notebooks.
 
 Below you will find the main steps we suggest to follow to moderate, validate and publish a notebook to EDS book.
 
@@ -42,7 +42,7 @@ After the editor acceptance, EiC will update the heading at the top of the issue
 Once reviewers agreed on the revision, EiC open a REVIEW issue.
 
 ## Review
-The [REVIEW issue](https://github.com/alan-turing-institute/environmental-ds-book/issues/new?assignees=&labels=review&projects=&template=review-template.md&title=%5BREVIEW%5D) aims to be a space where editor will moderate timings and conversation between authors and reviewers.
+The [REVIEW issue](https://github.com/eds-book/notebooks-reviews/issues/new?assignees=&labels=review&projects=&template=notebook-review.md&title=%5BREVIEW%5D) aims to be a space where editor will moderate timings and conversation between authors and reviewers.
 
 To facilitate the discussion, EiC creates a new branch `review` with a custom message at the first markdown cell indicating "Authors and Reviewers. This is the notebook version for review. We will remove this markdown cell after the peer-review." 
 Then EiC commit and push changes to create a PR in the notebook repository. 

@@ -2,7 +2,7 @@
 
 ## What is The Environmental Data Science book?
 - A book: [https://edsbook.org/welcome.html](https://edsbook.org/welcome.html)
-- An open source project: [https://github.com/alan-turing-institute/environmental-ds-book](https://github.com/alan-turing-institute/environmental-ds-book)
+- An open source project: [https://github.com/eds-book/eds-book.github.io](https://github.com/eds-book/eds-book.github.io)
 - A community: *The Environmental DS* is an open-source collaborative project that involves and supports its members of diverse skills and backgrounds to ensure that data science is accessible and useful for everyone interested in Environmental sciences. 
 
 ## Who are the community members? 
@@ -12,7 +12,7 @@
 - Users: Some readers/users around the globe.
 
 ## Important links:
-- GitHub: [https://github.com/alan-turing-institute/environmental-ds-book](https://github.com/alan-turing-institute/environmental-ds-book)
+- GitHub: [https://github.com/eds-book/eds-book.github.io](https://github.com/eds-book/eds-book.github.io)
 
 ## Slide decks:
 

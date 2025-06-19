@@ -99,4 +99,4 @@ Gaining this hands-on experience whilst learning about interesting environmental
 To cite or read more references about the EDS book project and related notebooks, see [](./cite.md).
 
 > 
-[^license]: EDS book notebooks are free under an [OSI-approved MIT license](https://github.com/alan-turing-institute/environmental-ds-book/blob/main/LICENSE-CODE).
+[^license]: EDS book notebooks are free under an [OSI-approved MIT license](https://github.com/eds-book/eds-book.github.io/blob/main/LICENSE-CODE).
