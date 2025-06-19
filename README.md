@@ -103,7 +103,7 @@ The project also thanks the [OLS-4 training programme](https://openlifesci.org/o
 ## Credits
 
 This project is created using the excellent open source [Jupyter Book project](https://jupyterbook.org/) and the [executablebooks/cookiecutter-jupyter-book template](https://github.com/executablebooks/cookiecutter-jupyter-book). 
-The individual notebooks repositories are hosted at the [eds-book-gallery](https://github.com/eds-book-gallery) organisation. 
+The individual notebooks repositories are hosted at the [eds-book](https://github.com/eds-book) organisation. 
 The **How to run** section in the `README` of each notebook repository is adapted from the [Project Pythia Cookbook](https://cookbooks.projectpythia.org/) project. 
 The workflow actions to generate the rendered version of notebooks were adapted from [2i2c’s hub-user-image-template](https://github.com/2i2c-org/hub-user-image-template) released under BSD-3-Clause license.    
 

@@ -19,7 +19,7 @@ metadata_contribution = {
                },
     'outputs': {'content': 'results',
                'url': "https://doi.org/10.5281/zenodo.14279111"},
-    'author_GHuser': 'eds-book-gallery',
+    'author_GHuser': 'eds-book',
     'references':{'ref1':{'name':'Deepforest: a python package for rgb deep learning tree crown delineation',
                           'url':"https://doi.org/https://doi.org/10.1111/2041-210X.13472"}},
     'sketch': {'title':'Image showing an example of the finetuned model predictions to detect livestock',
