@@ -63,6 +63,7 @@ project:
 site:
   template: book-theme
   options:
+    analytics_google: G-3E20PWD938 # Measurement ID or Tracking ID
     folders: true
     style: style/style.css
     hide_toc: false
