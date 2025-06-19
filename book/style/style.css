@@ -1,0 +1,36 @@
+/* Custom styles for edsbook.org */
+
+.image-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 1px; /* Set the desired width */
+  height: 1px; /* Set the desired height */
+}
+
+.image-class {
+  width: 50px; /* Set the desired width */
+}
+
+.abstract-text {
+  font-size: 5px;
+}
+
+.abstract-container {
+  display: flex;
+  padding: 1px;
+  background-color: #735e90;
+  font-size: 5px;
+}
+
+.span-container {
+  display: flex;
+  padding: 1px;
+  background-color: #1b5e20;/* Add your desired styles here */
+}
+
+.text-gradient em {
+  background: -webkit-linear-gradient(#eee, #333);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}

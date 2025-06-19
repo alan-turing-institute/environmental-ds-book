@@ -15,11 +15,11 @@
   - [ ] Fill `notebook_name` and `quay_image` keys in the `config.json` file
   - [ ] Copy README template ([python](eic-readme-python.md), R, Julia) and replace the fields in the following lines:
     - [ ] replace `[repository name]` in 
-      - [ ] L16, `<a href="https://github.com/eds-book-gallery/[repository name]/blob/main/LICENSE">`
-      - [ ] L19, `<a href="https://notebooks.gesis.org/binder/v2/gh/eds-book-gallery/[repository name]/main?labpath=notebook.ipynb">`
-      - [ ] L22, `<a href="https://github.com/eds-book-gallery/[repository name]/actions/workflows/publish.yml/badge.svg">`
-      - [ ] L23, `<img alt="Continuous integration badge" src="https://github.com/eds-book-gallery/[repository name]/actions/workflows/publish.yml/badge.svg">`
-      - [ ] L49, `git clone https://github.com/eds-book-gallery/[repository name].git`
+      - [ ] L16, `<a href="https://github.com/eds-book/[repository name]/blob/main/LICENSE">`
+      - [ ] L19, `<a href="https://notebooks.gesis.org/binder/v2/gh/eds-book/[repository name]/main?labpath=notebook.ipynb">`
+      - [ ] L22, `<a href="https://github.com/eds-book/[repository name]/actions/workflows/publish.yml/badge.svg">`
+      - [ ] L23, `<img alt="Continuous integration badge" src="https://github.com/eds-book/[repository name]/actions/workflows/publish.yml/badge.svg">`
+      - [ ] L49, `git clone https://github.com/eds-book/[repository name].git`
       - [ ] L54, `cd [repository name]`
       - [ ] L60, `conda activate [repository name]`
     - [ ] replace `[rohub_w3id]` in L29

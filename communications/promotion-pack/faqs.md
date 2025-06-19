@@ -2,12 +2,12 @@
 
 ## How can I get involved in _The Environmental DS community_?
 - There are multiple pathways to get involved.
-The project is maintained and developed via a public [GitHub repository](https://github.com/alan-turing-institute/environmental-ds-book).
-You can help review the contributions added to the project through currently [open pull requests](https://github.com/alan-turing-institute/environmental-ds-book/pulls).
-You can start a discussion on a new topic by opening a [new issue](https://github.com/alan-turing-institute/environmental-ds-book/issues/new/choose).
+The project is maintained and developed via a public [GitHub repository](https://github.com/eds-book/eds-book.github.io).
+You can help review the contributions added to the project through currently [open pull requests](https://github.com/eds-book/eds-book.github.io/pulls).
+You can start a discussion on a new topic by opening a [new issue](https://github.com/eds-book/eds-book.github.io/issues/new/choose).
 
 ## Is there an onboarding process?
-- There is a community [contribution guideline](https://github.com/alan-turing-institute/environmental-ds-book/blob/master/CONTRIBUTING.md) and [Code of Conduct](https://github.com/alan-turing-institute/environmental-ds-book/blob/master/CODE_OF_CONDUCT.md) that is required for new contributors to get familiar with.
+- There is a community [contribution guideline](https://github.com/eds-book/eds-book.github.io/blob/main/CONTRIBUTING.md) and [Code of Conduct](https://github.com/eds-book/eds-book.github.io/blob/main/CODE_OF_CONDUCT.md) that is required for new contributors to get familiar with.
 With the details provided there, you would be able to identify the best available options for you to get involved in the project.
 
 ## How much time commitment is needed by its community members?

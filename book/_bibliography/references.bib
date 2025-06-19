@@ -57,6 +57,21 @@ doi={10.1038/s41597-022-01710-x},
 url={https://doi.org/10.1038/s41597-022-01710-x}
 }
 
+@Article{Rule2019,
+    doi = {10.1371/journal.pcbi.1007007},
+    author = {Rule, Adam AND Birmingham, Amanda AND Zuniga, Cristal AND Altintas, Ilkay AND Huang, Shih-Cheng AND Knight, Rob AND Moshiri, Niema AND Nguyen, Mai H. AND Rosenthal, Sara Brin AND Pérez, Fernando AND Rose, Peter W.},
+    journal = {PLOS Computational Biology},
+    publisher = {Public Library of Science},
+    title = {Ten simple rules for writing and sharing computational analyses in Jupyter Notebooks},
+    year = {2019},
+    month = {07},
+    volume = {15},
+    url = {https://doi.org/10.1371/journal.pcbi.1007007},
+    pages = {1-8},
+    abstract = {null},
+    number = {7},
+}
+
 @misc{HBR2019Belonging,
 	author = {Carr, Evan W. and Reece, Andrew and Kellerman, Gabriella Rosen and Robichaux, Alexi},
 	title = {{The Value of Belonging at Work}},
@@ -77,377 +92,25 @@ url={https://doi.org/10.1038/s41597-022-01710-x}
 	url = {https://www.lifehack.org/articles/productivity/the-pomodoro-technique-is-it-right-for-you.html}
 }
 
-# Demonstrators
-
-## 15d986da-2d7c-44fb-af71-700494485def
-
-@article{Weinstein2020_MEE,
-   abstract = {Abstract Remote sensing of forested landscapes can transform the speed, scale and cost of forest research. The delineation of individual trees in remote sensing images is an essential task in forest analysis. Here we introduce a new Python package, DeepForest that detects individual trees in high resolution RGB imagery using deep learning. While deep learning has proven highly effective in a range of computer vision tasks, it requires large amounts of training data that are typically difficult to obtain in ecological studies. DeepForest overcomes this limitation by including a model pretrained on over 30 million algorithmically generated crowns from 22 forests and fine-tuned using 10,000 hand-labelled crowns from six forests. The package supports the application of this general model to new data, fine tuning the model to new datasets with user labelled crowns, training new models and evaluating model predictions. This simplifies the process of using and retraining deep learning models for a range of forests, sensors and spatial resolutions. We illustrate the workflow of DeepForest using data from the National Ecological Observatory Network, a tropical forest in French Guiana, and street trees from Portland, Oregon.},
-   author = {Ben G Weinstein and Sergio Marconi and Mélaine Aubry-Kientz and Gregoire Vincent and Henry Senyondo and Ethan P White},
-   doi = {https://doi.org/10.1111/2041-210X.13472},
-   issue = {12},
-   journal = {Methods in Ecology and Evolution},
-   keywords = {NEON,RGB,crown delineation,deep learning,forests,remote sensing,tree crowns},
-   pages = {1743-1751},
-   title = {DeepForest: A Python package for RGB deep learning tree crown delineation},
-   volume = {11},
-   url = {https://besjournals.onlinelibrary.wiley.com/doi/abs/10.1111/2041-210X.13472},
-   year = {2020},
-   topic = {15d986da-2d7c-44fb-af71-700494485def, 95199651-9e81-4cae-a3a7-66398a9a5f62}
+@inproceedings{Cockett_2024,
+author = {Cockett, Rowan and Purves, Steve and Koch, Franklin and Morrison, Mike},
+series = {SciPy},
+booktitle = {Proceedings of the 23rd {Python} in {Science} {Conference}},
+doi = {10.25080/nkvc9349},
+issn = {2575-9752},
+year = {2024},
+month = {7},
+pages = {121--136},
+organization = {SciPy},
+title = {Continuous {Tools} for {Scientific} {Publishing}: Using {MyST} {Markdown} and {Curvenote} to encourage continuous science practices},
+url = {http://dx.doi.org/10.25080/NKVC9349},
 }
 
-@article{Weinstein2020_EI,
-   abstract = {Tree crown detection is a fundamental task in remote sensing for forestry and ecosystem ecology. While many individual tree segmentation algorithms have been proposed, the development and testing of these algorithms is typically site specific, with few methods evaluated against data from multiple forest types simultaneously. This makes it difficult to determine the generalization of proposed approaches, and limits tree detection at broad scales. Using data from the National Ecological Observatory Network, we extend a recently developed deep learning approach to include data from a range of forest types to determine whether information from one forest can be used for tree detection in other forests, and explore the potential for building a universal tree detection algorithm. We find that the deep learning approach works well for overstory tree detection across forest conditions. Performance was best in open oak woodlands and worst in alpine forests. When models were fit to one forest type and used to predict another, performance generally decreased, with better performance when forests were more similar in structure. However, when models were pretrained on data from other sites and then fine-tuned using a relatively small amount of hand-labeled data from the evaluation site, they performed similarly to local site models. Most importantly, a model fit to data from all sites performed as well or better than individual models trained for each local site.},
-   author = {Ben G Weinstein and Sergio Marconi and Stephanie A Bohlman and Alina Zare and Ethan P White},
-   doi = {https://doi.org/10.1016/j.ecoinf.2020.101061},
-   issn = {1574-9541},
-   journal = {Ecological Informatics},
-   keywords = {Airborne LiDAR,Object detection,RGB deep learning,Tree crown detection},
-   pages = {101061},
-   title = {Cross-site learning in deep learning RGB tree crown detection},
-   volume = {56},
-   url = {https://www.sciencedirect.com/science/article/pii/S157495412030011X},
-   year = {2020},
-   topic = {15d986da-2d7c-44fb-af71-700494485def}
-}
-
-@article{Weinstein2019,
-   abstract = {Remote sensing can transform the speed, scale, and cost of biodiversity and forestry surveys. Data acquisition currently outpaces the ability to identify individual organisms in high resolution imagery. We outline an approach for identifying tree-crowns in RGB imagery while using a semi-supervised deep learning detection network. Individual crown delineation has been a long-standing challenge in remote sensing and available algorithms produce mixed results. We show that deep learning models can leverage existing Light Detection and Ranging (LIDAR)-based unsupervised delineation to generate trees that are used for training an initial RGB crown detection model. Despite limitations in the original unsupervised detection approach, this noisy training data may contain information from which the neural network can learn initial tree features. We then refine the initial model using a small number of higher-quality hand-annotated RGB images. We validate our proposed approach while using an open-canopy site in the National Ecological Observation Network. Our results show that a model using 434,551 self-generated trees with the addition of 2848 hand-annotated trees yields accurate predictions in natural landscapes. Using an intersection-over-union threshold of 0.5, the full model had an average tree crown recall of 0.69, with a precision of 0.61 for the visually-annotated data. The model had an average tree detection rate of 0.82 for the field collected stems. The addition of a small number of hand-annotated trees improved the performance over the initial self-supervised model. This semi-supervised deep learning approach demonstrates that remote sensing can overcome a lack of labeled training data by generating noisy data for initial training using unsupervised methods and retraining the resulting models with high quality labeled data.},
-   author = {Ben G Weinstein and Sergio Marconi and Stephanie Bohlman and Alina Zare and Ethan White},
-   doi = {10.3390/rs11111309},
-   issn = {2072-4292},
-   issue = {11},
-   journal = {Remote Sensing},
-   title = {Individual Tree-Crown Detection in RGB Imagery Using Semi-Supervised Deep Learning Neural Networks},
-   volume = {11},
-   url = {https://www.mdpi.com/2072-4292/11/11/1309},
-   year = {2019},
-   topic = {15d986da-2d7c-44fb-af71-700494485def}
-}
-
-## ac327c3a-5264-40a2-8c6e-1e8d7c4b37ef
-
-@article{Andersson2021,
-   abstract = {Anthropogenic warming has led to an unprecedented year-round reduction in Arctic sea ice extent. This has far-reaching consequences for indigenous and local communities, polar ecosystems, and global climate, motivating the need for accurate seasonal sea ice forecasts. While physics-based dynamical models can successfully forecast sea ice concentration several weeks ahead, they struggle to outperform simple statistical benchmarks at longer lead times. We present a probabilistic, deep learning sea ice forecasting system, IceNet. The system has been trained on climate simulations and observational data to forecast the next 6 months of monthly-averaged sea ice concentration maps. We show that IceNet advances the range of accurate sea ice forecasts, outperforming a state-of-the-art dynamical model in seasonal forecasts of summer sea ice, particularly for extreme sea ice events. This step-change in sea ice forecasting ability brings us closer to conservation tools that mitigate risks associated with rapid sea ice loss.},
-   author = {Tom R Andersson and J Scott Hosking and María Pérez-Ortiz and Brooks Paige and Andrew Elliott and Chris Russell and Stephen Law and Daniel C Jones and Jeremy Wilkinson and Tony Phillips and James Byrne and Steffen Tietsche and Beena Balan Sarojini and Eduardo Blanchard-Wrigglesworth and Yevgeny Aksenov and Rod Downie and Emily Shuckburgh},
-   doi = {10.1038/s41467-021-25257-4},
-   issn = {2041-1723},
-   issue = {1},
-   journal = {Nature Communications},
-   pages = {5124},
-   title = {Seasonal Arctic sea ice forecasting with probabilistic deep learning},
-   volume = {12},
-   url = {https://doi.org/10.1038/s41467-021-25257-4},
-   year = {2021},
-   topic = {ac327c3a-5264-40a2-8c6e-1e8d7c4b37ef, 67a1e320-7c47-4ea9-8df8-e868326bc90b}
-}
-
-## 1b8921af-e77f-4ccf-ae38-4813cdceba0f
-
-@misc{MetOffice,
- author = {McCaie, Theo},
- editor = {{Met Office Informatics Lab}},
- title = {Met Office and partners offer data and compute platform for COVID-19 researchers},
- url = {https://medium.com/informatics-lab/met-office-and-partners-offer-data-and-compute-platform-for-covid-19-researchers-83848ac55f5f},
- lastchecked = {27.10.2021},
- originalyear = {09.04.2020},
- topic = {1b8921af-e77f-4ccf-ae38-4813cdceba0f}
-}
-
-## a2875cdc-ba6a-49dc-aab7-cdf7c4fc0fa8
-
-@techreport{firms,
-     title = {{MODIS Collection 6 Active Fire Product User’s Guide Revision B}},
-     author = {Louis Giglio and Wilfrid Schroeder and Joanne V. Hall and Christopher O. Justice},
-     group = {csg},
-     year = {2018},
-     institution = {NASA},
-     Date-Added = {2015-03-01},
-     Date-Modified = {2018-12-01},
-     url = {https://modis-fire.umd.edu/files/MODIS_C6_Fire_User_Guide_B.pdf},
-     topic = {a2875cdc-ba6a-49dc-aab7-cdf7c4fc0fa8}
-}
-
-## bc30df18-fce2-42fa-aade-1ce5b7f3ca3c
-
-@article{wooster2015lsa,
-  title={LSA SAF Meteosat FRP products--Part 1: Algorithms, product contents, and analysis},
-  author={Wooster, MJ and Roberts, G and Freeborn, PH and Xu, W and Govaerts, Y and Beeby, R and He, J and Lattanzio, A and Fisher, D and Mullen, R},
-  journal={Atmospheric Chemistry and Physics},
-  volume={15},
-  number={22},
-  pages={13217--13239},
-  year={2015},
-  publisher={Copernicus GmbH},
-  topic = {bc30df18-fce2-42fa-aade-1ce5b7f3ca3c}
-}
-
-@misc{wooster_he_xu_lattanzio,
-  title={FRP - Product User Manual},
-  url={https://nextcloud.lsasvcs.ipma.pt/s/pnDEepeq8zqRyrq},
-  publisher={LSF SAF}, author={Wooster, Martin and He, Jiangping and Xu, Weidong and Lattanzio, Alessio},
-  urldate = {2021-11-18},
-  topic = {bc30df18-fce2-42fa-aade-1ce5b7f3ca3c}
-  }
-
-## b34facfa-cea8-48f5-89f6-f11ce00812a9
-
-@inproceedings{Mifdal2021,
-   abstract = {Marine litter is a growing problem that has been attracting attention and raising concerns over the last years. Significant quantities of plastic can be found in the oceans due to the unfiltered discharge of waste into rivers, poor waste management, or lost fishing nets. The floating elements drift on the surface of water bodies and can be aggregated by processes, such as river plumes, windrows, oceanic fronts, or currents. In this paper, we focus on detecting big patches of floating objects that can contain plastic as well as other materials with optical Sentinel 2 data. In contrast to previous work that focuses on pixel-wise spectral responses of some bands, we employ a deep learning predictor that learns the spatial characteristics of floating objects. Along with this work, we provide a hand-labeled Sentinel 2 dataset of floating objects on the sea surface and other water bodies such as lakes together with pre-trained deep learning models. Our experiments demonstrate that harnessing the spatial patterns learned with a CNN is advantageous over pixel-wise classifications that use hand-crafted features. We further provide an analysis of the categories of floating objects that we captured while labeling the dataset and analyze the feature importance for the CNN predictions. Finally, we outline the limitations of trained CNN on several systematic failure cases that we would like to address in future work by increasing the diversity in the dataset and tackling the domain shift between regions and satellite acquisitions. The dataset introduced in this work is the first to provide public large-scale data for floating litter detection and we hope it will give more insights into developing techniques for floating litter detection and classification. Source code and data are available at https://github.com/ESA-PhiLab/floatingobjects.},
-   author = {Jamila Mifdal and Nicolas Longepe and Marc Rußwurm},
-   doi = {10.5194/isprs-annals-V-3-2021-285-2021},
-   issn = {21949050},
-   issue = {3},
-   booktitle = {ISPRS Annals of the Photogrammetry, Remote Sensing and Spatial Information Sciences},
-   keywords = {CNN,Deep Learning,Floating Objects,Marine Litter Detection,Oceanography,Sentinel 2},
-   month = {6},
-   pages = {285-293},
-   publisher = {Copernicus GmbH},
-   title = {Towards detecting floating objects on a global scale with learned spatial features using sentinel 2},
-   volume = {5},
-   year = {2021},
-   topic = {b34facfa-cea8-48f5-89f6-f11ce00812a9}
-}
-
-@inproceedings{Carmo2021,
-   author = {Raquel Carmo and Jamila Mifdal and Marc Rußwurm},
-   url = {https://210507-004.oceansvirtual.com/view/content/skdwP611e3583eba2b/ecf65c2aaf278557ad05c213247d67a54196c9376a0aed8f1875681f182daeed},
-   booktitle = {OCEANS 2021},
-   publisher = {OCEANS 2021},
-   title = {Detecting Macro Floating Objects on Coastal Water Bodies using Sentinel-2 Data},
-   year = {2021},
-   topic = {b34facfa-cea8-48f5-89f6-f11ce00812a9}
-}
-
-## 435f534c-e49b-43c3-9bd6-3393100bef3f
-
-@article{Evans2016_cosmosuk,
-   abstract = {Cosmic-ray soil moisture sensors have the advantage of a large measurement footprint (approximately 700 m in diameter) and are able to operate continuously to provide area-averaged near-surface (top 10–20 cm) volumetric soil moisture content at the field scale. This paper presents the application of this technique at four sites in southern England over almost 3 years. Results show the soil moisture response to contrasting climatic conditions during 2011–2014 and are the first such field-scale measurements made in the UK. These four sites are prototype stations for a UK COsmic-ray Soil Moisture Observing System, and particular consideration is given to sensor operating conditions in the UK. Comparison of these soil water content observations with the Joint UK Land Environment Simulator 10-cm soil moisture layer shows that these data can be used to test and diagnose model performance and indicate the potential for assimilation of these data into hydro-meteorological models. The application of these large-area soil water content measurements to evaluate remotely sensed soil moisture products is also demonstrated. Numerous applications and the future development of a national COsmic-ray Soil Moisture Observing System network are discussed. Copyright © 2016 John Wiley & Sons, Ltd.},
-   author = {Jonathan G. Evans and H. C. Ward and J. R. Blake and E. J. Hewitt and R. Morrison and M. Fry and L. A. Ball and L. C. Doughty and J. W. Libre and O. E. Hitt and D. Rylett and R. J. Ellis and A. C. Warwick and M. Brooks and M. A. Parkes and G. M.H. Wright and A. C. Singer and D. B. Boorman and A. Jenkins},
-   doi = {10.1002/hyp.10929},
-   issn = {10991085},
-   issue = {26},
-   journal = {Hydrological Processes},
-   keywords = {ASCAT,COSMOS,COSMOS-UK,JULES,cosmic-ray soil moisture sensor,soil moisture,soil moisture deficit,soil water content},
-   month = {12},
-   pages = {4987-4999},
-   publisher = {John Wiley and Sons Ltd},
-   title = {Soil water content in southern England derived from a cosmic-ray soil moisture observing system – COSMOS-UK},
-   volume = {30},
-   year = {2016},
-   topic = {435f534c-e49b-43c3-9bd6-3393100bef3f_publications}
-}
-
-@article{Zredaetal2012_cosmosreview,
-    AUTHOR = {Zreda, M. and Shuttleworth, W. J. and Zeng, X. and Zweck, C. and Desilets, D. and Franz, T. and Rosolem, R.},
-    TITLE = {COSMOS: the COsmic-ray Soil Moisture Observing System},
-    JOURNAL = {Hydrology and Earth System Sciences},
-    VOLUME = {16},
-    YEAR = {2012},
-    NUMBER = {11},
-    PAGES = {4079--4099},
-    URL = {https://hess.copernicus.org/articles/16/4079/2012/},
-    DOI = {10.5194/hess-16-4079-2012},
-    topic = {435f534c-e49b-43c3-9bd6-3393100bef3f_publications}
-}
-
-@misc{10.5285/b5c190e4-e35d-40ea-8fbe-598da03a1185,
-        doi = {10.5285/b5c190e4-e35d-40ea-8fbe-598da03a1185},
-        url = {https://doi.org/10.5285/b5c190e4-e35d-40ea-8fbe-598da03a1185},
-     author = {Stanley, S. and Antoniou, V. and Askquith-Ellis, A. and Ball, L.A. and Bennett, E.S. and Blake, J.R. and Boorman, D.B. and Brooks, M. and Clarke, M. and Cooper, H.M. and Cowan, N. and Cumming, A. and Evans, J.G. and Farrand, P. and Fry, M. and Hitt, O.E. and Lord, W.D. and Morrison, R. and Nash, G.V. and Rylett, D. and Scarlett, P.M. and Swain, O.D. and Szczykulska, M. and Thornton, J.L. and Trill, E.J. and Warwick, A.C. and Winterbourn, B.},
-  publisher = {NERC Environmental Information Data Centre},
-      title = {Daily and sub-daily hydrometeorological and soil data (2013-2019) [COSMOS-UK]},
-       year = {2021},
-       topic = {435f534c-e49b-43c3-9bd6-3393100bef3f_documentation}
-}
-
-### ea34568e-d86e-4720-be2f-3f826f66a26c
-
-@article {QuantifyingCausalPathwaysofTeleconnections,
-      author = "Marlene Kretschmer and Samantha V. Adams and Alberto Arribas and Rachel Prudden and Niall Robinson and Elena Saggioro and Theodore G. Shepherd",
-      title = "Quantifying Causal Pathways of Teleconnections",
-      journal = "Bulletin of the American Meteorological Society",
-      year = "2021",
-      publisher = "American Meteorological Society",
-      address = "Boston MA, USA",
-      volume = "102",
-      number = "12",
-      doi = "10.1175/BAMS-D-20-0117.1",
-      pages= "E2247 - E2263",
-      url = "https://journals.ametsoc.org/view/journals/bams/102/12/BAMS-D-20-0117.1.xml",
-      topic = {ea34568e-d86e-4720-be2f-3f826f66a26c_pipeline}
-}
-
-@article {TheNCEPNCAR40YearReanalysisProject,
-      author = "E. Kalnay and M. Kanamitsu and R. Kistler and W. Collins and D. Deaven and L. Gandin and M. Iredell and S. Saha and G. White and J. Woollen and Y. Zhu and M. Chelliah and W. Ebisuzaki and W. Higgins and J. Janowiak and K. C. Mo and C. Ropelewski and J. Wang and A. Leetmaa and R. Reynolds and Roy Jenne and Dennis Joseph",
-      title = "The NCEP/NCAR 40-Year Reanalysis Project",
-      journal = "Bulletin of the American Meteorological Society",
-      year = "1996",
-      publisher = "American Meteorological Society",
-      address = "Boston MA, USA",
-      volume = "77",
-      number = "3",
-      doi = "10.1175/1520-0477(1996)077<0437:TNYRP>2.0.CO;2",
-      pages=      "437 - 472",
-      url = "https://journals.ametsoc.org/view/journals/bams/77/3/1520-0477_1996_077_0437_tnyrp_2_0_co_2.xml",
-      topic = {ea34568e-d86e-4720-be2f-3f826f66a26c_dataset}
-}
-
-### b128b282-dee7-44a7-bc21-f1fd21452a83
-
-@inproceedings{9553499,
-  author={Karra, Krishna and Kontgis, Caitlin and Statman-Weil, Zoe and Mazzariello, Joseph C. and Mathis, Mark and Brumby, Steven P.},
-  booktitle={2021 IEEE International Geoscience and Remote Sensing Symposium IGARSS},
-  title={Global land use / land cover with Sentinel 2 and deep learning},
-  year={2021},
-  volume={},
-  number={},
-  pages={4704-4707},
-  doi={10.1109/IGARSS47720.2021.9553499},
-  topic = {b128b282-dee7-44a7-bc21-f1fd21452a83}
-  }
-
-@misc{impactobservatory,
-  title={Methodology & Accuracy Summary},
-  url={https://www.impactobservatory.com/static/lulc_methodology_accuracy-ee742a0a389a85a0d4e7295941504ac2.pdf},
-  publisher={Impact Observatory}, author={Impact Observatory},
-  urldate = {2022-07-01},
-  topic = {b128b282-dee7-44a7-bc21-f1fd21452a83}
-  }
-
-### 3286b92f-4fae-4cc6-a29e-e408bc844542
-
-@article{furner_2022,
-  title={A sensitivity analysis of a regression model of ocean temperature},
-  volume={1},
-  DOI={10.1017/eds.2022.10},
-  journal={Environmental Data Science},
-  publisher={Cambridge University Press},
-  author={Furner, Rachel and Haynes, Peter and Munday, Dave and Paige, Brooks and Jones, Daniel C. and Shuckburgh, Emily},
-  year={2022},
-  pages={e11},
-  topic = {3286b92f-4fae-4cc6-a29e-e408bc844542}
-  }
-  
-### 93463cac-471a-469d-ad52-0514fd9b67f2
-
-@article{Bone2022,
-    title={Detection and attribution of climate change: A deep learning and variational approach},
-    volume={1},
-    DOI={10.1017/eds.2022.17},
-    journal={Environmental Data Science},
-    publisher={Cambridge University Press},
-    author={Bône, Constantin and Gastineau, Guillaume and Thiria, Sylvie and Gallinari, Patrick},
-    year={2022},
-    pages={e27},
-    topic = {93463cac-471a-469d-ad52-0514fd9b67f2_modelling}
-}
-
-@article{Eyring2016,
-	author = {Eyring, V. and Bony, S. and Meehl, G. A. and Senior, C. A. and Stevens, B. and Stouffer, R. J. and Taylor, K. E.},
-	doi = {10.5194/gmd-9-1937-2016},
-	journal = {Geoscientific Model Development},
-	number = {5},
-	pages = {1937--1958},
-	title = {Overview of the Coupled Model Intercomparison Project Phase 6 (CMIP6) experimental design and organization},
-	url = {https://gmd.copernicus.org/articles/9/1937/2016/},
-	volume = {9},
-	year = {2016},
-	bdsk-url-1 = {https://gmd.copernicus.org/articles/9/1937/2016/},
-	bdsk-url-2 = {https://doi.org/10.5194/gmd-9-1937-2016},
-	topic = {93463cac-471a-469d-ad52-0514fd9b67f2_dataset}
-}
-
-@article{Morice2012,
-	abstract = {Recent developments in observational near-surface air temperature and sea-surface temperature analyses are combined to produce HadCRUT4, a new data set of global and regional temperature evolution from 1850 to the present. This includes the addition of newly digitized measurement data, both over land and sea, new sea-surface temperature bias adjustments and a more comprehensive error model for describing uncertainties in sea-surface temperature measurements. An ensemble approach has been adopted to better describe complex temporal and spatial interdependencies of measurement and bias uncertainties and to allow these correlated uncertainties to be taken into account in studies that are based upon HadCRUT4. Climate diagnostics computed from the gridded data set broadly agree with those of other global near-surface temperature analyses. Fitted linear trends in temperature anomalies are approximately 0.07$\,^{\circ}$C/decade from 1901 to 2010 and 0.17$\,^{\circ}$C/decade from 1979 to 2010 globally. Northern/southern hemispheric trends are 0.08/0.07$\,^{\circ}$C/decade over 1901 to 2010 and 0.24/0.10$\,^{\circ}$C/decade over 1979 to 2010. Linear trends in other prominent near-surface temperature analyses agree well with the range of trends computed from the HadCRUT4 ensemble members.},
-	author = {Morice, Colin P. and Kennedy, John J. and Rayner, Nick A. and Jones, Phil D.},
-	doi = {https://doi.org/10.1029/2011JD017187},
-	eprint = {https://agupubs.onlinelibrary.wiley.com/doi/pdf/10.1029/2011JD017187},
-	journal = {Journal of Geophysical Research: Atmospheres},
-	keywords = {climate, historical temperature, near surface temperature, observational ensemble},
-	number = {D8},
-	title = {Quantifying uncertainties in global and regional temperature change using an ensemble of observational estimates: The HadCRUT4 data set},
-	url = {https://agupubs.onlinelibrary.wiley.com/doi/abs/10.1029/2011JD017187},
-	volume = {117},
-	year = {2012},
-	bdsk-url-1 = {https://agupubs.onlinelibrary.wiley.com/doi/abs/10.1029/2011JD017187},
-	bdsk-url-2 = {https://doi.org/10.1029/2011JD017187},
-	topic = {93463cac-471a-469d-ad52-0514fd9b67f2_dataset}
-}
-
-@article{Rayner2003,
-	abstract = {We present the Met Office Hadley Centre's sea ice and sea surface temperature (SST) data set, HadISST1, and the nighttime marine air temperature (NMAT) data set, HadMAT1. HadISST1 replaces the global sea ice and sea surface temperature (GISST) data sets and is a unique combination of monthly globally complete fields of SST and sea ice concentration on a 1$\,^{\circ}$ latitude-longitude grid from 1871. The companion HadMAT1 runs monthly from 1856 on a 5$\,^{\circ}$ latitude-longitude grid and incorporates new corrections for the effect on NMAT of increasing deck (and hence measurement) heights. HadISST1 and HadMAT1 temperatures are reconstructed using a two-stage reduced-space optimal interpolation procedure, followed by superposition of quality-improved gridded observations onto the reconstructions to restore local detail. The sea ice fields are made more homogeneous by compensating satellite microwave-based sea ice concentrations for the impact of surface melt effects on retrievals in the Arctic and for algorithm deficiencies in the Antarctic and by making the historical in situ concentrations consistent with the satellite data. SSTs near sea ice are estimated using statistical relationships between SST and sea ice concentration. HadISST1 compares well with other published analyses, capturing trends in global, hemispheric, and regional SST well, containing SST fields with more uniform variance through time and better month-to-month persistence than those in GISST. HadMAT1 is more consistent with SST and with collocated land surface air temperatures than previous NMAT data sets.},
-	author = {Rayner, N. A. and Parker, D. E. and Horton, E. B. and Folland, C. K. and Alexander, L. V. and Rowell, D. P. and Kent, E. C. and Kaplan, A.},
-	doi = {https://doi.org/10.1029/2002JD002670},
-	eprint = {https://agupubs.onlinelibrary.wiley.com/doi/pdf/10.1029/2002JD002670},
-	journal = {Journal of Geophysical Research: Atmospheres},
-	keywords = {sea surface temperature, sea ice, night marine air temperature, climate data reconstruction, bias correction, climate change},
-	number = {D14},
-	title = {Global analyses of sea surface temperature, sea ice, and night marine air temperature since the late nineteenth century},
-	url = {https://agupubs.onlinelibrary.wiley.com/doi/abs/10.1029/2002JD002670},
-	volume = {108},
-	year = {2003},
-	bdsk-url-1 = {https://agupubs.onlinelibrary.wiley.com/doi/abs/10.1029/2002JD002670},
-	bdsk-url-2 = {https://doi.org/10.1029/2002JD002670},
-	topic = {93463cac-471a-469d-ad52-0514fd9b67f2_dataset}
-	}
-
-@article{Richardson_2018,
-	abstract = {The Paris Agreement on climate change aims to limit `global average temperature' rise to `well below 2 $\,^{\circ}$C' but reported temperature depends on choices about how to blend air and water temperature data, handle changes in sea ice and account for regions with missing data. Here we use CMIP5 climate model simulations to estimate how these choices affect reported warming and carbon budgets consistent with the Paris Agreement. By the 2090s, under a low-emissions scenario, modelled global near-surface air temperature rise is 15% higher (5%--95% range 6%--21%) than that estimated by an approach similar to the HadCRUT4 observational record. The difference reduces to 8% with global data coverage, or 4% with additional removal of a bias associated with changing sea-ice cover. Comparison of observational datasets with different data sources or infilling techniques supports our model results regarding incomplete coverage. From high-emission simulations, we find that a HadCRUT4 like definition means higher carbon budgets and later exceedance of temperature thresholds, relative to global near-surface air temperature. 2 $\,^{\circ}$C warming is delayed by seven years on average, to 2048 (2035--2060), and CO2 emissions budget for a &gt;50% chance of &lt;2 $\,^{\circ}$C warming increases by 67 GtC (246 GtCO2).},
-	author = {Mark Richardson and Kevin Cowtan and Richard J Millar},
-	doi = {10.1088/1748-9326/aab305},
-	journal = {Environmental Research Letters},
-	month = {apr},
-	number = {5},
-	pages = {054004},
-	publisher = {IOP Publishing},
-	title = {Global temperature definition affects achievement of long-term climate goals},
-	url = {https://dx.doi.org/10.1088/1748-9326/aab305},
-	volume = {13},
-	year = {2018},
-	bdsk-url-1 = {https://dx.doi.org/10.1088/1748-9326/aab305},
-	topic = {93463cac-471a-469d-ad52-0514fd9b67f2_dataset}
-	}
-
-### 39d9c177-11da-41b2-9b64-63f4c1c834b3
-
-@article{filoche_2023,
-    title={Deep prior in variational assimilation to estimate an ocean circulation without explicit regularization},
-    volume={2},
-    DOI={10.1017/eds.2022.31},
-    journal={Environmental Data Science},
-    author={Filoche, Arthur and Béréziat, Dominique and Charantonis, Anastase},
-     year={2023},
-     pages={e2},
-     topic = {39d9c177-11da-41b2-9b64-63f4c1c834b3}
-     }
-
-### 67a1e320-7c47-4ea9-8df8-e868326bc90b
-
-@misc{cocacastro2024_icenetnb,
-  author       = {Coca-Castro, Alejandro and
-                  This EDS book notebook contributors},
-  title        = {{Sea ice forecasting using IceNet (Jupyter
-                   Notebook) published in the Environmental Data
-                   Science book}},
-  month        = mar,
-  year         = {2024},
-  publisher    = {Zenodo},
-  version      = {v1.0.5},
-  doi          = {10.5281/zenodo.10808514},
-  url          = {https://doi.org/10.5281/zenodo.10808514},
-  topic = {67a1e320-7c47-4ea9-8df8-e868326bc90b}
-}
-
-### 95199651-9e81-4cae-a3a7-66398a9a5f62
-
-@misc{livestockdataset,
-    author = {G.J. Franke and Sander Mucher},
-    publisher = {Harvard Dataverse},
-    title = {{Annotated cows in aerial images for use in deep learning models}},
-    year = {2021},
-    version = {V1},
-    doi = {10.7910/DVN/N7GJYU},
-    url = {https://doi.org/10.7910/DVN/N7GJYU},
-    topic = {95199651-9e81-4cae-a3a7-66398a9a5f62}
+@misc{ttw-scriberia_illustrations,
+	author = {The Turing Way Community and Scriberia},
+	doi = {10.5281/ZENODO.7587336},
+	year = {2023},
+	publisher = {Zenodo},
+	title = {Illustrations from {The} {Turing} {Way}: Shared under {CC}-{BY} 4.0 for reuse},
+	url = {https://zenodo.org/record/7587336},
 }

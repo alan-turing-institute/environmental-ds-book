@@ -472,8 +472,8 @@
     }
   ],
   "contributorsPerLine": 7,
-  "projectName": "environmental-ds-book",
-  "projectOwner": "alan-turing-institute",
+  "projectName": "eds-book.github.io",
+  "projectOwner": "eds-book",
   "repoType": "github",
   "repoHost": "https://github.com",
   "skipCi": true,

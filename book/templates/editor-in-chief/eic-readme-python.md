@@ -1,37 +1,23 @@
 (templates-eic-readme-python)=
 
-<div align="center">
-    <h6>Environmental Data Science Book</h6>
-</div>
+# Title
 
 <p align="center">
-<img src="https://github.com/alan-turing-institute/environmental-ds-book/blob/master/book/figures/logo/logo.png?raw=True" alt="thumbnail" width="200"/>
-</p>
-
-<div align="center">
-    <h1>Title</h1>
-</div>
-
-<p align="center">
-    <a href="https://github.com/eds-book-gallery/[repository name]/blob/main/LICENSE">
-        <img alt="License" src="https://img.shields.io/badge/License-MIT-yellow.svg">
+    <a href="https://github.com/eds-book/[repository name]/actions/workflows/monthly-build.yaml/badge.svg">
+        <img alt="Continuous integration badge" src="https://github.com/eds-book/[repository name]/actions/workflows/monthly-build.yaml/badge.svg">
     </a>
-    <a href="https://notebooks.gesis.org/binder/v2/gh/eds-book-gallery/[repository name]/main?labpath=[repository name].ipynb">
+    <a href="http://mybinder.org/v2/gh/eds-book/[repository name]/main?labpath=notebook.ipynb">
         <img alt="Binder" src="https://mybinder.org/badge_logo.svg">
     </a>
-    <a href="https://github.com/eds-book-gallery/[repository name]/actions/workflows/publish.yml/badge.svg">
-        <img alt="Continuous integration badge" src="https://github.com/eds-book-gallery/[repository name]/actions/workflows/publish.yml/badge.svg">
+    <a href="https://doi.org/10.5281/zenodo.XXX">
+        <img alt="doi" src="https://zenodo.org/badge/XXX.svg">
     </a>
-    <br/>
-</p>
-
-<p align="center">
-    <a href="[rohub_w3id]">
-        <img alt="RoHub" src="https://img.shields.io/badge/RoHub-FAIR_Executable_Research_Object-2ea44f?logo=Open+Access&logoColor=blue">
+    <a href="https://github.com/eds-book/[repository name]/pull/X">
+        <img alt="notebook review" src="https://img.shields.io/badge/view-review-purple">
     </a>
 </p>
 
-# How to run
+## How to run
 
 ## Running on Binder
 The notebook is designed to be launched from Binder. 
@@ -46,7 +32,7 @@ You may also download the notebook from GitHub to run it locally:
 
 3. Clone the repository
     ```bash
-    git clone https://github.com/eds-book-gallery/[repository name].git
+    git clone https://github.com/eds-book/[repository name].git
     ```
 
 4. Move into the cloned repository
@@ -61,6 +47,3 @@ You may also download the notebook from GitHub to run it locally:
     ```  
 
 6. Launch the jupyter interface of your preference, notebook, `jupyter notebook` or lab `jupyter lab`
-
-# Credits
-The **How to run** section was adapted from the [Project Pythia Cookbook](https://cookbooks.projectpythia.org/) project.

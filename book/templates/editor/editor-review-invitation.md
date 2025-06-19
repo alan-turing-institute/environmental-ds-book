@@ -17,7 +17,7 @@ We conduct our open review process via GitHub as well, here: [PRE-REVIEW ISSUE]
 
 If you accept, note that we ask reviewers to complete reviews in two weeks.
 
-Our [reviewers guide](pb-guidelines-reviewers) details what we look for in a notebook review, and includes links to example reviews.
+Our [reviewers guide](https://edsbook.org/guidelines-reviewers.html) details what we look for in a notebook review, and includes links to example reviews.
 We also include a reviewer template on that page that you can use to guide your review. 
 
 If you have time, please have a look at the notebook first, to make sure that you do not have a conflict of interest with the notebook authors.

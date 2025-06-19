@@ -1,0 +1,72 @@
+# See docs at: https://mystmd.org/guide/frontmatter
+version: 1
+extends:
+- https://raw.githubusercontent.com/eds-book/edsbook-config/main/edsbook.yml
+project:
+  id: 5045e1d4-2bbc-4dca-bde5-447c5c23801d
+  title: Welcome
+  license:
+    code: MIT
+    content: CC-BY-4.0
+  abbreviations:
+    CoC: Code of Conduct
+    EiC: Editor-in-Chief
+    FAIR: Findable, Accessible, Interoperable and Reusable
+    NBI: Notebook Idea
+    PR: Pull Request
+  # description:
+  # keywords: []
+  # authors: []
+  github: https://github.com/eds-book/eds-book.github.io
+  # To autogenerate a Table of Contents, run "jupyter book init --write-toc"
+  plugins:
+  - type: executable
+    path: ../src/gallery.py
+  - type: executable
+    path: ../src/gallery_mini.py
+  toc:
+  - file: index.md
+  - file: about.md
+  - file: gallery.md
+  - file: contribute.md
+  - title: Guidelines
+    children:
+    - file: guidelines-authors.md
+      title: Guide for Authors
+    - file: guidelines-reviewers.md
+      title: Guide for Reviewers
+    - file: guidelines-editors.md
+      title: Guide for Editors
+    - file: guidelines-eic.md
+      title: Guide for Editor in Chief
+    - file: guidelines-community.md
+      title: Guide for Community
+  - title: Community
+    file: community.md
+  - file: cite.md
+  funding:
+  - statement: This work was supported by the Alan Turing Institute.
+    awards:
+    - id: award-id-000
+      name: EPSRC Grant EP/T001569/1 and EP/W006022/1
+      sources:
+      - name: Wave 1 of The UKRI Strategic Priorities Fund under the EPSRC Grant EP/T001569/1 and EPSRC Grant EP/W006022/1, particularly the “AI for Science” theme within those grants & The Alan Turing Institute
+      investigators:
+      - name: Alejandro Coca-Castro
+    - id: award-id-001
+      name: EPSRC Grant EP/Y028880/1
+      sources:
+      - name: A national UK programme in AI and digital twins to address the biodiversity and climate crisis, particularly the “Foster an open international environmental data science community” workstream led by The Alan Turing Institute.
+      investigators:
+      - name: Alejandro Coca-Castro
+
+site:
+  template: book-theme
+  options:
+    analytics_google: G-3E20PWD938 # Measurement ID or Tracking ID
+    folders: true
+    style: style/style.css
+    hide_toc: false
+  actions:
+  - title: Home
+    url: https://eds-book.github.io
