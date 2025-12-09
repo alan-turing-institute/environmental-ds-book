@@ -535,6 +535,15 @@
       "contributions": [
         "review"
       ]
+    },
+    {
+      "login": "kimberleewong",
+      "name": "Kimberlee Wong",
+      "avatar_url": "https://avatars.githubusercontent.com/u/177189869?v=4",
+      "profile": "http://kimberleewong.github.io",
+      "contributions": [
+        "review"
+      ]
     }
   ],
   "contributorsPerLine": 7,
