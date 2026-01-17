@@ -5,12 +5,11 @@ It further outlines expectations and responsibilities with regard to working on 
 
 ## Current Project Members
 
-| Name                                                                    | Affiliation                                          | Role                 | Time period allocated to the project | Previous roles                                         |
-|-------------------------------------------------------------------------|------------------------------------------------------|----------------------|--------------------------------------|--------------------------------------------------------|
-| Alejandro Coca-Castro <br>([@acocac](https://github.com/acocac))        | Research Fellow, The Alan Turing Institute           | PI                   | Apr 2023 - Present                   | Postdoctoral Research Associate, May 2021 - March 2023 |
-| Anne Fouilloux <br>([@annefou](https://github.com/annefou))             | Senior Research Engineer, Simula Research Laboratory | in-kind contribution | Jul 2022 - Present                   | -                                                      |
-| Malvika Sharan <br>([@malvikasharan](https://github.com/malvikasharan)) | Senior Researcher, The Alan Turing Institute                       | in-kind contribution | Sep 2021 - Present                   | -                                                        |
-| Scott Hosking <br>([@scotthosking](https://github.com/scotthosking))  | Mission lead, The Alan Turing Institute & British Antarctic Survey | Co-PI (Funding)                             | May 2021 - Present                   | -                                                        |
+| Name                                                                    | Affiliation                                                        | Role               | Time period allocated to the project | Previous roles                                         |
+|-------------------------------------------------------------------------|--------------------------------------------------------------------|--------------------|--------------------------------------|--------------------------------------------------------|
+| Alejandro Coca-Castro <br>([@acocac](https://github.com/acocac))        | Research Fellow, The Alan Turing Institute                         | PI                 | Apr 2023 - Present                   | Postdoctoral Research Associate, May 2021 - March 2023 |
+| Anne Fouilloux <br>([@annefou](https://github.com/annefou))             | CTO, LifeWatch ERIC                                                | Community advisor  | Jul 2022 - Present                   | -                                                      |
+| Scott Hosking <br>([@scotthosking](https://github.com/scotthosking))  | Mission lead, The Alan Turing Institute & British Antarctic Survey | Scientific advisor | May 2021 - Present                   | Co-PI (Funding) May 2021 - July 2024                   |
 
 ## Previous Project Members
 
@@ -20,8 +19,9 @@ You can request contact information through the project members above, or tag th
 | Name                                                                  | Role & Affiliation                                  | Full-Time Equivalent (or %) on the project  | Time period allocated to the project |  
 |-----------------------------------------------------------------------|-----------------------------------------------------|---------------------------------------------|--------------------------------------|
 | Delphine Lariviere <br>([@Delphine-L](https://github.com/Delphine-L)) | Research Assistant Professor, Penn State University | in-kind OLS-4 Mentor                        | Sep 2021 - Jan 2022                  |
+| Malvika Sharan <br>([@malvikasharan](https://github.com/malvikasharan)) | Senior Researcher, The Alan Turing Institute                       | in-kind contribution | Sep 2021 - June 2025                 | -                                                      |
 | Nick Homer <br>([@NHomer-Edi](https://github.com/NHomer-Edi))         | PhD Student, University of Edinburgh                | in-kind Turing PhD Enrichment Collaboration | March 2022 - Sept 2022               |
-| Kirstie Whitaker <br>([@KirstieJane](https://github.com/KirstieJane)) | Programme Director for Tools, Practices and Systems, The Alan Turing Institute                       | in-kind contribution                        | May 2021 - Oct 2024   |
+| Kirstie Whitaker <br>([@KirstieJane](https://github.com/KirstieJane)) | Programme Director for Tools, Practices and Systems, The Alan Turing Institute                       | in-kind contribution                        | May 2021 - Oct 2024                  |
 | Timothy Lam <br>([@timo0thy](https://github.com/timo0thy))            | PhD Student, University of Exeter                   | in-kind Turing PhD Enrichment Collaboration | March 2022 - Sept 2022               |
 
 ## Commitments
